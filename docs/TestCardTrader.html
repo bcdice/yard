@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TestCardTrader
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "TestCardTrader";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (T)</a> &raquo;
+    
+    
+    <span class="title">TestCardTrader</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TestCardTrader
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Test::Unit::TestCase</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Test::Unit::TestCase</li>
+          
+            <li class="next">TestCardTrader</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>test/others/testCard.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#_test_-instance_method" title="#_test_ (instance method)">#<strong>_test_</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#_test_printCardHelp-instance_method" title="#_test_printCardHelp (instance method)">#<strong>_test_printCardHelp</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drawCards-instance_method" title="#drawCards (instance method)">#<strong>drawCards</strong>(count, total)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getRandsForDrawFullCard-instance_method" title="#getRandsForDrawFullCard (instance method)">#<strong>getRandsForDrawFullCard</strong>(cardCount)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setDefaultNick-instance_method" title="#setDefaultNick (instance method)">#<strong>setDefaultNick</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup-instance_method" title="#setup (instance method)">#<strong>setup</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_back-instance_method" title="#test_back (instance method)">#<strong>test_back</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_castSpell-instance_method" title="#test_castSpell (instance method)">#<strong>test_castSpell</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_castSpellLong-instance_method" title="#test_castSpellLong (instance method)">#<strong>test_castSpellLong</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_clean-instance_method" title="#test_clean (instance method)">#<strong>test_clean</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_deal-instance_method" title="#test_deal (instance method)">#<strong>test_deal</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_discard-instance_method" title="#test_discard (instance method)">#<strong>test_discard</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_draw-instance_method" title="#test_draw (instance method)">#<strong>test_draw</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_draw_3-instance_method" title="#test_draw_3 (instance method)">#<strong>test_draw_3</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_draw_full-instance_method" title="#test_draw_full (instance method)">#<strong>test_draw_full</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_getSpell-instance_method" title="#test_getSpell (instance method)">#<strong>test_getSpell</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_getSpellLong-instance_method" title="#test_getSpellLong (instance method)">#<strong>test_getSpellLong</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_hand-instance_method" title="#test_hand (instance method)">#<strong>test_hand</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_invalidCommand-instance_method" title="#test_invalidCommand (instance method)">#<strong>test_invalidCommand</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_invalidCommand2-instance_method" title="#test_invalidCommand2 (instance method)">#<strong>test_invalidCommand2</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_milstone-instance_method" title="#test_milstone (instance method)">#<strong>test_milstone</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_odraw_3-instance_method" title="#test_odraw_3 (instance method)">#<strong>test_odraw_3</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_odraw_full-instance_method" title="#test_odraw_full (instance method)">#<strong>test_odraw_full</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_pass-instance_method" title="#test_pass (instance method)">#<strong>test_pass</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_pick-instance_method" title="#test_pick (instance method)">#<strong>test_pick</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_place-instance_method" title="#test_place (instance method)">#<strong>test_place</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_play-instance_method" title="#test_play (instance method)">#<strong>test_play</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_play_toPlace-instance_method" title="#test_play_toPlace (instance method)">#<strong>test_play_toPlace</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_review-instance_method" title="#test_review (instance method)">#<strong>test_review</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_rshuffle-instance_method" title="#test_rshuffle (instance method)">#<strong>test_rshuffle</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_shuffleCards-instance_method" title="#test_shuffleCards (instance method)">#<strong>test_shuffleCards</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_shuffleCards_min-instance_method" title="#test_shuffleCards_min (instance method)">#<strong>test_shuffleCards_min</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_tap_untap-instance_method" title="#test_tap_untap (instance method)">#<strong>test_tap_untap</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_vdeal-instance_method" title="#test_vdeal (instance method)">#<strong>test_vdeal</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_vhand-instance_method" title="#test_vhand (instance method)">#<strong>test_vhand</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#trace-instance_method" title="#trace (instance method)">#<strong>trace</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="_test_-instance_method">
+  
+    #<strong>_test_</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+477
+478
+479
+480</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 477</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid__test_'>_test_</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="_test_printCardHelp-instance_method">
+  
+    #<strong>_test_printCardHelp</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid__test_printCardHelp'>_test_printCardHelp</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_printCardHelp'>printCardHelp</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>100</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="drawCards-instance_method">
+  
+    #<strong>drawCards</strong>(count, total)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 248</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_drawCards'>drawCards</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_rands'>rands</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_cardCount'>cardCount</span> <span class='op'>=</span> <span class='id identifier rubyid_count'>count</span>
+  <span class='id identifier rubyid_cardCount'>cardCount</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='id identifier rubyid_max'>max</span> <span class='op'>=</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>-</span> <span class='id identifier rubyid_i'>i</span>
+    <span class='id identifier rubyid_rands'>rands</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_max'>max</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>drawCards srands</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rands'>rands</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='id identifier rubyid_rands'>rands</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='comment'># debug(&#39;drawCards, getResult@bcdice.getResult()&#39;, @bcdice.getResult())
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getRandsForDrawFullCard-instance_method">
+  
+    #<strong>getRandsForDrawFullCard</strong>(cardCount)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 411</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getRandsForDrawFullCard'>getRandsForDrawFullCard</span><span class='lparen'>(</span><span class='id identifier rubyid_cardCount'>cardCount</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_rands'>rands</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_cardCount'>cardCount</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>==</span> <span class='id identifier rubyid_cardCount'>cardCount</span>
+
+    <span class='id identifier rubyid_max'>max</span> <span class='op'>=</span> <span class='id identifier rubyid_cardCount'>cardCount</span> <span class='op'>-</span> <span class='id identifier rubyid_i'>i</span>
+    <span class='id identifier rubyid_rands'>rands</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_max'>max</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_rands'>rands</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setDefaultNick-instance_method">
+  
+    #<strong>setDefaultNick</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_setDefaultNick'>setDefaultNick</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test_nick</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup-instance_method">
+  
+    #<strong>setup</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>
+  <span class='gvar'>$isDebug</span> <span class='op'>=</span> <span class='kw'>false</span>
+
+  <span class='id identifier rubyid_maker'>maker</span> <span class='op'>=</span> <span class='const'>BCDiceMaker_forTest</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@bcdice</span> <span class='op'>=</span> <span class='id identifier rubyid_maker'>maker</span><span class='period'>.</span><span class='id identifier rubyid_newBcDice'>newBcDice</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span> <span class='op'>=</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_cardTrader'>cardTrader</span>
+
+  <span class='id identifier rubyid_setDefaultNick'>setDefaultNick</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_back-instance_method">
+  
+    #<strong>test_back</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 264</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_back'>test_back</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>49</span><span class='comma'>,</span> <span class='int'>49</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[5]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[J1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[S1,S2,S3,S4]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[  ] 場札:[ J1 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-back[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚戻しました\nsendMessageToOnlySender\nto:\n[ S1 ] 場札:[ J1 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-back[S2,S3,S4]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 3枚戻しました\nsendMessageToOnlySender\nto:\n[ S1,S2,S3,S4 ] 場札:[ J1 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-back[J1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\n[捨て札]がありません\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_castSpell-instance_method">
+  
+    #<strong>test_castSpell</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+424
+425
+426
+427
+428
+429
+430</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 424</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_castSpell'>test_castSpell</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-spell[1TEST_NICK,TEST_NICK,card_played,BC39DC11A]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: カード配置を復活しました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ C1,C10,C11,C12,C13,C3,C4,C5,C6,C7,C8,C9,D1,D10,D11,D12,D13,D2,D3,D4,D5,D6,D7,D8,D9,H1,H10,H11,H12,H13,H2,H3,H4,H5,H6,H7,H8,H9,S10,S11,S12,S13,S2,S3,S4,S5,S6,S7,S8,S9 ] 場札:[ S1 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_castSpellLong-instance_method">
+  
+    #<strong>test_castSpellLong</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 464</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_castSpellLong'>test_castSpellLong</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-spell[1JOHN,1TEST_NICK,2JOHN,2TEST_NICK,JOHN,TEST_NICK,card_played,HCEG2FBDFHA98]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: カード配置を復活しました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ S4,S5 ] 場札:[ S2 ] タップした場札:[ S3 ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ S6,S9 ] 場札:[ S7 ] タップした場札:[ S8 ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_setDefaultNick'>setDefaultNick</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_clean-instance_method">
+  
+    #<strong>test_clean</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 167</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_clean'>test_clean</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[4]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[S2,S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1 ] 場札:[ S2,S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-clean</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\n場のカードを捨てました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>49</span><span class='comma'>,</span> <span class='int'>49</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nC13\nsendMessage\nto:channel\ntest_nick: 1枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_deal-instance_method">
+  
+    #<strong>test_deal</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 284</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_deal'>test_deal</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-deal[4] john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:john\nJ1,S1,S2,S3\nsendMessage\nto:channel\ntest_nick: johnに[4]枚配りました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S1,S2,S3 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_discard-instance_method">
+  
+    #<strong>test_discard</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 305</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_discard'>test_discard</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[4]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[S1,S2,S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1 ] 場札:[ S1,S2,S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-discard[J1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚捨てました\nsendMessageToOnlySender\nto:\n[  ] 場札:[ S1,S2,S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-discard1[S1,S2,S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 3枚捨てました\nsendMessageToOnlySender\nto:\n[  ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_draw-instance_method">
+  
+    #<strong>test_draw</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_draw'>test_draw</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>53</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nJ1\nsendMessage\nto:channel\ntest_nick: 1枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>52</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nC13\nsendMessage\nto:channel\ntest_nick: 1枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nS1\nsendMessage\nto:channel\ntest_nick: 1枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_draw_3-instance_method">
+  
+    #<strong>test_draw_3</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_draw_3'>test_draw_3</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>51</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw[3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nJ1,S1,S2\nsendMessage\nto:channel\ntest_nick: 3枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_draw_full-instance_method">
+  
+    #<strong>test_draw_full</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_draw_full'>test_draw_full</span>
+  <span class='id identifier rubyid_rands'>rands</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_cardCount'>cardCount</span> <span class='op'>=</span> <span class='int'>53</span>
+  <span class='id identifier rubyid_cardCount'>cardCount</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='id identifier rubyid_max'>max</span> <span class='op'>=</span> <span class='id identifier rubyid_cardCount'>cardCount</span> <span class='op'>-</span> <span class='id identifier rubyid_i'>i</span>
+    <span class='id identifier rubyid_rands'>rands</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_max'>max</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='id identifier rubyid_rands'>rands</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw[53]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nC1,C10,C11,C12,C13,C2,C3,C4,C5,C6,C7,C8,C9,D1,D10,D11,D12,D13,D2,D3,D4,D5,D6,D7,D8,D9,H1,H10,H11,H12,H13,H2,H3,H4,H5,H6,H7,H8,H9,J1,S1,S10,S11,S12,S13,S2,S3,S4,S5,S6,S7,S8,S9\nsendMessage\nto:channel\ntest_nick: 53枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw[1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\nカードが残っていません\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_getSpell-instance_method">
+  
+    #<strong>test_getSpell</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 390</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_getSpell'>test_getSpell</span>
+  <span class='id identifier rubyid_cardCount'>cardCount</span> <span class='op'>=</span> <span class='int'>53</span>
+  <span class='id identifier rubyid_rands'>rands</span> <span class='op'>=</span> <span class='id identifier rubyid_getRandsForDrawFullCard'>getRandsForDrawFullCard</span><span class='lparen'>(</span><span class='id identifier rubyid_cardCount'>cardCount</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='id identifier rubyid_rands'>rands</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw[52]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nC1,C10,C11,C12,C13,C2,C3,C4,C5,C6,C7,C8,C9,D1,D10,D11,D12,D13,D2,D3,D4,D5,D6,D7,D8,D9,H1,H10,H11,H12,H13,H2,H3,H4,H5,H6,H7,H8,H9,S1,S10,S11,S12,S13,S2,S3,S4,S5,S6,S7,S8,S9\nsendMessage\nto:channel\ntest_nick: 52枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚出しました\nsendMessageToOnlySender\nto:\n[ C1,C10,C11,C12,C13,C2,C3,C4,C5,C6,C7,C8,C9,D1,D10,D11,D12,D13,D2,D3,D4,D5,D6,D7,D8,D9,H1,H10,H11,H12,H13,H2,H3,H4,H5,H6,H7,H8,H9,S10,S11,S12,S13,S2,S3,S4,S5,S6,S7,S8,S9 ] 場札:[ S1 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[C2]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚出しました\nsendMessageToOnlySender\nto:\n[ C1,C10,C11,C12,C13,C3,C4,C5,C6,C7,C8,C9,D1,D10,D11,D12,D13,D2,D3,D4,D5,D6,D7,D8,D9,H1,H10,H11,H12,H13,H2,H3,H4,H5,H6,H7,H8,H9,S10,S11,S12,S13,S2,S3,S4,S5,S6,S7,S8,S9 ] 場札:[ S1 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ C1,C10,C11,C12,C13,C3,C4,C5,C6,C7,C8,C9,D1,D10,D11,D12,D13,D2,D3,D4,D5,D6,D7,D8,D9,H1,H10,H11,H12,H13,H2,H3,H4,H5,H6,H7,H8,H9,S10,S11,S12,S13,S2,S3,S4,S5,S6,S7,S8,S9 ] 場札:[ S1 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-spell</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\n復活の呪文 ＞ [1TEST_NICK,TEST_NICK,card_played,BC39DC11A]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_getSpellLong-instance_method">
+  
+    #<strong>test_getSpellLong</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 432</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_getSpellLong'>test_getSpellLong</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_set2Deck2Jorker'>set2Deck2Jorker</span>
+
+  <span class='id identifier rubyid_cardCount'>cardCount</span> <span class='op'>=</span> <span class='int'>108</span>
+  <span class='id identifier rubyid_rands'>rands</span> <span class='op'>=</span> <span class='id identifier rubyid_getRandsForDrawFullCard'>getRandsForDrawFullCard</span><span class='lparen'>(</span><span class='id identifier rubyid_cardCount'>cardCount</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='id identifier rubyid_rands'>rands</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw[5]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nS1,S2,S3,S4,S5\nsendMessage\nto:channel\ntest_nick: 5枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚出しました\nsendMessageToOnlySender\nto:\n[ S2,S3,S4,S5 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[S2,S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 2枚出しました\nsendMessageToOnlySender\nto:\n[ S4,S5 ] 場札:[ S2,S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-tap1[S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚タップしました\nsendMessageToOnlySender\nto:\n[ S4,S5 ] 場札:[ S2 ] タップした場札:[ S3 ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw[5]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nS10,S6,S7,S8,S9\nsendMessage\nto:channel\njohn: 5枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[S10]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\njohn: 1枚出しました\nsendMessageToOnlySender\nto:\n[ S6,S7,S8,S9 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[S7,S8]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\njohn: 2枚出しました\nsendMessageToOnlySender\nto:\n[ S6,S9 ] 場札:[ S7,S8 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-tap1[S8]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\njohn: 1枚タップしました\nsendMessageToOnlySender\nto:\n[ S6,S9 ] 場札:[ S7 ] タップした場札:[ S8 ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_setDefaultNick'>setDefaultNick</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-spell</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\n復活の呪文 ＞ [1JOHN,1TEST_NICK,2JOHN,2TEST_NICK,JOHN,TEST_NICK,card_played,HCEG2FBDFHA98]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_hand-instance_method">
+  
+    #<strong>test_hand</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_hand'>test_hand</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nカードを持っていません 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>51</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: J1,S1,S2を引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S1,S2 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_invalidCommand-instance_method">
+  
+    #<strong>test_invalidCommand</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_invalidCommand'>test_invalidCommand</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>aaaa</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_invalidCommand2-instance_method">
+  
+    #<strong>test_invalidCommand2</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_invalidCommand2'>test_invalidCommand2</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-invalidCommand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_milstone-instance_method">
+  
+    #<strong>test_milstone</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+384
+385
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 384</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_milstone'>test_milstone</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-milstone</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: S1が出ました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_odraw_3-instance_method">
+  
+    #<strong>test_odraw_3</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_odraw_3'>test_odraw_3</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>51</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: J1,S1,S2を引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_odraw_full-instance_method">
+  
+    #<strong>test_odraw_full</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_odraw_full'>test_odraw_full</span>
+  <span class='id identifier rubyid_drawCards'>drawCards</span><span class='lparen'>(</span><span class='int'>53</span><span class='comma'>,</span> <span class='int'>53</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\nカードが残っていません\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_pass-instance_method">
+  
+    #<strong>test_pass</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 200</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_pass'>test_pass</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[4]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>49</span><span class='comma'>,</span> <span class='int'>49</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\njohn: C13を引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_setDefaultNick'>setDefaultNick</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S1,S2 ] 場札:[ S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-pass[S1]john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚渡しました\nsendMessage\nto:john\n[ C13,S1 ] 場札:[  ] タップした場札:[  ]\nsendMessageToOnlySender\nto:\n[ J1,S2 ] 場札:[ S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-pass1[S3]john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚渡しました\nsendMessage\nto:john\n[ C13,S1,S3 ] 場札:[  ] タップした場札:[  ]\nsendMessageToOnlySender\nto:\n[ J1,S2 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S2 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-pass john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚渡しました\nsendMessage\nto:john\n[ C13,J1,S1,S3 ] 場札:[  ] タップした場札:[  ]\nsendMessageToOnlySender\nto:\n[ S2 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ S2 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_pick-instance_method">
+  
+    #<strong>test_pick</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 232</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_pick'>test_pick</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-pick[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚選んで引きました\nsendMessageToOnlySender\nto:\n[ S1 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_drawCards'>drawCards</span><span class='lparen'>(</span><span class='int'>49</span><span class='comma'>,</span> <span class='int'>52</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-review</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nC12,C13,J1\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-pick[J1,C13,C12]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 3枚選んで引きました\nsendMessageToOnlySender\nto:\n[ C1,C10,C11,C12,C13,C2,C3,C4,C5,C6,C7,C8,C9,D1,D10,D11,D12,D13,D2,D3,D4,D5,D6,D7,D8,D9,H1,H10,H11,H12,H13,H2,H3,H4,H5,H6,H7,H8,H9,J1,S1,S10,S11,S12,S13,S2,S3,S4,S5,S6,S7,S8,S9 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-pick[J1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\n[山札]がありません\nsendMessageToOnlySender\nto:\n[ C1,C10,C11,C12,C13,C2,C3,C4,C5,C6,C7,C8,C9,D1,D10,D11,D12,D13,D2,D3,D4,D5,D6,D7,D8,D9,H1,H10,H11,H12,H13,H2,H3,H4,H5,H6,H7,H8,H9,J1,S1,S10,S11,S12,S13,S2,S3,S4,S5,S6,S7,S8,S9 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_place-instance_method">
+  
+    #<strong>test_place</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 321</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_place'>test_place</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\njohn: S1を引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_setDefaultNick'>setDefaultNick</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>49</span><span class='comma'>,</span> <span class='int'>49</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[4]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[S2]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S3,S4 ] 場札:[ S2 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-place[S3]john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S4 ] 場札:[ S2 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ S1 ] 場札:[ S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_setDefaultNick'>setDefaultNick</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S4 ] 場札:[ S2 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-place1[S2]john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S4 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S4 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ S1 ] 場札:[ S2,S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_setDefaultNick'>setDefaultNick</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-place[J1,S4]john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[  ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_play-instance_method">
+  
+    #<strong>test_play</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_play'>test_play</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>51</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: J1,S1,S2を引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚出しました\nsendMessageToOnlySender\nto:\n[ J1,S2 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[J1,S2]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 2枚出しました\nsendMessageToOnlySender\nto:\n[  ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[C1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\n[C1]は持っていません\nsendMessageToOnlySender\nto:\n[  ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_play_toPlace-instance_method">
+  
+    #<strong>test_play_toPlace</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_play_toPlace'>test_play_toPlace</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>51</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw[3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nJ1,S1,S2\nsendMessage\nto:channel\ntest_nick: 3枚引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚出しました\nsendMessageToOnlySender\nto:\n[ J1,S2 ] 場札:[ S1 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[J1,S2]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 2枚出しました\nsendMessageToOnlySender\nto:\n[  ] 場札:[ J1,S1,S2 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_review-instance_method">
+  
+    #<strong>test_review</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 188</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_review'>test_review</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-review</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nS1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,H1,H2,H3,H4,H5,H6,H7,H8,H9,H10,H11,H12,H13,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,J1\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[4]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-review</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\nS4,S5,S6,S7,S8,S9,S10,S11,S12,S13,H1,H2,H3,H4,H5,H6,H7,H8,H9,H10,H11,H12,H13,D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_rshuffle-instance_method">
+  
+    #<strong>test_rshuffle</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_rshuffle'>test_rshuffle</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>51</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: J1,S1,S2を引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play[S1,J1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 2枚出しました\nsendMessageToOnlySender\nto:\n[ S2 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-rshuffle</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\n捨て札を山に戻しました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>52</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: J1を引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_shuffleCards-instance_method">
+  
+    #<strong>test_shuffleCards</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_shuffleCards'>test_shuffleCards</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-shuffle</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\nシャッフルしました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_shuffleCards_min-instance_method">
+  
+    #<strong>test_shuffleCards_min</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_shuffleCards_min'>test_shuffleCards_min</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-sh</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\nシャッフルしました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_tap_untap-instance_method">
+  
+    #<strong>test_tap_untap</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 362</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_tap_untap'>test_tap_untap</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[4] john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-play1[J1,S1,S2,S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[  ] 場札:[ J1,S1,S2,S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-tap1[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚タップしました\nsendMessageToOnlySender\nto:\n[  ] 場札:[ J1,S2,S3 ] タップした場札:[ S1 ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-tap1[J1,S2,S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 3枚タップしました\nsendMessageToOnlySender\nto:\n[  ] 場札:[  ] タップした場札:[ J1,S1,S2,S3 ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-untap1[S1]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 1枚アンタップしました\nsendMessageToOnlySender\nto:\n[  ] 場札:[ S1 ] タップした場札:[ J1,S2,S3 ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-untap1[J1,S2,S3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: 3枚アンタップしました\nsendMessageToOnlySender\nto:\n[  ] 場札:[ J1,S1,S2,S3 ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_vdeal-instance_method">
+  
+    #<strong>test_vdeal</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+295
+296
+297
+298
+299
+300
+301
+302
+303</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 295</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_vdeal'>test_vdeal</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>50</span><span class='comma'>,</span> <span class='int'>50</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-vdeal[4] john</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:john\nJ1,S1,S2,S3\nsendMessage\nto:test_nick\njohn に J1,S1,S2,S3 を配りました\nsendMessage\nto:channel\ntest_nick: johnに[4]枚配りました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\n[ J1,S1,S2,S3 ] 場札:[  ] タップした場札:[  ]\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="test_vhand-instance_method">
+  
+    #<strong>test_vhand</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_vhand'>test_vhand</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setRandomValues'>setRandomValues</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>53</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>52</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>51</span><span class='comma'>,</span> <span class='int'>51</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-odraw[3]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessage\nto:channel\ntest_nick: J1,S1,S2を引きました\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@cardTrader</span><span class='period'>.</span><span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-vhand test_nick</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>channel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sendMessageToOnlySender\nto:\ntest_nick の手札は[ J1,S1,S2 ] 場札:[  ] タップした場札:[  ]です\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_getResult'>getResult</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="trace-instance_method">
+  
+    #<strong>trace</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+482
+483
+484</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test/others/testCard.rb', line 482</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_trace'>trace</span>
+  <span class='gvar'>$isDebug</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Oct 31 21:11:12 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.1).
+</div>
+
+    </div>
+  </body>
+</html>

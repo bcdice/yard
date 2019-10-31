@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: CardRanker
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "CardRanker";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (C)</a> &raquo;
+    
+    
+    <span class="title">CardRanker</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: CardRanker
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></li>
+          
+            <li class="next">CardRanker</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>diceBot/CardRanker.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="tables-classvariable" class="">@@tables =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BFT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バトルフィールド表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>ハイ・アンティ/戦闘フェイズの終了時、勝者は通常習得できるモンスターカード一つに加えて、もう一つ敗者からモンスターカードを選んで手に入れることができる。//通常よりも多くのカードを賭けの対象にするルール。
+バーニング/ラウンドの終了時、すべてのキャラクターは【LP】現在値を3点失う。//マグマの近くや極寒の地など体力を削られるような過酷な環境で行われるルール。
+ノーマル/特に影響なし。//通常のルール。
+ハード/すべてのキャラクターの判定にプラス1の修正を加える。また、ラウンド終了時にすべてのキャラクターはモンスターカードを一つ選んで破壊状態（ルールブックP187参照）にしなければならない。//風の強い場所や水中など、カードを扱いにくい環境でのルール。
+スピード/モンスターカードのリスクが1高いものとして扱われる。また、判定に失敗した場合、速度から振り落とされて1D6のダメージを受ける。//バイクやローラーボードなどを使って行われる高速カードバトルルール。
+デスルール/戦闘フェイズでも死亡判定が発声する。また、戦闘不能になったキャラクターは即座に死亡判定を行う。ただし、攻撃を行った側がデスルールを使用しないことを選択すれば、死亡判定は発生しない。//モンスターによって実際のダメージを与える、死の危険性があるルール。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CDT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>崩壊運命表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>レジェンドカードがあなたを崩壊する大地に呼び寄せた。暴虐な振る舞いをするダークランカーを倒すことをレジェンドカードは望んでいる。
+あなたはひょんなことから人を助けた。すると、あなたはいつの間にか救世主と呼ばれる存在になっていた、救世主であるあなたに人々は懇願する。ダークランカーを倒してくれと。
+あなたの住むところはダークランカーの力が及ばない楽園であった。しかし、楽園はダークランカー一味の襲撃にあい、あなただけが生き残ってしまった。楽園を出たあなたは戦いを決意する。
+世の中は変わった。だが、愛する人（もしくは愛する物や家族）は健在だ。あなたは愛する人を護るためにも、ダークランカーを倒すべく動き始めた。
+あなたはこの世界が好きだ。それはどんな理由でもよい。しかし、ダークランカーが持つダークカードはこの世界を壊す。ならば、倒してこの世界を守らねばならない。
+崩壊していく大地。泣き叫ぶ人々の声。あなたはこの状況を作ったのが、あなたの身内であると知る。ダークカードの手から身内を救うためにも、あなたはカードを手にとった。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>街中場所表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>カードショップ/ソウルカードを遊ぶ者たちが集まる場所。プレイスペースもあれば、カードの販売もしている。
+ビル街/ビルが立ち並ぶ街。ビジネスマンが忙しなく動き、チェーン店が多く見られる。
+駅前/人が集まる駅前。電車から降りてくる人は多く、今日も人と人がすれ違う。
+食事処/レストランから大衆食堂、喫茶店やバーなど、食事は人の活力であり、カードランカーにも元気は必要だ。
+道路/長く広い道路。車と人が通過していく場所だが、時おりトラブルを抱えたカードランカー同士が戦っている。
+プール/都会にあるプール。都会の生活に疲れた人々が集まる場所。時おり、ソウルカードの戦いも見られる。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>運命表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>あなたが欲しているカードはダークランカーが持っているかもしれないという情報を掴んだ。ダークランカーを倒し、アンティルールでカードを手に入れなければならない。
+ダークランカーとなった人物とあなたはカード仲間であったが、ある日見たその人物はダークカードの力にとり憑かれて豹変していた。あなたは仲間をカードによって救うため、戦いを決意した。
+ダークランカーはあなたの仲間や身内、大切なモノを傷つけた（壊した）。あなたの大切なものを傷つけたダークランカー、許しはしない。
+あなたの持つレジェンドカードが、ダークランカーもしくは他のレジェンドカードが出現することを察知した。レジェンドカードに導かれるまま、キミはダークランカー（レジェンドカード）を探し始めた。
+カードランカーの組織やソウルカードの安定を願う人からそのダークランカーを倒すように依頼を受けた、あなたはその仕事を受ける価値があると思った。そう思った理由は報酬でもいいし、あなたの流儀でもよい。
+ダークランカーとあなたは偶然にも出会ってしまった。ダークランカーは危険な存在だ。見てしまった以上、放っておくわけにはいかない。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GDT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>学園運命表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>あなたが過ごしているクラスや寮、部活が潰されそうになった。その裏にはダークランカーの影響があるらしい。
+学園の偉い人から、カードランカーであるあなたに調査依頼が入った。どうやらダークランカーが学園に干渉しているとのこと。
+学園内のカードが奪われた。ダークランカーの影響だろう。大切にされていたカードを取り戻すために、あなたは立ち上がった。
+学内に邪悪な影響を受けたカードが入り込んでいた。おそらく、ダークランカーの仕業に違いない。
+ダークランカーによって被害を受けた生徒があなたに相談してきた。あなたはその生徒のためにもダークランカーの調査に乗り出した。
+ダークランカーの影響を受け、授業や部活動はまともにできなくなってしまった。あなたは元の学校生活を再開させるためにも、調査を始めた。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>OST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>郊外場所表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>カードショップ/ソウルカードを遊ぶ者たちが集まる場所。少し治安と客層が悪いが、賞金稼ぎも集まる。
+荒野/動植物も少なく、ピリピリとした雰囲気のある場所。
+遺跡/古代の遺跡。レジェンドカードやモンスターカードはこうした場所に発生したり、隠されていたりすることが多い。
+平原/どこまでも続く平原。動物も温厚であり、生い茂る草花が柔らかな印象を与える場所だ。
+山岳/険しい道が続く山。カードの精霊たちが生息していることもあるが、カード山賊団には気をつけねばならない。
+海川/海や川。山と同じくカードの精霊たちが住んでいる場所だ。安らげる場所でもあり、休憩している人がソウルカードをしている。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>学園場所表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>購買/学生にとっては学園内で唯一買い物ができる場所。パンの他に、カードパックが売っている。
+グラウンド／体育館/運動するのに適した広い空間だが、同時にソウルカードをやるのにもうってつけの場所である。
+屋上/校舎の屋上は一部の生徒には人気のスポットだ。今日も強い風が彼らを迎えている。
+教室/日が昇っている間は、学生たちの声で賑やかな場所。夕暮れからは少し物哀しく、寂しい。
+校舎裏/学校の中でも珍しく人目につかない場所。不良たちがソウルカードをやっている姿が見られる。
+部活棟/部活をやる者のために用意された場所。しかし、サボってソウルカードをやっているところも。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>場所表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>カード系/ショップや大会の会場など、ソウルカードに関係がある場所。カードランカーたちも集まってくる。
+自然/公園や山など、自然の息吹が感じられる場所。耳を澄ませばカードの声も聞こえるかもしれない。
+神秘/古代の施設や、神社・教会などの神秘的な場所。レジェンドカードが隠されているかもしれない。
+安息/自宅など、安らげる空間。そこはあなたが安らげる場所であり、思い出の地なのかもしれない。
+街中/人々が住む街中。何気なく落ちているカードの中には、価値があるものもあるかも。
+水辺/プールや海岸など、水が近くに存在する場所。ひとまず、ここでひと息つけそうだ。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TDT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大会運命表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>あなたは友人と共に大会に出場した。しかし、友人はダークランカーによって倒されてしまった。
+あなたは大会の商品を狙い、大会に出場した。だが、ダークランカーもそれを狙っているらしい。
+あなたは大会の運営者から、大会に関わっているダークランカーの撃破を依頼された。
+あなたはカードの導くままに、大会に関わってくるダークランカーの出現を察知した。
+あなたは大会の一選手として戦っていた。だが、謎の刺客によって襲われた。きっとダークランカーの仕業に違いない。
+あなたは大会に出場し、優勝候補と言われているカードランカーだ。だが、そんなキミをダークランカーは襲った。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>変調表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>猛毒/ラウンド終了時に【LP】の現在値を3点失う。また【LP】の現在値を回復できない。
+炎上/ラウンド終了時に、モンスターカードを一つ選び破壊状態にしなければならない。既に破壊状態になっているものは選べない。
+妨害/攻撃判定にマイナス2の修正を受ける。
+捕縛/ブロック判定にマイナス2の修正を受ける。
+召喚制限/「タイプ：補助」のモンスターカードを使用できない。
+暗闇/「タイプ：支援」のモンスターカードを使用できない。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#d66Type-instance_method" title="DiceBot#d66Type (method)">#d66Type</a></span>, <span class='object_link'><a href="DiceBot.html#defaultSuccessTarget-instance_method" title="DiceBot#defaultSuccessTarget (method)">#defaultSuccessTarget</a></span>, <span class='object_link'><a href="DiceBot.html#fractionType-instance_method" title="DiceBot#fractionType (method)">#fractionType</a></span>, <span class='object_link'><a href="DiceBot.html#isPrintMaxDice-instance_method" title="DiceBot#isPrintMaxDice (method)">#isPrintMaxDice</a></span>, <span class='object_link'><a href="DiceBot.html#rerollLimitCount-instance_method" title="DiceBot#rerollLimitCount (method)">#rerollLimitCount</a></span>, <span class='object_link'><a href="DiceBot.html#rerollNumber-instance_method" title="DiceBot#rerollNumber (method)">#rerollNumber</a></span>, <span class='object_link'><a href="DiceBot.html#sameDiceRerollCount-instance_method" title="DiceBot#sameDiceRerollCount (method)">#sameDiceRerollCount</a></span>, <span class='object_link'><a href="DiceBot.html#sameDiceRerollType-instance_method" title="DiceBot#sameDiceRerollType (method)">#sameDiceRerollType</a></span>, <span class='object_link'><a href="DiceBot.html#sendMode-instance_method" title="DiceBot#sendMode (method)">#sendMode</a></span>, <span class='object_link'><a href="DiceBot.html#sortType-instance_method" title="DiceBot#sortType (method)">#sortType</a></span>, <span class='object_link'><a href="DiceBot.html#upplerRollThreshold-instance_method" title="DiceBot#upplerRollThreshold (method)">#upplerRollThreshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, _dice_cnt, _dice_max, _n1, _n_max)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ゲーム別成功度判定(2D6).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getColorTable-instance_method" title="#getColorTable (instance method)">#<strong>getColorTable</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getMonster-instance_method" title="#getMonster (instance method)">#<strong>getMonster</strong>(color, monsterIndex)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getMonsterTables-instance_method" title="#getMonsterTables (instance method)">#<strong>getMonsterTables</strong>(colorIndex)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getRandumMonster-instance_method" title="#getRandumMonster (instance method)">#<strong>getRandumMonster</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; CardRanker </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of CardRanker.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rollDiceCommand-instance_method" title="#rollDiceCommand (instance method)">#<strong>rollDiceCommand</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="CardRanker (class)">CardRanker</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of CardRanker</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='kw'>super</span>
+  <span class='ivar'>@sendMode</span> <span class='op'>=</span> <span class='int'>2</span>
+  <span class='ivar'>@sortType</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='ivar'>@d66Type</span> <span class='op'>=</span> <span class='int'>2</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_2D6-instance_method">
+  
+    #<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, _dice_cnt, _dice_max, _n1, _n_max)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ゲーム別成功度判定(2D6)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_cnt'>_dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_max'>_dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid__n1'>_n1</span><span class='comma'>,</span> <span class='id identifier rubyid__n_max'>_n_max</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ファンブル</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ スペシャル ＞ </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_getRandumMonster'>getRandumMonster</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diff'>diff</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gameName-instance_method">
+  
+    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>カードランカー</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gameType-instance_method">
+  
+    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CardRanker</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getColorTable-instance_method">
+  
+    #<strong>getColorTable</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getColorTable'>getColorTable</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>白</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>青</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>緑</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>金</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>赤</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>黒</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getHelpMessage-instance_method">
+  
+    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
+  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>ランダムでモンスターカードを選ぶ (RM)
+特定のモンスターカードを選ぶ (CMxy　x：色、y：番号）
+　白：W、青：U、緑：V、金：G、赤：R、黒：B
+　例）CMW1→白の2：白竜　CMG12→金の12：土精霊
+場所表 (ST)
+街中場所表 (CST)
+郊外場所表 (OST)
+学園場所表 (SST)
+運命表 (DT)
+大会運命表 (TDT)
+学園運命表 (GDT)
+崩壊運命表 (CDT)
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getMonster-instance_method">
+  
+    #<strong>getMonster</strong>(color, monsterIndex)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getMonster'>getMonster</span><span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='comma'>,</span> <span class='id identifier rubyid_monsterIndex'>monsterIndex</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_monsterIndex'>monsterIndex</span> <span class='op'>&lt;</span> <span class='int'>2</span>
+
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>モンスター選択</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_colorWords'>colorWords</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>W</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>U</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>V</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>G</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>R</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>B</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_colorIndex'>colorIndex</span> <span class='op'>=</span> <span class='id identifier rubyid_colorWords'>colorWords</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>colorIndex</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_colorIndex'>colorIndex</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_colorTable'>colorTable</span> <span class='op'>=</span> <span class='id identifier rubyid_getColorTable'>getColorTable</span>
+  <span class='id identifier rubyid_color'>color</span> <span class='op'>=</span> <span class='id identifier rubyid_colorTable'>colorTable</span><span class='lbracket'>[</span><span class='id identifier rubyid_colorIndex'>colorIndex</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_monsters'>monsters</span> <span class='op'>=</span> <span class='id identifier rubyid_getMonsterTables'>getMonsterTables</span><span class='lparen'>(</span><span class='id identifier rubyid_colorIndex'>colorIndex</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>monsters</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_monsters'>monsters</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>monsterIndex</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_monsterIndex'>monsterIndex</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_monsterName'>monsterName</span> <span class='op'>=</span> <span class='id identifier rubyid_monsters'>monsters</span><span class='lbracket'>[</span><span class='id identifier rubyid_monsterIndex'>monsterIndex</span> <span class='op'>-</span> <span class='int'>2</span><span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_monsterName'>monsterName</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_color'>color</span><span class='embexpr_end'>}</span><span class='tstring_content'>の</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_monsterIndex'>monsterIndex</span><span class='embexpr_end'>}</span><span class='tstring_content'>：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_monsterName'>monsterName</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getMonsterTables-instance_method">
+  
+    #<strong>getMonsterTables</strong>(colorIndex)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getMonsterTables'>getMonsterTables</span><span class='lparen'>(</span><span class='id identifier rubyid_colorIndex'>colorIndex</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tables'>tables</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='qwords_beg'>%w{</span><span class='tstring_content'>白竜</span><span class='words_sep'> </span><span class='tstring_content'>僧侶</span><span class='words_sep'> </span><span class='tstring_content'>格闘家</span><span class='words_sep'> </span><span class='tstring_content'>斧使い</span><span class='words_sep'> </span><span class='tstring_content'>剣士</span><span class='words_sep'> </span><span class='tstring_content'>槍士</span><span class='words_sep'> </span><span class='tstring_content'>歩兵</span><span class='words_sep'> </span><span class='tstring_content'>弓兵</span><span class='words_sep'> </span><span class='tstring_content'>砲兵</span><span class='words_sep'> </span><span class='tstring_content'>天使</span><span class='words_sep'> </span><span class='tstring_content'>軍神</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='tstring_content'>水竜</span><span class='words_sep'> </span><span class='tstring_content'>魚</span><span class='words_sep'> </span><span class='tstring_content'>魚人</span><span class='words_sep'> </span><span class='tstring_content'>イカ</span><span class='words_sep'> </span><span class='tstring_content'>蟹</span><span class='words_sep'> </span><span class='tstring_content'>探偵</span><span class='words_sep'> </span><span class='tstring_content'>海賊</span><span class='words_sep'> </span><span class='tstring_content'>魔術師</span><span class='words_sep'> </span><span class='tstring_content'>使い魔</span><span class='words_sep'> </span><span class='tstring_content'>雲</span><span class='words_sep'> </span><span class='tstring_content'>水精霊</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='tstring_content'>緑竜</span><span class='words_sep'> </span><span class='tstring_content'>ワーム</span><span class='words_sep'> </span><span class='tstring_content'>鳥人</span><span class='words_sep'> </span><span class='tstring_content'>鳥</span><span class='words_sep'> </span><span class='tstring_content'>獣</span><span class='words_sep'> </span><span class='tstring_content'>獣人</span><span class='words_sep'> </span><span class='tstring_content'>エルフ</span><span class='words_sep'> </span><span class='tstring_content'>妖精</span><span class='words_sep'> </span><span class='tstring_content'>昆虫</span><span class='words_sep'> </span><span class='tstring_content'>植物</span><span class='words_sep'> </span><span class='tstring_content'>森精霊</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='tstring_content'>金竜</span><span class='words_sep'> </span><span class='tstring_content'>宝石</span><span class='words_sep'> </span><span class='tstring_content'>岩石</span><span class='words_sep'> </span><span class='tstring_content'>鋼</span><span class='words_sep'> </span><span class='tstring_content'>錬金術師</span><span class='words_sep'> </span><span class='tstring_content'>魔法生物</span><span class='words_sep'> </span><span class='tstring_content'>ドワーフ</span><span class='words_sep'> </span><span class='tstring_content'>機械</span><span class='words_sep'> </span><span class='tstring_content'>運命</span><span class='words_sep'> </span><span class='tstring_content'>女神</span><span class='words_sep'> </span><span class='tstring_content'>土精霊</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='tstring_content'>火竜</span><span class='words_sep'> </span><span class='tstring_content'>竜人</span><span class='words_sep'> </span><span class='tstring_content'>恐竜</span><span class='words_sep'> </span><span class='tstring_content'>戦車</span><span class='words_sep'> </span><span class='tstring_content'>蛮族</span><span class='words_sep'> </span><span class='tstring_content'>小鬼</span><span class='words_sep'> </span><span class='tstring_content'>大鬼</span><span class='words_sep'> </span><span class='tstring_content'>巨人</span><span class='words_sep'> </span><span class='tstring_content'>雷</span><span class='words_sep'> </span><span class='tstring_content'>炎</span><span class='words_sep'> </span><span class='tstring_content'>火精霊</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='tstring_content'>黒竜</span><span class='words_sep'> </span><span class='tstring_content'>闇騎士</span><span class='words_sep'> </span><span class='tstring_content'>怪物</span><span class='words_sep'> </span><span class='tstring_content'>忍者</span><span class='words_sep'> </span><span class='tstring_content'>妖怪</span><span class='words_sep'> </span><span class='tstring_content'>蝙蝠</span><span class='words_sep'> </span><span class='tstring_content'>吸血鬼</span><span class='words_sep'> </span><span class='tstring_content'>不死者</span><span class='words_sep'> </span><span class='tstring_content'>幽霊</span><span class='words_sep'> </span><span class='tstring_content'>悪魔</span><span class='words_sep'> </span><span class='tstring_content'>邪神</span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_tables'>tables</span><span class='lbracket'>[</span><span class='id identifier rubyid_colorIndex'>colorIndex</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getRandumMonster-instance_method">
+  
+    #<strong>getRandumMonster</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getRandumMonster'>getRandumMonster</span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダムモンスター選択</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_colorTable'>colorTable</span> <span class='op'>=</span> <span class='id identifier rubyid_getColorTable'>getColorTable</span>
+  <span class='id identifier rubyid_color'>color</span><span class='comma'>,</span> <span class='id identifier rubyid_colorIndex'>colorIndex</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_colorTable'>colorTable</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_monsters'>monsters</span> <span class='op'>=</span> <span class='id identifier rubyid_getMonsterTables'>getMonsterTables</span><span class='lparen'>(</span><span class='id identifier rubyid_colorIndex'>colorIndex</span> <span class='op'>-</span> <span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_monsterName'>monsterName</span><span class='comma'>,</span> <span class='id identifier rubyid_monsterIndex'>monsterIndex</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_monsters'>monsters</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_colorIndex'>colorIndex</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_monsterIndex'>monsterIndex</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_color'>color</span><span class='embexpr_end'>}</span><span class='tstring_content'>の</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_monsterIndex'>monsterIndex</span><span class='embexpr_end'>}</span><span class='tstring_content'>：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_monsterName'>monsterName</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rollDiceCommand-instance_method">
+  
+    #<strong>rollDiceCommand</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/CardRanker.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^RM$</span><span class='regexp_end'>/i</span></span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_getRandumMonster'>getRandumMonster</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CM(\w)(\d+)$</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_color'>color</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
+    <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_getMonster'>getMonster</span><span class='lparen'>(</span><span class='id identifier rubyid_color'>color</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_getTableCommandResult'>getTableCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='cvar'>@@tables</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Oct 31 21:10:57 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.1).
+</div>
+
+    </div>
+  </body>
+</html>

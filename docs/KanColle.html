@@ -1,0 +1,3864 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: KanColle
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "KanColle";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (K)</a> &raquo;
+    
+    
+    <span class="title">KanColle</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: KanColle
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></li>
+          
+            <li class="next">KanColle</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>diceBot/KanColle.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="tables-classvariable" class="">@@tables =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT10</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性⑩</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-10　《お嬢様》
+2-10　《面白い》
+3-10　《いじわる》
+4-10　《おしゃれ》
+5-10　《指揮》
+6-10　《魚雷》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT11</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性⑪</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-11　《スタイル》
+2-11　《えっち》
+3-11　《自由奔放》
+4-11　《入浴》
+5-11　《衛生》
+6-11　《対潜戦闘》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT12</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性⑫</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-12　《外国暮らし》
+2-12　《派手》
+3-12　《大胆》
+4-12　《恋愛》
+5-12　《整備》
+6-12　《夜戦》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT2</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性②</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-2　《人脈》
+2-2　《素直》
+3-2　《不思議》
+4-2　《寝る》
+5-2　《暗号》
+6-2　《電子戦》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT3</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性③</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-3　《名声》
+2-3　《クール》
+3-3　《おおらか》
+4-3　《空想》
+5-3　《通信》
+6-3　《航空打撃戦》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT4</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性④</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-4　《暗い過去》
+2-4　《優しい》
+3-4　《面倒見》
+4-4　《生き物》
+5-4　《索敵》
+6-4　《航空戦》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT5</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性⑤</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-5　《古風》
+2-5　《おしとやか》
+3-5　《マジメ》
+4-5　《読書》
+5-5　《規律》
+6-5　《対空戦闘》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT6</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性⑥</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-6　《口ぐせ》
+2-6　《けなげ》
+3-6　《負けず嫌い》
+4-6　《食べ物》
+5-6　《補給》
+6-6　《突撃》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT7</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性⑦</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-7　《幸運》
+2-7　《笑顔》
+3-7　《元気》
+4-7　《おしゃべり》
+5-7　《待機》
+6-7　《砲撃》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT8</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性⑧</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-8　《アイドル》
+2-8　《ばか》
+3-8　《楽観的》
+4-8　《買い物》
+5-8　《機動》
+6-8　《退却》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT9</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>指定個性⑨</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>1-9　《秘密兵器》
+2-9　《さわやか》
+3-9　《丁寧》
+4-9　《芸能》
+5-9　《海図》
+6-9　《支援》
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ETIT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>侵攻効果表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>援軍\n深海棲艦は徐々に力をつけ、大艦隊へとせいちょうしつつある。決戦フェイズの深海棲艦側の艦隊に、駆逐ハ級（『着任ノ書ｐ258』）が一人追加される。
+海域汚染\n特定の海域が深海棲艦の住みやすい環境になる。このセッションの艦隊戦のの各ラウンドの開始時に、深海棲艦の艦隊は誰か一人だけ【行動力】を1Ｄ6点減少できるようになる。【行動力】を消費すると、その戦場を好きなものに変更できる。
+略奪\n大勢の物資や人々を奪い、連れ去られる。鎮守府の資材がすべて1Ｄ6個失われる。
+象徴破壊\n人類に歴史的建造物や貴重な遺産、世界的な観光名所が破壊される。ＰＣ全員は【行動力】を1Ｄ6点減少する。
+襲撃\n深海棲艦の侵攻によって、鎮守府の周辺に住む人たちに大きな被害が出る。ＰＣ全員は暴走判定を行うこと。
+通商破壊\n深海棲艦の侵攻によって、通商ルートが破壊される。そのセッションの間、資材を獲得する効果が発生したとき、その資材の数がいずれも一つずつ減少する。
+謎のキリ\n謎の霧が海域を覆う。このセッションの艦隊戦中、深海棲艦はランドの開始時に、【行動力】を1Ｄ6点消費できるようになる。そのラウンドの間、消費した【行動力】の半分の値（切り捨て。0〜3点の値になる）だけ、深海棲艦全員は、艦隊戦で受けるダメージが軽減できる。この効果は累積するが、この効果で軽減できるダメージの上限は3点である。
+陸地浸食\n陸地を浸食し、海に変える。この事態に鎮守府への非難が高まる。そのセッションの間、ＰＣ全員はあらゆる判定にマイナス1の修正がつく。この侵攻以降、行動判定を行うＰＣは、判定直前に自分の【行動力】を1点消費するたび、進行による修正をすべて打ち消すことができる。
+新型改造\n深海棲艦は自らを強化しているようだ。そのセッションの決戦フェイズに登場する深海棲艦の中から一人を選ぶ。その深海棲艦をeliteのクラスを付加する。その深海棲艦がすでにeliteならflagshipに、flagshipなら改にすることもできる。
+艦娘研究\n艦娘が拿捕され、鹵獲される。一体何を企んでいるのか……？提督は、好きなＮＰＣの艦娘を一人選ぶ。深海棲艦の一人に、その艦娘の持つアビリティ一つを習得させることができる。
+基地建設\n深海棲艦は自分たちの基地を建造した。そのセッションの決戦フェイズで、深海棲艦の旗艦は、開幕雷撃戦と雷撃戦でダメージを受けなくなる。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LFDT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>艦隊敗北表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>敵の支援砲撃。ランダムなPC一人に損傷を一つ与える。
+敵の罠。ランダムなPC一人に「アクシデント表」を一回適用する。
+追い詰められる。戦場が「T字戦不利」になる。
+本隊への合流。「敵部隊のサポート」発生。
+盟友艦行方不明（MIA）。敵部隊の旗艦が決戦フェイズ中、対応する盟友艦の固有、または戦術アビリティをいずれか一つを修得する。
+盟友艦轟沈。盟友艦は失われ「暴走表」を一回振り、暴走する。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LFVT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>艦隊勝利表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>支援砲撃。敵艦の中からランダムな一人に損傷を一つ与える。
+士気高揚。この表を振ったPCの【命中力】が１点上昇する。
+士気高揚。この表を振ったPCの【火力】が１点上昇する。
+士気高揚。この表を振ったPCの【回避力】が１点上昇する。
+士気高揚。この表を振ったPCの【装甲力】が１点上昇する。
+絆が深まる。その盟友艦からのPCへの【感情値】が１点上昇する。
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LSFT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大規模部隊表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>水上打撃部隊　「脅威力：10」
+空母機動部隊　「脅威力：9」
+水雷戦隊　　　　「脅威力：8」
+潜水艦部隊　　 「脅威力：7」
+輸送部隊       「脅威力：6」
+主力部隊       「脅威力：12」
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WPCN</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>砲開発表(燃料3/弾薬6/鋼材6/ボーキ3)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>4d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>開発失敗！(資材だけ失う)
+開発失敗！(資材だけ失う)
+三式弾(建造壱p169)
+25mm連装機銃(着任p252)
+41cm連装砲(着任p250)
+8cm高角砲(着任p250)
+15.2cm連装砲(着任p249)
+魚雷(着任p252)
+機銃(着任p252)
+小口径主砲(着任p249)
+中口径主砲(着任p249)
+小口径主砲(着任p249)
+中口径主砲(着任p249)
+10cm連装高角砲(着任p249)
+20.3cm連装砲(着任p249)
+61cm四連装(酸素)魚雷(着任p252)
+46cm三連装砲(着任p250)
+15.5cm三連装砲(副砲)(建造壱p167)
+61cm五連装(酸素)魚雷(建造壱p168)
+53cm艦種(酸素)魚雷(建造壱p168)
+九一式徹甲弾(建造壱p169)
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WPFA</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>艦載機開発表(燃料3/弾薬6/鋼材3/ボーキ6)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>4d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>開発失敗！(資材だけ失う)
+開発失敗！(資材だけ失う)
+開発失敗！(資材だけ失う)
+開発失敗！(資材だけ失う)
+開発失敗！(資材だけ失う)
+Ju87C改(建造壱p167)
+流星(建造壱p167)
+紫電改二(建造壱p167)
+零式艦戦52型(着任p251)
+艦上戦闘機(着任p251)
+偵察機(着任p251)
+艦上爆撃機(着任p250)
+艦上攻撃機(着任p251)
+彩雲(着任p251)
+彗星(着任p250)
+天山(着任p251)
+瑞雲(建造壱p168)
+彗星一二型甲(建造壱p167)
+流星改(建造壱p167)
+烈風(建造壱p168)
+零式水上観測機(建造壱p168)
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WPMC</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>特殊開発表(燃料6/弾薬3/鋼材6/ボーキ3)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>開発失敗！(資材だけ失う)
+開発失敗！(資材だけ失う)
+開発失敗！(資材だけ失う)
+開発失敗！(資材だけ失う)
+探照灯(建造壱p169)
+電探(着任p252)
+改良型艦本式タービン(着任p252)
+九四式爆雷投射機(建造壱p169)
+甲標的 甲(建造壱p168)
+33号対水上電探(建造壱p169)
+増設バルジ(中型艦)(建造壱p169)
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WPMCN</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>新特殊開発表(燃料6/弾薬3/鋼材6/ボーキ3)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
+<span class='tstring_content'>開発失敗！(資材だけ失う)
+カ号観測機(建造弐p171)
+九三式水中聴音機(建造弐p171)
+ドラム缶(輸送用)(建造弐p171)
+探照灯(建造壱p169)
+電探(着任p252)
+改良型艦本式タービン(着任p252)
+九四式爆雷投射機(建造壱p169)
+甲標的 甲(建造壱p168)
+33号対水上電探(建造壱p169)
+増設バルジ(中型艦)(建造壱p169)
+</span><span class='heredoc_end'>TABLE_TEXT_END
+</span>  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#d66Type-instance_method" title="DiceBot#d66Type (method)">#d66Type</a></span>, <span class='object_link'><a href="DiceBot.html#defaultSuccessTarget-instance_method" title="DiceBot#defaultSuccessTarget (method)">#defaultSuccessTarget</a></span>, <span class='object_link'><a href="DiceBot.html#fractionType-instance_method" title="DiceBot#fractionType (method)">#fractionType</a></span>, <span class='object_link'><a href="DiceBot.html#isPrintMaxDice-instance_method" title="DiceBot#isPrintMaxDice (method)">#isPrintMaxDice</a></span>, <span class='object_link'><a href="DiceBot.html#rerollLimitCount-instance_method" title="DiceBot#rerollLimitCount (method)">#rerollLimitCount</a></span>, <span class='object_link'><a href="DiceBot.html#rerollNumber-instance_method" title="DiceBot#rerollNumber (method)">#rerollNumber</a></span>, <span class='object_link'><a href="DiceBot.html#sameDiceRerollCount-instance_method" title="DiceBot#sameDiceRerollCount (method)">#sameDiceRerollCount</a></span>, <span class='object_link'><a href="DiceBot.html#sameDiceRerollType-instance_method" title="DiceBot#sameDiceRerollType (method)">#sameDiceRerollType</a></span>, <span class='object_link'><a href="DiceBot.html#sendMode-instance_method" title="DiceBot#sendMode (method)">#sendMode</a></span>, <span class='object_link'><a href="DiceBot.html#sortType-instance_method" title="DiceBot#sortType (method)">#sortType</a></span>, <span class='object_link'><a href="DiceBot.html#upplerRollThreshold-instance_method" title="DiceBot#upplerRollThreshold (method)">#upplerRollThreshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, _dice_cnt, _dice_max, _n1, _n_max)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ゲーム別成功度判定(2D6).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_accident_table-instance_method" title="#get_accident_table (instance method)">#<strong>get_accident_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>アクシデント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_asobi_event_table-instance_method" title="#get_asobi_event_table (instance method)">#<strong>get_asobi_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>遊びイベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_battle_event_table-instance_method" title="#get_battle_event_table (instance method)">#<strong>get_battle_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>激戦イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_bousou_table-instance_method" title="#get_bousou_table (instance method)">#<strong>get_bousou_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_bunya_table-instance_method" title="#get_bunya_table (instance method)">#<strong>get_bunya_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_develop_matome_table-instance_method" title="#get_develop_matome_table (instance method)">#<strong>get_develop_matome_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_develop_table-instance_method" title="#get_develop_table (instance method)">#<strong>get_develop_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_emotion_table-instance_method" title="#get_emotion_table (instance method)">#<strong>get_emotion_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>感情表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_ensei_event_table-instance_method" title="#get_ensei_event_table (instance method)">#<strong>get_ensei_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>遠征イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_ensyuu_event_table-instance_method" title="#get_ensyuu_event_table (instance method)">#<strong>get_ensyuu_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>演習イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_fear_event_table-instance_method" title="#get_fear_event_table (instance method)">#<strong>get_fear_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>恐怖イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_gaisyutsu_event_table-instance_method" title="#get_gaisyutsu_event_table (instance method)">#<strong>get_gaisyutsu_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>外出イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_honobono_event_table-instance_method" title="#get_honobono_event_table (instance method)">#<strong>get_honobono_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ほのぼのイベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_item_table-instance_method" title="#get_item_table (instance method)">#<strong>get_item_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_kosei_haikei_table-instance_method" title="#get_kosei_haikei_table (instance method)">#<strong>get_kosei_haikei_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_kosei_koukai_table-instance_method" title="#get_kosei_koukai_table (instance method)">#<strong>get_kosei_koukai_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_kosei_miryoku_table-instance_method" title="#get_kosei_miryoku_table (instance method)">#<strong>get_kosei_miryoku_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_kosei_seikaku_table-instance_method" title="#get_kosei_seikaku_table (instance method)">#<strong>get_kosei_seikaku_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_kosei_sentou_table-instance_method" title="#get_kosei_sentou_table (instance method)">#<strong>get_kosei_sentou_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_kosei_syumi_table-instance_method" title="#get_kosei_syumi_table (instance method)">#<strong>get_kosei_syumi_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_kosei_table-instance_method" title="#get_kosei_table (instance method)">#<strong>get_kosei_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_kouryu_event_table-instance_method" title="#get_kouryu_event_table (instance method)">#<strong>get_kouryu_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>交流イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_mission_event_table-instance_method" title="#get_mission_event_table (instance method)">#<strong>get_mission_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>任務イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_mokuhyou_table-instance_method" title="#get_mokuhyou_table (instance method)">#<strong>get_mokuhyou_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_nichijyou_event_table-instance_method" title="#get_nichijyou_event_table (instance method)">#<strong>get_nichijyou_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>日常イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_sakusen_event_table-instance_method" title="#get_sakusen_event_table (instance method)">#<strong>get_sakusen_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>作戦イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_senka_table-instance_method" title="#get_senka_table (instance method)">#<strong>get_senka_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_senzyou_table-instance_method" title="#get_senzyou_table (instance method)">#<strong>get_senzyou_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_special_senka_table-instance_method" title="#get_special_senka_table (instance method)">#<strong>get_special_senka_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_voyage_event_table-instance_method" title="#get_voyage_event_table (instance method)">#<strong>get_voyage_event_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>航海イベント表.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_weapon1_table-instance_method" title="#get_weapon1_table (instance method)">#<strong>get_weapon1_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_weapon2_table-instance_method" title="#get_weapon2_table (instance method)">#<strong>get_weapon2_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_weapon3_table-instance_method" title="#get_weapon3_table (instance method)">#<strong>get_weapon3_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_weapon4_table-instance_method" title="#get_weapon4_table (instance method)">#<strong>get_weapon4_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; KanColle </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of KanColle.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rollDiceCommand-instance_method" title="#rollDiceCommand (instance method)">#<strong>rollDiceCommand</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="KanColle (class)">KanColle</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of KanColle</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='kw'>super</span>
+  <span class='ivar'>@sendMode</span> <span class='op'>=</span> <span class='int'>2</span>
+  <span class='ivar'>@sortType</span> <span class='op'>=</span> <span class='int'>3</span>
+  <span class='ivar'>@d66Type</span> <span class='op'>=</span> <span class='int'>2</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_2D6-instance_method">
+  
+    #<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, _dice_cnt, _dice_max, _n1, _n_max)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ゲーム別成功度判定(2D6)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_cnt'>_dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_max'>_dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid__n1'>_n1</span><span class='comma'>,</span> <span class='id identifier rubyid__n_max'>_n_max</span><span class='rparen'>)</span> <span class='comment'># ゲーム別成功度判定(2D6)
+</span>  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ファンブル（判定失敗。アクシデント表を自分のＰＣに適用）</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ スペシャル（判定成功。【行動力】が１Ｄ６点回復）</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diff'>diff</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gameName-instance_method">
+  
+    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>艦これRPG</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gameType-instance_method">
+  
+    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KanColle</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_accident_table-instance_method">
+  
+    #<strong>get_accident_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>アクシデント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_accident_table'>get_accident_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>よかったぁ。何もなし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>意外な手応え。その判定に使った個性の属性（【長所】と【弱点】）が反対になる。自分が判定を行うとき以外はこの効果は無視する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>えーん。大失態。このキャラクターに対して【感情値】を持っているキャラクター全員の声援欄にチェックが入る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>奇妙な猫がまとわりつく。サイクルの終了時、もしくは、艦隊戦の終了時まで、自分の行う行為判定にマイナス１の修正がつく（この効果は、マイナス２まで累積する）。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>いててて。損傷が一つ発生する。もしも艦隊戦中なら、自分と同じ航行序列にいる味方艦にも損傷が一つ発生する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ううう。やりすぎちゃった！自分の【行動力】が１Ｄ６点減少する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_asobi_event_table-instance_method">
+  
+    #<strong>get_asobi_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>遊びイベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 247</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_asobi_event_table'>get_asobi_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>遊びのつもりが……：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《さわやか／魅力９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>新しい遊びの開発：《空想／趣味３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>宴会：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《元気／性格７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>街をぶらつく：《面白い／魅力１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ガールズコーデ：《おしゃれ／趣味１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>○○大会開催！：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《大胆／性格１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>チェス勝負：自分以外の好きなＰＣ１人を選んで、《クール／魅力３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>熱唱カラオケ大会：《芸能／趣味９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイドルコンサート：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《アイドル／背景８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>スタイル自慢！：《スタイル／背景１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ちゃんと面倒みるから！：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《生き物／趣味４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（着任p222）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_battle_event_table-instance_method">
+  
+    #<strong>get_battle_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>激戦イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 377</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_battle_event_table'>get_battle_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>分裂の危機：提督が選んだ(キーワード)に対応した指定個性で判定。思いつかない場合は《指揮／航海１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>脱走：《通信／航海３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>勇気の呪文：《口ぐせ／背景６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>混乱：《整備／航海１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>不意の遭遇：《魚雷／戦闘１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵の襲撃：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《大胆／性格１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対空迎撃戦：《対空戦闘／戦闘５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>傷自慢：《元気／性格７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>怖がらないで：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《優しい／魅力４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>生き延びろ：《負けず嫌い／性格１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>極限の集中：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《ばか／魅力８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（建造弐p137）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_bousou_table-instance_method">
+  
+    #<strong>get_bousou_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 725</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_bousou_table'>get_bousou_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>妄想</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>狂戦士</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>興奮</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>溺愛</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>慢心</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>絶望</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（建造弐p164）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_bunya_table-instance_method">
+  
+    #<strong>get_bunya_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 599</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_bunya_table'>get_bunya_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>背景</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>魅力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>性格</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>趣味</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>航海</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>戦闘</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_develop_matome_table-instance_method">
+  
+    #<strong>get_develop_matome_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 445</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_develop_matome_table'>get_develop_matome_table</span>
+  <span class='id identifier rubyid_output1'>output1</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_output2'>output2</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_dice'>dice</span>
+  <span class='kw'>when</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_output1'>output1</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備１種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon1_table'>get_weapon1_table</span>
+  <span class='kw'>when</span> <span class='int'>2</span>
+    <span class='id identifier rubyid_output1'>output1</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備１種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon1_table'>get_weapon1_table</span>
+  <span class='kw'>when</span> <span class='int'>3</span>
+    <span class='id identifier rubyid_output1'>output1</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備２種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon2_table'>get_weapon2_table</span>
+  <span class='kw'>when</span> <span class='int'>4</span>
+    <span class='id identifier rubyid_output1'>output1</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備２種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon2_table'>get_weapon2_table</span>
+  <span class='kw'>when</span> <span class='int'>5</span>
+    <span class='id identifier rubyid_output1'>output1</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備３種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon3_table'>get_weapon3_table</span>
+  <span class='kw'>when</span> <span class='int'>6</span>
+    <span class='id identifier rubyid_output1'>output1</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備４種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon4_table'>get_weapon4_table</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_output1'>output1</span><span class='embexpr_end'>}</span><span class='tstring_content'>：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_output2'>output2</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n2'>total_n2</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_develop_table-instance_method">
+  
+    #<strong>get_develop_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 433</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_develop_table'>get_develop_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備１種表（WP1T）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備１種表（WP1T）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備２種表（WP2T）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備２種表（WP2T）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備３種表（WP3T）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備４種表（WP4T）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_emotion_table-instance_method">
+  
+    #<strong>get_emotion_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>感情表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 183</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_emotion_table'>get_emotion_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>かわいい（プラス）／むかつく（マイナス）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>すごい（プラス）／ざんねん（マイナス）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>たのしい（プラス）／こわい（マイナス）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>かっこいい（プラス）／しんぱい（マイナス）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>いとしい（プラス）／かまってほしい（マイナス）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>だいすき（プラス）／だいっきらい（マイナス）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_ensei_event_table-instance_method">
+  
+    #<strong>get_ensei_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>遠征イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 283</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_ensei_event_table'>get_ensei_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>謎の深海棲艦：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《退却／戦闘８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>資源輸送任務：《買い物／趣味８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>強行偵察任務：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《索敵／航海４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>航空機輸送作戦：《航空戦／戦闘４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>タンカー護衛任務：《丁寧／性格９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>海上護衛任務：提督が選んだ（キーワード）に対応した指定能力で判定。思いつかない場合は《不思議／性格２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>観艦式：《おしとやか／魅力５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ボーキサイト輸送任務：《補給／航海６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>社交界デビュー？：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《お嬢様／背景１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対潜警戒任務：《対潜戦闘／戦闘１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>大規模遠征作戦、発令！：提督の選んだ（キーワード）に対応した指定能力値で判定。思いつかな場合は《指揮／航海１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（着任p224）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_ensyuu_event_table-instance_method">
+  
+    #<strong>get_ensyuu_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>演習イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 265</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_ensyuu_event_table'>get_ensyuu_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>大げんか！：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《負けず嫌い／性格６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>雷撃演習：《魚雷／戦闘１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>座学の講義：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《マジメ／性格５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>速力演習：《機動／航海８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>救援演習：《支援／戦闘９》で判定。シーンプレイヤーのＰＣは、経験点を１０点獲得する。残念：ＰＣ全員の【行動力】が１Ｄ６点減少する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>砲撃演習：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《砲撃／戦闘７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>艦隊戦演習：《派手／魅力１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>整備演習：《整備／航海１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>夜戦演習：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《夜戦／戦闘１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>開発演習：《秘密兵器／背景９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>防空射撃演習：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《対空戦闘／戦闘５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（着任p223）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_fear_event_table-instance_method">
+  
+    #<strong>get_fear_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>恐怖イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 415</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_fear_event_table'>get_fear_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>未知の怪物：提督が選んだ(キーワード)に対応した指定個性で判定。思いつかない場合は《突撃／戦闘６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ドッペルゲンガー：《不思議／性格２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>悪夢：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《寝る／趣味２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>イマジナリーフレンド：《空想／趣味３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>幽霊船：《電子戦／戦闘２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>謎の予言：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《楽観的／性格８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>黒猫：《幸運／背景７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>サルベージ：《丁寧／性格９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>フラッシュバック：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《暗い過去／背景４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>深海の呼び声：《素直／魅力２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>死者の声：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《けなげ／魅力６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（建造弐p139）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_gaisyutsu_event_table-instance_method">
+  
+    #<strong>get_gaisyutsu_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>外出イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 358</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_gaisyutsu_event_table'>get_gaisyutsu_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ノブレス・オブリージュ：提督が選んだ(キーワード)に対応した指定個性で判定。思いつかない場合は《お嬢様／背景１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>サイン会：《名声／背景３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>蚤の市：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《古風／背景５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>追っかけ：《退却／戦闘８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>走り込み：《航空戦／戦闘４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>外食：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《索敵／航海４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>迷子：《面倒見／性格４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>街頭モデル：《おしゃれ／趣味１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>暴れ○○だ！：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《生き物／趣味４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>臨時講師：《おしゃべり／性格１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>映画撮影：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《芸能／趣味９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（建造弐p136）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_honobono_event_table-instance_method">
+  
+    #<strong>get_honobono_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ほのぼのイベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 320</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_honobono_event_table'>get_honobono_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>模様替え：提督が選んだ(キーワード)に対応した指定個性で判定。思いつかない場合は《派手／魅力１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>門限破り：《夜戦／戦闘１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ぼやき大会：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《いじわる／性格１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>もしも……：《自由奔放／性格１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>退屈な会議：《暗号／航海２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>気の合う趣味：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《面白い／魅力１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>身だしなみ：《さわやか／魅力９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ダイエット：《スタイル／背景１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>通信販売：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《待機／背景２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>気になる視線：《えっち／魅力１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>思い立ったが吉日：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《恋愛／趣味１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（建造弐p134）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_item_table-instance_method">
+  
+    #<strong>get_item_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 525</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_item_table'>get_item_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイス</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>羊羹</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>開発資材</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>高速修復剤</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>応急修理要員</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>思い出の品</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（P241）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_kosei_haikei_table-instance_method">
+  
+    #<strong>get_kosei_haikei_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 611</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_kosei_haikei_table'>get_kosei_haikei_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>人脈</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名声</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>暗い過去</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>古風</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>口ぐせ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>幸運</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイドル</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>秘密兵器</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お嬢様</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>スタイル</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>外国暮らし</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_kosei_koukai_table-instance_method">
+  
+    #<strong>get_kosei_koukai_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 679</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_kosei_koukai_table'>get_kosei_koukai_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>暗号</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>通信</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>索敵</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>規律</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>補給</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>待機</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>機動</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>海図</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>指揮</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>衛生</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>整備</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_kosei_miryoku_table-instance_method">
+  
+    #<strong>get_kosei_miryoku_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 628</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_kosei_miryoku_table'>get_kosei_miryoku_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>素直</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>クール</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>優しい</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>おしとやか</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>けなげ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>笑顔</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ばか</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>さわやか</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>面白い</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>えっち</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>派手</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_kosei_seikaku_table-instance_method">
+  
+    #<strong>get_kosei_seikaku_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 645</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_kosei_seikaku_table'>get_kosei_seikaku_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>不思議</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>おおらか</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>面倒見</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>マジメ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>負けず嫌い</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>元気</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>楽観的</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>丁寧</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>いじわる</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>自由奔放</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>大胆</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_kosei_sentou_table-instance_method">
+  
+    #<strong>get_kosei_sentou_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 696</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_kosei_sentou_table'>get_kosei_sentou_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>電子戦</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>航空打撃戦</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>航空戦</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対空戦闘</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>突撃</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>砲撃</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>退却</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>支援</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>魚雷</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対潜戦闘</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>夜戦</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_kosei_syumi_table-instance_method">
+  
+    #<strong>get_kosei_syumi_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 662</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_kosei_syumi_table'>get_kosei_syumi_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>寝る</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>空想</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>生き物</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>読書</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>食べ物</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>おしゃべり</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>買い物</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>芸能</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>おしゃれ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>入浴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>恋愛</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_kosei_table-instance_method">
+  
+    #<strong>get_kosei_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 573</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_kosei_table'>get_kosei_table</span>
+  <span class='id identifier rubyid_output1'>output1</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_output2'>output2</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_output1'>output1</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n1'>total_n1</span> <span class='op'>=</span> <span class='id identifier rubyid_get_bunya_table'>get_bunya_table</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_total_n1'>total_n1</span>
+  <span class='kw'>when</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span>  <span class='id identifier rubyid_get_kosei_haikei_table'>get_kosei_haikei_table</span>
+  <span class='kw'>when</span> <span class='int'>2</span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span>  <span class='id identifier rubyid_get_kosei_miryoku_table'>get_kosei_miryoku_table</span>
+  <span class='kw'>when</span> <span class='int'>3</span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span>  <span class='id identifier rubyid_get_kosei_seikaku_table'>get_kosei_seikaku_table</span>
+  <span class='kw'>when</span> <span class='int'>4</span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span>  <span class='id identifier rubyid_get_kosei_syumi_table'>get_kosei_syumi_table</span>
+  <span class='kw'>when</span> <span class='int'>5</span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span>  <span class='id identifier rubyid_get_kosei_koukai_table'>get_kosei_koukai_table</span>
+  <span class='kw'>when</span> <span class='int'>6</span>
+    <span class='id identifier rubyid_output2'>output2</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n2'>total_n2</span> <span class='op'>=</span>  <span class='id identifier rubyid_get_kosei_sentou_table'>get_kosei_sentou_table</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>《</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_output2'>output2</span><span class='embexpr_end'>}</span><span class='tstring_content'>／</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_output1'>output1</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n2'>total_n2</span><span class='embexpr_end'>}</span><span class='tstring_content'>》</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n1'>total_n1</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n2'>total_n2</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_kouryu_event_table-instance_method">
+  
+    #<strong>get_kouryu_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>交流イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 229</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_kouryu_event_table'>get_kouryu_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>一触即発！：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《笑顔／魅力７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>手取り足取り：自分以外の好きなＰＣ１人を選んで、《えっち／魅力１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>恋は戦争：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《恋愛／趣味１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>マッサージ：自分以外の好きなＰＣ１人を選んで、《けなげ／魅力６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>裸のつきあい：《入浴／趣味１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>深夜のガールズトーク：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《おしゃべり／趣味７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>いいまちがえ：《ばか／魅力８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>小言百より慈愛の一語：自分以外の好きなＰＣ１人を選んで、《面倒見／性格４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>差し入れ：自分以外の好きなＰＣ１人を選んで、提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《優しい／魅力４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お手紙：自分以外の好きなＰＣ１人を選んで、《古風／背景５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>昔語り：自分以外の好きなＰＣ１人を選んで、提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《暗い過去／背景４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（着任p221）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_mission_event_table-instance_method">
+  
+    #<strong>get_mission_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>任務イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 396</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_mission_event_table'>get_mission_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>視察：提督が選んだ(キーワード)に対応した指定個性で判定。思いつかない場合は《面倒見／魅力１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>酒保祭り：《補給／航海６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイドルユニット結成：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《アイドル／背景８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お風呂場大改造：《入浴／趣味１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>現場の融通：《人脈／背景２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>緊急空輸：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《航空戦／戦闘４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>資源の再利用：《マジメ／性格５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>物欲：《買い物／趣味８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>魔改造：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《秘密兵器／背景９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ちゃんと伝えたってば！：《クール／魅力３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ストライキ：《おおらか／性格３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（建造弐p138）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_mokuhyou_table-instance_method">
+  
+    #<strong>get_mokuhyou_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 537</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_mokuhyou_table'>get_mokuhyou_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵艦の中で、もっとも航行序列の高いＰＣ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵艦の中で、もっとも損傷の多いＰＣ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵艦の中で、もっとも【装甲力】の低いＰＣ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵艦の中で、もっとも【回避力】の低いＰＣ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵艦の中で、もっとも【火力】の高いＰＣ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵艦の中から完全にランダムに決定</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_nichijyou_event_table-instance_method">
+  
+    #<strong>get_nichijyou_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>日常イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 211</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_nichijyou_event_table'>get_nichijyou_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>何もない日々：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は、《待機／航海７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ティータイム：《外国暮らし／背景１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>釣り：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《おおらか／性格３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お昼寝：《寝る／趣味２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>綺麗におそうじ！：《衛生／航海１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>海軍カレー：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《食べ物／趣味６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>銀蝿／ギンバイ：《規律／航海５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>日々の訓練：《素直／魅力２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>取材：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《名声／背景３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>海水浴：《突撃／戦闘６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>マイブーム：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《口ぐせ／背景６》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（着任p220）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_sakusen_event_table-instance_method">
+  
+    #<strong>get_sakusen_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>作戦イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 301</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_sakusen_event_table'>get_sakusen_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>電子の目：提督が選んだ(キーワード)に対応した指定個性で判定。思いつかない場合は《電子戦／戦闘２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>直掩部隊：《航空戦／戦闘４》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>噂によれば：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《通信／航海３》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>資料室にて：《海図／航海９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>守護天使：《幸運／背景７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>作戦会議！：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《自由奔放／性格１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>暗号解読：《暗号／航海２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>一か八か？：《楽観的／性格８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>特務機関との邂逅：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《人脈／背景２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>クイーンズ・ギャンビット：《いじわる／性格１０》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>知彼知己者、百戦不殆：《読書／趣味５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（着任p225）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_senka_table-instance_method">
+  
+    #<strong>get_senka_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 549</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_senka_table'>get_senka_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>燃料／１Ｄ６＋[敵艦隊の人数]個</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>弾薬／１Ｄ６＋[敵艦隊の人数]個</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>鋼材／１Ｄ６＋[敵艦隊の人数]個</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ボーキサイト／１Ｄ６＋[敵艦隊の人数]個</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>任意の資材／１Ｄ６＋[敵艦隊の人数]個</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>感情値／各自好きなキャラクターへの【感情値】＋１</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_senzyou_table-instance_method">
+  
+    #<strong>get_senzyou_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 713</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_senzyou_table'>get_senzyou_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>同航戦</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>反航戦</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ｔ字有利</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ｔ字不利</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>悪天候</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>悪海象（あくかいしょう）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（P231）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_special_senka_table-instance_method">
+  
+    #<strong>get_special_senka_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 561</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_special_senka_table'>get_special_senka_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>すべての資材／＋３</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイテム表(着任p241)から好きなアイテムを取得</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>家具コイン／＋１</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>砲類開発表を使用する(資材は消費しない)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>艦載機開発表を使用する(資材は消費しない)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>新特殊開発表を使用する(資材は消費しない)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_voyage_event_table-instance_method">
+  
+    #<strong>get_voyage_event_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>航海イベント表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 339</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_voyage_event_table'>get_voyage_event_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>厳しくいくぞ：提督が選んだ(キーワード)に対応した指定個性で判定。思いつかない場合は《規律／航海５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>密航者：《笑顔／魅力７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>不審の目：《外国暮らし／背景１２》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>危険海域：《海図／航海９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>波間の影：《砲撃／戦闘７》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ホームシック：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《支援／戦闘９》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>追跡者：《対潜戦闘／戦闘１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>大嵐：《機動／航海８》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>うち捨てられた基地：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《読書／趣味５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ネズミ上陸：《衛生／航海１１》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>味の探求：提督が選んだ（キーワード）に対応した指定個性で判定。思いつかない場合は《読書／趣味５》で判定。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（建造弐p135）</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_weapon1_table-instance_method">
+  
+    #<strong>get_weapon1_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 477</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_weapon1_table'>get_weapon1_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>小口径主砲（P249）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>１０ｃｍ連装高角砲（P249）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>中口径主砲（P249）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>１５．２ｃｍ連装砲（P249）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>２０．３ｃｍ連装砲（P249）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>魚雷（P252）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_weapon2_table-instance_method">
+  
+    #<strong>get_weapon2_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 489</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_weapon2_table'>get_weapon2_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>副砲（P250）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>８ｃｍ高角砲（P250）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>大口径主砲（P249）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>４１ｃｍ連装砲（P250）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>４６ｃｍ三連装砲（P250）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>機銃（P252）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_weapon3_table-instance_method">
+  
+    #<strong>get_weapon3_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 501</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_weapon3_table'>get_weapon3_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>艦上爆撃機（P250）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>艦上攻撃機（P251）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>艦上戦闘機（P251）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>偵察機（P251）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>電探（P252）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>２５ｍｍ連装機銃（P252）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_weapon4_table-instance_method">
+  
+    #<strong>get_weapon4_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 513</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_weapon4_table'>get_weapon4_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>彗星（P250）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>天山（P251）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>零式艦戦５２型（P251）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>彩雲（P251）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>６１ｃｍ四連装（酸素）魚雷（P252）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>改良型艦本式タービン（P252）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getHelpMessage-instance_method">
+  
+    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
+  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>例) 2D6 ： 単純に2D6した値を出します。
+例) 2D6&gt;=7 ： 行為判定。2D6して目標値7以上出れば成功。
+例) 2D6+2&gt;=7 ： 行為判定。2D6に修正+2をした上で目標値7以上になれば成功。
+
+2D6での行為判定時は1ゾロでファンブル、6ゾロでスペシャル扱いになります。
+天龍ちゃんスペシャルは手動で判定してください。
+
+・各種表
+　・感情表　ET／アクシデント表　ACT
+　・日常イベント表　EVNT／交流イベント表　EVKT／遊びイベント表　EVAT
+　　演習イベント表　EVET／遠征イベント表　EVENT／作戦イベント表　EVST
+　・ほのぼのイベント表　ETHT／航海イベント表　ETVT　外出イベント表　ETGT
+　　激戦イベント表　ETBT／任務イベント表　ETMT／恐怖イベント表　ETFT／侵攻効果表　ETIT
+　・大規模部隊表 LSFT／艦隊敗北表 LFDT／艦隊勝利表 LFVT
+　・開発表　DVT／開発表（一括）DVTM
+　　　装備１種表　WP1T／装備２種表　WP2T／装備３種表　WP3T／装備４種表　WP4T
+　・アイテム表　ITT／目標表　MHT／戦果表　SNT／特殊戦果表　SPSNT
+　・ランダム個性選択：一括　KTM／分野　BT
+　　　背景　KHT／魅力　KMT／性格　KST／趣味　KSYT／航海　KKT／戦闘　KSNT
+　・戦場表　SNZ　暴走表／RNT
+　・特殊開発表　WPMC　(燃料6/弾薬3/鋼材6/ボーキ3)
+　・新・特殊開発表　WPMCN
+　・艦載機関開発表　WPFA　(燃料3/弾薬6/鋼材3/ボーキ6)
+　・砲類開発表　WPCN　(燃料3/弾薬6/鋼材6/ボーキ3)　
+　・敵深海棲艦の装備決定 BT2～BT12
+・D66ダイス(D66S相当=低い方が10の桁になる)
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rollDiceCommand-instance_method">
+  
+    #<strong>rollDiceCommand</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/KanColle.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ET</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>感情表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_emotion_table'>get_emotion_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ACT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アクシデント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_accident_table'>get_accident_table</span>
+
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EVNT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>日常イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_nichijyou_event_table'>get_nichijyou_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EVKT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>交流イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_kouryu_event_table'>get_kouryu_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EVAT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>遊びイベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_asobi_event_table'>get_asobi_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EVET</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>演習イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_ensyuu_event_table'>get_ensyuu_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EVENT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>遠征イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_ensei_event_table'>get_ensei_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EVST</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>作戦イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_sakusen_event_table'>get_sakusen_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ETHT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ほのぼのイベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_honobono_event_table'>get_honobono_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ETVT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>航海イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_voyage_event_table'>get_voyage_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ETGT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>外出イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_gaisyutsu_event_table'>get_gaisyutsu_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ETBT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>激戦イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_battle_event_table'>get_battle_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ETMT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>任務イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_mission_event_table'>get_mission_event_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ETFT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>恐怖イベント表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_fear_event_table'>get_fear_event_table</span>
+
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DVT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>開発表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_develop_table'>get_develop_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DVTM</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>開発表（一括）</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_develop_matome_table'>get_develop_matome_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WP1T</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備１種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon1_table'>get_weapon1_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WP2T</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備２種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon2_table'>get_weapon2_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WP3T</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備３種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon3_table'>get_weapon3_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WP4T</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>装備４種表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_weapon4_table'>get_weapon4_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ITT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイテム表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_item_table'>get_item_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MHT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>目標表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_mokuhyou_table'>get_mokuhyou_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SNT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>戦果表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_senka_table'>get_senka_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SPSNT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>特殊戦果表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_special_senka_table'>get_special_senka_table</span>
+
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KTM</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性：一括</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_kosei_table'>get_kosei_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性：分野表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_bunya_table'>get_bunya_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KHT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性：背景表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_kosei_haikei_table'>get_kosei_haikei_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KMT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性：魅力表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_kosei_miryoku_table'>get_kosei_miryoku_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KST</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性：性格表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_kosei_seikaku_table'>get_kosei_seikaku_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KSYT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性：趣味表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_kosei_syumi_table'>get_kosei_syumi_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KKT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性：航海表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_kosei_koukai_table'>get_kosei_koukai_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KSNT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性：戦闘表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_kosei_sentou_table'>get_kosei_sentou_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SNZ</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>戦場表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_senzyou_table'>get_senzyou_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RNT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>暴走表</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_get_bousou_table'>get_bousou_table</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_getTableCommandResult'>getTableCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='cvar'>@@tables</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n'>total_n</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_output'>output</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Oct 31 21:10:55 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.1).
+</div>
+
+    </div>
+  </body>
+</html>

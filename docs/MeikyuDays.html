@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: MeikyuDays
+  
+    &mdash; Documentation by YARD 0.9.20
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "MeikyuDays";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (M)</a> &raquo;
+    
+    
+    <span class="title">MeikyuDays</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: MeikyuDays
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></li>
+          
+            <li class="next">MeikyuDays</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>diceBot/MeikyuDays.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#d66Type-instance_method" title="DiceBot#d66Type (method)">#d66Type</a></span>, <span class='object_link'><a href="DiceBot.html#defaultSuccessTarget-instance_method" title="DiceBot#defaultSuccessTarget (method)">#defaultSuccessTarget</a></span>, <span class='object_link'><a href="DiceBot.html#fractionType-instance_method" title="DiceBot#fractionType (method)">#fractionType</a></span>, <span class='object_link'><a href="DiceBot.html#isPrintMaxDice-instance_method" title="DiceBot#isPrintMaxDice (method)">#isPrintMaxDice</a></span>, <span class='object_link'><a href="DiceBot.html#rerollLimitCount-instance_method" title="DiceBot#rerollLimitCount (method)">#rerollLimitCount</a></span>, <span class='object_link'><a href="DiceBot.html#rerollNumber-instance_method" title="DiceBot#rerollNumber (method)">#rerollNumber</a></span>, <span class='object_link'><a href="DiceBot.html#sameDiceRerollCount-instance_method" title="DiceBot#sameDiceRerollCount (method)">#sameDiceRerollCount</a></span>, <span class='object_link'><a href="DiceBot.html#sameDiceRerollType-instance_method" title="DiceBot#sameDiceRerollType (method)">#sameDiceRerollType</a></span>, <span class='object_link'><a href="DiceBot.html#sendMode-instance_method" title="DiceBot#sendMode (method)">#sendMode</a></span>, <span class='object_link'><a href="DiceBot.html#sortType-instance_method" title="DiceBot#sortType (method)">#sortType</a></span>, <span class='object_link'><a href="DiceBot.html#upplerRollThreshold-instance_method" title="DiceBot#upplerRollThreshold (method)">#upplerRollThreshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#changeText-instance_method" title="#changeText (instance method)">#<strong>changeText</strong>(string)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, _dice_cnt, _dice_max, _n1, _n_max)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ゲーム別成功度判定(2D6).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#checkRoll-instance_method" title="#checkRoll (instance method)">#<strong>checkRoll</strong>(string)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dice_command_xRn-instance_method" title="#dice_command_xRn (instance method)">#<strong>dice_command_xRn</strong>(string, nick_e)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; MeikyuDays </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of MeikyuDays.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_appearance_table-instance_method" title="#md_appearance_table (instance method)">#<strong>md_appearance_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**登場表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_break_table-instance_method" title="#md_break_table (instance method)">#<strong>md_break_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**休憩表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_combat_fumble_table-instance_method" title="#md_combat_fumble_table (instance method)">#<strong>md_combat_fumble_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**戦闘ファンブル表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_connection_table-instance_method" title="#md_connection_table (instance method)">#<strong>md_connection_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**因縁表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_critical_attack_table-instance_method" title="#md_critical_attack_table (instance method)">#<strong>md_critical_attack_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**痛打表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_fatal_wounds_table-instance_method" title="#md_fatal_wounds_table (instance method)">#<strong>md_fatal_wounds_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**致命傷表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_happening_table-instance_method" title="#md_happening_table (instance method)">#<strong>md_happening_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**ハプニング表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_kernel_stop_table-instance_method" title="#md_kernel_stop_table (instance method)">#<strong>md_kernel_stop_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**カーネル停止表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_love_connection_table-instance_method" title="#md_love_connection_table (instance method)">#<strong>md_love_connection_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**ラブ因縁表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_market_price_table-instance_method" title="#md_market_price_table (instance method)">#<strong>md_market_price_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**相場表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_monster_connection_table-instance_method" title="#md_monster_connection_table (instance method)">#<strong>md_monster_connection_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**怪物因縁表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_negotiation_table-instance_method" title="#md_negotiation_table (instance method)">#<strong>md_negotiation_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**交渉表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_pc_connection_table-instance_method" title="#md_pc_connection_table (instance method)">#<strong>md_pc_connection_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**PC因縁表（2d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_research_table-instance_method" title="#md_research_table (instance method)">#<strong>md_research_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**散策表(2d6).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_treasure1_table-instance_method" title="#md_treasure1_table (instance method)">#<strong>md_treasure1_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**お宝表１（1d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_treasure2_table-instance_method" title="#md_treasure2_table (instance method)">#<strong>md_treasure2_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**お宝表２（1d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_treasure3_table-instance_method" title="#md_treasure3_table (instance method)">#<strong>md_treasure3_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**お宝表３（1d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#md_treasure4_table-instance_method" title="#md_treasure4_table (instance method)">#<strong>md_treasure4_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**お宝表４（1d6）.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rollDiceCommand-instance_method" title="#rollDiceCommand (instance method)">#<strong>rollDiceCommand</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>迷宮デイズ          ########################.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="MeikyuDays (class)">MeikyuDays</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of MeikyuDays</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='kw'>super</span>
+  <span class='ivar'>@sendMode</span> <span class='op'>=</span> <span class='int'>2</span>
+  <span class='ivar'>@sortType</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='ivar'>@d66Type</span> <span class='op'>=</span> <span class='int'>2</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="changeText-instance_method">
+  
+    #<strong>changeText</strong>(string)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_changeText'>changeText</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)MD6</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>R6</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)MD</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>R6</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_string'>string</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_2D6-instance_method">
+  
+    #<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, _dice_cnt, _dice_max, _n1, _n_max)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ゲーム別成功度判定(2D6)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_cnt'>_dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_max'>_dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid__n1'>_n1</span><span class='comma'>,</span> <span class='id identifier rubyid__n_max'>_n_max</span><span class='rparen'>)</span> <span class='comment'># ゲーム別成功度判定(2D6)
+</span>  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 絶対失敗</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 絶対成功</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diff'>diff</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="checkRoll-instance_method">
+  
+    #<strong>checkRoll</strong>(string)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>checkRoll string</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(^|\s)S?((\d+)[rR]6([\+\-\d]*)(([&gt;=]+)(\d+))?)(\s|$)</span><span class='regexp_end'>/i</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>not mutch</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_dice_c'>dice_c</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='id identifier rubyid_bonusText'>bonusText</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>4</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='id identifier rubyid_parren_killer'>parren_killer</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(0</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_bonusText'>bonusText</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>unless</span> <span class='id identifier rubyid_bonusText'>bonusText</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>6</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>6</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>7</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>7</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_dice_now'>dice_now</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_dice_str'>dice_str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_str'>dice_str</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_c'>dice_c</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_sortType'>sortType</span> <span class='op'>&amp;</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice_num'>dice_num</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_str'>dice_str</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_dice_now'>dice_now</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_num'>dice_num</span><span class='lbracket'>[</span><span class='id identifier rubyid_dice_c'>dice_c</span> <span class='op'>-</span> <span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='id identifier rubyid_dice_num'>dice_num</span><span class='lbracket'>[</span><span class='id identifier rubyid_dice_c'>dice_c</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_now'>dice_now</span> <span class='op'>+</span> <span class='id identifier rubyid_bonus'>bonus</span>
+
+  <span class='id identifier rubyid_dice_str'>dice_str</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_str'>dice_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_now'>dice_now</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_str'>dice_str</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bonus'>bonus</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>&lt;</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>+=</span> <span class='id identifier rubyid_bonus'>bonus</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_sendMode'>sendMode</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[^\d\[\]]+</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_output'>output</span>
+      <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@nick_e</span><span class='embexpr_end'>}</span><span class='tstring_content'>: (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_output'>output</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n'>total_n</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@nick_e</span><span class='embexpr_end'>}</span><span class='tstring_content'>: (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n'>total_n</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@nick_e</span><span class='embexpr_end'>}</span><span class='tstring_content'>: (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_string'>string</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n'>total_n</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># 成功度判定処理
+</span>    <span class='id identifier rubyid_output'>output</span> <span class='op'>+=</span> <span class='id identifier rubyid_check_suc'>check_suc</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_now'>dice_now</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dice_command_xRn-instance_method">
+  
+    #<strong>dice_command_xRn</strong>(string, nick_e)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dice_command_xRn'>dice_command_xRn</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
+  <span class='ivar'>@nick_e</span> <span class='op'>=</span> <span class='id identifier rubyid_nick_e'>nick_e</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gameName-instance_method">
+  
+    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>迷宮デイズ</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gameType-instance_method">
+  
+    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MeikyuDays</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getHelpMessage-instance_method">
+  
+    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
+  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>・判定　(nMD+m)
+　n個のD6を振って大きい物二つだけみて達成値を算出します。修正mも可能です。
+　絶対成功と絶対失敗も自動判定します。
+・各種表
+　・散策表　　　　　　DRT
+　・交渉表　　　　　　DNT
+　・休憩表　　　　　　DBT
+　・ハプニング表　　　DHT
+　・カーネル停止表　　KST
+　・痛打表　CAT／戦闘ファンブル表　CFT／致命傷表　FWT
+　・おたから表１／２／３／４　T1T/T2T/T3T/T4T
+　・相場表　　　　　　MPT
+　・登場表　　　　　　APT
+　・因縁表　DCT／怪物因縁表　MCT／PC因縁表　PCT／ラブ因縁表　LCT
+・D66ダイスあり
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_appearance_table-instance_method">
+  
+    #<strong>md_appearance_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**登場表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 350</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_appearance_table'>md_appearance_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>「ここから先に行かせるわけにはいかん」急ぐ途中に敵が立ちふさがる。〔武勇〕で難易度11の判定を行う。成功すればバトルフィールドの好きなエリアにそのキャラクターを配置することができる。失敗した場合、《HP》を1にした状態でバトルフィールドの好きなエリアにそのキャラクターを配置することができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>「待たせたな！」バトルフィールドの好きなエリアにそのキャラクターを配置することができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>おっと鉢合わせ！　バトルフィールドの敵軍の本陣に、そのキャラクターを配置すること。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>全力で駆けつける！　《HP》を2d6点減少すれば、バトルフィールドの好きなエリアにそのキャラクターを配置することができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あいつらはこの先に行ったはず！　GMはそのキャラクターをバトルフィールドの好きなエリアに配置する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あの聞き覚えのある音は……！　そのキャラクターが【乗騎】を装備していれば、GMはそのキャラクターをバトルフィールドの好きなエリアに配置する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>……間に合ったみたいだな。バトルフィールドの中に、そのキャラクターに対する《好意》が1点以上あるキャラクターがいれば、同じエリアにそのキャラクターを配置することができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>を！　これはこれは。好きな素材を1個拾う。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>いかん！　迷ってしまった。〔探索〕で難易度11の判定を行うこと。成功すればもう一度登場表を振り、結果を適用することができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>むむむむ？　ここは一度来た道のような……？　疲労して《気力》が1点減少。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>……いや、しかしそれどころではない！　そのキャラクターは、この戦闘に登場することはできない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_break_table-instance_method">
+  
+    #<strong>md_break_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**休憩表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 220</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_break_table'>md_break_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイテムの改善案を出し合ってみる。各キャラクターは、好きなキャラクター1体を選び、1d6を振ってそのキャラクターのアイテムスロットから1つをランダムに選ぶ。出た目のアイテムにレベルがあれば、1上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>何気ない雑談が腹の探り合いに発展する。各キャラクターは、好きなキャラクターに対する《好意》と《敵意》を入れ替え、その属性を自由に変更することができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>好きな単語表からランダムに単語を1つ選ぶ。その部屋にはそれに関係したものがたくさん置いてあるため、出た単語が「好きなもの」に入っているキャラクターは、《気力》を2点得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>嫌いな人の話題で盛り上がる。各キャラクターは同じキャラクターに《敵意》を持っている人を1人選び、その人への《好意》を1点上昇させる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>窓の外から報道のヘリコプターがこちらを撮影しているのが見える。格好よく見せるために、各キャラクターは〔魅力〕で難易度13の判定を行う。誰かが成功するたびに《民の声》が1点増加する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>雑談や休息など、思い思いに時間を過ごす。各キャラクターは、好きなキャラクター1体への《好意》を1点上昇させる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>通路の片隅で素材が山を作っているのを見つけた。各キャラクターは〔探索〕で難易度11の判定を行う。誰かが成功するたびに、好きな素材を1種類選び、それを1d6個手に入れる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>チームワークの確認。各プレイヤーは打ち合わせをせずに、一斉にじゃんけんを行う。いちばん出した人が多かった手を出したプレイヤーのPCは、《気力》を2点得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>仮眠をとって休憩。各キャラクターは〔才覚〕で難易度9の判定を行う。成功すれば《HP》が最大値まで回復する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>各キャラクターは、迷宮化現象に巻き込まれ、身動きがとれない普通の人を1人見つけた。《配下》に加えることができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>各キャラクターは1d6を振る。出た目の上位2名が唐突に恋に落ちる。同じ目が出て2名をうまく割り出せない場合は、GMの左隣に近い方を優先する。恋に落ちた2人、相手以外に対する《好意》を合計し、その値に対する《好意》に加える。その後、相手以外に対する《好意》をすべて0にする。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_combat_fumble_table-instance_method">
+  
+    #<strong>md_combat_fumble_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**戦闘ファンブル表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 332</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_combat_fumble_table'>md_combat_fumble_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ぶざまな失敗に熱くなる。攻撃の目標のキャラクターに対して《敵意》を4点得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>急にお腹が痛くなる！　何か回復アイテムを使うまで攻撃を行えなくなる。モンスターの場合、そのラウンドの終わりに未行動にならなくなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイテムが壊れた！　自分が持っているアイテムの中からランダムに1つを選び、そのアイテムが失われる。モンスターの場合、1d6ダメージを受ける。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵がいい気になる。行動不能になっていない敵軍キャラクター全ての《HP》を6点回復する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>自分に攻撃が命中！　使用した武器のダメージを自分に与える。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>なんというか、やる気をなくす。《気力》を1点失う。モンスターの場合、1d6ダメージを受ける。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>仲間に攻撃が命中！　使用した武器の射程内の味方から、ランダムに1人を選ぶ。そのキャラクターに武器のダメージを与える。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>仲間の邪魔をしてしまう。未行動の自軍キャラクター1体を選び、行動済みにする。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>スキルを忘れてしまった！　習得しているスキルからランダムに1種類を選ぶ。そのスキルは戦闘が終了するまで使用できない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>位置取りに失敗してとんでもない場所に。敵陣営プレイヤーまたはGMが、ファンブルしたキャラクターを好きな位置に移す。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ピンチがチャンスに！　《HP》が現在値の半分になり、《気力》が最大値まで貯まる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_connection_table-instance_method">
+  
+    #<strong>md_connection_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**因縁表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 368</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_connection_table'>md_connection_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象はあなたの父、もしくは母である。幼い頃に家庭を捨てて失踪した対象を、あなたはずっと憎んでいた。対象への《敵意》が1点上昇する。また、対象を戦闘で倒した際に、経験点10点を得ることができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は、あなたの小学校時代の恩師である。懐かしい顔にこんな形で会うことになろうとは。対象への《好意》もしくは《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は、過去にあなたと戦い、あなたの体に古傷を残している。今でもときどき傷は代償を求めて疼く。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象に憧れているが、全く相手にされていない。たとえ敵としてでも対象に認めてもらうことがあなたの願いだ。彼または彼女への《敵意》が1点上昇し、「ライバル」の人間関係を結ぶことが出来れば経験点を10得られるようになる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは過去、対象のせいで、思い出したくもない大失敗をしたことがある。嫌いなものに絡んだ大失敗を設定すること。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象に手酷く敗北したことがある。あなたは屈辱を晴らすためにできる限りのことをする気でいる。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象はあなたの親族を殺した。あなたはいつか訪れる復讐の日を信じて、鍛錬を続けてきた。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は、過去のあなたの仲間だ。意見の違いで袂を分かったが、ここまで対立することになるとは考えてもいなかった。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象とあなたは、前世があなたの妻/夫であった。幸せな生涯の記憶が蘇る。対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象とあなたの通勤・通学路でぶつかったことがあり、そこで一目惚れしている。恋を幸せに成就させるため、もしくは不幸な恋を対象の死によって終わらせるため、あなたは迷宮にめぐる。対象への愛情の《好意》4点と、「片思い」の人間関係を得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは過去に対象の恋人であった。対象のどこが好きだったのかは、自分の好きなものからランダムに単語を決め、それに関連した話をでっち上げること。対象への愛情の《好意》4点と、「恋人」の人間関係を得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_critical_attack_table-instance_method">
+  
+    #<strong>md_critical_attack_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**痛打表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 295</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_critical_attack_table'>md_critical_attack_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器の伝説がまた一つ増えた。攻撃に使用した武具アイテムにレベルがあれば、そのレベルが1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>偶然ながら敵の弱点をつく。敵の《HP》を現在の半分の値にする。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>攻撃が終わった後、攻撃の勢いを利用して、自分を好きなエリアに移動させることができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>素晴らしい手ごたえに自分でも感動し、自分の《HP》が全快する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>叙事詩的な一撃。《民の声》を1点増やす。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>クリーンヒット。攻撃の威力が2d6点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵の動きを封じた。攻撃目標の《回避値》を戦闘終了まで2下げる。この効果は累積する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵の勢いを利用し大ダメージ。攻撃の威力が、攻撃目標のレベルと同じだけ上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵の技を封じる。攻撃目標のスキル1種類を選び、戦闘中はそのスキルを使用できなくする。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敵の急所をとらえ致命傷を与える。攻撃目標の《HP》を0にする。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>戦いの中、武具もまた成長する。持っているアイテムをランダムに1選ぶ。そのアイテムにレベルがあれば、1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_fatal_wounds_table-instance_method">
+  
+    #<strong>md_fatal_wounds_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**致命傷表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 314</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_fatal_wounds_table'>md_fatal_wounds_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>重要器官を粉砕される。キャラクターは即座に死亡する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>傍目にも分かる致命傷。キャラクターは次の自分の行動処理が終わった時点で死亡する。《HP》の回復でこの死亡を防ぐことはできない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>全身に強い衝撃をうける。〔武勇〕で難易度[5+受けたダメージ]の判定に成功すると、行動不能になる。判定に失敗すると死亡する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>出血多量で意識不明。行動不能になる。この戦闘が終了するまでに《HP》を1以上にしないと、キャラクターは死亡する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>重傷を負い昏睡状態。行動不能になる。このクォーターが終了するまでに《HP》を1以上にしないと、キャラクターは死亡する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>攻撃で負った傷により意識を失う。行動不能になる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>緊急回避！　〔探索〕で難易度[7-現在の《HP》]の判定を行う。成功すると、ランダムなバッドステータス1つを受けたうえで攻撃が無効になる。失敗すると、ランダムなバッドステータス1つを受けたうえで行動不能になる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>最後の一撃を見切ることができるかもしれない。〔才覚〕で難易度[9-現在の《HP》]の判定を行う。成功すると《HP》が1になる。失敗すると行動不能になる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>まだここで死ぬ運命ではないのかもしれない。〔魅力〕で難易度[9-現在の《HP》]の判定を行う。成功すると《HP》が1になる。失敗すると行動不能になる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>カウンター！　攻撃をしてきた敵に対して、割り込んで好きな武器またはスキルを使った反撃をすることができる。これらの判定が成功した場合、ダメージやスキルの効果のあとで《HP》が1になる。失敗した場合、ただ行動不能になる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>致命傷を受けたような気がしたが、気のせいだった。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_happening_table-instance_method">
+  
+    #<strong>md_happening_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**ハプニング表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 257</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_happening_table'>md_happening_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>急に絶望に襲われる。【お酒】を消費することが出来なければ、このゲーム中、最も高い能力値が1点減少する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>思考に靄がかかってしまう。「散漫」のバッドステータスを受ける。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>気がついたら太っていた。「肥満」のバッドステータスを受ける。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>無残な失敗に愛想を尽かした配下が2d6人ほど去って行ってしまう。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>微妙な空気を読み切れず、パーティ全員の《気力》が1点減少する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>事故だか故意だかで、仲間を殴ってしまう。ランダムに選んだパーティメンバー1名の《HP》を自分の〔武勇〕と同じ値だけ減少させる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>期待が大きければ失望も大きい。あなたに対して《好意》を持っているキャラクター全員は、あなたに対する《好意》を1点減らす。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アイテムを粗末に扱ってしまう。持ち物の中からランダムにアイテムを1つ決定する。そのアイテムにレベルがある場合、レベルが1下がる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>失敗のショックのせいで知的な行動をとれなくなる。「愚か」のバッドステータスを受ける。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>過去の行状のせいで人に呪われる。「呪い」のバッドステータスを受ける。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>自分の失敗が許せない。このゲームの間、《器》が1点減少したものとして扱う。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_kernel_stop_table-instance_method">
+  
+    #<strong>md_kernel_stop_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**カーネル停止表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 276</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_kernel_stop_table'>md_kernel_stop_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>カーネルが肉体に致命的な迷宮化を引き起こす！致命傷表を振ること。カーネルはまだ停止しない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>〔才覚〕で難易度9の判定を行う。失敗すると記憶が迷宮化を起こし、銀行口座の暗証番号を忘れてしまう。口座に入っているMCはすべて失われる。カーネルは停止しない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>迷宮化エネルギーが装備を直撃。素早く避けるため〔武勇〕で難易度9の判定を行う。失敗した場合、持っているアイテムからランダムに1つを選ぶ。そのアイテムは激しい迷宮化を起こし破壊される。カーネルは停止しない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>正体不明のエネルギーが部屋中を駆け巡る。パーティ全員は1d6ダメージを受ける。カーネルは停止しない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>心象が迷宮化していく。〔魅力〕で難易度9の判定を行う。失敗すると人間関係が迷宮化を起こし、持っている感情値がすべて1点減少する。カーネルは停止しない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>激しい迷宮化に曝され、1d6点のダメージを受ける。〔探索〕で難易度11の判定を行う。成功すれば、怪我を負いながらもカーネルを停止させることに成功する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>パーティ全員は軽い迷宮化に曝され1ダメージを受ける。パーティを統率する為に〔魅力〕で難易度11の判定を行うこと。成功すれば、カーネルは停止する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>素早い一撃でカーネルの息の根を止めるために〔武勇〕で難易度9の判定を行う。成功すれば見事にカーネルを停止させることに成功する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>カーネルの構造を感じ取り、一瞬にして停止させることに成功。さらに迷宮化の副産物としてランダムなレアアイテム1つを入手する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>カーネルは停止した。そして持っているアイテムの中からランダムに1つを選ぶ。そのアイテムにレベルがあれば、いつのまにかレベルが1上昇している。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>鮮やかにカーネルを停止させ、傷一つないまま保存することに成功した。このカーネルの売却価格が3d6MC上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_love_connection_table-instance_method">
+  
+    #<strong>md_love_connection_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**ラブ因縁表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 422</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_love_connection_table'>md_love_connection_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象と過去にいい友人だった。対象への《好意》が2点上昇するが、その属性は友情に変化する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象を本来とは別の性別だと思い込んで片思いしていた。対象への《敵意》が2点、または《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたはかつて親友であった対象に恋人を奪われたことがある。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は、あなたの好きなものによく似ている。好きなものから１つを選んで、どう似ているか説明できたら、対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象をよく見たらけっこう可愛いような気がしてきた。対象への《好意》が1点上昇し、対象への《好意》をすべて愛情に変換する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象と過去につきあっていたことがある。現在はどうだか分からないが、あのころは本気だった。対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は、むかしあなたが好きだった人と印象がよく似ている。対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象に助けられたり、命を救われたことがある。１分以内に設定を作り上げられれば、対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象に振られ、失意のあまり自殺しようとしたことがある。対象への《好意》と《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは昔から、対象を独占したいと思っていた。対象があなた以外と関わるたびに怒りを募らせていたのだ。対象への《好意》と《敵意》が2点ずつ上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>なんだか良く分からないが、とにかく好きでたまらない。対象への《好意》が3点上昇し、対象への《好意》をすべて愛情に変換する。</span><span class='tstring_end'>&#39;</span></span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_market_price_table-instance_method">
+  
+    #<strong>md_market_price_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**相場表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 440</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_market_price_table'>md_market_price_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>なし</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>肉</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>牙</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>鉄</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>魔素</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>機械</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>衣料</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>木</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>火薬</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>情報</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>革</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_monster_connection_table-instance_method">
+  
+    #<strong>md_monster_connection_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**怪物因縁表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 386</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_monster_connection_table'>md_monster_connection_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象はあなたの故郷を滅ぼした。そこは、もうペンペン草すら生えない廃墟となっている。対象への《敵意》が4点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象はあなたのDNA情報をもとに某国が作り出したものである。GMは対象にあなたのスキルから1つを任意に選んで修得させる。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたはかつて対象の同族を絶滅させた。しかし、奴らは死んではいなかったのだ。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは幼いころに対象と遭遇したが、一顧だにされず見逃された。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>何年も前に死んだ、あなたの親しい人は、ちょうど対象の攻撃手段と同じ方法で殺されている。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象はなんとなくあなたが嫌いな特徴をそなえている。嫌いなものに関連した特徴を設定すること。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは過去に対象と戦い、完敗を喫している。対象への《敵意》が1点上昇する。対象との戦闘に勝利した場合、経験点10点を得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象はあなたの好きなものを穢したり貶めたことがある。好きなものにちなんだ出来事を設定すること。対象への《敵意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは、対象が同族のなかでも強力な個体であることを知っている。対象への《敵意》が2点上昇する。対象の《HP》と威力を6点ずつ上昇させる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象はあなたが昔飼っていた生き物や持っていたものが変化したものである。対象への《好意》と《敵意》が1点ずつ上昇する。交渉によって対象との戦闘を終わらせた場合、経験点10点を得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>かつてあなたは対象と同族であった。対象への《好意》と《敵意》が1点ずつ上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_negotiation_table-instance_method">
+  
+    #<strong>md_negotiation_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**交渉表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 239</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_negotiation_table'>md_negotiation_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>中立的な態度は偽装だった。彼らは不意打ちを行う。奇襲扱いで戦闘を開始すること。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>交渉は決裂！　戦闘を行うこと。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>交渉は決裂！　戦闘を行うこと。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>「贄をささげれば話を聞こう」モンスターの中で最もレベルが高いもののレベルと等しい数だけ何らかの素材を減少すれば、友好的になる。減少させない場合、戦闘を開始すること。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>「……お前の趣味、なに？」好きな単語表一個を選び、D66を振る。パーティの中に、その項目を好きなものにしているキャラクターがいれば、友好的になる。そうでなければ戦闘を開始すること。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>怪物たちは物欲しそうにこちらを見ている。「肉」の素材をモンスターの数だけ消費するか、【お弁当】【フルコース】1個を消費すれば友好的になる。消費しなければ、戦闘を開始すること。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>怪物たちは値踏みするようにこちらを見ている。現金で1d6MC支払えば友好的になる。そうでない場合、戦闘を開始すること。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>「何かいいもんよこせ」モンスターの中で最もレベルの高いもののレベル以上の価格のアイテムを消費すれば友好的になる。そうでない場合、戦闘を開始すること。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>「面白い話を聞かせろよ」プレイヤーたちは面白い話をすること。GMは面白いと思えばモンスターは友好的になる。面白くなかった場合は戦闘を開始する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>「俺に勝てたら話を聞いてやろう」怪物が力比べを挑んできた。モンスターの中で最もレベルが高いものと、パーティの代表がそれぞれ〔武勇〕で判定を行う。パーティの代表の達成値がモンスター以上であれば友好的になる。負けた場合、もう一度交渉するか戦闘するかを決定すること。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>運命の出会い。一目見た瞬間に打ち解けあい、友好的になる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_pc_connection_table-instance_method">
+  
+    #<strong>md_pc_connection_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**PC因縁表（2d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 404</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_pc_connection_table'>md_pc_connection_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象はあなたが追い求めていた敵だった。なぜ敵なのか設定すること。対象への《敵意》が4点上昇する。対象を殺害すると経験点100点を得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は、あなたがあなたのクラスになるきっかけを作った人物である。1分以内に詳細を設定できれば対象への好きな感情値を2点上昇させてよい。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象と共通の知人がいることが発覚する。好きなものにちなんだ知人を設定すること。対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象と同じ場所に住んでいたり、通っていたことが分かる。対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは何らかの種類の迷宮屋ランキングで対象に負けている。対象への《敵意》が1点上昇する。終了フェイズで対象に（何でもいいので）負けを認めさせれば、経験点を1点獲得する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は、なんとなくあなたの好きな特徴を備えているような気がする。好きなものにちなんだ特徴を1つ設定し、対象のプレイヤーの了解をとること。チャンスは１回だ。ＯＫなら対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は何らかの媒体で、あなたに対して好意的でないコメントを出したことがあるような気がする。コメントの詳細はあなたが決定すること。対象への《敵意》が１点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたは対象に関する良い噂を聞いたことがある。噂の内容を決定したうえで、対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は実は幼馴染だったことが明らかになる。容姿の変化などで気付かなかったのだ。対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象が実は兄弟であったことが明らかになる。家庭の事情を1分で考えだせれば、対象への《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あなたと対象は、今まで隠していたが実はつきあっている。対象のプレイヤーの了解を15秒以内にとることができれば、お互いへの愛情の《好意》を4点上昇させることができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_research_table-instance_method">
+  
+    #<strong>md_research_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**散策表(2d6)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_research_table'>md_research_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>次に挑む迷宮の迷宮支配者を倒さなければ人類文明が滅ぶことを偶然知ってしまう。《気力》を最大値まで回復する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>同じ迷宮を対象とする違う依頼を受ける。シナリオの目的を果たしたときに、追加で1d6MCの報酬を得られるようになる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>他の迷宮屋の評判を耳にする。パーティから好きなキャラクター1人を選び、そのキャラクターに対する《好意》が1点上昇する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>毎日の散歩の成果が出て、体の調子が良い。このゲーム中、《HP》の最大値が5点上昇し、《HP》が5点回復する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>メディアの取材を受ける。《民の声》を2点得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>近所からおすそ分けをもらう。【回復薬】を6個手に入れる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>近所の人がきみの噂話をしている。ゲーム中に自分が対象に入った「恋人」「親友」「忠誠」の人間関係を成立させるたび、《民の声》を2点得る。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>似たような迷宮に挑んだことがある迷宮屋から話を聞いた。迷宮フェイズでの情報収集の難易度が2下がる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武具の安売りを見つける。ランダムな武具アイテム1つを半分の値段で購入することができる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>他の迷宮屋と喧嘩になる。パーティの中からランダムに1人を選び、お互いの《敵意》を1点上昇させる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>迷宮屋志望の見習が、1d6人ほど配下として加わる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_treasure1_table-instance_method">
+  
+    #<strong>md_treasure1_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**お宝表１（1d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 458</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_treasure1_table'>md_treasure1_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>何もなし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>何もなし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を1個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を2個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を3個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>【お弁当】1個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_treasure2_table-instance_method">
+  
+    #<strong>md_treasure2_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**お宝表２（1d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 471</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_treasure2_table'>md_treasure2_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を3個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を4個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を5個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ランダムな回復アイテム1個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ランダムな武具アイテム1個。そのアイテムにレベルがあれば、レベル1のアイテムとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ランダムなレアアイテム1個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_treasure3_table-instance_method">
+  
+    #<strong>md_treasure3_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**お宝表３（1d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 484</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_treasure3_table'>md_treasure3_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を5個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を7個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を10個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>好きなコモンアイテムのカテゴリ1種を選ぶ。そのカテゴリの中からランダムなアイテム1個。そのアイテムにレベルがあれば、レベル1のアイテムとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ランダムなレアアイテム1個</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ランダムなレアアイテム1個。そのアイテムにレベルがあれば、レベル1のアイテムとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="md_treasure4_table-instance_method">
+  
+    #<strong>md_treasure4_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**お宝表４（1d6）</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 497</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_md_treasure4_table'>md_treasure4_table</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を5個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>そのモンスターの素材欄の中から、好きな素材を10個。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>好きなコモンアイテムのカテゴリ1種を選ぶ。そのカテゴリの中からランダムなアイテム1個。そのアイテムにレベルがあれば、レベル2のアイテムとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>好きなコモンアイテムのカテゴリ1種を選ぶ。そのカテゴリの中からランダムなアイテム1個。そのアイテムにレベルがあれば、レベル3のアイテムとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ランダムなレアアイテム1個。そのアイテムにレベルがあれば、レベル1のアイテムとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ランダムなレアアイテム1個。そのアイテムにレベルがあれば、レベル2のアイテムとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rollDiceCommand-instance_method">
+  
+    #<strong>rollDiceCommand</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>迷宮デイズ          ########################</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/MeikyuDays.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='comment'># 散策表(2d6)
+</span>  <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>DRT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>散策</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_research_table'>md_research_table</span>
+    <span class='comment'># 休憩表(2D6)
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>DBT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>休憩</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_break_table'>md_break_table</span>
+    <span class='comment'># ハプニング表(2D6)
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>DHT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ハプニング</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_happening_table'>md_happening_table</span>
+    <span class='comment'># お宝表
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>MPT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>相場</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_market_price_table'>md_market_price_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>T1T</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お宝１</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_treasure1_table'>md_treasure1_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>T2T</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お宝２</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_treasure2_table'>md_treasure2_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>T3T</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お宝３</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_treasure3_table'>md_treasure3_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>T4T</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お宝４</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_treasure4_table'>md_treasure4_table</span>
+    <span class='comment'># 因縁表
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>DCT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>因縁</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_connection_table'>md_connection_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>MCT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>怪物因縁</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_monster_connection_table'>md_monster_connection_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>PCT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PC因縁</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_pc_connection_table'>md_pc_connection_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>LCT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ラブ因縁</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_love_connection_table'>md_love_connection_table</span>
+    <span class='comment'># 戦闘系
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>CAT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>痛打</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_critical_attack_table'>md_critical_attack_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>FWT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>致命傷</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_fatal_wounds_table'>md_fatal_wounds_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>CFT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>戦闘ファンブル</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_combat_fumble_table'>md_combat_fumble_table</span>
+    <span class='comment'># そのほか
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>DNT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>交渉</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_negotiation_table'>md_negotiation_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>APT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>登場</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_appearance_table'>md_appearance_table</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>KST</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>カーネル停止</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_md_kernel_stop_table'>md_kernel_stop_table</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_output'>output</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'>表(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_n'>total_n</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_output'>output</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Oct 31 21:11:00 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.20 (ruby-2.6.1).
+</div>
+
+    </div>
+  </body>
+</html>
