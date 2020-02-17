@@ -6,15 +6,15 @@
 <title>
   Class: Cthulhu7th
   
-    &mdash; Documentation by YARD 0.9.20
+    &mdash; Documentation by YARD 0.9.24
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "Cthulhu7th";
   relpath = '';
 </script>
@@ -101,6 +101,10 @@
   
 </div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="PulpCthulhu.html" title="PulpCthulhu (class)">PulpCthulhu</a></span></p>
+</div>
 
 
 
@@ -270,7 +274,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns a new instance of Cthulhu7th</p>
+<p>Returns a new instance of Cthulhu7th.</p>
 
 
   </div>
@@ -335,7 +339,7 @@
       <pre class="code"><span class="info file"># File 'diceBot/Cthulhu7th.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>クトゥルフ第7版</span><span class='tstring_end'>&#39;</span></span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>新クトゥルフ</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -418,45 +422,41 @@
 49
 50
 51
-52
-53
-54</pre>
+52</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'diceBot/Cthulhu7th.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
   <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>※私家翻訳のため、用語・ルールの詳細については原本を参照願います。
-※コマンドは入力内容の前方一致で検出しています。
+<span class='tstring_content'>※コマンドは入力内容の前方一致で検出しています。
 ・判定　CC(x)&lt;=（目標値）
-　x：ボーナス・ペナルティダイス：Bonus/Penalty Dice (2～－2)。省略可。
+　x：ボーナス・ペナルティダイス (2～－2)。省略可。
 　目標値が無くても1D100は表示される。
-　致命的失敗：Fumble／失敗：Failure／通常成功：Regular success／
-　困難な成功：Hard success／極限の成功：Extreme success／
-　決定的成功：Critical success　を自動判定。
+　ファンブル／失敗／
+　成功／ハード成功／イクストリーム成功／クリティカル を自動判定。
 例）CC&lt;=30　CC(2)&lt;=50　CC(-1)&lt;=75 CC-1&lt;=50 CC1&lt;=65 CC
 
 ・組み合わせ判定　(CBR(x,y))
 　目標値 x と y で％ロールを行い、成否を判定。
 　例）CBR(50,20)
 
-・連射（Full Auto）判定　FAR(w,x,y,z,d)
-　w：弾数(1～100）、x：技能値（1～100）、y：故障ナンバー、
+・自動火器の射撃判定　FAR(w,x,y,z,d)
+　w：弾丸の数(1～100）、x：技能値（1～100）、y：故障ナンバー、
 　z：ボーナス・ペナルティダイス(-2～2)。省略可。
-　d：指定難易度で連射を終える（通常成功：r,困難な成功：h,極限の成功：e）。省略可。
+　d：指定難易度で連射を終える（レギュラー：r,ハード：h,イクストリーム：e）。省略可。
 　命中数と貫通数、残弾数のみ算出。ダメージ算出はありません。
 例）FAR(25,70,98)　FAR(50,80,98,-1)　far(30,70,99,1,R)
 　　far(25,88,96,2,h)　FaR(40,77,100,,e)
 
 ・各種表
 　【狂気関連】
-　・即時の狂気の発作（Bouts of Madness Real Time）表　BMR
-　・略式の狂気の発作（Bouts of Madness Summary）表　BMS
+　・狂気の発作（リアルタイム）（Bouts of Madness Real Time）　BMR
+　・狂気の発作（サマリー）（Bouts of Madness Summary）　BMS
 　・恐怖症（Sample Phobias）表　PH／マニア（Sample Manias）表　MA
 　【魔術関連】
-　・プッシュ時の詠唱ロール（Casting Roll）での失敗表
-　　控えめな呪文の場合　FCL／パワフルな呪文の場合　FCM
+　・プッシュ時のキャスティング・ロール（Casting Roll）の失敗表
+　　強力でない呪文の場合　FCL／強力な呪文の場合　FCM
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT
 </span><span class='kw'>end</span></pre>
     </td>
@@ -479,6 +479,8 @@
       <pre class="lines">
 
 
+54
+55
 56
 57
 58
@@ -500,12 +502,10 @@
 74
 75
 76
-77
-78
-79</pre>
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Cthulhu7th.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'diceBot/Cthulhu7th.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -515,14 +515,14 @@
     <span class='kw'>return</span> <span class='id identifier rubyid_getCombineRoll'>getCombineRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^FAR</span><span class='regexp_end'>/i</span></span>
     <span class='kw'>return</span> <span class='id identifier rubyid_getFullAutoResult'>getFullAutoResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^BMR</span><span class='regexp_end'>/i</span></span> <span class='comment'># 即時の狂気の発作表
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^BMR</span><span class='regexp_end'>/i</span></span> <span class='comment'># 狂気の発作（リアルタイム）
 </span>    <span class='kw'>return</span> <span class='id identifier rubyid_roll_bmr_table'>roll_bmr_table</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^BMS</span><span class='regexp_end'>/i</span></span> <span class='comment'># 略式の狂気の発作表
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^BMS</span><span class='regexp_end'>/i</span></span> <span class='comment'># 狂気の発作（サマリー）
 </span>    <span class='kw'>return</span> <span class='id identifier rubyid_roll_bms_table'>roll_bms_table</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^FCL</span><span class='regexp_end'>/i</span></span> <span class='comment'># 詠唱ロールのプッシュに失敗した場合（小）
-</span>    <span class='kw'>return</span> <span class='id identifier rubyid_roll_1d8_table'>roll_1d8_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>詠唱ロール失敗(小)表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>FAILED_CASTING_L_TABLE</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^FCM</span><span class='regexp_end'>/i</span></span> <span class='comment'># 詠唱ロールのプッシュに失敗した場合（大）
-</span>    <span class='kw'>return</span> <span class='id identifier rubyid_roll_1d8_table'>roll_1d8_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>詠唱ロール失敗(大)表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>FAILED_CASTING_M_TABLE</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^FCL</span><span class='regexp_end'>/i</span></span> <span class='comment'># キャスティング・ロールのプッシュに失敗した場合（小）
+</span>    <span class='kw'>return</span> <span class='id identifier rubyid_roll_1d8_table'>roll_1d8_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>キャスティング・ロール失敗(小)表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>FAILED_CASTING_L_TABLE</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^FCM</span><span class='regexp_end'>/i</span></span> <span class='comment'># キャスティング・ロールのプッシュに失敗した場合（大）
+</span>    <span class='kw'>return</span> <span class='id identifier rubyid_roll_1d8_table'>roll_1d8_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>キャスティング・ロール失敗(大)表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>FAILED_CASTING_M_TABLE</span><span class='rparen'>)</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^PH</span><span class='regexp_end'>/i</span></span> <span class='comment'># 恐怖症表
 </span>    <span class='kw'>return</span> <span class='id identifier rubyid_roll_1d100_table'>roll_1d100_table</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>恐怖症表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>PHOBIAS_TABLE</span><span class='rparen'>)</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^MA</span><span class='regexp_end'>/i</span></span> <span class='comment'># マニア表
@@ -541,9 +541,9 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Oct 31 21:10:58 2019 by
+  Generated on Mon Feb 17 23:47:56 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.20 (ruby-2.6.1).
+  0.9.24 (ruby-2.6.3).
 </div>
 
     </div>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: SRS::ClassMethods
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "SRS::ClassMethods";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../SRS.html" title="SRS (class)">SRS</a></span></span>
+     &raquo; 
+    <span class="title">ClassMethods</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: SRS::ClassMethods
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>diceBot/SRS.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>成功判定のエイリアスコマンド定義用のクラスメソッドを提供するモジュール</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#aliases_re_for_srs_roll_with_target_value-instance_method" title="#aliases_re_for_srs_roll_with_target_value (instance method)">#<strong>aliases_re_for_srs_roll_with_target_value</strong>  &#x21d2; Regexp<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>目標値あり成功判定のエイリアスコマンドの正規表現を返す.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#aliases_re_for_srs_roll_without_target_value-instance_method" title="#aliases_re_for_srs_roll_without_target_value (instance method)">#<strong>aliases_re_for_srs_roll_without_target_value</strong>  &#x21d2; Regexp<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>目標値なし成功判定のエイリアスコマンドの正規表現を返す.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#help_message-instance_method" title="#help_message (instance method)">#<strong>help_message</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ダイスボットの説明文を返す.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_aliases_for_srs_roll-instance_method" title="#clear_aliases_for_srs_roll (instance method)">#<strong>clear_aliases_for_srs_roll</strong>  &#x21d2; self </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>成功判定のエイリアスコマンドを未設定にする.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_aliases_for_srs_roll-instance_method" title="#set_aliases_for_srs_roll (instance method)">#<strong>set_aliases_for_srs_roll</strong>(*aliases)  &#x21d2; self </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>成功判定のエイリアスコマンドを設定する エイリアスコマンドとして指定した文字列がコマンドの先頭にあれば、 実行時にそれが2D6に置換されるようになる。.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="aliases_re_for_srs_roll_with_target_value-instance_method">
+  
+    #<strong>aliases_re_for_srs_roll_with_target_value</strong>  &#x21d2; <tt>Regexp</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>目標値あり成功判定のエイリアスコマンドの正規表現を返す</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_aliases_re_for_srs_roll_with_target_value'>aliases_re_for_srs_roll_with_target_value</span>
+  <span class='ivar'>@aliases_re_for_srs_roll_with_target_value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="aliases_re_for_srs_roll_without_target_value-instance_method">
+  
+    #<strong>aliases_re_for_srs_roll_without_target_value</strong>  &#x21d2; <tt>Regexp</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>目標値なし成功判定のエイリアスコマンドの正規表現を返す</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_aliases_re_for_srs_roll_without_target_value'>aliases_re_for_srs_roll_without_target_value</span>
+  <span class='ivar'>@aliases_re_for_srs_roll_without_target_value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="help_message-instance_method">
+  
+    #<strong>help_message</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの説明文を返す</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_help_message'>help_message</span>
+  <span class='ivar'>@help_message</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="clear_aliases_for_srs_roll-instance_method">
+  
+    #<strong>clear_aliases_for_srs_roll</strong>  &#x21d2; <tt>self</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>成功判定のエイリアスコマンドを未設定にする</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>self</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clear_aliases_for_srs_roll'>clear_aliases_for_srs_roll</span>
+  <span class='ivar'>@aliases_re_for_srs_roll_with_target_value</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@aliases_re_for_srs_roll_without_target_value</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@help_message</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../SRS.html" title="SRS (class)">SRS</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../SRS.html#DEFAULT_HELP_MESSAGE-constant" title="SRS::DEFAULT_HELP_MESSAGE (constant)">DEFAULT_HELP_MESSAGE</a></span></span>
+
+  <span class='kw'>return</span> <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_aliases_for_srs_roll-instance_method">
+  
+    #<strong>set_aliases_for_srs_roll</strong>(*aliases)  &#x21d2; <tt>self</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>成功判定のエイリアスコマンドを設定する エイリアスコマンドとして指定した文字列がコマンドの先頭にあれば、 実行時にそれが2D6に置換されるようになる。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>aliases</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>エイリアスコマンド（可変長引数）</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>self</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_aliases_for_srs_roll'>set_aliases_for_srs_roll</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_aliases'>aliases</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_aliases_upcase'>aliases_upcase</span> <span class='op'>=</span> <span class='id identifier rubyid_aliases'>aliases</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:upcase</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_aliases_part'>aliases_part</span> <span class='op'>=</span> <span class='id identifier rubyid_aliases_upcase'>aliases_upcase</span><span class='period'>.</span>
+                 <span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span>
+                 <span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='ivar'>@aliases_re_for_srs_roll_with_target_value</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\A</span><span class='tstring_end'>&#39;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(?:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_aliases_part'>aliases_part</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>((?:[-+][-+\d]+)?&gt;=\d+(?:\[\d*(?:,\d+)?\])?)\z</span><span class='tstring_end'>&#39;</span></span>
+  <span class='rparen'>)</span>
+
+  <span class='ivar'>@aliases_re_for_srs_roll_without_target_value</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\A</span><span class='tstring_end'>&#39;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(?:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_aliases_part'>aliases_part</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> \
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>([-+][-+\d]+)?(\[\d*(?:,\d+)?\])?\z</span><span class='tstring_end'>&#39;</span></span>
+  <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_prepare_help_msg_for_aliases_for_srs_roll'>prepare_help_msg_for_aliases_for_srs_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_aliases_upcase'>aliases_upcase</span><span class='rparen'>)</span>
+  <span class='ivar'>@help_message</span> <span class='op'>=</span> <span class='id identifier rubyid_concatenate_help_messages'>concatenate_help_messages</span>
+
+  <span class='kw'>return</span> <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Feb 17 23:47:51 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.6.3).
+</div>
+
+    </div>
+  </body>
+</html>
