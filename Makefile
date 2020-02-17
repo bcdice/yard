@@ -14,6 +14,7 @@ yard:
 	cd bcdice/src && bundle exec rake yard
 	rm -Rf docs/
 	mv bcdice/src/doc docs
+	echo "yard.bcdice.org" > docs/CNAME
 
 commit:
 	git add bcdice docs
