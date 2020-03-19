@@ -96,15 +96,106 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/Garako.rb</dd>
+    <dd>src/diceBot/Garako.rb</dd>
   </dl>
   
 </div>
 
 
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
 
 
-  <h2>Constant Summary</h2>
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Garako</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ガラコと破界の塔</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>からことはかいのとう</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;MESSAGETEXT</span>
+<span class='tstring_content'>・判定
+GR+n&gt;=X：「+n」で判定値を指定、「X」で目標値を指定。
+・部位決定チャート：HIT
+・ダメージチャート：xDC（CDC/EDC/FDC/ADC/LDC)
+　xは C：コックピット、E：エンジン、F：フレーム、A：アーム、L：レッグ
+各種表
+・個性表：IDI／動機決定表：MTV
+・名前表
+ピグマー族　　男：PNM　女：PNF　　エレメント族　男：ENM　女：ENF
+ノーマッド族　男：NNM　女：NNF　　ラット族　　　男：RNM　女：RNF
+ブレイン族　　１：BN1　２：BN2　　テンタクル族　１：TN1　２：TN2
+・ガラコ改造チャート表：GCC
+・武器改造チャート表：WCC
+・イベントチャート表：EVC
+・戦闘開始距離：BSD
+</span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
   
   <h3 class="inherited">Constants inherited
      from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
@@ -131,50 +222,6 @@
   <span class="summary_signature">
     
       <a href="#checkRoll-instance_method" title="#checkRoll (instance method)">#<strong>checkRoll</strong>(modifyString, targetString)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
     
 
     
@@ -792,28 +839,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#getResultText-instance_method" title="#getResultText (instance method)">#<strong>getResultText</strong>(dice, total, target)  &#x21d2; Object </a>
     
 
@@ -829,32 +854,6 @@
 
   
     <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; Garako </a>
-    
-
-    
-  </span>
-  
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Garako.</p>
-</div></span>
   
 </li>
 
@@ -894,50 +893,11 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#initialize-instance_method" title="DiceBot#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
-  
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Garako (class)">Garako</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns a new instance of Garako.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-11
-12
-13</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 11</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
-  <span class='kw'>super</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="DiceBot.html#initialize-instance_method" title="DiceBot#initialize (method)">DiceBot</a></span></p>
   
 </div>
 
@@ -961,6 +921,9 @@
       <pre class="lines">
 
 
+97
+98
+99
 100
 101
 102
@@ -972,13 +935,10 @@
 108
 109
 110
-111
-112
-113
-114</pre>
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_modifyString'>modifyString</span><span class='comma'>,</span> <span class='id identifier rubyid_targetString'>targetString</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_modify'>modify</span> <span class='op'>=</span> <span class='id identifier rubyid_modifyString'>modifyString</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -1001,66 +961,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="gameName-instance_method">
-  
-    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-15
-16
-17</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 15</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ガラコと破界の塔</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameType-instance_method">
-  
-    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-19
-20
-21</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 19</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Garako</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="get_battle_start_distance-instance_method">
   
     #<strong>get_battle_start_distance</strong>  &#x21d2; <tt>Object</tt> 
@@ -1075,6 +975,9 @@
       <pre class="lines">
 
 
+645
+646
+647
 648
 649
 650
@@ -1087,13 +990,10 @@
 657
 658
 659
-660
-661
-662
-663</pre>
+660</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 648</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 645</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_battle_start_distance'>get_battle_start_distance</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戦闘開始距離</span><span class='tstring_end'>&quot;</span></span>
@@ -1142,6 +1042,9 @@
       <pre class="lines">
 
 
+474
+475
+476
 477
 478
 479
@@ -1162,13 +1065,10 @@
 494
 495
 496
-497
-498
-499
-500</pre>
+497</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 477</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 474</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_damage_chart'>get_damage_chart</span><span class='lparen'>(</span><span class='id identifier rubyid_part'>part</span><span class='comma'>,</span> <span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -1214,6 +1114,9 @@
       <pre class="lines">
 
 
+456
+457
+458
 459
 460
 461
@@ -1226,13 +1129,10 @@
 468
 469
 470
-471
-472
-473
-474</pre>
+471</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 459</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 456</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_damage_region_chart'>get_damage_region_chart</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>部位決定チャート</span><span class='tstring_end'>&#39;</span></span>
@@ -1270,6 +1170,9 @@
       <pre class="lines">
 
 
+556
+557
+558
 559
 560
 561
@@ -1284,13 +1187,10 @@
 570
 571
 572
-573
-574
-575
-576</pre>
+573</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 559</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 556</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_damagechart_arm'>get_damagechart_arm</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>部位ダメージチャート：アーム</span><span class='tstring_end'>&quot;</span></span>
@@ -1330,6 +1230,9 @@
       <pre class="lines">
 
 
+499
+500
+501
 502
 503
 504
@@ -1344,13 +1247,10 @@
 513
 514
 515
-516
-517
-518
-519</pre>
+516</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 502</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 499</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_damagechart_cockpit'>get_damagechart_cockpit</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>部位ダメージチャート：コックピット</span><span class='tstring_end'>&quot;</span></span>
@@ -1390,6 +1290,9 @@
       <pre class="lines">
 
 
+518
+519
+520
 521
 522
 523
@@ -1404,13 +1307,10 @@
 532
 533
 534
-535
-536
-537
-538</pre>
+535</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 521</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 518</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_damagechart_engine'>get_damagechart_engine</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>部位ダメージチャート：エンジン</span><span class='tstring_end'>&quot;</span></span>
@@ -1450,6 +1350,9 @@
       <pre class="lines">
 
 
+537
+538
+539
 540
 541
 542
@@ -1464,13 +1367,10 @@
 551
 552
 553
-554
-555
-556
-557</pre>
+554</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 540</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 537</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_damagechart_frame'>get_damagechart_frame</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>部位ダメージチャート：フレーム</span><span class='tstring_end'>&quot;</span></span>
@@ -1510,6 +1410,9 @@
       <pre class="lines">
 
 
+575
+576
+577
 578
 579
 580
@@ -1524,13 +1427,10 @@
 589
 590
 591
-592
-593
-594
-595</pre>
+592</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 578</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 575</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_damagechart_leg'>get_damagechart_leg</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>部位ダメージチャート：レッグ</span><span class='tstring_end'>&quot;</span></span>
@@ -1570,6 +1470,9 @@
       <pre class="lines">
 
 
+628
+629
+630
 631
 632
 633
@@ -1582,13 +1485,10 @@
 640
 641
 642
-643
-644
-645
-646</pre>
+643</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 631</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 628</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_event_chart'>get_event_chart</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>イベントチャート表</span><span class='tstring_end'>&quot;</span></span>
@@ -1626,14 +1526,14 @@
       <pre class="lines">
 
 
+662
+663
+664
 665
-666
-667
-668
-669</pre>
+666</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 665</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 662</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_garako_1d10_table_result'>get_garako_1d10_table_result</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span>
@@ -1660,6 +1560,9 @@
       <pre class="lines">
 
 
+594
+595
+596
 597
 598
 599
@@ -1672,13 +1575,10 @@
 606
 607
 608
-609
-610
-611
-612</pre>
+609</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 597</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 594</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_garako_custom_chart'>get_garako_custom_chart</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ガラコ改造チャート表</span><span class='tstring_end'>&quot;</span></span>
@@ -1716,12 +1616,12 @@
       <pre class="lines">
 
 
-671
-672
-673</pre>
+668
+669
+670</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 671</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 668</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_garako_table_result'>get_garako_table_result</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_output'>output</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1746,6 +1646,9 @@
       <pre class="lines">
 
 
+328
+329
+330
 331
 332
 333
@@ -1852,13 +1755,10 @@
 434
 435
 436
-437
-438
-439
-440</pre>
+437</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 331</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 328</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_idiosyncrasy_table'>get_idiosyncrasy_table</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>個性表</span><span class='tstring_end'>&#39;</span></span>
@@ -1990,6 +1890,9 @@
       <pre class="lines">
 
 
+439
+440
+441
 442
 443
 444
@@ -2002,13 +1905,10 @@
 451
 452
 453
-454
-455
-456
-457</pre>
+454</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 442</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 439</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_motivation_table'>get_motivation_table</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>動機決定表</span><span class='tstring_end'>&#39;</span></span>
@@ -2046,6 +1946,9 @@
       <pre class="lines">
 
 
+260
+261
+262
 263
 264
 265
@@ -2058,13 +1961,10 @@
 272
 273
 274
-275
-276
-277
-278</pre>
+275</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 263</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 260</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_b1'>get_nametable_b1</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：ブレイン族（その１）</span><span class='tstring_end'>&#39;</span></span>
@@ -2102,6 +2002,9 @@
       <pre class="lines">
 
 
+277
+278
+279
 280
 281
 282
@@ -2114,13 +2017,10 @@
 289
 290
 291
-292
-293
-294
-295</pre>
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 280</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_b2'>get_nametable_b2</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：ブレイン族（その２）</span><span class='tstring_end'>&#39;</span></span>
@@ -2158,6 +2058,9 @@
       <pre class="lines">
 
 
+175
+176
+177
 178
 179
 180
@@ -2170,13 +2073,10 @@
 187
 188
 189
-190
-191
-192
-193</pre>
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_ef'>get_nametable_ef</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：エレメント族（女）</span><span class='tstring_end'>&#39;</span></span>
@@ -2214,6 +2114,9 @@
       <pre class="lines">
 
 
+158
+159
+160
 161
 162
 163
@@ -2226,13 +2129,10 @@
 170
 171
 172
-173
-174
-175
-176</pre>
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 158</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_em'>get_nametable_em</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：エレメント族（男）</span><span class='tstring_end'>&#39;</span></span>
@@ -2270,6 +2170,9 @@
       <pre class="lines">
 
 
+209
+210
+211
 212
 213
 214
@@ -2282,13 +2185,10 @@
 221
 222
 223
-224
-225
-226
-227</pre>
+224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 212</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 209</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_nf'>get_nametable_nf</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：ノーマッド族（女）</span><span class='tstring_end'>&#39;</span></span>
@@ -2326,6 +2226,9 @@
       <pre class="lines">
 
 
+192
+193
+194
 195
 196
 197
@@ -2338,13 +2241,10 @@
 204
 205
 206
-207
-208
-209
-210</pre>
+207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_nm'>get_nametable_nm</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：ノーマッド族（男）</span><span class='tstring_end'>&#39;</span></span>
@@ -2382,6 +2282,9 @@
       <pre class="lines">
 
 
+141
+142
+143
 144
 145
 146
@@ -2394,13 +2297,10 @@
 153
 154
 155
-156
-157
-158
-159</pre>
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_pf'>get_nametable_pf</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：ピグマー族（女）</span><span class='tstring_end'>&#39;</span></span>
@@ -2438,6 +2338,9 @@
       <pre class="lines">
 
 
+124
+125
+126
 127
 128
 129
@@ -2450,13 +2353,10 @@
 136
 137
 138
-139
-140
-141
-142</pre>
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_pm'>get_nametable_pm</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：ピグマー族（男）</span><span class='tstring_end'>&#39;</span></span>
@@ -2494,6 +2394,9 @@
       <pre class="lines">
 
 
+243
+244
+245
 246
 247
 248
@@ -2506,13 +2409,10 @@
 255
 256
 257
-258
-259
-260
-261</pre>
+258</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 246</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 243</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_rf'>get_nametable_rf</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：ラット族（女）</span><span class='tstring_end'>&#39;</span></span>
@@ -2550,6 +2450,9 @@
       <pre class="lines">
 
 
+226
+227
+228
 229
 230
 231
@@ -2562,13 +2465,10 @@
 238
 239
 240
-241
-242
-243
-244</pre>
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 226</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_rm'>get_nametable_rm</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：ラット族（男）</span><span class='tstring_end'>&#39;</span></span>
@@ -2606,6 +2506,9 @@
       <pre class="lines">
 
 
+294
+295
+296
 297
 298
 299
@@ -2618,13 +2521,10 @@
 306
 307
 308
-309
-310
-311
-312</pre>
+309</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 294</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_t1'>get_nametable_t1</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：テンタクル族（その１）</span><span class='tstring_end'>&#39;</span></span>
@@ -2662,6 +2562,9 @@
       <pre class="lines">
 
 
+311
+312
+313
 314
 315
 316
@@ -2674,13 +2577,10 @@
 323
 324
 325
-326
-327
-328
-329</pre>
+326</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 314</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_nametable_t2'>get_nametable_t2</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>名前表：テンタクル族（その２）</span><span class='tstring_end'>&#39;</span></span>
@@ -2718,6 +2618,9 @@
       <pre class="lines">
 
 
+611
+612
+613
 614
 615
 616
@@ -2730,13 +2633,10 @@
 623
 624
 625
-626
-627
-628
-629</pre>
+626</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 614</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 611</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_weapon_custom_chart'>get_weapon_custom_chart</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>武器改造チャート表</span><span class='tstring_end'>&quot;</span></span>
@@ -2760,68 +2660,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getHelpMessage-instance_method">
-  
-    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 23</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
-  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;MESSAGETEXT</span>
-<span class='tstring_content'>・判定
-GR+n&gt;=X：「+n」で判定値を指定、「X」で目標値を指定。
-・部位決定チャート：HIT
-・ダメージチャート：xDC（CDC/EDC/FDC/ADC/LDC)
-　xは C：コックピット、E：エンジン、F：フレーム、A：アーム、L：レッグ
-各種表
-・個性表：IDI／動機決定表：MTV
-・名前表
-ピグマー族　　男：PNM　女：PNF　　エレメント族　男：ENM　女：ENF
-ノーマッド族　男：NNM　女：NNF　　ラット族　　　男：RNM　女：RNF
-ブレイン族　　１：BN1　２：BN2　　テンタクル族　１：TN1　２：TN2
-・ガラコ改造チャート表：GCC
-・武器改造チャート表：WCC
-・イベントチャート表：EVC
-・戦闘開始距離：BSD
-</span><span class='heredoc_end'>MESSAGETEXT
-</span><span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="getResultText-instance_method">
   
     #<strong>getResultText</strong>(dice, total, target)  &#x21d2; <tt>Object</tt> 
@@ -2836,19 +2674,19 @@ GR+n&gt;=X：「+n」で判定値を指定、「X」で目標値を指定。
       <pre class="lines">
 
 
+113
+114
+115
 116
 117
 118
 119
 120
 121
-122
-123
-124
-125</pre>
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getResultText'>getResultText</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ファンブル</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>==</span> <span class='int'>1</span>
@@ -2880,6 +2718,9 @@ GR+n&gt;=X：「+n」で判定値を指定、「X」で目標値を指定。
       <pre class="lines">
 
 
+40
+41
+42
 43
 44
 45
@@ -2932,13 +2773,10 @@ GR+n&gt;=X：「+n」で判定値を指定、「X」で目標値を指定。
 92
 93
 94
-95
-96
-97
-98</pre>
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Garako.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Garako.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span>
@@ -3006,9 +2844,9 @@ GR+n&gt;=X：「+n」で判定値を指定、「X」で目標値を指定。
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:53 2020 by
+  Generated on Fri Mar 20 02:13:10 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

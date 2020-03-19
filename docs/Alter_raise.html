@@ -96,15 +96,109 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/Alter_raise.rb</dd>
+    <dd>src/diceBot/Alter_raise.rb</dd>
   </dl>
   
 </div>
 
 
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
 
 
-  <h2>Constant Summary</h2>
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Alter_raise</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>心衝想機TRPGアルトレイズ</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>あるとれいす</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;MESSAGETEXT</span>
+<span class='tstring_content'>◆解放判定：EMA[x]
+
+[x]で達成値を指定してください。省略時はダイスロールします。
+
+
+【各種表】
+◆性格傾向表：PER[n]　　　　　　 ◆場所表：LOC[ab]
+◆平穏・経験表：QUI[ab]　　　　　◆喜び・経験表：DEL[ab]
+◆心の傷・経験表：TRA[ab]　　　　◆シーン演出表：SCE[n]
+◆スタンス表：STA[n]　　　　　　 ◆感情表：EMO[ab]
+
+[]内のコマンドを省略でダイスロール、指定でROC結果を表示します。
+[n]は「1D6」、[ab]は「D66」の出目を指定してください。
+
+【書式例】
+PER3：性格傾向表の「3」をROC
+LOC52：場所表の「52」をROC
+QUI：平穏・経験表をダイスロール
+</span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
   
   <h3 class="inherited">Constants inherited
      from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
@@ -126,50 +220,6 @@
     </h2>
 
     <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -416,54 +466,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; Alter_raise </a>
-    
-
-    
-  </span>
-  
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Alter_raise.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#rollDiceCommand-instance_method" title="#rollDiceCommand (instance method)">#<strong>rollDiceCommand</strong>(command)  &#x21d2; Object </a>
     
 
@@ -496,50 +498,11 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#initialize-instance_method" title="DiceBot#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
-  
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Alter_raise (class)">Alter_raise</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns a new instance of Alter_raise.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-9
-10
-11</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 9</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
-  <span class='kw'>super</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="DiceBot.html#initialize-instance_method" title="DiceBot#initialize (method)">DiceBot</a></span></p>
   
 </div>
 
@@ -549,67 +512,7 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="gameName-instance_method">
-  
-    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-13
-14
-15</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 13</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>心衝想機TRPGアルトレイズ</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameType-instance_method">
-  
-    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-17
-18
-19</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 17</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Alter_raise</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="get_Alter_raise_1d6_table_result-instance_method">
+  <h3 class="signature first" id="get_Alter_raise_1d6_table_result-instance_method">
   
     #<strong>get_Alter_raise_1d6_table_result</strong>(name, table, roc)  &#x21d2; <tt>Object</tt> 
   
@@ -623,19 +526,19 @@
       <pre class="lines">
 
 
+246
+247
+248
 249
 250
 251
 252
 253
 254
-255
-256
-257
-258</pre>
+255</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 249</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 246</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_Alter_raise_1d6_table_result'>get_Alter_raise_1d6_table_result</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_roc'>roc</span> <span class='op'>&gt;</span> <span class='int'>0</span>
@@ -667,6 +570,9 @@
       <pre class="lines">
 
 
+257
+258
+259
 260
 261
 262
@@ -684,13 +590,10 @@
 274
 275
 276
-277
-278
-279
-280</pre>
+277</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 260</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 257</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_Alter_raise_d66_table_result'>get_Alter_raise_d66_table_result</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_roc'>roc</span> <span class='op'>&gt;</span> <span class='int'>10</span>
@@ -733,6 +636,9 @@
       <pre class="lines">
 
 
+163
+164
+165
 166
 167
 168
@@ -747,13 +653,10 @@
 177
 178
 179
-180
-181
-182
-183</pre>
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_delight_table'>get_delight_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>喜び・経験表</span><span class='tstring_end'>&quot;</span></span>
@@ -793,6 +696,9 @@
       <pre class="lines">
 
 
+86
+87
+88
 89
 90
 91
@@ -814,13 +720,10 @@
 107
 108
 109
-110
-111
-112
-113</pre>
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_emancipation_table'>get_emancipation_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>解放判定表</span><span class='tstring_end'>&quot;</span></span>
@@ -842,9 +745,9 @@
     <span class='id identifier rubyid_diceText'>diceText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diceText'>diceText</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_tableText'>tableText</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_number'>get_table_by_number</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-  <span class='comment'># &#39;&#39;だと\nは文字列扱いに。
-</span>  <span class='id identifier rubyid_tableText'>tableText</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n【達成値7以上】GM：攻撃ルーチン1つを開示（番号はペアPLが指定）　PL：戦闘開始時のアクセルレベル+1</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>&gt;=</span> <span class='int'>7</span>
+  <span class='id identifier rubyid_tableText'>tableText</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_number'>get_table_by_number</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>  <span class='comment'># &#39;&#39;だと\nは文字列扱いに。
+</span>
+  <span class='id identifier rubyid_tableText'>tableText</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n【達成値7以上】GM：攻撃ルーチン1つを開示（番号はペアPLが指定）　PL：戦闘開始時のアクセルレベル+1</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>&gt;=</span> <span class='int'>7</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diceText'>diceText</span><span class='embexpr_end'>}</span><span class='tstring_content'>：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tableText'>tableText</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -867,6 +770,9 @@
       <pre class="lines">
 
 
+227
+228
+229
 230
 231
 232
@@ -881,13 +787,10 @@
 241
 242
 243
-244
-245
-246
-247</pre>
+244</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 230</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 227</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_emotion_table'>get_emotion_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情表</span><span class='tstring_end'>&quot;</span></span>
@@ -927,6 +830,9 @@
       <pre class="lines">
 
 
+125
+126
+127
 128
 129
 130
@@ -941,13 +847,10 @@
 139
 140
 141
-142
-143
-144
-145</pre>
+142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_location_table'>get_location_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>場所表</span><span class='tstring_end'>&quot;</span></span>
@@ -987,6 +890,9 @@
       <pre class="lines">
 
 
+112
+113
+114
 115
 116
 117
@@ -995,13 +901,10 @@
 120
 121
 122
-123
-124
-125
-126</pre>
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_personality_table'>get_personality_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>性格傾向表</span><span class='tstring_end'>&quot;</span></span>
@@ -1035,6 +938,9 @@
       <pre class="lines">
 
 
+144
+145
+146
 147
 148
 149
@@ -1049,13 +955,10 @@
 158
 159
 160
-161
-162
-163
-164</pre>
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 144</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_quiet_table'>get_quiet_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>平穏・経験表</span><span class='tstring_end'>&quot;</span></span>
@@ -1095,6 +998,9 @@
       <pre class="lines">
 
 
+201
+202
+203
 204
 205
 206
@@ -1103,13 +1009,10 @@
 209
 210
 211
-212
-213
-214
-215</pre>
+212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 204</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_scene_production_table'>get_scene_production_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>シーン演出表</span><span class='tstring_end'>&quot;</span></span>
@@ -1143,6 +1046,9 @@
       <pre class="lines">
 
 
+214
+215
+216
 217
 218
 219
@@ -1151,13 +1057,10 @@
 222
 223
 224
-225
-226
-227
-228</pre>
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 214</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_stance_table'>get_stance_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スタンス表</span><span class='tstring_end'>&quot;</span></span>
@@ -1191,6 +1094,9 @@
       <pre class="lines">
 
 
+182
+183
+184
 185
 186
 187
@@ -1205,13 +1111,10 @@
 196
 197
 198
-199
-200
-201
-202</pre>
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 185</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 182</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_trauma_table'>get_trauma_table</span><span class='lparen'>(</span><span class='id identifier rubyid_roc'>roc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>心の傷・経験表</span><span class='tstring_end'>&quot;</span></span>
@@ -1237,74 +1140,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getHelpMessage-instance_method">
-  
-    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 21</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
-  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;MESSAGETEXT</span>
-<span class='tstring_content'>◆解放判定：EMA[x]
-
-[x]で達成値を指定してください。省略時はダイスロールします。
-
-
-【各種表】
-◆性格傾向表：PER[n]　　　　　　 ◆場所表：LOC[ab]
-◆平穏・経験表：QUI[ab]　　　　　◆喜び・経験表：DEL[ab]
-◆心の傷・経験表：TRA[ab]　　　　◆シーン演出表：SCE[n]
-◆スタンス表：STA[n]　　　　　　 ◆感情表：EMO[ab]
-
-[]内のコマンドを省略でダイスロール、指定でROC結果を表示します。
-[n]は「1D6」、[ab]は「D66」の出目を指定してください。
-
-【書式例】
-PER3：性格傾向表の「3」をROC
-LOC52：場所表の「52」をROC
-QUI：平穏・経験表をダイスロール
-</span><span class='heredoc_end'>MESSAGETEXT
-</span><span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="rollDiceCommand-instance_method">
   
     #<strong>rollDiceCommand</strong>(command)  &#x21d2; <tt>Object</tt> 
@@ -1319,6 +1154,9 @@ QUI：平穏・経験表をダイスロール
       <pre class="lines">
 
 
+41
+42
+43
 44
 45
 46
@@ -1359,13 +1197,10 @@ QUI：平穏・経験表をダイスロール
 81
 82
 83
-84
-85
-86
-87</pre>
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Alter_raise.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Alter_raise.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span>
@@ -1421,9 +1256,9 @@ QUI：平穏・経験表をダイスロール
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:57 2020 by
+  Generated on Fri Mar 20 02:13:18 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

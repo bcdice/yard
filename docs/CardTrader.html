@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>CardTrader.rb</dd>
+    <dd>src/CardTrader.rb</dd>
   </dl>
   
 </div>
@@ -2346,7 +2346,7 @@
 31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='id identifier rubyid_initValues'>initValues</span>
@@ -2413,7 +2413,7 @@
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_canTapCard'>canTapCard</span>
   <span class='ivar'>@canTapCard</span>
@@ -2469,7 +2469,7 @@
 13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_card_place'>card_place</span>
   <span class='ivar'>@card_place</span>
@@ -2525,7 +2525,7 @@
 20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_numOfDecks'>numOfDecks</span>
   <span class='ivar'>@numOfDecks</span>
@@ -2581,7 +2581,7 @@
 23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_numOfJokers'>numOfJokers</span>
   <span class='ivar'>@numOfJokers</span>
@@ -2627,7 +2627,7 @@
 506</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 495</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 495</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_backCard'>backCard</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCount'>okCount</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -2683,7 +2683,7 @@
 527</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 508</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 508</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_backCardByCommandSetAndPlace'>backCardByCommandSetAndPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_commandset'>commandset</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCount'>okCount</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -2740,7 +2740,7 @@
 493</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 481</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 481</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_backCardCommandText'>backCardCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_output_msg'>output_msg</span> <span class='op'>=</span> <span class='id identifier rubyid_backCard'>backCard</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -2800,7 +2800,7 @@
 551</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 529</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 529</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_backOneCard'>backOneCard</span><span class='lparen'>(</span><span class='id identifier rubyid_targetCard'>targetCard</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_getBurriedCard'>getBurriedCard</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
@@ -2865,7 +2865,7 @@
 1250</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1244</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1244</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clearAllPlaceAllPlayerCards'>clearAllPlaceAllPlayerCards</span>
   <span class='ivar'>@deal_cards</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_cards'>cards</span><span class='op'>|</span>
@@ -2903,7 +2903,7 @@
 1264</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1258</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1258</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clearAllPlayerCards'>clearAllPlayerCards</span><span class='lparen'>(</span><span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_cards'>cards</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cardset'>cardset</span> <span class='op'>=</span> <span class='id identifier rubyid_cards'>cards</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -2939,7 +2939,7 @@
 1256</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1252</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1252</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clearAllPlayerCardsWhenPlayedPlace'>clearAllPlayerCardsWhenPlayedPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_cards'>cards</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_place'>place</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+</span><span class='regexp_end'>/</span></span> <span class='comment'># 最初が数値=場に出ているカードなので、カードを全部捨てて場も削除
@@ -2986,7 +2986,7 @@
 1378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1372</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1372</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compareCard'>compareCard</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_a'>a</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[^\d]</span><span class='regexp_end'>/</span></span>
@@ -3030,7 +3030,7 @@
 1392</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1380</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1380</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_compareCardByCardNumber'>compareCardByCardNumber</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span> <span class='id identifier rubyid_b'>b</span><span class='rparen'>)</span>
   <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([^\d]+)(\d+)</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_a'>a</span>
@@ -3081,7 +3081,7 @@
 566</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 553</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 553</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dealCard'>dealCard</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_targetNick'>targetNick</span><span class='comma'>,</span> <span class='id identifier rubyid_isLook'>isLook</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dealCard count, targetNick</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_targetNick'>targetNick</span><span class='rparen'>)</span>
@@ -3138,7 +3138,7 @@
 599</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 581</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 581</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_discardCardCommandText'>discardCardCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_output_msg'>output_msg</span><span class='comma'>,</span> <span class='id identifier rubyid__card_ok'>_card_ok</span> <span class='op'>=</span> <span class='id identifier rubyid_discardCards'>discardCards</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='rparen'>)</span>
@@ -3202,7 +3202,7 @@
 729</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 709</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 709</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_discardCards'>discardCards</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discardCards command, destination</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
@@ -3263,7 +3263,7 @@
 758</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 743</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 743</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_discardCardsByCardsAndPlace'>discardCardsByCardsAndPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_cards'>cards</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okList'>okList</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -3314,7 +3314,7 @@
 741</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 731</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 731</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_discardCardsByCommandSetAndPlaceAndDestination'>discardCardsByCommandSetAndPlaceAndDestination</span><span class='lparen'>(</span><span class='id identifier rubyid_commandSet'>commandSet</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okList'>okList</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -3382,7 +3382,7 @@
 792</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 760</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 760</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_discardOneCard'>discardOneCard</span><span class='lparen'>(</span><span class='id identifier rubyid_card'>card</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_card'>card</span> <span class='op'>=</span> <span class='id identifier rubyid_card'>card</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
@@ -3474,7 +3474,7 @@
 405</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 371</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 371</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_drawCard'>drawCard</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_destination'>destination</span> <span class='op'>||=</span> <span class='ivar'>@nick_e</span>
@@ -3559,7 +3559,7 @@
 354</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 340</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 340</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_drawCardByCommandText'>drawCardByCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>drawCardByCommandText arg</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
@@ -3612,7 +3612,7 @@
 369</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 356</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 356</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_drawCardOpen'>drawCardOpen</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw</span><span class='tstring_end'>&quot;</span></span>
@@ -3664,7 +3664,7 @@
 976</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 963</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 963</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ejectOneCardRandomFromCards'>ejectOneCardRandomFromCards</span><span class='lparen'>(</span><span class='id identifier rubyid_cards'>cards</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ejectOneCardRandomFromCards cards.length</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_cards'>cards</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
@@ -3791,7 +3791,7 @@
 328</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 240</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_executeCard'>executeCard</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='comma'>,</span> <span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
   <span class='ivar'>@channel</span> <span class='op'>=</span> <span class='id identifier rubyid_channel'>channel</span>
@@ -3847,9 +3847,9 @@
     <span class='id identifier rubyid_transferCardsByCommandText'>transferCardsByCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='comma'>,</span> <span class='id identifier rubyid_sendTo'>sendTo</span><span class='rparen'>)</span>
 
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>c-pick\[</span><span class='embexpr_beg'>#{</span><span class='ivar'>@cardRegExp</span><span class='embexpr_end'>}</span><span class='tstring_content'>(,</span><span class='embexpr_beg'>#{</span><span class='ivar'>@cardRegExp</span><span class='embexpr_end'>}</span><span class='tstring_content'>)*\]($|\s)</span><span class='regexp_end'>/</span></span>
-    <span class='id identifier rubyid_pickupCardCommandText'>pickupCardCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
-  <span class='comment'># FIXME
-</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>c-back(\d)*\[</span><span class='embexpr_beg'>#{</span><span class='ivar'>@cardRegExp</span><span class='embexpr_end'>}</span><span class='tstring_content'>(,</span><span class='embexpr_beg'>#{</span><span class='ivar'>@cardRegExp</span><span class='embexpr_end'>}</span><span class='tstring_content'>)*\]($|\s)</span><span class='regexp_end'>/</span></span>
+    <span class='id identifier rubyid_pickupCardCommandText'>pickupCardCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>  <span class='comment'># FIXME
+</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>c-back(\d)*\[</span><span class='embexpr_beg'>#{</span><span class='ivar'>@cardRegExp</span><span class='embexpr_end'>}</span><span class='tstring_content'>(,</span><span class='embexpr_beg'>#{</span><span class='ivar'>@cardRegExp</span><span class='embexpr_end'>}</span><span class='tstring_content'>)*\]($|\s)</span><span class='regexp_end'>/</span></span>
     <span class='id identifier rubyid_backCardCommandText'>backCardCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
 
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>c-deal(\[[\d]+\]|\s)\s*(</span><span class='embexpr_beg'>#{</span><span class='gvar'>$ircNickRegExp</span><span class='embexpr_end'>}</span><span class='tstring_content'>)($|\s)</span><span class='regexp_end'>/</span></span>
@@ -3874,9 +3874,9 @@
 
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>c-spell(\[(</span><span class='embexpr_beg'>#{</span><span class='gvar'>$ircNickRegExp</span><span class='embexpr_end'>}</span><span class='tstring_content'>[^\]]+?)\])?($|\s)</span><span class='regexp_end'>/</span></span>
     <span class='id identifier rubyid_spellText'>spellText</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_printCardRestorationSpellResult'>printCardRestorationSpellResult</span><span class='lparen'>(</span><span class='id identifier rubyid_spellText'>spellText</span><span class='rparen'>)</span>
-    <span class='comment'># c_spell_caller(arg)
+    <span class='id identifier rubyid_printCardRestorationSpellResult'>printCardRestorationSpellResult</span><span class='lparen'>(</span><span class='id identifier rubyid_spellText'>spellText</span><span class='rparen'>)</span>    <span class='comment'># c_spell_caller(arg)
 </span>
+
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(c-mil(stone)?(\[[\d]+\])?)($|\s)</span><span class='regexp_end'>/</span></span>
     <span class='id identifier rubyid_commandText'>commandText</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_printMilStoneResult'>printMilStoneResult</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='rparen'>)</span>
@@ -3911,7 +3911,7 @@
 1572</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1566</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1566</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_expandSpellWords'>expandSpellWords</span><span class='lparen'>(</span><span class='id identifier rubyid_spellWords'>spellWords</span><span class='rparen'>)</span>
   <span class='ivar'>@card_spell</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_word'>word</span><span class='op'>|</span>
@@ -3967,7 +3967,7 @@
 1303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1290</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1290</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getAllCardLocation'>getAllCardLocation</span> <span class='comment'># 今のカード配置を見る
 </span>  <span class='id identifier rubyid_allText'>allText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>山札:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@cardRest</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'>枚 捨札:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_getBurriedCard'>getBurriedCard</span><span class='embexpr_end'>}</span><span class='tstring_content'>枚</span><span class='tstring_end'>&quot;</span></span>
@@ -4011,7 +4011,7 @@
 1283</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1278</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1278</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getBurriedCard'>getBurriedCard</span>
   <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>card_played</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -4049,7 +4049,7 @@
 1327</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1320</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1320</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCardLocationOnNumberdPlace'>getCardLocationOnNumberdPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_cards'>cards</span><span class='comma'>,</span> <span class='id identifier rubyid_placeNumber'>placeNumber</span><span class='comma'>,</span> <span class='id identifier rubyid_cnick'>cnick</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cardText'>cardText</span> <span class='op'>=</span> <span class='id identifier rubyid_getCardsText'>getCardsText</span><span class='lparen'>(</span><span class='id identifier rubyid_cards'>cards</span><span class='rparen'>)</span>
@@ -4095,7 +4095,7 @@
 1318</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1305</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1305</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCardLocationOnPlace'>getCardLocationOnPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_cards'>cards</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -4171,7 +4171,7 @@
 1241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1215</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCardMilstone'>getCardMilstone</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>c-draw</span><span class='tstring_end'>&quot;</span></span>
@@ -4236,7 +4236,7 @@
 817</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 804</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 804</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCardsFromDealCards'>getCardsFromDealCards</span><span class='lparen'>(</span><span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>getCardsFromDealCards destination</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
@@ -4289,7 +4289,7 @@
 1588</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1574</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1574</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCardsFromIndexWordAndSpellText'>getCardsFromIndexWordAndSpellText</span><span class='lparen'>(</span><span class='id identifier rubyid_indexWord'>indexWord</span><span class='comma'>,</span> <span class='id identifier rubyid_spellText'>spellText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cards'>cards</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -4343,7 +4343,7 @@
 1431</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1428</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1428</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCardsText'>getCardsText</span><span class='lparen'>(</span><span class='id identifier rubyid_cardsText'>cardsText</span><span class='rparen'>)</span> <span class='comment'># 汎用カードセット用カードタイトルの表示
 </span>  <span class='id identifier rubyid_cards'>cards</span> <span class='op'>=</span> <span class='id identifier rubyid_cardsText'>cardsText</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -4392,7 +4392,7 @@
 1453</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1433</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1433</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCardsTextFromCards'>getCardsTextFromCards</span><span class='lparen'>(</span><span class='id identifier rubyid_cards'>cards</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='gvar'>$isHandSort</span>
@@ -4447,7 +4447,7 @@
 1532</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1523</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1523</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getDealCardIndex'>getDealCardIndex</span><span class='lparen'>(</span><span class='id identifier rubyid_card'>card</span><span class='rparen'>)</span>
   <span class='ivar'>@deal_cards</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
@@ -4494,7 +4494,7 @@
 1369</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1357</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1357</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getDealCardsText'>getDealCardsText</span><span class='lparen'>(</span><span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getDealCardsText destination</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
@@ -4540,12 +4540,12 @@
 802</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 794</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 794</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getDestinationWhenPlaceIsNotHand'>getDestinationWhenPlaceIsNotHand</span><span class='lparen'>(</span><span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_place'>place</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-    <span class='comment'># 場札から出すときは「出した人」を場札に書き替え
-</span>    <span class='id identifier rubyid_destination'>destination</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_place'>place</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_destination'>destination</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_place'>place</span> <span class='op'>&gt;</span> <span class='int'>0</span>    <span class='comment'># 場札から出すときは「出した人」を場札に書き替え
+</span>
+    <span class='id identifier rubyid_destination'>destination</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_place'>place</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_destination'>destination</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>return</span> <span class='id identifier rubyid_destination'>destination</span>
   <span class='kw'>end</span>
 
@@ -4598,7 +4598,7 @@
 1342</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1329</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1329</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHandAndPlaceCardInfoText'>getHandAndPlaceCardInfoText</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'># 自分の手札と場札の確認
 </span>  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getHandAndPlaceCardInfoText(str, destination)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_str'>str</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
@@ -4648,7 +4648,7 @@
 1355</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1344</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1344</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHandCardInfoText'>getHandCardInfoText</span><span class='lparen'>(</span><span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_destination'>destination</span> <span class='op'>=</span> <span class='id identifier rubyid_destination'>destination</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
@@ -4687,7 +4687,7 @@
 1521</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1519</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1519</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getIndexWord'>getIndexWord</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
   <span class='ivar'>@card_spell</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span> <span class='op'>+</span> <span class='int'>1</span><span class='rbracket'>]</span>
@@ -4727,7 +4727,7 @@
 1503</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1491</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1491</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getNewSpellText'>getNewSpellText</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getNewSpellText begin</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -4797,7 +4797,7 @@
 1426</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1394</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1394</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getPlaceCardInfoText'>getPlaceCardInfoText</span><span class='lparen'>(</span><span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_destination'>destination</span> <span class='op'>=</span> <span class='id identifier rubyid_destination'>destination</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
@@ -4880,7 +4880,7 @@
 1062</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1048</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1048</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSendCardToTargetNickPlace'>getSendCardToTargetNickPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='comma'>,</span> <span class='id identifier rubyid__nick_e'>_nick_e</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_ngCardList'>ngCardList</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -4939,7 +4939,7 @@
 1104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1085</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1085</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSendCardToTargetNickPlaceByCards'>getSendCardToTargetNickPlaceByCards</span><span class='lparen'>(</span><span class='id identifier rubyid_cards'>cards</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='comma'>,</span> <span class='id identifier rubyid_toSend'>toSend</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getSendCardToTargetNickPlaceByCards cards, destination, toSend</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='comma'>,</span> <span class='id identifier rubyid_toSend'>toSend</span><span class='rparen'>)</span>
@@ -5003,7 +5003,7 @@
 1083</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1064</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1064</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSendCardToTargetNickPlaceByCardSetAndDestination'>getSendCardToTargetNickPlaceByCardSetAndDestination</span><span class='lparen'>(</span><span class='id identifier rubyid_cardset'>cardset</span><span class='comma'>,</span> <span class='id identifier rubyid_placeNumber'>placeNumber</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>getSendCardToTargetNickPlaceByCardSetAndDestination cardset, placeNumber, destination</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_cardset'>cardset</span><span class='comma'>,</span> <span class='id identifier rubyid_placeNumber'>placeNumber</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
@@ -5060,7 +5060,7 @@
 1517</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1505</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1505</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSpellWords'>getSpellWords</span>
   <span class='id identifier rubyid_spellWords'>spellWords</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -5117,7 +5117,7 @@
 42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initValues'>initValues</span>
   <span class='ivar'>@cardTitles</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -5155,7 +5155,7 @@
 1459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1455</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1455</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_isTapCardPlace'>isTapCardPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='ivar'>@canTapCard</span>
@@ -5188,7 +5188,7 @@
 579</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 576</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 576</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lookAndDealCard'>lookAndDealCard</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_targetNick'>targetNick</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_isLook'>isLook</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -5229,7 +5229,7 @@
 432</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 420</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 420</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pickupCard'>pickupCard</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCount'>okCount</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -5277,7 +5277,7 @@
 444</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 434</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 434</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pickupCardByCardName'>pickupCardByCardName</span><span class='lparen'>(</span><span class='id identifier rubyid_cardName'>cardName</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCount'>okCount</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -5327,7 +5327,7 @@
 460</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 446</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 446</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pickupCardByCards'>pickupCardByCards</span><span class='lparen'>(</span><span class='id identifier rubyid_cards'>cards</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCount'>okCount</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -5378,7 +5378,7 @@
 418</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 407</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 407</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pickupCardCommandText'>pickupCardCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pickupCardCommandText string</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -5432,7 +5432,7 @@
 479</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 462</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 462</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pickupOneCard'>pickupOneCard</span><span class='lparen'>(</span><span class='id identifier rubyid_card'>card</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@cardRest</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
@@ -5498,7 +5498,7 @@
 640</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 617</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 617</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_playCard'>playCard</span><span class='lparen'>(</span><span class='id identifier rubyid_cardPlayCommandText'>cardPlayCommandText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>playCard cardPlayCommandText</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_cardPlayCommandText'>cardPlayCommandText</span><span class='rparen'>)</span>
@@ -5563,7 +5563,7 @@
 686</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 670</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 670</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_playCardByCardAndPlaceNo'>playCardByCardAndPlaceNo</span><span class='lparen'>(</span><span class='id identifier rubyid_card'>card</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>playCardByCardAndPlaceNo card, place</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_card'>card</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='rparen'>)</span>
@@ -5615,7 +5615,7 @@
 652</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 642</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 642</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_playCardByCardsBlockTextAndPlaceNo'>playCardByCardsBlockTextAndPlaceNo</span><span class='lparen'>(</span><span class='id identifier rubyid_cardsBlockText'>cardsBlockText</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCardList'>okCardList</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -5665,7 +5665,7 @@
 668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 654</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 654</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_playCardByCardsTextAndPlaceNo'>playCardByCardsTextAndPlaceNo</span><span class='lparen'>(</span><span class='id identifier rubyid_cardsText'>cardsText</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cards'>cards</span> <span class='op'>=</span> <span class='id identifier rubyid_cardsText'>cardsText</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -5729,7 +5729,7 @@
 615</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 602</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 602</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_playCardByCommandText'>playCardByCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>c-play pattern</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
@@ -5787,7 +5787,7 @@
 707</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 688</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 688</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_playOneCard'>playOneCard</span><span class='lparen'>(</span><span class='id identifier rubyid_card'>card</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>playOneCard card, place</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_card'>card</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='rparen'>)</span>
@@ -5900,7 +5900,7 @@
 172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_printCardHelp'>printCardHelp</span>
   <span class='id identifier rubyid_send_to_sender'>send_to_sender</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span> <span class='id identifier rubyid_sendMessageToOnlySender'>sendMessageToOnlySender</span> <span class='id identifier rubyid_message'>message</span> <span class='rbrace'>}</span>
@@ -6001,7 +6001,7 @@
 1470</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1463</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1463</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_printCardRestorationSpellResult'>printCardRestorationSpellResult</span><span class='lparen'>(</span><span class='id identifier rubyid_spellText'>spellText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output_msg'>output_msg</span> <span class='op'>=</span> <span class='id identifier rubyid_throwCardRestorationSpell'>throwCardRestorationSpell</span><span class='lparen'>(</span><span class='id identifier rubyid_spellText'>spellText</span><span class='rparen'>)</span>
@@ -6053,7 +6053,7 @@
 1212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1204</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1204</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_printMilStoneResult'>printMilStoneResult</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_output_msg'>output_msg</span> <span class='op'>=</span> <span class='id identifier rubyid_getCardMilstone'>getCardMilstone</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='rparen'>)</span>
@@ -6096,7 +6096,7 @@
 1115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1106</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_printRegistCardResult'>printRegistCardResult</span><span class='lparen'>(</span><span class='id identifier rubyid_targetNick'>targetNick</span><span class='comma'>,</span> <span class='id identifier rubyid_okCards'>okCards</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='ivar'>@channel</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@nick_e</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_okCards'>okCards</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'>枚場に置きました</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -6136,7 +6136,7 @@
 191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 186</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 186</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_readCardSet'>readCardSet</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_readExtraCard'>readExtraCard</span><span class='lparen'>(</span><span class='ivar'>@tnick</span><span class='rparen'>)</span>
@@ -6206,7 +6206,7 @@
 238</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 210</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_readExtraCard'>readExtraCard</span><span class='lparen'>(</span><span class='id identifier rubyid_cardFileName'>cardFileName</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_cardFileName'>cardFileName</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -6280,7 +6280,7 @@
 1276</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1267</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1267</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_returnCards'>returnCards</span>
   <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>card_played</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -6328,7 +6328,7 @@
 1288</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1286</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1286</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reviewCards'>reviewCards</span>
   <span class='ivar'>@cardRest</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -6378,7 +6378,7 @@
 1045</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1023</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1023</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendCardToTargetNickPlaceCommandText'>sendCardToTargetNickPlaceCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='comma'>,</span> <span class='id identifier rubyid_targetNick'>targetNick</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sendCardToTargetNickPlaceCommandText commandText, targetNick</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_commandText'>commandText</span><span class='comma'>,</span> <span class='id identifier rubyid_targetNick'>targetNick</span><span class='rparen'>)</span>
@@ -6432,7 +6432,7 @@
 574</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 568</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 568</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendDealResult'>sendDealResult</span><span class='lparen'>(</span><span class='id identifier rubyid_targetNick'>targetNick</span><span class='comma'>,</span> <span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_output_msg'>output_msg</span><span class='comma'>,</span> <span class='id identifier rubyid_isLook'>isLook</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_targetNick'>targetNick</span><span class='comma'>,</span> <span class='id identifier rubyid_output_msg'>output_msg</span><span class='rparen'>)</span>
@@ -6466,7 +6466,7 @@
 195</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 193</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 193</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -6496,7 +6496,7 @@
 203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 201</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessageToChannels'>sendMessageToChannels</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_sendMessageToChannels'>sendMessageToChannels</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -6526,7 +6526,7 @@
 199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 197</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessageToOnlySender'>sendMessageToOnlySender</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_sendMessageToOnlySender'>sendMessageToOnlySender</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -6592,7 +6592,7 @@
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set1Deck1Joker'>set1Deck1Joker</span>
   <span class='ivar'>@card_val</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6670,7 +6670,7 @@
 78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set1Deck2Jokers'>set1Deck2Jokers</span>
   <span class='ivar'>@card_val</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6752,7 +6752,7 @@
 100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set2Decks2Jokers'>set2Decks2Jokers</span>
   <span class='ivar'>@card_val</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6798,7 +6798,7 @@
 104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setBcDice'>setBcDice</span><span class='lparen'>(</span><span class='id identifier rubyid_bcDice'>bcDice</span><span class='rparen'>)</span>
   <span class='ivar'>@bcdice</span> <span class='op'>=</span> <span class='id identifier rubyid_bcDice'>bcDice</span>
@@ -6836,7 +6836,7 @@
 184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setCardMode'>setCardMode</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='ivar'>@tnick</span>
@@ -6894,7 +6894,7 @@
 1564</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1542</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1542</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setNewSpellText'>setNewSpellText</span><span class='lparen'>(</span><span class='id identifier rubyid_spellText'>spellText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_shuffleCards'>shuffleCards</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -6944,7 +6944,7 @@
 108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setNick'>setNick</span><span class='lparen'>(</span><span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
   <span class='ivar'>@nick_e</span> <span class='op'>=</span> <span class='id identifier rubyid_nick_e'>nick_e</span>
@@ -6974,7 +6974,7 @@
 112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setTnick'>setTnick</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
   <span class='ivar'>@tnick</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span>
@@ -7008,7 +7008,7 @@
 1540</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1534</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1534</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_shrinkSpellWords'>shrinkSpellWords</span><span class='lparen'>(</span><span class='id identifier rubyid_spellWords'>spellWords</span><span class='rparen'>)</span>
   <span class='ivar'>@card_spell</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_word'>word</span><span class='op'>|</span>
@@ -7055,7 +7055,7 @@
 337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 333</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 333</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_shuffleCards'>shuffleCards</span>
   <span class='ivar'>@cardRest</span> <span class='op'>=</span> <span class='ivar'>@card_val</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
@@ -7103,7 +7103,7 @@
 1154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1136</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1136</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tapCard'>tapCard</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCardList'>okCardList</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -7162,7 +7162,7 @@
 1171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1156</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tapCardByCardsTextAndPlace'>tapCardByCardsTextAndPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_cardsText'>cardsText</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_isUntap'>isUntap</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCardList'>okCardList</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -7230,7 +7230,7 @@
 1134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1118</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tapCardCommandText'>tapCardCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tapCardCommandText commandText</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_commandText'>commandText</span><span class='rparen'>)</span>
@@ -7300,7 +7300,7 @@
 1201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1173</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tapOneCardByCardAndPlace'>tapOneCardByCardAndPlace</span><span class='lparen'>(</span><span class='id identifier rubyid_card'>card</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_isUntap'>isUntap</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_card'>card</span> <span class='op'>=</span> <span class='id identifier rubyid_card'>card</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
@@ -7371,7 +7371,7 @@
 1489</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 1472</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 1472</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_throwCardRestorationSpell'>throwCardRestorationSpell</span><span class='lparen'>(</span><span class='id identifier rubyid_spellText'>spellText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0</span><span class='tstring_end'>&#39;</span></span>
@@ -7432,7 +7432,7 @@
 859</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 841</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 841</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_transferCards'>transferCards</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transferCards command</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -7497,7 +7497,7 @@
 908</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 887</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 887</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_transferCardsByCards'>transferCardsByCards</span><span class='lparen'>(</span><span class='id identifier rubyid_cards'>cards</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='comma'>,</span> <span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_okCount'>okCount</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -7568,7 +7568,7 @@
 885</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 861</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 861</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_transferCardsByCommand'>transferCardsByCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_commandset'>commandset</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transferCardsByCommand commandset, place, destination</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_commandset'>commandset</span><span class='comma'>,</span> <span class='id identifier rubyid_place'>place</span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='rparen'>)</span>
@@ -7647,7 +7647,7 @@
 839</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 821</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 821</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_transferCardsByCommandText'>transferCardsByCommandText</span><span class='lparen'>(</span><span class='id identifier rubyid_commandText'>commandText</span><span class='comma'>,</span> <span class='id identifier rubyid_sendTo'>sendTo</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>transferCardsByCommandText commandText, sendTo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_commandText'>commandText</span><span class='comma'>,</span> <span class='id identifier rubyid_sendTo'>sendTo</span><span class='rparen'>)</span>
@@ -7742,7 +7742,7 @@
 961</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 910</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 910</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_transferOneCard'>transferOneCard</span><span class='lparen'>(</span><span class='id identifier rubyid_card'>card</span><span class='comma'>,</span> <span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_toSend'>toSend</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transferOneCard card, from, toSend</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_card'>card</span><span class='comma'>,</span> <span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_toSend'>toSend</span><span class='rparen'>)</span>
@@ -7780,13 +7780,13 @@
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>transferOneCard toSend</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_toSend'>toSend</span><span class='rparen'>)</span>
 
   <span class='kw'>if</span> <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='id identifier rubyid_toSend'>toSend</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alreadyRegisted</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='comment'># debug(&#39;相手は登録済み&#39;)
-</span>    <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='id identifier rubyid_toSend'>toSend</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_thisCard'>thisCard</span>
+    <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>alreadyRegisted</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>    <span class='comment'># debug(&#39;相手は登録済み&#39;)
+</span>
+    <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='id identifier rubyid_toSend'>toSend</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_thisCard'>thisCard</span>
   <span class='kw'>else</span>
-    <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NOT registed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='comment'># debug(&#39;相手は未登録済み&#39;)
-</span>    <span class='id identifier rubyid_isSuccess'>isSuccess</span> <span class='op'>=</span> <span class='id identifier rubyid_transferTargetCardToNewMember'>transferTargetCardToNewMember</span><span class='lparen'>(</span><span class='id identifier rubyid_toSend'>toSend</span><span class='comma'>,</span> <span class='id identifier rubyid_thisCard'>thisCard</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NOT registed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>    <span class='comment'># debug(&#39;相手は未登録済み&#39;)
+</span>
+    <span class='id identifier rubyid_isSuccess'>isSuccess</span> <span class='op'>=</span> <span class='id identifier rubyid_transferTargetCardToNewMember'>transferTargetCardToNewMember</span><span class='lparen'>(</span><span class='id identifier rubyid_toSend'>toSend</span><span class='comma'>,</span> <span class='id identifier rubyid_thisCard'>thisCard</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>isSuccess</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_isSuccess'>isSuccess</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='gvar'>$ngResult</span> <span class='kw'>unless</span> <span class='id identifier rubyid_isSuccess'>isSuccess</span>
   <span class='kw'>end</span>
@@ -7837,7 +7837,7 @@
 996</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 978</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 978</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_transferTargetCard'>transferTargetCard</span><span class='lparen'>(</span><span class='id identifier rubyid_targetCard'>targetCard</span><span class='comma'>,</span> <span class='id identifier rubyid_cards'>cards</span><span class='comma'>,</span> <span class='id identifier rubyid_toSend'>toSend</span><span class='comma'>,</span> <span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transferTargetCard(targetCard, cards, toSend, from)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_targetCard'>targetCard</span><span class='comma'>,</span> <span class='id identifier rubyid_cards'>cards</span><span class='comma'>,</span> <span class='id identifier rubyid_toSend'>toSend</span><span class='comma'>,</span> <span class='id identifier rubyid_from'>from</span><span class='rparen'>)</span>
@@ -7904,7 +7904,7 @@
 1021</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'CardTrader.rb', line 998</span>
+      <pre class="code"><span class="info file"># File 'src/CardTrader.rb', line 998</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_transferTargetCardToNewMember'>transferTargetCardToNewMember</span><span class='lparen'>(</span><span class='id identifier rubyid_destination'>destination</span><span class='comma'>,</span> <span class='id identifier rubyid_thisCard'>thisCard</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>transferTargetCardToNewMember destination, thisCard</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_destination'>destination</span><span class='comma'>,</span> <span class='id identifier rubyid_thisCard'>thisCard</span><span class='rparen'>)</span>
@@ -7914,14 +7914,14 @@
 
   <span class='kw'>if</span> <span class='ivar'>@card_place</span> <span class='op'>&gt;</span> <span class='int'>0</span>
 
-    <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+(.+)</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_destination'>destination</span>
-      <span class='comment'># 渡すNickが数字で始まっていたら、場に出す処理の最初の一枚目
-</span>      <span class='id identifier rubyid_placeName'>placeName</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+(.+)</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_destination'>destination</span>      <span class='comment'># 渡すNickが数字で始まっていたら、場に出す処理の最初の一枚目
+</span>
+      <span class='id identifier rubyid_placeName'>placeName</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>placeName</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_placeName'>placeName</span><span class='rparen'>)</span>
 
-      <span class='kw'>if</span> <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='id identifier rubyid_placeName'>placeName</span><span class='rbracket'>]</span>
-        <span class='comment'># 手札は登録されていたら宛先間違いではない
-</span>        <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='id identifier rubyid_destination'>destination</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+      <span class='kw'>if</span> <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='id identifier rubyid_placeName'>placeName</span><span class='rbracket'>]</span>        <span class='comment'># 手札は登録されていたら宛先間違いではない
+</span>
+        <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='id identifier rubyid_destination'>destination</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
         <span class='ivar'>@deal_cards</span><span class='lbracket'>[</span><span class='id identifier rubyid_destination'>destination</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_thisCard'>thisCard</span>
         <span class='id identifier rubyid_isSuccess'>isSuccess</span> <span class='op'>=</span> <span class='kw'>true</span>
       <span class='kw'>end</span>
@@ -7940,9 +7940,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:52 2020 by
+  Generated on Fri Mar 20 02:13:08 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

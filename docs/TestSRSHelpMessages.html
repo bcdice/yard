@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>test/test_srs_help_messages.rb</dd>
+    <dd>src/test/test_srs_help_messages.rb</dd>
   </dl>
   
 </div>
@@ -253,7 +253,7 @@
 88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/test_srs_help_messages.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'src/test/test_srs_help_messages.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_EtrianOdysseySRS_help_message'>test_EtrianOdysseySRS_help_message</span>
   <span class='id identifier rubyid_dice_bot'>dice_bot</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="EtrianOdysseySRS.html" title="EtrianOdysseySRS (class)">EtrianOdysseySRS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SRS.html#initialize-instance_method" title="SRS#initialize (method)">new</a></span></span>
@@ -289,7 +289,7 @@
 ・D66ダイスあり（入れ替えなし)
 </span><span class='heredoc_end'>HELP_MESSAGE
 </span>
-  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='id identifier rubyid_expected'>expected</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_bot'>dice_bot</span><span class='period'>.</span><span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='id identifier rubyid_expected'>expected</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_bot'>dice_bot</span><span class='period'>.</span><span class='id identifier rubyid_help_message'>help_message</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -354,7 +354,7 @@
 47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/test_srs_help_messages.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'src/test/test_srs_help_messages.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_SRS_help_message'>test_SRS_help_message</span>
   <span class='id identifier rubyid_dice_bot'>dice_bot</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SRS.html" title="SRS (class)">SRS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SRS.html#initialize-instance_method" title="SRS#initialize (method)">new</a></span></span>
@@ -384,7 +384,7 @@
 ・D66ダイスあり（入れ替えなし)
 </span><span class='heredoc_end'>HELP_MESSAGE
 </span>
-  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='id identifier rubyid_expected'>expected</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_bot'>dice_bot</span><span class='period'>.</span><span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='id identifier rubyid_expected'>expected</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_bot'>dice_bot</span><span class='period'>.</span><span class='id identifier rubyid_help_message'>help_message</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -396,9 +396,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:48:04 2020 by
+  Generated on Fri Mar 20 02:13:28 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

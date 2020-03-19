@@ -96,11 +96,21 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/BattleTech.rb</dd>
+    <dd>src/diceBot/BattleTech.rb</dd>
   </dl>
   
 </div>
 
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="BattleTech/HitPart.html" title="BattleTech::HitPart (class)">HitPart</a></span>
+    
+  
+</p>
 
   
     <h2>
@@ -110,15 +120,235 @@
 
     <dl class="constants">
       
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BattleTech</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>バトルテック</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>はとるてつく</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;MESSAGETEXT</span>
+<span class='tstring_content'>・判定方法
+　(回数)BT(ダメージ)(部位)+(基本値)&gt;=(目標値)
+　回数は省略時 1固定。
+　部位はC（正面）R（右）、L（左）。省略時はC（正面）固定
+　U（上半身）、L（下半身）を組み合わせ CU/RU/LU/CL/RL/LLも指定可能
+　例）BT3+2&gt;=4
+　　正面からダメージ3の攻撃を技能ベース2目標値4で1回判定
+　例）2BT3RL+5&gt;=8
+　　右下半身にダメージ3の攻撃を技能ベース5目標値8で2回判定
+　ミサイルによるダメージは BT(ダメージ)の変わりに SRM2/4/6, LRM5/10/15/20を指定
+　例）3SRM6LU+5&gt;=8
+　　左上半身にSRM6連を技能ベース5目標値8で3回判定
+・CT：致命的命中表
+・DW：転倒後の向き表
+・CDx：メック戦士意識維持表。ダメージ値xで判定　例）CD3
+</span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
+      
+        <dt id="NO_CRITICAL_HIT_LIMIT-constant" class="">NO_CRITICAL_HIT_LIMIT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>致命的命中が発生しない上限値</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>7</span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>表の集合</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>致命的命中表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='const'><span class='object_link'><a href="#NO_CRITICAL_HIT_LIMIT-constant" title="BattleTech::NO_CRITICAL_HIT_LIMIT (constant)">NO_CRITICAL_HIT_LIMIT</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>致命的命中はなかった</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='op'>..</span><span class='int'>9</span><span class='comma'>,</span>                     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1箇所の致命的命中</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='op'>..</span><span class='int'>11</span><span class='comma'>,</span>                   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2箇所の致命的命中</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>                       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>その部位が吹き飛ぶ（腕、脚、頭）または3箇所の致命的命中（胴）</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DW</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="Table.html" title="Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Table.html#initialize-instance_method" title="Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>転倒後の向き表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>同じ（前面から転倒） 正面／背面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1ヘクスサイド右（側面から転倒） 右側面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2ヘクスサイド右（側面から転倒） 右側面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>180度逆（背面から転倒） 正面／背面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2ヘクスサイド左（側面から転倒） 左側面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1ヘクスサイド左（側面から転倒） 左側面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="XRM_DAMAGE_TABLES-constant" class="">XRM_DAMAGE_TABLES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ミサイルダメージ表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SRM2</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SRM2ダメージ表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>7</span><span class='comma'>,</span>  <span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SRM4</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SRM4ダメージ表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>      <span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span>   <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span>  <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>4</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SRM6</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SRM6ダメージ表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span>   <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span>   <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>8</span><span class='comma'>,</span>   <span class='int'>4</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span>  <span class='int'>5</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>6</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LRM5</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LRM5ダメージ表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>      <span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='op'>..</span><span class='int'>4</span><span class='comma'>,</span>   <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='op'>..</span><span class='int'>8</span><span class='comma'>,</span>   <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span>  <span class='int'>4</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>5</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LRM10</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LRM10ダメージ表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span>    <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>       <span class='int'>4</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='op'>..</span><span class='int'>8</span><span class='comma'>,</span>    <span class='int'>6</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span>   <span class='int'>8</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>10</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LRM15</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LRM15ダメージ表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span>    <span class='int'>5</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>       <span class='int'>6</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='op'>..</span><span class='int'>8</span><span class='comma'>,</span>    <span class='int'>9</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span>  <span class='int'>12</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>15</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LRM20</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LRM20ダメージ表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span>    <span class='int'>6</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>       <span class='int'>9</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='op'>..</span><span class='int'>8</span><span class='comma'>,</span>   <span class='int'>12</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span>  <span class='int'>16</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span> <span class='int'>20</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
         <dt id="lrmLimit-classvariable" class="">@@lrmLimit =
           
         </dt>
         <dd><pre class="code"><span class='int'>5</span></pre></dd>
-      
-        <dt id="noCritical-classvariable" class="">@@noCritical =
-          
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>致命的命中はなかった</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
     </dl>
   
@@ -152,50 +382,6 @@
   <span class="summary_signature">
     
       <a href="#changeText-instance_method" title="#changeText (instance method)">#<strong>changeText</strong>(string)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
     
 
     
@@ -261,28 +447,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getCriticalResult-instance_method" title="#getCriticalResult (instance method)">#<strong>getCriticalResult</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#getDamageInfo-instance_method" title="#getDamageInfo (instance method)">#<strong>getDamageInfo</strong>(dice, damage, isLrm, index)  &#x21d2; Object </a>
     
 
@@ -327,72 +491,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getDownResult-instance_method" title="#getDownResult (instance method)">#<strong>getDownResult</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getHitPart-instance_method" title="#getHitPart (instance method)">#<strong>getHitPart</strong>(side)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#getHitResult-instance_method" title="#getHitResult (instance method)">#<strong>getHitResult</strong>(count, damageFunc, tail)  &#x21d2; Object </a>
     
 
@@ -415,7 +513,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getHitResultOne-instance_method" title="#getHitResultOne (instance method)">#<strong>getHitResultOne</strong>(damageText, partTable)  &#x21d2; Object </a>
+      <a href="#getHitResultOne-instance_method" title="#getHitResultOne (instance method)">#<strong>getHitResultOne</strong>(damage_text, hit_part_table)  &#x21d2; Object </a>
     
 
     
@@ -429,7 +527,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>攻撃を1回行い、その結果を返す.</p>
+</div></span>
   
 </li>
 
@@ -438,28 +538,6 @@
   <span class="summary_signature">
     
       <a href="#getHitText-instance_method" title="#getHitText (instance method)">#<strong>getHitText</strong>(base, target)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getPart-instance_method" title="#getPart (instance method)">#<strong>getPart</strong>(partTable)  &#x21d2; Object </a>
     
 
     
@@ -525,77 +603,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getXrmDamageTable-instance_method" title="#getXrmDamageTable (instance method)">#<strong>getXrmDamageTable</strong>(type)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; BattleTech </a>
-    
-
-    
-  </span>
-  
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of BattleTech.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#rollDiceCommand-instance_method" title="#rollDiceCommand (instance method)">#<strong>rollDiceCommand</strong>(command)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#undefCommandResult-instance_method" title="#undefCommandResult (instance method)">#<strong>undefCommandResult</strong>  &#x21d2; Object </a>
     
 
     
@@ -627,50 +635,11 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#initialize-instance_method" title="DiceBot#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
-  
-    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="BattleTech (class)">BattleTech</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns a new instance of BattleTech.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-6
-7
-8</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 6</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
-  <span class='kw'>super</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="DiceBot.html#initialize-instance_method" title="DiceBot#initialize (method)">DiceBot</a></span></p>
   
 </div>
 
@@ -694,75 +663,15 @@
       <pre class="lines">
 
 
-38
-39
-40</pre>
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_changeText'>changeText</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>PPC</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BT10</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameName-instance_method">
-  
-    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-10
-11
-12</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 10</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>バトルテック</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameType-instance_method">
-  
-    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-14
-15
-16</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 14</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BattleTech</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -784,16 +693,16 @@
       <pre class="lines">
 
 
-152
-153
-154
-155
-156
-157
-158</pre>
+132
+133
+134
+135
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getBaseValue'>getBaseValue</span><span class='lparen'>(</span><span class='id identifier rubyid_baseString'>baseString</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -822,30 +731,30 @@
       <pre class="lines">
 
 
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366</pre>
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 346</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 278</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCheckDieResult'>getCheckDieResult</span><span class='lparen'>(</span><span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_damage'>damage</span> <span class='op'>&gt;=</span> <span class='int'>6</span>
@@ -874,52 +783,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getCriticalResult-instance_method">
-  
-    #<strong>getCriticalResult</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331
-332</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 322</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getCriticalResult'>getCriticalResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span> <span class='int'>7</span><span class='comma'>,</span> <span class='cvar'>@@noCritical</span><span class='rbracket'>]</span><span class='comma'>,</span>
-           <span class='lbracket'>[</span> <span class='int'>9</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1箇所の致命的命中</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
-           <span class='lbracket'>[</span><span class='int'>11</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2箇所の致命的命中</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
-           <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>その部位が吹き飛ぶ（腕、脚、頭）または3箇所の致命的命中（胴）</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span><span class='rbracket'>]</span>
-
-  <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_number'>get_table_by_number</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="getDamageInfo-instance_method">
   
     #<strong>getDamageInfo</strong>(dice, damage, isLrm, index)  &#x21d2; <tt>Object</tt> 
@@ -934,20 +797,20 @@
       <pre class="lines">
 
 
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246</pre>
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getDamageInfo'>getDamageInfo</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_isLrm'>isLrm</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_damage'>damage</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='kw'>if</span> <span class='id identifier rubyid_dice'>dice</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -974,45 +837,106 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>damageFunc</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ダメージを返す手続き</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>partTable</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>命中部位表</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>damages</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>蓄積したダメージの情報</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234</pre>
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 205</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getDamages'>getDamages</span><span class='lparen'>(</span><span class='id identifier rubyid_damageFunc'>damageFunc</span><span class='comma'>,</span> <span class='id identifier rubyid_partTable'>partTable</span><span class='comma'>,</span> <span class='id identifier rubyid_damages'>damages</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_resultText'>resultText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -1050,190 +974,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getDownResult-instance_method">
-  
-    #<strong>getDownResult</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343
-344</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 334</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getDownResult'>getDownResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>同じ（前面から転倒） 正面／背面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-           <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1ヘクスサイド右（側面から転倒） 右側面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-           <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2ヘクスサイド右（側面から転倒） 右側面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-           <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>180度逆（背面から転倒） 正面／背面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-           <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2ヘクスサイド左（側面から転倒） 左側面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-           <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1ヘクスサイド左（側面から転倒） 左側面</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getHelpMessage-instance_method">
-  
-    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 18</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
-  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;MESSAGETEXT</span>
-<span class='tstring_content'>・判定方法
-　(回数)BT(ダメージ)(部位)+(基本値)&gt;=(目標値)
-　回数は省略時 1固定。
-　部位はC（正面）R（右）、L（左）。省略時はC（正面）固定
-　U（上半身）、L（下半身）を組み合わせ CU/RU/LU/CL/RL/LLも指定可能
-　例）BT3+2&gt;=4
-　　正面からダメージ3の攻撃を技能ベース2目標値4で1回判定
-　例）2BT3RL+5&gt;=8
-　　右下半身にダメージ3の攻撃を技能ベース5目標値8で2回判定
-　ミサイルによるダメージは BT(ダメージ)の変わりに SRM2/4/6, LRM5/10/15/20を指定
-　例）3SRM6LU+5&gt;=8
-　　左上半身にSRM6連を技能ベース5目標値8で3回判定
-・CT：致命的命中表
-・DW：転倒後の向き表
-・CDx：メック戦士意識維持表。ダメージ値xで判定　例）CD3
-</span><span class='heredoc_end'>MESSAGETEXT
-</span><span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getHitPart-instance_method">
-  
-    #<strong>getHitPart</strong>(side)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 160</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHitPart'>getHitPart</span><span class='lparen'>(</span><span class='id identifier rubyid_side'>side</span><span class='rparen'>)</span>
-  <span class='kw'>case</span> <span class='id identifier rubyid_side'>side</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^L$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左胴＠</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴中央</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^C$</span><span class='regexp_end'>/i</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>nil</span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴中央＠</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴中央</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^R$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右胴＠</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴中央</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^LU$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴中央</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CU$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴中央</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^RU$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右胴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴中央</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^LL$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CL$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^RL$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='kw'>else</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown hit part side :</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_side'>side</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="getHitResult-instance_method">
   
     #<strong>getHitResult</strong>(count, damageFunc, tail)  &#x21d2; <tt>Object</tt> 
@@ -1248,6 +988,27 @@
       <pre class="lines">
 
 
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
 114
 115
 116
@@ -1264,41 +1025,22 @@
 127
 128
 129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150</pre>
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHitResult'>getHitResult</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_damageFunc'>damageFunc</span><span class='comma'>,</span> <span class='id identifier rubyid_tail'>tail</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\w*)(\+\d+)?&gt;=(\d+)</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_tail'>tail</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([LCR][LU]?)?(\+\d+)?&gt;=(\d+)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_tail'>tail</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
 
-  <span class='id identifier rubyid_side'>side</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_baseString'>baseString</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_side'>side</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_baseString'>baseString</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
   <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='id identifier rubyid_getBaseValue'>getBaseValue</span><span class='lparen'>(</span><span class='id identifier rubyid_baseString'>baseString</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>side, base, target</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_side'>side</span><span class='comma'>,</span> <span class='id identifier rubyid_base'>base</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_partTable'>partTable</span> <span class='op'>=</span> <span class='id identifier rubyid_getHitPart'>getHitPart</span><span class='lparen'>(</span><span class='id identifier rubyid_side'>side</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_partTable'>partTable</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="BattleTech/HitPart.html" title="BattleTech::HitPart (class)">HitPart</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="BattleTech/HitPart.html#TABLES-constant" title="BattleTech::HitPart::TABLES (constant)">TABLES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_side'>side</span><span class='rbracket'>]</span>
 
   <span class='id identifier rubyid_resultTexts'>resultTexts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_damages'>damages</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1334,188 +1076,68 @@
       <div class="method_details ">
   <h3 class="signature " id="getHitResultOne-instance_method">
   
-    #<strong>getHitResultOne</strong>(damageText, partTable)  &#x21d2; <tt>Object</tt> 
+    #<strong>getHitResultOne</strong>(damage_text, hit_part_table)  &#x21d2; <tt>Object</tt> 
   
 
   
 
   
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 286</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHitResultOne'>getHitResultOne</span><span class='lparen'>(</span><span class='id identifier rubyid_damageText'>damageText</span><span class='comma'>,</span> <span class='id identifier rubyid_partTable'>partTable</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_part'>part</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_getPart'>getPart</span><span class='lparen'>(</span><span class='id identifier rubyid_partTable'>partTable</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_part'>part</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>＠</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（致命的命中）</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_damageText'>damageText</span><span class='embexpr_end'>}</span><span class='tstring_content'>点</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>result</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_part'>part</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>＠</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_isCritical'>isCritical</span> <span class='op'>=</span> <span class='op'>!</span><span class='id identifier rubyid_index'>index</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>isCritical</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_isCritical'>isCritical</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_part'>part</span> <span class='op'>=</span> <span class='id identifier rubyid_part'>part</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>＠</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_criticalText'>criticalText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
-  <span class='kw'>if</span>  <span class='id identifier rubyid_isCritical'>isCritical</span>
-    <span class='id identifier rubyid_criticalDice'>criticalDice</span><span class='comma'>,</span> <span class='id identifier rubyid_criticalText'>criticalText</span> <span class='op'>=</span> <span class='id identifier rubyid_getCriticalResult'>getCriticalResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_criticalDice'>criticalDice</span><span class='embexpr_end'>}</span><span class='tstring_content'>] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_criticalText'>criticalText</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_criticalText'>criticalText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_criticalText'>criticalText</span> <span class='op'>==</span> <span class='cvar'>@@noCritical</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_part'>part</span><span class='comma'>,</span> <span class='id identifier rubyid_criticalText'>criticalText</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+</h3><div class="docstring">
+  <div class="discussion">
     
-      <div class="method_details ">
-  <h3 class="signature " id="getHitText-instance_method">
-  
-    #<strong>getHitText</strong>(base, target)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
+<p>攻撃を1回行い、その結果を返す</p>
 
 
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 187</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHitText'>getHitText</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_dice2'>dice2</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_total'>total</span> <span class='op'>=</span> <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>+</span> <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>+</span> <span class='id identifier rubyid_base'>base</span>
-  <span class='id identifier rubyid_isHit'>isHit</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_baseString'>baseString</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_base'>base</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total'>total</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice1'>dice1</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice2'>dice2</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_baseString'>baseString</span><span class='embexpr_end'>}</span><span class='tstring_content'>]&gt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span>
-
-  <span class='kw'>if</span> <span class='id identifier rubyid_isHit'>isHit</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>命中 ＞ </span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>else</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外れ</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_isHit'>isHit</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
+  </div>
 </div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getPart-instance_method">
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
-    #<strong>getPart</strong>(partTable)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-310
-311
-312
-313
-314
-315
-316
-317
-318</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 310</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getPart'>getPart</span><span class='lparen'>(</span><span class='id identifier rubyid_partTable'>partTable</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_diceCount'>diceCount</span> <span class='op'>=</span> <span class='int'>2</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_partTable'>partTable</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>6</span>
-    <span class='id identifier rubyid_diceCount'>diceCount</span> <span class='op'>=</span> <span class='int'>1</span>
-  <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_part'>part</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_nD6'>get_table_by_nD6</span><span class='lparen'>(</span><span class='id identifier rubyid_partTable'>partTable</span><span class='comma'>,</span> <span class='id identifier rubyid_diceCount'>diceCount</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_part'>part</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
+    <li>
+      
+        <span class='name'>damage_text</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ダメージを表す文字列</p>
 </div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getTotalDamage-instance_method">
+      
+    </li>
   
-    #<strong>getTotalDamage</strong>(damages)  &#x21d2; <tt>Object</tt> 
+    <li>
+      
+        <span class='name'>hit_part_table</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="RangeTable.html" title="RangeTable (class)">RangeTable</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>命中部位表</p>
+</div>
+      
+    </li>
   
+</ul>
 
-  
 
-  
-</h3><table class="source_code">
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+245
+246
+247
 248
 249
 250
@@ -1544,18 +1166,161 @@
 273
 274
 275
-276
-277
-278
-279
-280
-281
-282
-283
-284</pre>
+276</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 248</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 245</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getHitResultOne'>getHitResultOne</span><span class='lparen'>(</span><span class='id identifier rubyid_damage_text'>damage_text</span><span class='comma'>,</span> <span class='id identifier rubyid_hit_part_table'>hit_part_table</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hit_part_roll_result'>hit_part_roll_result</span> <span class='op'>=</span> <span class='id identifier rubyid_hit_part_table'>hit_part_table</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_bcdice'>bcdice</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hit_part'>hit_part</span> <span class='op'>=</span> <span class='id identifier rubyid_hit_part_roll_result'>hit_part_roll_result</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span>
+
+  <span class='id identifier rubyid_critical_hit_may_occur_str'>critical_hit_may_occur_str</span> <span class='op'>=</span>
+    <span class='id identifier rubyid_hit_part'>hit_part</span><span class='period'>.</span><span class='id identifier rubyid_critical_hit_may_occur'>critical_hit_may_occur</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>（致命的命中）</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+
+  <span class='id identifier rubyid_result_parts'>result_parts</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hit_part_roll_result'>hit_part_roll_result</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hit_part'>hit_part</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_critical_hit_may_occur_str'>critical_hit_may_occur_str</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_damage_text'>damage_text</span><span class='embexpr_end'>}</span><span class='tstring_content'>点</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_critical_hit_occurred'>critical_hit_occurred</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_criticalText'>criticalText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_hit_part'>hit_part</span><span class='period'>.</span><span class='id identifier rubyid_critical_hit_may_occur'>critical_hit_may_occur</span>
+    <span class='id identifier rubyid_ct_roll_result'>ct_roll_result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BattleTech::TABLES (constant)">TABLES</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CT</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_bcdice'>bcdice</span><span class='rparen'>)</span>
+
+    <span class='comment'># 致命的命中が発生したか
+</span>    <span class='id identifier rubyid_critical_hit_occurred'>critical_hit_occurred</span> <span class='op'>=</span> <span class='id identifier rubyid_ct_roll_result'>ct_roll_result</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span> <span class='op'>&gt;</span> <span class='const'><span class='object_link'><a href="#NO_CRITICAL_HIT_LIMIT-constant" title="BattleTech::NO_CRITICAL_HIT_LIMIT (constant)">NO_CRITICAL_HIT_LIMIT</a></span></span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_critical_hit_occurred'>critical_hit_occurred</span>
+      <span class='id identifier rubyid_criticalText'>criticalText</span> <span class='op'>=</span> <span class='id identifier rubyid_ct_roll_result'>ct_roll_result</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_result_parts'>result_parts</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ct_roll_result'>ct_roll_result</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span><span class='embexpr_end'>}</span><span class='tstring_content'>] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ct_roll_result'>ct_roll_result</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># TODO: 構造体で表現する
+</span>  <span class='kw'>return</span> <span class='id identifier rubyid_result_parts'>result_parts</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_hit_part'>hit_part</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_criticalText'>criticalText</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getHitText-instance_method">
+  
+    #<strong>getHitText</strong>(base, target)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getHitText'>getHitText</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice2'>dice2</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_total'>total</span> <span class='op'>=</span> <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>+</span> <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>+</span> <span class='id identifier rubyid_base'>base</span>
+  <span class='id identifier rubyid_isHit'>isHit</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_baseString'>baseString</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_base'>base</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total'>total</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice1'>dice1</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice2'>dice2</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_baseString'>baseString</span><span class='embexpr_end'>}</span><span class='tstring_content'>]&gt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_isHit'>isHit</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>命中 ＞ </span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外れ</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_isHit'>isHit</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getTotalDamage-instance_method">
+  
+    #<strong>getTotalDamage</strong>(damages)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 204</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getTotalDamage'>getTotalDamage</span><span class='lparen'>(</span><span class='id identifier rubyid_damages'>damages</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parts'>parts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
@@ -1614,6 +1379,9 @@
       <pre class="lines">
 
 
+78
+79
+80
 81
 82
 83
@@ -1621,84 +1389,23 @@
 85
 86
 87
-88</pre>
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getXrmDamage'>getXrmDamage</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_isLrm'>isLrm</span> <span class='op'>=</span> <span class='id identifier rubyid_getXrmDamageTable'>getXrmDamageTable</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown XRM type:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="#XRM_DAMAGE_TABLES-constant" title="BattleTech::XRM_DAMAGE_TABLES (constant)">XRM_DAMAGE_TABLES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>*</span> <span class='int'>2</span> <span class='rbrace'>}</span> <span class='kw'>unless</span> <span class='id identifier rubyid_isLrm'>isLrm</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#XRM_DAMAGE_TABLES-constant" title="BattleTech::XRM_DAMAGE_TABLES (constant)">XRM_DAMAGE_TABLES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_roll_result'>roll_result</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_bcdice'>bcdice</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_isLrm'>isLrm</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getXrmDamageTable-instance_method">
-  
-    #<strong>getXrmDamageTable</strong>(type)  &#x21d2; <tt>Object</tt> 
-  
+  <span class='id identifier rubyid_lrm'>lrm</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_start_with?'>start_with?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_damage'>damage</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_result'>roll_result</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span>
+  <span class='id identifier rubyid_modified_damage'>modified_damage</span> <span class='op'>=</span> <span class='id identifier rubyid_lrm'>lrm</span> <span class='op'>?</span> <span class='id identifier rubyid_damage'>damage</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='int'>2</span> <span class='op'>*</span> <span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
 
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 90</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getXrmDamageTable'>getXrmDamageTable</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
-  <span class='comment'># table, isLrm
-</span>  <span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^SRM2$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span>  <span class='int'>1</span><span class='comma'>,</span>  <span class='int'>1</span><span class='comma'>,</span>  <span class='int'>1</span><span class='comma'>,</span>  <span class='int'>1</span><span class='comma'>,</span>  <span class='int'>1</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^SRM4$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>4</span><span class='comma'>,</span>  <span class='int'>4</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^SRM6$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>4</span><span class='comma'>,</span>  <span class='int'>4</span><span class='comma'>,</span>  <span class='int'>4</span><span class='comma'>,</span>  <span class='int'>5</span><span class='comma'>,</span>  <span class='int'>5</span><span class='comma'>,</span>  <span class='int'>6</span><span class='comma'>,</span>  <span class='int'>6</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^LRM5$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>2</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>4</span><span class='comma'>,</span>  <span class='int'>4</span><span class='comma'>,</span>  <span class='int'>5</span><span class='comma'>,</span>  <span class='int'>5</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^LRM10$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>  <span class='int'>3</span><span class='comma'>,</span>  <span class='int'>4</span><span class='comma'>,</span>  <span class='int'>6</span><span class='comma'>,</span>  <span class='int'>6</span><span class='comma'>,</span>  <span class='int'>6</span><span class='comma'>,</span>  <span class='int'>6</span><span class='comma'>,</span>  <span class='int'>8</span><span class='comma'>,</span>  <span class='int'>8</span><span class='comma'>,</span>  <span class='int'>10</span><span class='comma'>,</span> <span class='int'>10</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^LRM15$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>  <span class='int'>5</span><span class='comma'>,</span>  <span class='int'>6</span><span class='comma'>,</span>  <span class='int'>9</span><span class='comma'>,</span>  <span class='int'>9</span><span class='comma'>,</span>  <span class='int'>9</span><span class='comma'>,</span>  <span class='int'>9</span><span class='comma'>,</span>  <span class='int'>12</span><span class='comma'>,</span> <span class='int'>12</span><span class='comma'>,</span> <span class='int'>15</span><span class='comma'>,</span> <span class='int'>15</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^LRM20$</span><span class='regexp_end'>/i</span></span>
-    <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>  <span class='int'>6</span><span class='comma'>,</span>  <span class='int'>9</span><span class='comma'>,</span>  <span class='int'>12</span><span class='comma'>,</span>  <span class='int'>12</span><span class='comma'>,</span> <span class='int'>12</span><span class='comma'>,</span> <span class='int'>12</span><span class='comma'>,</span> <span class='int'>16</span><span class='comma'>,</span> <span class='int'>16</span><span class='comma'>,</span> <span class='int'>20</span><span class='comma'>,</span> <span class='int'>20</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rbracket'>]</span>
-  <span class='kw'>else</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown XRM type:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_modified_damage'>modified_damage</span><span class='comma'>,</span> <span class='id identifier rubyid_roll_result'>roll_result</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span><span class='comma'>,</span> <span class='id identifier rubyid_lrm'>lrm</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1720,6 +1427,7 @@
       <pre class="lines">
 
 
+45
 46
 47
 48
@@ -1750,15 +1458,15 @@
 73
 74
 75
-76
-77
-78
-79</pre>
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BattleTech::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span>
+
   <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='int'>1</span>
   <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d+)(.+)</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
     <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -1769,11 +1477,6 @@
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>executeCommandCatched command</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CT$</span><span class='regexp_end'>/</span></span>
-    <span class='id identifier rubyid_criticalDice'>criticalDice</span><span class='comma'>,</span> <span class='id identifier rubyid_criticalText'>criticalText</span> <span class='op'>=</span> <span class='id identifier rubyid_getCriticalResult'>getCriticalResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_criticalDice'>criticalDice</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_criticalText'>criticalText</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^DW$</span><span class='regexp_end'>/</span></span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_getDownResult'>getDownResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CD(\d+)$</span><span class='regexp_end'>/</span></span>
     <span class='id identifier rubyid_damage'>damage</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='kw'>return</span> <span class='id identifier rubyid_getCheckDieResult'>getCheckDieResult</span><span class='lparen'>(</span><span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
@@ -1797,44 +1500,14 @@
 </table>
 </div>
     
-      <div class="method_details ">
-  <h3 class="signature " id="undefCommandResult-instance_method">
-  
-    #<strong>undefCommandResult</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-42
-43
-44</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/BattleTech.rb', line 42</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_undefCommandResult'>undefCommandResult</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:56 2020 by
+  Generated on Fri Mar 20 02:13:15 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

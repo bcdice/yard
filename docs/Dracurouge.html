@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/Dracurouge.rb</dd>
+    <dd>src/diceBot/Dracurouge.rb</dd>
   </dl>
   
 </div>
@@ -109,6 +109,97 @@
     </h2>
 
     <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Dracurouge</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ドラクルージュ</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>とらくるうしゆ</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;MESSAGETEXT</span>
+<span class='tstring_content'>・行い判定（DRx+y）
+　x：振るサイコロの数（省略時４）、y：渇き修正（省略時０）
+　例） DR　DR6　DR+1　DR5+2
+・抗い判定（DRRx）
+　x：振るサイコロの数
+　例） DRR3
+・原風景表（ST）、叙勲表（CO）、叙勲後表（CA）、遥か過去表（EP）
+　原罪表（OS）、受難表（PN）、近況表（RS）、平和な過去表（PP）
+・堕落表（CTx） x：渇き （例） CT3
+・堕落の兆し表（CS）、拡張・堕落の兆し表（ECS）
+・絆内容決定表（BT）
+・反応表（RTxy）x：血統、y：道　xy省略で一括表示
+　血統　D：ドラク、R：ローゼンブルク、H：ヘルズガルド、M：ダストハイム
+　　　　A：アヴァローム　N：ノスフェラス、G：ゲイズヴァルト、K：カインシルト
+　道　F：領主、G：近衛、R：遍歴、W：賢者、J：狩人、N：夜獣
+　　　E：将軍、B：僧正、H：空駆、K：船長、L：寵童、V：仲立、U：技師、D：博士
+　　　S：星読、G2：後見
+　例）RT（一括表示）、RTDF（ドラクの領主）、RTAG2（アヴァロームの後見人）
+・異端の反応表（HRTxy）x：血統、y：道　xy省略で一括表示
+　血統　L：異端卿、V：ヴルコラク、N：ナハツェーラ、K：カルンシュタイン
+　　　　G：グリマルキン、S：ストリガ、M：メリュジーヌ、F：フォーン
+　　　　H：ホムンクルス、E：エナメルム、S2：サングィナリエ、A：アールヴ
+　　　　V2：ヴィーヴル、L2：ルーガルー、A2：アルラウネ、F2：フリッガ
+　道　W：野伏、N：流浪、S：密使、H：魔女、F：剣士、X：検体
+　例）HRT（一括表示）、HRTVW（ヴルコラクの野伏）、HRTF2X（フリッガの検体）
+・D66ダイスあり
+</span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
       
         <dt id="tables-classvariable" class="">@@tables =
           
@@ -241,50 +332,6 @@
   <span class="summary_signature">
     
       <a href="#countTargetDice-instance_method" title="#countTargetDice (instance method)">#<strong>countTargetDice</strong>(diceList, target)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
     
 
     
@@ -505,28 +552,6 @@
   <span class="summary_signature">
     
       <a href="#getGloryDiceCount-instance_method" title="#getGloryDiceCount (instance method)">#<strong>getGloryDiceCount</strong>(diceList)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
     
 
     
@@ -1178,7 +1203,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -1208,13 +1233,13 @@
       <pre class="lines">
 
 
-4
-5
-6
-7</pre>
+44
+45
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span>
@@ -1247,15 +1272,15 @@
       <pre class="lines">
 
 
-180
 181
 182
 183
 184
-185</pre>
+185
+186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 180</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 181</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checkTypeText'>checkTypeText</span><span class='lparen'>(</span><span class='id identifier rubyid_typeText'>typeText</span><span class='comma'>,</span> <span class='id identifier rubyid_infos'>infos</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_typeText'>typeText</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1283,75 +1308,15 @@
       <pre class="lines">
 
 
-92
 93
-94</pre>
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_countTargetDice'>countTargetDice</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_diceList'>diceList</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>==</span> <span class='id identifier rubyid_target'>target</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameName-instance_method">
-  
-    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-9
-10
-11</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 9</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ドラクルージュ</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameType-instance_method">
-  
-    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-13
-14
-15</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 13</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dracurouge</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1373,7 +1338,6 @@
       <pre class="lines">
 
 
-56
 57
 58
 59
@@ -1392,10 +1356,11 @@
 72
 73
 74
-75</pre>
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getConductDiceCommandResult'>getConductDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^DR(\d*)(\+(\d+))?$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -1437,7 +1402,6 @@
       <pre class="lines">
 
 
-1336
 1337
 1338
 1339
@@ -1445,10 +1409,11 @@
 1341
 1342
 1343
-1344</pre>
+1344
+1345</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1336</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1337</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getConfermentAfterDiceCommandResult'>getConfermentAfterDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CA$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -1479,7 +1444,6 @@
       <pre class="lines">
 
 
-1508
 1509
 1510
 1511
@@ -1521,10 +1485,11 @@
 1547
 1548
 1549
-1550</pre>
+1550
+1551</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1508</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1509</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getConfermentAfterTable'>getConfermentAfterTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -1589,7 +1554,6 @@
       <pre class="lines">
 
 
-1326
 1327
 1328
 1329
@@ -1597,10 +1561,11 @@
 1331
 1332
 1333
-1334</pre>
+1334
+1335</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1326</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1327</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getConfermentDiceCommandResult'>getConfermentDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CO$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -1631,7 +1596,6 @@
       <pre class="lines">
 
 
-1465
 1466
 1467
 1468
@@ -1672,10 +1636,11 @@
 1503
 1504
 1505
-1506</pre>
+1506
+1507</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1465</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1466</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getConfermentTable'>getConfermentTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -1739,7 +1704,6 @@
       <pre class="lines">
 
 
-1251
 1252
 1253
 1254
@@ -1763,10 +1727,11 @@
 1272
 1273
 1274
-1275</pre>
+1275
+1276</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1251</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1252</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCorruptionDiceCommandResult'>getCorruptionDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CT(\d+)$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -1813,7 +1778,6 @@
       <pre class="lines">
 
 
-1404
 1405
 1406
 1407
@@ -1829,10 +1793,11 @@
 1417
 1418
 1419
-1420</pre>
+1420
+1421</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1404</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1405</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getD6xResult'>getD6xResult</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_dice6Count'>dice6Count</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_total'>total</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -1871,7 +1836,6 @@
       <pre class="lines">
 
 
-1346
 1347
 1348
 1349
@@ -1879,10 +1843,11 @@
 1351
 1352
 1353
-1354</pre>
+1354
+1355</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1346</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1347</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getElderPastDiceCommandResult'>getElderPastDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^EP$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -1913,7 +1878,6 @@
       <pre class="lines">
 
 
-1552
 1553
 1554
 1555
@@ -1955,10 +1919,11 @@
 1591
 1592
 1593
-1594</pre>
+1594
+1595</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1552</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1553</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getElderPastTable'>getElderPastTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -2023,16 +1988,16 @@
       <pre class="lines">
 
 
-84
 85
 86
 87
 88
 89
-90</pre>
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getGloryDiceCount'>getGloryDiceCount</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_oneCount'>oneCount</span> <span class='op'>=</span> <span class='id identifier rubyid_countTargetDice'>countTargetDice</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
@@ -2041,90 +2006,6 @@
   <span class='id identifier rubyid_gloryDiceCount'>gloryDiceCount</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_oneCount'>oneCount</span> <span class='op'>/</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_sixCount'>sixCount</span> <span class='op'>/</span> <span class='int'>2</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_gloryDiceCount'>gloryDiceCount</span>
 <span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getHelpMessage-instance_method">
-  
-    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 17</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
-  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;MESSAGETEXT</span>
-<span class='tstring_content'>・行い判定（DRx+y）
-　x：振るサイコロの数（省略時４）、y：渇き修正（省略時０）
-　例） DR　DR6　DR+1　DR5+2
-・抗い判定（DRRx）
-　x：振るサイコロの数
-　例） DRR3
-・原風景表（ST）、叙勲表（CO）、叙勲後表（CA）、遥か過去表（EP）
-　原罪表（OS）、受難表（PN）、近況表（RS）、平和な過去表（PP）
-・堕落表（CTx） x：渇き （例） CT3
-・堕落の兆し表（CS）、拡張・堕落の兆し表（ECS）
-・絆内容決定表（BT）
-・反応表（RTxy）x：血統、y：道　xy省略で一括表示
-　血統　D：ドラク、R：ローゼンブルク、H：ヘルズガルド、M：ダストハイム
-　　　　A：アヴァローム　N：ノスフェラス、G：ゲイズヴァルト、K：カインシルト
-　道　F：領主、G：近衛、R：遍歴、W：賢者、J：狩人、N：夜獣
-　　　E：将軍、B：僧正、H：空駆、K：船長、L：寵童、V：仲立、U：技師、D：博士
-　　　S：星読、G2：後見
-　例）RT（一括表示）、RTDF（ドラクの領主）、RTAG2（アヴァロームの後見人）
-・異端の反応表（HRTxy）x：血統、y：道　xy省略で一括表示
-　血統　L：異端卿、V：ヴルコラク、N：ナハツェーラ、K：カルンシュタイン
-　　　　G：グリマルキン、S：ストリガ、M：メリュジーヌ、F：フォーン
-　　　　H：ホムンクルス、E：エナメルム、S2：サングィナリエ、A：アールヴ
-　　　　V2：ヴィーヴル、L2：ルーガルー、A2：アルラウネ、F2：フリッガ
-　道　W：野伏、N：流浪、S：密使、H：魔女、F：剣士、X：検体
-　例）HRT（一括表示）、HRTVW（ヴルコラクの野伏）、HRTF2X（フリッガの検体）
-・D66ダイスあり
-</span><span class='heredoc_end'>MESSAGETEXT
-</span><span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2145,7 +2026,6 @@
       <pre class="lines">
 
 
-140
 141
 142
 143
@@ -2154,10 +2034,11 @@
 146
 147
 148
-149</pre>
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 140</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHeresyReactionDiceCommandResult'>getHeresyReactionDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^HRT((\w\d*)(\w\d*))?</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -2189,7 +2070,6 @@
       <pre class="lines">
 
 
-751
 752
 753
 754
@@ -2547,10 +2427,11 @@
 1106
 1107
 1108
-1109</pre>
+1109
+1110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 751</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 752</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHeresyReactionInfoBlood'>getHeresyReactionInfoBlood</span>
   <span class='id identifier rubyid_infos'>infos</span> <span class='op'>=</span>
@@ -2931,7 +2812,6 @@
       <pre class="lines">
 
 
-1111
 1112
 1113
 1114
@@ -3069,10 +2949,11 @@
 1246
 1247
 1248
-1249</pre>
+1249
+1250</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1111</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1112</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHeresyReactionInfoStyle'>getHeresyReactionInfoStyle</span>
   <span class='id identifier rubyid_infos'>infos</span> <span class='op'>=</span>
@@ -3233,7 +3114,6 @@
       <pre class="lines">
 
 
-1356
 1357
 1358
 1359
@@ -3241,10 +3121,11 @@
 1361
 1362
 1363
-1364</pre>
+1364
+1365</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1356</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1357</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getOriginalSinDiceCommandResult'>getOriginalSinDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^OS$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -3275,7 +3156,6 @@
       <pre class="lines">
 
 
-1596
 1597
 1598
 1599
@@ -3316,10 +3196,11 @@
 1634
 1635
 1636
-1637</pre>
+1637
+1638</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1596</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1597</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getOriginalSinTable'>getOriginalSinTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -3383,16 +3264,16 @@
       <pre class="lines">
 
 
-1308
 1309
 1310
 1311
 1312
 1313
-1314</pre>
+1314
+1315</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1308</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1309</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getPassionDiceCommandResult'>getPassionDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^PN$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -3421,7 +3302,6 @@
       <pre class="lines">
 
 
-1639
 1640
 1641
 1642
@@ -3462,10 +3342,11 @@
 1677
 1678
 1679
-1680</pre>
+1680
+1681</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1639</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1640</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getPassionTable'>getPassionTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -3529,7 +3410,6 @@
       <pre class="lines">
 
 
-1376
 1377
 1378
 1379
@@ -3537,10 +3417,11 @@
 1381
 1382
 1383
-1384</pre>
+1384
+1385</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1376</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1377</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getPeacefulPastDiceCommandResult'>getPeacefulPastDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^PP$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -3571,7 +3452,6 @@
       <pre class="lines">
 
 
-1725
 1726
 1727
 1728
@@ -3612,10 +3492,11 @@
 1763
 1764
 1765
-1766</pre>
+1766
+1767</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1725</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1726</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getPeacefulPastTable'>getPeacefulPastTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -3679,7 +3560,6 @@
       <pre class="lines">
 
 
-129
 130
 131
 132
@@ -3688,10 +3568,11 @@
 135
 136
 137
-138</pre>
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 129</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getReactionDiceCommandResult'>getReactionDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^RT((\w\d*)(\w\d*))?</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -3723,7 +3604,6 @@
       <pre class="lines">
 
 
-204
 205
 206
 207
@@ -3907,10 +3787,11 @@
 385
 386
 387
-388</pre>
+388
+389</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 204</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 205</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getReactionInfoBlood'>getReactionInfoBlood</span>
   <span class='id identifier rubyid_infos'>infos</span> <span class='op'>=</span>
@@ -4117,7 +3998,6 @@
       <pre class="lines">
 
 
-390
 391
 392
 393
@@ -4476,10 +4356,11 @@
 746
 747
 748
-749</pre>
+749
+750</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 390</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 391</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getReactionInfoStyle'>getReactionInfoStyle</span>
   <span class='id identifier rubyid_infos'>infos</span> <span class='op'>=</span>
@@ -4861,15 +4742,15 @@
       <pre class="lines">
 
 
-197
 198
 199
 200
 201
-202</pre>
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getReactionTex'>getReactionTex</span><span class='lparen'>(</span><span class='id identifier rubyid_info'>info</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_typeName'>typeName</span> <span class='op'>=</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>
@@ -4897,7 +4778,6 @@
       <pre class="lines">
 
 
-151
 152
 153
 154
@@ -4924,10 +4804,11 @@
 175
 176
 177
-178</pre>
+178
+179</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getReactionText'>getReactionText</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_typeText1'>typeText1</span><span class='comma'>,</span> <span class='id identifier rubyid_typeText2'>typeText2</span><span class='comma'>,</span> <span class='id identifier rubyid_infos1'>infos1</span><span class='comma'>,</span> <span class='id identifier rubyid_infos2'>infos2</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_checkTypeText'>checkTypeText</span><span class='lparen'>(</span><span class='id identifier rubyid_typeText1'>typeText1</span><span class='comma'>,</span> <span class='id identifier rubyid_infos1'>infos1</span><span class='rparen'>)</span>
@@ -4977,7 +4858,6 @@
       <pre class="lines">
 
 
-187
 188
 189
 190
@@ -4985,10 +4865,11 @@
 192
 193
 194
-195</pre>
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 188</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getReactionTextFull'>getReactionTextFull</span><span class='lparen'>(</span><span class='id identifier rubyid_infos'>infos</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_resultTexts'>resultTexts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -5019,7 +4900,6 @@
       <pre class="lines">
 
 
-1366
 1367
 1368
 1369
@@ -5027,10 +4907,11 @@
 1371
 1372
 1373
-1374</pre>
+1374
+1375</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1366</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1367</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getRecentStateDiceCommandResult'>getRecentStateDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^RS$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -5061,7 +4942,6 @@
       <pre class="lines">
 
 
-1682
 1683
 1684
 1685
@@ -5102,10 +4982,11 @@
 1720
 1721
 1722
-1723</pre>
+1723
+1724</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1682</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1683</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getRecentStateTable'>getRecentStateTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -5169,7 +5050,6 @@
       <pre class="lines">
 
 
-117
 118
 119
 120
@@ -5179,10 +5059,11 @@
 124
 125
 126
-127</pre>
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getResistDiceCommandResult'>getResistDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^DRR(\d+)$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -5215,16 +5096,16 @@
       <pre class="lines">
 
 
-1300
 1301
 1302
 1303
 1304
 1305
-1306</pre>
+1306
+1307</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1300</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1301</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSourceSceneDiceCommandResult'>getSourceSceneDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ST$</span><span class='regexp_end'>/</span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -5253,7 +5134,6 @@
       <pre class="lines">
 
 
-1422
 1423
 1424
 1425
@@ -5294,10 +5174,11 @@
 1460
 1461
 1462
-1463</pre>
+1463
+1464</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1422</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1423</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSourceSceneTable'>getSourceSceneTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>
@@ -5361,7 +5242,6 @@
       <pre class="lines">
 
 
-1277
 1278
 1279
 1280
@@ -5382,10 +5262,11 @@
 1295
 1296
 1297
-1298</pre>
+1298
+1299</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1277</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1278</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getTableDiceCommandResult'>getTableDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='cvar'>@@tables</span><span class='lbracket'>[</span><span class='id identifier rubyid_command'>command</span><span class='rbracket'>]</span>
@@ -5429,7 +5310,6 @@
       <pre class="lines">
 
 
-96
 97
 98
 99
@@ -5448,10 +5328,11 @@
 112
 113
 114
-115</pre>
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getThirstyAddedResult'>getThirstyAddedResult</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_thirstyPoint'>thirstyPoint</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_thirstyPoint'>thirstyPoint</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -5493,7 +5374,6 @@
       <pre class="lines">
 
 
-1316
 1317
 1318
 1319
@@ -5501,10 +5381,11 @@
 1321
 1322
 1323
-1324</pre>
+1324
+1325</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1316</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1317</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getTitleD66TableResult'>getTitleD66TableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getTitleD66TableResult</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -5535,16 +5416,16 @@
       <pre class="lines">
 
 
-1396
 1397
 1398
 1399
 1400
 1401
-1402</pre>
+1402
+1403</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1396</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1397</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getYear'>getYear</span><span class='lparen'>(</span><span class='id identifier rubyid_yearText'>yearText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_yearText'>yearText</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)D(6+)</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_getD6xResult'>getD6xResult</span><span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -5573,7 +5454,6 @@
       <pre class="lines">
 
 
-1386
 1387
 1388
 1389
@@ -5581,10 +5461,11 @@
 1391
 1392
 1393
-1394</pre>
+1394
+1395</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 1386</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 1387</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getYearTableResult'>getYearTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='id identifier rubyid_yearTitle'>yearTitle</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_d66'>get_table_by_d66</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
@@ -5615,16 +5496,16 @@
       <pre class="lines">
 
 
-48
 49
 50
 51
 52
 53
-54</pre>
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rollDiceCommand</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -5653,15 +5534,15 @@
       <pre class="lines">
 
 
-77
 78
 79
 80
 81
-82</pre>
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/Dracurouge.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/Dracurouge.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceList'>rollDiceList</span><span class='lparen'>(</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='rparen'>)</span>
   <span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
@@ -5679,9 +5560,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:56 2020 by
+  Generated on Fri Mar 20 02:13:15 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

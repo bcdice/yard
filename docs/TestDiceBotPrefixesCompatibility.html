@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>test/testDiceBotPrefixesCompatibility.rb</dd>
+    <dd>src/test/testDiceBotPrefixesCompatibility.rb</dd>
   </dl>
   
 </div>
@@ -191,16 +191,16 @@
 37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/testDiceBotPrefixesCompatibility.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'src/test/testDiceBotPrefixesCompatibility.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_prefixesCompatibility'>test_prefixesCompatibility</span>
   <span class='id identifier rubyid_kariDiceClass'>kariDiceClass</span> <span class='op'>=</span> <span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='op'>|</span>
-    <span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>仮ダイス</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KariDice</span><span class='tstring_end'>&#39;</span></span>
     <span class='kw'>end</span>
 
-    <span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KariDice</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>仮ダイス</span><span class='tstring_end'>&#39;</span></span>
     <span class='kw'>end</span>
 
     <span class='comment'># 従来の方法で接頭辞を設定する
@@ -229,9 +229,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:48:04 2020 by
+  Generated on Fri Mar 20 02:13:29 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

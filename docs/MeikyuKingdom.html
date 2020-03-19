@@ -96,15 +96,116 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/MeikyuKingdom.rb</dd>
+    <dd>src/diceBot/MeikyuKingdom.rb</dd>
   </dl>
   
 </div>
 
 
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
 
 
-  <h2>Constant Summary</h2>
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MeikyuKingdom</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>迷宮キングダム</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>めいきゆうきんくたむ</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>・判定　(nMK+m)
+　n個のD6を振って大きい物二つだけみて達成値を算出します。修正mも可能です。
+　絶対成功と絶対失敗も自動判定します。
+・各種表
+　・散策表(〜RT)：生活散策表 LRT／治安散策表 ORT／文化散策表 CRT／軍事散策表 ART／お祭り表 FRT
+　・休憩表(〜BT)：才覚休憩表 TBT／魅力休憩表 CBT／探索休憩表 SBT／武勇休憩表 VBT／お祭り休憩表 FBT／捜索後休憩表 ABT／全体休憩表 WBT／カップル休憩表 LBT
+　・ハプニング表(〜HT)：才覚ハプニング表 THT／魅力ハプニング表 CHT／探索ハプニング表 SHT
+　　／武勇ハプニング表 VHT
+　・王国災厄表 KDT／王国変動表 KCT／王国変動失敗表 KMT
+　・王国名決定表１／２／３／４／５ KNT1／KNT2／KNT3／KNT4
+　・痛打表 CAT／致命傷表 FWT／戦闘ファンブル表 CFT
+　・道中表 TT／交渉表 NT／感情表 ET／相場表 MPT
+　・お宝表１／２／３／４／５ T1T／T2T／T3T／T4T／T5T
+　・名前表 NAMEx (xは個数)
+　・名前表A NAMEA／名前表B NAMEB／エキゾチック名前表 NAMEEX／ファンタジック名前表 NAMEFA
+　・アイテム関連（猟奇戦役不使用の場合をカッコ書きで出力）
+　　・デバイスファクトリー　　DFT
+　　・アイテムカテゴリ決定表　IDT
+　　・アイテム表（〜IT)：武具 WIT／生活 LIT／回復 RIT／探索 SIT／レア武具 RWIT／レア一般 RUIT
+　　・アイテム特性決定表　　　IFT
+　・ランダムエンカウント表　nRET (nはレベル,1〜6)
+　・地名決定表　　　　PNTx (xは個数)
+　・迷宮風景表　　　　MLTx (xは個数)
+　・単語表１／２／３／４　WORD1／WORD2／WORD3／WORD4
+・D66ダイスあり
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
   
   <h3 class="inherited">Constants inherited
      from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
@@ -198,50 +299,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#get2D6Result-instance_method" title="#get2D6Result (instance method)">#<strong>get2D6Result</strong>(total_n, dice_n, signOfInequality, diff)  &#x21d2; Object </a>
     
 
@@ -309,28 +366,6 @@
   <span class="summary_signature">
     
       <a href="#getCount-instance_method" title="#getCount (instance method)">#<strong>getCount</strong>(countText)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
     
 
     
@@ -2468,7 +2503,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -2498,15 +2533,15 @@
       <pre class="lines">
 
 
-22
-23
-24
-25
-26
-27</pre>
+61
+62
+63
+64
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span>
@@ -2541,7 +2576,6 @@
       <pre class="lines">
 
 
-67
 68
 69
 70
@@ -2550,10 +2584,11 @@
 73
 74
 75
-76</pre>
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_changeText'>changeText</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>changeText before string</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -2596,15 +2631,15 @@
       <pre class="lines">
 
 
-82
 83
 84
 85
 86
-87</pre>
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_cnt'>_dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_max'>_dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid__n1'>_n1</span><span class='comma'>,</span> <span class='id identifier rubyid__n_max'>_n_max</span><span class='rparen'>)</span> <span class='comment'># ゲーム別成功度判定(2D6)
 </span>  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_get2D6Result'>get2D6Result</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
@@ -2632,75 +2667,15 @@
       <pre class="lines">
 
 
-78
 79
-80</pre>
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dice_command_xRn'>dice_command_xRn</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_mayokin_check'>mayokin_check</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameName-instance_method">
-  
-    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-29
-30
-31</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 29</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>迷宮キングダム</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameType-instance_method">
-  
-    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-33
-34
-35</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 33</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MeikyuKingdom</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2722,7 +2697,6 @@
       <pre class="lines">
 
 
-89
 90
 91
 92
@@ -2732,10 +2706,11 @@
 96
 97
 98
-99</pre>
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get2D6Result'>get2D6Result</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='tstring_end'>&quot;</span></span>
@@ -2768,16 +2743,16 @@
       <pre class="lines">
 
 
-101
 102
 103
 104
 105
 106
-107</pre>
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get2D6ResultOnlySuccess'>get2D6ResultOnlySuccess</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diff'>diff</span>
@@ -2806,7 +2781,6 @@
       <pre class="lines">
 
 
-2212
 2213
 2214
 2215
@@ -2820,10 +2794,11 @@
 2223
 2224
 2225
-2226</pre>
+2226
+2227</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2212</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2213</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getAftersearchBreakTable'>getAftersearchBreakTable</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -2860,16 +2835,16 @@
       <pre class="lines">
 
 
-470
 471
 472
 473
 474
 475
-476</pre>
+476
+477</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 470</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 471</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCount'>getCount</span><span class='lparen'>(</span><span class='id identifier rubyid_countText'>countText</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_countText'>countText</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -2878,88 +2853,6 @@
 
   <span class='kw'>return</span> <span class='id identifier rubyid_countText'>countText</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
 <span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getHelpMessage-instance_method">
-  
-    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 37</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
-  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>・判定　(nMK+m)
-　n個のD6を振って大きい物二つだけみて達成値を算出します。修正mも可能です。
-　絶対成功と絶対失敗も自動判定します。
-・各種表
-　・散策表(〜RT)：生活散策表 LRT／治安散策表 ORT／文化散策表 CRT／軍事散策表 ART／お祭り表 FRT
-　・休憩表(〜BT)：才覚休憩表 TBT／魅力休憩表 CBT／探索休憩表 SBT／武勇休憩表 VBT／お祭り休憩表 FBT／捜索後休憩表 ABT／全体休憩表 WBT／カップル休憩表 LBT
-　・ハプニング表(〜HT)：才覚ハプニング表 THT／魅力ハプニング表 CHT／探索ハプニング表 SHT
-　　／武勇ハプニング表 VHT
-　・王国災厄表 KDT／王国変動表 KCT／王国変動失敗表 KMT
-　・王国名決定表１／２／３／４／５ KNT1／KNT2／KNT3／KNT4
-　・痛打表 CAT／致命傷表 FWT／戦闘ファンブル表 CFT
-　・道中表 TT／交渉表 NT／感情表 ET／相場表 MPT
-　・お宝表１／２／３／４／５ T1T／T2T／T3T／T4T／T5T
-　・名前表 NAMEx (xは個数)
-　・名前表A NAMEA／名前表B NAMEB／エキゾチック名前表 NAMEEX／ファンタジック名前表 NAMEFA
-　・アイテム関連（猟奇戦役不使用の場合をカッコ書きで出力）
-　　・デバイスファクトリー　　DFT
-　　・アイテムカテゴリ決定表　IDT
-　　・アイテム表（〜IT)：武具 WIT／生活 LIT／回復 RIT／探索 SIT／レア武具 RWIT／レア一般 RUIT
-　　・アイテム特性決定表　　　IFT
-　・ランダムエンカウント表　nRET (nはレベル,1〜6)
-　・地名決定表　　　　PNTx (xは個数)
-　・迷宮風景表　　　　MLTx (xは個数)
-　・単語表１／２／３／４　WORD1／WORD2／WORD3／WORD4
-・D66ダイスあり
-</span><span class='heredoc_end'>INFO_MESSAGE_TEXT
-</span><span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2980,7 +2873,6 @@
       <pre class="lines">
 
 
-109
 110
 111
 112
@@ -3016,10 +2908,11 @@
 142
 143
 144
-145</pre>
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getKiryokuResult'>getKiryokuResult</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_n'>_dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid__signOfInequality'>_signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output_msg'>output_msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -3078,7 +2971,6 @@
       <pre class="lines">
 
 
-2244
 2245
 2246
 2247
@@ -3105,10 +2997,11 @@
 2268
 2269
 2270
-2271</pre>
+2271
+2272</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2244</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2245</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getLoversBreakTable'>getLoversBreakTable</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3158,7 +3051,6 @@
       <pre class="lines">
 
 
-2228
 2229
 2230
 2231
@@ -3172,10 +3064,11 @@
 2239
 2240
 2241
-2242</pre>
+2242
+2243</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2228</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2229</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getWholeBreakTable'>getWholeBreakTable</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -3223,7 +3116,6 @@
       <pre class="lines">
 
 
-148
 149
 150
 151
@@ -3290,10 +3182,11 @@
 212
 213
 214
-215</pre>
+215
+216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 149</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mayokin_check'>mayokin_check</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mayokin_check string</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -3394,7 +3287,6 @@
       <pre class="lines">
 
 
-530
 531
 532
 533
@@ -3408,10 +3300,11 @@
 541
 542
 543
-544</pre>
+544
+545</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 530</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 531</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_army_research_table'>mk_army_research_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -3459,7 +3352,6 @@
       <pre class="lines">
 
 
-1847
 1848
 1849
 1850
@@ -3484,10 +3376,11 @@
 1869
 1870
 1871
-1872</pre>
+1872
+1873</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1847</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1848</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_artifact_landscape_table'>mk_artifact_landscape_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3546,7 +3439,6 @@
       <pre class="lines">
 
 
-1796
 1797
 1798
 1799
@@ -3571,10 +3463,11 @@
 1818
 1819
 1820
-1821</pre>
+1821
+1822</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1796</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1797</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_artifact_placename_table'>mk_artifact_placename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3633,7 +3526,6 @@
       <pre class="lines">
 
 
-1656
 1657
 1658
 1659
@@ -3658,10 +3550,11 @@
 1678
 1679
 1680
-1681</pre>
+1681
+1682</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1656</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1657</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_basic_decoration_table'>mk_basic_decoration_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3720,7 +3613,6 @@
       <pre class="lines">
 
 
-513
 514
 515
 516
@@ -3734,10 +3626,11 @@
 524
 525
 526
-527</pre>
+527
+528</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 513</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 514</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_calture_research_table'>mk_calture_research_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -3785,7 +3678,6 @@
       <pre class="lines">
 
 
-1875
 1876
 1877
 1878
@@ -3810,10 +3702,11 @@
 1897
 1898
 1899
-1900</pre>
+1900
+1901</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1875</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1876</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_cave_landscape_table'>mk_cave_landscape_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3872,7 +3765,6 @@
       <pre class="lines">
 
 
-564
 565
 566
 567
@@ -3886,10 +3778,11 @@
 575
 576
 577
-578</pre>
+578
+579</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 564</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 565</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_charm_break_table'>mk_charm_break_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -3937,7 +3830,6 @@
       <pre class="lines">
 
 
-683
 684
 685
 686
@@ -3951,10 +3843,11 @@
 694
 695
 696
-697</pre>
+697
+698</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 683</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 684</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_charm_happening_table'>mk_charm_happening_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -4002,7 +3895,6 @@
       <pre class="lines">
 
 
-836
 837
 838
 839
@@ -4016,10 +3908,11 @@
 847
 848
 849
-850</pre>
+850
+851</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 836</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 837</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_combat_fumble_table'>mk_combat_fumble_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -4067,7 +3960,6 @@
       <pre class="lines">
 
 
-768
 769
 770
 771
@@ -4081,10 +3973,11 @@
 779
 780
 781
-782</pre>
+782
+783</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 768</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 769</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_critical_attack_table'>mk_critical_attack_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -4132,7 +4025,6 @@
       <pre class="lines">
 
 
-1634
 1635
 1636
 1637
@@ -4141,10 +4033,11 @@
 1640
 1641
 1642
-1643</pre>
+1643
+1644</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1634</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1635</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_decoration_table'>mk_decoration_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mk_decoration_table num</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
@@ -4187,16 +4080,16 @@
       <pre class="lines">
 
 
-1153
 1154
 1155
 1156
 1157
 1158
-1159</pre>
+1159
+1160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1153</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_device_factory_table'>mk_device_factory_table</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_item_decide_table'>mk_item_decide_table</span><span class='lparen'>(</span><span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span>
@@ -4236,16 +4129,16 @@
       <pre class="lines">
 
 
-853
 854
 855
 856
 857
 858
-859</pre>
+859
+860</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 853</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 854</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_emotion_table'>mk_emotion_table</span>
   <span class='id identifier rubyid_get_table_by_1d3'>get_table_by_1d3</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -4285,7 +4178,6 @@
       <pre class="lines">
 
 
-1502
 1503
 1504
 1505
@@ -4311,10 +4203,11 @@
 1525
 1526
 1527
-1528</pre>
+1528
+1529</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1502</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1503</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_family_business_table'>mk_family_business_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4374,7 +4267,6 @@
       <pre class="lines">
 
 
-785
 786
 787
 788
@@ -4388,10 +4280,11 @@
 796
 797
 798
-799</pre>
+799
+800</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 785</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 786</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_fatal_wounds_table'>mk_fatal_wounds_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -4439,7 +4332,6 @@
       <pre class="lines">
 
 
-615
 616
 617
 618
@@ -4453,10 +4345,11 @@
 626
 627
 628
-629</pre>
+629
+630</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 615</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 616</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_festival_break_table'>mk_festival_break_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -4504,7 +4397,6 @@
       <pre class="lines">
 
 
-632
 633
 634
 635
@@ -4518,10 +4410,11 @@
 643
 644
 645
-646</pre>
+646
+647</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 632</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 633</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_festival_table'>mk_festival_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -4558,7 +4451,6 @@
       <pre class="lines">
 
 
-1489
 1490
 1491
 1492
@@ -4568,10 +4460,11 @@
 1496
 1497
 1498
-1499</pre>
+1499
+1500</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1489</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1490</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_gender_table'>mk_gender_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
@@ -4615,7 +4508,6 @@
       <pre class="lines">
 
 
-1462
 1463
 1464
 1465
@@ -4626,10 +4518,11 @@
 1470
 1471
 1472
-1473</pre>
+1473
+1474</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1462</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1463</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_item_aptitude_table'>mk_item_aptitude_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4674,7 +4567,6 @@
       <pre class="lines">
 
 
-1476
 1477
 1478
 1479
@@ -4685,10 +4577,11 @@
 1484
 1485
 1486
-1487</pre>
+1487
+1488</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1476</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1477</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_item_attribute_table'>mk_item_attribute_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4733,7 +4626,6 @@
       <pre class="lines">
 
 
-1162
 1163
 1164
 1165
@@ -4743,10 +4635,11 @@
 1169
 1170
 1171
-1172</pre>
+1172
+1173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1162</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_item_decide_table'>mk_item_decide_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_functionTable'>functionTable</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4790,7 +4683,6 @@
       <pre class="lines">
 
 
-1379
 1380
 1381
 1382
@@ -4823,10 +4715,11 @@
 1409
 1410
 1411
-1412</pre>
+1412
+1413</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1379</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1380</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_item_features_table'>mk_item_features_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -4893,7 +4786,6 @@
       <pre class="lines">
 
 
-1448
 1449
 1450
 1451
@@ -4904,10 +4796,11 @@
 1456
 1457
 1458
-1459</pre>
+1459
+1460</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1448</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1449</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_item_jyuka_table'>mk_item_jyuka_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4952,7 +4845,6 @@
       <pre class="lines">
 
 
-1429
 1430
 1431
 1432
@@ -4968,10 +4860,11 @@
 1442
 1443
 1444
-1445</pre>
+1445
+1446</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1429</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1430</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_item_jyumon_table'>mk_item_jyumon_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5021,7 +4914,6 @@
       <pre class="lines">
 
 
-1415
 1416
 1417
 1418
@@ -5032,10 +4924,11 @@
 1423
 1424
 1425
-1426</pre>
+1426
+1427</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1415</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1416</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_item_power_table'>mk_item_power_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5080,7 +4973,6 @@
       <pre class="lines">
 
 
-1712
 1713
 1714
 1715
@@ -5105,10 +4997,11 @@
 1734
 1735
 1736
-1737</pre>
+1737
+1738</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1712</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1713</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_katakana_decoration_table'>mk_katakana_decoration_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5167,7 +5060,6 @@
       <pre class="lines">
 
 
-734
 735
 736
 737
@@ -5181,10 +5073,11 @@
 745
 746
 747
-748</pre>
+748
+749</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 734</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 735</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_kingdom_change_table'>mk_kingdom_change_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -5232,7 +5125,6 @@
       <pre class="lines">
 
 
-649
 650
 651
 652
@@ -5246,10 +5138,11 @@
 660
 661
 662
-663</pre>
+663
+664</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 649</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 650</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_kingdom_disaster_table'>mk_kingdom_disaster_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -5297,7 +5190,6 @@
       <pre class="lines">
 
 
-751
 752
 753
 754
@@ -5311,10 +5203,11 @@
 762
 763
 764
-765</pre>
+765
+766</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 751</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 752</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_kingdom_mischange_table'>mk_kingdom_mischange_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -5362,7 +5255,6 @@
       <pre class="lines">
 
 
-2017
 2018
 2019
 2020
@@ -5387,10 +5279,11 @@
 2039
 2040
 2041
-2042</pre>
+2042
+2043</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2017</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2018</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_kingdom_name_1_table'>mk_kingdom_name_1_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5449,7 +5342,6 @@
       <pre class="lines">
 
 
-2045
 2046
 2047
 2048
@@ -5474,10 +5366,11 @@
 2067
 2068
 2069
-2070</pre>
+2070
+2071</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2045</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2046</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_kingdom_name_2_table'>mk_kingdom_name_2_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5536,7 +5429,6 @@
       <pre class="lines">
 
 
-2073
 2074
 2075
 2076
@@ -5561,10 +5453,11 @@
 2095
 2096
 2097
-2098</pre>
+2098
+2099</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2073</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2074</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_kingdom_name_3_table'>mk_kingdom_name_3_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5623,7 +5516,6 @@
       <pre class="lines">
 
 
-1833
 1834
 1835
 1836
@@ -5634,10 +5526,11 @@
 1841
 1842
 1843
-1844</pre>
+1844
+1845</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1833</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1834</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_landscape_table'>mk_landscape_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='id identifier rubyid_d66'>d66</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
@@ -5682,7 +5575,6 @@
       <pre class="lines">
 
 
-1204
 1205
 1206
 1207
@@ -5708,10 +5600,11 @@
 1227
 1228
 1229
-1230</pre>
+1230
+1231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1204</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1205</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_life_item_table'>mk_life_item_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5771,7 +5664,6 @@
       <pre class="lines">
 
 
-479
 480
 481
 482
@@ -5785,10 +5677,11 @@
 490
 491
 492
-493</pre>
+493
+494</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 479</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 480</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_life_research_table'>mk_life_research_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -5836,16 +5729,16 @@
       <pre class="lines">
 
 
-1824
 1825
 1826
 1827
 1828
 1829
-1830</pre>
+1830
+1831</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1824</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1825</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_ls_decide_table'>mk_ls_decide_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -5885,7 +5778,6 @@
       <pre class="lines">
 
 
-862
 863
 864
 865
@@ -5899,10 +5791,11 @@
 873
 874
 875
-876</pre>
+876
+877</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 862</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 863</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_market_price_table'>mk_market_price_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -5950,7 +5843,6 @@
       <pre class="lines">
 
 
-1038
 1039
 1040
 1041
@@ -5976,10 +5868,11 @@
 1061
 1062
 1063
-1064</pre>
+1064
+1065</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1038</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1039</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_name_a_table'>mk_name_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6039,7 +5932,6 @@
       <pre class="lines">
 
 
-1067
 1068
 1069
 1070
@@ -6065,10 +5957,11 @@
 1090
 1091
 1092
-1093</pre>
+1093
+1094</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1067</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1068</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_name_b_table'>mk_name_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6128,7 +6021,6 @@
       <pre class="lines">
 
 
-1096
 1097
 1098
 1099
@@ -6153,10 +6045,11 @@
 1118
 1119
 1120
-1121</pre>
+1121
+1122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1096</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1097</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_name_ex_table'>mk_name_ex_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6215,7 +6108,6 @@
       <pre class="lines">
 
 
-1124
 1125
 1126
 1127
@@ -6241,10 +6133,11 @@
 1147
 1148
 1149
-1150</pre>
+1150
+1151</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1124</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1125</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_name_fa_table'>mk_name_fa_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6304,7 +6197,6 @@
       <pre class="lines">
 
 
-939
 940
 941
 942
@@ -6339,16 +6231,17 @@
 971
 972
 973
-974</pre>
+974
+975</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 939</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 940</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_name_table'>mk_name_table</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mk_name_table begin</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
-  <span class='comment'># 名前表
-</span>  <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>  <span class='comment'># 名前表
+</span>
+  <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>1</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name_n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name_n'>name_n</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='id identifier rubyid_d66'>d66</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
@@ -6356,21 +6249,21 @@
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>d1, d2</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_d1'>d1</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name_n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name_n'>name_n</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>1</span>
-    <span class='comment'># 名前表A＋二つ名表A
-</span>    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_a_table'>mk_nick_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_a_table'>mk_name_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
-  <span class='kw'>elsif</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
-    <span class='comment'># 名前表B＋二つ名表A
-</span>    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_a_table'>mk_nick_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_b_table'>mk_name_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
-  <span class='kw'>elsif</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>3</span>
-    <span class='comment'># 名前表エキゾチック＋二つ名表A
-</span>    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_a_table'>mk_nick_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_ex_table'>mk_name_ex_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
-  <span class='kw'>elsif</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>4</span>
-    <span class='comment'># 名前表A＋二つ名表B
-</span>    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_b_table'>mk_nick_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_a_table'>mk_name_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
-  <span class='kw'>elsif</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>5</span>
-    <span class='comment'># 名前表B＋二つ名表B
-</span>    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_b_table'>mk_nick_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_b_table'>mk_name_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>1</span>    <span class='comment'># 名前表A＋二つ名表A
+</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_a_table'>mk_nick_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_a_table'>mk_name_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>2</span>    <span class='comment'># 名前表B＋二つ名表A
+</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_a_table'>mk_nick_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_b_table'>mk_name_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>3</span>    <span class='comment'># 名前表エキゾチック＋二つ名表A
+</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_a_table'>mk_nick_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_ex_table'>mk_name_ex_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>4</span>    <span class='comment'># 名前表A＋二つ名表B
+</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_b_table'>mk_nick_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_a_table'>mk_name_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_name_n'>name_n</span> <span class='op'>&lt;=</span> <span class='int'>5</span>    <span class='comment'># 名前表B＋二つ名表B
+</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_b_table'>mk_nick_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_b_table'>mk_name_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
     <span class='comment'># 名前表ファンタジー＋二つ名表B
 </span>    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_nick_b_table'>mk_nick_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_mk_name_fa_table'>mk_name_fa_table</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
@@ -6411,7 +6304,6 @@
       <pre class="lines">
 
 
-1903
 1904
 1905
 1906
@@ -6436,10 +6328,11 @@
 1925
 1926
 1927
-1928</pre>
+1928
+1929</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1903</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1904</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_natural_landscape_table'>mk_natural_landscape_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6498,7 +6391,6 @@
       <pre class="lines">
 
 
-1768
 1769
 1770
 1771
@@ -6523,10 +6415,11 @@
 1790
 1791
 1792
-1793</pre>
+1793
+1794</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1768</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1769</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_natural_placename_table'>mk_natural_placename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6585,7 +6478,6 @@
       <pre class="lines">
 
 
-819
 820
 821
 822
@@ -6599,10 +6491,11 @@
 830
 831
 832
-833</pre>
+833
+834</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 819</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 820</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_negotiation_table'>mk_negotiation_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -6650,7 +6543,6 @@
       <pre class="lines">
 
 
-977
 978
 979
 980
@@ -6680,10 +6572,11 @@
 1004
 1005
 1006
-1007</pre>
+1007
+1008</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 977</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 978</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_nick_a_table'>mk_nick_a_table</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6747,7 +6640,6 @@
       <pre class="lines">
 
 
-1010
 1011
 1012
 1013
@@ -6772,10 +6664,11 @@
 1032
 1033
 1034
-1035</pre>
+1035
+1036</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1010</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1011</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_nick_b_table'>mk_nick_b_table</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6834,7 +6727,6 @@
       <pre class="lines">
 
 
-496
 497
 498
 499
@@ -6848,10 +6740,11 @@
 507
 508
 509
-510</pre>
+510
+511</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 496</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 497</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_order_research_table'>mk_order_research_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -6899,7 +6792,6 @@
       <pre class="lines">
 
 
-1740
 1741
 1742
 1743
@@ -6924,10 +6816,11 @@
 1762
 1763
 1764
-1765</pre>
+1765
+1766</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1740</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1741</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_passage_placename_table'>mk_passage_placename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6986,17 +6879,17 @@
       <pre class="lines">
 
 
-1646
 1647
 1648
 1649
 1650
 1651
 1652
-1653</pre>
+1653
+1654</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1646</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1647</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_placename_table'>mk_placename_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7037,7 +6930,6 @@
       <pre class="lines">
 
 
-1615
 1616
 1617
 1618
@@ -7053,10 +6945,11 @@
 1628
 1629
 1630
-1631</pre>
+1631
+1632</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1615</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1616</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_pn_decide_table'>mk_pn_decide_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -7106,7 +6999,6 @@
       <pre class="lines">
 
 
-1531
 1532
 1533
 1534
@@ -7117,10 +7009,11 @@
 1539
 1540
 1541
-1542</pre>
+1542
+1543</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1531</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1532</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_random_encount1_table'>mk_random_encount1_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7165,7 +7058,6 @@
       <pre class="lines">
 
 
-1545
 1546
 1547
 1548
@@ -7176,10 +7068,11 @@
 1553
 1554
 1555
-1556</pre>
+1556
+1557</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1545</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1546</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_random_encount2_table'>mk_random_encount2_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7224,7 +7117,6 @@
       <pre class="lines">
 
 
-1559
 1560
 1561
 1562
@@ -7235,10 +7127,11 @@
 1567
 1568
 1569
-1570</pre>
+1570
+1571</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1559</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1560</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_random_encount3_table'>mk_random_encount3_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7283,7 +7176,6 @@
       <pre class="lines">
 
 
-1573
 1574
 1575
 1576
@@ -7294,10 +7186,11 @@
 1581
 1582
 1583
-1584</pre>
+1584
+1585</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1573</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1574</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_random_encount4_table'>mk_random_encount4_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7342,7 +7235,6 @@
       <pre class="lines">
 
 
-1587
 1588
 1589
 1590
@@ -7353,10 +7245,11 @@
 1595
 1596
 1597
-1598</pre>
+1598
+1599</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1587</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1588</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_random_encount5_table'>mk_random_encount5_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7401,7 +7294,6 @@
       <pre class="lines">
 
 
-1601
 1602
 1603
 1604
@@ -7412,10 +7304,11 @@
 1609
 1610
 1611
-1612</pre>
+1612
+1613</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1601</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1602</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_random_encount6_table'>mk_random_encount6_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7460,7 +7353,6 @@
       <pre class="lines">
 
 
-1335
 1336
 1337
 1338
@@ -7501,10 +7393,11 @@
 1373
 1374
 1375
-1376</pre>
+1376
+1377</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1335</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1336</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_rare_item_table'>mk_rare_item_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7579,7 +7472,6 @@
       <pre class="lines">
 
 
-1291
 1292
 1293
 1294
@@ -7620,10 +7512,11 @@
 1329
 1330
 1331
-1332</pre>
+1332
+1333</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1291</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1292</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_rare_weapon_item_table'>mk_rare_weapon_item_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7698,7 +7591,6 @@
       <pre class="lines">
 
 
-1233
 1234
 1235
 1236
@@ -7724,10 +7616,11 @@
 1256
 1257
 1258
-1259</pre>
+1259
+1260</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1233</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1234</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_rest_item_table'>mk_rest_item_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -7787,7 +7680,6 @@
       <pre class="lines">
 
 
-581
 582
 583
 584
@@ -7801,10 +7693,11 @@
 592
 593
 594
-595</pre>
+595
+596</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 581</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 582</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_search_break_table'>mk_search_break_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -7852,7 +7745,6 @@
       <pre class="lines">
 
 
-700
 701
 702
 703
@@ -7866,10 +7758,11 @@
 711
 712
 713
-714</pre>
+714
+715</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 700</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 701</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_search_happening_table'>mk_search_happening_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -7917,7 +7810,6 @@
       <pre class="lines">
 
 
-1262
 1263
 1264
 1265
@@ -7943,10 +7835,11 @@
 1285
 1286
 1287
-1288</pre>
+1288
+1289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1262</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1263</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_search_item_table'>mk_search_item_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -8006,7 +7899,6 @@
       <pre class="lines">
 
 
-1959
 1960
 1961
 1962
@@ -8031,10 +7923,11 @@
 1981
 1982
 1983
-1984</pre>
+1984
+1985</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1959</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1960</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_skyrealm_landscape_table'>mk_skyrealm_landscape_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -8093,7 +7986,6 @@
       <pre class="lines">
 
 
-1684
 1685
 1686
 1687
@@ -8118,10 +8010,11 @@
 1706
 1707
 1708
-1709</pre>
+1709
+1710</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1684</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1685</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_spooky_decoration_table'>mk_spooky_decoration_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -8180,7 +8073,6 @@
       <pre class="lines">
 
 
-1987
 1988
 1989
 1990
@@ -8205,10 +8097,11 @@
 2009
 2010
 2011
-2012</pre>
+2012
+2013</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1987</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1988</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_strange_place_landscape_table'>mk_strange_place_landscape_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -8267,7 +8160,6 @@
       <pre class="lines">
 
 
-547
 548
 549
 550
@@ -8281,10 +8173,11 @@
 558
 559
 560
-561</pre>
+561
+562</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 547</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 548</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_talent_break_table'>mk_talent_break_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8332,7 +8225,6 @@
       <pre class="lines">
 
 
-666
 667
 668
 669
@@ -8346,10 +8238,11 @@
 677
 678
 679
-680</pre>
+680
+681</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 666</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 667</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_talent_happening_table'>mk_talent_happening_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8397,7 +8290,6 @@
       <pre class="lines">
 
 
-802
 803
 804
 805
@@ -8411,10 +8303,11 @@
 813
 814
 815
-816</pre>
+816
+817</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 802</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 803</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_travel_table'>mk_travel_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8462,7 +8355,6 @@
       <pre class="lines">
 
 
-879
 880
 881
 882
@@ -8471,10 +8363,11 @@
 885
 886
 887
-888</pre>
+888
+889</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 879</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 880</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_treasure1_table'>mk_treasure1_table</span>
   <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8517,7 +8410,6 @@
       <pre class="lines">
 
 
-891
 892
 893
 894
@@ -8526,10 +8418,11 @@
 897
 898
 899
-900</pre>
+900
+901</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 891</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 892</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_treasure2_table'>mk_treasure2_table</span>
   <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8572,7 +8465,6 @@
       <pre class="lines">
 
 
-903
 904
 905
 906
@@ -8581,10 +8473,11 @@
 909
 910
 911
-912</pre>
+912
+913</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 903</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 904</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_treasure3_table'>mk_treasure3_table</span>
   <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8627,7 +8520,6 @@
       <pre class="lines">
 
 
-915
 916
 917
 918
@@ -8636,10 +8528,11 @@
 921
 922
 923
-924</pre>
+924
+925</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 915</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 916</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_treasure4_table'>mk_treasure4_table</span>
   <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8682,7 +8575,6 @@
       <pre class="lines">
 
 
-927
 928
 929
 930
@@ -8691,10 +8583,11 @@
 933
 934
 935
-936</pre>
+936
+937</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 927</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 928</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_treasure5_table'>mk_treasure5_table</span>
   <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8737,7 +8630,6 @@
       <pre class="lines">
 
 
-598
 599
 600
 601
@@ -8751,10 +8643,11 @@
 609
 610
 611
-612</pre>
+612
+613</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 598</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 599</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_valor_break_table'>mk_valor_break_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8802,7 +8695,6 @@
       <pre class="lines">
 
 
-717
 718
 719
 720
@@ -8816,10 +8708,11 @@
 728
 729
 730
-731</pre>
+731
+732</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 717</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 718</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_valor_happening_table'>mk_valor_happening_table</span>
   <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -8867,7 +8760,6 @@
       <pre class="lines">
 
 
-1931
 1932
 1933
 1934
@@ -8892,10 +8784,11 @@
 1953
 1954
 1955
-1956</pre>
+1956
+1957</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1931</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1932</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_waterside_landscape_table'>mk_waterside_landscape_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -8954,7 +8847,6 @@
       <pre class="lines">
 
 
-1175
 1176
 1177
 1178
@@ -8980,10 +8872,11 @@
 1198
 1199
 1200
-1201</pre>
+1201
+1202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 1175</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 1176</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_weapon_item_table'>mk_weapon_item_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -9043,7 +8936,6 @@
       <pre class="lines">
 
 
-2101
 2102
 2103
 2104
@@ -9068,10 +8960,11 @@
 2123
 2124
 2125
-2126</pre>
+2126
+2127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2101</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_word_1_table'>mk_word_1_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -9130,7 +9023,6 @@
       <pre class="lines">
 
 
-2129
 2130
 2131
 2132
@@ -9155,10 +9047,11 @@
 2151
 2152
 2153
-2154</pre>
+2154
+2155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2129</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_word_2_table'>mk_word_2_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -9217,7 +9110,6 @@
       <pre class="lines">
 
 
-2157
 2158
 2159
 2160
@@ -9242,10 +9134,11 @@
 2179
 2180
 2181
-2182</pre>
+2182
+2183</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2157</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2158</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_word_3_table'>mk_word_3_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -9304,7 +9197,6 @@
       <pre class="lines">
 
 
-2185
 2186
 2187
 2188
@@ -9329,10 +9221,11 @@
 2207
 2208
 2209
-2210</pre>
+2210
+2211</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 2185</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 2186</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mk_word_4_table'>mk_word_4_table</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -9391,7 +9284,6 @@
       <pre class="lines">
 
 
-219
 220
 221
 222
@@ -9640,10 +9532,11 @@
 465
 466
 467
-468</pre>
+468
+469</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/MeikyuKingdom.rb', line 219</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MeikyuKingdom.rb', line 220</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -9727,9 +9620,9 @@
     <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_valor_break_table'>mk_valor_break_table</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^FBT</span><span class='regexp_end'>/i</span></span>
     <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お祭り休憩</span><span class='tstring_end'>&#39;</span></span>
-    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_festival_break_table'>mk_festival_break_table</span>
-    <span class='comment'># ハプニング表(2D6)
-</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^THT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_festival_break_table'>mk_festival_break_table</span>    <span class='comment'># ハプニング表(2D6)
+</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^THT</span><span class='regexp_end'>/i</span></span>
     <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>才覚ハプニング</span><span class='tstring_end'>&#39;</span></span>
     <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_talent_happening_table'>mk_talent_happening_table</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CHT</span><span class='regexp_end'>/i</span></span>
@@ -9740,9 +9633,9 @@
     <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_search_happening_table'>mk_search_happening_table</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^VHT</span><span class='regexp_end'>/i</span></span>
     <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武勇ハプニング</span><span class='tstring_end'>&#39;</span></span>
-    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_valor_happening_table'>mk_valor_happening_table</span>
-    <span class='comment'># お宝表
-</span>  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^MPT</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_valor_happening_table'>mk_valor_happening_table</span>    <span class='comment'># お宝表
+</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^MPT</span><span class='regexp_end'>/i</span></span>
     <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>相場</span><span class='tstring_end'>&#39;</span></span>
     <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>=</span> <span class='id identifier rubyid_mk_market_price_table'>mk_market_price_table</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^T1T</span><span class='regexp_end'>/i</span></span>
@@ -9905,9 +9798,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:48:00 2020 by
+  Generated on Fri Mar 20 02:13:23 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

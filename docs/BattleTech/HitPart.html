@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BattleTech::HitPart
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BattleTech::HitPart";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (H)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../BattleTech.html" title="BattleTech (class)">BattleTech</a></span></span>
+     &raquo; 
+    <span class="title">HitPart</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BattleTech::HitPart
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Struct</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Struct</li>
+          
+            <li class="next">BattleTech::HitPart</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>src/diceBot/BattleTech.rb<span class="defines">,<br />
+  src/diceBot/BattleTech.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>命中部位を表す構造体</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="LEFT_TORSO-constant" class="">LEFT_TORSO =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左胴</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="CENTER_TORSO-constant" class="">CENTER_TORSO =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴中央</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="RIGHT_TORSO-constant" class="">RIGHT_TORSO =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右胴</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="LEFT_ARM-constant" class="">LEFT_ARM =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="RIGHT_ARM-constant" class="">RIGHT_ARM =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="LEFT_LEG-constant" class="">LEFT_LEG =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="RIGHT_LEG-constant" class="">RIGHT_LEG =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HEAD-constant" class="">HEAD =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>命中部位表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（左）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_TORSO-constant" title="BattleTech::HitPart::LEFT_TORSO (constant)">LEFT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_LEG-constant" title="BattleTech::HitPart::LEFT_LEG (constant)">LEFT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_ARM-constant" title="BattleTech::HitPart::LEFT_ARM (constant)">LEFT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_LEG-constant" title="BattleTech::HitPart::LEFT_LEG (constant)">LEFT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_TORSO-constant" title="BattleTech::HitPart::LEFT_TORSO (constant)">LEFT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CENTER_TORSO-constant" title="BattleTech::HitPart::CENTER_TORSO (constant)">CENTER_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_TORSO-constant" title="BattleTech::HitPart::RIGHT_TORSO (constant)">RIGHT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_ARM-constant" title="BattleTech::HitPart::RIGHT_ARM (constant)">RIGHT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='comma'>,</span>   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_LEG-constant" title="BattleTech::HitPart::RIGHT_LEG (constant)">RIGHT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#HEAD-constant" title="BattleTech::HitPart::HEAD (constant)">HEAD</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（正面）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CENTER_TORSO-constant" title="BattleTech::HitPart::CENTER_TORSO (constant)">CENTER_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='op'>..</span><span class='int'>4</span><span class='comma'>,</span>   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_ARM-constant" title="BattleTech::HitPart::RIGHT_ARM (constant)">RIGHT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_LEG-constant" title="BattleTech::HitPart::RIGHT_LEG (constant)">RIGHT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_TORSO-constant" title="BattleTech::HitPart::RIGHT_TORSO (constant)">RIGHT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='comma'>,</span>      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CENTER_TORSO-constant" title="BattleTech::HitPart::CENTER_TORSO (constant)">CENTER_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='comma'>,</span>      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_TORSO-constant" title="BattleTech::HitPart::LEFT_TORSO (constant)">LEFT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='comma'>,</span>      <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_LEG-constant" title="BattleTech::HitPart::LEFT_LEG (constant)">LEFT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='op'>..</span><span class='int'>11</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_ARM-constant" title="BattleTech::HitPart::LEFT_ARM (constant)">LEFT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>     <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#HEAD-constant" title="BattleTech::HitPart::HEAD (constant)">HEAD</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>R</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（右）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_TORSO-constant" title="BattleTech::HitPart::RIGHT_TORSO (constant)">RIGHT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_LEG-constant" title="BattleTech::HitPart::RIGHT_LEG (constant)">RIGHT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_ARM-constant" title="BattleTech::HitPart::RIGHT_ARM (constant)">RIGHT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_LEG-constant" title="BattleTech::HitPart::RIGHT_LEG (constant)">RIGHT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_TORSO-constant" title="BattleTech::HitPart::RIGHT_TORSO (constant)">RIGHT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CENTER_TORSO-constant" title="BattleTech::HitPart::CENTER_TORSO (constant)">CENTER_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_TORSO-constant" title="BattleTech::HitPart::LEFT_TORSO (constant)">LEFT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_ARM-constant" title="BattleTech::HitPart::LEFT_ARM (constant)">LEFT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='comma'>,</span>   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_LEG-constant" title="BattleTech::HitPart::LEFT_LEG (constant)">LEFT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>   <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#HEAD-constant" title="BattleTech::HitPart::HEAD (constant)">HEAD</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LU</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（左上半身）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>2</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_TORSO-constant" title="BattleTech::HitPart::LEFT_TORSO (constant)">LEFT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CENTER_TORSO-constant" title="BattleTech::HitPart::CENTER_TORSO (constant)">CENTER_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_ARM-constant" title="BattleTech::HitPart::LEFT_ARM (constant)">LEFT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#HEAD-constant" title="BattleTech::HitPart::HEAD (constant)">HEAD</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='comment'># TODO: 普通のTableで書く
+</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CU</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（正面上半身）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_ARM-constant" title="BattleTech::HitPart::LEFT_ARM (constant)">LEFT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_TORSO-constant" title="BattleTech::HitPart::LEFT_TORSO (constant)">LEFT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CENTER_TORSO-constant" title="BattleTech::HitPart::CENTER_TORSO (constant)">CENTER_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_TORSO-constant" title="BattleTech::HitPart::RIGHT_TORSO (constant)">RIGHT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_ARM-constant" title="BattleTech::HitPart::RIGHT_ARM (constant)">RIGHT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#HEAD-constant" title="BattleTech::HitPart::HEAD (constant)">HEAD</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RU</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（右上半身）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>2</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_TORSO-constant" title="BattleTech::HitPart::RIGHT_TORSO (constant)">RIGHT_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#CENTER_TORSO-constant" title="BattleTech::HitPart::CENTER_TORSO (constant)">CENTER_TORSO</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_ARM-constant" title="BattleTech::HitPart::RIGHT_ARM (constant)">RIGHT_ARM</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>    <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#HEAD-constant" title="BattleTech::HitPart::HEAD (constant)">HEAD</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LL</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（左下半身）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_LEG-constant" title="BattleTech::HitPart::LEFT_LEG (constant)">LEFT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CL</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（右下半身）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_LEG-constant" title="BattleTech::HitPart::RIGHT_LEG (constant)">RIGHT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LEFT_LEG-constant" title="BattleTech::HitPart::LEFT_LEG (constant)">LEFT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RL</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../RangeTable.html" title="RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../RangeTable.html#initialize-instance_method" title="RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>命中部位表（右下半身）</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#RIGHT_LEG-constant" title="BattleTech::HitPart::RIGHT_LEG (constant)">RIGHT_LEG</a></span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#critical_hit_may_occur-instance_method" title="#critical_hit_may_occur (instance method)">#<strong>critical_hit_may_occur</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>致命的命中が発生し得るか.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>部位名.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="critical_hit_may_occur=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="critical_hit_may_occur-instance_method">
+  
+    #<strong>critical_hit_may_occur</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns 致命的命中が発生し得るか.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>致命的命中が発生し得るか</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+331</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 331</span>
+
+<span class='const'><span class='object_link'><a href="" title="BattleTech::HitPart (class)">HitPart</a></span></span> <span class='op'>=</span> <span class='const'>Struct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='comma'>,</span> <span class='symbol'>:critical_hit_may_occur</span><span class='rparen'>)</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="name=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns 部位名.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>部位名</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+331</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/diceBot/BattleTech.rb', line 331</span>
+
+<span class='const'><span class='object_link'><a href="" title="BattleTech::HitPart (class)">HitPart</a></span></span> <span class='op'>=</span> <span class='const'>Struct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='comma'>,</span> <span class='symbol'>:critical_hit_may_occur</span><span class='rparen'>)</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar 20 02:13:15 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.7.0).
+</div>
+
+    </div>
+  </body>
+</html>

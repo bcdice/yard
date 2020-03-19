@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/KillDeathBusiness_Korean.rb</dd>
+    <dd>src/diceBot/KillDeathBusiness_Korean.rb</dd>
   </dl>
   
 </div>
@@ -109,6 +109,96 @@
     </h2>
 
     <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KillDeathBusiness:Korean</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Kill Death Business (한국어)</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>国際化:Korean:Kill Death Business</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>・판정
+　JDx or JDx+y or JDx-y or JDx,z or JDx+y,z JDx-y,z
+　（x＝난이도、y＝보정、z＝펌블도(리스크)）
+・이력표 (HST、HSTx) x에 숫자(1,2)로 표를 개별 롤
+・소원표 (-WT)
+　죽음(DWT)、복수(RWT)、승리(VWT)、획득(PWT)、지배(CWT)、번영(FWT)
+　강화(IWT)、건강(HWT)、안전(SAWT)、장생(LWT)、삶(EWT)
+・만능이름표 (NAME) x에 숫자(1,2,3)로 표를 개별 롤
+・서브플롯표 (-SPT)
+　오컬트(OSPT)、가족(FSPT)、연애(LOSPT)、정의(JSPT)、수행(TSPT)
+　웃음(BSPT)、심술쟁이(MASPT)、원한(UMSPT)、인기(POSPT)、구분(PASPT)
+　돈벌이(MOSPT)、대(対)악마(ANSPT)
+・씬 표 (ST)、서비스 씬 표 (EST)
+・CM표 (CMT)
+・소생 부작용 표 (ERT)
+・일주일간 표（WKT)
+・소울 방출표 (SOUL)
+・범용연출표 (STGT)
+・헬 스타일리스트 매도표 (HSAT、HSATx) x에 숫자(1,2)로 표를 개별 롤
+・지정특기 랜덤 결정표 (SKLT)、지정특기 분야 랜덤 결정표 (SKLJ)
+・엑스트라 표 (EXT、EXTx) x에 숫자(1,2,3,4)로 표를 개별 롤
+・제작위원 결정표　PCDT/실제 어떠했는가 표　OHT
+・태스크 표　헬 라이온　PCT1/헬 크로우　PCT2/헬 스네이크　PCT3/
+　헬 드래곤　PCT4/헬 플라이　PCT5/헬 갓　PCT6/헬 베어　PCT7
+・D66 다이스 지원
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
         <dt id="judogeDiceReg-classvariable" class="">@@judogeDiceReg =
           
@@ -163,50 +253,6 @@
     <span class="summary_desc"><div class='inline'>
 <p>게임별 성공도 판정(2D6).</p>
 </div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -281,28 +327,6 @@
   <span class="summary_signature">
     
       <a href="#getHairStylistAbuseTableResult-instance_method" title="#getHairStylistAbuseTableResult (instance method)">#<strong>getHairStylistAbuseTableResult</strong>(type)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
     
 
     
@@ -844,7 +868,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -874,15 +898,15 @@
       <pre class="lines">
 
 
-47
-48
-49
-50
-51
-52</pre>
+86
+87
+88
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span>
@@ -928,7 +952,6 @@
       <pre class="lines">
 
 
-93
 94
 95
 96
@@ -945,10 +968,11 @@
 107
 108
 109
-110</pre>
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_max'>dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid_n1'>n1</span><span class='comma'>,</span> <span class='id identifier rubyid_n_max'>n_max</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>total_n, dice_n, signOfInequality, diff, dice_cnt, dice_max, n1, n_max</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_max'>dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid_n1'>n1</span><span class='comma'>,</span> <span class='id identifier rubyid_n_max'>n_max</span><span class='rparen'>)</span>
@@ -974,66 +998,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="gameName-instance_method">
-  
-    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-54
-55
-56</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 54</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Kill Death Business (한국어)</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameType-instance_method">
-  
-    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-58
-59
-60</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 58</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KillDeathBusiness:Korean</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="getCmTableResult-instance_method">
   
     #<strong>getCmTableResult</strong>  &#x21d2; <tt>Object</tt> 
@@ -1048,7 +1012,6 @@
       <pre class="lines">
 
 
-872
 873
 874
 875
@@ -1101,10 +1064,11 @@
 922
 923
 924
-925</pre>
+925
+926</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 872</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 873</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCmTableResult'>getCmTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CM표</span><span class='tstring_end'>&quot;</span></span>
@@ -1180,7 +1144,6 @@
       <pre class="lines">
 
 
-927
 928
 929
 930
@@ -1208,10 +1171,11 @@
 952
 953
 954
-955</pre>
+955
+956</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 927</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 928</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getErTableResult'>getErTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>소생부작용표</span><span class='tstring_end'>&quot;</span></span>
@@ -1262,7 +1226,6 @@
       <pre class="lines">
 
 
-1202
 1203
 1204
 1205
@@ -1376,10 +1339,11 @@
 1313
 1314
 1315
-1316</pre>
+1316
+1317</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1202</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1203</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getExtraTableResult'>getExtraTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>엑스트라 표</span><span class='tstring_end'>&quot;</span></span>
@@ -1516,7 +1480,6 @@
       <pre class="lines">
 
 
-1093
 1094
 1095
 1096
@@ -1598,10 +1561,11 @@
 1172
 1173
 1174
-1175</pre>
+1175
+1176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1093</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1094</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHairStylistAbuseTableResult'>getHairStylistAbuseTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>헬 스타일리스트 매도 표</span><span class='tstring_end'>&quot;</span></span>
@@ -1692,88 +1656,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getHelpMessage-instance_method">
-  
-    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 62</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
-  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>・판정
-　JDx or JDx+y or JDx-y or JDx,z or JDx+y,z JDx-y,z
-　（x＝난이도、y＝보정、z＝펌블도(리스크)）
-・이력표 (HST、HSTx) x에 숫자(1,2)로 표를 개별 롤
-・소원표 (-WT)
-　죽음(DWT)、복수(RWT)、승리(VWT)、획득(PWT)、지배(CWT)、번영(FWT)
-　강화(IWT)、건강(HWT)、안전(SAWT)、장생(LWT)、삶(EWT)
-・만능이름표 (NAME) x에 숫자(1,2,3)로 표를 개별 롤
-・서브플롯표 (-SPT)
-　오컬트(OSPT)、가족(FSPT)、연애(LOSPT)、정의(JSPT)、수행(TSPT)
-　웃음(BSPT)、심술쟁이(MASPT)、원한(UMSPT)、인기(POSPT)、구분(PASPT)
-　돈벌이(MOSPT)、대(対)악마(ANSPT)
-・씬 표 (ST)、서비스 씬 표 (EST)
-・CM표 (CMT)
-・소생 부작용 표 (ERT)
-・일주일간 표（WKT)
-・소울 방출표 (SOUL)
-・범용연출표 (STGT)
-・헬 스타일리스트 매도표 (HSAT、HSATx) x에 숫자(1,2)로 표를 개별 롤
-・지정특기 랜덤 결정표 (SKLT)、지정특기 분야 랜덤 결정표 (SKLJ)
-・엑스트라 표 (EXT、EXTx) x에 숫자(1,2,3,4)로 표를 개별 롤
-・제작위원 결정표　PCDT/실제 어떠했는가 표　OHT
-・태스크 표　헬 라이온　PCT1/헬 크로우　PCT2/헬 스네이크　PCT3/
-　헬 드래곤　PCT4/헬 플라이　PCT5/헬 갓　PCT6/헬 베어　PCT7
-・D66 다이스 지원
-</span><span class='heredoc_end'>INFO_MESSAGE_TEXT
-</span><span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="getHistoryTableResult-instance_method">
   
     #<strong>getHistoryTableResult</strong>  &#x21d2; <tt>Object</tt> 
@@ -1788,7 +1670,6 @@
       <pre class="lines">
 
 
-281
 282
 283
 284
@@ -1808,10 +1689,11 @@
 298
 299
 300
-301</pre>
+301
+302</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 281</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 282</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHistoryTableResult'>getHistoryTableResult</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>이력표</span><span class='tstring_end'>&quot;</span></span>
@@ -1854,7 +1736,6 @@
       <pre class="lines">
 
 
-498
 499
 500
 501
@@ -1946,10 +1827,11 @@
 587
 588
 589
-590</pre>
+590
+591</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 498</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 499</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getNameTableResult'>getNameTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>만능이름표</span><span class='tstring_end'>&quot;</span></span>
@@ -2064,7 +1946,6 @@
       <pre class="lines">
 
 
-1348
 1349
 1350
 1351
@@ -2077,10 +1958,11 @@
 1358
 1359
 1360
-1361</pre>
+1361
+1362</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1348</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1349</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getohTableResult'>getohTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>실제로 어떠했는가 표</span><span class='tstring_end'>&quot;</span></span>
@@ -2116,7 +1998,6 @@
       <pre class="lines">
 
 
-1488
 1489
 1490
 1491
@@ -2134,10 +2015,11 @@
 1503
 1504
 1505
-1506</pre>
+1506
+1507</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1488</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1489</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpbTableResult'>getpbTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>헬 베어터스크 표</span><span class='tstring_end'>&quot;</span></span>
@@ -2178,7 +2060,6 @@
       <pre class="lines">
 
 
-1318
 1319
 1320
 1321
@@ -2206,10 +2087,11 @@
 1343
 1344
 1345
-1346</pre>
+1346
+1347</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1318</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1319</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpcTableResult'>getpcTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>제작위원 결정표</span><span class='tstring_end'>&quot;</span></span>
@@ -2260,7 +2142,6 @@
       <pre class="lines">
 
 
-1426
 1427
 1428
 1429
@@ -2279,10 +2160,11 @@
 1442
 1443
 1444
-1445</pre>
+1445
+1446</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1426</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1427</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpdTableResult'>getpdTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>헬 드래곤터스크 표</span><span class='tstring_end'>&quot;</span></span>
@@ -2324,7 +2206,6 @@
       <pre class="lines">
 
 
-1447
 1448
 1449
 1450
@@ -2342,10 +2223,11 @@
 1462
 1463
 1464
-1465</pre>
+1465
+1466</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1447</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1448</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpfTableResult'>getpfTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>헬 플라잉터스크 표</span><span class='tstring_end'>&quot;</span></span>
@@ -2386,7 +2268,6 @@
       <pre class="lines">
 
 
-1467
 1468
 1469
 1470
@@ -2405,10 +2286,11 @@
 1483
 1484
 1485
-1486</pre>
+1486
+1487</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1467</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1468</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpgTableResult'>getpgTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>헬 갓터스크 표</span><span class='tstring_end'>&quot;</span></span>
@@ -2450,7 +2332,6 @@
       <pre class="lines">
 
 
-1363
 1364
 1365
 1366
@@ -2469,10 +2350,11 @@
 1379
 1380
 1381
-1382</pre>
+1382
+1383</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1363</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1364</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getplTableResult'>getplTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>헬 라이온터스크 표</span><span class='tstring_end'>&quot;</span></span>
@@ -2514,7 +2396,6 @@
       <pre class="lines">
 
 
-1405
 1406
 1407
 1408
@@ -2533,10 +2414,11 @@
 1421
 1422
 1423
-1424</pre>
+1424
+1425</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1405</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1406</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpnTableResult'>getpnTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>헬 스네이크터스크 표</span><span class='tstring_end'>&quot;</span></span>
@@ -2578,7 +2460,6 @@
       <pre class="lines">
 
 
-1384
 1385
 1386
 1387
@@ -2597,10 +2478,11 @@
 1400
 1401
 1402
-1403</pre>
+1403
+1404</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1384</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1385</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getprTableResult'>getprTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>헬 크로우터스크 표</span><span class='tstring_end'>&quot;</span></span>
@@ -2642,7 +2524,6 @@
       <pre class="lines">
 
 
-303
 304
 305
 306
@@ -2710,10 +2591,11 @@
 368
 369
 370
-371</pre>
+371
+372</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 303</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 304</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSceneTableResult'>getSceneTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getSceneTableResult type</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
@@ -2804,7 +2686,6 @@
       <pre class="lines">
 
 
-1078
 1079
 1080
 1081
@@ -2817,10 +2698,11 @@
 1088
 1089
 1090
-1091</pre>
+1091
+1092</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1078</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1079</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSceneTelopGenericTableResult'>getSceneTelopGenericTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>범용 연출표</span><span class='tstring_end'>&quot;</span></span>
@@ -2856,7 +2738,6 @@
       <pre class="lines">
 
 
-987
 988
 989
 990
@@ -2930,10 +2811,11 @@
 1058
 1059
 1060
-1061</pre>
+1061
+1062</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 987</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 988</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getServiceSceneTableResult'>getServiceSceneTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>서비스 씬 표</span><span class='tstring_end'>&quot;</span></span>
@@ -3030,7 +2912,6 @@
       <pre class="lines">
 
 
-1177
 1178
 1179
 1180
@@ -3053,10 +2934,11 @@
 1197
 1198
 1199
-1200</pre>
+1200
+1201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1177</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1178</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSkillTableResult'>getSkillTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_skillTableFull'>skillTableFull</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3102,7 +2984,6 @@
       <pre class="lines">
 
 
-1063
 1064
 1065
 1066
@@ -3115,10 +2996,11 @@
 1073
 1074
 1075
-1076</pre>
+1076
+1077</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 1063</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 1064</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSoulTableResult'>getSoulTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>소울방출표</span><span class='tstring_end'>&quot;</span></span>
@@ -3154,7 +3036,6 @@
       <pre class="lines">
 
 
-592
 593
 594
 595
@@ -3432,10 +3313,11 @@
 867
 868
 869
-870</pre>
+870
+871</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 592</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 593</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSubprotTableResult'>getSubprotTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -3736,7 +3618,6 @@
       <pre class="lines">
 
 
-373
 374
 375
 376
@@ -3859,10 +3740,11 @@
 493
 494
 495
-496</pre>
+496
+497</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 373</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 374</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getWishTableResult'>getWishTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getWishTableResult command</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -4008,7 +3890,6 @@
       <pre class="lines">
 
 
-957
 958
 959
 960
@@ -4036,10 +3917,11 @@
 982
 983
 984
-985</pre>
+985
+986</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 957</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 958</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getWKTableResult'>getWKTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>일주일간표</span><span class='tstring_end'>&quot;</span></span>
@@ -4090,7 +3972,6 @@
       <pre class="lines">
 
 
-129
 130
 131
 132
@@ -4138,10 +4019,11 @@
 174
 175
 176
-177</pre>
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 129</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_judgeDice'>judgeDice</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='cvar'>@@judogeDiceReg</span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
@@ -4212,7 +4094,6 @@
       <pre class="lines">
 
 
-112
 113
 114
 115
@@ -4225,10 +4106,11 @@
 122
 123
 124
-125</pre>
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rollDiceCommand command</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -4264,7 +4146,6 @@
       <pre class="lines">
 
 
-179
 180
 181
 182
@@ -4364,10 +4245,11 @@
 276
 277
 278
-279</pre>
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/KillDeathBusiness_Korean.rb', line 179</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness_Korean.rb', line 180</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollTableCommand'>rollTableCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -4378,36 +4260,36 @@
   <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HST</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getHistoryTableResult'>getHistoryTableResult</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ST(\d)?$</span><span class='regexp_end'>/</span></span>
-    <span class='comment'># 씬표
-</span>    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ST(\d)?$</span><span class='regexp_end'>/</span></span>    <span class='comment'># 씬표
+</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
 
     <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getSceneTableResult'>getSceneTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^.+WT$</span><span class='regexp_end'>/i</span></span>
-    <span class='comment'># 소원표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getWishTableResult'>getWishTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^.+WT$</span><span class='regexp_end'>/i</span></span>    <span class='comment'># 소원표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getWishTableResult'>getWishTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^NAME(\d)?$</span><span class='regexp_end'>/</span></span>
-    <span class='comment'># 만능이름표
-</span>    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^NAME(\d)?$</span><span class='regexp_end'>/</span></span>    <span class='comment'># 만능이름표
+</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getNameTableResult'>getNameTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^.+SPT$</span><span class='regexp_end'>/i</span></span>
-    <span class='comment'># 서브플롯표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getSubprotTableResult'>getSubprotTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^.+SPT$</span><span class='regexp_end'>/i</span></span>    <span class='comment'># 서브플롯표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getSubprotTableResult'>getSubprotTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMT</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># CM표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getCmTableResult'>getCmTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMT</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># CM표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getCmTableResult'>getCmTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ERT</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 소생 부작용 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getErTableResult'>getErTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ERT</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 소생 부작용 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getErTableResult'>getErTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WKT</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 일주일간 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getWKTableResult'>getWKTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WKT</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 일주일간 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getWKTableResult'>getWKTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
 
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^EST$</span><span class='regexp_end'>/i</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^sErviceST$</span><span class='regexp_end'>/i</span></span>
     <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getServiceSceneTableResult'>getServiceSceneTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -4430,33 +4312,33 @@
     <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getSkillTableResult'>getSkillTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCDT</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 제작위원 결정표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpcTableResult'>getpcTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OHT</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 실제 어떠했는가 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getohTableResult'>getohTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT1</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 헬 스타일리스트 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getplTableResult'>getplTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT2</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 헬 크로우 태스크 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getprTableResult'>getprTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT3</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 헬 스네이크 태스크 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpnTableResult'>getpnTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT4</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 헬 드래곤 태스크 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpdTableResult'>getpdTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT5</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 헬 플라이 태스크 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpfTableResult'>getpfTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT6</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 헬 갓 태스크 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpgTableResult'>getpgTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT7</span><span class='tstring_end'>&quot;</span></span>
-    <span class='comment'># 헬 베어 태스크 표
-</span>    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpbTableResult'>getpbTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCDT</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 제작위원 결정표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpcTableResult'>getpcTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OHT</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 실제 어떠했는가 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getohTableResult'>getohTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT1</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 헬 스타일리스트 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getplTableResult'>getplTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT2</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 헬 크로우 태스크 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getprTableResult'>getprTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT3</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 헬 스네이크 태스크 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpnTableResult'>getpnTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT4</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 헬 드래곤 태스크 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpdTableResult'>getpdTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT5</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 헬 플라이 태스크 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpfTableResult'>getpfTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT6</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 헬 갓 태스크 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpgTableResult'>getpgTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT7</span><span class='tstring_end'>&quot;</span></span>    <span class='comment'># 헬 베어 태스크 표
+</span>
+    <span class='id identifier rubyid_tableName'>tableName</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='id identifier rubyid_getpbTableResult'>getpbTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
 
   <span class='kw'>else</span>
     <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rollDiceCommand commandNOT matched -&gt; command:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -4480,9 +4362,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:48:03 2020 by
+  Generated on Fri Mar 20 02:13:29 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

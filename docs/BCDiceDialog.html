@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>bcdiceGui.rb</dd>
+    <dd>src/bcdiceGui.rb</dd>
   </dl>
   
 </div>
@@ -1180,7 +1180,7 @@
 91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>B&amp;C Dice</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1210,9 +1210,9 @@
 
   <span class='id identifier rubyid_addCtrlOnLine'>addCtrlOnLine</span><span class='lparen'>(</span><span class='ivar'>@executeButton</span><span class='comma'>,</span> <span class='ivar'>@stopButton</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_addTestTextBoxs'>addTestTextBoxs</span>
-  <span class='comment'># initDebugTextBox
+  <span class='id identifier rubyid_addTestTextBoxs'>addTestTextBoxs</span>  <span class='comment'># initDebugTextBox
 </span>
+
   <span class='id identifier rubyid_loadSaveData'>loadSaveData</span>
 
   <span class='id identifier rubyid_set_sizer'>set_sizer</span><span class='lparen'>(</span><span class='ivar'>@allBox</span><span class='rparen'>)</span>
@@ -1278,7 +1278,7 @@
 245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 225</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 225</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_addCtrl'>addCtrl</span><span class='lparen'>(</span><span class='id identifier rubyid_ctrl'>ctrl</span><span class='comma'>,</span> <span class='id identifier rubyid_labelText'>labelText</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_addCtrls'>addCtrls</span><span class='rparen'>)</span>
   <span class='kw'>if</span>  <span class='id identifier rubyid_labelText'>labelText</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1328,7 +1328,7 @@
 251</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 247</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_addCtrlOnLine'>addCtrlOnLine</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_ctrls'>ctrls</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='id identifier rubyid_getLineCtrl'>getLineCtrl</span><span class='lparen'>(</span><span class='id identifier rubyid_ctrls'>ctrls</span><span class='rparen'>)</span>
@@ -1372,7 +1372,7 @@
 351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 337</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 337</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_addTestTextBoxs'>addTestTextBoxs</span>
   <span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='id identifier rubyid_createLabel'>createLabel</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>動作テスト欄</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1415,7 +1415,7 @@
 96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_analizeArgs'>analizeArgs</span>
   <span class='id identifier rubyid_argsAnalizer'>argsAnalizer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ArgsAnalizer.html" title="ArgsAnalizer (class)">ArgsAnalizer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ArgsAnalizer.html#initialize-instance_method" title="ArgsAnalizer#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'>ARGV</span><span class='rparen'>)</span>
@@ -1447,7 +1447,7 @@
 472</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 469</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 469</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_close'>close</span><span class='lparen'>(</span><span class='id identifier rubyid_force'>force</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_on_stop'>on_stop</span>
@@ -1480,7 +1480,7 @@
 219</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 215</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_createAddedTextInput'>createAddedTextInput</span><span class='lparen'>(</span><span class='id identifier rubyid_defaultText'>defaultText</span><span class='comma'>,</span> <span class='id identifier rubyid_labelText'>labelText</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_addCtrls'>addCtrls</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_textInput'>textInput</span> <span class='op'>=</span> <span class='id identifier rubyid_createTextInput'>createTextInput</span><span class='lparen'>(</span><span class='id identifier rubyid_defaultText'>defaultText</span><span class='rparen'>)</span>
@@ -1512,7 +1512,7 @@
 209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 207</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_createButton'>createButton</span><span class='lparen'>(</span><span class='id identifier rubyid_labelText'>labelText</span><span class='rparen'>)</span>
   <span class='const'>Wx</span><span class='op'>::</span><span class='const'>Button</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_labelText'>labelText</span><span class='rparen'>)</span>
@@ -1542,7 +1542,7 @@
 223</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 221</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 221</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_createLabel'>createLabel</span><span class='lparen'>(</span><span class='id identifier rubyid_labelText'>labelText</span><span class='rparen'>)</span>
   <span class='const'>Wx</span><span class='op'>::</span><span class='const'>StaticText</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_labelText'>labelText</span><span class='rparen'>)</span>
@@ -1572,7 +1572,7 @@
 213</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 211</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 211</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_createTextInput'>createTextInput</span><span class='lparen'>(</span><span class='id identifier rubyid_defaultText'>defaultText</span><span class='rparen'>)</span>
   <span class='const'>Wx</span><span class='op'>::</span><span class='const'>TextCtrl</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_defaultText'>defaultText</span><span class='rparen'>)</span>
@@ -1604,7 +1604,7 @@
 375</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 371</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 371</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_expressTestInput'>expressTestInput</span>
   <span class='id identifier rubyid_onEnterTestInputCatched'>onEnterTestInputCatched</span>
@@ -1636,7 +1636,7 @@
 291</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 289</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 289</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getAllGameTypes'>getAllGameTypes</span>
   <span class='kw'>return</span> <span class='gvar'>$allGameTypes</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>_</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -1672,7 +1672,7 @@
 261</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 253</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 253</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getLineCtrl'>getLineCtrl</span><span class='lparen'>(</span><span class='id identifier rubyid_ctrls'>ctrls</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='const'>Wx</span><span class='op'>::</span><span class='const'>BoxSizer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Wx</span><span class='op'>::</span><span class='const'>HORIZONTAL</span><span class='rparen'>)</span>
@@ -1709,7 +1709,7 @@
 335</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 332</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 332</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSelectedCharacterCode'>getSelectedCharacterCode</span>
   <span class='id identifier rubyid_codeName'>codeName</span> <span class='op'>=</span> <span class='ivar'>@characterCode</span><span class='period'>.</span><span class='id identifier rubyid_get_string_selection'>get_string_selection</span>
@@ -1740,7 +1740,7 @@
 166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getServerSetSectionName'>getServerSetSectionName</span><span class='lparen'>(</span><span class='id identifier rubyid_serverSet'>serverSet</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='cvar'>@@serverSertPrefix</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_serverSet'>serverSet</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1785,7 +1785,7 @@
 326</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 309</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 309</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initCharacterCode'>initCharacterCode</span>
   <span class='ivar'>@characterCode</span> <span class='op'>=</span> <span class='const'>Wx</span><span class='op'>::</span><span class='const'>Choice</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
@@ -1835,7 +1835,7 @@
 414</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 407</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 407</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initDebugTextBox'>initDebugTextBox</span>
   <span class='id identifier rubyid_size'>size</span> <span class='op'>=</span> <span class='const'>Wx</span><span class='op'>::</span><span class='const'>Size</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>600</span><span class='comma'>,</span> <span class='int'>200</span><span class='rparen'>)</span>
@@ -1882,7 +1882,7 @@
 277</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 263</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 263</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initGameType'>initGameType</span>
   <span class='ivar'>@gameType</span> <span class='op'>=</span> <span class='const'>Wx</span><span class='op'>::</span><span class='const'>Choice</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
@@ -1937,7 +1937,7 @@
 113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initServerSet'>initServerSet</span>
   <span class='ivar'>@serverSetChoise</span> <span class='op'>=</span> <span class='const'>Wx</span><span class='op'>::</span><span class='const'>ComboBox</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span>
@@ -1986,7 +1986,7 @@
 123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initServerSetChoiseList'>initServerSetChoiseList</span>
   <span class='ivar'>@serverSetChoise</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -2025,7 +2025,7 @@
 173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_loadChoiseValueFromIniFile'>loadChoiseValueFromIniFile</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_choise'>choise</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='ivar'>@iniFile</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -2064,7 +2064,7 @@
 499</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 491</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 491</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_loadSaveData'>loadSaveData</span>
   <span class='id identifier rubyid_serverName'>serverName</span> <span class='op'>=</span> <span class='ivar'>@iniFile</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>serverSet</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -2109,7 +2109,7 @@
 136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_loadServerSetNameList'>loadServerSetNameList</span>
   <span class='id identifier rubyid_sectionNames'>sectionNames</span> <span class='op'>=</span> <span class='ivar'>@iniFile</span><span class='period'>.</span><span class='id identifier rubyid_getSectionNames'>getSectionNames</span>
@@ -2151,7 +2151,7 @@
 160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_loadTextValueFromIniFile'>loadTextValueFromIniFile</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='ivar'>@iniFile</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -2189,7 +2189,7 @@
 205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 198</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_delete'>on_delete</span>
   <span class='id identifier rubyid_serverSet'>serverSet</span> <span class='op'>=</span> <span class='ivar'>@serverSetChoise</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span>
@@ -2229,7 +2229,7 @@
 423</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 416</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 416</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_execute'>on_execute</span>
   <span class='id identifier rubyid_setConfig'>setConfig</span>
@@ -2277,7 +2277,7 @@
 153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 138</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 138</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_load'>on_load</span>
   <span class='id identifier rubyid_serverSet'>serverSet</span> <span class='op'>=</span> <span class='ivar'>@serverSetChoise</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span>
@@ -2335,7 +2335,7 @@
 192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 175</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_save'>on_save</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>on_save begin</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -2387,7 +2387,7 @@
 483</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 474</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 474</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_stop'>on_stop</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@ircBot</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -2424,7 +2424,7 @@
 330</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 328</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 328</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_onChoiseCharacterCode'>onChoiseCharacterCode</span>
   <span class='gvar'>$ircCode</span> <span class='op'>=</span> <span class='id identifier rubyid_getSelectedCharacterCode'>getSelectedCharacterCode</span>
@@ -2456,7 +2456,7 @@
 297</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 293</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 293</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_onChoiseGame'>onChoiseGame</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@ircBot</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -2502,7 +2502,7 @@
 393</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 377</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 377</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_onEnterTestInputCatched'>onEnterTestInputCatched</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>onEnterTestInput</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -2517,9 +2517,9 @@
   <span class='id identifier rubyid_nick_e'>nick_e</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_tnick'>tnick</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_bcdice'>bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setMessage'>setMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_bcdice'>bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setChannel'>setChannel</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
-  <span class='comment'># bcdice.recieveMessage(nick_e, tnick)
-</span>  <span class='id identifier rubyid_bcdice'>bcdice</span><span class='period'>.</span><span class='id identifier rubyid_recievePublicMessage'>recievePublicMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_bcdice'>bcdice</span><span class='period'>.</span><span class='id identifier rubyid_setChannel'>setChannel</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>  <span class='comment'># bcdice.recieveMessage(nick_e, tnick)
+</span>
+  <span class='id identifier rubyid_bcdice'>bcdice</span><span class='period'>.</span><span class='id identifier rubyid_recievePublicMessage'>recievePublicMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2558,7 +2558,7 @@
 369</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 366</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 366</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_printText'>printText</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='comment'># @outputText.append_text( &quot;#{message}\r\n&quot; )
@@ -2589,7 +2589,7 @@
 196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 194</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_saveTextValueToIniFile'>saveTextValueToIniFile</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@iniFile</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -2619,7 +2619,7 @@
 397</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 395</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 395</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid__to'>_to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_printText'>printText</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -2649,7 +2649,7 @@
 405</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 403</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 403</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessageToChannels'>sendMessageToChannels</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -2679,7 +2679,7 @@
 401</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 399</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 399</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessageToOnlySender'>sendMessageToOnlySender</span><span class='lparen'>(</span><span class='id identifier rubyid__nick_e'>_nick_e</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -2711,7 +2711,7 @@
 489</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 485</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 485</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setAllGames'>setAllGames</span><span class='lparen'>(</span><span class='id identifier rubyid__ircBot'>_ircBot</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_getAllGameTypes'>getAllGameTypes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='op'>|</span>
@@ -2749,7 +2749,7 @@
 287</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 279</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setChoiseText'>setChoiseText</span><span class='lparen'>(</span><span class='id identifier rubyid_choise'>choise</span><span class='comma'>,</span> <span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_choise'>choise</span><span class='period'>.</span><span class='id identifier rubyid_find_string'>find_string</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
@@ -2791,7 +2791,7 @@
 433</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 425</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 425</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setConfig'>setConfig</span>
   <span class='gvar'>$server</span> <span class='op'>=</span> <span class='ivar'>@serverName</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span>
@@ -2833,7 +2833,7 @@
 443</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 435</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 435</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_startIrcBot'>startIrcBot</span>
   <span class='ivar'>@ircBot</span> <span class='op'>=</span> <span class='id identifier rubyid_getInitializedIrcBot'><span class='object_link'><a href="top-level-namespace.html#getInitializedIrcBot-instance_method" title="#getInitializedIrcBot (method)">getInitializedIrcBot</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -2881,7 +2881,7 @@
 459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 445</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 445</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_startIrcBotOnThread'>startIrcBotOnThread</span>
   <span class='id identifier rubyid_printText'>printText</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>connect to IRC server.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -2936,7 +2936,7 @@
 467</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'bcdiceGui.rb', line 463</span>
+      <pre class="code"><span class="info file"># File 'src/bcdiceGui.rb', line 463</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_startThreadTimer'>startThreadTimer</span>
   <span class='const'>Wx</span><span class='op'>::</span><span class='const'>Timer</span><span class='period'>.</span><span class='id identifier rubyid_every'>every</span><span class='lparen'>(</span><span class='int'>100</span><span class='rparen'>)</span> <span class='kw'>do</span>
@@ -2953,9 +2953,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:51 2020 by
+  Generated on Fri Mar 20 02:13:07 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

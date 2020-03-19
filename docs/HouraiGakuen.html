@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/HouraiGakuen.rb</dd>
+    <dd>src/diceBot/HouraiGakuen.rb</dd>
   </dl>
   
 </div>
@@ -109,6 +109,86 @@
     </h2>
 
     <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HouraiGakuen</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>蓬莱学園の冒険!!</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ほうらいかくえんのほうけん</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>・基本ロール：ROL(x+n)
+  ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述します。3D6をロールし、成功したかどうかを表示します。
+  例）ROL(4+6)
+・対人判定：MED(x,y)
+  自分の能力値 x と 相手の能力値 y でロールを行い、成功したかどうかを表示します。
+  例）MED(5,2)
+・対抗判定：RES(x,y)
+  自分の能力値 x と 相手の能力値 y で相互にロールし、どちらが成功したかを表示します。両者とも成功 or 失敗の場合は引き分けとなります。
+  例）RES(6,4)
+・陰陽コマンド INY
+  例）Hourai : 陽（奇数の方が多い）
+・五行コマンド：GOG
+  例）Hourai : 五行表(3) → 五行【土】
+・八徳コマンド：HTK
+  例）Hourai : 仁義八徳は、【義】(奇数、奇数、偶数)
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
         <dt id="critical-classvariable" class="">@@critical =
           
@@ -157,54 +237,6 @@
     </h2>
 
     <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>ゲームの名前.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>チャット欄表示名.</p>
-</div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -315,30 +347,6 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>八徳コマンド.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>判定用前置文字 説明文.</p>
 </div></span>
   
 </li>
@@ -590,7 +598,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>コマンド分岐.</p>
+<p>ゲームの名前 チャット欄表示名 判定用前置文字 説明文 コマンド分岐.</p>
 </div></span>
   
 </li>
@@ -609,7 +617,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#initialize-instance_method" title="DiceBot#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#initialize-instance_method" title="DiceBot#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -623,89 +631,7 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="gameName-instance_method">
-  
-    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>ゲームの名前</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-7
-8
-9</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 7</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>蓬莱学園の冒険!!</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameType-instance_method">
-  
-    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>チャット欄表示名</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-12
-13
-14</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 12</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HouraiGakuen</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getCheckResult-instance_method">
+  <h3 class="signature first" id="getCheckResult-instance_method">
   
     #<strong>getCheckResult</strong>(diceText, total, target)  &#x21d2; <tt>Object</tt> 
   
@@ -719,7 +645,6 @@
       <pre class="lines">
 
 
-77
 78
 79
 80
@@ -735,10 +660,11 @@
 90
 91
 92
-93</pre>
+93
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCheckResult'>getCheckResult</span><span class='lparen'>(</span><span class='id identifier rubyid_diceText'>diceText</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_diceList'>diceList</span> <span class='op'>=</span> <span class='id identifier rubyid_getDiceListFromText'>getDiceListFromText</span><span class='lparen'>(</span><span class='id identifier rubyid_diceText'>diceText</span><span class='rparen'>)</span>
@@ -777,13 +703,13 @@
       <pre class="lines">
 
 
-95
 96
 97
-98</pre>
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getDiceListFromText'>getDiceListFromText</span><span class='lparen'>(</span><span class='id identifier rubyid_diceText'>diceText</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_diceList'>diceList</span> <span class='op'>=</span> <span class='id identifier rubyid_diceText'>diceText</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
@@ -809,7 +735,6 @@
       <pre class="lines">
 
 
-239
 240
 241
 242
@@ -817,10 +742,11 @@
 244
 245
 246
-247</pre>
+247
+248</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getGogyouResult'>getGogyouResult</span><span class='lparen'>(</span><span class='id identifier rubyid__command'>_command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>五行表</span><span class='tstring_end'>&#39;</span></span>
@@ -862,7 +788,6 @@
       <pre class="lines">
 
 
-250
 251
 252
 253
@@ -872,10 +797,11 @@
 257
 258
 259
-260</pre>
+260
+261</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 250</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 251</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getGogyouTable'>getGogyouTable</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -919,7 +845,6 @@
       <pre class="lines">
 
 
-200
 201
 202
 203
@@ -948,10 +873,11 @@
 226
 227
 228
-229</pre>
+229
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 200</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHattokuResult'>getHattokuResult</span><span class='lparen'>(</span><span class='id identifier rubyid__command'>_command</span><span class='rparen'>)</span>
   <span class='comment'># 3回振って、奇数・偶数がどの順序で出たかを記録する
@@ -989,79 +915,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getHelpMessage-instance_method">
-  
-    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>判定用前置文字 説明文</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 18</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
-  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>・基本ロール：ROL(x+n)
-ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述します。3D6をロールし、成功したかどうかを表示します。
-例）ROL(4+6)
-・対人判定：MED(x,y)
-自分の能力値 x と 相手の能力値 y でロールを行い、成功したかどうかを表示します。
-例）MED(5,2)
-・対抗判定：RES(x,y)
-自分の能力値 x と 相手の能力値 y で相互にロールし、どちらが成功したかを表示します。両者とも成功 or 失敗の場合は引き分けとなります。
-例）RES(6,4)
-・陰陽コマンド INY
-例）Hourai : 陽（奇数の方が多い）
-・五行コマンド：GOG
-例）Hourai : 五行表(3) → 五行【土】
-・八徳コマンド：HTK
-例）Hourai : 仁義八徳は、【義】(奇数、奇数、偶数)
-</span><span class='heredoc_end'>INFO_MESSAGE_TEXT
-</span><span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="getInnyouResult-instance_method">
   
     #<strong>getInnyouResult</strong>(_command)  &#x21d2; <tt>Object</tt> 
@@ -1087,7 +940,6 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-178
 179
 180
 181
@@ -1106,10 +958,11 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 194
 195
 196
-197</pre>
+197
+198</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 178</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 179</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getInnyouResult'>getInnyouResult</span><span class='lparen'>(</span><span class='id identifier rubyid__command'>_command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_oddCount'>oddCount</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -1162,7 +1015,6 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-109
 110
 111
 112
@@ -1173,10 +1025,11 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 117
 118
 119
-120</pre>
+120
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getMedResult'>getMedResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>med\((\d+),(\d+)\)</span><span class='regexp_end'>/i</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_command'>command</span>
@@ -1210,16 +1063,16 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-231
 232
 233
 234
 235
 236
-237</pre>
+237
+238</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 231</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 232</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getOddEven'>getOddEven</span>
   <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
@@ -1248,7 +1101,6 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-151
 152
 153
 154
@@ -1261,10 +1113,11 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 161
 162
 163
-164</pre>
+164
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getResistCheckResult'>getResistCheckResult</span><span class='lparen'>(</span><span class='id identifier rubyid_yourResult'>yourResult</span><span class='comma'>,</span> <span class='id identifier rubyid_enemyResult'>enemyResult</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_yourRank'>yourRank</span> <span class='op'>=</span> <span class='id identifier rubyid_getResultRank'>getResultRank</span><span class='lparen'>(</span><span class='id identifier rubyid_yourResult'>yourResult</span><span class='rparen'>)</span>
@@ -1311,7 +1164,6 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-127
 128
 129
 130
@@ -1333,10 +1185,11 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 146
 147
 148
-149</pre>
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getResResult'>getResResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>res\((\d+),(\d+)\)</span><span class='regexp_end'>/i</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_command'>command</span>
@@ -1381,7 +1234,6 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-166
 167
 168
 169
@@ -1390,10 +1242,11 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 172
 173
 174
-175</pre>
+175
+176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 166</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getResultRank'>getResultRank</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -1436,7 +1289,6 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-64
 65
 66
 67
@@ -1447,10 +1299,11 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 72
 73
 74
-75</pre>
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getRollResult'>getRollResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>rol([-\d]+)</span><span class='regexp_end'>/i</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_command'>command</span>
@@ -1484,12 +1337,12 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-122
 123
-124</pre>
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getTargetFromValue'>getTargetFromValue</span><span class='lparen'>(</span><span class='id identifier rubyid_yourValue'>yourValue</span><span class='comma'>,</span> <span class='id identifier rubyid_enemyValue'>enemyValue</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_yourValue'>yourValue</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='int'>10</span> <span class='op'>-</span> <span class='id identifier rubyid_enemyValue'>enemyValue</span><span class='rparen'>)</span> <span class='comment'># 値から目標値を作出
@@ -1514,12 +1367,12 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-104
 105
-106</pre>
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_isCritical'>isCritical</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_diceList'>diceList</span> <span class='op'>===</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='rbracket'>]</span>
@@ -1544,12 +1397,12 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-100
 101
-102</pre>
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_isFamble'>isFamble</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_diceList'>diceList</span> <span class='op'>===</span> <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='int'>6</span><span class='rbracket'>]</span>
@@ -1571,7 +1424,7 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>コマンド分岐</p>
+<p>ゲームの名前 チャット欄表示名 判定用前置文字 説明文 コマンド分岐</p>
 
 
   </div>
@@ -1585,7 +1438,6 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
       <pre class="lines">
 
 
-39
 40
 41
 42
@@ -1602,10 +1454,11 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 53
 54
 55
-56</pre>
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/HouraiGakuen.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/HouraiGakuen.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -1635,9 +1488,9 @@ ROLL(自分の能力値 + 簡単値 + 応石 or 蓬莱パワー)と記述しま�
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:59 2020 by
+  Generated on Fri Mar 20 02:13:20 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

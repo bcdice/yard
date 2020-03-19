@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>test/others/testIniFile.rb</dd>
+    <dd>src/test/others/testIniFile.rb</dd>
   </dl>
   
 </div>
@@ -280,7 +280,7 @@
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/others/testIniFile.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'src/test/others/testIniFile.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_deleteIniFile'>deleteIniFile</span>
   <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='ivar'>@testIniFileName</span><span class='rparen'>)</span>
@@ -315,7 +315,7 @@
 15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/others/testIniFile.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'src/test/others/testIniFile.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setup'>setup</span>
   <span class='gvar'>$isDebug</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -348,7 +348,7 @@
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/others/testIniFile.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'src/test/others/testIniFile.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_teardown'>teardown</span>
   <span class='id identifier rubyid_deleteIniFile'>deleteIniFile</span>
@@ -386,7 +386,7 @@
 41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/others/testIniFile.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'src/test/others/testIniFile.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_readWrite'>test_readWrite</span>
   <span class='id identifier rubyid_ini'>ini</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="IniFile.html" title="IniFile (class)">IniFile</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="IniFile.html#initialize-instance_method" title="IniFile#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@testIniFileName</span><span class='rparen'>)</span>
@@ -430,7 +430,7 @@
 51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/others/testIniFile.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'src/test/others/testIniFile.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_test_readWriteJapanease'>test_readWriteJapanease</span>
   <span class='id identifier rubyid_ini'>ini</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="IniFile.html" title="IniFile (class)">IniFile</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="IniFile.html#initialize-instance_method" title="IniFile#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@testIniFileName</span><span class='rparen'>)</span>
@@ -466,7 +466,7 @@
 29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'test/others/testIniFile.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'src/test/others/testIniFile.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_trace'>trace</span>
   <span class='gvar'>$isDebug</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -481,9 +481,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:48:04 2020 by
+  Generated on Fri Mar 20 02:13:25 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

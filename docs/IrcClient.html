@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>irc/ircBot.rb</dd>
+    <dd>src/irc/ircBot.rb</dd>
   </dl>
   
 </div>
@@ -922,7 +922,7 @@
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>super</span>
@@ -965,7 +965,7 @@
 243</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 241</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 241</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_addChannel'>addChannel</span><span class='lparen'>(</span><span class='id identifier rubyid_add_ch'>add_ch</span><span class='rparen'>)</span>
   <span class='ivar'>@loginChannelList</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_add_ch'>add_ch</span>
@@ -995,7 +995,7 @@
 247</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 245</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_deleteChannel'>deleteChannel</span><span class='lparen'>(</span><span class='id identifier rubyid_del_ch'>del_ch</span><span class='rparen'>)</span>
   <span class='ivar'>@loginChannelList</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>==</span> <span class='id identifier rubyid_del_ch'>del_ch</span> <span class='rbrace'>}</span>
@@ -1025,7 +1025,7 @@
 171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getArg'>getArg</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_arg'>arg</span> <span class='op'>=</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_toutf8'>toutf8</span>
@@ -1055,7 +1055,7 @@
 167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 165</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getChannel'>getChannel</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_channel'>channel</span> <span class='op'>=</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_toutf8'>toutf8</span>
@@ -1106,7 +1106,7 @@
 220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 197</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getNewNick'>getNewNick</span><span class='lparen'>(</span><span class='id identifier rubyid_nick'>nick</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug_out'>debug_out</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getNewNick nick</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_nick'>nick</span><span class='rparen'>)</span>
@@ -1157,7 +1157,7 @@
 163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getNickEFromEvent'>getNickEFromEvent</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_nick_e'>nick_e</span> <span class='op'>=</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_prefix'>prefix</span><span class='period'>.</span><span class='id identifier rubyid_nick'>nick</span><span class='period'>.</span><span class='id identifier rubyid_toutf8'>toutf8</span>
@@ -1203,7 +1203,7 @@
 295</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_insertEnterToTooLongMessage'>insertEnterToTooLongMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='gvar'>$SEND_STR_MAX</span>
@@ -1250,7 +1250,7 @@
 225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 222</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 222</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_isMaster'>isMaster</span>
   <span class='id identifier rubyid_bcdice'>bcdice</span> <span class='op'>=</span> <span class='id identifier rubyid_newBcDice'>newBcDice</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -1283,7 +1283,7 @@
 22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_newBcDice'>newBcDice</span>
   <span class='id identifier rubyid_bcdice'>bcdice</span> <span class='op'>=</span> <span class='ivar'>@bcdiceMarker</span><span class='period'>.</span><span class='id identifier rubyid_newBcDice'>newBcDice</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -1315,7 +1315,7 @@
 299</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 297</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_notice'>notice</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>NOTICE</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_encode'><span class='object_link'><a href="top-level-namespace.html#encode-instance_method" title="#encode (method)">encode</a></span></span><span class='lparen'>(</span><span class='gvar'>$ircCode</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -1353,7 +1353,7 @@
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_connected'>on_connected</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid__args'>_args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_printText'>printText</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>  -&gt; IRC server is connected.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1401,7 +1401,7 @@
 195</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 183</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 183</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_err_nicknameinuse'>on_err_nicknameinuse</span><span class='lparen'>(</span><span class='id identifier rubyid__event'>_event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug_out'>debug_out</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>on_err_nicknameinuse being !</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1444,7 +1444,7 @@
 65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_init'>on_init</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='id identifier rubyid_event'>event</span><span class='period'>.</span><span class='id identifier rubyid_args'>args</span>
@@ -1484,7 +1484,7 @@
 97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_invite'>on_invite</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_channel'>channel</span> <span class='op'>=</span> <span class='id identifier rubyid_getChannel'>getChannel</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
@@ -1532,7 +1532,7 @@
 86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_join'>on_join</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>on_join event</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
@@ -1581,7 +1581,7 @@
 109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_kick'>on_kick</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_channel'>channel</span> <span class='op'>=</span> <span class='id identifier rubyid_getChannel'>getChannel</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
@@ -1635,7 +1635,7 @@
 129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_msg'>on_msg</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>on_msg begin</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1683,7 +1683,7 @@
 71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_part'>on_part</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_channel'>channel</span> <span class='op'>=</span> <span class='id identifier rubyid_getChannel'>getChannel</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
@@ -1716,7 +1716,7 @@
 134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_privmsg'>on_privmsg</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=============&gt;on_privmsg begin event</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
@@ -1768,7 +1768,7 @@
 159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 136</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_public'>on_public</span><span class='lparen'>(</span><span class='id identifier rubyid_event'>event</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>on_public begin</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1821,12 +1821,12 @@
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_on_rpl_welcome'>on_rpl_welcome</span><span class='lparen'>(</span><span class='id identifier rubyid__message'>_message</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_printText'>printText</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>  -&gt; login to channel successed.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='comment'># post JOIN, @room.encode($ircCode).force_encoding_maybe(&#39;external&#39;)
-</span>  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>JOIN</span><span class='comma'>,</span> <span class='id identifier rubyid_encode'><span class='object_link'><a href="top-level-namespace.html#encode-instance_method" title="#encode (method)">encode</a></span></span><span class='lparen'>(</span><span class='gvar'>$ircCode</span><span class='comma'>,</span> <span class='ivar'>@room</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_printText'>printText</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>  -&gt; login to channel successed.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>  <span class='comment'># post JOIN, @room.encode($ircCode).force_encoding_maybe(&#39;external&#39;)
+</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>JOIN</span><span class='comma'>,</span> <span class='id identifier rubyid_encode'><span class='object_link'><a href="top-level-namespace.html#encode-instance_method" title="#encode (method)">encode</a></span></span><span class='lparen'>(</span><span class='gvar'>$ircCode</span><span class='comma'>,</span> <span class='ivar'>@room</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1853,7 +1853,7 @@
 31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ownNick'>ownNick</span>
   <span class='ivar'>@opts</span><span class='period'>.</span><span class='id identifier rubyid_nick'>nick</span>
@@ -1885,7 +1885,7 @@
 181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 177</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 177</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_printText'>printText</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@printFunction</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1917,7 +1917,7 @@
 303</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 301</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_privmsg'>privmsg</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>PRIVMSG</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_encode'><span class='object_link'><a href="top-level-namespace.html#encode-instance_method" title="#encode (method)">encode</a></span></span><span class='lparen'>(</span><span class='gvar'>$ircCode</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -1952,7 +1952,7 @@
 234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 227</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 227</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_quit'>quit</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>quitCommand</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1988,7 +1988,7 @@
 27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_readExtraCard'>readExtraCard</span><span class='lparen'>(</span><span class='id identifier rubyid_cardFileName'>cardFileName</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_bcdice'>bcdice</span> <span class='op'>=</span> <span class='id identifier rubyid_newBcDice'>newBcDice</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -2033,7 +2033,7 @@
 275</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 259</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 259</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_to'>to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -2079,7 +2079,7 @@
 253</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 249</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 249</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessageToChannels'>sendMessageToChannels</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@loginChannelList</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_channel'>channel</span><span class='op'>|</span>
@@ -2111,7 +2111,7 @@
 257</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 255</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 255</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessageToOnlySender'>sendMessageToOnlySender</span><span class='lparen'>(</span><span class='id identifier rubyid_nick_e'>nick_e</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid_nick_e'>nick_e</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -2142,7 +2142,7 @@
 40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setGameByTitle'>setGameByTitle</span><span class='lparen'>(</span><span class='id identifier rubyid_game_type'>game_type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_bcdice'>bcdice</span> <span class='op'>=</span> <span class='id identifier rubyid_newBcDice'>newBcDice</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -2173,7 +2173,7 @@
 175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setPrintFuction'>setPrintFuction</span><span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span><span class='rparen'>)</span>
   <span class='ivar'>@printFunction</span> <span class='op'>=</span> <span class='id identifier rubyid_func'>func</span>
@@ -2204,7 +2204,7 @@
 239</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 236</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setQuitFuction'>setQuitFuction</span><span class='lparen'>(</span><span class='id identifier rubyid_func'>func</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_bcdice'>bcdice</span> <span class='op'>=</span> <span class='id identifier rubyid_newBcDice'>newBcDice</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -2235,7 +2235,7 @@
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/ircBot.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'src/irc/ircBot.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_setRoom'>setRoom</span><span class='lparen'>(</span><span class='id identifier rubyid_room'>room</span><span class='rparen'>)</span>
   <span class='ivar'>@room</span> <span class='op'>=</span> <span class='id identifier rubyid_room'>room</span>
@@ -2250,9 +2250,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:48:04 2020 by
+  Generated on Fri Mar 20 02:13:08 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

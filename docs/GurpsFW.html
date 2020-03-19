@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/GurpsFW.rb</dd>
+    <dd>src/diceBot/GurpsFW.rb</dd>
   </dl>
   
 </div>
@@ -113,9 +113,118 @@
   
 
 </div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
 
 
-  <h2>Constant Summary</h2>
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GurpsFW</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ガープスフィルトウィズ</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>かあふすふいるとういす</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>--GURPS汎用コマンド----------
+・判定においてクリティカル・ファンブルの自動判別、成功度の自動計算。(3d6&lt;=目標値)
+ ・祝福等のダイス目にかかる修正は「3d6-1&lt;=目標値」といった記述で計算されます。
+ (ダイス目の修正値はクリティカル・ファンブルに影響を与えません。)
+ ・クリティカル値・ファンブル値への修正については現在対応していません。
+・クリティカル表 (CRT)
+・頭部打撃クリティカル表 (HCRT)
+・ファンブル表 (FMB)
+・呪文ファンブル表 (MFMB)
+・命中部位表 (HIT)
+・恐怖表 (FEAR+n)
+　nには恐怖判定の失敗度を入れてください。
+・反応判定表 (REACT, REACT±n)
+　nには反応修正を入れてください。
+・D66ダイスあり
+--GURPS-FW専用コマンド----------
+・ドロップ判定(DROP)/ネームドドロップ判定(DROPN)
+ ・ドロップ判定に修正が付く場合は末尾に+xを記述(xは修正値)。(DROP+x、DROPN+x)
+・必殺技表(HST)/驚異的必殺技表(KHST)
+ ・ホムンクルスの【必殺技！】/【驚異的必殺技！】用コマンド。
+・ナンバーワンくじ/ノーマル(LOTN)/プレミアム(LOTP)
+--夢幻の迷宮(ver.2013/11/07)----------
+・コマンド中のdには難易度を入れてください。(初級：E 中級：N 上級：H 悪夢：L)
+・コマンド中のaには地形を入れてください。
+ (1：洞窟 2：遺跡 3：断崖 4：水辺 5：森林 6：墓地)
+・ランダムイベント(RANDd)/地形固定(RANDda)
+・ランダムエンカウント(RENCd)/地形固定(RENCda)
+・トラップリスト(TRAPd)
+・報酬財宝テーブル(xに到達深度を記述)。 (TRSdx)
+ ・財宝テーブルの段階が変動する場合、末尾に±yを記述(yは変動段階)。(TRSdx±y)
+  [例：TRSE5-1、TRSH36+2]
+・地形決定表(AREA)
+・迷宮追加オプション表(RANDOP)
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
   
   <h3 class="inherited">Constants inherited
      from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
@@ -187,73 +296,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#gameName-instance_method" title="#gameName (instance method)">#<strong>gameName</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#gameType-instance_method" title="#gameType (instance method)">#<strong>gameType</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#getCommandResult-instance_method" title="#getCommandResult (instance method)">#<strong>getCommandResult</strong>(string, nick_e)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getHelpMessage-instance_method" title="#getHelpMessage (instance method)">#<strong>getHelpMessage</strong>  &#x21d2; Object </a>
     
 
     
@@ -693,7 +736,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#inherited-class_method" title="DiceBot.inherited (method)">inherited</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommand-instance_method" title="DiceBot#rollDiceCommand (method)">#rollDiceCommand</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setGameType-instance_method" title="DiceBot#setGameType (method)">#setGameType</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_2D6-instance_method" title="DiceBot#check_2D6 (method)">#check_2D6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommand-instance_method" title="DiceBot#rollDiceCommand (method)">#rollDiceCommand</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -723,14 +766,14 @@
       <pre class="lines">
 
 
-27
-28
-29
-30
-31</pre>
+74
+75
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span>
@@ -775,7 +818,6 @@
       <pre class="lines">
 
 
-96
 97
 98
 99
@@ -811,10 +853,11 @@
 129
 130
 131
-132</pre>
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_nD6'>check_nD6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_max'>_dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid__n1'>_n1</span><span class='comma'>,</span> <span class='id identifier rubyid__n_max'>_n_max</span><span class='rparen'>)</span> <span class='comment'># ゲーム別成功度判定(nD6)
 </span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_dice_cnt'>dice_cnt</span> <span class='op'>==</span> <span class='int'>3</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;=</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -831,9 +874,9 @@
       <span class='kw'>return</span> <span class='id identifier rubyid_crt_string'>crt_string</span>
     <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='int'>4</span>
       <span class='kw'>return</span> <span class='id identifier rubyid_crt_string'>crt_string</span>
-    <span class='kw'>end</span>
-    <span class='comment'># ファンブル
-</span>    <span class='kw'>if</span> <span class='id identifier rubyid_diff'>diff</span> <span class='op'>-</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='op'>-</span><span class='int'>10</span>
+    <span class='kw'>end</span>    <span class='comment'># ファンブル
+</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_diff'>diff</span> <span class='op'>-</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='op'>-</span><span class='int'>10</span>
       <span class='kw'>return</span> <span class='id identifier rubyid_fmb_string'>fmb_string</span>
     <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&gt;=</span> <span class='int'>17</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_diff'>diff</span> <span class='op'>&lt;=</span> <span class='int'>15</span><span class='rparen'>)</span>
       <span class='kw'>return</span> <span class='id identifier rubyid_fmb_string'>fmb_string</span>
@@ -873,7 +916,6 @@
       <pre class="lines">
 
 
-79
 80
 81
 82
@@ -888,10 +930,11 @@
 91
 92
 93
-94</pre>
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dice_command'>dice_command</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_secret_flg'>secret_flg</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -915,66 +958,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="gameName-instance_method">
-  
-    #<strong>gameName</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-33
-34
-35</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 33</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameName'>gameName</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ガープスフィルトウィズ</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="gameType-instance_method">
-  
-    #<strong>gameType</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-37
-38
-39</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 37</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_gameType'>gameType</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GurpsFW</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="getCommandResult-instance_method">
   
     #<strong>getCommandResult</strong>(string, nick_e)  &#x21d2; <tt>Object</tt> 
@@ -989,7 +972,6 @@
       <pre class="lines">
 
 
-134
 135
 136
 137
@@ -1498,10 +1480,11 @@
 640
 641
 642
-643</pre>
+643
+644</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCommandResult'>getCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_nick_e'>nick_e</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -2019,104 +2002,6 @@ PCは全員「好色」「平和愛好/専守防衛」の特徴を得る。「�
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getHelpMessage-instance_method">
-  
-    #<strong>getHelpMessage</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 41</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getHelpMessage'>getHelpMessage</span>
-  <span class='kw'>return</span> <span class='heredoc_beg'>&lt;&lt;INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>--GURPS汎用コマンド----------
-・判定においてクリティカル・ファンブルの自動判別、成功度の自動計算。(3d6&lt;=目標値)
- ・祝福等のダイス目にかかる修正は「3d6-1&lt;=目標値」といった記述で計算されます。
- (ダイス目の修正値はクリティカル・ファンブルに影響を与えません。)
- ・クリティカル値・ファンブル値への修正については現在対応していません。
-・クリティカル表 (CRT)
-・頭部打撃クリティカル表 (HCRT)
-・ファンブル表 (FMB)
-・呪文ファンブル表 (MFMB)
-・命中部位表 (HIT)
-・恐怖表 (FEAR+n)
-　nには恐怖判定の失敗度を入れてください。
-・反応判定表 (REACT, REACT±n)
-　nには反応修正を入れてください。
-・D66ダイスあり
---GURPS-FW専用コマンド----------
-・ドロップ判定(DROP)/ネームドドロップ判定(DROPN)
- ・ドロップ判定に修正が付く場合は末尾に+xを記述(xは修正値)。(DROP+x、DROPN+x)
-・必殺技表(HST)/驚異的必殺技表(KHST)
- ・ホムンクルスの【必殺技！】/【驚異的必殺技！】用コマンド。
-・ナンバーワンくじ/ノーマル(LOTN)/プレミアム(LOTP)
---夢幻の迷宮(ver.2013/11/07)----------
-・コマンド中のdには難易度を入れてください。(初級：E 中級：N 上級：H 悪夢：L)
-・コマンド中のaには地形を入れてください。
- (1：洞窟 2：遺跡 3：断崖 4：水辺 5：森林 6：墓地)
-・ランダムイベント(RANDd)/地形固定(RANDda)
-・ランダムエンカウント(RENCd)/地形固定(RENCda)
-・トラップリスト(TRAPd)
-・報酬財宝テーブル(xに到達深度を記述)。 (TRSdx)
- ・財宝テーブルの段階が変動する場合、末尾に±yを記述(yは変動段階)。(TRSdx±y)
-[例：TRSE5-1、TRSH36+2]
-・地形決定表(AREA)
-・迷宮追加オプション表(RANDOP)
-</span><span class='heredoc_end'>INFO_MESSAGE_TEXT
-</span><span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="getLotResult-instance_method">
   
     #<strong>getLotResult</strong>(type)  &#x21d2; <tt>Object</tt> 
@@ -2142,16 +2027,16 @@ PCは全員「好色」「平和愛好/専守防衛」の特徴を得る。「�
       <pre class="lines">
 
 
-800
 801
 802
 803
 804
 805
-806</pre>
+806
+807</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 800</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 801</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getLotResult'>getLotResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>P</span><span class='tstring_end'>&quot;</span></span>
@@ -2180,7 +2065,6 @@ PCは全員「好色」「平和愛好/専守防衛」の特徴を得る。「�
       <pre class="lines">
 
 
-1457
 1458
 1459
 1460
@@ -3067,10 +2951,11 @@ PCは全員「好色」「平和愛好/専守防衛」の特徴を得る。「�
 2341
 2342
 2343
-2344</pre>
+2344
+2345</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 1457</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 1458</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getRandomDiff'>getRandomDiff</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice23'>dice23</span><span class='comma'>,</span> <span class='id identifier rubyid_dif'>dif</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -3991,7 +3876,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-986
 987
 988
 989
@@ -4460,10 +4344,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 1452
 1453
 1454
-1455</pre>
+1455
+1456</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 986</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 987</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getRandomEvent'>getRandomEvent</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_diff'>diff</span>
@@ -4966,7 +4851,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-940
 941
 942
 943
@@ -5009,10 +4893,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 980
 981
 982
-983</pre>
+983
+984</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 940</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 941</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getTrapTable'>getTrapTable</span><span class='lparen'>(</span><span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_diff'>diff</span>
@@ -5089,7 +4974,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-809
 810
 811
 812
@@ -5217,15 +5101,16 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 934
 935
 936
-937</pre>
+937
+938</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 809</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 810</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getTresureTable'>getTresureTable</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
-  <span class='kw'>case</span> <span class='id identifier rubyid_num'>num</span>
-    <span class='comment'># 初級マイナス
-</span>  <span class='kw'>when</span> <span class='op'>-</span><span class='int'>1</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_num'>num</span>    <span class='comment'># 初級マイナス
+</span>
+  <span class='kw'>when</span> <span class='op'>-</span><span class='int'>1</span>
     <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HPポーション(消耗品)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MPポーション(消耗品)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
@@ -5382,7 +5267,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-646
 647
 648
 649
@@ -5393,10 +5277,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 654
 655
 656
-657</pre>
+657
+658</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 646</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 647</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normal1'>normal1</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5441,7 +5326,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-660
 661
 662
 663
@@ -5452,10 +5336,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 668
 669
 670
-671</pre>
+671
+672</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 660</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 661</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normal2'>normal2</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5500,7 +5385,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-674
 675
 676
 677
@@ -5511,10 +5395,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 682
 683
 684
-685</pre>
+685
+686</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 674</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 675</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normal3'>normal3</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5559,7 +5444,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-688
 689
 690
 691
@@ -5570,10 +5454,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 696
 697
 698
-699</pre>
+699
+700</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 688</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 689</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normal4'>normal4</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5618,7 +5503,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-702
 703
 704
 705
@@ -5629,10 +5513,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 710
 711
 712
-713</pre>
+713
+714</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 702</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 703</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normal5'>normal5</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5677,7 +5562,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-716
 717
 718
 719
@@ -5688,10 +5572,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 724
 725
 726
-727</pre>
+727
+728</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 716</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 717</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_premium1'>premium1</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5736,7 +5621,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-730
 731
 732
 733
@@ -5747,10 +5631,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 738
 739
 740
-741</pre>
+741
+742</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 730</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 731</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_premium2'>premium2</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5795,7 +5680,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-744
 745
 746
 747
@@ -5806,10 +5690,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 752
 753
 754
-755</pre>
+755
+756</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 744</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 745</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_premium3'>premium3</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5854,7 +5739,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-758
 759
 760
 761
@@ -5865,10 +5749,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 766
 767
 768
-769</pre>
+769
+770</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 758</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 759</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_premium4'>premium4</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5913,7 +5798,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-772
 773
 774
 775
@@ -5924,10 +5808,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 780
 781
 782
-783</pre>
+783
+784</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 772</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 773</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_premium5'>premium5</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5972,7 +5857,6 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
       <pre class="lines">
 
 
-786
 787
 788
 789
@@ -5983,10 +5867,11 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 794
 795
 796
-797</pre>
+797
+798</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/GurpsFW.rb', line 786</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/GurpsFW.rb', line 787</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_premium6'>premium6</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -6010,9 +5895,9 @@ ST11 DX15 IQ20 HT15 HP120 MP160 FP81
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:54 2020 by
+  Generated on Fri Mar 20 02:13:12 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

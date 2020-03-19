@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>irc/encode.rb</dd>
+    <dd>src/irc/encode.rb</dd>
   </dl>
   
 </div>
@@ -269,7 +269,7 @@
 55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/encode.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'src/irc/encode.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_encode'><span class='object_link'><a href="top-level-namespace.html#encode-instance_method" title="#encode (method)">encode</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_to_encoding'>to_encoding</span><span class='comma'>,</span> <span class='id identifier rubyid_from_encoding'>from_encoding</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid__options'>_options</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_from_encoding'>from_encoding</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -345,7 +345,7 @@
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/encode.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'src/irc/encode.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_encoding'>encoding</span>
   <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@encoding</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -402,7 +402,7 @@
 89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/encode.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'src/irc/encode.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_force_encoding_maybe'>force_encoding_maybe</span><span class='lparen'>(</span><span class='id identifier rubyid_enc'>enc</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:force_encoding</span>
@@ -436,7 +436,7 @@
 81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'irc/encode.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'src/irc/encode.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_encoding'>set_encoding</span><span class='lparen'>(</span><span class='id identifier rubyid_encoding'>encoding</span><span class='rparen'>)</span>
   <span class='ivar'>@encoding</span> <span class='op'>=</span> <span class='id identifier rubyid_encoding'>encoding</span>
@@ -451,9 +451,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:48:04 2020 by
+  Generated on Fri Mar 20 02:13:08 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

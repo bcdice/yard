@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>dice/RerollDice.rb</dd>
+    <dd>src/dice/RerollDice.rb</dd>
   </dl>
   
 </div>
@@ -315,7 +315,7 @@
 8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'dice/RerollDice.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'src/dice/RerollDice.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_bcdice'>bcdice</span><span class='comma'>,</span> <span class='id identifier rubyid_diceBot'>diceBot</span><span class='rparen'>)</span>
   <span class='ivar'>@bcdice</span> <span class='op'>=</span> <span class='id identifier rubyid_bcdice'>bcdice</span>
@@ -382,7 +382,7 @@
 142</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'dice/RerollDice.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'src/dice/RerollDice.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checkReRollRule'>checkReRollRule</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_max'>dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span> <span class='comment'># 振り足しロールの条件確認
 </span>  <span class='id identifier rubyid_valid'>valid</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -437,7 +437,7 @@
 103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'dice/RerollDice.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'src/dice/RerollDice.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCondition'>getCondition</span><span class='lparen'>(</span><span class='id identifier rubyid_operator'>operator</span><span class='comma'>,</span> <span class='id identifier rubyid_conditionValue'>conditionValue</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_operator'>operator</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_conditionValue'>conditionValue</span>
@@ -485,7 +485,7 @@
 117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'dice/RerollDice.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'src/dice/RerollDice.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getRerollNumber'>getRerollNumber</span><span class='lparen'>(</span><span class='id identifier rubyid_braceThreshold'>braceThreshold</span><span class='comma'>,</span> <span class='id identifier rubyid_atmarkThreshold'>atmarkThreshold</span><span class='comma'>,</span> <span class='id identifier rubyid_conditionValue'>conditionValue</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_braceThreshold'>braceThreshold</span>
@@ -525,7 +525,7 @@
 121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'dice/RerollDice.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'src/dice/RerollDice.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_raiseErroForJudgeRule'>raiseErroForJudgeRule</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>条件が間違っています。2R6&gt;=5 あるいは 2R6[5] のように振り足し目標値を指定してください。</span><span class='tstring_end'>&quot;</span></span>
@@ -574,7 +574,7 @@
 21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'dice/RerollDice.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'src/dice/RerollDice.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDice'>rollDice</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -678,7 +678,7 @@
 91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'dice/RerollDice.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'src/dice/RerollDice.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCatched'>rollDiceCatched</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RerollDice.rollDice string</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -712,9 +712,9 @@
   <span class='id identifier rubyid_numberSpot1Total'>numberSpot1Total</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='id identifier rubyid_loopCount'>loopCount</span> <span class='op'>=</span> <span class='int'>0</span>
 
-  <span class='kw'>while</span> <span class='op'>!</span><span class='id identifier rubyid_diceQueue'>diceQueue</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@diceBot</span><span class='period'>.</span><span class='id identifier rubyid_should_reroll?'>should_reroll?</span><span class='lparen'>(</span><span class='id identifier rubyid_loopCount'>loopCount</span><span class='rparen'>)</span>
-    <span class='comment'># xRn
-</span>    <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='id identifier rubyid_diceQueue'>diceQueue</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
+  <span class='kw'>while</span> <span class='op'>!</span><span class='id identifier rubyid_diceQueue'>diceQueue</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@diceBot</span><span class='period'>.</span><span class='id identifier rubyid_should_reroll?'>should_reroll?</span><span class='lparen'>(</span><span class='id identifier rubyid_loopCount'>loopCount</span><span class='rparen'>)</span>    <span class='comment'># xRn
+</span>
+    <span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_n'>n</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='id identifier rubyid_diceQueue'>diceQueue</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
     <span class='id identifier rubyid_loopCount'>loopCount</span> <span class='op'>+=</span> <span class='int'>1</span>
 
     <span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_str'>dice_str</span><span class='comma'>,</span> <span class='id identifier rubyid_numberSpot1'>numberSpot1</span><span class='comma'>,</span> <span class='id identifier rubyid_cnt_max'>cnt_max</span><span class='comma'>,</span> <span class='id identifier rubyid_n_max'>n_max</span><span class='comma'>,</span> <span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_rerollCount'>rerollCount</span> <span class='op'>=</span>
@@ -759,9 +759,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:52 2020 by
+  Generated on Fri Mar 20 02:13:10 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

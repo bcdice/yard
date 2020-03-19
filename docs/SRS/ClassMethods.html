@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>diceBot/SRS.rb</dd>
+    <dd>src/diceBot/SRS.rb</dd>
   </dl>
   
 </div>
@@ -297,12 +297,12 @@
       <pre class="lines">
 
 
-56
-57
-58</pre>
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/SRS.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_aliases_re_for_srs_roll_with_target_value'>aliases_re_for_srs_roll_with_target_value</span>
   <span class='ivar'>@aliases_re_for_srs_roll_with_target_value</span>
@@ -353,12 +353,12 @@
       <pre class="lines">
 
 
-60
-61
-62</pre>
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/SRS.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_aliases_re_for_srs_roll_without_target_value'>aliases_re_for_srs_roll_without_target_value</span>
   <span class='ivar'>@aliases_re_for_srs_roll_without_target_value</span>
@@ -409,12 +409,12 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/SRS.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_help_message'>help_message</span>
   <span class='ivar'>@help_message</span>
@@ -470,16 +470,16 @@
       <pre class="lines">
 
 
-94
-95
-96
-97
-98
-99
-100</pre>
+103
+104
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/SRS.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clear_aliases_for_srs_roll'>clear_aliases_for_srs_roll</span>
   <span class='ivar'>@aliases_re_for_srs_roll_with_target_value</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -552,15 +552,6 @@
       <pre class="lines">
 
 
-68
-69
-70
-71
-72
-73
-74
-75
-76
 77
 78
 79
@@ -574,10 +565,19 @@
 87
 88
 89
-90</pre>
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'diceBot/SRS.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/SRS.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_aliases_for_srs_roll'>set_aliases_for_srs_roll</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_aliases'>aliases</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_aliases_upcase'>aliases_upcase</span> <span class='op'>=</span> <span class='id identifier rubyid_aliases'>aliases</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:upcase</span><span class='rparen'>)</span>
@@ -612,9 +612,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:51 2020 by
+  Generated on Fri Mar 20 02:13:07 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>

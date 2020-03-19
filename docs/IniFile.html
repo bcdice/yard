@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>IniFile.rb</dd>
+    <dd>src/IniFile.rb</dd>
   </dl>
   
 </div>
@@ -354,7 +354,7 @@
 7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 4</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_fileName'>fileName</span><span class='rparen'>)</span>
   <span class='ivar'>@fileName</span> <span class='op'>=</span> <span class='id identifier rubyid_fileName'>fileName</span>
@@ -395,7 +395,7 @@
 105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_deleteSection'>deleteSection</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='rparen'>)</span>
   <span class='ivar'>@infos</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='rparen'>)</span>
@@ -451,7 +451,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getInfos'>getInfos</span>
   <span class='ivar'>@infos</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -504,7 +504,7 @@
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSectionNames'>getSectionNames</span>
   <span class='ivar'>@infos</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
@@ -551,7 +551,7 @@
 98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getWriteInfoText'>getWriteInfoText</span>
   <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -608,7 +608,7 @@
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_defaultValue'>defaultValue</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='ivar'>@infos</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span>
@@ -654,7 +654,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_readAndWrite'>readAndWrite</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_defaultValue'>defaultValue</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -694,7 +694,7 @@
 70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@infos</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -731,7 +731,7 @@
 77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'IniFile.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'src/IniFile.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_writeToFile'>writeToFile</span>
   <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_getWriteInfoText'>getWriteInfoText</span>
@@ -749,9 +749,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon Feb 17 23:47:51 2020 by
+  Generated on Fri Mar 20 02:13:07 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.3).
+  0.9.24 (ruby-2.7.0).
 </div>
 
     </div>
