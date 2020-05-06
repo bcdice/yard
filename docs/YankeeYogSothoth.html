@@ -198,260 +198,260 @@ HPST	病院生活表
 ・D66ダイスあり
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
-        <dt id="tables-classvariable" class="">@@tables =
+        <dt id="TABLES-constant" class="">TABLES =
           
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span>
-  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>FT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ファンブル表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="Table.html" title="Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Table.html#initialize-instance_method" title="Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ファンブル表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='words_sep'>
       </span><span class='tstring_content'>やっちまった……。テンションが1段階減少する。</span><span class='words_sep'>
       </span><span class='tstring_content'>ひょうなことから嫌な状況になる。ランダムに変調（WT）を1つ受ける。</span><span class='words_sep'>
       </span><span class='tstring_content'>あまりにもカッコ悪いところが伝わってしまう。自分に対して【友情度】を持つPC全員は、リスペクトにチェックを入れる。</span><span class='words_sep'>
       </span><span class='tstring_content'>自分の絶望を観測し、邪神が活性化する。バッドヤンキーの「ケツモチ邪神の加護」が1点上昇する。</span><span class='words_sep'>
       </span><span class='tstring_content'>つまらないことで怪我をする。自分の【HP】が1D6点減少する。</span><span class='words_sep'>
       </span><span class='tstring_content'>逆境に燃える。テンションが1段階上昇する。</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>WT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>変調表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
+    </span><span class='tstring_end'>}</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="Table.html" title="Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Table.html#initialize-instance_method" title="Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>変調表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='words_sep'>
       </span><span class='tstring_content'>毒：サイクル終了時もしくはラウンド終了時に、2D6点のダメージを受ける。</span><span class='words_sep'>
       </span><span class='tstring_content'>呪い：熱血蘇生の達成値が2点減少する。NPCが受けた場合、受けるダメージが2点上昇する。</span><span class='words_sep'>
       </span><span class='tstring_content'>火傷：テンションの効果によって、【攻撃力】が上昇しない。NPCは【攻撃力】が2点低いものとして扱う（最低０点）。</span><span class='words_sep'>
       </span><span class='tstring_content'>骨折：判定に失敗するたびに、5点のダメージを受ける。</span><span class='words_sep'>
       </span><span class='tstring_content'>出血：サイクル終了時もしくはラウンド終了時に、2点のダメージを受ける。また、施設やアイテムの効果で【HP】が上昇しない。</span><span class='words_sep'>
       </span><span class='tstring_content'>目つぶし：判定の達成値が2点減少する。</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KKT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>関係表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
+    </span><span class='tstring_end'>}</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KKT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="Table.html" title="Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Table.html#initialize-instance_method" title="Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>関係表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='words_sep'>
       </span><span class='tstring_content'>「家族／気に食わない」</span><span class='words_sep'>
       </span><span class='tstring_content'>「親友／近寄るな」</span><span class='words_sep'>
       </span><span class='tstring_content'>「悪友／こざかしい」</span><span class='words_sep'>
       </span><span class='tstring_content'>「ライバル／チンピラ」</span><span class='words_sep'>
       </span><span class='tstring_content'>「いい奴／悪い奴」</span><span class='words_sep'>
       </span><span class='tstring_content'>「利用できる／ヘタレ」</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DBRT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>他愛のない会話表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D66</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
-      </span><span class='tstring_content'>11:「政治の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>12:「勉強の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>13:「友達の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>14:「兄弟姉妹の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>15:「好きなものの話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>16:「嫌いなものの話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>22:「ラーメンの話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>23:「コンビニの話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>24:「学校生活の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>25:「先輩後輩の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>26:「趣味の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>33:「肉の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>34:「中学時代の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>35:「喧嘩の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>36:「ファッションの話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>44:「家の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>45:「好みの異性の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>46:「テレビ番組の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>55:「野菜の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>56:「部活の話」</span><span class='words_sep'>
-      </span><span class='tstring_content'>66:「ダブりの話」</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TKT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戦う理由表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D66</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
-      </span><span class='tstring_content'>11:「なんとなく」</span><span class='words_sep'>
-      </span><span class='tstring_content'>12:「好みのエルフがいた」</span><span class='words_sep'>
-      </span><span class='tstring_content'>13:「エルフに世話になった」</span><span class='words_sep'>
-      </span><span class='tstring_content'>14:「ドワーフの飯がうまかった」</span><span class='words_sep'>
-      </span><span class='tstring_content'>15:「ドワーフにファッション特徴を作ってもらった」</span><span class='words_sep'>
-      </span><span class='tstring_content'>16:「妖精たちのいたずらがほほえましかった」</span><span class='words_sep'>
-      </span><span class='tstring_content'>22:「バッドヤンキーと昔からの因縁があるから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>23:「バッドヤンキーが気に入らなかった」</span><span class='words_sep'>
-      </span><span class='tstring_content'>24:「強いやつと戦いたい」</span><span class='words_sep'>
-      </span><span class='tstring_content'>25:「異世界にワクワクしているから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>26:「バッドヤンキー集団に迷惑を受けたから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>33:「夢見るNPCが好みだったから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>34:「夢見るNPCの夢に共感したから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>35:「夢見るNPCの夢を応援したいと思ったから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>36:「夢見るNPCを放っておけないから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>44:「家に帰りたいから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>45:「夢見るNPCは友達だから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>46:「他のPCと気が合ったから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>55:「マーメイドと仲良くなった」</span><span class='words_sep'>
-      </span><span class='tstring_content'>56:「退屈を紛らわせられそうだから」</span><span class='words_sep'>
-      </span><span class='tstring_content'>66:「ただ暴れたかった」</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BUDT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>武勇伝表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D66</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
-      </span><span class='tstring_content'>11:バッドヤンキーのチームに自分が所属する学校を破壊されたが、最後まで戦った。／テンションが1段階上昇</span><span class='words_sep'>
-      </span><span class='tstring_content'>12:バッドヤンキーチームの兵隊が襲い掛かってきたが、撃退した。／【HP】＋３</span><span class='words_sep'>
-      </span><span class='tstring_content'>13:バッドヤンキーと何度も戦い、ライバルとして認識されていた。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>14:バッドヤンキー配下の集団をいくつか潰してまわっていた。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>15:バッドヤンキーのチームに入りそうになった後輩を説得した。／【HP】＋３</span><span class='words_sep'>
-      </span><span class='tstring_content'>16:バッドヤンキーに支配されていた店を救った。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>22:アメリカで暴れた。／テンションが1段階上昇</span><span class='words_sep'>
-      </span><span class='tstring_content'>23:学校をサボって、日本全国を旅をしてまわった。／【HP】＋３</span><span class='words_sep'>
-      </span><span class='tstring_content'>24:好きなアーティストのライブに行き、マナーの悪いファンを黙らせた。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>25:抗争中の学校に一人で乗り込んで、戦いを終わらせた。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>26:へまをした仲間を助けるため、頭を下げた。／【HP】＋３</span><span class='words_sep'>
-      </span><span class='tstring_content'>33:大規模な運動会で活躍し、最優秀賞を獲得した。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>34:家族や仲間に迷惑をかけたチームを潰した。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>35:暴走族を一人で潰した。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>36:本職（ヤクザ）と戦って謝らせた。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>44:ドッジボール大会に出場し、優勝をして賞品を手に入れた。／「絆創膏」「テンアゲアイテム」「ポーション」「お守り」のうち１つを選んで獲得する</span><span class='words_sep'>
-      </span><span class='tstring_content'>45:仲間たちと一緒に学校行事を盛り上げた。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>46:仲間と一緒にディスカウントストアで買い物をし、キャンプをした。／「絆創膏」「テンアゲアイテム」「ポーション」「お守り」のうち１つを選んで獲得する</span><span class='words_sep'>
-      </span><span class='tstring_content'>55:隣のプレイヤーのPCが所属する高校と大きな抗争をした。／右隣のプレイヤーのPCに対する【友情度】が1点上昇</span><span class='words_sep'>
-      </span><span class='tstring_content'>56:修学旅行先で喧嘩し、その後友情を深めた。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>66:隣のプレイヤーのPCと一緒に、大きな悪の組織を潰した。／右隣のプレイヤーのPCに対する【友情度】が1点上昇</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GUDT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ガイヤンキー武勇伝表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D66</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
-      </span><span class='tstring_content'>11:アザトースが突然接触してきたので、殴って追い返した。／テンションが1段階上昇</span><span class='words_sep'>
-      </span><span class='tstring_content'>12:シュブ＝ニグラスのサバトに乗り込んで潰した。／【HP】＋３</span><span class='words_sep'>
-      </span><span class='tstring_content'>13:クトゥルフの落とし子を殴り倒して追い返した。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>14:ヨグ=ソトースの勧誘を受けたが、断ってやった。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>15:深きものどもが住む漁村を訪ね、罠にはめられたが脱出した。／【HP】＋３</span><span class='words_sep'>
-      </span><span class='tstring_content'>16:一晩飲み明かした相手がナイアーラトテップだった。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>22:生きてる恐竜と出会った。／テンションが1段階上昇</span><span class='words_sep'>
-      </span><span class='tstring_content'>23:ファンタジー世界を冒険者として旅してまわった。／【HP】＋３</span><span class='words_sep'>
-      </span><span class='tstring_content'>24:町で起こった少女たちの失踪事件を解決した。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>25:バッドヤンキーに潰された騎士団を鼓舞して、立て直しに協力した。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>26:大きな城下町に起こった殺人事件や傷害事件を幾つも解決した。／【HP】＋３</span><span class='words_sep'>
-      </span><span class='tstring_content'>33:大きな城下町で、テンションが上がっていろいろ買い込んでしまった。／「絆創膏」「テンアゲアイテム」「ポーション」「お守り」のうち１つを選んで獲得する</span><span class='words_sep'>
-      </span><span class='tstring_content'>34:エルフの森を燃やしつくそうとする拝火暴走族をこらしめた。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>35:ドワーフの洞窟に現われた巨大ワームを投げ飛ばした。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>36:妖精たちの村に迷い込んで、村を荒らそうとするゴブリンをブッ飛ばした。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>44:巨大な王国が主催している武術大会で優勝し、名誉とアイテムを手に入れた。／「絆創膏」「テンアゲアイテム」「ポーション」「お守り」のうち１つを選んで獲得する</span><span class='words_sep'>
-      </span><span class='tstring_content'>45:ゴブリンの襲撃から町を守り切った。／【打たれ強さ】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>46:悪いチームにさらわれた姫や王子様を助けたら、惚れられた。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>55:次に会うヤンキーのために、この世界の土産話を作ってきた。／右隣のプレイヤーのPCに対する【友情度】が1点上昇</span><span class='words_sep'>
-      </span><span class='tstring_content'>56:悪い魔法使いの儀式を突き止めて、潰した。／【攻撃力】＋１</span><span class='words_sep'>
-      </span><span class='tstring_content'>66:次に会うヤンキーのために、うまいものを用意した。／右隣のプレイヤーのPCに対する【友情度】が1点上昇</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DAIT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>第一印象表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
+    </span><span class='tstring_end'>}</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DBRT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="D66Table.html" title="D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="D66Table.html#initialize-instance_method" title="D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>他愛のない会話表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:asc</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「政治の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「勉強の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「友達の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「兄弟姉妹の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「好きなものの話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「嫌いなものの話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「ラーメンの話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「コンビニの話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「学校生活の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「先輩後輩の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「趣味の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「肉の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「中学時代の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「喧嘩の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「ファッションの話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「家の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「好みの異性の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「テレビ番組の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「野菜の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「部活の話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「ダブりの話」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TKT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="D66Table.html" title="D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="D66Table.html#initialize-instance_method" title="D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戦う理由表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:asc</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「なんとなく」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「好みのエルフがいた」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「エルフに世話になった」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「ドワーフの飯がうまかった」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「ドワーフにファッション特徴を作ってもらった」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「妖精たちのいたずらがほほえましかった」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「バッドヤンキーと昔からの因縁があるから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「バッドヤンキーが気に入らなかった」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「強いやつと戦いたい」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「異世界にワクワクしているから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「バッドヤンキー集団に迷惑を受けたから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「夢見るNPCが好みだったから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「夢見るNPCの夢に共感したから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「夢見るNPCの夢を応援したいと思ったから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「夢見るNPCを放っておけないから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「家に帰りたいから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「夢見るNPCは友達だから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「他のPCと気が合ったから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「マーメイドと仲良くなった」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「退屈を紛らわせられそうだから」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「ただ暴れたかった」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BUDT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="D66Table.html" title="D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="D66Table.html#initialize-instance_method" title="D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>武勇伝表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:asc</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッドヤンキーのチームに自分が所属する学校を破壊されたが、最後まで戦った。／テンションが1段階上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッドヤンキーチームの兵隊が襲い掛かってきたが、撃退した。／【HP】＋３</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッドヤンキーと何度も戦い、ライバルとして認識されていた。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッドヤンキー配下の集団をいくつか潰してまわっていた。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッドヤンキーのチームに入りそうになった後輩を説得した。／【HP】＋３</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッドヤンキーに支配されていた店を救った。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アメリカで暴れた。／テンションが1段階上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>学校をサボって、日本全国を旅をしてまわった。／【HP】＋３</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>好きなアーティストのライブに行き、マナーの悪いファンを黙らせた。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>抗争中の学校に一人で乗り込んで、戦いを終わらせた。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>へまをした仲間を助けるため、頭を下げた。／【HP】＋３</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大規模な運動会で活躍し、最優秀賞を獲得した。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>家族や仲間に迷惑をかけたチームを潰した。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>暴走族を一人で潰した。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>本職（ヤクザ）と戦って謝らせた。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ドッジボール大会に出場し、優勝をして賞品を手に入れた。／「絆創膏」「テンアゲアイテム」「ポーション」「お守り」のうち１つを選んで獲得する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>仲間たちと一緒に学校行事を盛り上げた。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>仲間と一緒にディスカウントストアで買い物をし、キャンプをした。／「絆創膏」「テンアゲアイテム」「ポーション」「お守り」のうち１つを選んで獲得する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>隣のプレイヤーのPCが所属する高校と大きな抗争をした。／右隣のプレイヤーのPCに対する【友情度】が1点上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>修学旅行先で喧嘩し、その後友情を深めた。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>隣のプレイヤーのPCと一緒に、大きな悪の組織を潰した。／右隣のプレイヤーのPCに対する【友情度】が1点上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GUDT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="D66Table.html" title="D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="D66Table.html#initialize-instance_method" title="D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ガイヤンキー武勇伝表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:asc</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アザトースが突然接触してきたので、殴って追い返した。／テンションが1段階上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>シュブ＝ニグラスのサバトに乗り込んで潰した。／【HP】＋３</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>クトゥルフの落とし子を殴り倒して追い返した。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヨグ=ソトースの勧誘を受けたが、断ってやった。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>深きものどもが住む漁村を訪ね、罠にはめられたが脱出した。／【HP】＋３</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>一晩飲み明かした相手がナイアーラトテップだった。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>生きてる恐竜と出会った。／テンションが1段階上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ファンタジー世界を冒険者として旅してまわった。／【HP】＋３</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>町で起こった少女たちの失踪事件を解決した。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッドヤンキーに潰された騎士団を鼓舞して、立て直しに協力した。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大きな城下町に起こった殺人事件や傷害事件を幾つも解決した。／【HP】＋３</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大きな城下町で、テンションが上がっていろいろ買い込んでしまった。／「絆創膏」「テンアゲアイテム」「ポーション」「お守り」のうち１つを選んで獲得する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エルフの森を燃やしつくそうとする拝火暴走族をこらしめた。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ドワーフの洞窟に現われた巨大ワームを投げ飛ばした。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>妖精たちの村に迷い込んで、村を荒らそうとするゴブリンをブッ飛ばした。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>巨大な王国が主催している武術大会で優勝し、名誉とアイテムを手に入れた。／「絆創膏」「テンアゲアイテム」「ポーション」「お守り」のうち１つを選んで獲得する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ゴブリンの襲撃から町を守り切った。／【打たれ強さ】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>悪いチームにさらわれた姫や王子様を助けたら、惚れられた。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>次に会うヤンキーのために、この世界の土産話を作ってきた。／右隣のプレイヤーのPCに対する【友情度】が1点上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>悪い魔法使いの儀式を突き止めて、潰した。／【攻撃力】＋１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>次に会うヤンキーのために、うまいものを用意した。／右隣のプレイヤーのPCに対する【友情度】が1点上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DAIT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="Table.html" title="Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Table.html#initialize-instance_method" title="Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>第一印象表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='words_sep'>
       </span><span class='tstring_content'>「ヤベエ」</span><span class='words_sep'>
       </span><span class='tstring_content'>「パネエ」</span><span class='words_sep'>
       </span><span class='tstring_content'>「スゲエ」</span><span class='words_sep'>
       </span><span class='tstring_content'>「びっくり」</span><span class='words_sep'>
       </span><span class='tstring_content'>「たばい」</span><span class='words_sep'>
       </span><span class='tstring_content'>「アウトオブ眼中」</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TKKT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ツレ関係表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
+    </span><span class='tstring_end'>}</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TKKT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="Table.html" title="Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Table.html#initialize-instance_method" title="Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ツレ関係表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='qwords_beg'>%w{</span><span class='words_sep'>
       </span><span class='tstring_content'>「すごそう」</span><span class='words_sep'>
       </span><span class='tstring_content'>「勇者様」</span><span class='words_sep'>
       </span><span class='tstring_content'>「つよい」</span><span class='words_sep'>
       </span><span class='tstring_content'>「いい人」</span><span class='words_sep'>
       </span><span class='tstring_content'>「かっこいい」</span><span class='words_sep'>
       </span><span class='tstring_content'>「利用できる」</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GSST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>現実世界生活表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D66</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
-      </span><span class='tstring_content'>11:喧嘩に明け暮れた</span><span class='words_sep'>
-      </span><span class='tstring_content'>12:真面目に授業を受けた</span><span class='words_sep'>
-      </span><span class='tstring_content'>13:今回の仲間と食事をしに行った</span><span class='words_sep'>
-      </span><span class='tstring_content'>14:チーム同士の抗争を沈めた</span><span class='words_sep'>
-      </span><span class='tstring_content'>15:ぼーっとしていた</span><span class='words_sep'>
-      </span><span class='tstring_content'>16:バイトに専念した</span><span class='words_sep'>
-      </span><span class='tstring_content'>22:仲間とバーベキューをした</span><span class='words_sep'>
-      </span><span class='tstring_content'>23:自分の体を鍛えることにした</span><span class='words_sep'>
-      </span><span class='tstring_content'>24:仲間との毎日をより大切にした</span><span class='words_sep'>
-      </span><span class='tstring_content'>25:家族とゆっくりすごした</span><span class='words_sep'>
-      </span><span class='tstring_content'>26:喧嘩の技術を磨いた</span><span class='words_sep'>
-      </span><span class='tstring_content'>33:本職（ヤクザ）と喧嘩をした</span><span class='words_sep'>
-      </span><span class='tstring_content'>34:好きなだけ寝た</span><span class='words_sep'>
-      </span><span class='tstring_content'>35:ツレができた</span><span class='words_sep'>
-      </span><span class='tstring_content'>36:今回の仲間と旅に出た</span><span class='words_sep'>
-      </span><span class='tstring_content'>44:異性と遊園地に行くことになった</span><span class='words_sep'>
-      </span><span class='tstring_content'>45:あの戦いの日々を思い返していた</span><span class='words_sep'>
-      </span><span class='tstring_content'>46:次の戦いに備えた</span><span class='words_sep'>
-      </span><span class='tstring_content'>55:運動部の助っ人として、大会に出た</span><span class='words_sep'>
-      </span><span class='tstring_content'>56:好きなだけ好物を食べた</span><span class='words_sep'>
-      </span><span class='tstring_content'>66:汚い大人の罠にはめられたが、なんとかした</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GYST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ガイヤンキー生活表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D66</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
-      </span><span class='tstring_content'>11:ツレと生活をした</span><span class='words_sep'>
-      </span><span class='tstring_content'>12:異世界について学んだ</span><span class='words_sep'>
-      </span><span class='tstring_content'>13:エルフの美形（平均年齢200歳）に接待を受けた</span><span class='words_sep'>
-      </span><span class='tstring_content'>14:ドワーフから地元の酒をもらった</span><span class='words_sep'>
-      </span><span class='tstring_content'>15:妖精の村に迷い込んでしまった</span><span class='words_sep'>
-      </span><span class='tstring_content'>16:この世界の遺跡を回った</span><span class='words_sep'>
-      </span><span class='tstring_content'>22:この世界に野球などのスポーツを広めた</span><span class='words_sep'>
-      </span><span class='tstring_content'>23:広大な森の中で迷ってしまい、数か月ほどサバイバルした</span><span class='words_sep'>
-      </span><span class='tstring_content'>24:不思議な力が溢れる泉の水を飲み干した</span><span class='words_sep'>
-      </span><span class='tstring_content'>25:魔法使いの研究に協力したが、さっぱりだった</span><span class='words_sep'>
-      </span><span class='tstring_content'>26:ハーピィに誘われて空の旅を満喫した</span><span class='words_sep'>
-      </span><span class='tstring_content'>33:この世界にヤンキー文化を伝えた</span><span class='words_sep'>
-      </span><span class='tstring_content'>34:バッドヤンキーに荒らされた小さな村を復興した</span><span class='words_sep'>
-      </span><span class='tstring_content'>35:悪徳領主にさらわれた少女を助けた</span><span class='words_sep'>
-      </span><span class='tstring_content'>36:わるい商人を殴り飛ばした</span><span class='words_sep'>
-      </span><span class='tstring_content'>44:エルフの漫画家が誕生するのを見届けた</span><span class='words_sep'>
-      </span><span class='tstring_content'>45:巨大なドラゴンと殴りあって勝利した</span><span class='words_sep'>
-      </span><span class='tstring_content'>46:海中に住むマーメイドを脅かす悪人を退治した</span><span class='words_sep'>
-      </span><span class='tstring_content'>55:邪神を信奉している神殿に殴り込みをして、企みを阻止した</span><span class='words_sep'>
-      </span><span class='tstring_content'>56:天使っぽいのが悪いことをしていたので蹴り飛ばした</span><span class='words_sep'>
-      </span><span class='tstring_content'>66:農作業をした</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HPST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>病院生活表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='qwords_beg'>%w{</span><span class='words_sep'>
-      </span><span class='tstring_content'>11:治療に専念した</span><span class='words_sep'>
-      </span><span class='tstring_content'>12:見舞いでもらった漫画を読み倒した</span><span class='words_sep'>
-      </span><span class='tstring_content'>13:ゲームをひたすらやった</span><span class='words_sep'>
-      </span><span class='tstring_content'>14:悪化した病と闘った</span><span class='words_sep'>
-      </span><span class='tstring_content'>15:入院している子供と約束をした</span><span class='words_sep'>
-      </span><span class='tstring_content'>16:看護師と仲良くなった</span><span class='words_sep'>
-      </span><span class='tstring_content'>22:現代の医術では治療できなかったので、異世界の魔法に賭けた</span><span class='words_sep'>
-      </span><span class='tstring_content'>23:院内パーティを盛り上げた</span><span class='words_sep'>
-      </span><span class='tstring_content'>24:飯がまずくて苦労した</span><span class='words_sep'>
-      </span><span class='tstring_content'>25:飯がうまくて感動をした</span><span class='words_sep'>
-      </span><span class='tstring_content'>26:やることがなくて暇だった</span><span class='words_sep'>
-      </span><span class='tstring_content'>33:スーパードクターが現われて、自分の怪我を見事に治してくれた</span><span class='words_sep'>
-      </span><span class='tstring_content'>34:とにかくテレビを見続けて、知識がついた</span><span class='words_sep'>
-      </span><span class='tstring_content'>35:勉強をしてみたら、いつも以上にはかどった</span><span class='words_sep'>
-      </span><span class='tstring_content'>36:たくさんの人たちが見舞いに来て、感動した</span><span class='words_sep'>
-      </span><span class='tstring_content'>44:入院をしている爺さんから色々教えてもらった</span><span class='words_sep'>
-      </span><span class='tstring_content'>45:リハビリに思ったより時間がかかった</span><span class='words_sep'>
-      </span><span class='tstring_content'>46:次に喧嘩するときのイメージトレーニングをした</span><span class='words_sep'>
-      </span><span class='tstring_content'>55:ヤンキー漫画に感動をした</span><span class='words_sep'>
-      </span><span class='tstring_content'>56:院内で喧嘩をした</span><span class='words_sep'>
-      </span><span class='tstring_content'>66:売店で売っているお菓子をコンプリートした</span><span class='words_sep'>
-    </span><span class='tstring_end'>}</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span>
-<span class='rbrace'>}</span></pre></dd>
+    </span><span class='tstring_end'>}</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GSST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="D66Table.html" title="D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="D66Table.html#initialize-instance_method" title="D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>現実世界生活表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:asc</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>喧嘩に明け暮れた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>真面目に授業を受けた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>今回の仲間と食事をしに行った</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>チーム同士の抗争を沈めた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ぼーっとしていた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バイトに専念した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>仲間とバーベキューをした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自分の体を鍛えることにした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>仲間との毎日をより大切にした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>家族とゆっくりすごした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>喧嘩の技術を磨いた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>本職（ヤクザ）と喧嘩をした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>好きなだけ寝た</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ツレができた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>今回の仲間と旅に出た</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>異性と遊園地に行くことになった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>あの戦いの日々を思い返していた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>次の戦いに備えた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>運動部の助っ人として、大会に出た</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>好きなだけ好物を食べた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>汚い大人の罠にはめられたが、なんとかした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GYST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="D66Table.html" title="D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="D66Table.html#initialize-instance_method" title="D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ガイヤンキー生活表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:asc</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ツレと生活をした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>異世界について学んだ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エルフの美形（平均年齢200歳）に接待を受けた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ドワーフから地元の酒をもらった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>妖精の村に迷い込んでしまった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>この世界の遺跡を回った</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>この世界に野球などのスポーツを広めた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>広大な森の中で迷ってしまい、数か月ほどサバイバルした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>不思議な力が溢れる泉の水を飲み干した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>魔法使いの研究に協力したが、さっぱりだった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハーピィに誘われて空の旅を満喫した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>この世界にヤンキー文化を伝えた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッドヤンキーに荒らされた小さな村を復興した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>悪徳領主にさらわれた少女を助けた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>わるい商人を殴り飛ばした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エルフの漫画家が誕生するのを見届けた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>巨大なドラゴンと殴りあって勝利した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>海中に住むマーメイドを脅かす悪人を退治した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>邪神を信奉している神殿に殴り込みをして、企みを阻止した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>天使っぽいのが悪いことをしていたので蹴り飛ばした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>農作業をした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HPST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="D66Table.html" title="D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="D66Table.html#initialize-instance_method" title="D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>病院生活表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:asc</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>治療に専念した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>見舞いでもらった漫画を読み倒した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ゲームをひたすらやった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>悪化した病と闘った</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>入院している子供と約束をした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>看護師と仲良くなった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>現代の医術では治療できなかったので、異世界の魔法に賭けた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>院内パーティを盛り上げた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>飯がまずくて苦労した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>飯がうまくて感動をした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>やることがなくて暇だった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スーパードクターが現われて、自分の怪我を見事に治してくれた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>とにかくテレビを見続けて、知識がついた</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>勉強をしてみたら、いつも以上にはかどった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>たくさんの人たちが見舞いに来て、感動した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>入院をしている爺さんから色々教えてもらった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>リハビリに思ったより時間がかかった</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>次に喧嘩するときのイメージトレーニングをした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヤンキー漫画に感動をした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>院内で喧嘩をした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>売店で売っているお菓子をコンプリートした</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
     </dl>
   
@@ -462,7 +462,7 @@ HPST	病院生活表
   
   <h3 class="inherited">Constants inherited
      from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#DEFAULT_SEND_MODE-constant" title="DiceBot::DEFAULT_SEND_MODE (constant)">DiceBot::DEFAULT_SEND_MODE</a></span>, <span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
 
 
 
@@ -484,7 +484,7 @@ HPST	病院生活表
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, _dice_cnt, _dice_max, _n1, _n_max)  &#x21d2; Object </a>
+      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total, dice_total, _dice_list, cmp_op, target)  &#x21d2; Object </a>
     
 
     
@@ -578,28 +578,6 @@ HPST	病院生活表
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getTableDiceCommandResult-instance_method" title="#getTableDiceCommandResult (instance method)">#<strong>getTableDiceCommandResult</strong>(command)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; YankeeYogSothoth </a>
     
 
@@ -658,7 +636,7 @@ HPST	病院生活表
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nDx-instance_method" title="DiceBot#check_nDx (method)">#check_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#check_result-instance_method" title="DiceBot#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -688,13 +666,13 @@ HPST	病院生活表
       <pre class="lines">
 
 
-41
-42
-43
-44</pre>
+44
+45
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/YankeeYogSothoth.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/YankeeYogSothoth.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='kw'>super</span>
@@ -715,7 +693,7 @@ HPST	病院生活表
       <div class="method_details first">
   <h3 class="signature first" id="check_2D6-instance_method">
   
-    #<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, _dice_cnt, _dice_max, _n1, _n_max)  &#x21d2; <tt>Object</tt> 
+    #<strong>check_2D6</strong>(total, dice_total, _dice_list, cmp_op, target)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -738,9 +716,6 @@ HPST	病院生活表
       <pre class="lines">
 
 
-47
-48
-49
 50
 51
 52
@@ -756,23 +731,20 @@ HPST	病院生活表
 62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/YankeeYogSothoth.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/YankeeYogSothoth.rb', line 50</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_cnt'>_dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_max'>_dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid__n1'>_n1</span><span class='comma'>,</span> <span class='id identifier rubyid__n_max'>_n_max</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_list'>_dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&gt;=</span>
 
-  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ファンブル(判定失敗。ファンブル表（FT）を振ること)</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ スペシャル(判定成功。【テンション】が１段階上昇)</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diff'>diff</span>
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>else</span>
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>end</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ファンブル(判定失敗。ファンブル表（FT）を振ること)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ スペシャル(判定成功。【テンション】が１段階上昇)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target'>target</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1057,18 +1029,18 @@ HPST	病院生活表
       <pre class="lines">
 
 
-239
-240
-241
-242
-243
-244
-245
-246
-247</pre>
+215
+216
+217
+218
+219
+220
+221
+222
+223</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/YankeeYogSothoth.rb', line 239</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/YankeeYogSothoth.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getD66Table'>getD66Table</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
@@ -1160,76 +1132,6 @@ HPST	病院生活表
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getTableDiceCommandResult-instance_method">
-  
-    #<strong>getTableDiceCommandResult</strong>(command)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/YankeeYogSothoth.rb', line 215</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getTableDiceCommandResult'>getTableDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_info'>info</span> <span class='op'>=</span> <span class='cvar'>@@tables</span><span class='lbracket'>[</span><span class='id identifier rubyid_command'>command</span><span class='rbracket'>]</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-
-  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_info'>info</span><span class='lbracket'>[</span><span class='symbol'>:table</span><span class='rbracket'>]</span>
-
-  <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span>
-    <span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
-    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&#39;</span></span>
-      <span class='id identifier rubyid_get_table_by_2d6'>get_table_by_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span>
-      <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D66</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>D66S</span><span class='tstring_end'>&#39;</span></span>
-      <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_getD66Table'>getD66Table</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_get_table_by_d66_swap'>get_table_by_d66_swap</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_number'>number</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_text'>text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="rollDiceCommand-instance_method">
   
     #<strong>rollDiceCommand</strong>(command)  &#x21d2; <tt>Object</tt> 
@@ -1270,7 +1172,7 @@ HPST	病院生活表
 </span>    <span class='kw'>return</span> <span class='id identifier rubyid_get_nickname_table'>get_nickname_table</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>return</span> <span class='id identifier rubyid_getTableDiceCommandResult'>getTableDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="YankeeYogSothoth::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1282,9 +1184,9 @@ HPST	病院生活表
 </div>
 
       <div id="footer">
-  Generated on Fri Mar 20 02:13:27 2020 by
+  Generated on Wed May  6 12:33:19 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  0.9.24 (ruby-2.7.1).
 </div>
 
     </div>

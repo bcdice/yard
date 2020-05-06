@@ -200,16 +200,17 @@
 ・D66ダイスあり
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
-        <dt id="judogeDiceReg-classvariable" class="">@@judogeDiceReg =
+        <dt id="JUDGE_DICE_REG-constant" class="">JUDGE_DICE_REG =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(^|\s)JD(\d+)([\+\-]\d+)?(,(\d+))?($|\s)</span><span class='regexp_end'>/i</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(^|\s)JD(\d+)([\+\-]\d+)?(,(\d+))?($|\s)</span><span class='regexp_end'>/i</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
-        <dt id="tables-classvariable" class="">@@tables =
+        <dt id="TABLES-constant" class="">TABLES =
           
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ANSPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ANSPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
     <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>サブプロット表「対悪魔」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
@@ -221,7 +222,8 @@
 『仲間』\nキャラクターから一人を選び、相手が「動作」で修得している特技を指定特技として判定を行う。判定に成功すると、あなたは相手が悪魔と戦う際に力になってくれる人物だと確信する。愚かな番組への協力をやめさせれば、きっと大丈夫だ。相手への関係を、属性「同士」で獲得する。【深度】は１になる。\nクリア条件：相手への関係の【深度】を3にする。結局断られるかもしれないが、あなたは言うだけ言ったことで満足した。\n報酬：【視聴率】１０％増加、相手が回収人なら400【ソウル】　相手がＮＰＣなら600【ソウル】
 </span><span class='heredoc_end'>TABLE_TEXT_END
 </span>  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MASPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MASPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
     <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>サブプロット「意地悪」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
@@ -233,7 +235,8 @@
 『泣かせたい』\nキャラクターから一人を選び、相手が「情動」で修得している特技を指定特技として判定を行う。判定に成功すると、あなたは相手の泣き顔がヘル視聴者(と、あなた)に非常な満足感を与えてくれるであろうと確信する。相手への関係を、属性「泣かせたい人」で獲得する。【深度】は１になる。\nクリア条件:相手への関係の【深度】を2以上にする。相手は泣き出すか、そっと涙を流す……が、理由は相手が決定する。血が目に入っただけかもしれない。\n報酬:【視聴率】１０％増加、200【ソウル】
 </span><span class='heredoc_end'>TABLE_TEXT_END
 </span>  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MOSPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MOSPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
     <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>サブプロット表「金儲け」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
@@ -245,7 +248,8 @@
 『ゆるキャラ』\nキャラクターから一人を選び、相手が「情動」で修得している特技を指定特技として判定を行う。判定に成功すると、相手のムードにぴったりのキャラを思いつく。あなたの考えた変な語尾をつけさせることができれば、大ヒット間違いなしだ……！相手への関係を、属性「中身」で獲得する。【深度】は１になる。\nクリア条件：語尾を一つ指定する。相手が登場するメインフェイズのうち三つで、プレイヤーのものを含む発言すべてにその語尾をつけて喋るとクリア。他のプレイヤーやゲームマスターに語尾の欠落を指摘されるとＮＧ。\n報酬：【視聴率】１０％増加、あなたと相手の両方に300【ソウル】
 </span><span class='heredoc_end'>TABLE_TEXT_END
 </span>  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PASPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PASPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
     <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>サブプロット表「仕切り」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
@@ -257,7 +261,8 @@
 『テコ入れ回避』\nキャラクターから一人を選び、相手が「衣装」で修得している特技を指定特技として判定を行う。判定に成功すると、こんな人がいるんじゃあ番組の視聴率も期待できないと確信してしまう。頑張らなければ。誰が？あなたが！相手への関係を、属性「売れなさそう」で獲得する。【深度】は１になる。\nクリア条件:結果フェイズ開始時に【視聴率】が40%以上になっている。危ない場面もあったかもしれないが、とりあえずＯＫだ。\n報酬：【視聴率】１０％増加、300【ソウル】　クリア時にフィーバーが発生していれば、さらに300【ソウル】
 </span><span class='heredoc_end'>TABLE_TEXT_END
 </span>  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>POSPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>POSPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
     <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>サブプロット表「人気」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
@@ -269,7 +274,8 @@
 『着こなし』\nキャラクターから一人を選び、相手が「衣装」で修得している特技を指定特技として判定を行う。判定に成功すると、相手のヘルドレスの着こなしはあなたを完全に凌駕していると確信してしまう。他の面では勝っているのに。相手への関係を、属性「ファッショナブル」で獲得する。【深度】は１になる。\nクリア条件：相手への関係の【深度】を2以上にする。すると相手は着こなしについて丁寧な、あるいは短いが核心を突いていると思われる助言をあなたにしてくれる。役に立ったり立たなかったりするだろう。\n報酬：【視聴率】１０％増加、200【ソウル】
 </span><span class='heredoc_end'>TABLE_TEXT_END
 </span>  <span class='rbrace'>}</span><span class='comma'>,</span>
-   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UMSPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UMSPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
     <span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>サブプロット表「恨み」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1d6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
     <span class='symbol'>:table</span> <span class='op'>=&gt;</span> <span class='heredoc_beg'>&lt;&lt;&#39;TABLE_TEXT_END&#39;</span>
@@ -281,7 +287,7 @@
 『服よこせ』\nキャラクターから一人を選び、相手が「衣装」で修得している特技を指定特技として判定を行う。判定に成功すると、その衣装は本当はあなたが着たかったものだと判明する。ヘルスタイリストへの抗議がひどい罵倒とともに却下されるシーンが脳裏にフラッシュバックする。相手への関係を、属性「服よこせ」で獲得する。【深度】は１になる。\nクリア条件:相手への関係の【深度】を2以上にし、かつ相手からあなたへの関係の【深度】を1以上にする。根負けした相手はちょっとヘルドレスを貸してくれて、あなたは満足する。ちなみに、本当に似合っているかどうかは関係ない。\n報酬:【視聴率】１０％増加、あなたと相手の両方に300【ソウル】
 </span><span class='heredoc_end'>TABLE_TEXT_END
 </span>  <span class='rbrace'>}</span><span class='comma'>,</span>
-<span class='rbrace'>}</span></pre></dd>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
     </dl>
   
@@ -292,7 +298,7 @@
   
   <h3 class="inherited">Constants inherited
      from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#DEFAULT_SEND_MODE-constant" title="DiceBot::DEFAULT_SEND_MODE (constant)">DiceBot::DEFAULT_SEND_MODE</a></span>, <span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
 
 
 
@@ -314,7 +320,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, dice_cnt, dice_max, n1, n_max)  &#x21d2; Object </a>
+      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total, dice_total, _dice_list, cmp_op, target)  &#x21d2; Object </a>
     
 
     
@@ -946,7 +952,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nDx-instance_method" title="DiceBot#check_nDx (method)">#check_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#check_result-instance_method" title="DiceBot#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -1007,7 +1013,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="check_2D6-instance_method">
   
-    #<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, dice_cnt, dice_max, n1, n_max)  &#x21d2; <tt>Object</tt> 
+    #<strong>check_2D6</strong>(total, dice_total, _dice_list, cmp_op, target)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1042,33 +1048,23 @@
 60
 61
 62
-63
-64
-65
-66
-67
-68</pre>
+63</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 51</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_max'>dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid_n1'>n1</span><span class='comma'>,</span> <span class='id identifier rubyid_n_max'>n_max</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>total_n, dice_n, signOfInequality, diff, dice_cnt, dice_max, n1, n_max</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_max'>dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid_n1'>n1</span><span class='comma'>,</span> <span class='id identifier rubyid_n_max'>n_max</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_list'>_dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&gt;=</span>
 
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='tstring_end'>&quot;</span></span>
-
-  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ファンブル(判定失敗。【視聴率】が20％減少)</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ スペシャル(判定成功。【視聴率】が10％増加)</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diff'>diff</span>
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>else</span>
-      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>end</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ファンブル(判定失敗。【視聴率】が20％減少)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ スペシャル(判定成功。【視聴率】が10％増加)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target'>target</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1090,6 +1086,11 @@
       <pre class="lines">
 
 
+725
+726
+727
+728
+729
 730
 731
 732
@@ -1113,15 +1114,10 @@
 750
 751
 752
-753
-754
-755
-756
-757
-758</pre>
+753</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 730</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 725</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCmTableResult'>getCmTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CM表</span><span class='tstring_end'>&quot;</span></span>
@@ -1172,6 +1168,11 @@
       <pre class="lines">
 
 
+755
+756
+757
+758
+759
 760
 761
 762
@@ -1195,15 +1196,10 @@
 780
 781
 782
-783
-784
-785
-786
-787
-788</pre>
+783</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 760</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 755</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getErTableResult'>getErTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>蘇生副作用表</span><span class='tstring_end'>&quot;</span></span>
@@ -1254,6 +1250,11 @@
       <pre class="lines">
 
 
+1030
+1031
+1032
+1033
+1034
 1035
 1036
 1037
@@ -1363,15 +1364,10 @@
 1141
 1142
 1143
-1144
-1145
-1146
-1147
-1148
-1149</pre>
+1144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1035</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1030</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getExtraTableResult'>getExtraTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エキストラ表</span><span class='tstring_end'>&quot;</span></span>
@@ -1508,6 +1504,11 @@
       <pre class="lines">
 
 
+921
+922
+923
+924
+925
 926
 927
 928
@@ -1585,15 +1586,10 @@
 1000
 1001
 1002
-1003
-1004
-1005
-1006
-1007
-1008</pre>
+1003</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 926</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 921</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHairStylistAbuseTableResult'>getHairStylistAbuseTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘルスタイリスト罵倒表</span><span class='tstring_end'>&quot;</span></span>
@@ -1698,6 +1694,11 @@
       <pre class="lines">
 
 
+233
+234
+235
+236
+237
 238
 239
 240
@@ -1713,15 +1714,10 @@
 250
 251
 252
-253
-254
-255
-256
-257
-258</pre>
+253</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 238</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 233</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHistoryTableResult'>getHistoryTableResult</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>履歴表</span><span class='tstring_end'>&quot;</span></span>
@@ -1764,6 +1760,11 @@
       <pre class="lines">
 
 
+450
+451
+452
+453
+454
 455
 456
 457
@@ -1851,15 +1852,10 @@
 539
 540
 541
-542
-543
-544
-545
-546
-547</pre>
+542</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 455</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 450</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getNameTableResult'>getNameTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>万能命名表</span><span class='tstring_end'>&quot;</span></span>
@@ -1974,6 +1970,11 @@
       <pre class="lines">
 
 
+1176
+1177
+1178
+1179
+1180
 1181
 1182
 1183
@@ -1982,15 +1983,10 @@
 1186
 1187
 1188
-1189
-1190
-1191
-1192
-1193
-1194</pre>
+1189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1181</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1176</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getohTableResult'>getohTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>実際どうだったのか表</span><span class='tstring_end'>&quot;</span></span>
@@ -2026,6 +2022,11 @@
       <pre class="lines">
 
 
+1281
+1282
+1283
+1284
+1285
 1286
 1287
 1288
@@ -2034,15 +2035,10 @@
 1291
 1292
 1293
-1294
-1295
-1296
-1297
-1298
-1299</pre>
+1294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1286</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1281</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpbTableResult'>getpbTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘルベアタスク表</span><span class='tstring_end'>&quot;</span></span>
@@ -2078,6 +2074,11 @@
       <pre class="lines">
 
 
+1146
+1147
+1148
+1149
+1150
 1151
 1152
 1153
@@ -2101,15 +2102,10 @@
 1171
 1172
 1173
-1174
-1175
-1176
-1177
-1178
-1179</pre>
+1174</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1151</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpcTableResult'>getpcTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>製作委員決定表</span><span class='tstring_end'>&quot;</span></span>
@@ -2160,6 +2156,11 @@
       <pre class="lines">
 
 
+1236
+1237
+1238
+1239
+1240
 1241
 1242
 1243
@@ -2168,15 +2169,10 @@
 1246
 1247
 1248
-1249
-1250
-1251
-1252
-1253
-1254</pre>
+1249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1241</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1236</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpdTableResult'>getpdTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘルドラゴンタスク表</span><span class='tstring_end'>&quot;</span></span>
@@ -2212,6 +2208,11 @@
       <pre class="lines">
 
 
+1251
+1252
+1253
+1254
+1255
 1256
 1257
 1258
@@ -2220,15 +2221,10 @@
 1261
 1262
 1263
-1264
-1265
-1266
-1267
-1268
-1269</pre>
+1264</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1256</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1251</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpfTableResult'>getpfTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘルフライタスク表</span><span class='tstring_end'>&quot;</span></span>
@@ -2264,6 +2260,11 @@
       <pre class="lines">
 
 
+1266
+1267
+1268
+1269
+1270
 1271
 1272
 1273
@@ -2272,15 +2273,10 @@
 1276
 1277
 1278
-1279
-1280
-1281
-1282
-1283
-1284</pre>
+1279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1271</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1266</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpgTableResult'>getpgTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘルゴートタスク表</span><span class='tstring_end'>&quot;</span></span>
@@ -2316,6 +2312,11 @@
       <pre class="lines">
 
 
+1191
+1192
+1193
+1194
+1195
 1196
 1197
 1198
@@ -2324,15 +2325,10 @@
 1201
 1202
 1203
-1204
-1205
-1206
-1207
-1208
-1209</pre>
+1204</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1196</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getplTableResult'>getplTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘルライオンタスク表</span><span class='tstring_end'>&quot;</span></span>
@@ -2368,6 +2364,11 @@
       <pre class="lines">
 
 
+1221
+1222
+1223
+1224
+1225
 1226
 1227
 1228
@@ -2376,15 +2377,10 @@
 1231
 1232
 1233
-1234
-1235
-1236
-1237
-1238
-1239</pre>
+1234</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1226</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1221</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getpnTableResult'>getpnTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘルスネークタスク表</span><span class='tstring_end'>&quot;</span></span>
@@ -2420,6 +2416,11 @@
       <pre class="lines">
 
 
+1206
+1207
+1208
+1209
+1210
 1211
 1212
 1213
@@ -2428,15 +2429,10 @@
 1216
 1217
 1218
-1219
-1220
-1221
-1222
-1223
-1224</pre>
+1219</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1211</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1206</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getprTableResult'>getprTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘルクロウタスク表</span><span class='tstring_end'>&quot;</span></span>
@@ -2472,6 +2468,11 @@
       <pre class="lines">
 
 
+255
+256
+257
+258
+259
 260
 261
 262
@@ -2535,15 +2536,10 @@
 320
 321
 322
-323
-324
-325
-326
-327
-328</pre>
+323</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 260</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 255</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSceneTableResult'>getSceneTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getSceneTableResult type</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
@@ -2634,6 +2630,11 @@
       <pre class="lines">
 
 
+906
+907
+908
+909
+910
 911
 912
 913
@@ -2642,15 +2643,10 @@
 916
 917
 918
-919
-920
-921
-922
-923
-924</pre>
+919</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 911</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 906</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSceneTelopGenericTableResult'>getSceneTelopGenericTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>汎用演出表</span><span class='tstring_end'>&quot;</span></span>
@@ -2686,6 +2682,11 @@
       <pre class="lines">
 
 
+815
+816
+817
+818
+819
 820
 821
 822
@@ -2755,15 +2756,10 @@
 886
 887
 888
-889
-890
-891
-892
-893
-894</pre>
+889</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 820</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 815</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getServiceSceneTableResult'>getServiceSceneTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>サービスシーン表</span><span class='tstring_end'>&quot;</span></span>
@@ -2860,6 +2856,11 @@
       <pre class="lines">
 
 
+1005
+1006
+1007
+1008
+1009
 1010
 1011
 1012
@@ -2878,15 +2879,10 @@
 1025
 1026
 1027
-1028
-1029
-1030
-1031
-1032
-1033</pre>
+1028</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1010</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 1005</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSkillTableResult'>getSkillTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_skillTableFull'>skillTableFull</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2932,6 +2928,11 @@
       <pre class="lines">
 
 
+891
+892
+893
+894
+895
 896
 897
 898
@@ -2940,15 +2941,10 @@
 901
 902
 903
-904
-905
-906
-907
-908
-909</pre>
+904</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 896</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 891</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSoulTableResult'>getSoulTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ソウル放出表</span><span class='tstring_end'>&quot;</span></span>
@@ -2984,6 +2980,11 @@
       <pre class="lines">
 
 
+544
+545
+546
+547
+548
 549
 550
 551
@@ -3158,15 +3159,10 @@
 720
 721
 722
-723
-724
-725
-726
-727
-728</pre>
+723</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 549</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 544</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getSubprotTableResult'>getSubprotTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -3368,6 +3364,11 @@
       <pre class="lines">
 
 
+325
+326
+327
+328
+329
 330
 331
 332
@@ -3486,15 +3487,10 @@
 445
 446
 447
-448
-449
-450
-451
-452
-453</pre>
+448</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 330</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 325</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getWishTableResult'>getWishTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getWishTableResult command</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -3640,6 +3636,11 @@
       <pre class="lines">
 
 
+785
+786
+787
+788
+789
 790
 791
 792
@@ -3663,15 +3664,10 @@
 810
 811
 812
-813
-814
-815
-816
-817
-818</pre>
+813</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 790</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 785</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getWKTableResult'>getWKTableResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>一週間表</span><span class='tstring_end'>&quot;</span></span>
@@ -3722,6 +3718,11 @@
       <pre class="lines">
 
 
+82
+83
+84
+85
+86
 87
 88
 89
@@ -3765,18 +3766,13 @@
 127
 128
 129
-130
-131
-132
-133
-134
-135</pre>
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_judgeDice'>judgeDice</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>unless</span> <span class='cvar'>@@judogeDiceReg</span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="#JUDGE_DICE_REG-constant" title="KillDeathBusiness::JUDGE_DICE_REG (constant)">JUDGE_DICE_REG</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_command'>command</span>
     <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
@@ -3844,6 +3840,11 @@
       <pre class="lines">
 
 
+65
+66
+67
+68
+69
 70
 71
 72
@@ -3852,22 +3853,17 @@
 75
 76
 77
-78
-79
-80
-81
-82
-83</pre>
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rollDiceCommand command</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
   <span class='comment'># 判定チェックは先に処理
 </span>  <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
-  <span class='kw'>when</span> <span class='cvar'>@@judogeDiceReg</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="#JUDGE_DICE_REG-constant" title="KillDeathBusiness::JUDGE_DICE_REG (constant)">JUDGE_DICE_REG</a></span></span>
     <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_judgeDice'>judgeDice</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>判定</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>return</span> <span class='id identifier rubyid_text'>text</span>
@@ -3896,6 +3892,11 @@
       <pre class="lines">
 
 
+132
+133
+134
+135
+136
 137
 138
 139
@@ -3990,18 +3991,13 @@
 228
 229
 230
-231
-232
-233
-234
-235
-236</pre>
+231</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/KillDeathBusiness.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollTableCommand'>rollTableCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_getTableCommandResult'>getTableCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='cvar'>@@tables</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_getTableCommandResult'>getTableCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="KillDeathBusiness::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>unless</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
 
   <span class='id identifier rubyid_tableName'>tableName</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -4110,9 +4106,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Mar 20 02:13:27 2020 by
+  Generated on Wed May  6 12:33:20 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  0.9.24 (ruby-2.7.1).
 </div>
 
     </div>

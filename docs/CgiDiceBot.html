@@ -151,6 +151,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#detailed_rand_results-instance_method" title="#detailed_rand_results (instance method)">#<strong>detailed_rand_results</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#executeDiceBot-instance_method" title="#executeDiceBot (instance method)">#<strong>executeDiceBot</strong>(message, gameType, dir = nil, prefix = &#39;&#39;, isNeedResult = false)  &#x21d2; Object </a>
     
 
@@ -195,7 +217,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getGameCommandInfos-instance_method" title="#getGameCommandInfos (instance method)">#<strong>getGameCommandInfos</strong>(_dir, _prefix)  &#x21d2; Object </a>
+      <a href="#getGameCommandInfos-instance_method" title="#getGameCommandInfos (instance method)">#<strong>getGameCommandInfos</strong>(dir, prefix)  &#x21d2; Object </a>
     
 
     
@@ -209,9 +231,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Unused method.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -246,6 +266,28 @@
   <span class="summary_signature">
     
       <a href="#newBcDice-instance_method" title="#newBcDice (instance method)">#<strong>newBcDice</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rand_results-instance_method" title="#rand_results (instance method)">#<strong>rand_results</strong>  &#x21d2; Object </a>
     
 
     
@@ -577,7 +619,37 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="executeDiceBot-instance_method">
+  <h3 class="signature first" id="detailed_rand_results-instance_method">
+  
+    #<strong>detailed_rand_results</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 167</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_detailed_rand_results'>detailed_rand_results</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_detailed_rand_results'>detailed_rand_results</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="executeDiceBot-instance_method">
   
     #<strong>executeDiceBot</strong>(message, gameType, dir = nil, prefix = &#39;&#39;, isNeedResult = false)  &#x21d2; <tt>Object</tt> 
   
@@ -699,38 +771,37 @@
       <div class="method_details ">
   <h3 class="signature " id="getGameCommandInfos-instance_method">
   
-    #<strong>getGameCommandInfos</strong>(_dir, _prefix)  &#x21d2; <tt>Object</tt> 
+    #<strong>getGameCommandInfos</strong>(dir, prefix)  &#x21d2; <tt>Object</tt> 
   
 
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Unused method</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+141
 142
 143
-144</pre>
+144
+145
+146
+147
+148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 141</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_getGameCommandInfos'>getGameCommandInfos</span><span class='lparen'>(</span><span class='id identifier rubyid__dir'>_dir</span><span class='comma'>,</span> <span class='id identifier rubyid__prefix'>_prefix</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_getGameCommandInfos'>getGameCommandInfos</span><span class='lparen'>(</span><span class='id identifier rubyid_dir'>dir</span><span class='comma'>,</span> <span class='id identifier rubyid_prefix'>prefix</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TableFileData</span><span class='tstring_end'>&#39;</span></span>
+
+  <span class='id identifier rubyid_tableFileData'>tableFileData</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TableFileData.html" title="TableFileData (class)">TableFileData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TableFileData.html#initialize-instance_method" title="TableFileData#initialize (method)">new</a></span></span>
+  <span class='id identifier rubyid_tableFileData'>tableFileData</span><span class='period'>.</span><span class='id identifier rubyid_setDir'>setDir</span><span class='lparen'>(</span><span class='id identifier rubyid_dir'>dir</span><span class='comma'>,</span> <span class='id identifier rubyid_prefix'>prefix</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_infos'>infos</span> <span class='op'>=</span> <span class='id identifier rubyid_tableFileData'>tableFileData</span><span class='period'>.</span><span class='id identifier rubyid_getGameCommandInfos'>getGameCommandInfos</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_infos'>infos</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -771,6 +842,36 @@
   <span class='kw'>end</span>
 
   <span class='kw'>return</span> <span class='ivar'>@bcdice</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rand_results-instance_method">
+  
+    #<strong>rand_results</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rand_results'>rand_results</span>
+  <span class='ivar'>@bcdice</span><span class='period'>.</span><span class='id identifier rubyid_rand_results'>rand_results</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1006,12 +1107,12 @@
       <pre class="lines">
 
 
-146
-147
-148</pre>
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessage'>sendMessage</span><span class='lparen'>(</span><span class='id identifier rubyid__to'>_to</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@rollResult</span> <span class='op'>+=</span> <span class='id identifier rubyid_message'>message</span>
@@ -1036,12 +1137,12 @@
       <pre class="lines">
 
 
-155
-156
-157</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessageToChannels'>sendMessageToChannels</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@rollResult</span> <span class='op'>+=</span> <span class='id identifier rubyid_message'>message</span>
@@ -1066,13 +1167,13 @@
       <pre class="lines">
 
 
-150
-151
-152
-153</pre>
+154
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'src/cgiDiceBot.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_sendMessageToOnlySender'>sendMessageToOnlySender</span><span class='lparen'>(</span><span class='id identifier rubyid__nick_e'>_nick_e</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@isSecret</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -1148,9 +1249,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Mar 20 02:13:08 2020 by
+  Generated on Wed May  6 12:32:58 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  0.9.24 (ruby-2.7.1).
 </div>
 
     </div>

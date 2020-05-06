@@ -212,7 +212,7 @@
   
   <h3 class="inherited">Constants inherited
      from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#DEFAULT_SEND_MODE-constant" title="DiceBot::DEFAULT_SEND_MODE (constant)">DiceBot::DEFAULT_SEND_MODE</a></span>, <span class='object_link'><a href="DiceBot.html#EMPTY_PREFIXES_PATTERN-constant" title="DiceBot::EMPTY_PREFIXES_PATTERN (constant)">DiceBot::EMPTY_PREFIXES_PATTERN</a></span></p>
 
 
 
@@ -234,7 +234,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, dice_cnt, dice_max, n1, n_max)  &#x21d2; Object </a>
+      <a href="#check_2D6-instance_method" title="#check_2D6 (instance method)">#<strong>check_2D6</strong>(total, dice_total, dice_list, cmp_op, target)  &#x21d2; Object </a>
     
 
     
@@ -272,7 +272,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>魔素獲得チェック.</p>
+</div></span>
   
 </li>
 
@@ -296,30 +298,6 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>魔素の種類獲得表.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getGainMagicElementText-instance_method" title="#getGainMagicElementText (instance method)">#<strong>getGainMagicElementText</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>魔素獲得チェック.</p>
 </div></span>
   
 </li>
@@ -1872,7 +1850,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DiceBot.html" title="DiceBot (class)">DiceBot</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeDiceValueByDiceText-instance_method" title="DiceBot#changeDiceValueByDiceText (method)">#changeDiceValueByDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_suc-instance_method" title="DiceBot#check_suc (method)">#check_suc</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceList-instance_method" title="DiceBot#getDiceList (method)">#getDiceList</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceListFromDiceText-instance_method" title="DiceBot#getDiceListFromDiceText (method)">#getDiceListFromDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceAddingUp-instance_method" title="DiceBot#rollDiceAddingUp (method)">#rollDiceAddingUp</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setDiceText-instance_method" title="DiceBot#setDiceText (method)">#setDiceText</a></span>, <span class='object_link'><a href="DiceBot.html#setDiffText-instance_method" title="DiceBot#setDiffText (method)">#setDiffText</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="DiceBot.html#analyzeDiceCommandResultMethod-instance_method" title="DiceBot#analyzeDiceCommandResultMethod (method)">#analyzeDiceCommandResultMethod</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice-instance_method" title="DiceBot#bcdice (method)">#bcdice</a></span>, <span class='object_link'><a href="DiceBot.html#bcdice=-instance_method" title="DiceBot#bcdice= (method)">#bcdice=</a></span>, <span class='object_link'><a href="DiceBot.html#changeText-instance_method" title="DiceBot#changeText (method)">#changeText</a></span>, <span class='object_link'><a href="DiceBot.html#check2dCritical-instance_method" title="DiceBot#check2dCritical (method)">#check2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D100-instance_method" title="DiceBot#check_1D100 (method)">#check_1D100</a></span>, <span class='object_link'><a href="DiceBot.html#check_1D20-instance_method" title="DiceBot#check_1D20 (method)">#check_1D20</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD10-instance_method" title="DiceBot#check_nD10 (method)">#check_nD10</a></span>, <span class='object_link'><a href="DiceBot.html#check_nD6-instance_method" title="DiceBot#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#check_nDx-instance_method" title="DiceBot#check_nDx (method)">#check_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#check_result-instance_method" title="DiceBot#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="DiceBot.html#clearPrefixes-class_method" title="DiceBot.clearPrefixes (method)">clearPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#d66-instance_method" title="DiceBot#d66 (method)">#d66</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command-instance_method" title="DiceBot#dice_command (method)">#dice_command</a></span>, <span class='object_link'><a href="DiceBot.html#dice_command_xRn-instance_method" title="DiceBot#dice_command_xRn (method)">#dice_command_xRn</a></span>, <span class='object_link'><a href="DiceBot.html#gameName-instance_method" title="DiceBot#gameName (method)">#gameName</a></span>, <span class='object_link'><a href="DiceBot.html#gameType-instance_method" title="DiceBot#gameType (method)">#gameType</a></span>, <span class='object_link'><a href="DiceBot.html#getD66-instance_method" title="DiceBot#getD66 (method)">#getD66</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRevision-instance_method" title="DiceBot#getDiceRevision (method)">#getDiceRevision</a></span>, <span class='object_link'><a href="DiceBot.html#getDiceRolledAdditionalText-instance_method" title="DiceBot#getDiceRolledAdditionalText (method)">#getDiceRolledAdditionalText</a></span>, <span class='object_link'><a href="DiceBot.html#getGrichText-instance_method" title="DiceBot#getGrichText (method)">#getGrichText</a></span>, <span class='object_link'><a href="DiceBot.html#getHelpMessage-instance_method" title="DiceBot#getHelpMessage (method)">#getHelpMessage</a></span>, <span class='object_link'><a href="DiceBot.html#getTableCommandResult-instance_method" title="DiceBot#getTableCommandResult (method)">#getTableCommandResult</a></span>, <span class='object_link'><a href="DiceBot.html#getTableInfoFromExtraTableText-instance_method" title="DiceBot#getTableInfoFromExtraTableText (method)">#getTableInfoFromExtraTableText</a></span>, <span class='object_link'><a href="DiceBot.html#getTableValue-instance_method" title="DiceBot#getTableValue (method)">#getTableValue</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d3-instance_method" title="DiceBot#get_table_by_1d3 (method)">#get_table_by_1d3</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_1d6-instance_method" title="DiceBot#get_table_by_1d6 (method)">#get_table_by_1d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_2d6-instance_method" title="DiceBot#get_table_by_2d6 (method)">#get_table_by_2d6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66-instance_method" title="DiceBot#get_table_by_d66 (method)">#get_table_by_d66</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_d66_swap-instance_method" title="DiceBot#get_table_by_d66_swap (method)">#get_table_by_d66_swap</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nD6-instance_method" title="DiceBot#get_table_by_nD6 (method)">#get_table_by_nD6</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx-instance_method" title="DiceBot#get_table_by_nDx (method)">#get_table_by_nDx</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_nDx_extratable-instance_method" title="DiceBot#get_table_by_nDx_extratable (method)">#get_table_by_nDx_extratable</a></span>, <span class='object_link'><a href="DiceBot.html#get_table_by_number-instance_method" title="DiceBot#get_table_by_number (method)">#get_table_by_number</a></span>, <span class='object_link'><a href="DiceBot.html#help_message-instance_method" title="DiceBot#help_message (method)">#help_message</a></span>, <span class='object_link'><a href="DiceBot.html#id-instance_method" title="DiceBot#id (method)">#id</a></span>, <span class='object_link'><a href="DiceBot.html#info-instance_method" title="DiceBot#info (method)">#info</a></span>, <span class='object_link'><a href="DiceBot.html#is2dCritical-instance_method" title="DiceBot#is2dCritical (method)">#is2dCritical</a></span>, <span class='object_link'><a href="DiceBot.html#isD9-instance_method" title="DiceBot#isD9 (method)">#isD9</a></span>, <span class='object_link'><a href="DiceBot.html#isGetOriginalMessage-instance_method" title="DiceBot#isGetOriginalMessage (method)">#isGetOriginalMessage</a></span>, <span class='object_link'><a href="DiceBot.html#marshalSignOfInequality-instance_method" title="DiceBot#marshalSignOfInequality (method)">#marshalSignOfInequality</a></span>, <span class='object_link'><a href="DiceBot.html#name-instance_method" title="DiceBot#name (method)">#name</a></span>, <span class='object_link'><a href="DiceBot.html#parren_killer-instance_method" title="DiceBot#parren_killer (method)">#parren_killer</a></span>, <span class='object_link'><a href="DiceBot.html#postSet-instance_method" title="DiceBot#postSet (method)">#postSet</a></span>, <span class='object_link'><a href="DiceBot.html#prefixes-instance_method" title="DiceBot#prefixes (method)">#prefixes</a></span>, <span class='object_link'><a href="DiceBot.html#rand-instance_method" title="DiceBot#rand (method)">#rand</a></span>, <span class='object_link'><a href="DiceBot.html#removeDiceCommandMessage-instance_method" title="DiceBot#removeDiceCommandMessage (method)">#removeDiceCommandMessage</a></span>, <span class='object_link'><a href="DiceBot.html#roll-instance_method" title="DiceBot#roll (method)">#roll</a></span>, <span class='object_link'><a href="DiceBot.html#rollDiceCommandCatched-instance_method" title="DiceBot#rollDiceCommandCatched (method)">#rollDiceCommandCatched</a></span>, <span class='object_link'><a href="DiceBot.html#roll_tables-instance_method" title="DiceBot#roll_tables (method)">#roll_tables</a></span>, <span class='object_link'><a href="DiceBot.html#setPrefixes-class_method" title="DiceBot.setPrefixes (method)">setPrefixes</a></span>, <span class='object_link'><a href="DiceBot.html#setRatingTable-instance_method" title="DiceBot#setRatingTable (method)">#setRatingTable</a></span>, <span class='object_link'><a href="DiceBot.html#setSendMode-instance_method" title="DiceBot#setSendMode (method)">#setSendMode</a></span>, <span class='object_link'><a href="DiceBot.html#setSortType-instance_method" title="DiceBot#setSortType (method)">#setSortType</a></span>, <span class='object_link'><a href="DiceBot.html#should_reroll%3F-instance_method" title="DiceBot#should_reroll? (method)">#should_reroll?</a></span>, <span class='object_link'><a href="DiceBot.html#sort_key-instance_method" title="DiceBot#sort_key (method)">#sort_key</a></span>, <span class='object_link'><a href="DiceBot.html#unlimitedRollDiceType-instance_method" title="DiceBot#unlimitedRollDiceType (method)">#unlimitedRollDiceType</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
@@ -1933,7 +1911,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="check_2D6-instance_method">
   
-    #<strong>check_2D6</strong>(total_n, dice_n, signOfInequality, diff, dice_cnt, dice_max, n1, n_max)  &#x21d2; <tt>Object</tt> 
+    #<strong>check_2D6</strong>(total, dice_total, dice_list, cmp_op, target)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1973,30 +1951,26 @@
 70
 71
 72
-73
-74
-75</pre>
+73</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 56</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_max'>dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid_n1'>n1</span><span class='comma'>,</span> <span class='id identifier rubyid_n_max'>n_max</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>total_n, dice_n, signOfInequality, diff, dice_cnt, dice_max, n1, n_max</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_total_n'>total_n</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_n'>dice_n</span><span class='comma'>,</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_max'>dice_max</span><span class='comma'>,</span> <span class='id identifier rubyid_n1'>n1</span><span class='comma'>,</span> <span class='id identifier rubyid_n_max'>n_max</span><span class='rparen'>)</span>
-
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_signOfInequality'>signOfInequality</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_check_2D6'>check_2D6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&gt;=</span>
 
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ファンブル</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_n'>dice_n</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ スペシャル(魔力1D6点か変調1つ回復)</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_total_n'>total_n</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diff'>diff</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target'>target</span>
       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>else</span>
       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_output'>output</span> <span class='op'>+=</span> <span class='id identifier rubyid_getGainMagicElementText'>getGainMagicElementText</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>+=</span> <span class='id identifier rubyid_gainMagicElement'>gainMagicElement</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_list'>dice_list</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
 
   <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
 <span class='kw'>end</span></pre>
@@ -2014,22 +1988,33 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>魔素獲得チェック</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-342
-343
-344
-345
-346
-347
-348</pre>
+327
+328
+329
+330
+331
+332
+333</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 342</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 327</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_gainMagicElement'>gainMagicElement</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>==</span> <span class='id identifier rubyid_dice2'>dice2</span>
@@ -2069,76 +2054,17 @@
       <pre class="lines">
 
 
-435
-436
-437
-438</pre>
+420
+421
+422
+423</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 435</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 420</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_magic_element_type'>get_magic_element_type</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>星</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>獣</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>歌</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>夢</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>闇</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getGainMagicElementText-instance_method">
-  
-    #<strong>getGainMagicElementText</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>魔素獲得チェック</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339
-340</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 329</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getGainMagicElementText'>getGainMagicElementText</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_diceList'>diceList</span> <span class='op'>=</span> <span class='id identifier rubyid_getDiceList'>getDiceList</span>
-  <span class='id identifier rubyid_debug'><span class='object_link'><a href="top-level-namespace.html#debug-instance_method" title="#debug (method)">debug</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>getGainMagicElementText diceList</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_diceList'>diceList</span><span class='rparen'>)</span>
-
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_diceList'>diceList</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-
-  <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>=</span> <span class='id identifier rubyid_diceList'>diceList</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>=</span> <span class='id identifier rubyid_diceList'>diceList</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
-
-  <span class='comment'># マギカロギア用魔素取得判定
-</span>  <span class='kw'>return</span>  <span class='id identifier rubyid_gainMagicElement'>gainMagicElement</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2171,6 +2097,8 @@
       <pre class="lines">
 
 
+308
+309
 310
 311
 312
@@ -2185,12 +2113,10 @@
 321
 322
 323
-324
-325
-326</pre>
+324</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 310</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 308</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_accident_table'>magicalogia_accident_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2240,27 +2166,27 @@
       <pre class="lines">
 
 
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
 643
 644
-645
-646
-647
-648
-649
-650
-651
-652
-653
-654
-655
-656
-657
-658
-659
-660</pre>
+645</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 643</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 628</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_alliance_table'>magicalogia_alliance_table</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -2311,21 +2237,21 @@
       <pre class="lines">
 
 
-351
-352
-353
-354
-355
-356
-357
-358
-359
-360
-361
-362</pre>
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 351</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 336</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_background_table'>magicalogia_background_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2370,6 +2296,21 @@
       <pre class="lines">
 
 
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
 663
 664
 665
@@ -2380,25 +2321,10 @@
 670
 671
 672
-673
-674
-675
-676
-677
-678
-679
-680
-681
-682
-683
-684
-685
-686
-687
-688</pre>
+673</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 663</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 648</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_blank_secret_table'>magicalogia_blank_secret_table</span>
   <span class='id identifier rubyid_outtext'>outtext</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -2457,20 +2383,20 @@
       <pre class="lines">
 
 
-557
-558
-559
-560
-561
-562
-563
-564
-565
-566
-567</pre>
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 557</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 542</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_comical_fortune_change_table'>magicalogia_comical_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2514,20 +2440,20 @@
       <pre class="lines">
 
 
-591
-592
-593
-594
-595
-596
-597
-598
-599
-600
-601</pre>
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 591</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 576</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_conspiracy_table'>magicalogia_conspiracy_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2571,20 +2497,20 @@
       <pre class="lines">
 
 
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627</pre>
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 617</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 602</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_cueball_table'>magicalogia_cueball_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2628,26 +2554,26 @@
       <pre class="lines">
 
 
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
 365
-366
-367
-368
-369
-370
-371
-372
-373
-374
-375
-376
-377
-378
-379
-380
-381</pre>
+366</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 365</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 350</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_defaultanchor_table'>magicalogia_defaultanchor_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2697,25 +2623,25 @@
       <pre class="lines">
 
 
-709
-710
-711
-712
-713
-714
-715
-716
-717
-718
-719
-720
-721
-722
-723
-724</pre>
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 709</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 694</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_extreme_environment_scene_table'>magicalogia_extreme_environment_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2753,35 +2679,29 @@
       <pre class="lines">
 
 
-1146
-1147
-1148
-1149
-1150
-1151
-1152
-1153
-1154
-1155
-1156
-1157
-1158
-1159</pre>
+1131
+1132
+1133
+1134
+1135
+1136
+1137
+1138
+1139
+1140
+1141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1146</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_fallen_after_table'>magicalogia_fallen_after_table</span>
-  <span class='id identifier rubyid_outtext'>outtext</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_outnum'>outnum</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
   <span class='id identifier rubyid_num'>num</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_num'>num</span> <span class='op'>&lt;=</span> <span class='int'>3</span>
     <span class='id identifier rubyid_outtext'>outtext</span><span class='comma'>,</span> <span class='id identifier rubyid_outnum'>outnum</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_fallen_after_table_low'>magicalogia_fallen_after_table_low</span>
-    <span class='id identifier rubyid_outtext'>outtext</span> <span class='op'>=</span> <span class='id identifier rubyid_outtext'>outtext</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_outtext'>outtext</span><span class='comma'>,</span> <span class='id identifier rubyid_outnum'>outnum</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_fallen_after_table_high'>magicalogia_fallen_after_table_high</span>
-    <span class='id identifier rubyid_outtext'>outtext</span> <span class='op'>=</span> <span class='id identifier rubyid_outtext'>outtext</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
   <span class='kw'>end</span>
+  <span class='id identifier rubyid_outtext'>outtext</span> <span class='op'>=</span> <span class='id identifier rubyid_outtext'>outtext</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
   <span class='id identifier rubyid_outnum'>outnum</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_num'>num</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_outnum'>outnum</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>return</span> <span class='id identifier rubyid_outtext'>outtext</span><span class='comma'>,</span> <span class='id identifier rubyid_outnum'>outnum</span>
 <span class='kw'>end</span></pre>
@@ -2805,20 +2725,20 @@
       <pre class="lines">
 
 
-1134
-1135
-1136
-1137
-1138
-1139
-1140
-1141
-1142
-1143
-1144</pre>
+1119
+1120
+1121
+1122
+1123
+1124
+1125
+1126
+1127
+1128
+1129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1134</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1119</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_fallen_after_table_high'>magicalogia_fallen_after_table_high</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2862,20 +2782,20 @@
       <pre class="lines">
 
 
-1122
-1123
-1124
-1125
-1126
-1127
-1128
-1129
-1130
-1131
-1132</pre>
+1107
+1108
+1109
+1110
+1111
+1112
+1113
+1114
+1115
+1116
+1117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1122</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_fallen_after_table_low'>magicalogia_fallen_after_table_low</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2919,20 +2839,20 @@
       <pre class="lines">
 
 
-1078
-1079
-1080
-1081
-1082
-1083
-1084
-1085
-1086
-1087
-1088</pre>
+1063
+1064
+1065
+1066
+1067
+1068
+1069
+1070
+1071
+1072
+1073</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1078</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1063</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_fallen_flower_table'>magicalogia_fallen_flower_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2976,20 +2896,20 @@
       <pre class="lines">
 
 
-604
-605
-606
-607
-608
-609
-610
-611
-612
-613
-614</pre>
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 604</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 589</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_fate_table'>magicalogia_fate_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3033,20 +2953,20 @@
       <pre class="lines">
 
 
-630
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640</pre>
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 630</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 615</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_force_field_table'>magicalogia_force_field_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3090,21 +3010,21 @@
       <pre class="lines">
 
 
-384
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395</pre>
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 384</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 369</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_fortune_attribution_table'>magicalogia_fortune_attribution_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3149,6 +3069,8 @@
       <pre class="lines">
 
 
+295
+296
 297
 298
 299
@@ -3157,12 +3079,10 @@
 302
 303
 304
-305
-306
-307</pre>
+305</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 295</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_fortunechange_table'>magicalogia_fortunechange_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3206,6 +3126,8 @@
       <pre class="lines">
 
 
+267
+268
 269
 270
 271
@@ -3215,12 +3137,10 @@
 275
 276
 277
-278
-279
-280</pre>
+278</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 269</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 267</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_fumble_table'>magicalogia_fumble_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3265,26 +3185,26 @@
       <pre class="lines">
 
 
+999
+1000
+1001
+1002
+1003
+1004
+1005
+1006
+1007
+1008
+1009
+1010
+1011
+1012
+1013
 1014
-1015
-1016
-1017
-1018
-1019
-1020
-1021
-1022
-1023
-1024
-1025
-1026
-1027
-1028
-1029
-1030</pre>
+1015</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1014</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 999</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_god_bar_scene_table'>magicalogia_god_bar_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3334,25 +3254,25 @@
       <pre class="lines">
 
 
-727
-728
-729
-730
-731
-732
-733
-734
-735
-736
-737
-738
-739
-740
-741
-742</pre>
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 727</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 712</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_innner_world_scene_table'>magicalogia_innner_world_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3401,20 +3321,20 @@
       <pre class="lines">
 
 
-505
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515</pre>
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 505</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 490</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_insanity_fortune_change_table'>magicalogia_insanity_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3458,27 +3378,27 @@
       <pre class="lines">
 
 
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
 571
 572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588</pre>
+573</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 571</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 556</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_inveterate_enemy_table'>magicalogia_inveterate_enemy_table</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -3529,25 +3449,25 @@
       <pre class="lines">
 
 
-781
-782
-783
-784
-785
-786
-787
-788
-789
-790
-791
-792
-793
-794
-795
-796</pre>
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 781</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 766</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_labyrinth_world_scene_table'>magicalogia_labyrinth_world_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3596,20 +3516,20 @@
       <pre class="lines">
 
 
-906
-907
-908
-909
-910
-911
-912
-913
-914
-915
-916</pre>
+891
+892
+893
+894
+895
+896
+897
+898
+899
+900
+901</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 906</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 891</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_magi_fortune_change_table'>magicalogia_magi_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3653,26 +3573,26 @@
       <pre class="lines">
 
 
+923
+924
+925
+926
+927
+928
+929
+930
+931
+932
+933
+934
+935
+936
+937
 938
-939
-940
-941
-942
-943
-944
-945
-946
-947
-948
-949
-950
-951
-952
-953
-954</pre>
+939</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 938</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 923</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_magic_academy_scene_table'>magicalogia_magic_academy_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3722,26 +3642,26 @@
       <pre class="lines">
 
 
+904
+905
+906
+907
+908
+909
+910
+911
+912
+913
+914
+915
+916
+917
+918
 919
-920
-921
-922
-923
-924
-925
-926
-927
-928
-929
-930
-931
-932
-933
-934
-935</pre>
+920</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 919</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 904</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_magic_bookshelf_scene_table'>magicalogia_magic_bookshelf_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3791,25 +3711,25 @@
       <pre class="lines">
 
 
-745
-746
-747
-748
-749
-750
-751
-752
-753
-754
-755
-756
-757
-758
-759
-760</pre>
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 745</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 730</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_magic_city_scene_table'>magicalogia_magic_city_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3858,20 +3778,20 @@
       <pre class="lines">
 
 
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502</pre>
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 492</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 477</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_mental_fortune_change_table'>magicalogia_mental_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3915,26 +3835,26 @@
       <pre class="lines">
 
 
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
 799
-800
-801
-802
-803
-804
-805
-806
-807
-808
-809
-810
-811
-812
-813
-814
-815</pre>
+800</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 799</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 784</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_new_scene_table'>magicalogia_new_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -3984,20 +3904,20 @@
       <pre class="lines">
 
 
-1109
-1110
-1111
-1112
-1113
-1114
-1115
-1116
-1117
-1118
-1119</pre>
+1094
+1095
+1096
+1097
+1098
+1099
+1100
+1101
+1102
+1103
+1104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1109</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1094</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_new_time_passage_table'>magicalogia_new_time_passage_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4041,25 +3961,25 @@
       <pre class="lines">
 
 
-1091
-1092
-1093
-1094
-1095
-1096
-1097
-1098
-1099
-1100
-1101
-1102
-1103
-1104
-1105
-1106</pre>
+1076
+1077
+1078
+1079
+1080
+1081
+1082
+1083
+1084
+1085
+1086
+1087
+1088
+1089
+1090
+1091</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1091</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1076</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_old_library_scene_table'>magicalogia_old_library_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4108,26 +4028,26 @@
       <pre class="lines">
 
 
+961
+962
+963
+964
+965
+966
+967
+968
+969
+970
+971
+972
+973
+974
+975
 976
-977
-978
-979
-980
-981
-982
-983
-984
-985
-986
-987
-988
-989
-990
-991
-992</pre>
+977</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 976</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 961</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_parallel_world_scene_table'>magicalogia_parallel_world_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4177,20 +4097,20 @@
       <pre class="lines">
 
 
-531
-532
-533
-534
-535
-536
-537
-538
-539
-540
-541</pre>
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 531</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 516</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_paranormal_fortune_change_table'>magicalogia_paranormal_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4234,20 +4154,20 @@
       <pre class="lines">
 
 
-479
-480
-481
-482
-483
-484
-485
-486
-487
-488
-489</pre>
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 479</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 464</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_physical_fortune_change_table'>magicalogia_physical_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4291,26 +4211,26 @@
       <pre class="lines">
 
 
+980
+981
+982
+983
+984
+985
+986
+987
+988
+989
+990
+991
+992
+993
+994
 995
-996
-997
-998
-999
-1000
-1001
-1002
-1003
-1004
-1005
-1006
-1007
-1008
-1009
-1010
-1011</pre>
+996</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 995</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 980</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_post_apocalypse_scene_table'>magicalogia_post_apocalypse_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4360,25 +4280,25 @@
       <pre class="lines">
 
 
-691
-692
-693
-694
-695
-696
-697
-698
-699
-700
-701
-702
-703
-704
-705
-706</pre>
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 691</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 676</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_prise_table'>magicalogia_prise_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4427,16 +4347,16 @@
       <pre class="lines">
 
 
-827
-828
-829
-830
-831
-832
-833</pre>
+812
+813
+814
+815
+816
+817
+818</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 827</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 812</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_beast_table'>magicalogia_random_skill_beast_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4476,14 +4396,14 @@
       <pre class="lines">
 
 
-854
-855
-856
-857
-858</pre>
+839
+840
+841
+842
+843</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 854</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 839</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_dream_table'>magicalogia_random_skill_dream_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>追憶</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>謎</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>嘘</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>不安</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>眠り</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>偶然</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>幻</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>狂気</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>祈り</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>希望</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>未来</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
@@ -4521,16 +4441,16 @@
       <pre class="lines">
 
 
-836
-837
-838
-839
-840
-841
-842</pre>
+821
+822
+823
+824
+825
+826
+827</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 836</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 821</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_force_table'>magicalogia_random_skill_force_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4570,16 +4490,16 @@
       <pre class="lines">
 
 
-861
-862
-863
-864
-865
-866
-867</pre>
+846
+847
+848
+849
+850
+851
+852</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 861</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 846</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_night_table'>magicalogia_random_skill_night_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4619,16 +4539,16 @@
       <pre class="lines">
 
 
-845
-846
-847
-848
-849
-850
-851</pre>
+830
+831
+832
+833
+834
+835
+836</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 845</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 830</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_poem_table'>magicalogia_random_skill_poem_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4668,16 +4588,16 @@
       <pre class="lines">
 
 
-818
-819
-820
-821
-822
-823
-824</pre>
+803
+804
+805
+806
+807
+808
+809</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 818</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 803</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_star_table'>magicalogia_random_skill_star_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4717,24 +4637,24 @@
       <pre class="lines">
 
 
-412
-413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
-425
-426</pre>
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 412</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 397</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_table'>magicalogia_random_skill_table</span>
   <span class='id identifier rubyid_skillTableFull'>skillTableFull</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -4782,13 +4702,13 @@
       <pre class="lines">
 
 
-429
-430
-431
-432</pre>
+414
+415
+416
+417</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 429</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 414</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_table_text_only'>magicalogia_random_skill_table_text_only</span>
   <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_random_skill_table'>magicalogia_random_skill_table</span>
@@ -4825,13 +4745,13 @@
       <pre class="lines">
 
 
-876
-877
-878
-879</pre>
+861
+862
+863
+864</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 876</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 861</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_table_text_only_beast'>magicalogia_random_skill_table_text_only_beast</span>
   <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_random_skill_beast_table'>magicalogia_random_skill_beast_table</span>
@@ -4868,13 +4788,13 @@
       <pre class="lines">
 
 
-894
-895
-896
-897</pre>
+879
+880
+881
+882</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 894</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 879</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_table_text_only_dream'>magicalogia_random_skill_table_text_only_dream</span>
   <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_random_skill_dream_table'>magicalogia_random_skill_dream_table</span>
@@ -4911,13 +4831,13 @@
       <pre class="lines">
 
 
-882
-883
-884
-885</pre>
+867
+868
+869
+870</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 882</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 867</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_table_text_only_force'>magicalogia_random_skill_table_text_only_force</span>
   <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_random_skill_force_table'>magicalogia_random_skill_force_table</span>
@@ -4954,13 +4874,13 @@
       <pre class="lines">
 
 
-900
-901
-902
-903</pre>
+885
+886
+887
+888</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 900</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 885</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_table_text_only_night'>magicalogia_random_skill_table_text_only_night</span>
   <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_random_skill_night_table'>magicalogia_random_skill_night_table</span>
@@ -4997,13 +4917,13 @@
       <pre class="lines">
 
 
-888
-889
-890
-891</pre>
+873
+874
+875
+876</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 888</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 873</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_table_text_only_poem'>magicalogia_random_skill_table_text_only_poem</span>
   <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_random_skill_poem_table'>magicalogia_random_skill_poem_table</span>
@@ -5040,13 +4960,13 @@
       <pre class="lines">
 
 
-870
-871
-872
-873</pre>
+855
+856
+857
+858</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 870</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 855</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_random_skill_table_text_only_star'>magicalogia_random_skill_table_text_only_star</span>
   <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_magicalogia_random_skill_star_table'>magicalogia_random_skill_star_table</span>
@@ -5083,6 +5003,8 @@
       <pre class="lines">
 
 
+248
+249
 250
 251
 252
@@ -5097,12 +5019,10 @@
 261
 262
 263
-264
-265
-266</pre>
+264</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 250</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 248</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_scene_table'>magicalogia_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5152,20 +5072,20 @@
       <pre class="lines">
 
 
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528</pre>
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 518</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 503</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_social_fortune_change_table'>magicalogia_social_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5209,26 +5129,26 @@
       <pre class="lines">
 
 
+1018
+1019
+1020
+1021
+1022
+1023
+1024
+1025
+1026
+1027
+1028
+1029
+1030
+1031
+1032
 1033
-1034
-1035
-1036
-1037
-1038
-1039
-1040
-1041
-1042
-1043
-1044
-1045
-1046
-1047
-1048
-1049</pre>
+1034</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1033</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1018</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_starlight_scene_table'>magicalogia_starlight_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5278,6 +5198,21 @@
       <pre class="lines">
 
 
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
 441
 442
 443
@@ -5285,25 +5220,10 @@
 445
 446
 447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463</pre>
+448</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 441</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 426</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_time_passage_table'>magicalogia_time_passage_table</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -5359,26 +5279,26 @@
       <pre class="lines">
 
 
+942
+943
+944
+945
+946
+947
+948
+949
+950
+951
+952
+953
+954
+955
+956
 957
-958
-959
-960
-961
-962
-963
-964
-965
-966
-967
-968
-969
-970
-971
-972
-973</pre>
+958</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 957</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 942</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_tower_credo_scene_table'>magicalogia_tower_credo_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5428,20 +5348,20 @@
       <pre class="lines">
 
 
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476</pre>
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 466</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 451</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_typical_fortune_change_table'>magicalogia_typical_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5485,21 +5405,21 @@
       <pre class="lines">
 
 
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409</pre>
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 398</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 383</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_wish_table'>magicalogia_wish_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5544,20 +5464,20 @@
       <pre class="lines">
 
 
-1065
-1066
-1067
-1068
-1069
-1070
-1071
-1072
-1073
-1074
-1075</pre>
+1050
+1051
+1052
+1053
+1054
+1055
+1056
+1057
+1058
+1059
+1060</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1065</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1050</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_wondaring_monster_table'>magicalogia_wondaring_monster_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5601,20 +5521,20 @@
       <pre class="lines">
 
 
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554</pre>
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 544</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 529</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_wonderful_fortune_change_table'>magicalogia_wonderful_fortune_change_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5658,25 +5578,25 @@
       <pre class="lines">
 
 
-763
-764
-765
-766
-767
-768
-769
-770
-771
-772
-773
-774
-775
-776
-777
-778</pre>
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 763</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 748</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_world_after_dead_scene_table'>magicalogia_world_after_dead_scene_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5725,20 +5645,20 @@
       <pre class="lines">
 
 
-1052
-1053
-1054
-1055
-1056
-1057
-1058
-1059
-1060
-1061
-1062</pre>
+1037
+1038
+1039
+1040
+1041
+1042
+1043
+1044
+1045
+1046
+1047</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1052</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 1037</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_world_low_add_table'>magicalogia_world_low_add_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5782,6 +5702,8 @@
       <pre class="lines">
 
 
+281
+282
 283
 284
 285
@@ -5791,12 +5713,10 @@
 289
 290
 291
-292
-293
-294</pre>
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 283</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 281</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magicalogia_wrong_table'>magicalogia_wrong_table</span>
   <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -5841,6 +5761,8 @@
       <pre class="lines">
 
 
+76
+77
 78
 79
 80
@@ -6008,12 +5930,10 @@
 242
 243
 244
-245
-246
-247</pre>
+245</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'src/diceBot/MagicaLogia.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDiceCommand'>rollDiceCommand</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
@@ -6195,9 +6115,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Mar 20 02:13:19 2020 by
+  Generated on Wed May  6 12:33:10 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.7.0).
+  0.9.24 (ruby-2.7.1).
 </div>
 
     </div>
