@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::ParasiteBlood
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::ParasiteBlood";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">ParasiteBlood</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::ParasiteBlood
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="DemonParasite.html" title="BCDice::GameSystem::DemonParasite (class)">DemonParasite</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="DemonParasite.html" title="BCDice::GameSystem::DemonParasite (class)">DemonParasite</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::ParasiteBlood</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/ParasiteBlood.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ParasiteBlood</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>パラサイトブラッドRPG</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>はらさいとふらつとRPG</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>  ・衝動表　(URGEx)
+</span><span class='tstring_content'>  　&quot;URGE衝動レベル&quot;の形で指定します。
+</span><span class='tstring_content'>  　衝動表に従って自動でダイスロールを行い、結果を表示します。
+</span><span class='tstring_content'>  　ダイスロールと同様に、他のプレイヤーに隠れてロールすることも可能です。
+</span><span class='tstring_content'>  　頭に識別文字を追加して、デフォルト以外の衝動表もロールできます。
+</span><span class='tstring_content'>  　・AURGEx　頭に「A」を付けると「誤作動表」。
+</span><span class='tstring_content'>  例）URGE1　　　urge5　　　Aurge2
+</span><span class='tstring_content'>  ・D66ダイスあり
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="DemonParasite.html" title="BCDice::GameSystem::DemonParasite (class)">DemonParasite</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DemonParasite.html#MALFUNCTION_TABLE-constant" title="BCDice::GameSystem::DemonParasite::MALFUNCTION_TABLE (constant)">DemonParasite::MALFUNCTION_TABLE</a></span>, <span class='object_link'><a href="DemonParasite.html#MUTANT_TABLE-constant" title="BCDice::GameSystem::DemonParasite::MUTANT_TABLE (constant)">DemonParasite::MUTANT_TABLE</a></span>, <span class='object_link'><a href="DemonParasite.html#NEW_URGE_TABLE-constant" title="BCDice::GameSystem::DemonParasite::NEW_URGE_TABLE (constant)">DemonParasite::NEW_URGE_TABLE</a></span>, <span class='object_link'><a href="DemonParasite.html#ONIMITAMA_BATTLE_TABLE-constant" title="BCDice::GameSystem::DemonParasite::ONIMITAMA_BATTLE_TABLE (constant)">DemonParasite::ONIMITAMA_BATTLE_TABLE</a></span>, <span class='object_link'><a href="DemonParasite.html#ONIMITAMA_OUT_OF_BATTLE_TABLE-constant" title="BCDice::GameSystem::DemonParasite::ONIMITAMA_OUT_OF_BATTLE_TABLE (constant)">DemonParasite::ONIMITAMA_OUT_OF_BATTLE_TABLE</a></span>, <span class='object_link'><a href="DemonParasite.html#URGE_TABLE-constant" title="BCDice::GameSystem::DemonParasite::URGE_TABLE (constant)">DemonParasite::URGE_TABLE</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_pb_aas_urge_table-instance_method" title="#get_pb_aas_urge_table (instance method)">#<strong>get_pb_aas_urge_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**パラサイトブラッドの誤作動表(2d6).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_pb_normal_urge_table-instance_method" title="#get_pb_normal_urge_table (instance method)">#<strong>get_pb_normal_urge_table</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_pb_urge_table-instance_method" title="#get_pb_urge_table (instance method)">#<strong>get_pb_urge_table</strong>(level, dice, urge_type)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_urge-instance_method" title="#get_urge (instance method)">#<strong>get_urge</strong>(string)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>パラサイトブラッドの衝動表.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="DemonParasite.html" title="BCDice::GameSystem::DemonParasite (class)">DemonParasite</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DemonParasite.html#check_nD6-instance_method" title="BCDice::GameSystem::DemonParasite#check_nD6 (method)">#check_nD6</a></span>, <span class='object_link'><a href="DemonParasite.html#eval_game_system_specific_command-instance_method" title="BCDice::GameSystem::DemonParasite#eval_game_system_specific_command (method)">#eval_game_system_specific_command</a></span>, <span class='object_link'><a href="DemonParasite.html#initialize-instance_method" title="BCDice::GameSystem::DemonParasite#initialize (method)">#initialize</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="DemonParasite.html#initialize-instance_method" title="BCDice::GameSystem::DemonParasite#initialize (method)">BCDice::GameSystem::DemonParasite</a></span></p>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="get_pb_aas_urge_table-instance_method">
+  
+    #<strong>get_pb_aas_urge_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**パラサイトブラッドの誤作動表(2d6)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ParasiteBlood.rb', line 153</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_pb_aas_urge_table'>get_pb_aas_urge_table</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span><span class='lbracket'>[</span>
+    <span class='comment'># **第１段階
+</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『緊急停止/20』機能異常の警報と共に、機能が緊急停止。次のターンのターン終了時まで［行動不能］となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『動作不調/10』駆動系に異常発生。このターンのターン終了まで［行動不能］となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『腕部停止/10』腕部機能に異常発生。このターンのターン終了まで［タイミング：攻撃］を失う。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『視覚異常/10』センサー系に異常。60ターン（10分）の間、［暗闇］となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機能制動/0』機能が一瞬停止するが、以後正常に動作。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機能安定/0』機能がむしろ安定した。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『不良調整/0』機能に違和感を覚えるが誤差の範囲内。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機能暴発/10』兵装の調子が悪化。次のターンのターン終了まで、［タイミング：準備］の《兵装》が使用できない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『離脱機能/10』異常発生。即座に［戦闘移動］を行い、最も近い敵から遠ざかるように移動する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『排熱暴走/10』排熱機能に異常。次のターンのターン終了まで［着火］状態となる。特殊ダメージは本人のものを使用する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『電装異常/20』電装系に異常。即座に【負荷】が2点蓄積する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='comma'>,</span>
+
+          <span class='comment'># **第２段階
+</span>          <span class='lbracket'>[</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『安全機能/20』セーフティが誤動作。このターンのターン終了まで判定の達成値に-5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『筋肉萎縮/20』人工筋肉に異常発生。60ターン（10分）の間、【肉体】判定の達成値に-2。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『出力低下/20』駆動部に異常発生。60ターン（10分）の間、【機敏】判定の達成値に-2。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『感覚異常/10』感覚機能に異常発生。60ターン（10分）の間、【感覚】判定の達成値に-2。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『視界不良/10』視覚機能に異常発生。60ターン（10分）の間、【幸運】判定の達成値に-2。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機能安定/0』機能がむしろ安定した。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『不良調整/0』機能に違和感を覚えるが誤差の範囲内。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『援護不通/10』援護ソフトが誤作動。60ターン（10分）の間、【知力】判定の達成値に-2。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『発声不調/20』通話機能に異常。60ターン（10分）の間、声を出しても雑音だらけになって意味が通じず、さらに【精神】判定の達成値に-2。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『装甲軟化/20』防御機能に異常。次のターンのターン終了まで、防御力に-5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『装備異常/20』精密動作に異常発生。装備している［通常アイテム］の武器がランダムでひとつ、［装備］から外れる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='rbracket'>]</span><span class='comma'>,</span>
+
+          <span class='comment'># **第３段階
+</span>          <span class='lbracket'>[</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『動力漏電/20』動力が漏電し始める。【負荷】が2点蓄積する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『脚部異常/20』脚部に異常発生。次のターンのターン終了まで［戦闘移動］［全力移動］の距離が半分になる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『足下転倒/20』バランサーに異常発生。［転倒］状態となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『出力向上/20』突然出力が上昇する。次のターンのターン終了まで、特殊ダメージに+1d。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機能制動/10』一瞬違和感を覚えるが、以後正常に動作。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『障壁減衰/10』電力が減衰する。【電力】を5消費する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『身体向上/10』格闘機能が向上。次のターンのターン終了まで、肉弾ダメージに+1d。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『精度向上/20』火器管制機能が向上。次のターンのターン終了まで、射撃ダメージに+1d。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『反射鋭化/20』反応速度が加速した。次のターンのターン終了まで、【行動値】に+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『友軍誤認/20』警戒装置が誤動。最も近い［距離：移動10m/対象：1体］に通常肉弾攻撃を行う。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『電子賦活/20』電磁障壁が突如復帰。【電力】が10回復する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='rbracket'>]</span><span class='comma'>,</span>
+
+          <span class='comment'># **第４段階
+</span>          <span class='lbracket'>[</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『照準誤認/20』照準機能に異常発生。最も近い［距離：移動10m/対象：1体］に通常肉弾攻撃を行う。判定は自動的にクリティカルとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『攻撃特化/20』攻撃機能が異常動作。次のターンのターン終了まで、ダメージに+2d。ただし、その間［タイミング：瞬間］を行えない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機内窒息/20』呼吸機能に異常。次のターンのターン終了まで［窒息］状態となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『自動援護/20』援護機能が自動的に作動する。即座に［タイミング：準備］を1回行う。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『音声遮断/10』聴覚機能に異常発生。次のターンのターン終了まで一切の物音が聞こえず、回避判定の達成値に-5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『電流加速/10』突然電磁障壁が効率的に流れる。【電力】が10回復。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『精密射撃/20』照準機能が向上。60ターン（10分間）の間、ダメージに+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『緊急措置/20』突然、緊急時の対策機能が発動する。【負荷】が2蓄積し、【電力】が20回復する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『荷電暴走/20』電流の流れに異常が発生。【HP】を10消費し、次のターンのターン終了までダメージに+10。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『状況分析/20』周辺解析ソフトが高速で動作。60ターン（10分間）の間、命中判定の達成値に+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機能再生/20』兵装に誤作動。取得済みの使用不能になった《兵装》を1つ指定し、再び使用できるようになる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='rbracket'>]</span><span class='comma'>,</span>
+
+          <span class='comment'># **第５段階
+</span>          <span class='lbracket'>[</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機能停止/30』機能が作動しなくなる。このターンのターン終了まで、【負荷】を蓄積させる行動が取れなくなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機関暴走/30』放熱機関が暴走する。本人を中心として［対象：半径5m全て］が次のターンのターン終了まで［着火］状態となる。特殊ダメージはこの表を振ったPCのものを使用する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『電力低下/20』出力が上がらない。【電力】が20減少する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『急速修復/20』電磁障壁と生命維持装置が高速処理を始める。【HP】が20回復。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『駆動不調/20』駆動系に動作不良。次のターンのターン終了まで、判定の達成値に-5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機体清冽/20』機能が初期化され、異常から復帰。［気絶・死亡・戦闘不能］以外の状態変化がすべて解除される。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『機体減速/20』運動機能が暴走。次のターンのターン終了まで【行動値】に-10（最低1）。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『排毒噴出/20』排気機構が誤作動。［対象：半径5m全て］が次のターンのターン終了まで［猛毒］状態となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『緊急駆動/20』機動性が向上。次のターンのターン終了まで判定の達成値に+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『負荷軽減/30』急激に負荷が解消される。【負荷】が2点回復する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『出力過剰/30』全出力が過剰なまでに上昇する。次のターンのターン終了までダメージに+10。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='rbracket'>]</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_pb_normal_urge_table-instance_method">
+  
+    #<strong>get_pb_normal_urge_table</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ParasiteBlood.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_pb_normal_urge_table'>get_pb_normal_urge_table</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span><span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『怒り/20』突然強い怒りに駆られる。最も近い対象を罵倒し、そのターンの終了まで[行動不能]となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『暗闇/20』視神経に悪影響が出て、24時間[暗闇]になる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『悲哀/10』突然の悲みに動きが止まる。そのターンの終了まで[行動不能]となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『微笑/10』可笑しくてしょうがない。笑いが止まらず、そのターンの終了まで[行動不能]となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『鈍感/ 0』衝動に気が付かない。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『抑制/ 0』衝動を抑制した。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『我慢/ 0』衝動を我慢した。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『前兆/10』悪魔的特徴が1ターン(10秒)目立つ。〈悪魔化〉時は影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『変化/10』利き腕や前脚のみ、2ターン(20秒)かけて〈悪魔化〉する。〈悪魔化〉時は影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『拒絶/10』〈悪魔化〉が解除される。通常時は影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『定着/20』通常時であれば、即座に〈悪魔化〉する。肉体が〈悪魔化〉に馴染み、24時間通常時に戻れない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='lbracket'>[</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『賛美/20』最も近くの対象を主と思いこむ。1時間または自身か対象が[気絶・戦闘不能・死亡]するまで、対象のあらゆる命令を聞く。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『茫然/20』思考が停止。そのターンの終了まで[タイミング:攻撃]を行えない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『苦痛/20』&quot;悪魔寄生体&quot;が体内で暴れる。苦痛を感じ、【エナジー】を10消費。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『落涙/10』過去の悲しい想い出が去来し、涙が溢れる。そのターンの終了まで[タイミング:準備]を行えない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『限界/10』溢れる力が限界を超え、全身の血管が破裂。【エナジー】を5消費。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『辛抱/10』突如全身が〈悪魔化〉しようとしたが、意思の力で抑制。【エナジー】を5消費。〈悪魔化〉時は影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『忍耐/ 0』衝動に耐えた。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『抑制/ 0』衝動を抑制した。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『我慢/ 0』衝動を我慢した。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『嫉妬/10』最も近くの対象に猛烈な嫉妬を感じ、[距離:移動10m/対象:1体]に通常肉弾攻撃を行う。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『変貌/20』〈悪魔化〉する。その際、特異な外見が目立つ。〈悪魔化〉時は影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='lbracket'>[</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『異貌/20』3ターンかけて、顔のみが〈悪魔化〉する。〈悪魔化〉時は影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『解放/20』衝動に耐えきれず3ターンかけて〈悪魔化〉する。〈悪魔化〉時は影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『発露/20』全身を駆け抜ける衝動により力が溢れる。次のターンの終了まで、ダメージに+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『渇望/10』攻撃衝動を抑えられない。次のターンの終了まで、命中判定の達成値に+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『絶叫/10』あらん限りの声で叫び、力が増す。次のターンの終了まで、ダメージに+1d。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『我慢/ 0』衝動を我慢した。影響なし。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『憤怒/10』全身に怒りが満ちて攻撃力上昇。次のターンの終了まで、ダメージに+1d。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『加速/10』全身を駆け抜ける衝動により速度上昇。次のターンの終了まで【行動値】が2倍。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『嫌悪/20』最も近くの対象に嫌悪を感じ、[距離:移動10m/対象:1体]に通常肉弾攻撃を行う。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『保身/20』突如として防御能力が高まる。次のターンの終了まで、防御力に+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『救済/20』&quot;悪魔寄生体&quot;が危機を察知し、【エナジー】を20回復。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='lbracket'>[</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『転倒/20』踏み込んだ瞬間、あまりの衝撃に地面をえぐり[転倒]してしまう。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『脱力/20』急に力が抜ける。そのターンの終了まで、判定の達成値に-5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『困惑/20』精神に変調があらわれ、空間認識能力が狂う。次のターンの終了まで、[タイミング:瞬間]の《特殊能力》を行えない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『全力/20』激しい躁状態。次のターンの終了まで、命中判定に+10。加えて[タイミング:ターン開始]の《特殊能力》を使用できなくなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『咆吼/10』大声で叫び、意味のある言葉を話せなくなる。１時間持続する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『狂気/10』心が狂気に満たされ、強いストレスを感じる。【衝動】を2蓄積させる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『本能/20』&quot;悪魔寄生体&quot;の生存本能が自我を支配。次のターンの終了まで、ダメージに+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『治癒/20』衝動を1蓄積させ、《肉体修復》を行う。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『敵意/20』最も近い対象に強い敵意を抱く。[距離:移動10m/対象:1体]に通常肉弾攻撃を行い、クリティカルとなる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『自虐/20』自分が許せず自虐行為を行う。【エナジー】を10消費するが、次のターンの終了までダメージに+10。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『自浄/20』少し我に返る。【衝動】が2回復。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='lbracket'>[</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『睡眠/30』猛烈な睡魔に襲われ意識を失う。そのターンの終了まで[気絶]となる。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『飢餓/30』猛烈な飢餓感。20m以内の最も近い[気絶・戦闘不能・死亡]の対象へ移動し、喰らう。次のターンの終了まで、対象は【エナジー】を1dずつ消費。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『激怒/20』突如として強い怒りが湧き、周囲が見えなくなる。次のターンの終了まで、[タイミング:瞬間]の《特殊能力》を行えない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『顕現/20』利き腕や前脚がさらに外骨格化し、肉体に強い負荷がかかる。【衝動】を3蓄積</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『好機/20』チャンスに本能が素早く反応。即座に[タイミング:攻撃]の行動を1回だけ行える。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『狂化/20』精神に変調、心が強い狂気で満たされ、自虐行為に走る。【エナジー】を20消費する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『混乱/20』精神に変調が現れ、肉体を意のままに動かせない。次のターンの終了まで、判定の達成値に-5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『暴君/20』自分が最強に思えてしょうがない。60ターン(10分)の間、【行動値】とダメージに+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『無双/20』達人の感覚が目覚める。60ターン(10分)の間、命中判定と回避判定の達成値に+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『発現/30』通常時であれば、即座に《悪魔化》する。特異な外見が60ターン(10分)目立ち、その間、命中判定とダメージに+5。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>『絶望/30』全身が絶望に満たされ、全てを破壊したくなる。次のターンの終了まで、ダメージに+15。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='rbracket'>]</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_pb_urge_table-instance_method">
+  
+    #<strong>get_pb_urge_table</strong>(level, dice, urge_type)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ParasiteBlood.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_pb_urge_table'>get_pb_urge_table</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='comma'>,</span> <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_urge_type'>urge_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_urge_type'>urge_type</span> <span class='op'>&lt;=</span> <span class='int'>1</span> <span class='comment'># 衝動表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span>  <span class='id identifier rubyid_get_pb_normal_urge_table'>get_pb_normal_urge_table</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_urge_type'>urge_type</span> <span class='op'>&lt;=</span> <span class='int'>2</span> <span class='comment'># AASとサイボーグの誤作動表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_get_pb_aas_urge_table'>get_pb_aas_urge_table</span>
+  <span class='kw'>else</span> <span class='comment'># エラートラップ
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_get_pb_normal_urge_table'>get_pb_normal_urge_table</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_table'>table</span><span class='lbracket'>[</span><span class='id identifier rubyid_level'>level</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_dice'>dice</span> <span class='op'>-</span> <span class='int'>2</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_urge-instance_method">
+  
+    #<strong>get_urge</strong>(string)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>パラサイトブラッドの衝動表</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ParasiteBlood.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_urge'>get_urge</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span> <span class='comment'># パラサイトブラッドの衝動表
+</span>  <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\w*)URGE\s*(\d+)</span><span class='regexp_end'>/i</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_string'>string</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_initialWord'>initialWord</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_urgelv'>urgelv</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_initialWord'>initialWord</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_urge_type'>urge_type</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>A</span><span class='regexp_end'>/i</span></span>    <span class='comment'># 誤作動表
+</span>    <span class='id identifier rubyid_urge_type'>urge_type</span> <span class='op'>=</span> <span class='int'>2</span>
+  <span class='kw'>else</span>         <span class='comment'># あり得ない文字
+</span>    <span class='id identifier rubyid_urge_type'>urge_type</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_urgelv'>urgelv</span> <span class='op'>&lt;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_urgelv'>urgelv</span> <span class='op'>&gt;</span> <span class='int'>5</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>衝動段階は1から5です</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_urge_type'>urge_type</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_dice_now'>dice_now</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_sum'>roll_sum</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_urge'>urge</span> <span class='op'>=</span> <span class='id identifier rubyid_get_pb_urge_table'>get_pb_urge_table</span><span class='lparen'>(</span><span class='id identifier rubyid_urgelv'>urgelv</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_now'>dice_now</span><span class='comma'>,</span> <span class='id identifier rubyid_urge_type'>urge_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_resultText'>resultText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_urgelv'>urgelv</span><span class='embexpr_end'>}</span><span class='tstring_content'>-</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_now'>dice_now</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_urge'>urge</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_urge_type'>urge_type</span> <span class='op'>&lt;=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>衝動表</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_resultText'>resultText</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_urge_type'>urge_type</span> <span class='op'>&lt;=</span> <span class='int'>2</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>誤作動表</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_resultText'>resultText</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Jan 29 01:44:19 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.1).
+</div>
+
+    </div>
+  </body>
+</html>

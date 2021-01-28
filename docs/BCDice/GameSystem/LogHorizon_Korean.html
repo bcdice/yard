@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::LogHorizon_Korean
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::LogHorizon_Korean";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (L)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">LogHorizon_Korean</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::LogHorizon_Korean
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="LogHorizon.html" title="BCDice::GameSystem::LogHorizon (class)">LogHorizon</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="LogHorizon.html" title="BCDice::GameSystem::LogHorizon (class)">LogHorizon</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::LogHorizon_Korean</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/LogHorizon_Korean.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LogHorizon:Korean</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>로그 호라이즌</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>国際化:Korean:로그 호라이즌</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~MESSAGETEXT</span>
+<span class='tstring_content'>  ■ 판정(xLH±y&gt;=z)
+</span><span class='tstring_content'>  　xD6의 판정.크리티컬, 펌블의 자동 판정을 실시합니다.
+</span><span class='tstring_content'>  　x：x로 굴릴 주사위의 수를 입력합니다.
+</span><span class='tstring_content'>  　±y：y로 수정치를 입력합니다. ±의 계산에 대응하며 생략이 가능합니다.
+</span><span class='tstring_content'>    &gt;=z：z로 목표값을 입력합니다. ±의 계산에 대응하며 생략이 가능합니다.
+</span><span class='tstring_content'>  　예시） 3LH　2LH&gt;=8　3LH+1&gt;=10
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 소모표(tCTx±y$z)
+</span><span class='tstring_content'>  　PCT 체력／ECT 기력／GCT 물품／CCT 금전
+</span><span class='tstring_content'>  　x:CR을 지정합니다.
+</span><span class='tstring_content'>  　±y:수정치, ＋와 －의 계산에 대응하며 생략이 가능합니다.
+</span><span class='tstring_content'>  　$z：$를 붙이면 주사위 눈을 z고정합니다. 표의 특정 값 참조용으로 사용하며.생략 가능.
+</span><span class='tstring_content'>  　例） PCT1　ECT2+1　GCT3-1　CCT3$5
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 消耗表ロール (CTx±y)
+</span><span class='tstring_content'>  　消耗表ロールを行い、出目を決定する。
+</span><span class='tstring_content'>  　x：CRを指定。指定できますが、無視されます。省略可能
+</span><span class='tstring_content'>  　±y：修正値。＋と－の計算に対応。省略可能。
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 재물표(tTRSx±y$)
+</span><span class='tstring_content'>  　CTRS 금전／MTRS 마법소재／ITRS 환전 아이템／※HTRS 히로인／GTRS 고블린 재보표
+</span><span class='tstring_content'>  　x：CR을 지정합니다. 생략시에는 다이치 0고정으로 수정치의 표를 참조.《골드 핑거》사용 시 등.
+</span><span class='tstring_content'>  　±y：수정치, ＋와 －의 계산에 대응하며 생략이 가능합니다.
+</span><span class='tstring_content'>  　$：＄을 붙이면 재물표의 다이스를 7로 고정합니다.（1차 분량의 프라이즈 용도）생략이 가능합니다.
+</span><span class='tstring_content'>  　예시） CTRS1　MTRS2+1　ITRS3-1　ITRS+27　CTRS3$
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 財宝表（拡張ルールブック） (tTRSEx±y$)
+</span><span class='tstring_content'>  　LHZB2記載の財宝表
+</span><span class='tstring_content'>  　CTRSE 金銭／MTRSE 魔法素材／ITRSE 換金アイテム／OTRSE そのほか
+</span><span class='tstring_content'>  　記法は財宝表と同様
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 財宝表ロール (TRSx±y)
+</span><span class='tstring_content'>  　財宝表ロールを行い、出目を決定する。
+</span><span class='tstring_content'>  　x：CRを指定。省略時はCR 0として扱う
+</span><span class='tstring_content'>  　±y：修正値。＋と－の計算に対応。省略可能。
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 이스탈 탐색표 (ESTLx±y$z)
+</span><span class='tstring_content'>  　x：CRを指定。省略時はダイス値 0 固定で修正値の表参照。
+</span><span class='tstring_content'>  　±y：修正値。＋と－の計算に対応。省略可能。
+</span><span class='tstring_content'>  　$z：＄を付けるとダイス目を z 固定。特定CRの表参照用に。省略可能。
+</span><span class='tstring_content'>  　例） ESTL1　ESTL+15　ESTL2+1$5　ESTL2-1$5
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 프리픽스드 매직아이템 효과 표(MGRx)
+</span><span class='tstring_content'>  　x는 MG를 지정합니다.
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 악기 종류 표† (MIIx)
+</span><span class='tstring_content'>  　x는 악기의 종류를 지정합니다.(1~6를 지정) 생략이 가능합니다.
+</span><span class='tstring_content'>  　1 타악기1／2 건반악기／3 현악기1／4 현악기2／5 관악기1／6 관악기2
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 특수 소모표☆ (tSCTx±y$z)
+</span><span class='tstring_content'>  　소모표와 마찬가지로 지정합니다. 다만 CR은 생략이 가능합니다.
+</span><span class='tstring_content'>  　ESCT 로데릭 연구소는 폭발했다!／CSCT 알브의 저주다!
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 로데릭 연구소의 새로운 발명 랜덤 결정표※ (IATt)
+</span><span class='tstring_content'>  　IATA 특징A(장점)／IATB 특징B(단점)／IATL 외형／IATT 종류
+</span><span class='tstring_content'>  　t를 생략할 경우 모두 표시합니다. t에 A/B/L/T를 임의의 순서로 연결 할 수 있습니다.
+</span><span class='tstring_content'>  　例）IAT　IATALT  IATABBLT  IATABL
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ 표
+</span><span class='tstring_content'>  　・퍼스널리티 태그 표 (PTAG)
+</span><span class='tstring_content'>  　・교우표 (KOYU)
+</span><span class='tstring_content'>  　・공격 명중 장소 랜덤 결정표※ (HLOC)
+</span><span class='tstring_content'>  　・PC명 랜덤 결정표※ (PCNM)
+</span><span class='tstring_content'>  　・아키바 거리에서 발생하는 문제 랜덤결정 표※ (TIAS)
+</span><span class='tstring_content'>  　・버려진 아이 랜덤 결정 표※ (ABDC)
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  †표시와 ☆표시는「인투・더・셀덴시아 새로운 빌드의 날개짓(1)」에서、
+</span><span class='tstring_content'>  ☆표시는 셀덴시아・가제트「D 되기는 할까? 66」Vol.1에서、
+</span><span class='tstring_content'>  ※표시는「실록・칠면체공방 좌담회(여름의 장)」에서 참조했습니다. 이용법은 항목을 참조해주세요.
+</span><span class='tstring_content'>  ・D66다이스도 있습니다.
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・역자의 말 : 「실록・칠면체공방 좌담회(여름의 장)」은 한국에서 발매하지 않습니다. 참고해주세요.
+</span><span class='tstring_content'>  ・이니티움님, 광황님, CoC방 여러분 감사합니다. by호흡도의식하면귀찮아
+</span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_translate_tables'>translate_tables</span><span class='lparen'>(</span><span class='symbol'>:ko_kr</span><span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; LogHorizon_Korean </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of LogHorizon_Korean.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="LogHorizon.html" title="BCDice::GameSystem::LogHorizon (class)">LogHorizon</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="LogHorizon.html#eval_game_system_specific_command-instance_method" title="BCDice::GameSystem::LogHorizon#eval_game_system_specific_command (method)">#eval_game_system_specific_command</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::LogHorizon_Korean (class)">LogHorizon_Korean</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of LogHorizon_Korean.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/LogHorizon_Korean.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@locale</span> <span class='op'>=</span> <span class='symbol'>:ko_kr</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Jan 29 01:44:21 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.1).
+</div>
+
+    </div>
+  </body>
+</html>

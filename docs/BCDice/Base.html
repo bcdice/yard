@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::Base
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::Base";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (B)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../BCDice.html" title="BCDice (module)">BCDice</a></span></span>
+     &raquo; 
+    <span class="title">Base</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::Base
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">BCDice::Base</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Deprecated/Checker.html" title="BCDice::Deprecated::Checker (module)">Deprecated::Checker</a></span>, <span class='object_link'><a href="Translate.html" title="BCDice::Translate (module)">Translate</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/base.rb</dd>
+  </dl>
+  
+</div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="GameSystem/AFF2e.html" title="BCDice::GameSystem::AFF2e (class)">GameSystem::AFF2e</a></span>, <span class='object_link'><a href="GameSystem/Airgetlamh.html" title="BCDice::GameSystem::Airgetlamh (class)">GameSystem::Airgetlamh</a></span>, <span class='object_link'><a href="GameSystem/AlchemiaStruggle.html" title="BCDice::GameSystem::AlchemiaStruggle (class)">GameSystem::AlchemiaStruggle</a></span>, <span class='object_link'><a href="GameSystem/Alsetto.html" title="BCDice::GameSystem::Alsetto (class)">GameSystem::Alsetto</a></span>, <span class='object_link'><a href="GameSystem/AlterRaise.html" title="BCDice::GameSystem::AlterRaise (class)">GameSystem::AlterRaise</a></span>, <span class='object_link'><a href="GameSystem/Amadeus.html" title="BCDice::GameSystem::Amadeus (class)">GameSystem::Amadeus</a></span>, <span class='object_link'><a href="GameSystem/AnimaAnimus.html" title="BCDice::GameSystem::AnimaAnimus (class)">GameSystem::AnimaAnimus</a></span>, <span class='object_link'><a href="GameSystem/Arianrhod.html" title="BCDice::GameSystem::Arianrhod (class)">GameSystem::Arianrhod</a></span>, <span class='object_link'><a href="GameSystem/ArsMagica.html" title="BCDice::GameSystem::ArsMagica (class)">GameSystem::ArsMagica</a></span>, <span class='object_link'><a href="GameSystem/Avandner.html" title="BCDice::GameSystem::Avandner (class)">GameSystem::Avandner</a></span>, <span class='object_link'><a href="GameSystem/BBN.html" title="BCDice::GameSystem::BBN (class)">GameSystem::BBN</a></span>, <span class='object_link'><a href="GameSystem/BadLife.html" title="BCDice::GameSystem::BadLife (class)">GameSystem::BadLife</a></span>, <span class='object_link'><a href="GameSystem/BarnaKronika.html" title="BCDice::GameSystem::BarnaKronika (class)">GameSystem::BarnaKronika</a></span>, <span class='object_link'><a href="GameSystem/BattleTech.html" title="BCDice::GameSystem::BattleTech (class)">GameSystem::BattleTech</a></span>, <span class='object_link'><a href="GameSystem/BeastBindTrinity.html" title="BCDice::GameSystem::BeastBindTrinity (class)">GameSystem::BeastBindTrinity</a></span>, <span class='object_link'><a href="GameSystem/BeginningIdol.html" title="BCDice::GameSystem::BeginningIdol (class)">GameSystem::BeginningIdol</a></span>, <span class='object_link'><a href="GameSystem/BeginningIdol_Korean.html" title="BCDice::GameSystem::BeginningIdol_Korean (class)">GameSystem::BeginningIdol_Korean</a></span>, <span class='object_link'><a href="GameSystem/BladeOfArcana.html" title="BCDice::GameSystem::BladeOfArcana (class)">GameSystem::BladeOfArcana</a></span>, <span class='object_link'><a href="GameSystem/BlindMythos.html" title="BCDice::GameSystem::BlindMythos (class)">GameSystem::BlindMythos</a></span>, <span class='object_link'><a href="GameSystem/BloodCrusade.html" title="BCDice::GameSystem::BloodCrusade (class)">GameSystem::BloodCrusade</a></span>, <span class='object_link'><a href="GameSystem/BloodMoon.html" title="BCDice::GameSystem::BloodMoon (class)">GameSystem::BloodMoon</a></span>, <span class='object_link'><a href="GameSystem/CardRanker.html" title="BCDice::GameSystem::CardRanker (class)">GameSystem::CardRanker</a></span>, <span class='object_link'><a href="GameSystem/ChaosFlare.html" title="BCDice::GameSystem::ChaosFlare (class)">GameSystem::ChaosFlare</a></span>, <span class='object_link'><a href="GameSystem/Chill.html" title="BCDice::GameSystem::Chill (class)">GameSystem::Chill</a></span>, <span class='object_link'><a href="GameSystem/Chill3.html" title="BCDice::GameSystem::Chill3 (class)">GameSystem::Chill3</a></span>, <span class='object_link'><a href="GameSystem/CodeLayerd.html" title="BCDice::GameSystem::CodeLayerd (class)">GameSystem::CodeLayerd</a></span>, <span class='object_link'><a href="GameSystem/ColossalHunter.html" title="BCDice::GameSystem::ColossalHunter (class)">GameSystem::ColossalHunter</a></span>, <span class='object_link'><a href="GameSystem/Comes.html" title="BCDice::GameSystem::Comes (class)">GameSystem::Comes</a></span>, <span class='object_link'><a href="GameSystem/CrashWorld.html" title="BCDice::GameSystem::CrashWorld (class)">GameSystem::CrashWorld</a></span>, <span class='object_link'><a href="GameSystem/Cthulhu.html" title="BCDice::GameSystem::Cthulhu (class)">GameSystem::Cthulhu</a></span>, <span class='object_link'><a href="GameSystem/Cthulhu7th.html" title="BCDice::GameSystem::Cthulhu7th (class)">GameSystem::Cthulhu7th</a></span>, <span class='object_link'><a href="GameSystem/Cthulhu7th_ChineseTraditional.html" title="BCDice::GameSystem::Cthulhu7th_ChineseTraditional (class)">GameSystem::Cthulhu7th_ChineseTraditional</a></span>, <span class='object_link'><a href="GameSystem/Cthulhu7th_Korean.html" title="BCDice::GameSystem::Cthulhu7th_Korean (class)">GameSystem::Cthulhu7th_Korean</a></span>, <span class='object_link'><a href="GameSystem/CthulhuTech.html" title="BCDice::GameSystem::CthulhuTech (class)">GameSystem::CthulhuTech</a></span>, <span class='object_link'><a href="GameSystem/DarkBlaze.html" title="BCDice::GameSystem::DarkBlaze (class)">GameSystem::DarkBlaze</a></span>, <span class='object_link'><a href="GameSystem/DarkDaysDrive.html" title="BCDice::GameSystem::DarkDaysDrive (class)">GameSystem::DarkDaysDrive</a></span>, <span class='object_link'><a href="GameSystem/DarkSouls.html" title="BCDice::GameSystem::DarkSouls (class)">GameSystem::DarkSouls</a></span>, <span class='object_link'><a href="GameSystem/DeadlineHeroes.html" title="BCDice::GameSystem::DeadlineHeroes (class)">GameSystem::DeadlineHeroes</a></span>, <span class='object_link'><a href="GameSystem/DemonParasite.html" title="BCDice::GameSystem::DemonParasite (class)">GameSystem::DemonParasite</a></span>, <span class='object_link'><a href="GameSystem/DesperateRun.html" title="BCDice::GameSystem::DesperateRun (class)">GameSystem::DesperateRun</a></span>, <span class='object_link'><a href="GameSystem/DetatokoSaga.html" title="BCDice::GameSystem::DetatokoSaga (class)">GameSystem::DetatokoSaga</a></span>, <span class='object_link'><a href="GameSystem/DiceBot.html" title="BCDice::GameSystem::DiceBot (class)">GameSystem::DiceBot</a></span>, <span class='object_link'><a href="GameSystem/DiceOfTheDead.html" title="BCDice::GameSystem::DiceOfTheDead (class)">GameSystem::DiceOfTheDead</a></span>, <span class='object_link'><a href="GameSystem/DoubleCross.html" title="BCDice::GameSystem::DoubleCross (class)">GameSystem::DoubleCross</a></span>, <span class='object_link'><a href="GameSystem/Dracurouge.html" title="BCDice::GameSystem::Dracurouge (class)">GameSystem::Dracurouge</a></span>, <span class='object_link'><a href="GameSystem/DungeonsAndDragons.html" title="BCDice::GameSystem::DungeonsAndDragons (class)">GameSystem::DungeonsAndDragons</a></span>, <span class='object_link'><a href="GameSystem/EarthDawn.html" title="BCDice::GameSystem::EarthDawn (class)">GameSystem::EarthDawn</a></span>, <span class='object_link'><a href="GameSystem/EclipsePhase.html" title="BCDice::GameSystem::EclipsePhase (class)">GameSystem::EclipsePhase</a></span>, <span class='object_link'><a href="GameSystem/Elric.html" title="BCDice::GameSystem::Elric (class)">GameSystem::Elric</a></span>, <span class='object_link'><a href="GameSystem/Elysion.html" title="BCDice::GameSystem::Elysion (class)">GameSystem::Elysion</a></span>, <span class='object_link'><a href="GameSystem/EmbryoMachine.html" title="BCDice::GameSystem::EmbryoMachine (class)">GameSystem::EmbryoMachine</a></span>, <span class='object_link'><a href="GameSystem/Emoklore.html" title="BCDice::GameSystem::Emoklore (class)">GameSystem::Emoklore</a></span>, <span class='object_link'><a href="GameSystem/EndBreaker.html" title="BCDice::GameSystem::EndBreaker (class)">GameSystem::EndBreaker</a></span>, <span class='object_link'><a href="GameSystem/Fiasco.html" title="BCDice::GameSystem::Fiasco (class)">GameSystem::Fiasco</a></span>, <span class='object_link'><a href="GameSystem/FilledWith.html" title="BCDice::GameSystem::FilledWith (class)">GameSystem::FilledWith</a></span>, <span class='object_link'><a href="GameSystem/FutariSousa.html" title="BCDice::GameSystem::FutariSousa (class)">GameSystem::FutariSousa</a></span>, <span class='object_link'><a href="GameSystem/GURPS.html" title="BCDice::GameSystem::GURPS (class)">GameSystem::GURPS</a></span>, <span class='object_link'><a href="GameSystem/Garako.html" title="BCDice::GameSystem::Garako (class)">GameSystem::Garako</a></span>, <span class='object_link'><a href="GameSystem/GardenOrder.html" title="BCDice::GameSystem::GardenOrder (class)">GameSystem::GardenOrder</a></span>, <span class='object_link'><a href="GameSystem/GehennaAn.html" title="BCDice::GameSystem::GehennaAn (class)">GameSystem::GehennaAn</a></span>, <span class='object_link'><a href="GameSystem/GeishaGirlwithKatana.html" title="BCDice::GameSystem::GeishaGirlwithKatana (class)">GameSystem::GeishaGirlwithKatana</a></span>, <span class='object_link'><a href="GameSystem/GoblinSlayer.html" title="BCDice::GameSystem::GoblinSlayer (class)">GameSystem::GoblinSlayer</a></span>, <span class='object_link'><a href="GameSystem/GoldenSkyStories.html" title="BCDice::GameSystem::GoldenSkyStories (class)">GameSystem::GoldenSkyStories</a></span>, <span class='object_link'><a href="GameSystem/Gorilla.html" title="BCDice::GameSystem::Gorilla (class)">GameSystem::Gorilla</a></span>, <span class='object_link'><a href="GameSystem/GranCrest.html" title="BCDice::GameSystem::GranCrest (class)">GameSystem::GranCrest</a></span>, <span class='object_link'><a href="GameSystem/Gundog.html" title="BCDice::GameSystem::Gundog (class)">GameSystem::Gundog</a></span>, <span class='object_link'><a href="GameSystem/GundogRevised.html" title="BCDice::GameSystem::GundogRevised (class)">GameSystem::GundogRevised</a></span>, <span class='object_link'><a href="GameSystem/GurpsFW.html" title="BCDice::GameSystem::GurpsFW (class)">GameSystem::GurpsFW</a></span>, <span class='object_link'><a href="GameSystem/HarnMaster.html" title="BCDice::GameSystem::HarnMaster (class)">GameSystem::HarnMaster</a></span>, <span class='object_link'><a href="GameSystem/HatsuneMiku.html" title="BCDice::GameSystem::HatsuneMiku (class)">GameSystem::HatsuneMiku</a></span>, <span class='object_link'><a href="GameSystem/Hieizan.html" title="BCDice::GameSystem::Hieizan (class)">GameSystem::Hieizan</a></span>, <span class='object_link'><a href="GameSystem/HouraiGakuen.html" title="BCDice::GameSystem::HouraiGakuen (class)">GameSystem::HouraiGakuen</a></span>, <span class='object_link'><a href="GameSystem/HuntersMoon.html" title="BCDice::GameSystem::HuntersMoon (class)">GameSystem::HuntersMoon</a></span>, <span class='object_link'><a href="GameSystem/Illusio.html" title="BCDice::GameSystem::Illusio (class)">GameSystem::Illusio</a></span>, <span class='object_link'><a href="GameSystem/InfiniteFantasia.html" title="BCDice::GameSystem::InfiniteFantasia (class)">GameSystem::InfiniteFantasia</a></span>, <span class='object_link'><a href="GameSystem/Insane.html" title="BCDice::GameSystem::Insane (class)">GameSystem::Insane</a></span>, <span class='object_link'><a href="GameSystem/IthaWenUa.html" title="BCDice::GameSystem::IthaWenUa (class)">GameSystem::IthaWenUa</a></span>, <span class='object_link'><a href="GameSystem/JamesBond.html" title="BCDice::GameSystem::JamesBond (class)">GameSystem::JamesBond</a></span>, <span class='object_link'><a href="GameSystem/JuinKansen.html" title="BCDice::GameSystem::JuinKansen (class)">GameSystem::JuinKansen</a></span>, <span class='object_link'><a href="GameSystem/Kamigakari.html" title="BCDice::GameSystem::Kamigakari (class)">GameSystem::Kamigakari</a></span>, <span class='object_link'><a href="GameSystem/KanColle.html" title="BCDice::GameSystem::KanColle (class)">GameSystem::KanColle</a></span>, <span class='object_link'><a href="GameSystem/KemonoNoMori.html" title="BCDice::GameSystem::KemonoNoMori (class)">GameSystem::KemonoNoMori</a></span>, <span class='object_link'><a href="GameSystem/KillDeathBusiness.html" title="BCDice::GameSystem::KillDeathBusiness (class)">GameSystem::KillDeathBusiness</a></span>, <span class='object_link'><a href="GameSystem/KurayamiCrying.html" title="BCDice::GameSystem::KurayamiCrying (class)">GameSystem::KurayamiCrying</a></span>, <span class='object_link'><a href="GameSystem/LiveraDoll.html" title="BCDice::GameSystem::LiveraDoll (class)">GameSystem::LiveraDoll</a></span>, <span class='object_link'><a href="GameSystem/LogHorizon.html" title="BCDice::GameSystem::LogHorizon (class)">GameSystem::LogHorizon</a></span>, <span class='object_link'><a href="GameSystem/LostRecord.html" title="BCDice::GameSystem::LostRecord (class)">GameSystem::LostRecord</a></span>, <span class='object_link'><a href="GameSystem/LostRoyal.html" title="BCDice::GameSystem::LostRoyal (class)">GameSystem::LostRoyal</a></span>, <span class='object_link'><a href="GameSystem/MagicaLogia.html" title="BCDice::GameSystem::MagicaLogia (class)">GameSystem::MagicaLogia</a></span>, <span class='object_link'><a href="GameSystem/MeikyuDays.html" title="BCDice::GameSystem::MeikyuDays (class)">GameSystem::MeikyuDays</a></span>, <span class='object_link'><a href="GameSystem/MeikyuKingdom.html" title="BCDice::GameSystem::MeikyuKingdom (class)">GameSystem::MeikyuKingdom</a></span>, <span class='object_link'><a href="GameSystem/MetalHead.html" title="BCDice::GameSystem::MetalHead (class)">GameSystem::MetalHead</a></span>, <span class='object_link'><a href="GameSystem/MetalHeadExtream.html" title="BCDice::GameSystem::MetalHeadExtream (class)">GameSystem::MetalHeadExtream</a></span>, <span class='object_link'><a href="GameSystem/MonotoneMuseum.html" title="BCDice::GameSystem::MonotoneMuseum (class)">GameSystem::MonotoneMuseum</a></span>, <span class='object_link'><a href="GameSystem/NSSQ.html" title="BCDice::GameSystem::NSSQ (class)">GameSystem::NSSQ</a></span>, <span class='object_link'><a href="GameSystem/Nechronica.html" title="BCDice::GameSystem::Nechronica (class)">GameSystem::Nechronica</a></span>, <span class='object_link'><a href="GameSystem/NeverCloud.html" title="BCDice::GameSystem::NeverCloud (class)">GameSystem::NeverCloud</a></span>, <span class='object_link'><a href="GameSystem/NightWizard.html" title="BCDice::GameSystem::NightWizard (class)">GameSystem::NightWizard</a></span>, <span class='object_link'><a href="GameSystem/NightmareHunterDeep.html" title="BCDice::GameSystem::NightmareHunterDeep (class)">GameSystem::NightmareHunterDeep</a></span>, <span class='object_link'><a href="GameSystem/NinjaSlayer.html" title="BCDice::GameSystem::NinjaSlayer (class)">GameSystem::NinjaSlayer</a></span>, <span class='object_link'><a href="GameSystem/NjslyrBattle.html" title="BCDice::GameSystem::NjslyrBattle (class)">GameSystem::NjslyrBattle</a></span>, <span class='object_link'><a href="GameSystem/Nuekagami.html" title="BCDice::GameSystem::Nuekagami (class)">GameSystem::Nuekagami</a></span>, <span class='object_link'><a href="GameSystem/OneWayHeroics.html" title="BCDice::GameSystem::OneWayHeroics (class)">GameSystem::OneWayHeroics</a></span>, <span class='object_link'><a href="GameSystem/OracleEngine.html" title="BCDice::GameSystem::OracleEngine (class)">GameSystem::OracleEngine</a></span>, <span class='object_link'><a href="GameSystem/OrgaRain.html" title="BCDice::GameSystem::OrgaRain (class)">GameSystem::OrgaRain</a></span>, <span class='object_link'><a href="GameSystem/Oukahoushin3rd.html" title="BCDice::GameSystem::Oukahoushin3rd (class)">GameSystem::Oukahoushin3rd</a></span>, <span class='object_link'><a href="GameSystem/Paradiso.html" title="BCDice::GameSystem::Paradiso (class)">GameSystem::Paradiso</a></span>, <span class='object_link'><a href="GameSystem/Paranoia.html" title="BCDice::GameSystem::Paranoia (class)">GameSystem::Paranoia</a></span>, <span class='object_link'><a href="GameSystem/ParanoiaRebooted.html" title="BCDice::GameSystem::ParanoiaRebooted (class)">GameSystem::ParanoiaRebooted</a></span>, <span class='object_link'><a href="GameSystem/Peekaboo.html" title="BCDice::GameSystem::Peekaboo (class)">GameSystem::Peekaboo</a></span>, <span class='object_link'><a href="GameSystem/Pendragon.html" title="BCDice::GameSystem::Pendragon (class)">GameSystem::Pendragon</a></span>, <span class='object_link'><a href="GameSystem/PhantasmAdventure.html" title="BCDice::GameSystem::PhantasmAdventure (class)">GameSystem::PhantasmAdventure</a></span>, <span class='object_link'><a href="GameSystem/Postman.html" title="BCDice::GameSystem::Postman (class)">GameSystem::Postman</a></span>, <span class='object_link'><a href="GameSystem/Raisondetre.html" title="BCDice::GameSystem::Raisondetre (class)">GameSystem::Raisondetre</a></span>, <span class='object_link'><a href="GameSystem/RecordOfLodossWar.html" title="BCDice::GameSystem::RecordOfLodossWar (class)">GameSystem::RecordOfLodossWar</a></span>, <span class='object_link'><a href="GameSystem/RecordOfSteam.html" title="BCDice::GameSystem::RecordOfSteam (class)">GameSystem::RecordOfSteam</a></span>, <span class='object_link'><a href="GameSystem/RokumonSekai2.html" title="BCDice::GameSystem::RokumonSekai2 (class)">GameSystem::RokumonSekai2</a></span>, <span class='object_link'><a href="GameSystem/RoleMaster.html" title="BCDice::GameSystem::RoleMaster (class)">GameSystem::RoleMaster</a></span>, <span class='object_link'><a href="GameSystem/RuinBreakers.html" title="BCDice::GameSystem::RuinBreakers (class)">GameSystem::RuinBreakers</a></span>, <span class='object_link'><a href="GameSystem/RuneQuest.html" title="BCDice::GameSystem::RuneQuest (class)">GameSystem::RuneQuest</a></span>, <span class='object_link'><a href="GameSystem/RyuTuber.html" title="BCDice::GameSystem::RyuTuber (class)">GameSystem::RyuTuber</a></span>, <span class='object_link'><a href="GameSystem/Ryutama.html" title="BCDice::GameSystem::Ryutama (class)">GameSystem::Ryutama</a></span>, <span class='object_link'><a href="GameSystem/SRS.html" title="BCDice::GameSystem::SRS (class)">GameSystem::SRS</a></span>, <span class='object_link'><a href="GameSystem/SamsaraBallad.html" title="BCDice::GameSystem::SamsaraBallad (class)">GameSystem::SamsaraBallad</a></span>, <span class='object_link'><a href="GameSystem/Satasupe.html" title="BCDice::GameSystem::Satasupe (class)">GameSystem::Satasupe</a></span>, <span class='object_link'><a href="GameSystem/ShadowRun.html" title="BCDice::GameSystem::ShadowRun (class)">GameSystem::ShadowRun</a></span>, <span class='object_link'><a href="GameSystem/ShadowRun4.html" title="BCDice::GameSystem::ShadowRun4 (class)">GameSystem::ShadowRun4</a></span>, <span class='object_link'><a href="GameSystem/SharedFantasia.html" title="BCDice::GameSystem::SharedFantasia (class)">GameSystem::SharedFantasia</a></span>, <span class='object_link'><a href="GameSystem/ShinMegamiTenseiKakuseihen.html" title="BCDice::GameSystem::ShinMegamiTenseiKakuseihen (class)">GameSystem::ShinMegamiTenseiKakuseihen</a></span>, <span class='object_link'><a href="GameSystem/ShinkuuGakuen.html" title="BCDice::GameSystem::ShinkuuGakuen (class)">GameSystem::ShinkuuGakuen</a></span>, <span class='object_link'><a href="GameSystem/ShinobiGami.html" title="BCDice::GameSystem::ShinobiGami (class)">GameSystem::ShinobiGami</a></span>, <span class='object_link'><a href="GameSystem/ShoujoTenrankai.html" title="BCDice::GameSystem::ShoujoTenrankai (class)">GameSystem::ShoujoTenrankai</a></span>, <span class='object_link'><a href="GameSystem/Skynauts.html" title="BCDice::GameSystem::Skynauts (class)">GameSystem::Skynauts</a></span>, <span class='object_link'><a href="GameSystem/SteamPunkers.html" title="BCDice::GameSystem::SteamPunkers (class)">GameSystem::SteamPunkers</a></span>, <span class='object_link'><a href="GameSystem/StellarKnights.html" title="BCDice::GameSystem::StellarKnights (class)">GameSystem::StellarKnights</a></span>, <span class='object_link'><a href="GameSystem/SterileLife.html" title="BCDice::GameSystem::SterileLife (class)">GameSystem::SterileLife</a></span>, <span class='object_link'><a href="GameSystem/StrangerOfSwordCity.html" title="BCDice::GameSystem::StrangerOfSwordCity (class)">GameSystem::StrangerOfSwordCity</a></span>, <span class='object_link'><a href="GameSystem/StratoShout.html" title="BCDice::GameSystem::StratoShout (class)">GameSystem::StratoShout</a></span>, <span class='object_link'><a href="GameSystem/Strave.html" title="BCDice::GameSystem::Strave (class)">GameSystem::Strave</a></span>, <span class='object_link'><a href="GameSystem/SwordWorld.html" title="BCDice::GameSystem::SwordWorld (class)">GameSystem::SwordWorld</a></span>, <span class='object_link'><a href="GameSystem/TherapieSein.html" title="BCDice::GameSystem::TherapieSein (class)">GameSystem::TherapieSein</a></span>, <span class='object_link'><a href="GameSystem/TokumeiTenkousei.html" title="BCDice::GameSystem::TokumeiTenkousei (class)">GameSystem::TokumeiTenkousei</a></span>, <span class='object_link'><a href="GameSystem/TokyoGhostResearch.html" title="BCDice::GameSystem::TokyoGhostResearch (class)">GameSystem::TokyoGhostResearch</a></span>, <span class='object_link'><a href="GameSystem/TokyoNova.html" title="BCDice::GameSystem::TokyoNova (class)">GameSystem::TokyoNova</a></span>, <span class='object_link'><a href="GameSystem/Torg.html" title="BCDice::GameSystem::Torg (class)">GameSystem::Torg</a></span>, <span class='object_link'><a href="GameSystem/TorgEternity.html" title="BCDice::GameSystem::TorgEternity (class)">GameSystem::TorgEternity</a></span>, <span class='object_link'><a href="GameSystem/TrinitySeven.html" title="BCDice::GameSystem::TrinitySeven (class)">GameSystem::TrinitySeven</a></span>, <span class='object_link'><a href="GameSystem/TunnelsAndTrolls.html" title="BCDice::GameSystem::TunnelsAndTrolls (class)">GameSystem::TunnelsAndTrolls</a></span>, <span class='object_link'><a href="GameSystem/TwilightGunsmoke.html" title="BCDice::GameSystem::TwilightGunsmoke (class)">GameSystem::TwilightGunsmoke</a></span>, <span class='object_link'><a href="GameSystem/UnsungDuet.html" title="BCDice::GameSystem::UnsungDuet (class)">GameSystem::UnsungDuet</a></span>, <span class='object_link'><a href="GameSystem/Utakaze.html" title="BCDice::GameSystem::Utakaze (class)">GameSystem::Utakaze</a></span>, <span class='object_link'><a href="GameSystem/VampireTheMasquerade5th.html" title="BCDice::GameSystem::VampireTheMasquerade5th (class)">GameSystem::VampireTheMasquerade5th</a></span>, <span class='object_link'><a href="GameSystem/Villaciel.html" title="BCDice::GameSystem::Villaciel (class)">GameSystem::Villaciel</a></span>, <span class='object_link'><a href="GameSystem/WARPS.html" title="BCDice::GameSystem::WARPS (class)">GameSystem::WARPS</a></span>, <span class='object_link'><a href="GameSystem/WaresBlade.html" title="BCDice::GameSystem::WaresBlade (class)">GameSystem::WaresBlade</a></span>, <span class='object_link'><a href="GameSystem/Warhammer.html" title="BCDice::GameSystem::Warhammer (class)">GameSystem::Warhammer</a></span>, <span class='object_link'><a href="GameSystem/Warhammer4.html" title="BCDice::GameSystem::Warhammer4 (class)">GameSystem::Warhammer4</a></span>, <span class='object_link'><a href="GameSystem/WitchQuest.html" title="BCDice::GameSystem::WitchQuest (class)">GameSystem::WitchQuest</a></span>, <span class='object_link'><a href="GameSystem/WorldOfDarkness.html" title="BCDice::GameSystem::WorldOfDarkness (class)">GameSystem::WorldOfDarkness</a></span>, <span class='object_link'><a href="GameSystem/YankeeYogSothoth.html" title="BCDice::GameSystem::YankeeYogSothoth (class)">GameSystem::YankeeYogSothoth</a></span>, <span class='object_link'><a href="GameSystem/YearZeroEngine.html" title="BCDice::GameSystem::YearZeroEngine (class)">GameSystem::YearZeroEngine</a></span>, <span class='object_link'><a href="GameSystem/Yggdrasill.html" title="BCDice::GameSystem::Yggdrasill (class)">GameSystem::Yggdrasill</a></span>, <span class='object_link'><a href="GameSystem/ZettaiReido.html" title="BCDice::GameSystem::ZettaiReido (class)">GameSystem::ZettaiReido</a></span></p>
+</div>
+
+
+
+
+  <h2>Class Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prefixes-class_method" title="prefixes (class method)">.<strong>prefixes</strong>  &#x21d2; Array&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>接頭辞（反応するコマンド）の配列を返す.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#d66_sort_type-instance_method" title="#d66_sort_type (instance method)">#<strong>d66_sort_type</strong>  &#x21d2; Symbol </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>D66のダイス入れ替えの種類.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_cmp_op-instance_method" title="#default_cmp_op (instance method)">#<strong>default_cmp_op</strong>  &#x21d2; Symbol<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>デフォルトの比較演算子.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_target_number-instance_method" title="#default_target_number (instance method)">#<strong>default_target_number</strong>  &#x21d2; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>デフォルトの目標値.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#randomizer-instance_method" title="#randomizer (instance method)">#<strong>randomizer</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute randomizer.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reroll_dice_reroll_threshold-instance_method" title="#reroll_dice_reroll_threshold (instance method)">#<strong>reroll_dice_reroll_threshold</strong>  &#x21d2; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>RerollDiceで振り足しをする出目の閾値.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#round_type-instance_method" title="#round_type (instance method)">#<strong>round_type</strong>  &#x21d2; Symbol </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>端数処理の種類.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sides_implicit_d-instance_method" title="#sides_implicit_d (instance method)">#<strong>sides_implicit_d</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ダイスの面数が指定されていない場合に何面ダイスにするか.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upper_dice_reroll_threshold-instance_method" title="#upper_dice_reroll_threshold (instance method)">#<strong>upper_dice_reroll_threshold</strong>  &#x21d2; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>UpperDiceで振り足しをする出目の閾値.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#command_pattern-class_method" title="command_pattern (class method)">.<strong>command_pattern</strong>  &#x21d2; Regexp </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>応答するコマンド全てにマッチする正規表現を返す 正規表現を一度生成したら、以後コマンドの登録はできないようにする.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval-class_method" title="eval (class method)">.<strong>eval</strong>(command)  &#x21d2; Result </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prefixes_pattern-class_method" title="prefixes_pattern (class method)">.<strong>prefixes_pattern</strong>  &#x21d2; Regexp </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>ゲームシステム固有のコマンドにマッチする正規表現を返す 正規表現を一度生成したら、以後コマンドの登録はできないようにする.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_prefix-class_method" title="register_prefix (class method)">.<strong>register_prefix</strong>(*prefixes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>応答するコマンドのprefixを登録する.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_prefix_from_super_class-class_method" title="register_prefix_from_super_class (class method)">.<strong>register_prefix_from_super_class</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#change_text-instance_method" title="#change_text (instance method)">#<strong>change_text</strong>(string)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+<p>これを使わずに <code>eval_common_command</code> 内でパースすることを推奨する</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_result-instance_method" title="#check_result (instance method)">#<strong>check_result</strong>(total, rand_results, cmp_op, target)  &#x21d2; Result<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enable_debug-instance_method" title="#enable_debug (instance method)">#<strong>enable_debug</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>デバッグを有用にする.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enabled_d9%3F-instance_method" title="#enabled_d9? (instance method)">#<strong>enabled_d9?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>D9ダイスが有効か.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval-instance_method" title="#eval (instance method)">#<strong>eval</strong>  &#x21d2; Result<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>コマンドを評価する.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#grich_text-instance_method" title="#grich_text (instance method)">#<strong>grich_text</strong>(count_one, dice_total_count, count_success)  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>シャドウラン用グリッチ判定.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; Base </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Base.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort_add_dice%3F-instance_method" title="#sort_add_dice? (instance method)">#<strong>sort_add_dice?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>加算ダイスでダイス目をソートするかどうか.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sort_barabara_dice%3F-instance_method" title="#sort_barabara_dice? (instance method)">#<strong>sort_barabara_dice?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>バラバラダイスでダイス目をソートするかどうか.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Base (class)">Base</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Base.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='ivar'>@raw_input</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span>
+
+  <span class='ivar'>@sort_add_dice</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='comment'># 加算ダイスでダイス目をソートするかどうか
+</span>  <span class='ivar'>@sort_barabara_dice</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='comment'># バラバラダイスでダイス目をソートするかどうか
+</span>
+  <span class='ivar'>@d66_sort_type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span> <span class='comment'># 入れ替えの種類 詳しくはBCDice::D66SortTypeを参照すること
+</span>
+  <span class='ivar'>@enabled_d9</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='comment'># D9ダイスを有効にするか（ガンドッグ）で使用
+</span>
+  <span class='ivar'>@round_type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="RoundType.html#FLOOR-constant" title="BCDice::RoundType::FLOOR (constant)">FLOOR</a></span></span> <span class='comment'># 割り算をした時の端数の扱い (FLOOR: 切り捨て, CEIL: 切り上げ, ROUND: 四捨五入)
+</span>
+  <span class='ivar'>@sides_implicit_d</span> <span class='op'>=</span> <span class='int'>6</span> <span class='comment'># 1D のようにダイスの面数が指定されていない場合に何面ダイスにするか
+</span>
+  <span class='ivar'>@upper_dice_reroll_threshold</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='comment'># UpperDiceで振り足しをする出目の閾値 nilの場合デフォルト設定なし
+</span>  <span class='ivar'>@reroll_dice_reroll_threshold</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='comment'># RerollDiceで振り足しをする出目の閾値 nilの場合デフォルト設定なし
+</span>
+  <span class='ivar'>@default_cmp_op</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='comment'># 目標値が空欄の場合の比較演算子をシンボルで指定する (:&gt;, :&gt;= :&lt;, :&lt;=, :==, :!=)
+</span>  <span class='ivar'>@default_target_number</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='comment'># 目標値が空欄の場合の目標値 こちらだけnilにするのは想定していないので注意
+</span>
+  <span class='ivar'>@enabled_upcase_input</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='comment'># 入力を String#upcase するかどうか
+</span>
+  <span class='ivar'>@locale</span> <span class='op'>=</span> <span class='symbol'>:ja_jp</span> <span class='comment'># i18n用の言語設定
+</span>
+  <span class='ivar'>@randomizer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../BCDice.html" title="BCDice (module)">BCDice</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Randomizer.html" title="BCDice::Randomizer (class)">Randomizer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Randomizer.html#initialize-instance_method" title="BCDice::Randomizer#initialize (method)">new</a></span></span>
+  <span class='ivar'>@debug</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="class_attr_details" class="attr_details">
+    <h2>Class Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="prefixes-class_method">
+  
+    .<strong>prefixes</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>接頭辞（反応するコマンド）の配列を返す</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prefixes'>prefixes</span>
+  <span class='ivar'>@prefixes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="d66_sort_type-instance_method">
+  
+    #<strong>d66_sort_type</strong>  &#x21d2; <tt>Symbol</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>D66のダイス入れ替えの種類</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 107</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_d66_sort_type'>d66_sort_type</span>
+  <span class='ivar'>@d66_sort_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="default_cmp_op-instance_method">
+  
+    #<strong>default_cmp_op</strong>  &#x21d2; <tt>Symbol</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>デフォルトの比較演算子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_cmp_op'>default_cmp_op</span>
+  <span class='ivar'>@default_cmp_op</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="default_target_number-instance_method">
+  
+    #<strong>default_target_number</strong>  &#x21d2; <tt>Integer</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>デフォルトの目標値</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+137
+138
+139</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 137</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_default_target_number'>default_target_number</span>
+  <span class='ivar'>@default_target_number</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="randomizer=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="randomizer-instance_method">
+  
+    #<strong>randomizer</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute randomizer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_randomizer'>randomizer</span>
+  <span class='ivar'>@randomizer</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="reroll_dice_reroll_threshold-instance_method">
+  
+    #<strong>reroll_dice_reroll_threshold</strong>  &#x21d2; <tt>Integer</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>RerollDiceで振り足しをする出目の閾値</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reroll_dice_reroll_threshold'>reroll_dice_reroll_threshold</span>
+  <span class='ivar'>@reroll_dice_reroll_threshold</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="round_type-instance_method">
+  
+    #<strong>round_type</strong>  &#x21d2; <tt>Symbol</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>端数処理の種類</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_round_type'>round_type</span>
+  <span class='ivar'>@round_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="sides_implicit_d-instance_method">
+  
+    #<strong>sides_implicit_d</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスの面数が指定されていない場合に何面ダイスにするか</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sides_implicit_d'>sides_implicit_d</span>
+  <span class='ivar'>@sides_implicit_d</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="upper_dice_reroll_threshold-instance_method">
+  
+    #<strong>upper_dice_reroll_threshold</strong>  &#x21d2; <tt>Integer</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>UpperDiceで振り足しをする出目の閾値</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_upper_dice_reroll_threshold'>upper_dice_reroll_threshold</span>
+  <span class='ivar'>@upper_dice_reroll_threshold</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="command_pattern-class_method">
+  
+    .<strong>command_pattern</strong>  &#x21d2; <tt>Regexp</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>応答するコマンド全てにマッチする正規表現を返す 正規表現を一度生成したら、以後コマンドの登録はできないようにする</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_command_pattern'>command_pattern</span>
+  <span class='ivar'>@command_pattern</span> <span class='op'>||=</span> <span class='kw'>nil</span>
+  <span class='kw'>return</span> <span class='ivar'>@command_pattern</span> <span class='kw'>if</span> <span class='ivar'>@command_pattern</span>
+
+  <span class='ivar'>@prefixes</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@prefixes</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
+  <span class='id identifier rubyid_pattarns'>pattarns</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="CommonCommand.html" title="BCDice::CommonCommand (module)">CommonCommand</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="CommonCommand.html#COMMANDS-constant" title="BCDice::CommonCommand::COMMANDS (constant)">COMMANDS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='op'>::</span><span class='const'>PREFIX_PATTERN</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span> <span class='rbrace'>}</span> <span class='op'>+</span> <span class='ivar'>@prefixes</span>
+
+  <span class='ivar'>@command_pattern</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^S?(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pattarns'>pattarns</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>|</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='regexp_end'>/i</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eval-class_method">
+  
+    .<strong>eval</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="Result.html" title="BCDice::Result (class)">Result</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>command</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Result.html" title="BCDice::Result (class)">Result</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_eval'>eval</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prefixes_pattern-class_method">
+  
+    .<strong>prefixes_pattern</strong>  &#x21d2; <tt>Regexp</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム固有のコマンドにマッチする正規表現を返す 正規表現を一度生成したら、以後コマンドの登録はできないようにする</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prefixes_pattern'>prefixes_pattern</span>
+  <span class='ivar'>@prefixes_pattern</span> <span class='op'>||=</span> <span class='kw'>nil</span>
+  <span class='kw'>return</span> <span class='ivar'>@prefixes_pattern</span> <span class='kw'>if</span> <span class='ivar'>@prefixes_pattern</span>
+
+  <span class='ivar'>@prefixes</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@prefixes</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
+  <span class='ivar'>@prefixes_pattern</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='ivar'>@prefixes</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+      <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?!)</span><span class='regexp_end'>/</span></span> <span class='comment'># 何にもマッチしない正規表現
+</span>    <span class='kw'>else</span>
+      <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(S)?(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@prefixes</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='regexp_end'>/i</span></span>
+    <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_prefix-class_method">
+  
+    .<strong>register_prefix</strong>(*prefixes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>応答するコマンドのprefixを登録する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>prefixes</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_prefix'>register_prefix</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_prefixes'>prefixes</span><span class='rparen'>)</span>
+  <span class='ivar'>@prefixes</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@prefixes</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='id identifier rubyid_prefixes'>prefixes</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_prefix_from_super_class-class_method">
+  
+    .<strong>register_prefix_from_super_class</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_prefix_from_super_class'>register_prefix_from_super_class</span>
+  <span class='id identifier rubyid_register_prefix'>register_prefix</span><span class='lparen'>(</span><span class='id identifier rubyid_superclass'>superclass</span><span class='period'>.</span><span class='id identifier rubyid_prefixes'>prefixes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="change_text-instance_method">
+  
+    #<strong>change_text</strong>(string)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+<p>これを使わずに <code>eval_common_command</code> 内でパースすることを推奨する</p>
+</div></div>
+
+<p>ゲームシステムごとの入力コマンドの前処理</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 183</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_change_text'>change_text</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_string'>string</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_result-instance_method">
+  
+    #<strong>check_result</strong>(total, rand_results, cmp_op, target)  &#x21d2; <tt><span class='object_link'><a href="Result.html" title="BCDice::Result (class)">Result</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>total</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>コマンド合計値</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>rand_results</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="CommonCommand/AddDice/Randomizer/RandResult.html" title="BCDice::CommonCommand::AddDice::Randomizer::RandResult (class)">CommonCommand::AddDice::Randomizer::RandResult</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ダイスの一覧</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>cmp_op</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>比較演算子</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>目標値の整数か&#39;?&#39;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Result.html" title="BCDice::Result (class)">Result</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 192</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_result'>check_result</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_rand_results'>rand_results</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_check_result_legacy'>check_result_legacy</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_rand_results'>rand_results</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span> <span class='kw'>if</span> <span class='id identifier rubyid_ret'>ret</span>
+
+  <span class='id identifier rubyid_sides_list'>sides_list</span> <span class='op'>=</span> <span class='id identifier rubyid_rand_results'>rand_results</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:sides</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_value_list'>value_list</span> <span class='op'>=</span> <span class='id identifier rubyid_rand_results'>rand_results</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:value</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>=</span> <span class='id identifier rubyid_value_list'>value_list</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span><span class='lparen'>(</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_sides_list'>sides_list</span>
+    <span class='kw'>when</span> <span class='lbracket'>[</span><span class='int'>100</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_result_1d100'>result_1d100</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='lbracket'>[</span><span class='int'>20</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_result_1d20'>result_1d20</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span> <span class='int'>6</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_result_2d6'>result_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_value_list'>value_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_ret'>ret</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nothing'><span class='object_link'><a href="Result.html#nothing-class_method" title="BCDice::Result.nothing (method)">nothing</a></span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span> <span class='kw'>if</span> <span class='id identifier rubyid_ret'>ret</span>
+
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_sides_list'>sides_list</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+    <span class='kw'>when</span> <span class='lbracket'>[</span><span class='int'>10</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_result_nd10'>result_nd10</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_value_list'>value_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='lbracket'>[</span><span class='int'>6</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_result_nd6'>result_nd6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_value_list'>value_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_ret'>ret</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nothing'><span class='object_link'><a href="Result.html#nothing-class_method" title="BCDice::Result.nothing (method)">nothing</a></span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span> <span class='kw'>if</span> <span class='id identifier rubyid_ret'>ret</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_result_ndx'>result_ndx</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_debug-instance_method">
+  
+    #<strong>enable_debug</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>デバッグを有用にする</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+161
+162
+163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 161</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_debug'>enable_debug</span>
+  <span class='ivar'>@debug</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enabled_d9?-instance_method">
+  
+    #<strong>enabled_d9?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>D9ダイスが有効か</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enabled_d9?'>enabled_d9?</span>
+  <span class='ivar'>@enabled_d9</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eval-instance_method">
+  
+    #<strong>eval</strong>  &#x21d2; <tt><span class='object_link'><a href="Result.html" title="BCDice::Result (class)">Result</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>コマンドを評価する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Result.html" title="BCDice::Result (class)">Result</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>コマンド実行結果。コマンドが実行できなかった場合はnilを返す</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 167</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval'>eval</span>
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../BCDice.html" title="BCDice (module)">BCDice</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Preprocessor.html" title="BCDice::Preprocessor (class)">Preprocessor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_process'><span class='object_link'><a href="Preprocessor.html#process-class_method" title="BCDice::Preprocessor.process (method)">process</a></span></span><span class='lparen'>(</span><span class='ivar'>@raw_input</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_command'>dice_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_eval_common_command'>eval_common_command</span><span class='lparen'>(</span><span class='ivar'>@raw_input</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_result'>result</span>
+
+  <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_rands'>rands</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_rand_results'>rand_results</span>
+  <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_detailed_rands'>detailed_rands</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_detailed_rand_results'>detailed_rand_results</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="grich_text-instance_method">
+  
+    #<strong>grich_text</strong>(count_one, dice_total_count, count_success)  &#x21d2; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>シャドウラン用グリッチ判定</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>count_one</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>出目1の数</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>dice_total_count</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ダイスロールしたダイスの数</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>count_success</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>成功数</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 232</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_grich_text'>grich_text</span><span class='lparen'>(</span><span class='id identifier rubyid_count_one'>count_one</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total_count'>dice_total_count</span><span class='comma'>,</span> <span class='id identifier rubyid_count_success'>count_success</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sort_add_dice?-instance_method">
+  
+    #<strong>sort_add_dice?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>加算ダイスでダイス目をソートするかどうか</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sort_add_dice?'>sort_add_dice?</span>
+  <span class='ivar'>@sort_add_dice</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sort_barabara_dice?-instance_method">
+  
+    #<strong>sort_barabara_dice?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>バラバラダイスでダイス目をソートするかどうか</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/base.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sort_barabara_dice?'>sort_barabara_dice?</span>
+  <span class='ivar'>@sort_barabara_dice</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Jan 29 01:44:07 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.1).
+</div>
+
+    </div>
+  </body>
+</html>

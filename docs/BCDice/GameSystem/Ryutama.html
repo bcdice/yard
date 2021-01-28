@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::Ryutama
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::Ryutama";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">Ryutama</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::Ryutama
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::Ryutama</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/Ryutama.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ryutama</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>りゅうたま</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>りゆうたま</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>  ・判定
+</span><span class='tstring_content'>  　Rx,y&gt;=t（x,y：使用する能力値、t：目標値）
+</span><span class='tstring_content'>  　1ゾロ、クリティカルも含めて判定結果を表示します
+</span><span class='tstring_content'>  　能力値１つでの判定は Rx&gt;=t で行えます
+</span><span class='tstring_content'>  例）R8,6&gt;=13
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getBaseText-instance_method" title="#getBaseText (instance method)">#<strong>getBaseText</strong>(dice1, dice2, modify, difficulty)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getDiceType-instance_method" title="#getDiceType (instance method)">#<strong>getDiceType</strong>(dice1, dice2)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getDiffculty-instance_method" title="#getDiffculty (instance method)">#<strong>getDiffculty</strong>(difficulty)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getModifyString-instance_method" title="#getModifyString (instance method)">#<strong>getModifyString</strong>(modify)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getResultText-instance_method" title="#getResultText (instance method)">#<strong>getResultText</strong>(value1, value2, dice1, dice2, difficulty, total)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getRollValue-instance_method" title="#getRollValue (instance method)">#<strong>getRollValue</strong>(dice)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; Ryutama </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Ryutama.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#isCritical-instance_method" title="#isCritical (instance method)">#<strong>isCritical</strong>(value1, value2, dice1, dice2)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#isFamble-instance_method" title="#isFamble (instance method)">#<strong>isFamble</strong>(value1, value2)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#isValidDice-instance_method" title="#isValidDice (instance method)">#<strong>isValidDice</strong>(dice1, dice2)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#isValidDiceOne-instance_method" title="#isValidDiceOne (instance method)">#<strong>isValidDiceOne</strong>(dice)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::Ryutama (class)">Ryutama</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Ryutama.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='ivar'>@validDiceTypes</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>20</span><span class='comma'>,</span> <span class='int'>12</span><span class='comma'>,</span> <span class='int'>10</span><span class='comma'>,</span> <span class='int'>8</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="eval_game_system_specific_command-instance_method">
+  
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>eval_game_system_specific_command begin</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^R(\d+)(,(\d+))?([+\-\d]+)?(&gt;=(\d+))?</span><span class='regexp_end'>/</span></span>
+    <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>unmatched!</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>matched</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_modifyString'>modifyString</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>=</span> <span class='id identifier rubyid_getDiceType'>getDiceType</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_modifyString'>modifyString</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_modify'>modify</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ArithmeticEvaluator.html" title="BCDice::ArithmeticEvaluator (module)">ArithmeticEvaluator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_eval'><span class='object_link'><a href="../ArithmeticEvaluator.html#eval-class_method" title="BCDice::ArithmeticEvaluator.eval (method)">eval</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_modifyString'>modifyString</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='id identifier rubyid_getDiffculty'>getDiffculty</span><span class='lparen'>(</span><span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_value1'>value1</span> <span class='op'>=</span> <span class='id identifier rubyid_getRollValue'>getRollValue</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_value2'>value2</span> <span class='op'>=</span> <span class='id identifier rubyid_getRollValue'>getRollValue</span><span class='lparen'>(</span><span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_total'>total</span> <span class='op'>=</span> <span class='id identifier rubyid_value1'>value1</span> <span class='op'>+</span> <span class='id identifier rubyid_value2'>value2</span> <span class='op'>+</span> <span class='id identifier rubyid_modify'>modify</span>
+
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_getResultText'>getResultText</span><span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span><span class='comma'>,</span> <span class='id identifier rubyid_value2'>value2</span><span class='comma'>,</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_value1Text'>value1Text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value1'>value1</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice1'>dice1</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_value2Text'>value2Text</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_value2'>value2</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value2'>value2</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice2'>dice2</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_modifyText'>modifyText</span> <span class='op'>=</span> <span class='id identifier rubyid_getModifyString'>getModifyString</span><span class='lparen'>(</span><span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_baseText'>baseText</span> <span class='op'>=</span> <span class='id identifier rubyid_getBaseText'>getBaseText</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='comma'>,</span> <span class='id identifier rubyid_modify'>modify</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_baseText'>baseText</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value1Text'>value1Text</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value2Text'>value2Text</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_modifyText'>modifyText</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total'>total</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getBaseText-instance_method">
+  
+    #<strong>getBaseText</strong>(dice1, dice2, modify, difficulty)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getBaseText'>getBaseText</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='comma'>,</span> <span class='id identifier rubyid_modify'>modify</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_baseText'>baseText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>R</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice1'>dice1</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>!=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_baseText'>baseText</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice2'>dice2</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_baseText'>baseText</span> <span class='op'>+=</span> <span class='id identifier rubyid_getModifyString'>getModifyString</span><span class='lparen'>(</span><span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_baseText'>baseText</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_difficulty'>difficulty</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_baseText'>baseText</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getDiceType-instance_method">
+  
+    #<strong>getDiceType</strong>(dice1, dice2)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getDiceType'>getDiceType</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>getDiceType begin</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>!=</span> <span class='int'>0</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_isValidDiceOne'>isValidDiceOne</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span>
+    <span class='kw'>else</span>
+      <span class='kw'>return</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_isValidDice'>isValidDice</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_diceBase'>diceBase</span> <span class='op'>=</span> <span class='id identifier rubyid_dice1'>dice1</span>
+
+  <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>=</span> <span class='id identifier rubyid_diceBase'>diceBase</span> <span class='op'>/</span> <span class='int'>10</span>
+  <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>=</span> <span class='id identifier rubyid_diceBase'>diceBase</span> <span class='op'>%</span> <span class='int'>10</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_isValidDice'>isValidDice</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>=</span> <span class='id identifier rubyid_diceBase'>diceBase</span> <span class='op'>/</span> <span class='int'>100</span>
+  <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>=</span> <span class='id identifier rubyid_diceBase'>diceBase</span> <span class='op'>%</span> <span class='int'>100</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_isValidDice'>isValidDice</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_isValidDiceOne'>isValidDiceOne</span><span class='lparen'>(</span><span class='id identifier rubyid_diceBase'>diceBase</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_diceBase'>diceBase</span><span class='comma'>,</span> <span class='int'>0</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getDiffculty-instance_method">
+  
+    #<strong>getDiffculty</strong>(difficulty)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getDiffculty'>getDiffculty</span><span class='lparen'>(</span><span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_difficulty'>difficulty</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getModifyString-instance_method">
+  
+    #<strong>getModifyString</strong>(modify)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188
+189
+190
+191
+192
+193
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 188</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getModifyString'>getModifyString</span><span class='lparen'>(</span><span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_modify'>modify</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_modify'>modify</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_modify'>modify</span> <span class='op'>&lt;</span> <span class='int'>0</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_modify'>modify</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getResultText-instance_method">
+  
+    #<strong>getResultText</strong>(value1, value2, dice1, dice2, difficulty, total)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 134</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getResultText'>getResultText</span><span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span><span class='comma'>,</span> <span class='id identifier rubyid_value2'>value2</span><span class='comma'>,</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='comma'>,</span> <span class='id identifier rubyid_total'>total</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_isFamble'>isFamble</span><span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span><span class='comma'>,</span> <span class='id identifier rubyid_value2'>value2</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>１ゾロ【１ゾロポイント＋１】</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_isCritical'>isCritical</span><span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span><span class='comma'>,</span> <span class='id identifier rubyid_value2'>value2</span><span class='comma'>,</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>クリティカル成功</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span>  <span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_difficulty'>difficulty</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getRollValue-instance_method">
+  
+    #<strong>getRollValue</strong>(dice)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getRollValue'>getRollValue</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>==</span> <span class='int'>0</span>
+
+  <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="isCritical-instance_method">
+  
+    #<strong>isCritical</strong>(value1, value2, dice1, dice2)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 158</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_isCritical'>isCritical</span><span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span><span class='comma'>,</span> <span class='id identifier rubyid_value2'>value2</span><span class='comma'>,</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_value2'>value2</span> <span class='op'>==</span> <span class='int'>0</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span> <span class='op'>==</span> <span class='int'>6</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_value2'>value2</span> <span class='op'>==</span> <span class='int'>6</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span> <span class='op'>==</span> <span class='id identifier rubyid_dice1'>dice1</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_value2'>value2</span> <span class='op'>==</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="isFamble-instance_method">
+  
+    #<strong>isFamble</strong>(value1, value2)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_isFamble'>isFamble</span><span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span><span class='comma'>,</span> <span class='id identifier rubyid_value2'>value2</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_value1'>value1</span> <span class='op'>==</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_value2'>value2</span> <span class='op'>==</span> <span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="isValidDice-instance_method">
+  
+    #<strong>isValidDice</strong>(dice1, dice2)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_isValidDice'>isValidDice</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='comma'>,</span> <span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='id identifier rubyid_isValidDiceOne'>isValidDiceOne</span><span class='lparen'>(</span><span class='id identifier rubyid_dice1'>dice1</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+           <span class='id identifier rubyid_isValidDiceOne'>isValidDiceOne</span><span class='lparen'>(</span><span class='id identifier rubyid_dice2'>dice2</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="isValidDiceOne-instance_method">
+  
+    #<strong>isValidDiceOne</strong>(dice)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ryutama.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_isValidDiceOne'>isValidDiceOne</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='rparen'>)</span>
+  <span class='ivar'>@validDiceTypes</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Jan 29 01:44:10 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.1).
+</div>
+
+    </div>
+  </body>
+</html>

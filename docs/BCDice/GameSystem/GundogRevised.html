@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::GundogRevised
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::GundogRevised";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (G)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">GundogRevised</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::GundogRevised
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::GundogRevised</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/GundogRevised.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GundogRevised</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ガンドッグ・リヴァイズド</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>かんとつくりうあいすと</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>  失敗、成功、クリティカル、ファンブルとロールの達成値の自動判定を行います。
+</span><span class='tstring_content'>  nD9ロールも対応。
+</span><span class='tstring_content'>  ・ダメージペナルティ表　　(～DPTx) (x:修正)
+</span><span class='tstring_content'>  　射撃(SDPT)、格闘(MDPT)、車両(VDPT)、汎用(GDPT)の各表を引くことが出来ます。
+</span><span class='tstring_content'>  　修正を後ろに書くことも出来ます。
+</span><span class='tstring_content'>  ・ファンブル表　　　　　　(～FTx)  (x:修正)
+</span><span class='tstring_content'>  　射撃(SFT)、格闘(MFT)、投擲(TFT)の各表を引くことが出来ます。
+</span><span class='tstring_content'>  　修正を後ろに書くことも出来ます。
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_1D100-instance_method" title="#check_1D100 (instance method)">#<strong>check_1D100</strong>(total, _dice_total, cmp_op, target)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>—- 以降、Gundog.rbよりほぼコピペ（絶対成功→ベアリーに用語変更対応の為、継承だと不都合） ゲーム別成功度判定(1d100).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getDamageTypeAndTable-instance_method" title="#getDamageTypeAndTable (instance method)">#<strong>getDamageTypeAndTable</strong>(head)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#getFumbleTypeAndTable-instance_method" title="#getFumbleTypeAndTable (instance method)">#<strong>getFumbleTypeAndTable</strong>(head)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; GundogRevised </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of GundogRevised.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::GundogRevised (class)">GundogRevised</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of GundogRevised.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GundogRevised.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='ivar'>@enabled_d9</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_1D100-instance_method">
+  
+    #<strong>check_1D100</strong>(total, _dice_total, cmp_op, target)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>—- 以降、Gundog.rbよりほぼコピペ（絶対成功→ベアリーに用語変更対応の為、継承だと不都合） ゲーム別成功度判定(1d100)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GundogRevised.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_1D100'>check_1D100</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_total'>_dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&lt;=</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='int'>100</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ファンブル</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&lt;=</span> <span class='int'>1</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ ベアリー(達成値1+SL)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_target'>target</span>
+    <span class='id identifier rubyid_dig10'>dig10</span> <span class='op'>=</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>/</span> <span class='int'>10</span>
+    <span class='id identifier rubyid_dig1'>dig1</span> <span class='op'>=</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>-</span> <span class='id identifier rubyid_dig10'>dig10</span> <span class='op'>*</span> <span class='int'>10</span>
+    <span class='id identifier rubyid_dig10'>dig10</span> <span class='op'>=</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_dig10'>dig10</span> <span class='op'>&gt;=</span> <span class='int'>10</span>
+    <span class='id identifier rubyid_dig1'>dig1</span> <span class='op'>=</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_dig1'>dig1</span> <span class='op'>&gt;=</span> <span class='int'>10</span> <span class='comment'># 条件的にはあり得ない(笑
+</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_dig1'>dig1</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ クリティカル(達成値20+SL)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功(達成値</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dig10'>dig10</span> <span class='op'>+</span> <span class='id identifier rubyid_dig1'>dig1</span><span class='embexpr_end'>}</span><span class='tstring_content'>+SL)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eval_game_system_specific_command-instance_method">
+  
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GundogRevised.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
+
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_ttype'>ttype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='comment'># ダメージペナルティ表
+</span>  <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\w)DPT([+\-\d]*)</span><span class='regexp_end'>/i</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_string'>string</span>
+    <span class='id identifier rubyid_ttype'>ttype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ダメージペナルティー</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ArithmeticEvaluator.html" title="BCDice::ArithmeticEvaluator (module)">ArithmeticEvaluator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_eval'><span class='object_link'><a href="../ArithmeticEvaluator.html#eval-class_method" title="BCDice::ArithmeticEvaluator.eval (method)">eval</a></span></span><span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_getDamageTypeAndTable'>getDamageTypeAndTable</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># ファンブル表
+</span>  <span class='kw'>if</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\w)FT([+\-\d]*)</span><span class='regexp_end'>/i</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_string'>string</span>
+    <span class='id identifier rubyid_ttype'>ttype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ファンブル</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mod'>mod</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ArithmeticEvaluator.html" title="BCDice::ArithmeticEvaluator (module)">ArithmeticEvaluator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_eval'><span class='object_link'><a href="../ArithmeticEvaluator.html#eval-class_method" title="BCDice::ArithmeticEvaluator.eval (method)">eval</a></span></span><span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_getFumbleTypeAndTable'>getFumbleTypeAndTable</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_diceArray'>diceArray</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='id identifier rubyid_mod'>mod</span> <span class='op'>+</span> <span class='id identifier rubyid_diceArray'>diceArray</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&lt;</span> <span class='int'>10</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span><span class='lparen'>(</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_diceOriginalText'>diceOriginalText</span> <span class='op'>=</span> <span class='id identifier rubyid_dice'>dice</span>
+  <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>&lt;</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='int'>18</span> <span class='kw'>if</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>&gt;</span> <span class='int'>18</span>
+
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttype'>ttype</span><span class='embexpr_end'>}</span><span class='tstring_content'>表[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diceOriginalText'>diceOriginalText</span><span class='embexpr_end'>}</span><span class='tstring_content'>] ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_table'>table</span><span class='lbracket'>[</span><span class='id identifier rubyid_dice'>dice</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getDamageTypeAndTable-instance_method">
+  
+    #<strong>getDamageTypeAndTable</strong>(head)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GundogRevised.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getDamageTypeAndTable'>getDamageTypeAndTable</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_head'>head</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>S</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>射撃</span><span class='tstring_end'>&#39;</span></span>
+    <span class='comment'># 射撃ダメージペナルティー表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は[死亡]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 0
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]4D6/[出血]2D6/[重傷]-40％/[朦朧判定]15</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 1
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]3D6/[出血]2D6/[重傷]-30％/[朦朧判定]14</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 2
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]3D6/[出血]2D6/[重傷]-30％/[朦朧判定]13</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 3
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]3D6/[出血]1D6/[重傷]-20％/[朦朧判定]12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 4
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[出血]1D6/[重傷]-20％/[朦朧判定]11</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 5
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％/[朦朧判定]11</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>              <span class='comment'># 6
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％/[朦朧判定]10</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>              <span class='comment'># 7
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％/[朦朧判定]8</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 8
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％/[朦朧判定]6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 9
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-10％/[朦朧判定]4</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 10
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                           <span class='comment'># 11
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                           <span class='comment'># 12
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                           <span class='comment'># 13
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[ショック]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                                  <span class='comment'># 14
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[ショック]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                                  <span class='comment'># 15
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 16
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>手に持った武器を落とす。複数ある場合はランダム</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 17
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ペナルティー無し</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 18
+</span>    <span class='rbracket'>]</span>
+
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>M</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>格闘</span><span class='tstring_end'>&#39;</span></span>
+    <span class='comment'># 格闘ダメージペナルティー表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は[死亡]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 0
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]4D6/[出血]2D6/[重傷]-40％/[朦朧判定]15</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 1
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]3D6/[出血]2D6/[重傷]-30％/[朦朧判定]14</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 2
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]3D6/[出血]1D6/[重傷]-20％/[朦朧判定]14/[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 3
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[出血]1D6/[重傷]-20％/[朦朧判定]14</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 4
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[重傷]-20％/[朦朧判定]12/[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 5
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％/[朦朧判定]11</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>              <span class='comment'># 6
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％/[朦朧判定]10</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>              <span class='comment'># 7
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％/[朦朧判定]8</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 8
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[軽傷]-20％/[朦朧判定]6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 9
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-20％/[朦朧判定]6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 10
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-10％/[朦朧判定]6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 11
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-10％/[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 12
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                           <span class='comment'># 13
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[ショック]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                                  <span class='comment'># 14
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[ショック]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                                  <span class='comment'># 15
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 16
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>手に持った武器を落とす。複数ある場合はランダム</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 17
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ペナルティー無し</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 18
+</span>    <span class='rbracket'>]</span>
+
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>V</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>車両</span><span class='tstring_end'>&#39;</span></span>
+    <span class='comment'># 車両ダメージペナルティー表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[クラッシュ]する。[チェイス]から除外</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 0
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[車両D]4D6/[乗員D]3D6/[操作性]-40%/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='comment'># 1
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[車両D]3D6/[乗員D]3D6/[操作性]-30%/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='comment'># 2
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]3D6/[操作性]-20%/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='comment'># 3
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]3D6/[操作性]-20%/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='comment'># 4
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]3D6/[操作性]-10%/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='comment'># 5
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]3D6/[操作性]-10%/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='comment'># 6
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]2D6/[スピード]-2/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='comment'># 7
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]2D6/[スピード]-2/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='comment'># 8
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]2D6/[操縦判定]-20%/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='comment'># 9
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]2D6/[操縦判定]-20%/[スピン判定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='comment'># 10
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]2D6/[操縦判定]-20%</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                        <span class='comment'># 11
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]2D6/[操縦判定]-20%</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                        <span class='comment'># 12
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]1D6/[操縦判定]-20%</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                        <span class='comment'># 13
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[乗員D]1D6/[操縦判定]-10%</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                        <span class='comment'># 14
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>攻撃が乗員をかすめる。ランダムな乗員1人に[ショック]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 15
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>攻撃が乗員に当たりかける。ランダムな乗員1人に[ショック]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 16
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>車両が蛇行。乗員全員は〈運動〉判定。失敗で[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 17
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ペナルティー無し</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 18
+</span>    <span class='rbracket'>]</span>
+
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>G</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>汎用</span><span class='tstring_end'>&#39;</span></span>
+    <span class='comment'># 汎用ダメージペナルティー表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>対象は[死亡]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 0
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]4D6/[出血]2D6/[重傷]-40％/[朦朧判定]15</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 1
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]3D6/[出血]2D6/[重傷]-30％/[朦朧判定]14</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='comment'># 2
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[出血]1D6/[重傷]-30％/[朦朧判定]13/[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 3
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[出血]1D6/[重傷]-30％/[朦朧判定]12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 4
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]2D6/[重傷]-20％/[朦朧判定]12/[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 5
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[重傷]-20％/[朦朧判定]11</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>              <span class='comment'># 6
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-30％/[朦朧判定]10</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>              <span class='comment'># 7
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-30％/[朦朧判定]8</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 8
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-30％/[朦朧判定]6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 9
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[追加D]1D6/[軽傷]-20％/[朦朧判定]6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>               <span class='comment'># 10
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[軽傷]-20％/[朦朧判定]6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 11
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[軽傷]-20％/[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 12
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[軽傷]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                                      <span class='comment'># 13
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[軽傷]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                                      <span class='comment'># 14
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[ショック]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 15
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[ショック]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 16
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 17
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ペナルティー無し</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 18
+</span>    <span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>S</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># 間違ったら射撃扱い
+</span>    <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_getDamageTypeAndTable'>getDamageTypeAndTable</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="getFumbleTypeAndTable-instance_method">
+  
+    #<strong>getFumbleTypeAndTable</strong>(head)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GundogRevised.rb', line 211</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_getFumbleTypeAndTable'>getFumbleTypeAndTable</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_head'>head</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>S</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>射撃</span><span class='tstring_end'>&#39;</span></span>
+    <span class='comment'># 射撃ファンブル表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>銃器が暴発、自分に命中。[貫通D]。武装喪失</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 0
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>銃器が暴発、自分に命中。[非貫通D]。武装喪失</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 1
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>誤射。射線に最も近い味方に命中。[貫通D]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 2
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>誤射。射線に最も近い味方に命中。[非貫通D]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 3
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>銃器が完全に故障。直せない</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 4
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>故障。30分かけて〈メカニック〉判定に成功するまで使用不可。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 5
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>故障。〈メカニック〉-20％の判定に成功するまで使用不可。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 6
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>故障。〈メカニック〉判定に成功するまで射撃不可</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 7
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>作動不良。[アイテム使用]を2回行って修理するまで射撃不可</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 8
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>作動不良。[アイテム使用]を行って修理するまで射撃不可</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 9
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>足がもつれて倒れる。[転倒]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 10
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>無理な射撃姿勢で腕を痛める。[軽傷]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 11
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>無理な射撃姿勢でどこかの筋を痛める。[軽傷]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 12
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装を落とす。スリング（肩ひも）も切れる</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 13
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装を落とす。スリング（肩ひも）があれば落とさない</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 14
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>排莢された薬莢が服の中に。[ショック]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 15
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>排莢された薬莢が顔に当たる。[ショック]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 16
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>薬莢を踏んで態勢を崩す。[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 17
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ペナルティー無し</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 18
+</span>    <span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>M</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>格闘</span><span class='tstring_end'>&#39;</span></span>
+    <span class='comment'># 格闘ファンブル表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>自分に命中。[貫通D]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 0
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>自分に命中。[非貫通D]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 1
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>最も近い味方（射程内にいなければ自分）に[貫通D]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 2
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>最も近い味方（射程内にいなければ自分）に[非貫通D]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 3
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭を強く打ちつける。[朦朧]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 4
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装が壊れる。直せない。[格闘タイプ]なら[重傷]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 5
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装がすっぽ抜ける。グレネードの誤差で落下先を決定</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 6
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装が損傷。30分かけて〈手先〉判定に成功するまで使用不可。[格闘タイプ]なら[重傷]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 7
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装がガタつく。〈手先〉判定（[格闘タイプ]なら〈強靭〉）に成功するまで使用不可。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 8
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装に違和感。[アイテム使用]を行って調整するまで、命中率-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 9
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>足がもつれる。[転倒]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 10
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>足がつる。2[ラウンド]の間、移動距離1/2</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 11
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>無理な体勢で腕（あるいは脚）を痛める。[軽傷]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='comment'># 12
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>無理な体勢でどこかの筋を痛める。[軽傷]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='comment'># 13
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装を落とす</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 14
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装で自分が負傷。[ショック]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 15
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武装の扱いを間違える。[ショック]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 16
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>攻撃を避けられて体勢を崩す。[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 17
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ペナルティー無し</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 18
+</span>    <span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>T</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>投擲</span><span class='tstring_end'>&#39;</span></span>
+    <span class='comment'># 投擲ファンブル表
+</span>    <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>勢いをつけすぎて転倒し、頭を打つ。[気絶]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='comment'># 0
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>自分に命中。（手榴弾なら自分の足元に落ちる）[貫通D]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='comment'># 1
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>自分に命中。（手榴弾なら自分の足元に落ちる）[非貫通D]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 2
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>暴投。射線に最も近い味方に命中。[貫通D]。手榴弾なら新たな中心点からさらに誤差が生じる</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 3
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>暴投。射線に最も近い味方に命中。[非貫通D]。手榴弾なら新たな中心点からさらに誤差が生じる</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 4
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭を強く打ちつける。[朦朧]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 5
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>肩の筋肉断裂。この腕を使う判定に、[重傷]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 6
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ヒジの筋肉断裂。この腕を使う判定に、[重傷]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 7
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>肩の筋をひどく痛める。〈医療〉判定に成功するまで、この腕を使う判定に-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 8
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>肩の筋を痛める。[行動]を使って休めるまで、この腕を使う判定に-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 9
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>腰を痛める。[軽傷]-30％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 10
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>足がもつれて倒れる。[転倒]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 11
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>足がつる。2[ラウンド]の間、移動距離1/2</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 12
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>無理な投擲体勢で腕（あるいは脚）を痛める。[軽傷]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 13
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>無理な投擲体勢でどこかの筋を痛める。[軽傷]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 14
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>肩に違和感。[ショック]-20％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 15
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ヒジに違和感。[ショック]-10％</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 16
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>つまずいて姿勢を崩す。[不安定]</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 17
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ペナルティー無し</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='comment'># 18
+</span>    <span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_head'>head</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>S</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># 間違ったら射撃扱い
+</span>    <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_getFumbleTypeAndTable'>getFumbleTypeAndTable</span><span class='lparen'>(</span><span class='id identifier rubyid_head'>head</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Jan 29 01:44:18 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.1).
+</div>
+
+    </div>
+  </body>
+</html>

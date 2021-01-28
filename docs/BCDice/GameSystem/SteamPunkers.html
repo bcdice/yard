@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::SteamPunkers
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::SteamPunkers";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">SteamPunkers</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::SteamPunkers
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::SteamPunkers</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/SteamPunkers.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span>, <span class='object_link'><a href="SteamPunkers/UnexpectedTableSize.html" title="BCDice::GameSystem::SteamPunkers::UnexpectedTableSize (class)">UnexpectedTableSize</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SteamPunkers</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>スチームパンカーズ</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>すちいむはんかあす</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~MESSAGETEXT</span>
+<span class='tstring_content'>  ・判定コマンド (SPn)
+</span><span class='tstring_content'>    SP(判定ダイス数)&gt;=(目標値)
+</span><span class='tstring_content'>    SP4&gt;=3のように入力し、5が出たらヒット数1，6が出たらヒット数2として成功数を数えます。
+</span><span class='tstring_content'>    ≪スチームパンク！≫による振り直しのため、出力には失敗ダイス数を表示します。
+</span><span class='tstring_content'>    目標値は省略可能です。
+</span><span class='tstring_content'>    例：(SP4&gt;=3) ＞ [3,4,1,6] ＞ 成功数:2, 失敗数:3 ＞ 失敗
+</span><span class='tstring_content'>    例：(SP4) ＞ [3,4,1,6] ＞ 成功数:2, 失敗数:3
+</span><span class='tstring_content'>  ・表
+</span><span class='tstring_content'>    ・プロフ(Profile)：年齢表 PAT, 性別表 PST, 国籍表 PCT
+</span><span class='tstring_content'>    ・名前表(Name)：イギリス NIT, アメリカ NAT, フランス NFT, ドイツ NGT, ソビエト NST, 日本表 NJT
+</span><span class='tstring_content'>    ・過去表(Past)：トゥルース PTT, ガーディアン PGT, ノーブル PNT, デヴォート PDT, エセティック PET, チャレンジ PCT
+</span><span class='tstring_content'>    ・経緯表(Background)：ギガントアームズ BGT, アーマードリム BAT, エッジモービル BET, クロノウェポン BCT, スパイテック BST, スチームウェア BWT
+</span><span class='tstring_content'>    ・特徴表(Feature)：特徴表S FST, 特徴表P FPT
+</span><span class='tstring_content'>    ・関係性表(Relationship)：関係性表S RST, 関係性表P RPT
+</span><span class='tstring_content'>    ・感情表(Emotion)：感情表S EST, 感情表P EPT
+</span><span class='tstring_content'>    ・その他(Other)；災厄表 ODT, 場面表 OST, 交流表 OIT, 激憤表 OFT
+</span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PAT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>年齢表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【14~15歳】 まだまだ、子ども扱い。また、過去の内容は父か母のことを指している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【16~17歳】 そろそろ成人として扱われる。また、過去の内容は父か母のことを指している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【18~19歳】 職場では修行期間中である。また、過去の内容は両親のことか、あなた自身のことだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【20~21歳】 ようやく一人前の年齢である。また、過去の内容は両親のことか、あなた自身のことだ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【22~23歳】 働き盛りである。また、過去の内容はあなた自身のことだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【24~25歳】 働き盛りである。また、過去の内容はあなた自身のことだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【26~27歳】 かつて、従軍した可能性がある。また、過去の内容はあなた自身のことだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【28~30歳】 蒸気大戦末期をよく知っている。また、過去の内容はあなた自身のことだ。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>性別表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【男性】 背が高く、がっしりしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【女性】 蠱惑的な身体をしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【男性】 平均的な中肉中背である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【女性】 女性らしい体形をしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【男性】 近世の取れた肉体をしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【女性】 彫刻のように美しい体形である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【男性】 一見すると細身に見える。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【女性】 スリムな体形をしている。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PCT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>国籍表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【日本皇国】 あなたは日本人である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【フランス共和国】 あなたはフランス人である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【アメリカ合衆国】 あなたはアメリカ人である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【イギリス王国】 あなたはイギリス人である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【イギリス王国】 あなたはイギリス人である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【イギリス王国】 あなたはイギリス人である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【ドイツ帝国】 あなたはドイツ人である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【ソビエト連邦】 あなたはソビエト人である。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NIT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前表・イギリス(男性名/女性名/名字)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アーロン/アビゲイル/アダム</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>カラム/オーレリア/バーナード</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>クライヴ/ブレンダ/ビーチャム</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>カーティス/キャロライン/ビリンガム</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ダンカン/クリス/ボイド</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アイオン/イーニッド/クロムウェル</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ネイサン/グレイス/エアハート</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ウィリアム/ローレンシア/ハックワース</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NAT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前表・アメリカ(男性名/女性名/名字)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ジェラルド/デイジー/キャンベル</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>クラーク/ベアトリス/ベックフォード</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヴィクター/ケイト/ガードナー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ザック/ルシール/キンケイド</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヘクター/エレイン/コールリッジ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アーサー/アンジェリカ/アレクサンダー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アドニス/アルダ/オースティン</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランバート/イヴ/デビットソン</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NFT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前表・フランス(男性名/女性名/名字)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ベルナール/ベアトリス/バシュラール</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>セドリック/セシリア/ベルモンド</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エルネスト/コレット/ボニツェール</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>フレデリック/エルザ/ボワイエ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ロランド/リュクレース/ディノワール</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>イアサント/アンリエット/シャルトー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バスティアン/ブリジット/オードラン</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ルイ/リリアーヌ/ドラクランジュ</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NGT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前表・ドイツ(男性名/女性名/名字)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アルベルト/アデーレ/アッカーマン</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バシリウス/アルマ/バルツァー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ブルーノ/クリステル/ビットナー</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エトムント/エルネスタ/コルネリウス</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ゴッツ/クラリッサ/アイヒマン</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヨハン/モニカ/フリードリヒ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>レオンハルト/オクタヴィア/ハイセルタ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ブルクハルト/クロジンデ/ビンデバルト</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前表・ソビエト(男性名/女性名/名字)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>イリイチ/バルバラ/バビチェフ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ミハイル/ジナイーダ/ボブロフ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>セルゲイ/クラーラ/ヴォルコフ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>イヴァン/レイラ/ガボエフ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アラン/オルガ/ジェミチェフ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ボリス/ナタリヤ/ドミトリエフ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ウラジミル/ソフィア/エルマコフ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アレクセイ/マルタ/ダンチェンコ</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NJT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前表・日本(男性名/女性名/名字)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>タキジ/タキ/トウドウ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>シンヤ/アヤ/マツモト</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>レイジ/カオルコ/サガラ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>コウタロウ/セン/オオシマ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ヒロシ/チサ/クジョウ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ジロウ/カナ/ヤマガタ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>マサヒト/マイ/イトウ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ショウジ/アヤメ/シンドウ</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PTT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>過去表『トゥルース』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【決着】 あなたは怨敵である蒸気事件の犯人を追っている。いつの日か、そいつとは決着をつけるつもりだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【陰謀】 とある陰謀により、あなたは故郷、あるいはかつての地位を失ってしまった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【後悔】 ある蒸気事件を解決できなかった。結果、あなたは大切な人を失ってしまった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【失踪】 かつて、あなたが愛した人は不自然な失踪を遂げてしまった。あの人はいったいどこへ……？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【冤罪】 ある陰謀により、あなたは冤罪をかけられ、かつての地位を追われてしまった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【裏切り】 とある蒸気事件の際に無二の親友があなたを裏切り、理由も告げぬまま消え去った。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【誓い】 とある陰謀により、あなたは大切な何かを失った。いつか陰謀を暴く……それがあなたの誓いだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【喪失】 とある蒸気事件の際、あなたの家族は何者かの手により惨殺された。犯人は今も見つかっていない。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PGT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>過去表『ガーディアン』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【後悔】 ある蒸気事件を解決できなかった。結果、あなたは大切な人を失ってしまった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【贖罪】 あなたは過去に罪なき人々の虐殺を強制させられた。だから、贖罪のために人々を護っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【無力】 かつて、あなたは無力だった。そして、無力ゆえに大切な人を護ることができなかった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【憧れ】 あなたの憧れた人は、いつだって弱者の味方だった。そして、あなたはあの人の背中を追い続けている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【使命】 弱き者たちの盾となる。それが生まれたときから、あなたに課せられ唯一の使命だった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【見殺し】 あなたはやむを得ない事情により、仲間を見殺しにしてしまった。だから、次は絶対見殺しにしない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【死別】 とある事件の際、あなたは家族を護りきれず失ってしまった。だから……今度こそ護ってみせる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【庇護】 現在、あなたには護るべき人、護るべき場所がある。それらの日常を護るべく、あなたは戦ったいる。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PNT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>過去表『ノーブル』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【復讐】 あなたの家族は蒸気事件の犠牲となった。ゆえに、あなたは家族の仇を討つべく犯人を捜している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【理不尽】 あなたは幼少期に、心優しかった使用人が理不尽な虐待の末に殺害される場面を目撃してしまった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【反発】 あなたの親は悪徳を重ねる権力者だった。そんな親が嫌いで、あなたは常に反発していた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【高貴】 あなたは生来から高貴な信念の持ち主だ。それゆえ弱者を救い、導くことに疑問はない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【偽物】 あなたは貴族の影武者を務める元平民だ。しかし、演じるうちに、あなたは真の高貴を身に着けた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【悲恋】 あなたは、下層市民と身分違いの恋をした。だが、愛する人は蒸気事件の犠牲者となった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【権謀】 あなたの両親は、とある権力闘争に巻き込まれた際、不自然な蒸気事件に遭遇して命を落とした。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【慈愛】 あなたは、真の貴族であった両親から他者を慈しむことは当然だと教育された。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PDT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>過去表『デヴォート』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【忠義】 あなたは、忠義の大切さを教えられて育ってきた。それゆえ、あなたは主に忠誠をささげるのだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【忠臣】 あなたは国や組織に仕える忠臣だった。だが、権力闘争によって追われ、今は市井に身を潜めている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【恩義】 あなたは現在の主たる人物、または組織に救われた。いつの日か、この恩に報いなければ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【無心】 あなたは生来より、主や組織に仕える教育を受けてきた。ゆえに、忠義を尽くすことに疑問はない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【心酔】 あなたは現在の主や組織に心酔している。だから、主や組織のために蒸気事件に立ち向かう</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【復習】 あなたの主は邪悪な蒸気事件の犠牲となった。以後、あなたは主の仇を討つべく犯人を捜している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【約束】 あなたの主は蒸気事件の犠牲者だ。主を看取る際、あなたは世界から蒸気事件を一掃すると約束した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【犠牲】 あなたには尊敬に値する主がいた。だが、その主はあなたを庇って、邪悪な陰謀の犠牲となった。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PET</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>過去表『エセティック』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【研究】 あなたは蒸気犯罪で用いられるスチームギアを撲滅するために、常に研究を続けている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【悪用】 あなたは過去に自らが製造した、あるいは所有するスチームギアが悪用され、憤慨したことがある。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【仁義】 あなた、仁義の大切さを教えられて育ってきた。それゆえ、あなたは虐げられる物たちを救うのだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【美意識】 あなたは、スチームギアが犯罪に用いられる場面を目撃した際、吐き気がするほど醜いと感じた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【正義】 あなたは蒸気事件の元犠牲者だ。あなたは、自らの正義を成すために今も蒸気事件に挑み続けている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【正論】 あなたは昔から、スチームギアが正しい方法で利用されないことが我慢ならない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【天誅】 あなたは蒸気事件によって、全てを失ってしまった。だから、蒸気事件を起こす黒幕が許せない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【報復】 あなたの恩師は過去に蒸気事件で犠牲となっている。あなたはいつか、その犯人に報復するつもりだ。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BGT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>経緯表『ギガントアームズ』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元近衛兵】 あなたは上層部の警護を任されていた元近衛兵で、スチームギアは大戦時に入手したものである。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【反逆者の子】 スチームギアは、スチームパンカーだったあなたの亡父が使っていた形見である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元殺し屋】 あなたは、かつて殺し屋だった。このスチームギアは以前の仕事の報酬として受け取ったものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元傭兵】 あなたは蒸気大戦で荒稼ぎしていた元傭兵で、このスチームギアは大戦時に入手したものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元英雄】 あなたは蒸気大戦の英雄だ。あなたは戦線に赴く際、上層部から新世代スチームギアを支給されたのだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元軍人】 あなたは蒸気大戦にも従軍した元軍人で、大戦時にスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元特殊部隊】 あなたは蒸気大戦で活躍した元特殊部隊員で、大戦時にスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【戦場帰り】 あなたは蒸気大戦に従軍した経験を持つ戦場帰りで、大戦時にスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BAT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>経緯表『アーマードリム』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【試験操縦士】 あなたは軍や企業で試験操縦士を務めており、その折に、スチームギアを密かに入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【闇取引】 あなたは闇取引のコネクションがあり、そのコネを利用してスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【貴族出身】 あなたは貴族、あるいは元貴族だ。スチームギアは、屋敷の倉にあった品を改造したものである。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元研究者】 あなたはスチームギアの元研究者で、自らの肉体を防護するためにスチームギアを開発した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【戦場帰り】 あなたは蒸気大戦に従軍した経験を持つ戦場帰りで、大戦時にスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【謎の協力者】 あなたが蒸気事件に立ち向かおうとした際、謎の協力者が現れ、スチームギアを与えてくれた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元修理屋】 あなたは元修理屋だ。スチームギアはジャンク置き場で偶然見かけたものをレストアしたものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【簒奪者】 あなたは蒸気事件に巻き込まれた際、偶然と幸運が重なり、相手のスチームギアを奪取できた。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BET</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>経緯表『エッジモービル』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【車泥棒】 あなたは元車泥棒だ。このスチームギアは出所不明のものをちょろまかしたものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元機関工】 あなたは優れた技術を持つ元機関工で、出所不明のスチームギアを偶然にも入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元エース】 あなたは蒸気大戦時に英雄と呼ばれた元操縦士で、大戦時にスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元輸送兵】 あなたは蒸気大戦に従軍した経験を持つ元輸送兵で、大戦時にスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【蒸気工の子】 あなたは蒸気工、あるいは蒸気技術者の子供だった。スチームギアは、両親が所有していたものである。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元レーサー】 あなたは蒸気車両のレースに出場していたレーサーで、スチームギアは偶然にも入手したものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【違法改造屋】 あなたはかつて、違法で改造を施すモグリの機関工だった。スチームギアは、その際に入手したものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【逃亡兵】 あなたは、戦場から逃げ出した逃亡兵だ。スチームギアは戦場に赴く際に支給された試作機である。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BCT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>経緯表『クロノウェポン』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元武器商人】 あなたは蒸気大戦時にスチームギアを販売していた元武器商人、あるいはその護衛だ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元製造者】 あなたは蒸気大戦時にスチームギアを製造していた。そして、身を護るために自身の手で製造したのだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【反逆者の子】 スチームギアは、スチームパンカーだったあなたの亡父が使っていた形見である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元近衛兵】 あなたは上層部の警護を任されていた元近衛兵で、スチームギアは大戦時に入手したものである。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元特殊部隊】 あなたは蒸気大戦で活躍した元特殊部隊員で、大戦時にスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元傭兵】 あなたは蒸気大戦で荒稼ぎしていた元傭兵で、このスチームギアは大戦時に入手したものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【裏稼業】 あなたはかつて裏稼業に手を染めていた荒事屋で、スチームギアは、かつての仕事の報酬である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元英雄】 あなたは蒸気大戦の英雄だ。あなたは戦線に赴く際、上層部から新世代スチームギアを支給されたのだ。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>経緯表『スパイテック』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元刑事】 あなたは、蒸気事件ばかりを追っていた元刑事だ。スチームギアは犯罪者から奪い取ったものである。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元結社の一員】 あなたは邪悪な秘密結社に所属していた元工作員だ。スチームギアはその頃に支給されたものである。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【研究者の肉親】 あなたの肉親が軍の研究者で、彼らが試作機として制作したものを偶然入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元工作員】 あなたは、蒸気大戦の裏側で活躍した元工作員で、大戦終結と同時に、そのスチームギアを入手した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元諜報員】 あなたは蒸気大戦の際に活躍した元スパイで、当時支給されたスチームギアを私物化している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【後援者】 あなたが行なう蒸気事件の調査を援助する者がいる。彼は、このスチームギアを制作した人物である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元暗殺部隊】 あなたは、蒸気大戦時に暗躍した元暗殺部隊員で、スチームギアはその頃に入手したものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元盗人】 あなたは盗品として流れてきたスチームギアを偶然発見して、入手した。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BWT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>経緯表『スチームウェア』</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【独自ルート】 あなたは人間の限界を超えるために、独自のルートを使って、自らの意志で肉体を機械化した。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【相棒の技師】 あなたが蒸気事件で肉体を欠損した際、機械技師をしている相棒が欠損部位を機械化してくれた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元実験体】 あなたは蒸気事件で重傷を負った際、実験体となる代わりに特殊な機械化手術を施された。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元機械化兵】 あなたは大戦時に機械化手術で蘇った元蒸気兵だ。終戦後、スチームギアをわざと取り換えなかった。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【帰還兵】 あなたは蒸気大戦から帰還した帰還兵だ。だが戦時中に肉体が欠損し、軍部が機械化してくれた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元機械闘士】 あなたは機械化格闘に出場した元格闘士だ。機械化した部位は、その頃に違法改造したものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元闇医者】 あなたは、元モグリの機械医師だった。機械化したその部位は、その頃に自身で改造したものだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元英雄】 あなたは蒸気大戦の英雄だ。あなたは戦線に赴く際、上層部から新世代スチームギアを支給されたのだ。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>特徴表S</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【蒸気帽】 あなたは、なんらかの蒸気機械を仕込んだ帽子を愛用している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【装飾品】 あなたは、蒸気仕掛けが施された特殊なアクセサリーやペンダントを愛用している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【蒸気杖/傘】 あなたは、特殊機能を備えた蒸気機械式の傘を、あるいはステッキを愛用している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【ゴーグル】 あなたは、特殊機能を備えたゴーグルを愛用している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【特殊眼鏡】 あなたは、拡大機能などを備えた眼鏡や単眼鏡を愛用している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【蒸気ライター】 あなたは、小さなマグナイトが仕込まれた蒸気式ライターを隠し持っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【機関手袋】 あなたは、特殊機能を備えた頑丈な革手袋を愛用している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【偽造カード】 あなたは、偽造した戸籍情報を点刻したパンチカードを隠し持っている。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FPT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>特徴表P</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【傷】 顔、あるいは体のどこかに傷がある。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【美声】 一度聞くと忘れられないほど、美しい声だ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【筋肉質】 鍛え抜かれた肉体をしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【美形】 生きている宝石のように美しい容貌をしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【童顔】 年齢に関係なく、非常に若く見える。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【髪】 不思議な髪の色、あるいはパンクな髪型をしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【刺青】 体のどこかに特徴的なタトゥーがある。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【瞳】 不思議な瞳の色、あるいは特徴的な眼差しをしている。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>関係性表S</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元敵同士】 相手とは、元敵同士の間柄だ。どのように敵対していたかは、プレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【愛憎】 相手とは、愛憎渦巻く仲だ。愛しあっていた、憎みあっていたのかはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【元相棒】 相手とは、元相棒の間柄だ。なぜ相棒でなくなったかについてはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【犬猿】 相手とは、犬猿の仲だ。なぜ、いがみあっているかについてはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【共依存】 相手とは、共依存の関係だ。どのように依存しあっているかはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【仇同士】 相手とは、仇同士の間柄だ。どのような因縁であるかはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【主従】 相手とは、主従の間柄だ。どちらが主で、どちらが従者かはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【裏切り】 相手とは、裏切りあった間柄だ。どちらが裏切ったかについてはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RPT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>関係性表P</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【血縁】 相手とは、血縁がある。どの程度の間柄であるかについてはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【同志】 相手は、同じ志を持っている。どんな志を共にしているかはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【好敵手】 相手とは、良きライバルだ。どのような形での好敵手かは、プレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【親友】 相手とは、親友の間柄だ。どのくらい仲が良いかについては、プレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【相棒】 相手は、無二の相棒だ。どのくらいの年月を共にしてきたかについてはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【腐れ縁】 相手とは幼い頃からの腐れ縁だ。どのくらいの年齢からであるかはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【戦友】 相手とは戦友の間柄だ。どこで、なにと戦ったかについてはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【師弟】 相手は師、あるいは弟子だ。どちらが師で、どちらが弟子かはプレイヤーと相談して決定せよ。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>EST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情表S</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【殺意】 相手に殺意を覚えている。どういった経緯で殺意を抱いているかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【優越感】 相手に優越感がある。どういった経緯で優越感を抱いているかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【嫉妬】 相手に嫉妬している。どういった経緯で嫉妬しているかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【劣等感】 相手に劣等感がある。どういった経緯で劣等感を抱いているかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【罪悪感】 相手に罪悪感がある。どういった経緯で罪悪感を持っているかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【不安】 相手のことが不安だ。どういったときに不安を感じるかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【恐怖】 相手のことを恐れている。どういった経緯で恐れるようになったかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【嫌悪】 相手のことを嫌悪している。どの程度の嫌悪であるかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>EPT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情表P</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【誠意】 相手に対して誠意を感じる。どういった経緯で誠意を感じたかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【好感】 相手に対して好感を抱いている。どういった経緯で好感を抱くに至ったかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【尊敬】 相手のことを尊敬している。どういった経緯で相手を尊敬したかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【友情】 相手に対して友情を抱いている。どういった経緯で友情を抱くに至ったかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【庇護】 相手を護りたいと思っている。どういった経緯で相手を庇護対象にしたかは自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【信頼】 相手のことを信頼している。どういった経緯で信頼するようになったかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【期待】 相手に対して期待している。どういった経緯で期待を抱くようになったかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【愛情】 相手に愛情や友愛を抱いている。どういった経緯で愛情を抱くに至ったかについては自身で決定せよ。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ODT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>災厄表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【蒸気の不調】 スチームギアが不調になった！おそらくマグナイトが尽きかけてるのだ。ペナルティーを受けたPCは、そのフェイズの終了まで、スチームの抑圧を解放できない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【卑劣な強襲】 突如として強力な不意討ちを受けた。おそらく、スチームギアによる特殊な攻撃だ。PC全員は【耐久値】を-3する(最小1)。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【非道な行為】 黒幕は気まぐれから、罪のない人をスチームギアで傷つけた。なんという非道な行為だ！PC全員は世界からの抑圧を2枚受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【嫌な予感】 今回の蒸気事件は特に嫌な予感がする……以後、全てのエネミーは終了フェイズを迎えるまで、実行の《アビリティ》の成功数を+1する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【敵役出現】 見知らぬ妨害者が現れた！以後、[【反抗LV】の平均以下]のエネミーが、そのフェイズに1人参加。戦闘不能にしない限り、メインを迎える度に実行を行ない、活劇フェイズにも参加する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【迎撃準備】 黒幕は万が一に備えて、手下を武装させ始めた。以後、全てのエネミーはシナリオ中、【耐久値】を+3する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【疑惑の目】 まずい。警察や政府がキミたちに対して疑惑の目を向け始めているようだ。PC全員は【理性値】を-2する(最小0)。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【絶望感】 突如として心の傷が痛み、信念が揺らいでしまう。ペナルティーを受けたPCは、そのフェイズの終了まで、パンクの抑圧を解放できない。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>場面表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【地下鉄】 途中まで、地下鉄を利用することにする。駅のホームは蒸気列車が放出する蒸気のせいで、湿り気と熱気を帯びていた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【工業地帯】 工業地帯を横切る。開かれた窓の奥に視線を送ると、労働者たちが製造用蒸気機関を操り、真鍮製の煙突から蒸気が噴き上っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【店舗】 途中、店舗で簡単な買い物を済ませた。支払いは無論、パンチカードで一括。階差演算機関はすでに個人の予算残高すら管理下に置いている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【ビッグ・ベン】 遠くから時刻を告げるビッグ・ベンの鐘が響くと、蒸気オルガンの薄暗い音色が、いつものようにロンドンの上空を覆った。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【人混み】 人混みのなかを進むと、ハンチング帽をかぶった少年たちが脇を駆け抜けた……彼らを護るためにも早く蒸気事件を解決しなければ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【繁華街】 調査に向かった現場では、蒸気機械仕掛けの帯状装飾が点灯しており、帯が回転する度に様々な広告が表示された。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【大通り】 大通りに出ると、蒸気自動車が目前で行き交っていた。真鍮や錫で装飾された蒸気自動車は、まるで晩餐会に出入りする馬車のようだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【移動パブ】 途中、移動パブを見かけた。蒸気自動車に機関式サーバーを搭載したもので、周りには若いロンドン子たちが口に泡をつけながら騒いでいる。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OIT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>交流表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【過去】 そういえば、相手の過去を知らない気がする…聞けば教えてくれるだろうか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【特徴】 さっきから相手の特徴が気になる。相手から特徴にまつわる話を聞いてみようか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【感情】 相手に対して抱いてる感情のことを伝えるべきだろうか？それとも、伝えないべきだろうか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【蒸気事件】 相手に、今回の事件の印象について聞いてみよう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【事件後】 今回の事件が終わったら、相手は何をするつもりなのだろう？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【関係性】 相手とは……いつからこうした関係だったろう？そもそも、相手は覚えているのだろうか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【職業】 相手は、どんな経緯で今の職業となったのだろう。興味があるので、聞いてみようか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【経緯】 相手はどうやってスチームギアを得たのだろう？その経緯の一部でも聞いてみようか？</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OFT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="SteamPunkers/SPTable.html" title="BCDice::GameSystem::SteamPunkers::SPTable (class)">SPTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SteamPunkers/SPTable.html#initialize-instance_method" title="BCDice::GameSystem::SteamPunkers::SPTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>激憤表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【憤怒】 これほど残虐な蒸気事件が起こったというのに、世界は一向に変わろうとしない。もはや世界への怒りは頂点へと達してしまった。PCはレヴォルトを失い、黒幕となる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【破損】 怒りに任せて激闘を繰り返したため、スチームギアが破損した。もう、世界に反逆する力はない。以後、PCはスチームギアを失い、NPCとなる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【偽装】 権力者からの圧力によって、社会的に抹殺されてしまった。が、それは想定済みだ。これからは別の人生を歩むことになる。PCの名前と職業を変更せよ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【冷静】 今回の蒸気事件には少し思うところがあった。だが、しばらく時間を置くことで、理性的になることができた。キミはまだまだ戦える。特にペナルティーはない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【重傷】 最後の戦いの際に負った傷が重症化してしまった。だが、しばらく治療に専念すれば復帰できるだろう。特にペナルティーはない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【革命】 今回の事件を通じて、信念が揺らいだ。やはり、世界を変えるには圧倒的な”暴力”が必要なのだ。PCはレヴォルトを失い、黒幕となる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【寝返り】 蒸気事件を通じて、世界の在り方に疑問を感じる。そんな矢先、目前にゾディアックの上級幹部が現れ、キミをスカウトしてきた。PCはレヴォルトを失い、黒幕となる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>【悪堕ち】 信念に従い、反逆を続けてきた。だが、蒸気事件が尽きる気配はない。反逆など無意味なのか。なら、この手で……PCはレヴォルトを失い、黒幕となる。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#roll_sp-instance_method" title="#roll_sp (instance method)">#<strong>roll_sp</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">BCDice::Base</a></span></p>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="eval_game_system_specific_command-instance_method">
+  
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SteamPunkers.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::SteamPunkers::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_roll_sp'>roll_sp</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="roll_sp-instance_method">
+  
+    #<strong>roll_sp</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SteamPunkers.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_roll_sp'>roll_sp</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^SP(\d+)(?:&gt;=(\d+))?$</span><span class='regexp_end'>/i</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_dice_count'>dice_count</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_target_number'>target_number</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_i'>to_i</span>
+
+  <span class='id identifier rubyid_dice_list'>dice_list</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_count'>dice_count</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice_list_text'>dice_list_text</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_successes'>successes</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>2</span> <span class='op'>+</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='int'>5</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_failures'>failures</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&lt;=</span> <span class='int'>4</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_all?'>all?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>==</span> <span class='int'>1</span> <span class='rbrace'>}</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ファンブル</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_target_number'>target_number</span>
+      <span class='id identifier rubyid_successes'>successes</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target_number'>target_number</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_sequence'>sequence</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_list_text'>dice_list_text</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功数:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_successes'>successes</span><span class='embexpr_end'>}</span><span class='tstring_content'>, 失敗数:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_failures'>failures</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='id identifier rubyid_result'>result</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Jan 29 01:44:17 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.1).
+</div>
+
+    </div>
+  </body>
+</html>
