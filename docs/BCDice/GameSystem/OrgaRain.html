@@ -209,7 +209,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#checkRoll-instance_method" title="#checkRoll (instance method)">#<strong>checkRoll</strong>(diceCount, countNo)  &#x21d2; Object </a>
+      <a href="#check_roll-instance_method" title="#check_roll (instance method)">#<strong>check_roll</strong>(dice_count, count_no)  &#x21d2; Object </a>
     
 
     
@@ -361,9 +361,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="checkRoll-instance_method">
+  <h3 class="signature first" id="check_roll-instance_method">
   
-    #<strong>checkRoll</strong>(diceCount, countNo)  &#x21d2; <tt>Object</tt> 
+    #<strong>check_roll</strong>(dice_count, count_no)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -375,6 +375,10 @@
       <pre class="lines">
 
 
+46
+47
+48
+49
 50
 51
 52
@@ -391,43 +395,31 @@
 63
 64
 65
-66
-67
-68
-69
-70
-71
-72
-73
-74</pre>
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/OrgaRain.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/OrgaRain.rb', line 46</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='comma'>,</span> <span class='id identifier rubyid_countNo'>countNo</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_diceArray'>diceArray</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
-  <span class='id identifier rubyid_diceText'>diceText</span> <span class='op'>=</span> <span class='id identifier rubyid_diceArray'>diceArray</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_check_roll'>check_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_count'>dice_count</span><span class='comma'>,</span> <span class='id identifier rubyid_count_no'>count_no</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice_array'>dice_array</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_count'>dice_count</span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+  <span class='id identifier rubyid_dice_text'>dice_text</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_array'>dice_array</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_diceArray'>diceArray</span><span class='period'>.</span><span class='id identifier rubyid_map!'>map!</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>==</span> <span class='int'>10</span> <span class='op'>?</span> <span class='int'>0</span> <span class='op'>:</span> <span class='id identifier rubyid_x'>x</span> <span class='rbrace'>}</span>
-
-  <span class='id identifier rubyid_resultArray'>resultArray</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_result_array'>result_array</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_diceArray'>diceArray</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
-    <span class='id identifier rubyid_multiple'>multiple</span> <span class='op'>=</span> <span class='id identifier rubyid_countNo'>countNo</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice_array'>dice_array</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>==</span> <span class='int'>10</span> <span class='op'>?</span> <span class='int'>0</span> <span class='op'>:</span> <span class='id identifier rubyid_x'>x</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='id identifier rubyid_multiple'>multiple</span> <span class='op'>=</span> <span class='id identifier rubyid_count_no'>count_no</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span><span class='rparen'>)</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_multiple'>multiple</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-      <span class='id identifier rubyid_resultArray'>resultArray</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_content'>(x</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_multiple'>multiple</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_result_array'>result_array</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_content'>(x</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_multiple'>multiple</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
       <span class='id identifier rubyid_success'>success</span> <span class='op'>+=</span> <span class='id identifier rubyid_multiple'>multiple</span>
     <span class='kw'>else</span>
-      <span class='id identifier rubyid_resultArray'>resultArray</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>×</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_result_array'>result_array</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>×</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_countText'>countText</span> <span class='op'>=</span> <span class='id identifier rubyid_countNo'>countNo</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_resultText'>resultText</span> <span class='op'>=</span> <span class='id identifier rubyid_resultArray'>resultArray</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_count_text'>count_text</span> <span class='op'>=</span> <span class='id identifier rubyid_count_no'>count_no</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_result_text'>result_text</span> <span class='op'>=</span> <span class='id identifier rubyid_result_array'>result_array</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='embexpr_end'>}</span><span class='tstring_content'>D10(命数：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_countText'>countText</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diceText'>diceText</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_resultText'>resultText</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 成功数：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success'>success</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_count'>dice_count</span><span class='embexpr_end'>}</span><span class='tstring_content'>D10(命数：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_count_text'>count_text</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_text'>dice_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 成功数：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success'>success</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -456,26 +448,18 @@
 41
 42
 43
-44
-45
-46
-47
-48</pre>
+44</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/OrgaRain.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)?OR([0-9])?([0-9])?([0-9])?([0-9])?([0-9])?([0-9])?$</span><span class='regexp_end'>/i</span></span>
-    <span class='id identifier rubyid_diceCount'>diceCount</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='id identifier rubyid_countNo'>countNo</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>4</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>5</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>7</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_countNo'>countNo</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_countNo'>countNo</span> <span class='op'>=</span> <span class='id identifier rubyid_countNo'>countNo</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)?OR(\d{0,6})$</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
 
-    <span class='kw'>return</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='comma'>,</span> <span class='id identifier rubyid_countNo'>countNo</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_dice_count'>dice_count</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_count_no'>count_no</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_char'>each_char</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_i</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_check_roll'>check_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_count'>dice_count</span><span class='comma'>,</span> <span class='id identifier rubyid_count_no'>count_no</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -487,7 +471,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jan 29 01:47:36 2021 by
+  Generated on Mon Mar 22 22:29:02 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

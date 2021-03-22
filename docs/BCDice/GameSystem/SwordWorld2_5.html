@@ -193,10 +193,12 @@
 </span><span class='tstring_content'>  　またタイプの軽減化のために末尾に「@クリティカル値」でも処理するようにしました。
 </span><span class='tstring_content'>  　例）K20[10]　　　K10+5[9]　　　k30[10]　　　k10[9]+10　　　k10-5@9
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ・レーティング表の半減 (HKx)
+</span><span class='tstring_content'>  ・レーティング表の半減 (HKx, KxH+N)
 </span><span class='tstring_content'>  　レーティング表の先頭または末尾に&quot;H&quot;をつけると、レーティング表を振って最終結果を半減させます。
+</span><span class='tstring_content'>  　末尾につけた場合、直後に修正ををつけることで、半減後の加減算を行うことができます。
+</span><span class='tstring_content'>  　この際、複数の項による修正にはカッコで囲うことが必要です（カッコがないとパースに失敗します）
 </span><span class='tstring_content'>  　クリティカル値を指定しない場合、クリティカルなしと扱われます。
-</span><span class='tstring_content'>  　例）HK20　　K20h　　HK10-5@9　　K10-5@9H　　K20gfH
+</span><span class='tstring_content'>  　例）HK20　　K20h　　HK10-5@9　　K10-5@9H　　K20gfH　　K20+8H+2　　K20+8H+(1+1)
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・ダイス目の修正（運命変転やクリティカルレイ用）
 </span><span class='tstring_content'>  　末尾に「$修正値」でダイス目に修正がかかります。
@@ -227,24 +229,87 @@
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・絡み効果表　(TT)
 </span><span class='tstring_content'>  　絡み効果表を出すことができます。
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・ドルイドの物理魔法用表　(Dru[2-6の値,7-9の値,10-12の値])
+</span><span class='tstring_content'>  　例）Dru[0,3,6]+10-3
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・アビスカース表　(ABT)
+</span><span class='tstring_content'>  　アビスカース表を出すことができます。
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
+      
+        <dt id="ABYSS_CURSE_TABLE-constant" class="">ABYSS_CURSE_TABLE =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66GridTable.html" title="BCDice::DiceTable::D66GridTable (class)">D66GridTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66GridTable.html#initialize-instance_method" title="BCDice::DiceTable::D66GridTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アビスカース表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「自傷の」　装備時　この武具を装備中に装備者がクリティカルを発生させた時、装備者のHPが5点減少する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「嘆きの」　装備時　近くに敵がいたり、長い緊張状態が続くと涙が止まらなくなる。戦闘中なら「射程：術者（自身）」「射程：接触」以外の効果で対象を選べなくなる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「優しき」　装備時　敵に同情してしまう。敵対するキャラクターを対象にする場合、対象のHPが1点以上減少しているなら命中力判定、魔法行使判定に-2のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「差別の」　装備時　特定の分類に対して与える物理ダメージ・魔法ダメージが2点減少する。分類は「分類決定表」で無作為に決定する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「脆弱な」　装備時　魔法ダメージを受けるたび、そのダメージが+1点される。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「無謀な」　装備時　防護点が2点減少する（最低0）。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「重い」　装備時　強化した武具の必要筋力が+2される。威力、防護点などは変化なし。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「難しい」　装備時　いかなる威力表使用時でも、③④欄の数値が威力に関係なく「0」になる（自動失敗ではない）。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「軟弱な」　装備時　精神抵抗力判定に-1のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「病弱な」　装備時　生命抵抗力判定に-1のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「過敏な」　装備時　特定の属性から受ける物理ダメージ、魔法ダメージが2点上昇する。属性は「属性決定表」で無作為に決定する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「陽気な」　装備時　精神抵抗判定に失敗するたび、笑いが止まらなくなる。次の手番終了時まで行動判定（『Ⅰ』123頁）に-1のペナルティ修正を受ける。この効果は累積する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「たどたどしい」　装備時　話をする時に言葉に詰まったり、言い間違えたりしやすくなる。魔法行使判定に-1のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「代弁する」　装備時　自身の会話は、そのまま武具が魔法文明語の聞き取りづらい声で話す。装備中は魔法文明語以外の言語で会話は行えず、妖精魔法、魔動機術を行使できなくなる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「施しは受けない」　装備時　戦闘中、「抵抗：任意」の効果を受け入れた場合、次の手番終了時まで生命抵抗力、精神抵抗力に-2のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「死に近い」　携行時　常に生死判定に「冒険者レベル」と同じ値のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「おしゃれな」　携行時　その武具を常に華美に飾りたくなる。収入を得るたび、その1割以上をこの武具の装飾に費やさなければならない（効果などに変化はない）。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「マナを吸う」　携行時　魔法や練技など、自身の意思でMPを消費する効果を使用する場合、すべてのMP消費が1点上昇する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「鈍重な」　携行時　移動力が半分（端数切り上げ）になる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「定まらない」　携行時　戦闘中の手番開始時に1dし、出目が「1」なら《ターゲッティング》とそれを前提とした戦闘特技を習得していないものとして扱う。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「錯乱の」　携行時　戦闘中の手番開始時に1dし、出目が「1」なら近接攻撃を含む「射程：接触」の対象に効果を使用する際、対象は同じ位置（エリア、座標）の全てのキャラクター（敵味方含む）から無作為に選ばれる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「足絡みの」　携行時　戦闘中の手番開始時に1dし、出目が「1」ならその場で即座に転倒する。手番中には起き上がれない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「滑り落ちる」　携行時　戦闘中の手番開始時に1dし、出目が「1」なら手に装備または保持しているものをすべてその場に落とす（その手番の主動作で拾う事は可能）。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「悪臭放つ」　携行時　強い悪臭を放つ。所持しているだけで他のキャラクターに不快感を与え、隠密判定に-2のペナルティ修正を受ける。さらに冒険者ランク（『Ⅱ』137頁）が1段階低いものとして扱われる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「醜悪な」　携行時　武具の見た目が悪く、魅力がない。売却する際、基本取引価格の4分の1の価格で売却する。さらに冒険者ランク（『Ⅱ』137頁）が1段階低いものとして扱われる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「唸る」　携行時　その武具から常に羽虫が飛び交うような音が響く。隠密判定、危険感知判定に-4のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「ふやけた」　携行時　水を吸ったようにふやけた質感をしている。追加ダメージ-1（武器）、防護点-1（鎧、盾）。病気属性の効果に対する生命抵抗力、精神抵抗力判定に-4のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「古傷の」　携行時　HPを回復する効果（休息による回復を含む）を受けた場合、その回復量が1点減少する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「まばゆい」　携行時　光などを弾いて強く輝く。自身は常に視界が悪い事による-1のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「栄光なき」　携行時　行為判定で自動成功した際、自動成功とは扱わず、2dを振り直し、その後の出目に従う。この効果は1日に1回のみ発揮される。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「正直者の」　携行時　嘘、方便がすぐばれるようになる。真偽判定の対象となる場合、-4のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「乗り物酔いの」　携行時　揺れに弱くなる。自身の足以外の手段で10分以上移動した後、1時間、行動判定に-1のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「碧を厭う」　携行時　自然の中では落ち着かなくなる。自然環境（『Ⅰ』108頁）では行動判定に-1のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「我慢できない」　携行時　セッション中に1日の始まりを迎えるたび、趣味や嗜好品などに「冒険者レベル×10」ガメルを出費しなければならない。趣味や嗜好品が消費できない環境であれば、翌日の朝まで最大HP、最大MPが「冒険者レベル」点減少する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「つきまとう」　携行時　この武具が気がつけば身の回りにある。この武具以外での命中力判定、魔法行使判定（武器）、回避力判定（鎧、盾）に-4のペナルティ修正を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「のろまな」　携行時　戦闘開始処理の「戦闘準備」をいっさい行えなくなる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="ABYSS_CURSE_CATEGORY_TABLE-constant" class="">ABYSS_CURSE_CATEGORY_TABLE =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66ParityTable.html" title="BCDice::DiceTable::D66ParityTable (class)">D66ParityTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66ParityTable.html#initialize-instance_method" title="BCDice::DiceTable::D66ParityTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アビスカース分類決定表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>蛮族</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>動物</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>植物</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アンデッド</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>魔法生物</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「蛮族」「動物」「植物」「アンデッド」「魔法生物」から任意</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>魔動機</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>幻獣</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>妖精</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>魔神</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>人族</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「魔動機」「幻獣」「妖精」「魔神」「人族」から任意</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="ABYSS_CURSE_ATTR_TABLE-constant" class="">ABYSS_CURSE_ATTR_TABLE =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66ParityTable.html" title="BCDice::DiceTable::D66ParityTable (class)">D66ParityTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66ParityTable.html#initialize-instance_method" title="BCDice::DiceTable::D66ParityTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>アビスカース属性決定表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>土</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>水・氷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>炎</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>風</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>雷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>純粋エネルギー</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>断空</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>毒</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>病気</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>呪い</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>精神効果</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
       
     </dl>
   
 
 
-
-  
-  
-  <h3 class="inherited">Constants inherited
-     from <span class='object_link'><a href="SwordWorld2_0.html" title="BCDice::GameSystem::SwordWorld2_0 (class)">SwordWorld2_0</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="SwordWorld2_0.html#TRANSCENDENT_TEST_RE-constant" title="BCDice::GameSystem::SwordWorld2_0::TRANSCENDENT_TEST_RE (constant)">BCDice::GameSystem::SwordWorld2_0::TRANSCENDENT_TEST_RE</a></span></p>
-
-  
-  
-  <h3 class="inherited">Constants inherited
-     from <span class='object_link'><a href="SwordWorld.html" title="BCDice::GameSystem::SwordWorld (class)">SwordWorld</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="SwordWorld.html#RATING_TABLE_RE_FOR_CHANGE_TEXT-constant" title="BCDice::GameSystem::SwordWorld::RATING_TABLE_RE_FOR_CHANGE_TEXT (constant)">BCDice::GameSystem::SwordWorld::RATING_TABLE_RE_FOR_CHANGE_TEXT</a></span></p>
 
 
 
@@ -266,7 +331,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getAdditionalDiceValue-instance_method" title="#getAdditionalDiceValue (instance method)">#<strong>getAdditionalDiceValue</strong>(dice, values)  &#x21d2; Object </a>
+      <a href="#druid_dice-instance_method" title="#druid_dice (instance method)">#<strong>druid_dice</strong>(command, power_list)  &#x21d2; Object </a>
     
 
     
@@ -288,7 +353,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getAdditionalString-instance_method" title="#getAdditionalString (instance method)">#<strong>getAdditionalString</strong>(string, output)  &#x21d2; Object </a>
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
     
 
     
@@ -310,7 +375,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getKeptDiceChangesFromString-instance_method" title="#getKeptDiceChangesFromString (instance method)">#<strong>getKeptDiceChangesFromString</strong>(string)  &#x21d2; Object </a>
+      <a href="#get_abyss_curse_table-instance_method" title="#get_abyss_curse_table (instance method)">#<strong>get_abyss_curse_table</strong>  &#x21d2; Object </a>
     
 
     
@@ -332,7 +397,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getRatingCommandStrings-instance_method" title="#getRatingCommandStrings (instance method)">#<strong>getRatingCommandStrings</strong>  &#x21d2; Object </a>
+      <a href="#rating_parser-instance_method" title="#rating_parser (instance method)">#<strong>rating_parser</strong>  &#x21d2; Object </a>
     
 
     
@@ -347,30 +412,6 @@
 
   
     <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#replace_text-instance_method" title="#replace_text (instance method)">#<strong>replace_text</strong>(string)  &#x21d2; String </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>コマンド実行前にメッセージを置換する.</p>
-</div></span>
   
 </li>
 
@@ -388,7 +429,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="SwordWorld2_0.html" title="BCDice::GameSystem::SwordWorld2_0 (class)">SwordWorld2_0</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="SwordWorld2_0.html#eval_game_system_specific_command-instance_method" title="BCDice::GameSystem::SwordWorld2_0#eval_game_system_specific_command (method)">#eval_game_system_specific_command</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#getGratestFortuneFromString-instance_method" title="BCDice::GameSystem::SwordWorld2_0#getGratestFortuneFromString (method)">#getGratestFortuneFromString</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#getRateUpFromString-instance_method" title="BCDice::GameSystem::SwordWorld2_0#getRateUpFromString (method)">#getRateUpFromString</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#get_ability_by_dice-instance_method" title="BCDice::GameSystem::SwordWorld2_0#get_ability_by_dice (method)">#get_ability_by_dice</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#get_fumble_table-instance_method" title="BCDice::GameSystem::SwordWorld2_0#get_fumble_table (method)">#get_fumble_table</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#get_tangle_table-instance_method" title="BCDice::GameSystem::SwordWorld2_0#get_tangle_table (method)">#get_tangle_table</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#growth-instance_method" title="BCDice::GameSystem::SwordWorld2_0#growth (method)">#growth</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#growth_step-instance_method" title="BCDice::GameSystem::SwordWorld2_0#growth_step (method)">#growth_step</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld2_0#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#rollDice-instance_method" title="BCDice::GameSystem::SwordWorld2_0#rollDice (method)">#rollDice</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="SwordWorld2_0.html#get_ability_by_dice-instance_method" title="BCDice::GameSystem::SwordWorld2_0#get_ability_by_dice (method)">#get_ability_by_dice</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#get_fumble_table-instance_method" title="BCDice::GameSystem::SwordWorld2_0#get_fumble_table (method)">#get_fumble_table</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#get_tangle_table-instance_method" title="BCDice::GameSystem::SwordWorld2_0#get_tangle_table (method)">#get_tangle_table</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#growth-instance_method" title="BCDice::GameSystem::SwordWorld2_0#growth (method)">#growth</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#growth_step-instance_method" title="BCDice::GameSystem::SwordWorld2_0#growth_step (method)">#growth_step</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld2_0#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="SwordWorld2_0.html#rollDice-instance_method" title="BCDice::GameSystem::SwordWorld2_0#rollDice (method)">#rollDice</a></span></p>
 
   
   
@@ -399,7 +440,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="SwordWorld.html" title="BCDice::GameSystem::SwordWorld (class)">SwordWorld</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="SwordWorld.html#eval_game_system_specific_command-instance_method" title="BCDice::GameSystem::SwordWorld#eval_game_system_specific_command (method)">#eval_game_system_specific_command</a></span>, <span class='object_link'><a href="SwordWorld.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="SwordWorld.html#result_2d6-instance_method" title="BCDice::GameSystem::SwordWorld#result_2d6 (method)">#result_2d6</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="SwordWorld.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="SwordWorld.html#result_2d6-instance_method" title="BCDice::GameSystem::SwordWorld#result_2d6 (method)">#result_2d6</a></span></p>
 
   
   
@@ -441,9 +482,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="getAdditionalDiceValue-instance_method">
+  <h3 class="signature first" id="druid_dice-instance_method">
   
-    #<strong>getAdditionalDiceValue</strong>(dice, values)  &#x21d2; <tt>Object</tt> 
+    #<strong>druid_dice</strong>(command, power_list)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -455,25 +496,55 @@
       <pre class="lines">
 
 
-100
-101
-102
-103
-104
-105
-106
-107</pre>
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 164</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_getAdditionalDiceValue'>getAdditionalDiceValue</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span> <span class='op'>=</span> <span class='id identifier rubyid_values'>values</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keptDiceChangeModify</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_druid_dice'>druid_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_power_list'>power_list</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice_list'>dice_list</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_dice_total'>dice_total</span>
+    <span class='kw'>when</span> <span class='int'>2</span><span class='op'>..</span><span class='int'>6</span>
+      <span class='int'>0</span>
+    <span class='kw'>when</span> <span class='int'>7</span><span class='op'>..</span><span class='int'>9</span>
+      <span class='int'>1</span>
+    <span class='kw'>when</span> <span class='int'>10</span><span class='op'>..</span><span class='int'>12</span>
+      <span class='int'>2</span>
+    <span class='kw'>end</span>
+  <span class='id identifier rubyid_power'>power</span> <span class='op'>=</span> <span class='id identifier rubyid_power_list'>power_list</span><span class='lbracket'>[</span><span class='id identifier rubyid_offset'>offset</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_total'>total</span> <span class='op'>=</span> <span class='id identifier rubyid_power'>power</span> <span class='op'>+</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_modify_number'>modify_number</span>
+  <span class='id identifier rubyid_sequence'>sequence</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_capitalize'>capitalize</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Format.html" title="BCDice::Format (module)">Format</a></span></span><span class='period'>.</span><span class='id identifier rubyid_modifier'><span class='object_link'><a href="../Format.html#modifier-class_method" title="BCDice::Format.modifier (method)">modifier</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_modify_number'>modify_number</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2D[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>]=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_power'>power</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Format.html" title="BCDice::Format (module)">Format</a></span></span><span class='period'>.</span><span class='id identifier rubyid_modifier'><span class='object_link'><a href="../Format.html#modifier-class_method" title="BCDice::Format.modifier (method)">modifier</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_modify_number'>modify_number</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='id identifier rubyid_total'>total</span>
+  <span class='rbracket'>]</span>
 
-  <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_value'>value</span> <span class='op'>+=</span> <span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span> <span class='op'>!=</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span> <span class='op'>!=</span> <span class='int'>2</span><span class='rparen'>)</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -481,53 +552,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getAdditionalString-instance_method">
+  <h3 class="signature " id="eval_game_system_specific_command-instance_method">
   
-    #<strong>getAdditionalString</strong>(string, output)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 89</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getAdditionalString'>getAdditionalString</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span> <span class='op'>=</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_getKeptDiceChangesFromString'>getKeptDiceChangesFromString</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_values'>values</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keptDiceChangeModify</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span>
-  <span class='id identifier rubyid_output'>output</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span> <span class='op'>!=</span> <span class='int'>0</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span><span class='comma'>,</span> <span class='id identifier rubyid_values'>values</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getKeptDiceChangesFromString-instance_method">
-  
-    #<strong>getKeptDiceChangesFromString</strong>(string)  &#x21d2; <tt>Object</tt> 
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -539,27 +566,45 @@
       <pre class="lines">
 
 
-109
-110
-111
-112
-113
-114
-115
-116
-117</pre>
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 141</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_getKeptDiceChangesFromString'>getKeptDiceChangesFromString</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_regexp'>regexp</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>a\[([+\-]\d+)\]</span><span class='regexp_end'>/i</span></span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_regexp'>regexp</span> <span class='op'>=~</span> <span class='id identifier rubyid_string'>string</span>
-    <span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^dru\[(\d+),(\d+),(\d+)\]</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_power_list'>power_list</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_i</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_druid_parser'>druid_parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Command.html" title="BCDice::Command (module)">Command</a></span></span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>dru\[\d+,\d+,\d+\]</span><span class='regexp_end'>/i</span></span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='const'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#CEIL-constant" title="BCDice::RoundType::CEIL (constant)">CEIL</a></span></span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='id identifier rubyid_druid_parser'>druid_parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_cmd'>cmd</span>
+      <span class='kw'>return</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_druid_dice'>druid_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='comma'>,</span> <span class='id identifier rubyid_power_list'>power_list</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ABT</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_get_abyss_curse_table'>get_abyss_curse_table</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_keptDiceChangeModify'>keptDiceChangeModify</span><span class='comma'>,</span> <span class='id identifier rubyid_string'>string</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -567,9 +612,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getRatingCommandStrings-instance_method">
+  <h3 class="signature " id="get_abyss_curse_table-instance_method">
   
-    #<strong>getRatingCommandStrings</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>get_abyss_curse_table</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -581,15 +626,41 @@
       <pre class="lines">
 
 
-85
-86
-87</pre>
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 188</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_getRatingCommandStrings'>getRatingCommandStrings</span>
-  <span class='kw'>super</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>aA</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_abyss_curse_table'>get_abyss_curse_table</span>
+  <span class='id identifier rubyid_table_result'>table_result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#ABYSS_CURSE_TABLE-constant" title="BCDice::GameSystem::SwordWorld2_5::ABYSS_CURSE_TABLE (constant)">ABYSS_CURSE_TABLE</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_additional'>additional</span> <span class='op'>=</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_table_result'>table_result</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+    <span class='kw'>when</span> <span class='int'>14</span>  <span class='comment'># 「差別の」における分類決定表
+</span>      <span class='const'><span class='object_link'><a href="#ABYSS_CURSE_CATEGORY_TABLE-constant" title="BCDice::GameSystem::SwordWorld2_5::ABYSS_CURSE_CATEGORY_TABLE (constant)">ABYSS_CURSE_CATEGORY_TABLE</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='kw'>when</span> <span class='int'>25</span>  <span class='comment'># 「過敏な」における属性決定表
+</span>      <span class='const'><span class='object_link'><a href="#ABYSS_CURSE_ATTR_TABLE-constant" title="BCDice::GameSystem::SwordWorld2_5::ABYSS_CURSE_ATTR_TABLE (constant)">ABYSS_CURSE_ATTR_TABLE</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='kw'>end</span>
+  <span class='id identifier rubyid_final_result'>final_result</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='id identifier rubyid_table_result'>table_result</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_additional'>additional</span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_final_result'>final_result</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -597,83 +668,29 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="replace_text-instance_method">
+  <h3 class="signature " id="rating_parser-instance_method">
   
-    #<strong>replace_text</strong>(string)  &#x21d2; <tt>String</tt> 
-  
-
+    #<strong>rating_parser</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>コマンド実行前にメッセージを置換する</p>
 
-
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
   
-    <li>
-      
-        <span class='name'>string</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>受信したメッセージ</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-76
-77
-78
-79
-80
-81
-82
-83</pre>
+160
+161
+162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 160</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_replace_text'>replace_text</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_string'>string</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="SwordWorld.html#RATING_TABLE_RE_FOR_CHANGE_TEXT-constant" title="BCDice::GameSystem::SwordWorld::RATING_TABLE_RE_FOR_CHANGE_TEXT (constant)">RATING_TABLE_RE_FOR_CHANGE_TEXT</a></span></span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
-
-  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>#([-+]?\d+)</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_modifier'>modifier</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a[</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Format.html" title="BCDice::Format (module)">Format</a></span></span><span class='period'>.</span><span class='id identifier rubyid_modifier'><span class='object_link'><a href="../Format.html#modifier-class_method" title="BCDice::Format.modifier (method)">modifier</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_modifier'>modifier</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_rating_parser'>rating_parser</span>
+  <span class='kw'>return</span> <span class='const'>RatingParser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>version:</span> <span class='symbol'>:v2_5</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -685,7 +702,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jan 29 01:47:45 2021 by
+  Generated on Mon Mar 22 22:29:12 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

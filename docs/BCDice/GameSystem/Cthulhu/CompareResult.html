@@ -399,19 +399,19 @@
       <pre class="lines">
 
 
-126
-127
-128
-129
 130
 131
 132
 133
 134
-135</pre>
+135
+136
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 126</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
   <span class='ivar'>@locale</span> <span class='op'>=</span> <span class='id identifier rubyid_locale'>locale</span>
@@ -461,12 +461,12 @@
       <pre class="lines">
 
 
-124
-125
-126</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_broken'>broken</span>
   <span class='ivar'>@broken</span>
@@ -504,12 +504,12 @@
       <pre class="lines">
 
 
-124
-125
-126</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_critical'>critical</span>
   <span class='ivar'>@critical</span>
@@ -547,12 +547,12 @@
       <pre class="lines">
 
 
-124
-125
-126</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failure'>failure</span>
   <span class='ivar'>@failure</span>
@@ -590,12 +590,12 @@
       <pre class="lines">
 
 
-124
-125
-126</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fumble'>fumble</span>
   <span class='ivar'>@fumble</span>
@@ -633,12 +633,12 @@
       <pre class="lines">
 
 
-124
-125
-126</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_special'>special</span>
   <span class='ivar'>@special</span>
@@ -676,12 +676,12 @@
       <pre class="lines">
 
 
-124
-125
-126</pre>
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_success'>success</span>
   <span class='ivar'>@success</span>
@@ -713,10 +713,6 @@
       <pre class="lines">
 
 
-137
-138
-139
-140
 141
 142
 143
@@ -731,10 +727,14 @@
 152
 153
 154
-155</pre>
+155
+156
+157
+158
+159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text'>text</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_critical'>critical</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_special'>special</span>
@@ -775,17 +775,17 @@
       <pre class="lines">
 
 
-157
-158
-159
-160
 161
 162
 163
-164</pre>
+164
+165
+166
+167
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_result'>to_result</span>
   <span class='const'><span class='object_link'><a href="../../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
@@ -805,7 +805,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jan 29 01:47:35 2021 by
+  Generated on Mon Mar 22 22:29:01 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>
