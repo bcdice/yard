@@ -592,7 +592,7 @@
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^dru\[(\d+),(\d+),(\d+)\]</span><span class='regexp_end'>/i</span></span>
     <span class='id identifier rubyid_power_list'>power_list</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_i</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_druid_parser'>druid_parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Command.html" title="BCDice::Command (module)">Command</a></span></span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>dru\[\d+,\d+,\d+\]</span><span class='regexp_end'>/i</span></span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='const'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#CEIL-constant" title="BCDice::RoundType::CEIL (constant)">CEIL</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_druid_parser'>druid_parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Command.html" title="BCDice::Command (module)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Command/Parser.html#initialize-instance_method" title="BCDice::Command::Parser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>dru\[\d+,\d+,\d+\]</span><span class='regexp_end'>/i</span></span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='const'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#CEIL-constant" title="BCDice::RoundType::CEIL (constant)">CEIL</a></span></span><span class='rparen'>)</span>
 
     <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='id identifier rubyid_druid_parser'>druid_parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
     <span class='kw'>unless</span> <span class='id identifier rubyid_cmd'>cmd</span>
@@ -690,7 +690,7 @@
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 160</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rating_parser'>rating_parser</span>
-  <span class='kw'>return</span> <span class='const'>RatingParser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>version:</span> <span class='symbol'>:v2_5</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="SwordWorld/RatingParser.html" title="BCDice::GameSystem::SwordWorld::RatingParser (class)">RatingParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SwordWorld/RatingParser.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld::RatingParser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>version:</span> <span class='symbol'>:v2_5</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -702,7 +702,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 28 23:48:50 2021 by
+  Generated on Thu Apr  1 03:10:09 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

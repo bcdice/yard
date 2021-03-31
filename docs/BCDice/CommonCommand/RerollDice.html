@@ -79,7 +79,7 @@
   <dl>
     <dt>Defined in:</dt>
     <dd>lib/bcdice/common_command/reroll_dice.rb<span class="defines">,<br />
-  lib/bcdice/common_command/reroll_dice/node.rb</span>
+  lib/bcdice/common_command/reroll_dice/node.rb,<br /> lib/bcdice/common_command/reroll_dice/parser.rb</span>
 </dd>
   </dl>
   
@@ -130,6 +130,8 @@
       <strong class="modules">Modules:</strong> <span class='object_link'><a href="RerollDice/Node.html" title="BCDice::CommonCommand::RerollDice::Node (module)">Node</a></span>
     
   
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="RerollDice/Parser.html" title="BCDice::CommonCommand::RerollDice::Parser (class)">Parser</a></span>
     
   
 </p>
@@ -224,7 +226,7 @@
       <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/reroll_dice.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_game_system'>game_system</span><span class='comma'>,</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RerollDice/Parser.html" title="BCDice::CommonCommand::RerollDice::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parse'><span class='object_link'><a href="RerollDice/Parser.html#parse-class_method" title="BCDice::CommonCommand::RerollDice::Parser.parse (method)">parse</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cmd'>cmd</span><span class='op'>&amp;.</span><span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_game_system'>game_system</span><span class='comma'>,</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -237,7 +239,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 28 23:48:37 2021 by
+  Generated on Thu Apr  1 03:09:57 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>
