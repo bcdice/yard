@@ -11,7 +11,7 @@ pull:
 	git submodule foreach git pull origin master
 
 yard:
-	cd bcdice && bundle exec rake yard
+	cd bcdice && bundle exec rake racc yard
 	rm -Rf docs/
 	mv bcdice/doc docs
 	echo "yard.bcdice.org" > docs/CNAME
