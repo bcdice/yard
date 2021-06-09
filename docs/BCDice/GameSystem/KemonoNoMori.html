@@ -409,7 +409,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getEscapeExperienceTableResult-instance_method" title="#getEscapeExperienceTableResult (instance method)">#<strong>getEscapeExperienceTableResult</strong>(command)  &#x21d2; Object </a>
+      <a href="#get_escape_experience_table_result-instance_method" title="#get_escape_experience_table_result (instance method)">#<strong>get_escape_experience_table_result</strong>(command)  &#x21d2; Object </a>
     
 
     
@@ -431,7 +431,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getTrapResult-instance_method" title="#getTrapResult (instance method)">#<strong>getTrapResult</strong>  &#x21d2; Object </a>
+      <a href="#get_trap_result-instance_method" title="#get_trap_result (instance method)">#<strong>get_trap_result</strong>  &#x21d2; Object </a>
     
 
     
@@ -508,6 +508,11 @@
       <pre class="lines">
 
 
+53
+54
+55
+56
+57
 58
 59
 60
@@ -528,24 +533,15 @@
 75
 76
 77
-78
-79
-80
-81
-82
-83
-84
-85</pre>
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_1D12'>check_1D12</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_is_action_judge'>is_action_judge</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>獸ノ森の1d12判定</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>K[AC](\d[-+\d]*)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
-  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
 
   <span class='comment'># 修正込みの目標値を計算
 </span>  <span class='id identifier rubyid_target_total'>target_total</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ArithmeticEvaluator.html" title="BCDice::ArithmeticEvaluator (module)">ArithmeticEvaluator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_eval'><span class='object_link'><a href="../ArithmeticEvaluator.html#eval-class_method" title="BCDice::ArithmeticEvaluator.eval (method)">eval</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -559,13 +555,13 @@
   <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dice_total, target_total, success_degree = </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_target_total'>target_total</span><span class='comma'>,</span> <span class='id identifier rubyid_success_degree'>success_degree</span><span class='rparen'>)</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>==</span> <span class='int'>12</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(1D12&lt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_total'>target_total</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 大失敗</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fumble'><span class='object_link'><a href="../Result.html#fumble-class_method" title="BCDice::Result.fumble (method)">fumble</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(1D12&lt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_total'>target_total</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 大失敗</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>==</span> <span class='int'>11</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(1D12&lt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_total'>target_total</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 大成功（成功度+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_degree'>success_degree</span><span class='embexpr_end'>}</span><span class='tstring_content'>, 次の継続判定の目標値を10に変更）</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_critical'><span class='object_link'><a href="../Result.html#critical-class_method" title="BCDice::Result.critical (method)">critical</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(1D12&lt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_total'>target_total</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 大成功（成功度+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_degree'>success_degree</span><span class='embexpr_end'>}</span><span class='tstring_content'>, 次の継続判定の目標値を10に変更）</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_target_total'>target_total</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(1D12&lt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_total'>target_total</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 成功（成功度+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_degree'>success_degree</span><span class='embexpr_end'>}</span><span class='tstring_content'>）</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'><span class='object_link'><a href="../Result.html#success-class_method" title="BCDice::Result.success (method)">success</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(1D12&lt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_total'>target_total</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 成功（成功度+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_degree'>success_degree</span><span class='embexpr_end'>}</span><span class='tstring_content'>）</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(1D12&lt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_total'>target_total</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'><span class='object_link'><a href="../Result.html#failure-class_method" title="BCDice::Result.failure (method)">failure</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(1D12&lt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target_total'>target_total</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_total'>dice_total</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -596,28 +592,18 @@
 48
 49
 50
-51
-52
-53
-54
-55
-56</pre>
+51</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>KA\d[-+\d]*</span><span class='regexp_end'>/</span></span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_check_1D12'>check_1D12</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>KC\d[-+\d]*</span><span class='regexp_end'>/</span></span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_check_1D12'>check_1D12</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CTR</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_getTrapResult'>getTrapResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EET</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_getEscapeExperienceTableResult'>getEscapeExperienceTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>else</span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::KemonoNoMori::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>KA\d[-+\d]*</span><span class='regexp_end'>/</span></span> <span class='kw'>then</span> <span class='id identifier rubyid_check_1D12'>check_1D12</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>KC\d[-+\d]*</span><span class='regexp_end'>/</span></span> <span class='kw'>then</span> <span class='id identifier rubyid_check_1D12'>check_1D12</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CTR</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>then</span> <span class='id identifier rubyid_get_trap_result'>get_trap_result</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>EET</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>then</span> <span class='id identifier rubyid_get_escape_experience_table_result'>get_escape_experience_table_result</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>else</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::KemonoNoMori::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -626,9 +612,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getEscapeExperienceTableResult-instance_method">
+  <h3 class="signature " id="get_escape_experience_table_result-instance_method">
   
-    #<strong>getEscapeExperienceTableResult</strong>(command)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_escape_experience_table_result</strong>(command)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -640,19 +626,19 @@
       <pre class="lines">
 
 
-108
-109
-110
-111
-112</pre>
+95
+96
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 95</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_getEscapeExperienceTableResult'>getEscapeExperienceTableResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_escapeExperience'>escapeExperience</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::KemonoNoMori::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_escapeDuration'>escapeDuration</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>12</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_escapeExperience'>escapeExperience</span><span class='embexpr_end'>}</span><span class='tstring_content'> (再登場: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_escapeDuration'>escapeDuration</span><span class='embexpr_end'>}</span><span class='tstring_content'>時間後)</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_escape_experience_table_result'>get_escape_experience_table_result</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_escape_experience'>escape_experience</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::KemonoNoMori::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_escape_duration'>escape_duration</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>12</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_escape_experience'>escape_experience</span><span class='embexpr_end'>}</span><span class='tstring_content'> (再登場: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_escape_duration'>escape_duration</span><span class='embexpr_end'>}</span><span class='tstring_content'>時間後)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -660,9 +646,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="getTrapResult-instance_method">
+  <h3 class="signature " id="get_trap_result-instance_method">
   
-    #<strong>getTrapResult</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>get_trap_result</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -674,49 +660,37 @@
       <pre class="lines">
 
 
+80
+81
+82
+83
+84
+85
+86
 87
 88
 89
 90
 91
 92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106</pre>
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 80</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_getTrapResult'>getTrapResult</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_trapCheckNumber'>trapCheckNumber</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>12</span><span class='rparen'>)</span>
-
-  <span class='comment'># 12が出た場合のみ罠が動作する
-</span>  <span class='kw'>if</span> <span class='id identifier rubyid_trapCheckNumber'>trapCheckNumber</span> <span class='op'>==</span> <span class='int'>12</span>
-    <span class='id identifier rubyid_chaseNumber'>chaseNumber</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>12</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_chase'>chase</span> <span class='op'>=</span> <span class='kw'>nil</span>
-    <span class='kw'>case</span> <span class='id identifier rubyid_chaseNumber'>chaseNumber</span>
-    <span class='kw'>when</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='int'>4</span>
-      <span class='id identifier rubyid_chase'>chase</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>小型動物</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>when</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='int'>8</span>
-      <span class='id identifier rubyid_chase'>chase</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>大型動物</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>when</span> <span class='int'>9</span><span class='comma'>,</span> <span class='int'>10</span><span class='comma'>,</span> <span class='int'>11</span><span class='comma'>,</span> <span class='int'>12</span>
-      <span class='id identifier rubyid_chase'>chase</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>人間の放浪者</span><span class='tstring_end'>&#39;</span></span>
-    <span class='kw'>end</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>罠動作チェック(1D12) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_trapCheckNumber'>trapCheckNumber</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 罠が動作していた！ ＞ 獲物表(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_chaseNumber'>chaseNumber</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_chase'>chase</span><span class='embexpr_end'>}</span><span class='tstring_content'>が罠にかかっていた</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_trap_result'>get_trap_result</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tra_check_num'>tra_check_num</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>12</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_tra_check_num'>tra_check_num</span> <span class='op'>==</span> <span class='int'>12</span>
+    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>罠動作チェック(1D12) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tra_check_num'>tra_check_num</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 罠は動作していなかった</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>罠動作チェック(1D12) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_trapCheckNumber'>trapCheckNumber</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 罠は動作していなかった</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_chase_num'>chase_num</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>12</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_chase'>chase</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_chase_num'>chase_num</span>
+          <span class='kw'>when</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='int'>4</span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>小型動物</span><span class='tstring_end'>&#39;</span></span>
+          <span class='kw'>when</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='int'>8</span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>大型動物</span><span class='tstring_end'>&#39;</span></span>
+          <span class='kw'>when</span> <span class='int'>9</span><span class='comma'>,</span> <span class='int'>10</span><span class='comma'>,</span> <span class='int'>11</span><span class='comma'>,</span> <span class='int'>12</span> <span class='kw'>then</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>人間の放浪者</span><span class='tstring_end'>&#39;</span></span>
+          <span class='kw'>end</span>
+  <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>罠動作チェック(1D12) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tra_check_num'>tra_check_num</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 罠が動作していた！ ＞ 獲物表(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_chase_num'>chase_num</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_chase'>chase</span><span class='embexpr_end'>}</span><span class='tstring_content'>が罠にかかっていた</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -728,7 +702,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:07 2021 by
+  Generated on Wed Jun  9 12:08:55 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

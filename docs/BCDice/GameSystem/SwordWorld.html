@@ -156,7 +156,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ソードワールドRPG</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ソード・ワールドRPG</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="SORT_KEY-constant" class="">SORT_KEY =
           <div class="docstring">
@@ -342,13 +342,13 @@
       <pre class="lines">
 
 
-22
 23
 24
-25</pre>
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -381,12 +381,12 @@
       <pre class="lines">
 
 
-41
 42
-43</pre>
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_rating'>rating</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -411,7 +411,6 @@
       <pre class="lines">
 
 
-27
 28
 29
 30
@@ -423,10 +422,11 @@
 36
 37
 38
-39</pre>
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_2d6'>result_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_list'>_dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_dice_total'>dice_total</span> <span class='op'>&gt;=</span> <span class='int'>12</span>
@@ -451,7 +451,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:04 2021 by
+  Generated on Wed Jun  9 12:08:52 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

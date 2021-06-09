@@ -259,6 +259,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#enable_prefix_number-instance_method" title="#enable_prefix_number (instance method)">#<strong>enable_prefix_number</strong>  &#x21d2; BCDice::Command::Parser </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>リテラルの前に数値を許可する.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#enable_question_target-instance_method" title="#enable_question_target (instance method)">#<strong>enable_question_target</strong>  &#x21d2; BCDice::Command::Parser </a>
     
 
@@ -275,6 +299,78 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>目標値“?”の指定を許可する.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#enable_suffix_number-instance_method" title="#enable_suffix_number (instance method)">#<strong>enable_suffix_number</strong>  &#x21d2; BCDice::Command::Parser </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>リテラルの後ろに数値を許可する.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_prefix_number-instance_method" title="#has_prefix_number (instance method)">#<strong>has_prefix_number</strong>  &#x21d2; BCDice::Command::Parser </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>リテラルの前に数値が必要であると設定する.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_suffix_number-instance_method" title="#has_suffix_number (instance method)">#<strong>has_suffix_number</strong>  &#x21d2; BCDice::Command::Parser </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>リテラルの後ろに数値が必要であると設定する.</p>
 </div></span>
   
 </li>
@@ -377,7 +473,43 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>notations</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String, Regexp&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>反応するコマンドの表記</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>round_type</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>除算での端数の扱い</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -385,8 +517,6 @@
       <pre class="lines">
 
 
-40
-41
 42
 43
 44
@@ -395,15 +525,25 @@
 47
 48
 49
-50</pre>
+50
+51
+52
+53
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_notations'>notations</span><span class='comma'>,</span> <span class='label'>round_type:</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='ivar'>@notations</span> <span class='op'>=</span> <span class='id identifier rubyid_notations'>notations</span>
   <span class='ivar'>@round_type</span> <span class='op'>=</span> <span class='id identifier rubyid_round_type'>round_type</span>
+  <span class='ivar'>@prefix_number</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@suffix_number</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@need_prefix_number</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@need_suffix_number</span> <span class='op'>=</span> <span class='kw'>false</span>
   <span class='ivar'>@modifier</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='ivar'>@critical</span> <span class='op'>=</span> <span class='kw'>false</span>
   <span class='ivar'>@fumble</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -462,13 +602,13 @@
       <pre class="lines">
 
 
-54
-55
-56
-57</pre>
+60
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_disable_modifier'>disable_modifier</span>
   <span class='ivar'>@modifier</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -518,13 +658,13 @@
       <pre class="lines">
 
 
-61
-62
-63
-64</pre>
+97
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enable_critical'>enable_critical</span>
   <span class='ivar'>@critical</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -574,13 +714,13 @@
       <pre class="lines">
 
 
-75
-76
-77
-78</pre>
+111
+112
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enable_dollar'>enable_dollar</span>
   <span class='ivar'>@dollar</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -630,16 +770,72 @@
       <pre class="lines">
 
 
-68
-69
-70
-71</pre>
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enable_fumble'>enable_fumble</span>
   <span class='ivar'>@fumble</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_prefix_number-instance_method">
+  
+    #<strong>enable_prefix_number</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Command::Parser (class)">BCDice::Command::Parser</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>リテラルの前に数値を許可する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::Command::Parser (class)">BCDice::Command::Parser</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_prefix_number'>enable_prefix_number</span>
+  <span class='ivar'>@prefix_number</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='kw'>self</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -686,16 +882,188 @@
       <pre class="lines">
 
 
-91
-92
-93
-94</pre>
+127
+128
+129
+130</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_enable_question_target'>enable_question_target</span>
   <span class='ivar'>@question_target</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="enable_suffix_number-instance_method">
+  
+    #<strong>enable_suffix_number</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Command::Parser (class)">BCDice::Command::Parser</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>リテラルの後ろに数値を許可する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::Command::Parser (class)">BCDice::Command::Parser</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_enable_suffix_number'>enable_suffix_number</span>
+  <span class='ivar'>@suffix_number</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_prefix_number-instance_method">
+  
+    #<strong>has_prefix_number</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Command::Parser (class)">BCDice::Command::Parser</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>リテラルの前に数値が必要であると設定する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::Command::Parser (class)">BCDice::Command::Parser</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_prefix_number'>has_prefix_number</span>
+  <span class='ivar'>@prefix_number</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@need_prefix_number</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_suffix_number-instance_method">
+  
+    #<strong>has_suffix_number</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Command::Parser (class)">BCDice::Command::Parser</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>リテラルの後ろに数値が必要であると設定する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::Command::Parser (class)">BCDice::Command::Parser</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_suffix_number'>has_suffix_number</span>
+  <span class='ivar'>@suffix_number</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@need_suffix_number</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='kw'>self</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -755,15 +1123,15 @@
       <pre class="lines">
 
 
-98
-99
-100
-101
-102
-103</pre>
+134
+135
+136
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='rparen'>)</span>
   <span class='ivar'>@lexer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Lexer.html" title="BCDice::Command::Lexer (class)">Lexer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Lexer.html#initialize-instance_method" title="BCDice::Command::Lexer#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='ivar'>@notations</span><span class='rparen'>)</span>
@@ -835,13 +1203,13 @@
       <pre class="lines">
 
 
-84
-85
-86
-87</pre>
+120
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/command/parser.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restrict_cmp_op_to'>restrict_cmp_op_to</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_ops'>ops</span><span class='rparen'>)</span>
   <span class='ivar'>@allowed_cmp_op</span> <span class='op'>=</span> <span class='id identifier rubyid_ops'>ops</span>
@@ -857,7 +1225,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:09:58 2021 by
+  Generated on Wed Jun  9 12:08:46 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

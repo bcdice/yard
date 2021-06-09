@@ -111,6 +111,28 @@
   
 
 </div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="RESULT_STR-constant" class="">RESULT_STR =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>success:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>failure:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>super_success:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>超成功</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>critical:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自動的成功</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>fumble:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自動的失敗</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
 
 
 
@@ -275,18 +297,18 @@
       <pre class="lines">
 
 
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre>
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/transcendent_test.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/transcendent_test.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_critical_value'>critical_value</span><span class='comma'>,</span> <span class='id identifier rubyid_modifier'>modifier</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='ivar'>@critical_value</span> <span class='op'>=</span> <span class='id identifier rubyid_critical_value'>critical_value</span>
@@ -363,16 +385,6 @@
       <pre class="lines">
 
 
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
 33
 34
 35
@@ -391,10 +403,27 @@
 48
 49
 50
-51</pre>
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/transcendent_test.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/transcendent_test.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@critical_value</span> <span class='op'>&lt;</span> <span class='int'>3</span>
@@ -416,14 +445,21 @@
   <span class='id identifier rubyid_sum'>sum</span> <span class='op'>=</span> <span class='id identifier rubyid_sum_of_dice'>sum_of_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_value_groups'>value_groups</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_total_sum'>total_sum</span> <span class='op'>=</span> <span class='id identifier rubyid_sum'>sum</span> <span class='op'>+</span> <span class='ivar'>@modifier</span>
 
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_result_status'>result_status</span><span class='lparen'>(</span><span class='id identifier rubyid_total_sum'>total_sum</span><span class='comma'>,</span> <span class='id identifier rubyid_value_groups'>value_groups</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='comma'>,</span> <span class='id identifier rubyid_fumble'>fumble</span><span class='comma'>,</span> <span class='id identifier rubyid_critical'>critical</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parts'>parts</span> <span class='op'>=</span> <span class='lbracket'>[</span>
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@expression</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_str'>dice_str</span><span class='lparen'>(</span><span class='id identifier rubyid_value_groups'>value_groups</span><span class='comma'>,</span> <span class='id identifier rubyid_sum'>sum</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='ivar'>@modifier_str</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='id identifier rubyid_total_sum'>total_sum</span><span class='comma'>,</span>
-    <span class='ivar'>@target</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_result_str'>result_str</span><span class='lparen'>(</span><span class='id identifier rubyid_total_sum'>total_sum</span><span class='comma'>,</span> <span class='id identifier rubyid_value_groups'>value_groups</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='comma'>,</span> <span class='id identifier rubyid_fumble'>fumble</span><span class='comma'>,</span> <span class='id identifier rubyid_critical'>critical</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="#RESULT_STR-constant" title="BCDice::GameSystem::SwordWorld2_0::TranscendentTest::RESULT_STR (constant)">RESULT_STR</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_result'>result</span><span class='rbracket'>]</span><span class='comma'>,</span>
   <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
 
-  <span class='kw'>return</span> <span class='id identifier rubyid_parts'>parts</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_parts'>parts</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_fumble'>fumble</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span> <span class='op'>==</span> <span class='symbol'>:fumble</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span> <span class='op'>==</span> <span class='symbol'>:critical</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:success</span><span class='comma'>,</span> <span class='symbol'>:super_success</span><span class='comma'>,</span> <span class='symbol'>:critical</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:failure</span><span class='comma'>,</span> <span class='symbol'>:fumble</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -435,7 +471,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:14 2021 by
+  Generated on Wed Jun  9 12:09:03 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

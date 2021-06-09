@@ -99,7 +99,20 @@
   
 </div>
 
-<div id="subclasses">
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスロールの結果を表すクラス</p>
+
+<p>コマンドの結果の文字列や、成功／失敗／クリティカル／ファンブルの情報を保持する。 成功／失敗は同時に発生しないこととする。 成功／失敗のペアとクリティカル、ファンブルの三者は独立した要素とし、 「クリティカルだが失敗」や「ファンブルだが成功でも失敗でもない」を許容する。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
   <p class="children"><span class='object_link'><a href="CommonCommand/BarabaraDice/Result.html" title="BCDice::CommonCommand::BarabaraDice::Result (class)">CommonCommand::BarabaraDice::Result</a></span></p>
 </div>
@@ -352,7 +365,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#critical-class_method" title="critical (class method)">.<strong>critical</strong>(text)  &#x21d2; Object </a>
+      <a href="#critical-class_method" title="critical (class method)">.<strong>critical</strong>(text)  &#x21d2; Result </a>
     
 
     
@@ -366,7 +379,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><code>success</code> と <code>critical</code> が設定された <code>Result</code> を作成する.</p>
+</div></span>
   
 </li>
 
@@ -374,7 +389,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#failure-class_method" title="failure (class method)">.<strong>failure</strong>(text)  &#x21d2; Object </a>
+      <a href="#failure-class_method" title="failure (class method)">.<strong>failure</strong>(text)  &#x21d2; Result </a>
     
 
     
@@ -388,7 +403,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><code>failure</code> が設定された <code>Result</code> を作成する.</p>
+</div></span>
   
 </li>
 
@@ -396,7 +413,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fumble-class_method" title="fumble (class method)">.<strong>fumble</strong>(text)  &#x21d2; Object </a>
+      <a href="#fumble-class_method" title="fumble (class method)">.<strong>fumble</strong>(text)  &#x21d2; Result </a>
     
 
     
@@ -410,7 +427,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><code>failure</code> と <code>fumble</code> が設定された <code>Result</code> を作成する.</p>
+</div></span>
   
 </li>
 
@@ -418,7 +437,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#nothing-class_method" title="nothing (class method)">.<strong>nothing</strong>  &#x21d2; Object </a>
+      <a href="#nothing-class_method" title="nothing (class method)">.<strong>nothing</strong>  &#x21d2; :nothing </a>
     
 
     
@@ -432,7 +451,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>その後の判定で何もすることがないことを示すために利用する.</p>
+</div></span>
   
 </li>
 
@@ -440,7 +461,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#success-class_method" title="success (class method)">.<strong>success</strong>(text)  &#x21d2; Object </a>
+      <a href="#success-class_method" title="success (class method)">.<strong>success</strong>(text)  &#x21d2; Result </a>
     
 
     
@@ -454,7 +475,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p><code>success</code> が設定された <code>Result</code> を作成する.</p>
+</div></span>
   
 </li>
 
@@ -650,7 +673,24 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String | nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -658,19 +698,19 @@
       <pre class="lines">
 
 
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50</pre>
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@text</span> <span class='op'>=</span> <span class='id identifier rubyid_text'>text</span>
@@ -740,12 +780,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_critical='>critical=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@critical</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -783,12 +823,12 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_detailed_rands'>detailed_rands</span>
   <span class='ivar'>@detailed_rands</span>
@@ -846,12 +886,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failure='>failure=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@failure</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -909,12 +949,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fumble='>fumble=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@fumble</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -952,12 +992,12 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rands'>rands</span>
   <span class='ivar'>@rands</span>
@@ -1015,12 +1055,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_secret='>secret=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@secret</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -1078,12 +1118,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_success='>success=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@success</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -1121,12 +1161,12 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 78</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text'>text</span>
   <span class='ivar'>@text</span>
@@ -1146,28 +1186,67 @@
       <div class="method_details first">
   <h3 class="signature first" id="critical-class_method">
   
-    .<strong>critical</strong>(text)  &#x21d2; <tt>Object</tt> 
+    .<strong>critical</strong>(text)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Result (class)">Result</a></span></tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>success</code> と <code>critical</code> が設定された <code>Result</code> を作成する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::Result (class)">Result</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-20
-21
-22
-23
-24
-25
-26</pre>
+38
+39
+40
+41
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_critical'>critical</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
@@ -1184,27 +1263,66 @@
       <div class="method_details ">
   <h3 class="signature " id="failure-class_method">
   
-    .<strong>failure</strong>(text)  &#x21d2; <tt>Object</tt> 
+    .<strong>failure</strong>(text)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Result (class)">Result</a></span></tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>failure</code> が設定された <code>Result</code> を作成する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::Result (class)">Result</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-13
-14
-15
-16
-17
-18</pre>
+27
+28
+29
+30
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failure'>failure</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
@@ -1220,28 +1338,67 @@
       <div class="method_details ">
   <h3 class="signature " id="fumble-class_method">
   
-    .<strong>fumble</strong>(text)  &#x21d2; <tt>Object</tt> 
+    .<strong>fumble</strong>(text)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Result (class)">Result</a></span></tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>failure</code> と <code>fumble</code> が設定された <code>Result</code> を作成する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::Result (class)">Result</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-28
-29
-30
-31
-32
-33
-34</pre>
+50
+51
+52
+53
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fumble'>fumble</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
@@ -1258,24 +1415,48 @@
       <div class="method_details ">
   <h3 class="signature " id="nothing-class_method">
   
-    .<strong>nothing</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>nothing</strong>  &#x21d2; <tt>:nothing</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>その後の判定で何もすることがないことを示すために利用する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:nothing</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-36
-37
-38</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_nothing'>nothing</span>
   <span class='symbol'>:nothing</span>
@@ -1288,27 +1469,66 @@
       <div class="method_details ">
   <h3 class="signature " id="success-class_method">
   
-    .<strong>success</strong>(text)  &#x21d2; <tt>Object</tt> 
+    .<strong>success</strong>(text)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::Result (class)">Result</a></span></tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>success</code> が設定された <code>Result</code> を作成する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::Result (class)">Result</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-6
-7
-8
-9
-10
-11</pre>
+16
+17
+18
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_success'>success</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
@@ -1366,13 +1586,13 @@
       <pre class="lines">
 
 
-82
-83
-84
-85</pre>
+108
+109
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_condition='>condition=</span><span class='lparen'>(</span><span class='id identifier rubyid_condition'>condition</span><span class='rparen'>)</span>
   <span class='ivar'>@success</span> <span class='op'>=</span> <span class='id identifier rubyid_condition'>condition</span>
@@ -1420,12 +1640,12 @@
       <pre class="lines">
 
 
-71
-72
-73</pre>
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_critical?'>critical?</span>
   <span class='ivar'>@critical</span>
@@ -1472,12 +1692,12 @@
       <pre class="lines">
 
 
-66
-67
-68</pre>
+92
+93
+94</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failure?'>failure?</span>
   <span class='ivar'>@failure</span>
@@ -1524,12 +1744,12 @@
       <pre class="lines">
 
 
-76
-77
-78</pre>
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fumble?'>fumble?</span>
   <span class='ivar'>@fumble</span>
@@ -1576,12 +1796,12 @@
       <pre class="lines">
 
 
-56
-57
-58</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_secret?'>secret?</span>
   <span class='ivar'>@secret</span>
@@ -1628,12 +1848,12 @@
       <pre class="lines">
 
 
-61
-62
-63</pre>
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/result.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_success?'>success?</span>
   <span class='ivar'>@success</span>
@@ -1648,7 +1868,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:09:58 2021 by
+  Generated on Wed Jun  9 12:08:45 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

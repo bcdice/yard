@@ -114,6 +114,7 @@
         <dd><pre class="code"><span class='lbracket'>[</span>
   <span class='symbol'>:fumble</span><span class='comma'>,</span>
   <span class='symbol'>:failure</span><span class='comma'>,</span>
+  <span class='symbol'>:success</span><span class='comma'>,</span>
   <span class='symbol'>:regular_success</span><span class='comma'>,</span>
   <span class='symbol'>:hard_success</span><span class='comma'>,</span>
   <span class='symbol'>:extreme_success</span><span class='comma'>,</span>
@@ -128,6 +129,7 @@
   <span class='label'>extreme_success:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>イクストリーム成功</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='label'>hard_success:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハード成功</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='label'>regular_success:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>レギュラー成功</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>success:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='label'>fumble:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ファンブル</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
   <span class='label'>failure:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
 <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
@@ -153,6 +155,28 @@
   <span class="summary_signature">
     
       <a href="#from_values-class_method" title="from_values (class method)">.<strong>from_values</strong>(total, difficulty, fumbleable = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_difficulty_level-class_method" title="with_difficulty_level (class method)">.<strong>with_difficulty_level</strong>(total, difficulty)  &#x21d2; Object </a>
     
 
     
@@ -361,14 +385,14 @@
       <pre class="lines">
 
 
-113
-114
-115
-116
-117</pre>
+135
+136
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span>
   <span class='ivar'>@level</span> <span class='op'>=</span> <span class='id identifier rubyid_level'>level</span>
@@ -402,26 +426,26 @@
       <pre class="lines">
 
 
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111</pre>
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_values'>from_values</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='comma'>,</span> <span class='id identifier rubyid_fumbleable'>fumbleable</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_fumble'>fumble</span> <span class='op'>=</span> <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>&lt;</span> <span class='int'>50</span> <span class='op'>||</span> <span class='id identifier rubyid_fumbleable'>fumbleable</span> <span class='op'>?</span> <span class='int'>96</span> <span class='op'>:</span> <span class='int'>100</span>
@@ -434,6 +458,56 @@
     <span class='const'><span class='object_link'><a href="" title="BCDice::GameSystem::Cthulhu7th::ResultLevel (class)">ResultLevel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="BCDice::GameSystem::Cthulhu7th::ResultLevel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:hard_success</span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_difficulty'>difficulty</span>
     <span class='const'><span class='object_link'><a href="" title="BCDice::GameSystem::Cthulhu7th::ResultLevel (class)">ResultLevel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="BCDice::GameSystem::Cthulhu7th::ResultLevel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:regular_success</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_fumble'>fumble</span>
+    <span class='const'><span class='object_link'><a href="" title="BCDice::GameSystem::Cthulhu7th::ResultLevel (class)">ResultLevel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="BCDice::GameSystem::Cthulhu7th::ResultLevel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:fumble</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="" title="BCDice::GameSystem::Cthulhu7th::ResultLevel (class)">ResultLevel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="BCDice::GameSystem::Cthulhu7th::ResultLevel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:failure</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_difficulty_level-class_method">
+  
+    .<strong>with_difficulty_level</strong>(total, difficulty)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_with_difficulty_level'>with_difficulty_level</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_fumble'>fumble</span> <span class='op'>=</span> <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>&lt;</span> <span class='int'>50</span> <span class='op'>?</span> <span class='int'>96</span> <span class='op'>:</span> <span class='int'>100</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>==</span> <span class='int'>1</span>
+    <span class='const'><span class='object_link'><a href="" title="BCDice::GameSystem::Cthulhu7th::ResultLevel (class)">ResultLevel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="BCDice::GameSystem::Cthulhu7th::ResultLevel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:critical</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_difficulty'>difficulty</span>
+    <span class='const'><span class='object_link'><a href="" title="BCDice::GameSystem::Cthulhu7th::ResultLevel (class)">ResultLevel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="BCDice::GameSystem::Cthulhu7th::ResultLevel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:success</span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_fumble'>fumble</span>
     <span class='const'><span class='object_link'><a href="" title="BCDice::GameSystem::Cthulhu7th::ResultLevel (class)">ResultLevel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="BCDice::GameSystem::Cthulhu7th::ResultLevel#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='symbol'>:fumble</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
@@ -488,12 +562,12 @@
       <pre class="lines">
 
 
-127
-128
-129</pre>
+149
+150
+151</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 149</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_critical?'>critical?</span>
   <span class='ivar'>@level</span> <span class='op'>==</span> <span class='symbol'>:critical</span>
@@ -540,12 +614,12 @@
       <pre class="lines">
 
 
-123
-124
-125</pre>
+145
+146
+147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 145</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failure?'>failure?</span>
   <span class='ivar'>@level_index</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="#LEVEL-constant" title="BCDice::GameSystem::Cthulhu7th::ResultLevel::LEVEL (constant)">LEVEL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='symbol'>:failure</span><span class='rparen'>)</span>
@@ -592,12 +666,12 @@
       <pre class="lines">
 
 
-131
-132
-133</pre>
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fumble?'>fumble?</span>
   <span class='ivar'>@level</span> <span class='op'>==</span> <span class='symbol'>:fumble</span>
@@ -644,15 +718,15 @@
       <pre class="lines">
 
 
-119
-120
-121</pre>
+141
+142
+143</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_success?'>success?</span>
-  <span class='ivar'>@level_index</span> <span class='op'>&gt;=</span> <span class='const'><span class='object_link'><a href="#LEVEL-constant" title="BCDice::GameSystem::Cthulhu7th::ResultLevel::LEVEL (constant)">LEVEL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='symbol'>:regular_success</span><span class='rparen'>)</span>
+  <span class='ivar'>@level_index</span> <span class='op'>&gt;=</span> <span class='const'><span class='object_link'><a href="#LEVEL-constant" title="BCDice::GameSystem::Cthulhu7th::ResultLevel::LEVEL (constant)">LEVEL</a></span></span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='symbol'>:success</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -674,12 +748,12 @@
       <pre class="lines">
 
 
-135
-136
-137</pre>
+157
+158
+159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='const'><span class='object_link'><a href="#LEVEL_TO_S-constant" title="BCDice::GameSystem::Cthulhu7th::ResultLevel::LEVEL_TO_S (constant)">LEVEL_TO_S</a></span></span><span class='lbracket'>[</span><span class='ivar'>@level</span><span class='rbracket'>]</span>
@@ -694,7 +768,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:03 2021 by
+  Generated on Wed Jun  9 12:08:51 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

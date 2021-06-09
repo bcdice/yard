@@ -196,13 +196,19 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>  ※コマンドは入力内容の前方一致で検出しています。
-</span><span class='tstring_content'>  ・判定　CC(x)&lt;=（目標値）
-</span><span class='tstring_content'>  　x：ボーナス・ペナルティダイス (2～－2)。省略可。
+<span class='tstring_content'>  ・判定　CC(x)&lt;=（目標値）
+</span><span class='tstring_content'>  　x：ボーナス・ペナルティダイス。省略可。
 </span><span class='tstring_content'>  　目標値が無くても1D100は表示される。
 </span><span class='tstring_content'>  　ファンブル／失敗／　レギュラー成功／ハード成功／
 </span><span class='tstring_content'>  　イクストリーム成功／クリティカル を自動判定。
-</span><span class='tstring_content'>  例）CC&lt;=30　CC(2)&lt;=50 CC(+2)&lt;=50 CC(-1)&lt;=75 CC-1&lt;=50 CC1&lt;=65 CC+1&lt;=65 CC
+</span><span class='tstring_content'>  　例）CC&lt;=30　CC(2)&lt;=50 CC(+2)&lt;=50 CC(-1)&lt;=75 CC-1&lt;=50 CC1&lt;=65 CC+1&lt;=65 CC
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・技能ロールの難易度指定　CC(x)&lt;=(目標値)(難易度)
+</span><span class='tstring_content'>  　目標値の後に難易度を指定することで
+</span><span class='tstring_content'>  　成功／失敗／クリティカル／ファンブル を自動判定する。
+</span><span class='tstring_content'>  　難易度の指定：
+</span><span class='tstring_content'>  　　r:レギュラー　h:ハード　e:イクストリーム　c:クリティカル
+</span><span class='tstring_content'>  　例）CC&lt;=70r CC1&lt;=60h CC-2&lt;=50e CC2&lt;=99c
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・組み合わせ判定　(CBR(x,y))
 </span><span class='tstring_content'>  　目標値 x と y で％ロールを行い、成否を判定。
@@ -335,12 +341,6 @@
       <pre class="lines">
 
 
-53
-54
-55
-56
-57
-58
 59
 60
 61
@@ -356,10 +356,16 @@
 71
 72
 73
-74</pre>
+74
+75
+76
+77
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Cthulhu7th.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -393,7 +399,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:03 2021 by
+  Generated on Wed Jun  9 12:08:51 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

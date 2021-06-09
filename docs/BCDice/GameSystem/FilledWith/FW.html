@@ -283,6 +283,32 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; FW </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of FW.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#roll-instance_method" title="#roll (instance method)">#<strong>roll</strong>(randomizer)  &#x21d2; Object </a>
     
 
@@ -305,6 +331,51 @@
     </ul>
   
 
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::FilledWith::FW (class)">FW</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of FW.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FilledWith.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='ivar'>@target</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
 
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
@@ -503,10 +574,6 @@
       <pre class="lines">
 
 
-130
-131
-132
-133
 134
 135
 136
@@ -519,10 +586,14 @@
 143
 144
 145
-146</pre>
+146
+147
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FilledWith.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FilledWith.rb', line 134</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d[+\-\d]*)-(\d+)FW(?:@(\d+))?(?:\#(\d+))?$</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -561,14 +632,14 @@
       <pre class="lines">
 
 
-124
-125
-126
-127
-128</pre>
+128
+129
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FilledWith.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FilledWith.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_fw'>fw</span> <span class='op'>=</span> <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -601,10 +672,6 @@
       <pre class="lines">
 
 
-148
-149
-150
-151
 152
 153
 154
@@ -617,10 +684,14 @@
 161
 162
 163
-164</pre>
+164
+165
+166
+167
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FilledWith.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FilledWith.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice_list'>dice_list</span> <span class='op'>=</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='ivar'>@dice_count</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
@@ -649,7 +720,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:03 2021 by
+  Generated on Wed Jun  9 12:08:51 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

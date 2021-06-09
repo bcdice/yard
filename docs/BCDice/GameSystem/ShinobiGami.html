@@ -173,12 +173,13 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>  ・行為判定 SG@s#f&gt;=x
-</span><span class='tstring_content'>  　2D6の行為判定を行う
+<span class='tstring_content'>  ・行為判定 nSG@s#f&gt;=x
+</span><span class='tstring_content'>  　2D6の行為判定を行う。ダイス数が指定された場合、大きい出目2個を採用する。
+</span><span class='tstring_content'>  　n: ダイス数 (省略時 2)
 </span><span class='tstring_content'>  　s: スペシャル値 (省略時 12)
 </span><span class='tstring_content'>  　f: ファンブル値 (省略時 2)
 </span><span class='tstring_content'>  　x: 目標値 (省略可)
-</span><span class='tstring_content'>  　例）SG, SG@11, SG@11#3, SG#3&gt;=7
+</span><span class='tstring_content'>  　例）SG, SG@11, SG@11#3, SG#3&gt;=7, 3SG&gt;=7
 </span><span class='tstring_content'>  ・各種表
 </span><span class='tstring_content'>  　・(無印)シーン表　ST／ファンブル表　FT／感情表　ET
 </span><span class='tstring_content'>  　　　／変調表　WT／戦場表　BT／異形表　MT
@@ -373,15 +374,15 @@
       <pre class="lines">
 
 
-46
 47
 48
 49
 50
-51</pre>
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -416,16 +417,16 @@
       <pre class="lines">
 
 
-73
 74
 75
 76
 77
 78
-79</pre>
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_action_roll'>action_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>TABLES</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="#RTT-constant" title="BCDice::GameSystem::ShinobiGami::RTT (constant)">RTT</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll_command'>roll_command</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -454,7 +455,6 @@
       <pre class="lines">
 
 
-55
 56
 57
 58
@@ -468,10 +468,11 @@
 66
 67
 68
-69</pre>
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_2d6'>result_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_list'>_dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&gt;=</span>
@@ -498,7 +499,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:06 2021 by
+  Generated on Wed Jun  9 12:08:54 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

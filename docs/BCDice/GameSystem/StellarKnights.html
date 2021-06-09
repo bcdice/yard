@@ -101,6 +101,10 @@
   
 </div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="StellarKnights_Korean.html" title="BCDice::GameSystem::StellarKnights_Korean (class)">StellarKnights_Korean</a></span></p>
+</div>
 
   
     <h2>
@@ -173,12 +177,15 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~MESSAGETEXT</span>
-<span class='tstring_content'>  ・判定　nSK[d][,k&gt;l,...]
+<span class='tstring_content'>  ・アタック判定　nSK[d][,k&gt;l,...]
 </span><span class='tstring_content'>  []内は省略可能。
 </span><span class='tstring_content'>  n: ダイス数、d: アタック判定における対象の防御力、k, l: ダイスの出目がkならばlに変更（アマランサスのスキル「始まりの部屋」用）
 </span><span class='tstring_content'>  d省略時はダイスを振った結果のみ表示。（nSKはnB6と同じ）
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  4SK: ダイスを4個振って、その結果を表示
+</span><span class='tstring_content'>  4+2SK: ダイスを4+2 (=6) 個振って、その結果を表示
+</span><span class='tstring_content'>  5/2SK: ダイスを5個の半分 (=2) 個振って、その結果を表示
+</span><span class='tstring_content'>  (5+3)/2SK: ダイスを(5+3)個の半分 (=4) 個振って、その結果を表示
 </span><span class='tstring_content'>  5SK3: 【アタック判定：5ダイス】、対象の防御力を3として成功数を表示
 </span><span class='tstring_content'>  3SK,1&gt;6: ダイスを3個振り、出目が1のダイスを全て6に変更し、その結果を表示
 </span><span class='tstring_content'>  6SK4,1&gt;6,2&gt;6: 【アタック判定：6ダイス】、出目が1と2のダイスを全て6に変更、対象の防御力を4として成功数を表示
@@ -349,15 +356,15 @@
       <pre class="lines">
 
 
-66
-67
-68
 69
 70
-71</pre>
+71
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StellarKnights.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StellarKnights.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -392,9 +399,6 @@
       <pre class="lines">
 
 
-73
-74
-75
 76
 77
 78
@@ -409,18 +413,29 @@
 87
 88
 89
-90</pre>
+90
+91
+92
+93
+94
+95
+96
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StellarKnights.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StellarKnights.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
 
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='const'>TABLES</span><span class='lbracket'>[</span><span class='id identifier rubyid_command'>command</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='op'>::</span><span class='const'>TABLES</span><span class='lbracket'>[</span><span class='id identifier rubyid_command'>command</span><span class='rbracket'>]</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
-  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)SK(\d)?((,\d&gt;\d)+)?</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_resolute_action'>resolute_action</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>([()+/\d]+)SK(\d)?((,\d&gt;\d)+)?</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_num_dices'>num_dices</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Arithmetic.html" title="BCDice::Arithmetic (module)">Arithmetic</a></span></span><span class='period'>.</span><span class='id identifier rubyid_eval'><span class='object_link'><a href="../Arithmetic.html#eval-class_method" title="BCDice::Arithmetic.eval (method)">eval</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#FLOOR-constant" title="BCDice::RoundType::FLOOR (constant)">FLOOR</a></span></span><span class='rparen'>)</span>
+
+    <span class='kw'>unless</span> <span class='id identifier rubyid_num_dices'>num_dices</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+      <span class='id identifier rubyid_resolute_action'>resolute_action</span><span class='lparen'>(</span><span class='id identifier rubyid_num_dices'>num_dices</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>STB2</span><span class='tstring_end'>&#39;</span></span>
     <span class='id identifier rubyid_roll_all_situation_b2_tables'>roll_all_situation_b2_tables</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ALLS</span><span class='tstring_end'>&#39;</span></span>
@@ -442,7 +457,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:10 2021 by
+  Generated on Wed Jun  9 12:08:58 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

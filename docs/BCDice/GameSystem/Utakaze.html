@@ -177,10 +177,13 @@
 </span><span class='tstring_content'>    n個のサイコロで行為判定ロール。ゾロ目の最大個数を成功レベルとして表示。nを省略すると2UK扱い。
 </span><span class='tstring_content'>    例）3UK ：サイコロ3個で行為判定
 </span><span class='tstring_content'>    例）UK  ：サイコロ2個で行為判定
-</span><span class='tstring_content'>    不等号用いた成否判定は現時点では実装してません。
+</span><span class='tstring_content'>  ・難易度付き行為判定ロール（nUK&gt;=t）
+</span><span class='tstring_content'>    tに難易度を指定した行為判定ロール。
+</span><span class='tstring_content'>    成功レベルと難易度tを比べて成否を判定します。
+</span><span class='tstring_content'>    例）6UK&gt;=3 ：サイコロ6個で行為判定して、成功レベル3が出れば成功。
 </span><span class='tstring_content'>  ・クリティカルコール付き行為判定ロール（nUK@c or nUKc）
-</span><span class='tstring_content'>  　cに「龍のダイス目」を指定した行為判定ロール。
-</span><span class='tstring_content'>    ゾロ目ではなく、cと同じ値の出目数x2が成功レベルとなります。
+</span><span class='tstring_content'>    cに「龍のダイス目」を指定した行為判定ロール。
+</span><span class='tstring_content'>    ゾロ目ではなく、cと同じ値の出目数x2が成功レベルとなります。難易度の指定も可能です。
 </span><span class='tstring_content'>    例）3UK@5 ：龍のダイス「月」でクリティカルコール宣言したサイコロ3個の行為判定
 </span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
       
@@ -209,189 +212,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#checkRoll-instance_method" title="#checkRoll (instance method)">#<strong>checkRoll</strong>(base, crit, diff = 0)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getDiceCountHash-instance_method" title="#getDiceCountHash (instance method)">#<strong>getDiceCountHash</strong>(dice_list, critical)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>各ダイスの個数を数えてHashにする.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getRollResultString-instance_method" title="#getRollResultString (instance method)">#<strong>getRollResultString</strong>(diceList, crit, diff)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getSuccessInfo-instance_method" title="#getSuccessInfo (instance method)">#<strong>getSuccessInfo</strong>(diceList, crit, _diff)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#getValue-instance_method" title="#getValue (instance method)">#<strong>getValue</strong>(number)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; Utakaze </a>
-    
-
-    
-  </span>
-  
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Utakaze.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#isDragonDice-instance_method" title="#isDragonDice (instance method)">#<strong>isDragonDice</strong>(crit)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#isNomalDice-instance_method" title="#isNomalDice (instance method)">#<strong>isNomalDice</strong>(crit)  &#x21d2; Object </a>
     
 
     
@@ -423,7 +244,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
 
   
   
@@ -444,50 +265,7 @@
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
-  
-    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::Utakaze (class)">Utakaze</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns a new instance of Utakaze.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-30
-31
-32
-33
-34</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 30</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='ivar'>@arrayDragonDiceName</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>風</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>雨</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>雲</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>影</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>月</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>歌</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='ivar'>@enabled_upcase_input</span> <span class='op'>=</span> <span class='kw'>false</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">BCDice::Base</a></span></p>
   
 </div>
 
@@ -497,69 +275,7 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="checkRoll-instance_method">
-  
-    #<strong>checkRoll</strong>(base, crit, diff = 0)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 54</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='comma'>,</span> <span class='id identifier rubyid_crit'>crit</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='int'>0</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-
-  <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='id identifier rubyid_getValue'>getValue</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_crit'>crit</span> <span class='op'>=</span> <span class='id identifier rubyid_getValue'>getValue</span><span class='lparen'>(</span><span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>if</span> <span class='id identifier rubyid_base'>base</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-
-  <span class='id identifier rubyid_crit'>crit</span> <span class='op'>=</span> <span class='int'>6</span> <span class='kw'>if</span> <span class='id identifier rubyid_crit'>crit</span> <span class='op'>&gt;</span> <span class='int'>6</span>
-
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_base'>base</span><span class='embexpr_end'>}</span><span class='tstring_content'>d6)</span><span class='tstring_end'>&quot;</span></span>
-
-  <span class='id identifier rubyid_diceList'>diceList</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
-
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diceList'>diceList</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>] ＞ </span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='id identifier rubyid_getRollResultString'>getRollResultString</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_crit'>crit</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="eval_game_system_specific_command-instance_method">
+  <h3 class="signature first" id="eval_game_system_specific_command-instance_method">
   
     #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
   
@@ -573,340 +289,19 @@
       <pre class="lines">
 
 
+33
+34
+35
 36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52</pre>
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>eval_game_system_specific_command command</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
-
-  <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)?UK(@?(\d))?(&gt;=(\d+))?</span><span class='regexp_end'>/i</span></span>
-    <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='id identifier rubyid_crit'>crit</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>5</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='comma'>,</span> <span class='id identifier rubyid_crit'>crit</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getDiceCountHash-instance_method">
-  
-    #<strong>getDiceCountHash</strong>(dice_list, critical)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>各ダイスの個数を数えてHashにする</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-131
-132
-133
-134
-135
-136</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 131</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getDiceCountHash'>getDiceCountHash</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_list'>dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_critical'>critical</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_dice_list'>dice_list</span>
-    <span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_dice'>dice</span><span class='op'>|</span> <span class='id identifier rubyid_isNomalDice'>isNomalDice</span><span class='lparen'>(</span><span class='id identifier rubyid_critical'>critical</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>==</span> <span class='id identifier rubyid_critical'>critical</span> <span class='rbrace'>}</span>
-    <span class='period'>.</span><span class='id identifier rubyid_group_by'>group_by</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:itself</span><span class='rparen'>)</span>
-    <span class='period'>.</span><span class='id identifier rubyid_transform_values'>transform_values</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:size</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getRollResultString-instance_method">
-  
-    #<strong>getRollResultString</strong>(diceList, crit, diff)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 74</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getRollResultString'>getRollResultString</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_crit'>crit</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_maxnum'>maxnum</span><span class='comma'>,</span> <span class='id identifier rubyid_setCount'>setCount</span> <span class='op'>=</span> <span class='id identifier rubyid_getSuccessInfo'>getSuccessInfo</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_crit'>crit</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-
-  <span class='kw'>if</span> <span class='id identifier rubyid_isDragonDice'>isDragonDice</span><span class='lparen'>(</span><span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>龍のダイス「</span><span class='embexpr_beg'>#{</span><span class='ivar'>@arrayDragonDiceName</span><span class='lbracket'>[</span><span class='id identifier rubyid_crit'>crit</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>」(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_crit'>crit</span><span class='embexpr_end'>}</span><span class='tstring_content'>)を使用 ＞ </span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>if</span>  <span class='id identifier rubyid_success'>success</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功レベル:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_maxnum'>maxnum</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_setCount'>setCount</span><span class='embexpr_end'>}</span><span class='tstring_content'>セット)</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_diff'>diff</span> <span class='op'>!=</span> <span class='int'>0</span>
-      <span class='id identifier rubyid_diffSuccess'>diffSuccess</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_maxnum'>maxnum</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diff'>diff</span><span class='rparen'>)</span>
-      <span class='kw'>if</span> <span class='id identifier rubyid_diffSuccess'>diffSuccess</span>
-        <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&quot;</span></span>
-      <span class='kw'>else</span>
-        <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&quot;</span></span>
-      <span class='kw'>end</span>
-    <span class='kw'>end</span>
-
-  <span class='kw'>else</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getSuccessInfo-instance_method">
-  
-    #<strong>getSuccessInfo</strong>(diceList, crit, _diff)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 101</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getSuccessInfo'>getSuccessInfo</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_crit'>crit</span><span class='comma'>,</span> <span class='id identifier rubyid__diff'>_diff</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>checkSuccess diceList, crit</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_diceCountHash'>diceCountHash</span> <span class='op'>=</span> <span class='id identifier rubyid_getDiceCountHash'>getDiceCountHash</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>diceCountHash</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_diceCountHash'>diceCountHash</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_maxnum'>maxnum</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_successDiceList'>successDiceList</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_countThreshold'>countThreshold</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_isDragonDice'>isDragonDice</span><span class='lparen'>(</span><span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>:</span> <span class='int'>2</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_diceCountHash'>diceCountHash</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_count'>count</span><span class='op'>|</span>
-    <span class='id identifier rubyid_maxnum'>maxnum</span> <span class='op'>=</span> <span class='id identifier rubyid_count'>count</span> <span class='kw'>if</span>  <span class='id identifier rubyid_count'>count</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_maxnum'>maxnum</span>
-    <span class='id identifier rubyid_successDiceList'>successDiceList</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_dice'>dice</span> <span class='kw'>if</span> <span class='id identifier rubyid_count'>count</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_countThreshold'>countThreshold</span>
-  <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>successDiceList</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_successDiceList'>successDiceList</span><span class='rparen'>)</span>
-
-  <span class='kw'>if</span> <span class='id identifier rubyid_successDiceList'>successDiceList</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
-    <span class='comment'># 失敗：ゾロ目無し(全部違う)
-</span>    <span class='kw'>return</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span>
-  <span class='kw'>end</span>
-
-  <span class='comment'># 竜のダイスの場合
-</span>  <span class='id identifier rubyid_maxnum'>maxnum</span> <span class='op'>*=</span> <span class='int'>2</span> <span class='kw'>if</span> <span class='id identifier rubyid_isDragonDice'>isDragonDice</span><span class='lparen'>(</span><span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span>
-
-  <span class='comment'># 成功：ゾロ目あり
-</span>  <span class='kw'>return</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_maxnum'>maxnum</span><span class='comma'>,</span> <span class='id identifier rubyid_successDiceList'>successDiceList</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getValue-instance_method">
-  
-    #<strong>getValue</strong>(number)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-146
-147
-148
-149
-150</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 146</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getValue'>getValue</span><span class='lparen'>(</span><span class='id identifier rubyid_number'>number</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>&gt;</span> <span class='int'>100</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_number'>number</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="isDragonDice-instance_method">
-  
-    #<strong>isDragonDice</strong>(crit)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-142
-143
-144</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 142</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_isDragonDice'>isDragonDice</span><span class='lparen'>(</span><span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span>
-  <span class='lparen'>(</span><span class='id identifier rubyid_crit'>crit</span> <span class='op'>!=</span> <span class='int'>0</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="isNomalDice-instance_method">
-  
-    #<strong>isNomalDice</strong>(crit)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-138
-139
-140</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 138</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_isNomalDice'>isNomalDice</span><span class='lparen'>(</span><span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span>
-  <span class='op'>!</span><span class='id identifier rubyid_isDragonDice'>isDragonDice</span><span class='lparen'>(</span><span class='id identifier rubyid_crit'>crit</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_check_roll'>check_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -918,7 +313,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:00 2021 by
+  Generated on Wed Jun  9 12:08:48 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

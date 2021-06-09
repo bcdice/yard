@@ -354,8 +354,8 @@
   <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::CommonCommand::BarabaraDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::CommonCommand::BarabaraDice::Result#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
     <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_secret'>secret</span> <span class='op'>=</span> <span class='ivar'>@secret</span>
     <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_rands'>rands</span> <span class='op'>=</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='period'>.</span><span class='id identifier rubyid_rand_results'>rand_results</span>
-    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_detailed_rands'>detailed_rands</span> <span class='op'>=</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='period'>.</span><span class='id identifier rubyid_detailed_rand_results'>detailed_rand_results</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_last_dice_list_list'>last_dice_list_list</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list_list'>dice_list_list</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_last_dice_list'>last_dice_list</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list'>dice_list</span>
     <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_success_num'>success_num</span> <span class='op'>=</span> <span class='id identifier rubyid_success_num'>success_num</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -369,7 +369,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:13 2021 by
+  Generated on Wed Jun  9 12:09:02 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

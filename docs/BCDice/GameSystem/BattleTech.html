@@ -192,12 +192,15 @@
 </span><span class='tstring_content'>  　　正面からダメージ3の攻撃を技能ベース2目標値4で1回判定
 </span><span class='tstring_content'>  　例）2BT3RL+5&gt;=8
 </span><span class='tstring_content'>  　　右下半身にダメージ3の攻撃を技能ベース5目標値8で2回判定
-</span><span class='tstring_content'>  　ミサイルによるダメージは BT(ダメージ)の変わりに SRM2/4/6, LRM5/10/15/20を指定
+</span><span class='tstring_content'>  　ミサイルによるダメージは BT(ダメージ) の代わりに SRM2/4/6, LRM5/10/15/20 を指定
 </span><span class='tstring_content'>  　例）3SRM6LU+5&gt;=8
 </span><span class='tstring_content'>  　　左上半身にSRM6連を技能ベース5目標値8で3回判定
+</span><span class='tstring_content'>    BT(ダメージ) の代わりに PPC を指定するとダメージ10で判定
+</span><span class='tstring_content'>    例）2PPCR+3&gt;=10
+</span><span class='tstring_content'>    　右側からPPC（ダメージ10）による攻撃を技能ベース3目標値10で2回判定
 </span><span class='tstring_content'>  ・CT：致命的命中表
 </span><span class='tstring_content'>  ・DW：転倒後の向き表
-</span><span class='tstring_content'>  ・CDx：メック戦士意識維持表。ダメージ値xで判定　例）CD3
+</span><span class='tstring_content'>  ・CDx：メック戦士意識維持ロール。ダメージ値x（1〜6）で判定　例）CD3
 </span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
       
         <dt id="NO_CRITICAL_HIT_LIMIT-constant" class="">NO_CRITICAL_HIT_LIMIT =
@@ -366,11 +369,68 @@
 
   
     <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ppc_parser-class_method" title="ppc_parser (class method)">.<strong>ppc_parser</strong>  &#x21d2; Command::Parser </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>PPCコマンドの構文解析器.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
       Instance Method Summary
       <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#consciousness_roll-instance_method" title="#consciousness_roll (instance method)">#<strong>consciousness_roll</strong>(damage)  &#x21d2; Result </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>メック戦士意識維持ロールを行う.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -397,7 +457,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getBaseValue-instance_method" title="#getBaseValue (instance method)">#<strong>getBaseValue</strong>(baseString)  &#x21d2; Object </a>
+      <a href="#execute_ppc-instance_method" title="#execute_ppc (instance method)">#<strong>execute_ppc</strong>(parse_result)  &#x21d2; Result<sup>?</sup> </a>
     
 
     
@@ -411,7 +471,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>PPCコマンドを実行する.</p>
+</div></span>
   
 </li>
 
@@ -419,7 +481,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#getCheckDieResult-instance_method" title="#getCheckDieResult (instance method)">#<strong>getCheckDieResult</strong>(damage)  &#x21d2; Object </a>
+      <a href="#getBaseValue-instance_method" title="#getBaseValue (instance method)">#<strong>getBaseValue</strong>(baseString)  &#x21d2; Object </a>
     
 
     
@@ -594,6 +656,30 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ppc_parser-instance_method" title="#ppc_parser (instance method)">#<strong>ppc_parser</strong>  &#x21d2; Command::Parser </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>PPCコマンドの構文解析器.</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -633,12 +719,248 @@
 </div>
 
 
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="ppc_parser-class_method">
+  
+    .<strong>ppc_parser</strong>  &#x21d2; <tt><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Command::Parser</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns PPCコマンドの構文解析器.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Command::Parser</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>PPCコマンドの構文解析器</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ppc_parser'>ppc_parser</span>
+  <span class='kw'>return</span> <span class='ivar'>@ppc_parser</span> <span class='kw'>if</span> <span class='ivar'>@ppc_parser</span>
+
+  <span class='ivar'>@ppc_parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Command.html" title="BCDice::Command (module)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Command/Parser.html#initialize-instance_method" title="BCDice::Command::Parser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>PPC(?:[LCR][LU]?)?</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#FLOOR-constant" title="BCDice::RoundType::FLOOR (constant)">FLOOR</a></span></span><span class='rparen'>)</span>
+  <span class='ivar'>@ppc_parser</span><span class='period'>.</span><span class='id identifier rubyid_enable_prefix_number'>enable_prefix_number</span>
+  <span class='ivar'>@ppc_parser</span><span class='period'>.</span><span class='id identifier rubyid_restrict_cmp_op_to'>restrict_cmp_op_to</span><span class='lparen'>(</span><span class='symbol'>:&gt;=</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@ppc_parser</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="eval_game_system_specific_command-instance_method">
+  <h3 class="signature first" id="consciousness_roll-instance_method">
+  
+    #<strong>consciousness_roll</strong>(damage)  &#x21d2; <tt><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>メック戦士意識維持ロールを行う</p>
+
+<p>damageが6の場合は死亡。 damageが5以下の場合は、2d6の結果が意識維持表の値以上かの成功判定。</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>damage</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>メック戦士へのダメージ（1〜6）</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>A Game of Armored Combat」ルールブックp. 44</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 315</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_consciousness_roll'>consciousness_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='lparen'>(</span><span class='int'>1</span><span class='op'>..</span><span class='int'>6</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CD</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_damage'>damage</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_damage'>damage</span> <span class='op'>==</span> <span class='int'>6</span>
+    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fumble'><span class='object_link'><a href="../Result.html#fumble-class_method" title="BCDice::Result.fumble (method)">fumble</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 死亡</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_consciousness_table'>consciousness_table</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='int'>1</span> <span class='op'>=&gt;</span> <span class='int'>3</span><span class='comma'>,</span>
+    <span class='int'>2</span> <span class='op'>=&gt;</span> <span class='int'>5</span><span class='comma'>,</span>
+    <span class='int'>3</span> <span class='op'>=&gt;</span> <span class='int'>7</span><span class='comma'>,</span>
+    <span class='int'>4</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span>
+    <span class='int'>5</span> <span class='op'>=&gt;</span> <span class='int'>11</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='id identifier rubyid_consciousness_table'>consciousness_table</span><span class='lbracket'>[</span><span class='id identifier rubyid_damage'>damage</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_expr'>expr</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(2D6&gt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_values'>values</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sum'>sum</span> <span class='op'>=</span> <span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span>
+  <span class='id identifier rubyid_values_str'>values_str</span> <span class='op'>=</span> <span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sum_and_values'>sum_and_values</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sum'>sum</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_values_str'>values_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='id identifier rubyid_sum'>sum</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target'>target</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_success'>success</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_parts'>parts</span> <span class='op'>=</span> <span class='lbracket'>[</span>
+    <span class='id identifier rubyid_command'>command</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_expr'>expr</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_sum_and_values'>sum_and_values</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_sum'>sum</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+  <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_parts'>parts</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_success'>success</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'><span class='object_link'><a href="../Result.html#success-class_method" title="BCDice::Result.success (method)">success</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'><span class='object_link'><a href="../Result.html#failure-class_method" title="BCDice::Result.failure (method)">failure</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eval_game_system_specific_command-instance_method">
   
     #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
   
@@ -652,27 +974,6 @@
       <pre class="lines">
 
 
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
 63
 64
 65
@@ -687,16 +988,41 @@
 74
 75
 76
-77</pre>
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::BattleTech::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span>
 
-  <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PPC</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BT10</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ppc_parse_result'>ppc_parse_result</span> <span class='op'>=</span> <span class='id identifier rubyid_ppc_parser'>ppc_parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_execute_ppc'>execute_ppc</span><span class='lparen'>(</span><span class='id identifier rubyid_ppc_parse_result'>ppc_parse_result</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 
   <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='int'>1</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d+)(.+)</span><span class='regexp_end'>/</span></span>
@@ -708,9 +1034,9 @@
   <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>executeCommandCatched command</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CD(\d+)$</span><span class='regexp_end'>/</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\ACD([1-6])\z</span><span class='regexp_end'>/</span></span>
     <span class='id identifier rubyid_damage'>damage</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_getCheckDieResult'>getCheckDieResult</span><span class='lparen'>(</span><span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_consciousness_roll'>consciousness_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
   <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^((S|L)RM\d+)(.+)</span><span class='regexp_end'>/</span></span>
     <span class='id identifier rubyid_tail'>tail</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
@@ -734,6 +1060,108 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="execute_ppc-instance_method">
+  
+    #<strong>execute_ppc</strong>(parse_result)  &#x21d2; <tt><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>PPCコマンドを実行する</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>parse_result</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Command/Parsed.html" title="BCDice::Command::Parsed (class)">Command::Parsed</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>PPCコマンドの構文解析結果</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 360</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_execute_ppc'>execute_ppc</span><span class='lparen'>(</span><span class='id identifier rubyid_parse_result'>parse_result</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_result'>parse_result</span><span class='period'>.</span><span class='id identifier rubyid_prefix_number'>prefix_number</span> <span class='op'>||</span> <span class='int'>1</span>
+
+  <span class='comment'># getHitResult() の引数tailの形に合わせる
+</span>  <span class='comment'># TODO: 攻撃を表すクラスに変える
+</span>
+  <span class='comment'># &quot;PPC&quot; 以降の部位指定
+</span>  <span class='id identifier rubyid_side'>side</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_result'>parse_result</span><span class='period'>.</span><span class='id identifier rubyid_command'>command</span><span class='lbracket'>[</span><span class='int'>3</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_modifier'>modifier</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Format.html" title="BCDice::Format (module)">Format</a></span></span><span class='period'>.</span><span class='id identifier rubyid_modifier'><span class='object_link'><a href="../Format.html#modifier-class_method" title="BCDice::Format.modifier (method)">modifier</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_parse_result'>parse_result</span><span class='period'>.</span><span class='id identifier rubyid_modify_number'>modify_number</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_result'>parse_result</span><span class='period'>.</span><span class='id identifier rubyid_target_number'>target_number</span>
+
+  <span class='id identifier rubyid_tail'>tail</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_side'>side</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_modifier'>modifier</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='comment'># ダメージ10固定で命中判定を行う
+</span>  <span class='kw'>return</span> <span class='id identifier rubyid_getHitResult'>getHitResult</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span> <span class='int'>10</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_tail'>tail</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="getBaseValue-instance_method">
   
     #<strong>getBaseValue</strong>(baseString)  &#x21d2; <tt>Object</tt> 
@@ -748,16 +1176,16 @@
       <pre class="lines">
 
 
-131
-132
-133
-134
-135
-136
-137</pre>
+163
+164
+165
+166
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getBaseValue'>getBaseValue</span><span class='lparen'>(</span><span class='id identifier rubyid_baseString'>baseString</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -765,72 +1193,6 @@
 
   <span class='id identifier rubyid_base'>base</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ArithmeticEvaluator.html" title="BCDice::ArithmeticEvaluator (module)">ArithmeticEvaluator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_eval'><span class='object_link'><a href="../ArithmeticEvaluator.html#eval-class_method" title="BCDice::ArithmeticEvaluator.eval (method)">eval</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_baseString'>baseString</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_base'>base</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="getCheckDieResult-instance_method">
-  
-    #<strong>getCheckDieResult</strong>(damage)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 275</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_getCheckDieResult'>getCheckDieResult</span><span class='lparen'>(</span><span class='id identifier rubyid_damage'>damage</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_damage'>damage</span> <span class='op'>&gt;=</span> <span class='int'>6</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>死亡</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
-
-  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span>  <span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span>
-           <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>  <span class='int'>5</span><span class='rbracket'>]</span><span class='comma'>,</span>
-           <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>  <span class='int'>7</span><span class='rbracket'>]</span><span class='comma'>,</span>
-           <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>  <span class='int'>10</span><span class='rbracket'>]</span><span class='comma'>,</span>
-           <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>  <span class='int'>11</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
-
-  <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_number'>get_table_by_number</span><span class='lparen'>(</span><span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_dice2'>dice2</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_total'>total</span> <span class='op'>=</span> <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>+</span> <span class='id identifier rubyid_dice2'>dice2</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_total'>total</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total'>total</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice1'>dice1</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice2'>dice2</span><span class='embexpr_end'>}</span><span class='tstring_content'>]&gt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_text'>text</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -852,20 +1214,20 @@
       <pre class="lines">
 
 
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201</pre>
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 191</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 223</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getDamageInfo'>getDamageInfo</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_isLrm'>isLrm</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_damage'>damage</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='kw'>if</span> <span class='id identifier rubyid_dice'>dice</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -959,39 +1321,39 @@
       <pre class="lines">
 
 
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189</pre>
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getDamages'>getDamages</span><span class='lparen'>(</span><span class='id identifier rubyid_damageFunc'>damageFunc</span><span class='comma'>,</span> <span class='id identifier rubyid_partTable'>partTable</span><span class='comma'>,</span> <span class='id identifier rubyid_damages'>damages</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_resultText'>resultText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -1043,29 +1405,6 @@
       <pre class="lines">
 
 
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
 119
 120
 121
@@ -1076,13 +1415,45 @@
 126
 127
 128
-129</pre>
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHitResult'>getHitResult</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='id identifier rubyid_damageFunc'>damageFunc</span><span class='comma'>,</span> <span class='id identifier rubyid_tail'>tail</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([LCR][LU]?)?(\+\d+)?&gt;=(\d+)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_tail'>tail</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A([LCR][LU]?)?(\+\d+)?&gt;=(\d+)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_tail'>tail</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
 
   <span class='id identifier rubyid_side'>side</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span>
@@ -1093,7 +1464,7 @@
 
   <span class='id identifier rubyid_partTable'>partTable</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="BattleTech/HitPart.html" title="BCDice::GameSystem::BattleTech::HitPart (class)">HitPart</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="BattleTech/HitPart.html#TABLES-constant" title="BCDice::GameSystem::BattleTech::HitPart::TABLES (constant)">TABLES</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_side'>side</span><span class='rbracket'>]</span>
 
-  <span class='id identifier rubyid_resultTexts'>resultTexts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_resultLines'>resultLines</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_damages'>damages</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='id identifier rubyid_hitCount'>hitCount</span> <span class='op'>=</span> <span class='int'>0</span>
 
@@ -1105,15 +1476,24 @@
       <span class='id identifier rubyid_damages'>damages</span><span class='comma'>,</span> <span class='id identifier rubyid_damageText'>damageText</span> <span class='op'>=</span> <span class='id identifier rubyid_getDamages'>getDamages</span><span class='lparen'>(</span><span class='id identifier rubyid_damageFunc'>damageFunc</span><span class='comma'>,</span> <span class='id identifier rubyid_partTable'>partTable</span><span class='comma'>,</span> <span class='id identifier rubyid_damages'>damages</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_hitResult'>hitResult</span> <span class='op'>+=</span> <span class='id identifier rubyid_damageText'>damageText</span>
     <span class='kw'>end</span>
-    <span class='id identifier rubyid_resultTexts'>resultTexts</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_hitResult'>hitResult</span>
+    <span class='id identifier rubyid_resultLines'>resultLines</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_hitResult'>hitResult</span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_resultTexts'>resultTexts</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hitCount'>hitCount</span><span class='embexpr_end'>}</span><span class='tstring_content'>回命中</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='comment'># 命中したか？
+</span>  <span class='id identifier rubyid_hit'>hit</span> <span class='op'>=</span> <span class='id identifier rubyid_hitCount'>hitCount</span> <span class='op'>&gt;</span> <span class='int'>0</span>
 
-  <span class='id identifier rubyid_totalResultText'>totalResultText</span> <span class='op'>=</span> <span class='id identifier rubyid_resultTexts'>resultTexts</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_totalResultText'>totalResultText</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> 命中箇所：</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_getTotalDamage'>getTotalDamage</span><span class='lparen'>(</span><span class='id identifier rubyid_damages'>damages</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_hitCount'>hitCount</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_hitCountText'>hitCountText</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hitCount'>hitCount</span><span class='embexpr_end'>}</span><span class='tstring_content'>回命中</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_hitDetails'>hitDetails</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_hit'>hit</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hitCountText'>hitCountText</span><span class='embexpr_end'>}</span><span class='tstring_content'> 命中箇所：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_getTotalDamage'>getTotalDamage</span><span class='lparen'>(</span><span class='id identifier rubyid_damages'>damages</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_hitCountText'>hitCountText</span>
+    <span class='kw'>end</span>
+  <span class='id identifier rubyid_resultLines'>resultLines</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_hitDetails'>hitDetails</span><span class='rparen'>)</span>
 
-  <span class='kw'>return</span> <span class='id identifier rubyid_totalResultText'>totalResultText</span>
+  <span class='id identifier rubyid_resultText'>resultText</span> <span class='op'>=</span> <span class='id identifier rubyid_resultLines'>resultLines</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_hit'>hit</span> <span class='op'>?</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'><span class='object_link'><a href="../Result.html#success-class_method" title="BCDice::Result.success (method)">success</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_resultText'>resultText</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'><span class='object_link'><a href="../Result.html#failure-class_method" title="BCDice::Result.failure (method)">failure</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_resultText'>resultText</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1182,39 +1562,39 @@
       <pre class="lines">
 
 
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273</pre>
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 244</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 276</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHitResultOne'>getHitResultOne</span><span class='lparen'>(</span><span class='id identifier rubyid_damage_text'>damage_text</span><span class='comma'>,</span> <span class='id identifier rubyid_hit_part_table'>hit_part_table</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hit_part_roll_result'>hit_part_roll_result</span> <span class='op'>=</span> <span class='id identifier rubyid_hit_part_table'>hit_part_table</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
@@ -1266,26 +1646,26 @@
       <pre class="lines">
 
 
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155</pre>
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 171</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getHitText'>getHitText</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
@@ -1324,46 +1704,46 @@
       <pre class="lines">
 
 
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
 235
 236
 237
 238
-239</pre>
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 203</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 235</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getTotalDamage'>getTotalDamage</span><span class='lparen'>(</span><span class='id identifier rubyid_damages'>damages</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parts'>parts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
@@ -1444,21 +1824,21 @@
       <pre class="lines">
 
 
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92</pre>
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getXrmDamage'>getXrmDamage</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="BattleTech/UnknownXRMError.html" title="BCDice::GameSystem::BattleTech::UnknownXRMError (class)">UnknownXRMError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unknown XRM: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="#XRM_DAMAGE_TABLES-constant" title="BCDice::GameSystem::BattleTech::XRM_DAMAGE_TABLES (constant)">XRM_DAMAGE_TABLES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
@@ -1477,12 +1857,71 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="ppc_parser-instance_method">
+  
+    #<strong>ppc_parser</strong>  &#x21d2; <tt><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Command::Parser</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns PPCコマンドの構文解析器.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Command::Parser</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>PPCコマンドの構文解析器</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BattleTech.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ppc_parser'>ppc_parser</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_ppc_parser'>ppc_parser</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Thu Apr  1 03:10:03 2021 by
+  Generated on Wed Jun  9 12:08:51 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>
