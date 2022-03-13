@@ -178,6 +178,7 @@
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・判定コマンド(nMYZx+x+x)
 </span><span class='tstring_content'>    (難易度)MYZ(能力ダイス数)+(技能ダイス数)+(アイテムダイス数)  # (1と6を数え、プッシュ可能数を表示)
+</span><span class='tstring_content'>    (難易度)MYZ(能力ダイス数)-(技能ダイス数)+(アイテムダイス数)  # (1と6を数え、プッシュ可能数を表示、技能のマイナス指定)
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>    ※ 難易度と技能、アイテムダイス数は省略可能
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
@@ -230,6 +231,22 @@
         </dt>
         <dd><pre class="code"><span class='int'>3</span></pre></dd>
       
+        <dt id="SKILL_SIGNED_INDEX-constant" class="">SKILL_SIGNED_INDEX =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>技能値ダイス符号のインデックス</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+      
         <dt id="SKILL_INDEX-constant" class="">SKILL_INDEX =
           <div class="docstring">
   <div class="discussion">
@@ -244,13 +261,13 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+        <dd><pre class="code"><span class='int'>6</span></pre></dd>
       
-        <dt id="MODIFIED_INDEX-constant" class="">MODIFIED_INDEX =
+        <dt id="GEAR_INDEX-constant" class="">GEAR_INDEX =
           <div class="docstring">
   <div class="discussion">
     
-<p>修正ダイスのインデックス</p>
+<p>アイテムダイスのインデックス</p>
 
 
   </div>
@@ -260,7 +277,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='int'>7</span></pre></dd>
+        <dd><pre class="code"><span class='int'>8</span></pre></dd>
       
     </dl>
   
@@ -474,18 +491,18 @@
       <pre class="lines">
 
 
-34
-35
 36
 37
 38
 39
 40
 41
-42</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dice_info_init'>dice_info_init</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='ivar'>@total_success_dice</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -516,8 +533,6 @@
       <pre class="lines">
 
 
-44
-45
 46
 47
 48
@@ -567,13 +582,25 @@
 92
 93
 94
-95</pre>
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A(\d+)?(YZE|MYZ)(\d+)(\+(\d+))?(\+(\d+))?</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A(\d+)?(YZE|MYZ)(\d+)((\+|-)(\d+))?(\+(\d+))?</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
     <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
@@ -601,18 +628,27 @@
     <span class='id identifier rubyid_dice_pool'>dice_pool</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#SKILL_INDEX-constant" title="BCDice::GameSystem::YearZeroEngine::SKILL_INDEX (constant)">SKILL_INDEX</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='id identifier rubyid_skill_dice_text'>skill_dice_text</span><span class='comma'>,</span> <span class='id identifier rubyid_success_dice'>success_dice</span><span class='comma'>,</span> <span class='id identifier rubyid_botch_dice'>botch_dice</span> <span class='op'>=</span> <span class='id identifier rubyid_make_dice_roll'>make_dice_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='rparen'>)</span>
 
-    <span class='ivar'>@total_success_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_success_dice'>success_dice</span>
+    <span class='id identifier rubyid_skill_unsigned'>skill_unsigned</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#SKILL_SIGNED_INDEX-constant" title="BCDice::GameSystem::YearZeroEngine::SKILL_SIGNED_INDEX (constant)">SKILL_SIGNED_INDEX</a></span></span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_command_type'>command_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>YZE</span><span class='tstring_end'>&#39;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_skill_unsigned'>skill_unsigned</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span>
+      <span class='comment'># YZEはシンプルに動作するコマンドなのでマイナス技能の処理は対応しない。
+</span>      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>YZEコマンドでは技能ダイスをマイナス指定できません。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_command_type'>command_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MYZ</span><span class='tstring_end'>&#39;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_skill_unsigned'>skill_unsigned</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span>
+      <span class='ivar'>@total_success_dice</span> <span class='op'>-=</span> <span class='id identifier rubyid_success_dice'>success_dice</span> <span class='comment'># マイナス技能の成功は通常の成功と相殺される
+</span>    <span class='kw'>else</span>
+      <span class='ivar'>@total_success_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_success_dice'>success_dice</span>
+    <span class='kw'>end</span>
+
     <span class='ivar'>@total_botch_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_botch_dice'>botch_dice</span>
-    <span class='ivar'>@skill_botch_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_botch_dice'>botch_dice</span> <span class='comment'># 技能ダイスの1はpushで振り直し可能
-</span>    <span class='ivar'>@push_dice</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span> <span class='op'>-</span> <span class='id identifier rubyid_success_dice'>success_dice</span><span class='rparen'>)</span> <span class='comment'># 技能ダイスのみ1を含む
+    <span class='ivar'>@skill_botch_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_botch_dice'>botch_dice</span> <span class='comment'># 技能ダイスの1はpushで振り直し可能（例えマイナス技能でも）
+</span>    <span class='ivar'>@push_dice</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span> <span class='op'>-</span> <span class='id identifier rubyid_success_dice'>success_dice</span><span class='rparen'>)</span> <span class='comment'># 技能ダイスのみ1を含むので、ここでは1を計算に入れない
 </span>
-    <span class='id identifier rubyid_dice_count_text'>dice_count_text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='embexpr_end'>}</span><span class='tstring_content'>D6)</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id identifier rubyid_dice_text'>dice_text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skill_dice_text'>skill_dice_text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_dice_count_text'>dice_count_text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skill_unsigned'>skill_unsigned</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='embexpr_end'>}</span><span class='tstring_content'>D6)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_dice_text'>dice_text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skill_unsigned'>skill_unsigned</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skill_dice_text'>skill_dice_text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
-  <span class='kw'>if</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#MODIFIED_INDEX-constant" title="BCDice::GameSystem::YearZeroEngine::MODIFIED_INDEX (constant)">MODIFIED_INDEX</a></span></span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_dice_pool'>dice_pool</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#MODIFIED_INDEX-constant" title="BCDice::GameSystem::YearZeroEngine::MODIFIED_INDEX (constant)">MODIFIED_INDEX</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='id identifier rubyid_modified_dice_text'>modified_dice_text</span><span class='comma'>,</span> <span class='id identifier rubyid_success_dice'>success_dice</span><span class='comma'>,</span> <span class='id identifier rubyid_botch_dice'>botch_dice</span> <span class='op'>=</span> <span class='id identifier rubyid_make_dice_roll'>make_dice_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#GEAR_INDEX-constant" title="BCDice::GameSystem::YearZeroEngine::GEAR_INDEX (constant)">GEAR_INDEX</a></span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_dice_pool'>dice_pool</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#GEAR_INDEX-constant" title="BCDice::GameSystem::YearZeroEngine::GEAR_INDEX (constant)">GEAR_INDEX</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='id identifier rubyid_gear_dice_text'>gear_dice_text</span><span class='comma'>,</span> <span class='id identifier rubyid_success_dice'>success_dice</span><span class='comma'>,</span> <span class='id identifier rubyid_botch_dice'>botch_dice</span> <span class='op'>=</span> <span class='id identifier rubyid_make_dice_roll'>make_dice_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='rparen'>)</span>
 
     <span class='ivar'>@total_success_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_success_dice'>success_dice</span>
     <span class='ivar'>@total_botch_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_botch_dice'>botch_dice</span>
@@ -620,8 +656,9 @@
 </span>    <span class='ivar'>@push_dice</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='id identifier rubyid_success_dice'>success_dice</span> <span class='op'>+</span> <span class='id identifier rubyid_botch_dice'>botch_dice</span><span class='rparen'>)</span><span class='rparen'>)</span>
 
     <span class='id identifier rubyid_dice_count_text'>dice_count_text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='embexpr_end'>}</span><span class='tstring_content'>D6)</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id identifier rubyid_dice_text'>dice_text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_modified_dice_text'>modified_dice_text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_dice_text'>dice_text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gear_dice_text'>gear_dice_text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
+
   <span class='kw'>return</span> <span class='id identifier rubyid_make_result_text'>make_result_text</span><span class='lparen'>(</span><span class='id identifier rubyid_command_type'>command_type</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_count_text'>dice_count_text</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_text'>dice_text</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -644,16 +681,16 @@
       <pre class="lines">
 
 
-125
-126
-127
-128
-129
-130
-131</pre>
+146
+147
+148
+149
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_make_dice_roll'>make_dice_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice_list'>dice_list</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
@@ -682,18 +719,18 @@
       <pre class="lines">
 
 
-97
-98
-99
-100
-101
-102
-103
-104
-105</pre>
+109
+110
+111
+112
+113
+114
+115
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_make_result_text'>make_result_text</span><span class='lparen'>(</span><span class='id identifier rubyid_command_type'>command_type</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_count_text'>dice_count_text</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_text'>dice_text</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_command_type'>command_type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>YZE</span><span class='tstring_end'>&#39;</span></span>
@@ -724,19 +761,37 @@
       <pre class="lines">
 
 
-119
-120
-121
-122
-123</pre>
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_make_result_with_myz'>make_result_with_myz</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_count_text'>dice_count_text</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_text'>dice_text</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_result_text'>result_text</span> <span class='op'>=</span> <span class='id identifier rubyid_make_result_with_yze'>make_result_with_yze</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_count_text'>dice_count_text</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_text'>dice_text</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_result_text'>result_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_count_text'>dice_count_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_text'>dice_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> 成功数:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@total_success_dice</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_atter_text'>atter_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n出目1：[能力：</span><span class='embexpr_beg'>#{</span><span class='ivar'>@base_botch_dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>,技能：</span><span class='embexpr_beg'>#{</span><span class='ivar'>@skill_botch_dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>,アイテム：</span><span class='embexpr_beg'>#{</span><span class='ivar'>@gear_botch_dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>) プッシュ可能=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@push_dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>ダイス</span><span class='tstring_end'>&quot;</span></span>
 
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n出目1：[能力：</span><span class='embexpr_beg'>#{</span><span class='ivar'>@base_botch_dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>,技能：</span><span class='embexpr_beg'>#{</span><span class='ivar'>@skill_botch_dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>,アイテム：</span><span class='embexpr_beg'>#{</span><span class='ivar'>@gear_botch_dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>) プッシュ可能=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@push_dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>ダイス</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='ivar'>@difficulty</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='kw'>if</span> <span class='ivar'>@total_success_dice</span> <span class='op'>&gt;=</span> <span class='ivar'>@difficulty</span>
+      <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'><span class='object_link'><a href="../Result.html#success-class_method" title="BCDice::Result.success (method)">success</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> 難易度=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@difficulty</span><span class='embexpr_end'>}</span><span class='tstring_content'>:判定成功！</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_atter_text'>atter_text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'><span class='object_link'><a href="../Result.html#failure-class_method" title="BCDice::Result.failure (method)">failure</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> 難易度=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@difficulty</span><span class='embexpr_end'>}</span><span class='tstring_content'>:判定失敗！</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_atter_text'>atter_text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_atter_text'>atter_text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -758,28 +813,28 @@
       <pre class="lines">
 
 
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117</pre>
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/YearZeroEngine.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_make_result_with_yze'>make_result_with_yze</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_count_text'>dice_count_text</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_text'>dice_text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result_text'>result_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_count_text'>dice_count_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_text'>dice_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> 成功数:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@total_success_dice</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>if</span> <span class='ivar'>@difficulty</span> <span class='op'>&gt;</span> <span class='int'>0</span>
     <span class='kw'>if</span> <span class='ivar'>@total_success_dice</span> <span class='op'>&gt;=</span> <span class='ivar'>@difficulty</span>
-      <span class='id identifier rubyid_result_text'>result_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> 難易度=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@difficulty</span><span class='embexpr_end'>}</span><span class='tstring_content'>:判定成功！</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'><span class='object_link'><a href="../Result.html#success-class_method" title="BCDice::Result.success (method)">success</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> 難易度=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@difficulty</span><span class='embexpr_end'>}</span><span class='tstring_content'>:判定成功！</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='kw'>else</span>
-      <span class='id identifier rubyid_result_text'>result_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> 難易度=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@difficulty</span><span class='embexpr_end'>}</span><span class='tstring_content'>:判定失敗！</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'><span class='object_link'><a href="../Result.html#failure-class_method" title="BCDice::Result.failure (method)">failure</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result_text'>result_text</span><span class='embexpr_end'>}</span><span class='tstring_content'> 難易度=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@difficulty</span><span class='embexpr_end'>}</span><span class='tstring_content'>:判定失敗！</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_result_text'>result_text</span>
@@ -794,7 +849,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun  9 12:08:58 2021 by
+  Generated on Sun Mar 13 15:20:39 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

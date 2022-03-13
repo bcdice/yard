@@ -143,7 +143,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#choise-instance_method" title="#choise (instance method)">#<strong>choise</strong>(value, day)  &#x21d2; Object </a>
+      <a href="#choice-instance_method" title="#choice (instance method)">#<strong>choice</strong>(value, day)  &#x21d2; Object </a>
     
 
     
@@ -321,9 +321,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="choise-instance_method">
+  <h3 class="signature " id="choice-instance_method">
   
-    #<strong>choise</strong>(value, day)  &#x21d2; <tt>Object</tt> 
+    #<strong>choice</strong>(value, day)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -364,7 +364,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/one_way_heroics/random_event_table.rb', line 66</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_choise'>choise</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_day'>day</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_choice'>choice</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_day'>day</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -413,7 +413,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_roll_with_day'>roll_with_day</span><span class='lparen'>(</span><span class='id identifier rubyid_day'>day</span><span class='comma'>,</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_chosen'>chosen</span> <span class='op'>=</span> <span class='id identifier rubyid_choise'>choise</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_day'>day</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_chosen'>chosen</span> <span class='op'>=</span> <span class='id identifier rubyid_choice'>choice</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_day'>day</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_chosen'>chosen</span> <span class='op'>=</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_chosen'>chosen</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:roll_with_day</span><span class='rparen'>)</span>
@@ -441,7 +441,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun  9 12:09:03 2021 by
+  Generated on Sun Mar 13 15:20:44 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

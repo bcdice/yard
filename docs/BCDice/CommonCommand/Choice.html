@@ -132,6 +132,20 @@ choice(A[], B[], C[]) -&gt; &quot;A[]&quot;, &quot;B[]&quot;, &quot;C[]&quot; �
 choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; から選ぶ
 </code></pre>
 
+<p>“choice”の後に数を指定することで、列挙した要素から重複なしで複数個を選ぶ</p>
+
+<pre class="code ruby"><code class="ruby">choice2[A,B,C] -&gt; &quot;A&quot;, &quot;B&quot;, &quot;C&quot; から重複なしで2個選ぶ
+</code></pre>
+
+<p>指定したい要素が「AからD」のように連続する項目の場合に「A-D」と省略して記述できる 略記の展開はアルファベット1文字もしくは数字の範囲に限り、略記1つを指定したときのみ展開される</p>
+
+<pre class="code ruby"><code class="ruby">choice[A-D] -&gt; choice[A,B,C,D] と等価
+choice[b-g] -&gt; choice[b,c,d,e,f,g] と等価
+choice[3-7] -&gt; choice[3,4,5,6,7] と等価
+choice[A-D,Z] -&gt; 展開されない。 &quot;A-D&quot;, &quot;Z&quot; から選ぶ
+choice[D-A] -&gt; 展開されない。
+</code></pre>
+
 
   </div>
 </div>
@@ -169,6 +183,15 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
   <span class='label'>bracket:</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
   <span class='label'>paren:</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
   <span class='label'>space:</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s+</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="DELIMITER_CHAR-constant" class="">DELIMITER_CHAR =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='label'>bracket:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>paren:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>space:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
 <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
         <dt id="TERMINATION-constant" class="">TERMINATION =
@@ -262,7 +285,7 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(secret:, block_delimiter:, items:)  &#x21d2; Choice </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(secret:, block_delimiter:, takes:, items:)  &#x21d2; Choice </a>
     
 
     
@@ -316,7 +339,7 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(secret:, block_delimiter:, items:)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::CommonCommand::Choice (class)">Choice</a></span></tt> 
+    #<strong>initialize</strong>(secret:, block_delimiter:, takes:, items:)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::CommonCommand::Choice (class)">Choice</a></span></tt> 
   
 
   
@@ -358,6 +381,22 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
   
     <li>
       
+        <span class='name'>takes</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>何個チョイスするか</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
         <span class='name'>items</span>
       
       
@@ -376,18 +415,20 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
       <pre class="lines">
 
 
-123
-124
-125
-126
-127</pre>
+185
+186
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/choice.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/choice.rb', line 185</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>secret:</span><span class='comma'>,</span> <span class='label'>block_delimiter:</span><span class='comma'>,</span> <span class='label'>items:</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>secret:</span><span class='comma'>,</span> <span class='label'>block_delimiter:</span><span class='comma'>,</span> <span class='label'>takes:</span><span class='comma'>,</span> <span class='label'>items:</span><span class='rparen'>)</span>
   <span class='ivar'>@secret</span> <span class='op'>=</span> <span class='id identifier rubyid_secret'>secret</span>
   <span class='ivar'>@block_delimiter</span> <span class='op'>=</span> <span class='id identifier rubyid_block_delimiter'>block_delimiter</span>
+  <span class='ivar'>@takes</span> <span class='op'>=</span> <span class='id identifier rubyid_takes'>takes</span>
   <span class='ivar'>@items</span> <span class='op'>=</span> <span class='id identifier rubyid_items'>items</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -476,13 +517,13 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
       <pre class="lines">
 
 
-64
-65
-66
-67</pre>
+81
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/choice.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/choice.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid__game_system'>_game_system</span><span class='comma'>,</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -514,28 +555,32 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
       <pre class="lines">
 
 
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150</pre>
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/choice.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/choice.rb', line 214</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_expr'>expr</span>
+  <span class='id identifier rubyid_takes'>takes</span> <span class='op'>=</span> <span class='ivar'>@takes</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='ivar'>@takes</span>
+
   <span class='kw'>case</span> <span class='ivar'>@block_delimiter</span>
   <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Choice/BlockDelimiter.html" title="BCDice::CommonCommand::Choice::BlockDelimiter (module)">BlockDelimiter</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Choice/BlockDelimiter.html#SPACE-constant" title="BCDice::CommonCommand::Choice::BlockDelimiter::SPACE (constant)">SPACE</a></span></span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>choice </span><span class='embexpr_beg'>#{</span><span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>choice</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_takes'>takes</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Choice/BlockDelimiter.html" title="BCDice::CommonCommand::Choice::BlockDelimiter (module)">BlockDelimiter</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Choice/BlockDelimiter.html#BRACKET-constant" title="BCDice::CommonCommand::Choice::BlockDelimiter::BRACKET (constant)">BRACKET</a></span></span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>choice[</span><span class='embexpr_beg'>#{</span><span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>choice</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_takes'>takes</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Choice/BlockDelimiter.html" title="BCDice::CommonCommand::Choice::BlockDelimiter (module)">BlockDelimiter</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Choice/BlockDelimiter.html#PAREN-constant" title="BCDice::CommonCommand::Choice::BlockDelimiter::PAREN (constant)">PAREN</a></span></span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>choice(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>choice</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_takes'>takes</span><span class='embexpr_end'>}</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -595,24 +640,44 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
       <pre class="lines">
 
 
-131
-132
-133
-134
-135
-136
-137
-138
-139</pre>
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/choice.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/common_command/choice.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_index'>roll_index</span><span class='lparen'>(</span><span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_chosen'>chosen</span> <span class='op'>=</span> <span class='ivar'>@items</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>100</span>
+    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>項目数は100以下としてください</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_items'>items</span> <span class='op'>=</span> <span class='ivar'>@items</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_chosens'>chosens</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@takes</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_index'>roll_index</span><span class='lparen'>(</span><span class='id identifier rubyid_items'>items</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_chosens'>chosens</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_items'>items</span><span class='period'>.</span><span class='id identifier rubyid_delete_at'>delete_at</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 
   <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+    <span class='id identifier rubyid_chosen'>chosen</span> <span class='op'>=</span> <span class='id identifier rubyid_chosens'>chosens</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#DELIMITER_CHAR-constant" title="BCDice::CommonCommand::Choice::DELIMITER_CHAR (constant)">DELIMITER_CHAR</a></span></span><span class='lbracket'>[</span><span class='ivar'>@block_delimiter</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
     <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_secret'>secret</span> <span class='op'>=</span> <span class='ivar'>@secret</span>
     <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_expr'>expr</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_chosen'>chosen</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
@@ -627,7 +692,7 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
 </div>
 
       <div id="footer">
-  Generated on Wed Jun  9 12:08:49 2021 by
+  Generated on Sun Mar 13 15:20:29 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

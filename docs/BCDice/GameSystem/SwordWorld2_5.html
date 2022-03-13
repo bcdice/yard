@@ -217,6 +217,12 @@
 </span><span class='tstring_content'>  ・グレイテストフォーチュンは末尾に gf
 </span><span class='tstring_content'>  　例）K20gf　K30+24@8GF　K40+24@8$12r5gf
 </span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・威力表を1d+sfで参照 クリティカル後も継続 sf4
+</span><span class='tstring_content'>  　例）k10sf4　k0+5sf4@13　k70+26sf3@9
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・威力表を1d+tfで参照 クリティカル後は2dで参照 tf3
+</span><span class='tstring_content'>  　例）k10tf3　k0+5tf4@13　k70+26tf3@9
+</span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・超越判定用に2d6ロールに 2D6@10 書式でクリティカル値付与が可能に。
 </span><span class='tstring_content'>  　例）2D6@10　2D6@10+11&gt;=30
 </span><span class='tstring_content'>
@@ -496,12 +502,6 @@
       <pre class="lines">
 
 
-164
-165
-166
-167
-168
-169
 170
 171
 172
@@ -518,10 +518,16 @@
 183
 184
 185
-186</pre>
+186
+187
+188
+189
+190
+191
+192</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_druid_dice'>druid_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_power_list'>power_list</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice_list'>dice_list</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
@@ -566,12 +572,6 @@
       <pre class="lines">
 
 
-141
-142
-143
-144
-145
-146
 147
 148
 149
@@ -583,10 +583,16 @@
 155
 156
 157
-158</pre>
+158
+159
+160
+161
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -626,12 +632,6 @@
       <pre class="lines">
 
 
-188
-189
-190
-191
-192
-193
 194
 195
 196
@@ -641,10 +641,16 @@
 200
 201
 202
-203</pre>
+203
+204
+205
+206
+207
+208
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_abyss_curse_table'>get_abyss_curse_table</span>
   <span class='id identifier rubyid_table_result'>table_result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#ABYSS_CURSE_TABLE-constant" title="BCDice::GameSystem::SwordWorld2_5::ABYSS_CURSE_TABLE (constant)">ABYSS_CURSE_TABLE</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
@@ -682,12 +688,12 @@
       <pre class="lines">
 
 
-160
-161
-162</pre>
+166
+167
+168</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rating_parser'>rating_parser</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="SwordWorld/RatingParser.html" title="BCDice::GameSystem::SwordWorld::RatingParser (class)">RatingParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SwordWorld/RatingParser.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld::RatingParser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>version:</span> <span class='symbol'>:v2_5</span><span class='rparen'>)</span>
@@ -702,7 +708,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun  9 12:08:58 2021 by
+  Generated on Sun Mar 13 15:20:39 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>
