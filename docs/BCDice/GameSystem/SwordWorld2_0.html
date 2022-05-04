@@ -293,28 +293,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_ability_by_dice-instance_method" title="#get_ability_by_dice (instance method)">#<strong>get_ability_by_dice</strong>(dice)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#get_fumble_table-instance_method" title="#get_fumble_table (instance method)">#<strong>get_fumble_table</strong>  &#x21d2; Object </a>
     
 
@@ -630,7 +608,7 @@
       <span class='kw'>return</span> <span class='kw'>nil</span>
     <span class='kw'>end</span>
 
-    <span class='id identifier rubyid_node'>node</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SwordWorld2_0/TranscendentTest.html" title="BCDice::GameSystem::SwordWorld2_0::TranscendentTest (class)">TranscendentTest</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SwordWorld2_0/TranscendentTest.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld2_0::TranscendentTest#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span><span class='comma'>,</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_modify_number'>modify_number</span><span class='comma'>,</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_target_number'>target_number</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_node'>node</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SwordWorld2_0/TranscendentTest.html" title="BCDice::GameSystem::SwordWorld2_0::TranscendentTest (class)">TranscendentTest</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SwordWorld2_0/TranscendentTest.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld2_0::TranscendentTest#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span><span class='comma'>,</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_modify_number'>modify_number</span><span class='comma'>,</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_target_number'>target_number</span><span class='comma'>,</span> <span class='ivar'>@locale</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_node'>node</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
   <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>FT</span><span class='tstring_end'>&#39;</span></span>
     <span class='id identifier rubyid_get_fumble_table'>get_fumble_table</span>
@@ -639,36 +617,6 @@
   <span class='kw'>else</span>
     <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="get_ability_by_dice-instance_method">
-  
-    #<strong>get_ability_by_dice</strong>(dice)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-150
-151
-152</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 150</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_get_ability_by_dice'>get_ability_by_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span><span class='rparen'>)</span>
-  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>器用度</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>敏捷度</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>筋力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>生命力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>知力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>精神力</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_dice'>dice</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -690,33 +638,17 @@
       <pre class="lines">
 
 
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165</pre>
+147
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_fumble_table'>get_fumble_table</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>この表を2回振り、その両方を適用する。（同じ出目による影響は累積しない）。この自動失敗により得られる経験点は、+50点される</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ダメージに、攻撃者を強化している「剣のかけら」の数が追加される</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ダメージに、攻撃者の「レベル」が追加される</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ダメージ決定を2回行い、より高い方を採用する</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>合算ダメージを2倍する</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>防護点無効</span><span class='tstring_end'>&#39;</span></span>
-  <span class='rbracket'>]</span>
-  <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_num'>num</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>防御ファンブル表(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_num'>num</span><span class='embexpr_end'>}</span><span class='tstring_content'>) → </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_text'>text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_i18n'><span class='object_link'><a href="../DiceTable/Table.html#from_i18n-class_method" title="BCDice::DiceTable::Table.from_i18n (method)">from_i18n</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SwordWorld2_0.FumbleTable</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@locale</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -738,33 +670,17 @@
       <pre class="lines">
 
 
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178</pre>
+152
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_tangle_table'>get_tangle_table</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='lbracket'>[</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭や顔：牙や噛みつきなどにおける命中力判定及び、魔法の行使やブレスに-2のペナルティ修正を受ける</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器や盾：武器の使用不可、又は盾の回避力修正及び防護点を無効化する</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>腕や手：武器や爪などにおける命中力判定に-2のペナルティ修正、盾を持つ腕方の腕ならその盾の回避力修正及び防護点を無効化する</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>脚や足：移動不可、更に回避力判定に-2のペナルティ修正を受ける ※両足に絡んでも累積しない</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴体：生命・精神抵抗力を基準値に用いる判定を除き、あらゆる行為判定に-1のペナルティ修正を受ける</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>特殊：尻尾や翼などに命中。絡められた部位を使用する判定において-2のペナルティ修正、またはそこが使えていたことによるボーナス修正を失う ※存在しない場合は決め直し</span><span class='tstring_end'>&#39;</span></span>
-  <span class='rbracket'>]</span>
-  <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='id identifier rubyid_num'>num</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_1d6'>get_table_by_1d6</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>絡み効果表(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_num'>num</span><span class='embexpr_end'>}</span><span class='tstring_content'>) → </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_text'>text</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_i18n'><span class='object_link'><a href="../DiceTable/Table.html#from_i18n-class_method" title="BCDice::DiceTable::Table.from_i18n (method)">from_i18n</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SwordWorld2_0.TangleTable</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@locale</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -786,12 +702,12 @@
       <pre class="lines">
 
 
+135
 136
-137
-138</pre>
+137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_growth'>growth</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='int'>1</span><span class='rparen'>)</span>
   <span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>1</span><span class='op'>..</span><span class='id identifier rubyid_count'>count</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_growth_step'>growth_step</span> <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> | </span><span class='tstring_end'>&quot;</span></span>
@@ -816,27 +732,23 @@
       <pre class="lines">
 
 
+139
 140
 141
 142
 143
 144
-145
-146
-147
-148</pre>
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 140</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_growth_step'>growth_step</span>
-  <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_d2'>d2</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_i18n'><span class='object_link'><a href="../DiceTable/Table.html#from_i18n-class_method" title="BCDice::DiceTable::Table.from_i18n (method)">from_i18n</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SwordWorld2_0.GrowthTable</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@locale</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r1'>r1</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r2'>r2</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_a1'>a1</span> <span class='op'>=</span> <span class='id identifier rubyid_get_ability_by_dice'>get_ability_by_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_a2'>a2</span> <span class='op'>=</span> <span class='id identifier rubyid_get_ability_by_dice'>get_ability_by_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_a1'>a1</span> <span class='op'>!=</span> <span class='id identifier rubyid_a2'>a2</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_d1'>d1</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_d2'>d2</span><span class='embexpr_end'>}</span><span class='tstring_content'>]-&gt;(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_a1'>a1</span><span class='embexpr_end'>}</span><span class='tstring_content'> or </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_a2'>a2</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_d1'>d1</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_d2'>d2</span><span class='embexpr_end'>}</span><span class='tstring_content'>]-&gt;(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_a1'>a1</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_r1'>r1</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>!=</span> <span class='id identifier rubyid_r2'>r2</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r1'>r1</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r2'>r2</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>]-&gt;(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r1'>r1</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='embexpr_end'>}</span><span class='tstring_content'> or </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r2'>r2</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r1'>r1</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r2'>r2</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>]-&gt;(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r1'>r1</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -904,28 +816,26 @@
 130
 131
 132
-133
-134</pre>
+133</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_0.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rollDice'>rollDice</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_round'>round</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_semi_fixed_val'>semi_fixed_val</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-    <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
+    <span class='comment'># 常に片方の出目を固定
+</span>    <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>+</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_semi_fixed_val'>semi_fixed_val</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_semi_fixed_val'>semi_fixed_val</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_round'>round</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_tmp_fixed_val'>tmp_fixed_val</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-    <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_round'>round</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_tmp_fixed_val'>tmp_fixed_val</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='comment'># 回転前だけ片方の出目を固定
+</span>    <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>+</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_tmp_fixed_val'>tmp_fixed_val</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_tmp_fixed_val'>tmp_fixed_val</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>end</span>
-  <span class='kw'>unless</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_greatest_fortune'>greatest_fortune</span>
-    <span class='kw'>return</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_round'>round</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>if</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_greatest_fortune'>greatest_fortune</span>
-    <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_greatest_fortune'>greatest_fortune</span>
+    <span class='comment'># グレイテスト・フォーチュン
+</span>    <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id identifier rubyid_dice'>dice</span> <span class='op'>*</span> <span class='int'>2</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_round'>round</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -938,7 +848,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 13 15:20:39 2022 by
+  Generated on Wed May  4 13:01:17 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

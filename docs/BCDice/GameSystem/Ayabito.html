@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::Ayabito
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::Ayabito";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">Ayabito</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::Ayabito
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::Ayabito</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/Ayabito.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Ayabito</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>あやびと</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>あやひと</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~TEXT</span>
+<span class='tstring_content'>  ・判定コマンド(xAB±y@c&gt;=z)
+</span><span class='tstring_content'>    x：サイコロの数(10以上の場合9個振り、それ以降を成功数2として加算する)
+</span><span class='tstring_content'>    ±y：成功数への補正(省略可)
+</span><span class='tstring_content'>    c：クリティカル値(@ごと省略可。省略時は6)
+</span><span class='tstring_content'>    z：目標値(妨害値など。&gt;=ごと省略可)
+</span><span class='tstring_content'>    (例) 4AB
+</span><span class='tstring_content'>         11AB&gt;=5
+</span><span class='tstring_content'>         5AB+1
+</span><span class='tstring_content'>         6AB@5&gt;=3
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・各種表
+</span><span class='tstring_content'>    感情表 ET
+</span><span class='tstring_content'>    帝都東京シーン表 TST / 場面演出シーン表 BST
+</span><span class='tstring_content'>    交流表 CET
+</span><span class='tstring_content'>    ファンブル表 FT
+</span><span class='tstring_content'>    封印期間表 LT
+</span><span class='heredoc_end'>TEXT</span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ET</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66Table.html" title="BCDice::DiceTable::D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66Table.html#initialize-instance_method" title="BCDice::DiceTable::D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>感情表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>信頼/不信感</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>好奇心/無関心</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>優越感/劣等感</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>好意/敵意</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>安心感/不安感</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>愛情/偏愛</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>21</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>同情/憐憫</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>親近感/疎外感</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>連帯感/隔意</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>尽力/面倒</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>貸し/借り</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>庇護欲/食傷</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>31</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>期待/反発</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>32</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>熱狂/心酔</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>幸福感/不快感</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>尊敬/軽蔑</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>憧憬/嫉妬</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>忠誠/服従</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>41</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>友情/侮蔑</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>42</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>競争心/警戒</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>43</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>感謝/後悔</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>感服/恐怖</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>興味/屈辱</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>誠意/憎悪</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>51</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>羨望/嫌悪</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>52</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>共感/懸念</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>53</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>傾倒/厭気</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>54</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>赦し/怒り</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>有為/苦手</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>恩義/不満</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>61</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>予感/困惑</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>62</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>懐旧/忘却</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>63</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>慕情/執着</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>64</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>夢中/退屈</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>65</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>贖罪/罪悪感</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>慈愛/殺意</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>帝都東京シーン表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子～巳までの任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［子］帝国大学の赤門、学生たちが今日も勉学に励んでいる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［丑］吉原の歓楽街。昼間は静かだが、夜は活気を見せてくれる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［寅］上野公園。桜に新緑、紅葉など、季節の顔を見せてくれる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［卯］浅草六区は今日も賑やか。浅草寺や仲見世には、多くの人々が行き交う。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［辰］凌雲閣。浅草十二階として親しまれる塔に昇り、周囲を一望する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［巳］丸の内の東京駅。構内の喧騒とは裏腹に、霞ヶ関は静かに時が流れる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［午］銀座をぶらぶらと歩く。百貨店が立ち並ぶこの街では、何でも買うことができるらしい。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［未］日比谷の帝国劇場。演目は、話題のトップスタアによる華やかなる歌劇のようだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［申］皇居のほとり。水面にうかぶ蓮の葉が、しずかに揺れている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［酉］明治神宮の境内。神聖なる雰囲気を味わうことができる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［戌］新たな東京の名所である新宿。今では東西を二分する街である。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［亥］日本帝国軍駐屯地。妖怪人間共同実働部隊の本部も敷地内にある。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>午～亥まで任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>場面演出シーン表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子～巳までの任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［子］人々が寝静まる帝都の夜。月に雲がかかるとともに、魔の香りが漂っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［丑］草木も眠る静けさの中、犬の遠吠えだけが聞こえてくる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［寅］一陣の風が吹き抜ける。風に乗った匂いが、妙に鼻をくすぐってきた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［卯］霧や朝もやに包まれる。向こうに見える姿は誰だろうか……</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［辰］帝都に朝日が射す。人々は起き出し、日々の営みを始める。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［巳］清廉な雰囲気の風景。鳥や虫の声、風にそよぐ木々の音が聞こえてくる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［午］時計の針がある時間を指し示す。刻を告げるチャイムや鐘が響き渡る。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［未］昼間の大通り。自動車や路面電車が走り、行き交う人々の雑踏が至るところで見られる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［申］夕刻、どこからともなく、定かではない声や物音が漏れてくる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［酉］瓦斯灯（がすとう）が通りを鮮やかに照らす。夜が街のもうひとつの顔を出し始める。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［戌］星空の下、月明かりが微かに夜道を照らしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［亥］光ひとつない暗闇の中。何者かの気配が蠢いている……</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>午～亥まで任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CET</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>交流表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情～性格までの任意のテーマを選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［感情］相手に抱いている感情、伝えるべきか伝えないべきか。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［人間］相手に人間という存在をどう思うか、聞いてみるとしよう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［友達］相手に友人や仲間について語ろう。話すことで分かる想いもあるだろう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［告白］相手に話していいか分からないが、自分の秘めたる想いを語ろう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［思い出］相手に、過去の思い出を話してみよう。相手から昔話をきけるかもしれない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［性格］相手に自身の性格を語ろう。表向きのみ話すか、奥底まで話してしまうかは、事と次第による。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［関係性］相手とは、いつからこうした関係だったのか。相手と関係性について話そう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［妖怪］相手に妖怪という存在をどう思うか、聞いてみるとしよう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［あやびと］相手に、自分があやびとである意味や意義を語ってみよう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［想い］相手が今、何かしら想う人や物事について聞いてみよう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［夢］相手に自分の夢を語ろう。未来の夢、かつて捨てた夢かもしれない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［半生］相手に自身の半生を語ろう。半生こそが、今の自分となるきっかけなのだから……</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>関係性～半生までの任意のテーマを選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>FT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ファンブル表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PCの【耐久値】を-5する(最低1)。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PCの【活力値】を-5する(最低1)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PCは戦闘ないしフェイズが終了するまで《アビリティ》を使用できない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PCは戦闘ないしフェイズが終了するまで[絆]を使用できない。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>セッション終了時まで、登場するエネミーすべての【耐久値】を+3する</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>セッション終了時まで、登場するエネミーすべてのダメージを+2する。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>封印期間表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='comment'># &#39;1日&#39;,
+</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1週間</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1ヶ月</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1年</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10年</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>50年</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>100年</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='comment'># &#39;500年&#39;,
+</span>    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_action-instance_method" title="#check_action (instance method)">#<strong>check_action</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; Ayabito </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Ayabito.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::Ayabito (class)">Ayabito</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Ayabito.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='ivar'>@sort_barabara_dice</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@round_type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#CEIL-constant" title="BCDice::RoundType::CEIL (constant)">CEIL</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_action-instance_method">
+  
+    #<strong>check_action</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_action'>check_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Command.html" title="BCDice::Command (module)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Command/Parser.html#initialize-instance_method" title="BCDice::Command::Parser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#CEIL-constant" title="BCDice::RoundType::CEIL (constant)">CEIL</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_has_prefix_number'><span class='object_link'><a href="../Command/Parser.html#has_prefix_number-instance_method" title="BCDice::Command::Parser#has_prefix_number (method)">has_prefix_number</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enable_critical'><span class='object_link'><a href="../Command/Parser.html#enable_critical-instance_method" title="BCDice::Command::Parser#enable_critical (method)">enable_critical</a></span></span><span class='period'>.</span><span class='id identifier rubyid_restrict_cmp_op_to'><span class='object_link'><a href="../Command/Parser.html#restrict_cmp_op_to-instance_method" title="BCDice::Command::Parser#restrict_cmp_op_to (method)">restrict_cmp_op_to</a></span></span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='symbol'>:&gt;=</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parsed'>parsed</span> <span class='op'>=</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_prefix_number'>prefix_number</span> <span class='op'>&lt;</span> <span class='int'>10</span>
+    <span class='id identifier rubyid_dice_cnt'>dice_cnt</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_prefix_number'>prefix_number</span>
+    <span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_dice_cnt'>dice_cnt</span> <span class='op'>=</span> <span class='int'>9</span>
+    <span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_prefix_number'>prefix_number</span> <span class='op'>-</span> <span class='int'>9</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_modify'>modify</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_modify_number'>modify_number</span>
+  <span class='id identifier rubyid_critical_target'>critical_target</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span> <span class='op'>||</span> <span class='int'>6</span>
+  <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_target_number'>target_number</span>
+
+  <span class='id identifier rubyid_dice_arr'>dice_arr</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+  <span class='id identifier rubyid_dice_str'>dice_str</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_has_critical'>has_critical</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_critical_target'>critical_target</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='int'>4</span> <span class='rbrace'>}</span> <span class='op'>+</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>*</span> <span class='int'>2</span>
+  <span class='id identifier rubyid_has_fumble'>has_fumble</span> <span class='op'>=</span> <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_has_fumble'>has_fumble</span>
+    <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>+=</span> <span class='id identifier rubyid_modify'>modify</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>&gt;=</span> <span class='int'>1</span> <span class='op'>:</span> <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_target'>target</span>
+
+  <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='embexpr_end'>}</span><span class='tstring_content'>B6&gt;=4)</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>*</span> <span class='int'>2</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_str'>dice_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>*</span> <span class='int'>2</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 成功数</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_cnt'>success_cnt</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>成功</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_has_critical'>has_critical</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>(クリティカル)</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_has_fumble'>has_fumble</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>(ファンブル)</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span> <span class='op'>=</span> <span class='id identifier rubyid_has_critical'>has_critical</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_fumble'>fumble</span> <span class='op'>=</span> <span class='id identifier rubyid_has_fumble'>has_fumble</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span> <span class='op'>=</span> <span class='op'>!</span><span class='id identifier rubyid_result'>result</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eval_game_system_specific_command-instance_method">
+  
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_check_action'>check_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::Ayabito::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed May  4 13:01:04 2022 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.1).
+</div>
+
+    </div>
+  </body>
+</html>

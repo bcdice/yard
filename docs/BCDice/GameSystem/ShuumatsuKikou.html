@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::ShuumatsuKikou
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::ShuumatsuKikou";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">ShuumatsuKikou</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::ShuumatsuKikou
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::ShuumatsuKikou</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/ShuumatsuKikou.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ShuumatsuKikou</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>終末紀行ＲＰＧ</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>しゆうまつきこう</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ダイスボットの使い方</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~HELP</span>
+<span class='tstring_content'>  ■判定
+</span><span class='tstring_content'>  xB6&gt;=5
+</span><span class='tstring_content'>  x: 能力値
+</span><span class='tstring_content'>  （汎用コマンドそのままです）
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■各種表
+</span><span class='tstring_content'>  資源の減少チェック: ResourceLose, RLose
+</span><span class='tstring_content'>  獲得資源決定: ResourceGain, RGain
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  □ランダムエリア決定表
+</span><span class='tstring_content'>  都市／荒野決定: RandomArea, RArea
+</span><span class='tstring_content'>  荒野エリア決定: RandomWaste, RWaste
+</span><span class='tstring_content'>  都市エリア決定: RandomUrban, RUrban
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  □ランダム障害シーン決定表
+</span><span class='tstring_content'>  シーン決定: RandomObs, RObs
+</span><span class='tstring_content'>  技術系Ａ: RandomObsTechA, ROTA
+</span><span class='tstring_content'>  技術系Ｂ: RandamObsTechB, ROTB
+</span><span class='tstring_content'>  生存系Ａ: RandomObsSurviveA, ROSA
+</span><span class='tstring_content'>  生存系Ｂ: RandomObsSurviveB, ROSB
+</span><span class='tstring_content'>  戦闘系Ａ: RandomObsCombatA, ROCA
+</span><span class='tstring_content'>  戦闘系Ｂ: RandomObsCombatB, ROCB
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  □ランダム旅情シーン決定表
+</span><span class='tstring_content'>  シーン決定: RandomEmo, REmo
+</span><span class='tstring_content'>  日常系Ａ: RandomEmoDailyA, REDA
+</span><span class='tstring_content'>  日常系Ｂ: RandomEmoDailyB, REDB
+</span><span class='tstring_content'>  日常系Ｃ: RandomEmoDailyC, REDC
+</span><span class='tstring_content'>  追憶系Ａ: RandomEmoReminiscenceA, RERA
+</span><span class='tstring_content'>  追憶系Ｂ: RandomEmoReminiscenceB, RERB
+</span><span class='tstring_content'>  追憶系Ｃ: RandomEmoReminiscenceC, RERC
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  □ランダム難所シーン決定表
+</span><span class='tstring_content'>  荒野系: RandomDangerousWaste, RDW
+</span><span class='tstring_content'>  都市系: RandomDangerousUrban, RDU
+</span><span class='heredoc_end'>HELP</span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ResourceLose</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>資源の減少チェック</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈食料〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈健康〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈電力〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈パーツ〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈ヴィークル〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［資源の減少チェック］をもう１回行なう。その際、減少する資源は１ではなく２となる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ResourceGain</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>獲得資源決定</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈食料〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈健康〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈電力〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈パーツ〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>〈ヴィークル〉</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>任意、好きな資源を手に入れる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomArea</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>都市／荒野決定</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>荒野エリア決定表へ（ → RWaste ）</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>都市エリア決定表へ（ → RUrban ）</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomWaste</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>荒野エリア決定</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>平原――地平線の果てまで続く、茫漠とした荒野。それを貫くように走るハイウェイの痕跡。その沿道に廃墟が点在している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>砂漠――砂漠がどこまでも広がっている。大海に浮かぶ島のように、倒壊した高層ビルが顔を出している。熱と渇きが旅人を苛む。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>汚染地帯――土も、水も、空気さえも、汚染物質で満たされた区域。ここでは呼吸すらも死を招く。あまり長居したい土地ではない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>雪原――視界一面を覆う雪の大地。ただそこにいるだけで、身体の熱が奪われていく。生命の活動を許さないモノトーンの世界だ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>山岳――旅人の前にそびえる巨大な山塊。山越えは落石や崩落の危険性など、通過するだけでリスクが高い。だが他に道はない。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomUrban</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>都市エリア決定</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>無人都市――かつて栄華を誇ったメトロポリス。だが今、旅人のほかに動いているものはいない。無数のビル群が墓標のようにそびえる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>要塞都市――巨大な城壁と、朽ち果てた無人防衛兵器群によって守られた要塞都市。この都市が守ろうとした住人はもういない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>地下都市――放棄された広大な地下シェルター。光の届かない暗黒の地下空間。ある時期の人類は、地下に生活拠点を移していたようだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>密林都市――この都市の廃墟は、繁茂したミュータント植物の密林に覆われている。そこには異形の生態系が成立している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>水没都市――水没した都市。かつての人類の遺構群が、上昇した海面下に沈んでいる。都市の新たな主は、ミュータント魚群だ。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObs</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>障害シーン決定</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>技術系Ａ（ → ROTA ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>技術系Ｂ（ → ROTB ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>生存系Ａ（ → ROSA ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>生存系Ｂ（ → ROSB ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戦闘系Ａ（ → ROCA ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戦闘系Ｂ（ → ROCB ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsTechA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム障害シーン／技術系Ａ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電子ロック――電子ロックが生きている倉庫を発見。ロックを開けて中の資源を回収する。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら［資源の減少チェック］１回。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>発電機の再生――停止した風力発電機（風車）を発見。発電効率は低いが、復旧させればロボットのバッテリーを充電できる。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈電力〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>オーバーホール――ヴィークルが不調だ。一度しっかり分解整備（オーバーホール）しなければ。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈ヴィークル〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>リフォーム――居心地の良さそうな住居跡を発見。ちょっとリフォームすれば、快適な休息を取れる。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈健康〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ロボット工場――ロボット工場跡を発見。残された部品をうまく加工すれば、劣化したパーツを交換できる。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈パーツ〉－１。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsTechB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム障害シーン／技術系Ｂ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>悪路走破――ヴィークルで悪路を走る。スピードを落とさず走り抜ければ、時間的消耗を抑えることができる。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら［資源の減少チェック］を１回行なう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>食料生産プラント――食料生産プラント跡を発見。うまく復旧すれば、最後に残った材料で食料を生産できる。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈食料〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パーツ交換――ロボットのパーツが劣化、破損する。予備パーツはあるが、自力では交換が難しい。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈パーツ〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>バッテリー回収――ドローンの残骸を発見。うまく解体すれば、バッテリーを回収できそうだ。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈電力〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ロボットの行商人――ロボットの行商人と出会う。彼は旅人たち(「数十年ぶりの客」らしい)に取り引きを持ちかけてくる。行商人の提示する品物の質を見極めろ。【技術】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０ならボッタくられ、［資源の減少チェック］を１回行なう。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsSurviveA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム障害シーン／生存系Ａ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>迷い路――入り組んだ地域を進む。方向感覚を失えば、さらなる消耗を強いられる。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら道に迷い、［資源の減少チェック］を１回行なう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>危険地帯――ガスや汚染物質に満ちた危険地帯を通過する。ロボットはともかく、人間は長居できない。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら人間は負傷し〈健康〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>カビ――ロボットにミュータントのカビが生える。このカビは特定の貴金属を好む。すぐに除去しなければ。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈パーツ〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>水不足――水不足が深刻化し始める。一刻も早く水源を探して、補充しなければ。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈食料〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>崩壊寸前――崩れかかった遺跡から、資源を回収する。時間をかければ崩落に巻き込まれる。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら［資源の減少チェック］を１回行なう。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsSurviveB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム障害シーン／生存系Ｂ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>隠れんぼ――狂暴なミュータントの群を発見。隠れてやりすごせ。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら［資源の減少チェック］を１回行なう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ソーラーパネル掃除――ソーラーパネルを繁茂したミュータント植物が覆っている。植物を刈り取ってパネルを復旧し、電力を得よう。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈電力〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スタック――泥や砂地にハマって、ヴィークルがスタックする。力づくで引きずり出せ。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈ヴィークル〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体調不良――汚染物質を吸引したか、毒に当たったか、体調が急変する。うまく療養(看病)せよ。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈健康〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>保存食の加工――食料の確保。小型の可食ミュータントを捕獲した。うまく保存用に加工せよ。【生存】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈食料〉－１。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsCombatA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム障害シーン／戦闘系Ａ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大群との遭遇――狂暴なミュータントの群の襲撃を受ける。激しい戦闘で消耗戦となる。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら［資源の減少チェック］を１回行なう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>地獄の毒々ミュータント――猛毒を持つ狂暴なミュータントが襲ってくる。うまく毒を避けて倒さなければ。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈健康〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>暴走ドローン――暴走ドローンを発見。ロボットと共通のパーツを使っているようだ。うまく破壊すればパーツを回収できる。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈パーツ〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>生体発電機――発電器官を有するミュータントに遭遇。発電器官を潰さずにしとめれば、電池代わりになるかもしれない。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈電力〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>高速戦闘――ヴィークル型の高速ドローンが襲ってくる。ヴィークルを破壊して部品を奪うつもりのようだ。返り討ちにして逆に部品を奪え。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈ヴィークル〉を1失う。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsCombatB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム障害シーン／戦闘系Ｂ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>瓦礫撤去――巨大な瓦礫が進路を塞いでいる。破壊して通らなければ、遠回りを強いられ消耗する。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら［資源の減少チェック］を１回行なう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>溶解ミュータント――金属や樹脂を溶かすミュータントに遭遇。執拗にロボットを狙ってくる。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈パーツ〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電気食らい――電気を食う蟲型ドローンが寄ってくる。ロボットの体内にある電池は、彼らの食糧だ。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈電力〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>殺人機械――暴走ドローンが襲ってくる。対人殺傷用らしく、人間だけを執拗に狙ってくる。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈健康〉－１。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ごちそうミュータント――大型の可食ミュータントに遭遇。貴重な食糧だ、可食部位を傷つけずに倒そう。【戦闘】の協力判定を行なう。成功数３以上なら［リワード］を１得る。成功数０なら〈食料〉－１。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmo</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>旅情シーン決定</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>日常系Ａ（ → REDA ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>日常系Ｂ（ → REDB ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>日常系Ｃ（ → REDC ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>追憶系Ａ（ → RERA ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>追憶系Ｂ（ → RERB ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>追憶系Ｃ（ → RERC ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoDailyA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム旅情シーン／日常系Ａ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>野営――ふたりぼっちの夜がくる。熱を失わないよう、火を焚き、寄り添う。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>暇つぶし――悪天候などにより、停滞を余儀なくされる。暇だ。とにかく暇だ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>遊ぶ――遊ぶ。かくれんぼでも、しりとりでも、雪合戦でも、なんでもいい。まったく無意味だが、それがいい。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>訓練――いつ、どんな危険が襲ってくるか解らない。武器の扱いを訓練しよう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>移動――ヴィークルに揺られて移動する。淡々と、黄昏の景色がゆっくりと流れていく。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoDailyB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム旅情シーン／日常系Ｂ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>食事――人間は、ものを食べなければ生きていけない。どうせいつかは死ぬのに、不便なことだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>観察――もうひとりの旅人を観察する。今まで知らなかった一面が見られるかもしれない。知らない方がよかったかもしれない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>整備――ヴィークルを整備する。こいつも大事な旅の仲間だ。だが、いつかは部品や燃料が尽き、動かなくなるだろう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>星空――星空を見上げる。世界は激変したが、星の光はほとんど変わらない。ちょっと北極星がズレたぐらいだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>水浴び――水場を発見。水浴びして汚れを落とす。ついでに洗濯も済ませてしまおう。どうせまた汚れるけど。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoDailyC</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム旅情シーン／日常系Ｃ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>記録――日記でも、写真、スケッチ、なんでもいい。今この瞬間を、形にして残しておきたい。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>酒――なんと生きている酒蔵を発見。飲もうぜ、今宵、銀河を杯にして。ロボットが酔えるかは知らん。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>歌う――なぜかメロディーが口をついて出る。郷愁を覚える。かつて好きだった歌なのかもしれない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>悪夢――悪夢にうなされ目が覚める。だが目覚めたこの世界が、悪夢よりマシであると言えるだろうか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ケンカ――ささいなことが原因で仲たがいする。セッション中に仲直りしておけ。理由は「大事なもの」を壊してしまった、などがよいだろう、</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoReminiscenceA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム旅情シーン／追憶系Ａ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>住居――住居跡を訪れる。ミイラ化した人間の死体を発見する。だいぶ前に死んだものだ。この死体はどう生き、どう死んだのだろう？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>届かなかった手紙――郵便ポストを発見する。配達されなかった手紙が残されている。恋文、借金の督促など、往時の人類の日常を垣間見る。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ゆうえんち――娯楽施設跡（遊園地、テーマパーク）を訪れる。システムが生きており、稼働している遊具がある。少し遊んで行こう。きっと旅人は最後の客だ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>終末ショッピング――商業施設跡（ショッピングモールなど）を訪れる。半壊した接客ロボットが現れ、何もない店内を案内する。その後「彼」は機能を停止する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>天国なんてあるのかな――宗教施設跡（墓所や教会など）を訪れる。旅人が死んだら、誰が弔うのか？　天国はあるのか？　ロボットもそこに行けるのか？</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoReminiscenceB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム旅情シーン／追憶系Ｂ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>人の遺したもの――文化施設跡（博物館、図書館、美術館）を訪れる。人類が築いた文化の残滓を垣間見る。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>残骸――旅人のロボットとよく似た、別のロボットの残骸を発見する。このロボットは何のために動き、ここで力尽きたのだろう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>飛ばない鳥――飛行場跡を訪れる。無数の航空機が擱座している。この人工の鳥たちが、ふたたび空を舞うことはないだろう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>湯けむり終末紀行――温泉レジャー施設跡を訪れる。施設は半壊しているが、なんと未だに温泉が湧き続けている。世界が終わっても、温泉は心地よい。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>終末学校――学校の跡を訪れる。机とイスが散乱している。人間の子供たちは、ここでさまざまなことを学んだのだろう。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoReminiscenceC</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable (class)">FiveItemsTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ShuumatsuKikou/FiveItemsTable.html#initialize-instance_method" title="BCDice::GameSystem::ShuumatsuKikou::FiveItemsTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム旅情シーン／追憶系Ｃ</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>兵どもが夢の跡――戦場跡を通過する。動かなくなった兵器があちこちに散らばっている。彼らは何と、何のために戦ったのだろう？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>地下鉄――廃墟の地下鉄。旅人が車両に乗ると、自動制御で勝手に走り出す。次の駅に到着すると、最後まで残っていた電力が尽きる。終電だったらしい。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>謎のプラント――巨大なプラント跡を訪れる。爆発でもあったらしく、中心部が半壊している。あちこちにある表示は「ぬーくりあ」「でんじゃー」と読める。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>メリークリスマス――廃墟が、電飾や植物を模した模型で飾り立てられている。赤い服を着て袋を持ち、動物のひくソリに乗った老人の人形が置かれている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>せめてよい夢を――完全に停止した冷凍睡眠施設を発見。眠ったまま干からびた人々がいる。旅人もこうなっていたかもしれない。その方が幸せだったかも。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomDangerousWaste</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム難所シーン／荒野系</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>渡河（ p27 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ワイルドレース（ p27 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冬来たる（ p27 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>果てなき熱砂（ p28 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>鋼鉄の嵐（ p28 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>殺戮兵器、起動（ p28 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomDangerousUrban</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム難所シーン／都市系</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>亀裂を超える（ p29 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>プラント復旧（ p29 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>地下迷宮（ p29 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>塔を登る（ p29 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自動防衛システム（ p30 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>地底よりの恐怖（ p30 ）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_transform_keys'>transform_keys</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:upcase</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="ALIAS-constant" class="">ALIAS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RLose</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ResourceLose</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RGain</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ResourceGain</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RArea</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomArea</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RWaste</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomWaste</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RUrban</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomUrban</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RObs</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObs</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ROTA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsTechA</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ROTB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsTechB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ROSA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsSurviveA</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ROSB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsSurviveB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ROCA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsCombatA</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ROCB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomObsCombatB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>REmo</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>REDA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoDailyA</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>REDB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoDailyB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>REDC</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoDailyC</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RERA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoReminiscenceA</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RERB</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoReminiscenceB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RERC</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomEmoReminiscenceC</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RDW</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomDangerousWaste</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RDU</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RandomDangerousUrban</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_transform_keys'>transform_keys</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:upcase</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_transform_values'>transform_values</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:upcase</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">BCDice::Base</a></span></p>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="eval_game_system_specific_command-instance_method">
+  
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShuumatsuKikou.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#ALIAS-constant" title="BCDice::GameSystem::ShuumatsuKikou::ALIAS (constant)">ALIAS</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_command'>command</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::ShuumatsuKikou::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed May  4 13:01:18 2022 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.1).
+</div>
+
+    </div>
+  </body>
+</html>

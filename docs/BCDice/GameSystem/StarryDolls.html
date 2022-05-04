@@ -186,15 +186,34 @@
 </span><span class='tstring_content'>  　・ランダム星座表 HOR
 </span><span class='tstring_content'>  　　　ランダム星座表A HORA／ランダム星座表B HORB
 </span><span class='tstring_content'>  　・主人関係表 MRT／関係属性表 RAT
+</span><span class='tstring_content'>  　・従者関係表 SRT
 </span><span class='tstring_content'>  　・奇跡表 MIR
 </span><span class='tstring_content'>  　・戦果表 BRT
 </span><span class='tstring_content'>  　・事件表 TRO
+</span><span class='tstring_content'>  　・森事件表 TROF
+</span><span class='tstring_content'>  　・庭園事件表 TROG
+</span><span class='tstring_content'>  　・城内事件表 TROC
+</span><span class='tstring_content'>  　・都市事件表 TROT
+</span><span class='tstring_content'>  　・図書館事件表 TROL
+</span><span class='tstring_content'>  　・駅事件表 TROS
+</span><span class='tstring_content'>  　・従者トラブル表 TRS
+</span><span class='tstring_content'>  　・リアクション表　忠誠 RAL
+</span><span class='tstring_content'>  　・リアクション表　冷静 RAC
+</span><span class='tstring_content'>  　・リアクション表　母性 RAM
+</span><span class='tstring_content'>  　・リアクション表　年長者 RAO
+</span><span class='tstring_content'>  　・リアクション表　無邪気 RAI
+</span><span class='tstring_content'>  　・リアクション表　長老 RAE
 </span><span class='tstring_content'>  　・遭遇表 ENC
 </span><span class='tstring_content'>  　・致命傷表 FWT
 </span><span class='tstring_content'>  　・カタストロフ表 CAT
 </span><span class='tstring_content'>  　・回想表
 </span><span class='tstring_content'>  　　　〈魔術師の庭〉回想表 JDSRT／〈セブンス・ヘブン〉回想表 SHRT
 </span><span class='tstring_content'>  　　　／〈祝福の鐘〉回想表 BCRT／〈オメガ探偵社〉回想表 ODRT
+</span><span class='tstring_content'>  　・出張表
+</span><span class='tstring_content'>  　　　〈魔術師の庭〉出張表 JDSBT／〈セブンス・ヘブン〉出張表 SHBT
+</span><span class='tstring_content'>  　　　／〈祝福の鐘〉出張表 BCBT／〈オメガ探偵社〉出張表 ODBT
+</span><span class='tstring_content'>  　　　／〈天の川商店街〉出張表 ASBT／〈ポラリス星学院〉出張表 PABT
+</span><span class='tstring_content'>  　　　／〈人形騎士団〉出張表 SCBT／〈人形騎士団〉への出張表 TOSCBT
 </span><span class='tstring_content'>  ・D66ダイスあり
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
@@ -328,14 +347,14 @@
       <pre class="lines">
 
 
-47
-48
-49
-50
-51</pre>
+66
+67
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StarryDolls.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StarryDolls.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -369,14 +388,14 @@
       <pre class="lines">
 
 
-53
-54
-55
-56
-57</pre>
+72
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StarryDolls.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StarryDolls.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_action_roll'>action_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
@@ -393,7 +412,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 13 15:20:35 2022 by
+  Generated on Wed May  4 13:01:13 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

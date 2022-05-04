@@ -384,6 +384,7 @@
       <pre class="lines">
 
 
+58
 59
 60
 61
@@ -422,11 +423,10 @@
 94
 95
 96
-97
-98</pre>
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Avandner.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Avandner.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_criticalTrigger'>criticalTrigger</span><span class='comma'>,</span> <span class='id identifier rubyid_criticalNumber'>criticalNumber</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_totalSuccessCount'>totalSuccessCount</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -500,8 +500,7 @@
 53
 54
 55
-56
-57</pre>
+56</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Avandner.rb', line 44</span>
@@ -513,8 +512,7 @@
     <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='id identifier rubyid_damage'>damage</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>5</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>0</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='id identifier rubyid_criticalTrigger'>criticalTrigger</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>7</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>0</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='id identifier rubyid_criticalNumber'>criticalNumber</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>9</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='id identifier rubyid_criticalNumber'>criticalNumber</span> <span class='op'>=</span> <span class='int'>2</span> <span class='kw'>if</span> <span class='id identifier rubyid_criticalNumber'>criticalNumber</span> <span class='op'>&gt;</span> <span class='int'>3</span>
+    <span class='id identifier rubyid_criticalNumber'>criticalNumber</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>9</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='period'>.</span><span class='id identifier rubyid_clamp'>clamp</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='id identifier rubyid_damage'>damage</span><span class='comma'>,</span> <span class='id identifier rubyid_criticalTrigger'>criticalTrigger</span><span class='comma'>,</span> <span class='id identifier rubyid_criticalNumber'>criticalNumber</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
@@ -530,7 +528,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 13 15:20:28 2022 by
+  Generated on Wed May  4 13:01:06 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

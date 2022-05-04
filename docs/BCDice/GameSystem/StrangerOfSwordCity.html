@@ -443,8 +443,6 @@
       <pre class="lines">
 
 
-45
-46
 47
 48
 49
@@ -476,15 +474,29 @@
 75
 76
 77
-78</pre>
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>checkRoll begin command</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span>
+  <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>unless</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d+)SR([+\-]?\d+)?(&gt;=(\d+))?$</span><span class='regexp_end'>/i</span></span>
 
   <span class='id identifier rubyid_diceCount'>diceCount</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -496,21 +508,31 @@
 
   <span class='id identifier rubyid_totalValue'>totalValue</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_dice'>dice</span> <span class='op'>+</span> <span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_modifyText'>modifyText</span> <span class='op'>=</span> <span class='id identifier rubyid_getModifyText'>getModifyText</span><span class='lparen'>(</span><span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diceList'>diceList</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_modifyText'>modifyText</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_totalValue'>totalValue</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice'>dice</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diceList'>diceList</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_modifyText'>modifyText</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_totalValue'>totalValue</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='id identifier rubyid_criticalResult'>criticalResult</span> <span class='op'>=</span> <span class='id identifier rubyid_getCriticalResult'>getCriticalResult</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_criticalResult'>criticalResult</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ クリティカル(+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_criticalResult'>criticalResult</span><span class='embexpr_end'>}</span><span class='tstring_content'>D6)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ クリティカル(+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_criticalResult'>criticalResult</span><span class='embexpr_end'>}</span><span class='tstring_content'>D6)</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
   <span class='kw'>end</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_isFumble'>isFumble</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_diceCount'>diceCount</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> ＞ ファンブル</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_fumble'>fumble</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> ＞ ファンブル</span><span class='tstring_end'>&#39;</span></span>
     <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
   <span class='kw'>end</span>
 
   <span class='kw'>unless</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>+=</span> <span class='id identifier rubyid_totalValue'>totalValue</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_totalValue'>totalValue</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_difficulty'>difficulty</span>
+      <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='kw'>true</span>
+      <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> ＞ 成功</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_failure'>failure</span> <span class='op'>=</span> <span class='kw'>true</span>
+      <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> ＞ 失敗</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
   <span class='kw'>end</span>
 
   <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
@@ -544,7 +566,9 @@
 40
 41
 42
-43</pre>
+43
+44
+45</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 34</span>
@@ -555,6 +579,8 @@
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span>
 
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>unless</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
   <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
@@ -579,18 +605,18 @@
       <pre class="lines">
 
 
-87
-88
-89
-90
-91
-92
-93
-94
-95</pre>
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getCriticalResult'>getCriticalResult</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice6Count'>dice6Count</span> <span class='op'>=</span> <span class='id identifier rubyid_diceList'>diceList</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>==</span> <span class='int'>6</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
@@ -621,15 +647,15 @@
       <pre class="lines">
 
 
-80
-81
-82
-83
-84
-85</pre>
+93
+94
+95
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getModifyText'>getModifyText</span><span class='lparen'>(</span><span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_modify'>modify</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -657,12 +683,12 @@
       <pre class="lines">
 
 
-97
-98
-99</pre>
+110
+111
+112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/StrangerOfSwordCity.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_isFumble'>isFumble</span><span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='comma'>,</span> <span class='id identifier rubyid_diceCount'>diceCount</span><span class='rparen'>)</span>
   <span class='lparen'>(</span><span class='id identifier rubyid_diceList'>diceList</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>==</span> <span class='int'>1</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_diceCount'>diceCount</span><span class='rparen'>)</span>
@@ -677,7 +703,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 13 15:20:43 2022 by
+  Generated on Wed May  4 13:01:22 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>

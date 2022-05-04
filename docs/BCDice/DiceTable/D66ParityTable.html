@@ -119,6 +119,37 @@
 
   
     <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_i18n-class_method" title="from_i18n (class method)">.<strong>from_i18n</strong>(key, locale)  &#x21d2; D66ParityTable </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
       Instance Method Summary
       <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
@@ -259,14 +290,14 @@
       <pre class="lines">
 
 
-10
-11
-12
-13
-14</pre>
+18
+19
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/dice_table/d66_parity_table.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/dice_table/d66_parity_table.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_odd'>odd</span><span class='comma'>,</span> <span class='id identifier rubyid_even'>even</span><span class='rparen'>)</span>
   <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span>
@@ -280,6 +311,92 @@
   
 </div>
 
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="from_i18n-class_method">
+  
+    .<strong>from_i18n</strong>(key, locale)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::DiceTable::D66ParityTable (class)">D66ParityTable</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>key</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>locale</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="BCDice::DiceTable::D66ParityTable (class)">D66ParityTable</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/dice_table/d66_parity_table.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from_i18n'>from_i18n</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_locale'>locale</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_t'>t</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='label'>locale:</span> <span class='id identifier rubyid_locale'>locale</span><span class='comma'>,</span> <span class='label'>raise:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_table'>table</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='lbracket'>[</span><span class='symbol'>:odd</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='lbracket'>[</span><span class='symbol'>:even</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
@@ -349,24 +466,24 @@
       <pre class="lines">
 
 
-19
-20
-21
-22
-23
-24
-25
-26
 27
 28
 29
 30
 31
 32
-33</pre>
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/dice_table/d66_parity_table.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/dice_table/d66_parity_table.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_roll'>roll</span><span class='lparen'>(</span><span class='id identifier rubyid_randomizer'>randomizer</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice1'>dice1</span> <span class='op'>=</span> <span class='id identifier rubyid_randomizer'>randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
@@ -393,7 +510,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 13 15:20:39 2022 by
+  Generated on Wed May  4 13:01:18 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-2.7.1).
 </div>
