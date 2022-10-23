@@ -162,10 +162,11 @@
           
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~TEXT</span>
-<span class='tstring_content'>  ・判定コマンド(xAB±y@c&gt;=z)
+<span class='tstring_content'>  ・判定コマンド(xAB±y@c$d&gt;=z)
 </span><span class='tstring_content'>    x：サイコロの数(10以上の場合9個振り、それ以降を成功数2として加算する)
 </span><span class='tstring_content'>    ±y：成功数への補正(省略可)
 </span><span class='tstring_content'>    c：クリティカル値(@ごと省略可。省略時は6)
+</span><span class='tstring_content'>    d：出目を2として数える数の最小値($ごと省略可。省略時は6)
 </span><span class='tstring_content'>    z：目標値(妨害値など。&gt;=ごと省略可)
 </span><span class='tstring_content'>    (例) 4AB
 </span><span class='tstring_content'>         11AB&gt;=5
@@ -178,6 +179,14 @@
 </span><span class='tstring_content'>    交流表 CET
 </span><span class='tstring_content'>    ファンブル表 FT
 </span><span class='tstring_content'>    封印期間表 LT
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>    帝都東京エリア選択 TET
+</span><span class='tstring_content'>    　浅草シーン表 AST
+</span><span class='tstring_content'>    　上野シーン表 UST
+</span><span class='tstring_content'>    　日本橋シーン表 NST
+</span><span class='tstring_content'>    　銀座シーン表 GST
+</span><span class='tstring_content'>    　霞ヶ関シーン表 KST
+</span><span class='tstring_content'>    　新宿シーン表 SST
 </span><span class='heredoc_end'>TEXT</span></pre></dd>
       
         <dt id="TABLES-constant" class="">TABLES =
@@ -323,6 +332,162 @@
       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>100年</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
       <span class='comment'># &#39;500年&#39;,
 </span>    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TET</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>帝都東京エリア選択</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>浅草。庶民の盛り場として賑わう商店街と下町。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>上野。あらゆる路線の中心である帝都の玄関口。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>日本橋。江戸時代から変わらぬ商業の中心地。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>銀座。赤煉瓦が立ち並ぶ、帝都一モダンな繁華街。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>霞ヶ関。国会議事堂や裁判所がある官庁街。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>新宿。関東大震災以降、急速に発展した新しい街。</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>AST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>浅草シーン表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子～巳までの任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［子］浅草寺。浅草の顔ともいえる寺。7世紀に建造された都内でも最古の寺。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［丑］武神一刀流道場。浅草でも有名な剣術道場。柔術や薙刀など、剣以外の実践的な技も教えている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［寅］待乳の渡し。隅田川を橋で渡る代わりに、乗せて渡ってくれる小舟。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［卯］帝都観光案内館。帝都東京内観光の案内所。ガイドつきのバス観光も行っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［辰］神谷バー。老舗の飲食店であり、電気ブランを提供していることで有名。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［巳］雷門。浅草寺の南側に建てられた門で、風神と雷神の像が安置されている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［午］仲見世。雷門から浅草寺本堂に続く仁王門まで立ち並ぶ商店街。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［未］仰天堂。やたらと大盛りの食事を提供してくれる人気店。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［申］混沌興行。妖怪たちが演じることで有名な見世物小屋。いつも混み合っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［酉］浅草六区。浅草の中心街であり、店舗や演芸場、活動写真館が並んでいる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［戌］凌雲閣。浅草十二階とも呼ばれる塔。関東大震災でも崩れることなく、そびえ立っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［亥］花屋敷。日本最初の遊園地であり、園内には動物園も完備している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>午～亥まで任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>上野シーン表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子～巳までの任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［子］上野恩賜公園。桜の名所でもある巨大な公園。敷地内では、四季折々の自然を楽しむことができる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［丑］東京帝室博物館。宮内省所管の博物館であり、珍しい品々が展示されている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［寅］上野駅。帝都と地方の路線を繋ぐ駅。地方から上京してくる人々を多く見かける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［卯］精養軒。本格的な洋食が楽しめる老舗のレストラン。人間、妖怪に限らず上流階級が通っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［辰］御徒町。高架下と周辺に所狭しと民家や長屋、様々な店がひしめきあう下町の歓楽街。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［巳］一鉄工場。偏屈で頑固だが有能な老人が経営する工場。自作のラジオが置かれている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［午］帝国大学。象徴の赤門が有名な、日本の最高学府。校内には、妖怪研究室がある。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［未］鳳明館。明治創業の旅館。文士が執筆する際に、よく利用している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［申］黄龍門学園。帝国大学敷地の横にある私立学園。妖怪や半妖も多く通っている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［酉］不忍池。弁天堂と大黒天堂を構える池で、河童が隠れ住んでいる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［戌］きさらぎ長屋。行く宛のない者や、行き場をなくした者が集まる長屋。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［亥］上野恩賜公園動物園。ホッキョクグマ舎やサル山をはじめ、珍しい動物が飼われている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>午～亥まで任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>日本橋シーン表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子～巳までの任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［子］日本銀行本店。西洋建築の先駆けといえる建築物。帝都事変では大きな被害が出た。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［丑］三越。日本橋に居を構える有数の大型百貨店。この店で揃わぬ物はないとされている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［寅］日本橋。五つ街道の起点であり、東海道五十三次の出発点としてよく知られる橋。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［卯］メイゾン妖の巣。妖怪や半妖の文学者たちが集うカフェー。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［辰］大正座。明治座の兄弟とよばれる演芸場。歌舞伎や芝居などが上演されている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［巳］多々良堂。江戸時代より続く退魔具の専門店。多くのあやびとが訪れる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［午］妖艶大世界。上海にある上海大世界を真似て、妖怪や半妖が集まってできた新興の花街。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［未］二丁巴里。丸ノ内の一丁倫敦に対して創られた大規模な問屋街。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［申］皇居外苑。桔梗門の前は大広場があり、皇居を訪れる者が集まっている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［酉］東京駅。皇居に対面する形で作られた煉瓦造りの壮麗な駅。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［戌］丸ノ内ビルヂング。大正12年に竣工した東洋一ともいわれる巨大なビルヂング。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［亥］将門塚。平将門公の御首が祀られる塚。大手町にひっそりと存在している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>午～亥まで任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>銀座シーン表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子～巳までの任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［子］ダンスホウル・ガアデン。モダンボーイやモダンガール御用達の帝都東京有数のダンスホウル。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［丑］服部時計店。銀座のシンボルとなっている時計塔と、併設された店舗。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［寅］松屋。大正14年に開店した百貨店。地上7階までの吹き抜けステンドグラスで知られる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［卯］歌舞伎座。歌舞伎の殿堂。古式ゆかしい意匠を取り入れた最新建築の劇場。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［辰］倫敦橋。文士や芸術家が好んで訪れる2階建ての洋式建築のカフェー。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［巳］資生堂パーラー。ソーダ水やアイスクリンを提供したことで有名な喫茶店。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［午］カフェープランタン。日本初のカフェーといわれる老舗。富裕層やインテリ層が多く訪れる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［未］新橋絢爛花街。関東大震災をきっかけに再建された花街。政府高官なども利用している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［申］鹿鳴館。明治時代を代表する西洋建築。華族や資産家が利用できる施設となっている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［酉］帝国ホテル。フランク・ロイド・ライトが設計した最新鋭の技術が詰め込まれたホテル。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［戌］妖務省本部。妖務省と妖怪人間共同実働部隊の本部が置かれている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［亥］帝国劇場。明治時代を代表する日本最大の大劇場で\&quot;帝劇\&quot;の愛称で知られている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>午～亥まで任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>KST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>霞ヶ関シーン表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子～巳までの任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［子］桜田門。内堀にある門のひとつで皇居に通じている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［丑］警視庁庁舎。警視庁の総合本部。庁舎内に妖鬼対策本部がある。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［寅］日比谷公園。市民の憩いの場所であり、図書館や音楽堂をそなえる大規模な公園。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［卯］大審院庁舎。司法裁判所の中における最上級審の裁判所。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［辰］私立聖ロザリオ女学園。愛宕山の森に囲まれた都内随一のお嬢様学校。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［巳］片倉組。武家屋敷を改装した本邸であり、帝都屈指のヤクザの根城となっている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［午］妖人史料編纂局。妖怪の史料の収集と編纂を目的として設置された官立組織。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［未］鰐淵金融。利子こそ高いが、誰にでも門戸を開いている貸金業者。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［申］料亭山王園。政治家や官僚御用達の料亭。十二真鬼も出入りしている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［酉］日枝神社。山王祭で知られる神社。数多くの刀剣が納められている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［戌］国会議事堂。現在建設中の国会議事堂。大正25年に竣工予定で、現在は木造の仮議事堂がある。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［亥］帝国図書館。国立図書館で、国内で出版されたあらゆる書籍が収蔵されている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>午～亥まで任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SST</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html" title="BCDice::DiceTable::D66LeftRangeTable (class)">D66LeftRangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66LeftRangeTable.html#initialize-instance_method" title="BCDice::DiceTable::D66LeftRangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>新宿シーン表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#NO_SORT-constant" title="BCDice::D66SortType::NO_SORT (constant)">NO_SORT</a></span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>1</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子～巳までの任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［子］武蔵野館。座席数1,200を誇る国内有数の活動大写真館。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［丑］二幸。食料品専門百貨店。あやびとたちに友好的で、伝奇事件が解決すると飲食が提供される。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［寅］高野フルーツパーラー。マスクメロンが有名な果物専門店と、併設された果物が楽しめる飲食店。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［卯］紀伊國屋書店。大正16年に創業した、文士たちが集うサロンのような大型書店。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［辰］新宿御苑。宮内省が管理する皇室のための庭園。封印具の保管庫である浄玻璃ノ宮がある。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［巳］明治神宮。明治天皇と昭憲皇太后を祭神とした神社。境内は厳かな雰囲気に満ちている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>5</span><span class='comma'>,</span> <span class='lbracket'>[</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［午］新宿駅。多摩や小田原からの玄関口となる駅。1日あたりの乗降客数は日本一。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［未］酩酊横丁。長屋が連なる路地に、200軒以上もの居酒屋やバーがひしめいている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［申］歌楽騒戯通り。関東大震災後に作られた真新しい建物がひしめく歓楽街。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［酉］淀橋浄水場。コレラ流行後に、水道を近代化させるために作られた浄水場。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［戌］新宿大通り。急速な発展を遂げた新宿のメイン通り。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>［亥］ほたる屋。妖狐と妖狸が経営している衣料品専門の百貨店。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>6</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>午～亥まで任意の十二支を選択する。</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
   <span class='rparen'>)</span><span class='comma'>,</span>
 <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
@@ -478,14 +643,14 @@
       <pre class="lines">
 
 
-36
-37
-38
-39
-40</pre>
+45
+46
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -519,15 +684,6 @@
       <pre class="lines">
 
 
-46
-47
-48
-49
-50
-51
-52
-53
-54
 55
 56
 57
@@ -554,13 +710,23 @@
 78
 79
 80
-81</pre>
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_action'>check_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Command.html" title="BCDice::Command (module)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Command/Parser.html#initialize-instance_method" title="BCDice::Command::Parser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#CEIL-constant" title="BCDice::RoundType::CEIL (constant)">CEIL</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_has_prefix_number'><span class='object_link'><a href="../Command/Parser.html#has_prefix_number-instance_method" title="BCDice::Command::Parser#has_prefix_number (method)">has_prefix_number</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enable_critical'><span class='object_link'><a href="../Command/Parser.html#enable_critical-instance_method" title="BCDice::Command::Parser#enable_critical (method)">enable_critical</a></span></span><span class='period'>.</span><span class='id identifier rubyid_restrict_cmp_op_to'><span class='object_link'><a href="../Command/Parser.html#restrict_cmp_op_to-instance_method" title="BCDice::Command::Parser#restrict_cmp_op_to (method)">restrict_cmp_op_to</a></span></span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='symbol'>:&gt;=</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Command.html" title="BCDice::Command (module)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Command/Parser.html#initialize-instance_method" title="BCDice::Command::Parser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AB</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='const'><span class='object_link'><a href="../RoundType.html" title="BCDice::RoundType (module)">RoundType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RoundType.html#CEIL-constant" title="BCDice::RoundType::CEIL (constant)">CEIL</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_has_prefix_number'><span class='object_link'><a href="../Command/Parser.html#has_prefix_number-instance_method" title="BCDice::Command::Parser#has_prefix_number (method)">has_prefix_number</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enable_critical'><span class='object_link'><a href="../Command/Parser.html#enable_critical-instance_method" title="BCDice::Command::Parser#enable_critical (method)">enable_critical</a></span></span><span class='period'>.</span><span class='id identifier rubyid_enable_dollar'><span class='object_link'><a href="../Command/Parser.html#enable_dollar-instance_method" title="BCDice::Command::Parser#enable_dollar (method)">enable_dollar</a></span></span><span class='period'>.</span><span class='id identifier rubyid_restrict_cmp_op_to'><span class='object_link'><a href="../Command/Parser.html#restrict_cmp_op_to-instance_method" title="BCDice::Command::Parser#restrict_cmp_op_to (method)">restrict_cmp_op_to</a></span></span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='symbol'>:&gt;=</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parsed'>parsed</span> <span class='op'>=</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
 
@@ -573,19 +739,20 @@
   <span class='kw'>end</span>
   <span class='id identifier rubyid_modify'>modify</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_modify_number'>modify_number</span>
   <span class='id identifier rubyid_critical_target'>critical_target</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span> <span class='op'>||</span> <span class='int'>6</span>
+  <span class='id identifier rubyid_addition_target'>addition_target</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_dollar'>dollar</span> <span class='op'>||</span> <span class='int'>6</span>
   <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_target_number'>target_number</span>
 
   <span class='id identifier rubyid_dice_arr'>dice_arr</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
   <span class='id identifier rubyid_dice_str'>dice_str</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_has_critical'>has_critical</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_critical_target'>critical_target</span> <span class='rbrace'>}</span>
-  <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='int'>4</span> <span class='rbrace'>}</span> <span class='op'>+</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>*</span> <span class='int'>2</span>
+  <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='int'>4</span> <span class='rbrace'>}</span> <span class='op'>+</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_addition_target'>addition_target</span> <span class='rbrace'>}</span> <span class='op'>+</span> <span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>*</span> <span class='int'>2</span>
   <span class='id identifier rubyid_has_fumble'>has_fumble</span> <span class='op'>=</span> <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_dice_arr'>dice_arr</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_has_fumble'>has_fumble</span>
     <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>+=</span> <span class='id identifier rubyid_modify'>modify</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>&gt;=</span> <span class='int'>1</span> <span class='op'>:</span> <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_target'>target</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>&gt;=</span> <span class='int'>1</span> <span class='op'>:</span> <span class='id identifier rubyid_success_cnt'>success_cnt</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target'>target</span>
 
   <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
     <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_cnt'>dice_cnt</span><span class='embexpr_end'>}</span><span class='tstring_content'>B6&gt;=4)</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>*</span> <span class='int'>2</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_str'>dice_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_over_modify'>over_modify</span> <span class='op'>*</span> <span class='int'>2</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 成功数</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_cnt'>success_cnt</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>成功</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_has_critical'>has_critical</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>(クリティカル)</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_has_fumble'>has_fumble</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>(ファンブル)</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -615,12 +782,12 @@
       <pre class="lines">
 
 
-42
-43
-44</pre>
+51
+52
+53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Ayabito.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_check_action'>check_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::Ayabito::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
@@ -635,9 +802,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May  4 13:01:04 2022 by
+  Generated on Sun Oct 23 12:32:37 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.1).
+  0.9.26 (ruby-2.7.2).
 </div>
 
     </div>

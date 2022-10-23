@@ -191,7 +191,9 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>  ・パフォーマンス　[r]PDn[+m/-m](r：場に残った出目　n：振る数　m：修正値)
+<span class='tstring_content'>  これは、2015年に新書サイズで発売された『駆け出しアイドルRPG ビギニングアイドル チャレンジガールズ』およびそのサプリメントに対応したコマンドです。
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・パフォーマンス　[r]PDn[+m/-m](r：場に残った出目　n：振る数　m：修正値)
 </span><span class='tstring_content'>  ・ワールドセッティング仕事表　BWT：大手芸能プロ　LWT：弱小芸能プロ
 </span><span class='tstring_content'>  　TWT：ライブシアター　CWT：アイドル部　LO[n]：地方アイドル(n：チャンス)
 </span><span class='tstring_content'>  　SU：情熱の夏　WI：ぬくもりの冬　NA：大自然　GA：女学園　BA：アカデミー
@@ -408,15 +410,15 @@
       <pre class="lines">
 
 
-68
-69
 70
 71
 72
-73</pre>
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BeginningIdol.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BeginningIdol.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -451,8 +453,6 @@
       <pre class="lines">
 
 
-92
-93
 94
 95
 96
@@ -460,10 +460,12 @@
 98
 99
 100
-101</pre>
+101
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BeginningIdol.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BeginningIdol.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_roll_attack'>roll_attack</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
@@ -495,8 +497,6 @@
       <pre class="lines">
 
 
-75
-76
 77
 78
 79
@@ -508,10 +508,12 @@
 85
 86
 87
-88</pre>
+88
+89
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BeginningIdol.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/BeginningIdol.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_nd6'>result_nd6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__value_list'>_value_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?</span><span class='tstring_end'>&#39;</span></span>
@@ -537,9 +539,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May  4 13:01:15 2022 by
+  Generated on Sun Oct 23 12:32:46 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.1).
+  0.9.26 (ruby-2.7.2).
 </div>
 
     </div>

@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::IfIfIf
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::IfIfIf";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">IfIfIf</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::IfIfIf
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::IfIfIf</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/IfIfIf.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IfIfIf</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>イフ・イフ・イフ</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>いふいふいふ</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~TEXT</span>
+<span class='tstring_content'>  100の質問：HQT
+</span><span class='tstring_content'>  ハイリスク歪み表：HDT
+</span><span class='tstring_content'>  ローリスク歪み表：LDT
+</span><span class='tstring_content'>    「HQT1」「LDT4」のように、表の後ろに数字を付けることで、10個の表から個別に振ることができます。
+</span><span class='tstring_content'>  致命的な歪みの回避：ID
+</span><span class='tstring_content'>  改竄判定：IM
+</span><span class='tstring_content'>  強制改竄判定：IE
+</span><span class='heredoc_end'>TEXT</span></pre></dd>
+      
+        <dt id="HQT1-constant" class="">HQT1 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その１‐印象質問</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の好きなところはどこですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の苦手なところはどこですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の尊敬できるところはどこですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の容姿についてどう思っていますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の才能についてどう思っていますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の趣味についてどう思っていますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の価値観についてどう思っていますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手について理解できないところはどこですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手について心配なところはどこですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の第一印象と今の印象で変化した点はどこですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT2-constant" class="">HQT2 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その２‐日常質問</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりの関係性を一言で表すなら？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>二人の日常はどんな様子ですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>「なんの予定もない、一緒にいる休日」の過ごし方はどんな風ですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりの最初の出会いはどんな風でしたか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで食事をするときは、どんな様子ですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで買い物をするときは、どんな様子ですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで一緒に寝ることはありますか？　あるなら、どんな様子ですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで最近ハマっていることってありますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手といると緊張しますか？　安心しますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手への愚痴ってありますか？　この際言っちゃいましょう！</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT3-constant" class="">HQT3 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その３‐汎用思い出質問</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>喧嘩した思い出はありますか？　詳しく語ってください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手を看病した時の思い出はありますか？　詳しく語ってください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手からの贈り物で印象深いものはありますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで約束してることはありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>お互いしか知らない秘密はありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手を泣かせた思い出はありますか？　詳しく語ってください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで犬 or 猫を目の前にしたときの思い出はありますか？詳しく語ってください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりでどこかに閉じ込められた思い出はありますか？　詳しく語ってください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで旅（旅行）をした思い出はありますか？　詳しく語ってください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりでいてドキドキした思い出はありますか？　詳しく語ってください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT4-constant" class="">HQT4 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その４‐情景思い出質問</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで夜明けを迎えたときの思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで星を見た思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで海に行った思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで暗闇で過ごした思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで炎に巻かれた思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで花畑で過ごした思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで森で過ごした思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで砂漠を歩いた思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで廃墟を歩いた思い出をかたってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで突然雨に降られたときの思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT5-constant" class="">HQT5 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その５‐内緒の質問（オフレコ推奨）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に絶対に知られたくない秘密ってありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に嘘をついていることはありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に知られたら引かれそうなことってありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に知られたら怒られそうなことってありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に知られたら嫌われそうなことってありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に関して正直ちょっと引いたことはありますか？　どんなことですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に恋した瞬間は、どんな感じでしたか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手について密かに妄想してることはありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手について「大っぴらに言うのははばかられるけど、好きなところ」ってありますか？　教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に懺悔したいことはありますか？　どんなことですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT6-constant" class="">HQT6 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その６‐ブラック質問１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に嫌われたらどうしますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手を傷つけたことはありますか？　どんなことですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手を傷つけたいと思ったことはありますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手と殺し合ったことはありますか？　そのときのことを教えてください。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手を殺したいと思ったことはありますか？　そのときのことを教えてください。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に嫉妬していることはありますか？　どんなことですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手を憎んでいることはありますか？　どんなことですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に自分以外の恋人が出来たらどうしますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手が死んだら自分はどうしますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自分が死んだら相手にどうしてもらいたいですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT7-constant" class="">HQT7 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その７‐ブラック質問２</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手と出会ってなかったら今頃どうなってたと思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手には、あなた以外にどんな人がふさわしいと思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手について怖いと思うところはどこですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手と自分の命、どっちのほうが大事ですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手のために、犯罪を犯すことはできますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手が犯罪者になってしまったらどうしますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手が完全な記憶喪失になったらどうしますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手が自分を忘れるのと、自分が相手を忘れるのだと、どちらがマシですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に「死んでほしい」と言われたらどうしますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に「殺して欲しい」と頼まれたらどうしますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT8-constant" class="">HQT8 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その８‐雑談質問</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に対して、自分が自慢できるのはどんなところですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の寝相についてどう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりの体格差って、どんな感じですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりとも、幽霊って信じてますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりは自炊派？　外食派？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりは辛党？　甘党？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>お互いの家族構成、知ってますか？　知らないなら教え合いましょう！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手のファッション（普段の服装）について、どう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手に手料理を食べさせたことはありますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手がコーヒーや紅茶にお砂糖何杯入れるか、知ってますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT9-constant" class="">HQT9 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その９‐ファンタジー質問</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の種族についてどう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の魔法についてどう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の戦闘能力についてどう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戦場にいるときの相手の雰囲気についてどう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手の特殊能力（戦闘面以外）についてどう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりには、なにか二つ名や称号はありますか？　それについてどう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>お互いの身分についてどう思いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりに寿命差はありますか？　ある場合は、どう考えていますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで敵に襲われたときの思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>相手とダンジョンに行った思い出を語ってくれますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HQT10-constant" class="">HQT10 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問表その１０‐現代質問</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>お互い、どんな学校に通っていますか／通っていましたか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ＳＮＳってやっていますか？　お互いのアカウントって知ってますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで映画を見るなら、どんなジャンルですか？　そのジャンルは1人で見るときと違いますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりでテーマパークに行った思い出はありますか？　詳しく教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりはよくメールや電話で連絡をとりますか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>お互いの写真って持っていますか？　持っているなら、どんな写真ですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりでカラオケに行きますか？　行くならどんな様子ですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりで行きたい観光名所はありますか？　具体的な地名で教えてください！</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ふたりが好きな季節はいつですか？</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>目玉焼きに何をかけますか？（塩、醤油、ソース、マヨネーズ……）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT1-constant" class="">LDT1 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：名前、性別、年齢、人称</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ミドルネームが増える</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>周囲からあだ名で呼ばれるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>人に変なあだ名をつける癖ができる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>異性装が趣味になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>理由あって異性として生活していることになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>これ以降、外見年齢があまり変わらなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>１０歳若返る</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>１０歳歳を取る</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>一人称が変わる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>二人称が変わる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT2-constant" class="">LDT2 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：外見的特徴</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>片目の色が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>両目の色が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>髪の色が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>髪が癖毛（天然パーマ、猫っ毛など）になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>髪の長さが変わる（長髪なら短髪に、短髪なら長髪に）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>他者から「美人」と言われる外見になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>眼鏡キャラになる（伊達眼鏡でも可）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>特徴的なファッションになる（ゴスロリ、赤一色、常に白衣など）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>身長が１０ｃｍ大きくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>身長が１０ｃｍ小さくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT3-constant" class="">LDT3 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：性格</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>あらゆることに対する思い切りがよくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>思考や発想が幼くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>初対面の人と上手く話せなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情の起伏が激しくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情を抑えがちになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>泣き虫になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>よく人に甘えるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>とてつもなくポジティブになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>天邪鬼になりがちになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自分を卑下しがちになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT4-constant" class="">LDT4 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：得意不得意</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>得意不得意が逆転する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>運動がすごく得意になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>芸術関係（絵、音楽、書道など）が得意になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情を隠すのが下手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>手先が器用になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>料理が壊滅的に下手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>四則演算が苦手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>人の真似が上手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>役に立たない特技ができる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>一般的にあり得ない異能（超能力など）に目覚める</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT5-constant" class="">LDT5 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：社会的立場</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>転校／転職したことになる（元居た学校や職場でなくなる）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自分のファンクラブが出来る</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>学校／仕事の成績が大幅に向上する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>学校／仕事の成績が大幅に低下する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>賃金／お小遣いが下がる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>他人から妙に頼られるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自分に関する悪い噂が流れるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大金持ちになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ガラが悪い人々（不良、裏稼業など）と繋がっていることになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>誰もが知っている有名人になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT6-constant" class="">LDT6 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：パートナーとの関係性や呼び方</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーと恋仲だったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーとお互いに特別な名前で呼び合うようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーと寝室が一緒になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーと家族だったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーとの身体的スキンシップが増える</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーと家族ぐるみの付き合いになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自分がパートナーに精神的に依存する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーが自分に精神的に依存する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーを傷つけたくてたまらなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーが好きで好きでたまらなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT7-constant" class="">LDT7 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：現在の生活</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>近づくと赤ちゃんがギャン泣きする体質になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>義理の家族がある</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>仕事や学業などに忙殺される生活になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体調を崩しがちになる（貧血、流行病など）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>家族以外の誰かと同居していることになる（シェアハウス、同棲など）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>何らかの嗜好品（酒、煙草、甘味など）がやめられなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>住居が雨漏りするようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>住居に心霊現象が発生するようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>近所の猫に嫌われる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>金遣いが荒くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT8-constant" class="">LDT8 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：過去</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>昔いじめられていたことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>以前なにかで表彰されたことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>以前グレていた時期があったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>誰かにお金を借りていたことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>幼い頃、家出したことがあったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>以前誰かに告白して、フラれたことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>幼い頃、体が弱かったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>以前すごく中二病だったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>南国で親父に〇〇（任意の特殊技能）を習っていたことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>誰かとの約束を忘れる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT9-constant" class="">LDT9 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：自由欄１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>性癖が歪む</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ドジっ子属性がつく</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>人の声が聞き取りにくくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>落ちている硬貨に必ず気づくようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>人の顔を覚えるのが苦手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>とても寒がりになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>血を見るのが怖くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ピーマンが苦手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>動物にやけに好かれるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>暗いところが怖くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="LDT10-constant" class="">LDT10 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表：自由欄２</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>寝床に入ると数秒で寝落ちするようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>全裸でないと寝られなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>見えないはずのものが見える様になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>財布を忘れがちになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>子供を見ると可愛がらざるを得なくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>夜眠れなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>特徴的な口癖ができる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>掃除好きになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>お年寄りにやけに好かれるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スリルを感じるのが快感になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT1-constant" class="">HDT1 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：名前、性別、年齢、人称</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前の綴り、あるいは漢字が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名前の音が変わる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>名無しとなり、誰も元の名前を思い出せなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>生まれた時から異性だったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>後天的に性別が異性に変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>これ以降一切歳をとらなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外見年齢が歳をとる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外見年齢が幼くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>一人称が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>二人称が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT2-constant" class="">HDT2 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：外見的特徴</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>片目の色が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>両目の色が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>髪の色が変化する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>全身から色素が抜け落ちる（アルビノ化）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>角が生える／もとが有角の場合は角を失う</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体の一部が獣のようになる／元が獣型の場合はヒトの形となる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>翼が生える／元が有翼の場合は翼を失う</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体の一部が人形のようになる／元が人形の場合は人と変わらぬ姿になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体の何処かに大きな傷が出来る</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体の何処かを欠損する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT3-constant" class="">HDT3 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：性格</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>性格が攻撃的になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>思考や発想が幼くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>疑心暗鬼になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情の起伏が激しくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情の起伏が無くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>泣き虫になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>よく人に甘えるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>とてつもなくポジティブになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>倫理観が欠如する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>特定の感情を喪失する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT4-constant" class="">HDT4 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：得意不得意</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>得意不得意が逆転する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戦闘能力を失う／高負荷の運動ができなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>芸術関係（絵、音楽、書道など）が得意になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感情を隠すのが下手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感覚が異様に鋭敏になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>料理が壊滅的に下手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>四則演算が苦手になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>特異な才能が開花する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>才能をひとつ失う</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>一般的にあり得ない異能（超能力など）に目覚める</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT5-constant" class="">HDT5 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：社会的立場</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>職を失う</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>周囲から崇められる立場になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>学校／仕事の成績が大幅に向上する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戸籍上死者になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>借金まみれになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>多くの人に慕われる人気者になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>犯罪者として扱われる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大金持ちになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>何らかの組織に追われる身になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>誰もが知っている有名人になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT6-constant" class="">HDT6 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：パートナーとの関係性や呼び方</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーと恋仲だったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーとお互いに特別な名前で呼び合うようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーに憎まれる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーと家族だったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーから忘れられる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーの言葉に逆らえなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自分がパートナーに精神的に依存する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーが自分に精神的に依存する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーを傷つけたくてたまらなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナーが好きで好きでたまらなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT7-constant" class="">HDT7 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：現在の生活</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>住居が崩壊する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>身に覚えがない子供ができる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>仕事や学業などに忙殺される生活になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体調を崩しがちになる（貧血、流行病など）</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>住んでいる町（村、国）が滅びる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>何らかの嗜好品（酒、煙草、甘味など）がやめられなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>故郷が滅びたことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナー以外の人がいる場所が怖くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>住んでいる場所が戦場になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>不治の病にかかる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT8-constant" class="">HDT8 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：過去</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>かつて誰かを殺したことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>過去の功績がひとつなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>過去のすべての記憶を失う</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>かつてパートナーを傷つけたことがある</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>幼い頃、自分以外の家族全員が死亡した</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>以前誰かに告白して、フラれたことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>犯罪歴ができる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大切な思い出がひとつなかったことになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>悲しい思い出がひとつ増える</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>誰かとの約束を忘れる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT9-constant" class="">HDT9 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：自由欄１</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パートナー以外の人の顔が塗りつぶされて見える</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>色覚を失う</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>声を失う</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>誰かと目を合わせることが怖くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>零した涙が宝石になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体の一部に植物が生える</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>血を見るのが怖くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>血を見ることに悦びを覚えるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>動物にやけに好かれるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>人に触れるのが怖くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HDT10-constant" class="">HDT10 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表：自由欄２</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='lbracket'>[</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>人の血を啜りたくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失明する</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>見えないはずのものが見える様になる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>水に浸かると人魚になってしまう</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>鏡や写真にうつらなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>夜眠れなくなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>影が無くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>味覚が鈍くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>痛覚が鈍くなる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>意味もなく急に涙があふれるようになる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='rbracket'>]</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/ChainTable.html" title="BCDice::DiceTable::ChainTable (class)">ChainTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/ChainTable.html#initialize-instance_method" title="BCDice::DiceTable::ChainTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>100の質問</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='const'><span class='object_link'><a href="#HQT1-constant" title="BCDice::GameSystem::IfIfIf::HQT1 (constant)">HQT1</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT2-constant" title="BCDice::GameSystem::IfIfIf::HQT2 (constant)">HQT2</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT3-constant" title="BCDice::GameSystem::IfIfIf::HQT3 (constant)">HQT3</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT4-constant" title="BCDice::GameSystem::IfIfIf::HQT4 (constant)">HQT4</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT5-constant" title="BCDice::GameSystem::IfIfIf::HQT5 (constant)">HQT5</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT6-constant" title="BCDice::GameSystem::IfIfIf::HQT6 (constant)">HQT6</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT7-constant" title="BCDice::GameSystem::IfIfIf::HQT7 (constant)">HQT7</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT8-constant" title="BCDice::GameSystem::IfIfIf::HQT8 (constant)">HQT8</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT9-constant" title="BCDice::GameSystem::IfIfIf::HQT9 (constant)">HQT9</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HQT10-constant" title="BCDice::GameSystem::IfIfIf::HQT10 (constant)">HQT10</a></span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/ChainTable.html" title="BCDice::DiceTable::ChainTable (class)">ChainTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/ChainTable.html#initialize-instance_method" title="BCDice::DiceTable::ChainTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ローリスク歪み表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='const'><span class='object_link'><a href="#LDT1-constant" title="BCDice::GameSystem::IfIfIf::LDT1 (constant)">LDT1</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT2-constant" title="BCDice::GameSystem::IfIfIf::LDT2 (constant)">LDT2</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT3-constant" title="BCDice::GameSystem::IfIfIf::LDT3 (constant)">LDT3</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT4-constant" title="BCDice::GameSystem::IfIfIf::LDT4 (constant)">LDT4</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT5-constant" title="BCDice::GameSystem::IfIfIf::LDT5 (constant)">LDT5</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT6-constant" title="BCDice::GameSystem::IfIfIf::LDT6 (constant)">LDT6</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT7-constant" title="BCDice::GameSystem::IfIfIf::LDT7 (constant)">LDT7</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT8-constant" title="BCDice::GameSystem::IfIfIf::LDT8 (constant)">LDT8</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT9-constant" title="BCDice::GameSystem::IfIfIf::LDT9 (constant)">LDT9</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#LDT10-constant" title="BCDice::GameSystem::IfIfIf::LDT10 (constant)">LDT10</a></span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/ChainTable.html" title="BCDice::DiceTable::ChainTable (class)">ChainTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/ChainTable.html#initialize-instance_method" title="BCDice::DiceTable::ChainTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ハイリスク歪み表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D10</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='const'><span class='object_link'><a href="#HDT1-constant" title="BCDice::GameSystem::IfIfIf::HDT1 (constant)">HDT1</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT2-constant" title="BCDice::GameSystem::IfIfIf::HDT2 (constant)">HDT2</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT3-constant" title="BCDice::GameSystem::IfIfIf::HDT3 (constant)">HDT3</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT4-constant" title="BCDice::GameSystem::IfIfIf::HDT4 (constant)">HDT4</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT5-constant" title="BCDice::GameSystem::IfIfIf::HDT5 (constant)">HDT5</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT6-constant" title="BCDice::GameSystem::IfIfIf::HDT6 (constant)">HDT6</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT7-constant" title="BCDice::GameSystem::IfIfIf::HDT7 (constant)">HDT7</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT8-constant" title="BCDice::GameSystem::IfIfIf::HDT8 (constant)">HDT8</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT9-constant" title="BCDice::GameSystem::IfIfIf::HDT9 (constant)">HDT9</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#HDT10-constant" title="BCDice::GameSystem::IfIfIf::HDT10 (constant)">HDT10</a></span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT1</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT1-constant" title="BCDice::GameSystem::IfIfIf::HQT1 (constant)">HQT1</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT2</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT2-constant" title="BCDice::GameSystem::IfIfIf::HQT2 (constant)">HQT2</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT3</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT3-constant" title="BCDice::GameSystem::IfIfIf::HQT3 (constant)">HQT3</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT4</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT4-constant" title="BCDice::GameSystem::IfIfIf::HQT4 (constant)">HQT4</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT5</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT5-constant" title="BCDice::GameSystem::IfIfIf::HQT5 (constant)">HQT5</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT6</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT6-constant" title="BCDice::GameSystem::IfIfIf::HQT6 (constant)">HQT6</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT7</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT7-constant" title="BCDice::GameSystem::IfIfIf::HQT7 (constant)">HQT7</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT8</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT8-constant" title="BCDice::GameSystem::IfIfIf::HQT8 (constant)">HQT8</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT9</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT9-constant" title="BCDice::GameSystem::IfIfIf::HQT9 (constant)">HQT9</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HQT10</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HQT10-constant" title="BCDice::GameSystem::IfIfIf::HQT10 (constant)">HQT10</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT1</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT1-constant" title="BCDice::GameSystem::IfIfIf::HDT1 (constant)">HDT1</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT2</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT2-constant" title="BCDice::GameSystem::IfIfIf::HDT2 (constant)">HDT2</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT3</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT3-constant" title="BCDice::GameSystem::IfIfIf::HDT3 (constant)">HDT3</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT4</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT4-constant" title="BCDice::GameSystem::IfIfIf::HDT4 (constant)">HDT4</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT5</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT5-constant" title="BCDice::GameSystem::IfIfIf::HDT5 (constant)">HDT5</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT6</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT6-constant" title="BCDice::GameSystem::IfIfIf::HDT6 (constant)">HDT6</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT7</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT7-constant" title="BCDice::GameSystem::IfIfIf::HDT7 (constant)">HDT7</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT8</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT8-constant" title="BCDice::GameSystem::IfIfIf::HDT8 (constant)">HDT8</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT9</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT9-constant" title="BCDice::GameSystem::IfIfIf::HDT9 (constant)">HDT9</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HDT10</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#HDT10-constant" title="BCDice::GameSystem::IfIfIf::HDT10 (constant)">HDT10</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT1</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT1-constant" title="BCDice::GameSystem::IfIfIf::LDT1 (constant)">LDT1</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT2</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT2-constant" title="BCDice::GameSystem::IfIfIf::LDT2 (constant)">LDT2</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT3</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT3-constant" title="BCDice::GameSystem::IfIfIf::LDT3 (constant)">LDT3</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT4</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT4-constant" title="BCDice::GameSystem::IfIfIf::LDT4 (constant)">LDT4</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT5</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT5-constant" title="BCDice::GameSystem::IfIfIf::LDT5 (constant)">LDT5</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT6</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT6-constant" title="BCDice::GameSystem::IfIfIf::LDT6 (constant)">LDT6</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT7</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT7-constant" title="BCDice::GameSystem::IfIfIf::LDT7 (constant)">LDT7</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT8</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT8-constant" title="BCDice::GameSystem::IfIfIf::LDT8 (constant)">LDT8</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT9</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT9-constant" title="BCDice::GameSystem::IfIfIf::LDT9 (constant)">LDT9</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LDT10</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#LDT10-constant" title="BCDice::GameSystem::IfIfIf::LDT10 (constant)">LDT10</a></span></span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_action-instance_method" title="#check_action (instance method)">#<strong>check_action</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">BCDice::Base</a></span></p>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_action-instance_method">
+  
+    #<strong>check_action</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/IfIfIf.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_action'>check_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ID</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_eval_common_command'>eval_common_command</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>3TY6</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IE</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_dicearr'>dicearr</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>3</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='id identifier rubyid_dicearr'>dicearr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='int'>3</span>
+    <span class='id identifier rubyid_success_count'>success_count</span> <span class='op'>=</span> <span class='id identifier rubyid_dicearr'>dicearr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_success'>success</span>
+      <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'><span class='object_link'><a href="../Result.html#success-class_method" title="BCDice::Result.success (method)">success</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(3B6=6) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dicearr'>dicearr</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 6の数:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_count'>success_count</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'><span class='object_link'><a href="../Result.html#failure-class_method" title="BCDice::Result.failure (method)">failure</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(3B6=6) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dicearr'>dicearr</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 6の数:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_count'>success_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> 不足数:</span><span class='embexpr_beg'>#{</span><span class='int'>3</span> <span class='op'>-</span> <span class='id identifier rubyid_success_count'>success_count</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IM</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_dicearr'>dicearr</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>3</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_success_count'>success_count</span> <span class='op'>=</span> <span class='id identifier rubyid_dicearr'>dicearr</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_success_count'>success_count</span> <span class='op'>==</span> <span class='int'>0</span>
+      <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_failure'><span class='object_link'><a href="../Result.html#failure-class_method" title="BCDice::Result.failure (method)">failure</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(3B6=6) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dicearr'>dicearr</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 6の数:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_count'>success_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> 選べるエンド数:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_count'>success_count</span> <span class='op'>+</span> <span class='int'>1</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_success'><span class='object_link'><a href="../Result.html#success-class_method" title="BCDice::Result.success (method)">success</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(3B6=6) ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dicearr'>dicearr</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> ＞ 6の数:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_count'>success_count</span><span class='embexpr_end'>}</span><span class='tstring_content'> 選べるエンド数:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_success_count'>success_count</span> <span class='op'>+</span> <span class='int'>1</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eval_game_system_specific_command-instance_method">
+  
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/IfIfIf.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_check_action'>check_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::IfIfIf::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sun Oct 23 12:32:37 2022 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.7.2).
+</div>
+
+    </div>
+  </body>
+</html>

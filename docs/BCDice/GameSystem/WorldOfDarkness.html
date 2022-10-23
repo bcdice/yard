@@ -229,33 +229,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; WorldOfDarkness </a>
-    
-
-    
-  </span>
-  
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of WorldOfDarkness.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#roll_wod-instance_method" title="#roll_wod (instance method)">#<strong>roll_wod</strong>(dice_pool, diff, enabled_botch = true, auto_success_value = 1)  &#x21d2; Object </a>
+      <a href="#roll_wod-instance_method" title="#roll_wod (instance method)">#<strong>roll_wod</strong>(dice_pool, difficulty)  &#x21d2; Object </a>
     
 
     
@@ -270,7 +244,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Revised Edition 出目10は1自動成功 振り足し 出目1は大失敗: 成功を1つ相殺.</p>
+<p>出目10と1、難易度以上が出た成功の目をカウントする。 それぞれの解釈はバージョンによって異なるため、呼び出し元で行う。.</p>
 </div></span>
   
 </li>
@@ -289,7 +263,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
 
   
   
@@ -310,52 +284,7 @@
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
-  
-    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::WorldOfDarkness (class)">WorldOfDarkness</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns a new instance of WorldOfDarkness.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-28
-29
-30
-31
-32
-33</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/WorldOfDarkness.rb', line 28</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='ivar'>@successDice</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='ivar'>@botchDice</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='ivar'>@rerollDice</span> <span class='op'>=</span> <span class='int'>0</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">BCDice::Base</a></span></p>
   
 </div>
 
@@ -379,6 +308,13 @@
       <pre class="lines">
 
 
+28
+29
+30
+31
+32
+33
+34
 35
 36
 37
@@ -436,15 +372,21 @@
 89
 90
 91
-92</pre>
+92
+93
+94
+95
+96
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/WorldOfDarkness.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/WorldOfDarkness.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='int'>6</span>
+  <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='int'>6</span>
   <span class='id identifier rubyid_auto_success'>auto_success</span> <span class='op'>=</span> <span class='int'>0</span>
-
   <span class='id identifier rubyid_enabled_reroll'>enabled_reroll</span> <span class='op'>=</span> <span class='kw'>false</span>
   <span class='id identifier rubyid_enabled_20th'>enabled_20th</span> <span class='op'>=</span> <span class='kw'>false</span>
 
@@ -457,41 +399,56 @@
   <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>STA</span><span class='tstring_end'>&#39;</span></span>
     <span class='id identifier rubyid_enabled_20th'>enabled_20th</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='id identifier rubyid_md'>md</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_md'>md</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='id identifier rubyid_md'>md</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_md'>md</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_auto_success'>auto_success</span> <span class='op'>=</span> <span class='id identifier rubyid_md'>md</span><span class='lbracket'>[</span><span class='int'>4</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_md'>md</span><span class='lbracket'>[</span><span class='int'>4</span><span class='rbracket'>]</span>
 
-  <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='int'>6</span> <span class='kw'>if</span> <span class='id identifier rubyid_diff'>diff</span> <span class='op'>&lt;</span> <span class='int'>2</span>
+  <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='int'>6</span> <span class='kw'>if</span> <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>&lt;</span> <span class='int'>2</span>
 
   <span class='id identifier rubyid_sequence'>sequence</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DicePool=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='embexpr_end'>}</span><span class='tstring_content'>, Difficulty=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_diff'>diff</span><span class='embexpr_end'>}</span><span class='tstring_content'>, AutomaticSuccess=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_auto_success'>auto_success</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DicePool=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='embexpr_end'>}</span><span class='tstring_content'>, Difficulty=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_difficulty'>difficulty</span><span class='embexpr_end'>}</span><span class='tstring_content'>, AutomaticSuccess=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_auto_success'>auto_success</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='comment'># 出力では Difficulty=11..12 もあり得る
-</span>  <span class='id identifier rubyid_diff'>diff</span> <span class='op'>=</span> <span class='int'>10</span> <span class='kw'>if</span> <span class='id identifier rubyid_diff'>diff</span> <span class='op'>&gt;</span> <span class='int'>10</span>
+</span>  <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='int'>10</span> <span class='kw'>if</span> <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>&gt;</span> <span class='int'>10</span>
 
-  <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>=</span> <span class='id identifier rubyid_auto_success'>auto_success</span>
+  <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='id identifier rubyid_total_botch'>total_botch</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_once_success'>once_success</span> <span class='op'>=</span> <span class='kw'>false</span>
 
-  <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_botch'>botch</span><span class='comma'>,</span> <span class='id identifier rubyid_auto_success'>auto_success</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_wod'>roll_wod</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_enabled_20th'>enabled_20th</span> <span class='op'>?</span> <span class='int'>2</span> <span class='op'>:</span> <span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_ten_success'>ten_success</span><span class='comma'>,</span> <span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_botch'>botch</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_wod'>roll_wod</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_dice'>dice</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>+=</span> <span class='id identifier rubyid_success'>success</span>
   <span class='id identifier rubyid_total_botch'>total_botch</span> <span class='op'>+=</span> <span class='id identifier rubyid_botch'>botch</span>
 
-  <span class='kw'>if</span> <span class='id identifier rubyid_enabled_reroll'>enabled_reroll</span>
-    <span class='comment'># 振り足し
-</span>    <span class='kw'>while</span> <span class='id identifier rubyid_auto_success'>auto_success</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-      <span class='id identifier rubyid_dice_pool'>dice_pool</span> <span class='op'>=</span> <span class='id identifier rubyid_auto_success'>auto_success</span>
-      <span class='comment'># 振り足しの出目1は大失敗ではない
-</span>      <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_botch'>botch</span><span class='comma'>,</span> <span class='id identifier rubyid_auto_success'>auto_success</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_wod'>roll_wod</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_dice'>dice</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>+=</span> <span class='id identifier rubyid_success'>success</span>
-      <span class='id identifier rubyid_total_botch'>total_botch</span> <span class='op'>+=</span> <span class='id identifier rubyid_botch'>botch</span>
+  <span class='comment'># 成功がひとつでもあったか覚えておく
+</span>  <span class='id identifier rubyid_once_success'>once_success</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_success'>success</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>||</span> <span class='id identifier rubyid_ten_success'>ten_success</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_enabled_20th'>enabled_20th</span>
+    <span class='comment'># 20周年記念版なら10の目は2成功扱い
+</span>    <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>+=</span> <span class='id identifier rubyid_ten_success'>ten_success</span> <span class='op'>*</span> <span class='int'>2</span>
+  <span class='kw'>else</span>
+    <span class='comment'># Revised Editionでは10は1成功と数える
+</span>    <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>+=</span> <span class='id identifier rubyid_ten_success'>ten_success</span>
+
+    <span class='comment'># 振り足し判定ありなら10が出ただけ振り足しを行う
+</span>    <span class='kw'>if</span> <span class='id identifier rubyid_enabled_reroll'>enabled_reroll</span>
+      <span class='kw'>while</span> <span class='id identifier rubyid_ten_success'>ten_success</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+        <span class='comment'># 振り足しの出目1は大失敗ではない
+</span>        <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_ten_success'>ten_success</span><span class='comma'>,</span> <span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_wod'>roll_wod</span><span class='lparen'>(</span><span class='id identifier rubyid_ten_success'>ten_success</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_dice'>dice</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_success'>success</span> <span class='op'>+</span> <span class='id identifier rubyid_ten_success'>ten_success</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 
+  <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>-=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_total_success'>total_success</span><span class='comma'>,</span> <span class='id identifier rubyid_total_botch'>total_botch</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span>
+
+  <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>+=</span> <span class='id identifier rubyid_auto_success'>auto_success</span> <span class='comment'># 意志力による自動成功は打ち消されない
+</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_total_success'>total_success</span> <span class='op'>&gt;</span> <span class='int'>0</span>
     <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>成功数</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_success'>total_success</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>elsif</span> <span class='id identifier rubyid_total_botch'>total_botch</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-    <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大失敗</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_total_botch'>total_botch</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_once_success'>once_success</span> <span class='op'>==</span> <span class='kw'>false</span>
+    <span class='comment'># ボッチが存在し、かつ成功がひとつもない場合のみ大失敗
+</span>    <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大失敗</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_sequence'>sequence</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
@@ -507,7 +464,7 @@
       <div class="method_details ">
   <h3 class="signature " id="roll_wod-instance_method">
   
-    #<strong>roll_wod</strong>(dice_pool, diff, enabled_botch = true, auto_success_value = 1)  &#x21d2; <tt>Object</tt> 
+    #<strong>roll_wod</strong>(dice_pool, difficulty)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -516,7 +473,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Revised Edition 出目10は1自動成功 振り足し 出目1は大失敗: 成功を1つ相殺</p>
+<p>出目10と1、難易度以上が出た成功の目をカウントする。 それぞれの解釈はバージョンによって異なるため、呼び出し元で行う。</p>
 
 
   </div>
@@ -530,12 +487,6 @@
       <pre class="lines">
 
 
-97
-98
-99
-100
-101
-102
 103
 104
 105
@@ -561,16 +512,12 @@
 125
 126
 127
-128
-129
-130
-131
-132</pre>
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/WorldOfDarkness.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/WorldOfDarkness.rb', line 103</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_roll_wod'>roll_wod</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='comma'>,</span> <span class='id identifier rubyid_diff'>diff</span><span class='comma'>,</span> <span class='id identifier rubyid_enabled_botch'>enabled_botch</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_auto_success_value'>auto_success_value</span> <span class='op'>=</span> <span class='int'>1</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_roll_wod'>roll_wod</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='comma'>,</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='rparen'>)</span>
   <span class='comment'># FIXME: まとめて振る
 </span>  <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_dice_now'>dice_now</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>10</span><span class='rparen'>)</span>
@@ -581,30 +528,20 @@
 
   <span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='id identifier rubyid_botch'>botch</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_auto_success'>auto_success</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_ten_success'>ten_success</span> <span class='op'>=</span> <span class='int'>0</span>
 
   <span class='id identifier rubyid_dice'>dice</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_d'>d</span><span class='op'>|</span>
     <span class='kw'>case</span> <span class='id identifier rubyid_d'>d</span>
     <span class='kw'>when</span> <span class='int'>10</span>
-      <span class='id identifier rubyid_auto_success'>auto_success</span> <span class='op'>+=</span> <span class='id identifier rubyid_auto_success_value'>auto_success_value</span>
-    <span class='kw'>when</span> <span class='id identifier rubyid_diff'>diff</span><span class='op'>..</span><span class='int'>10</span>
+      <span class='id identifier rubyid_ten_success'>ten_success</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='kw'>when</span> <span class='id identifier rubyid_difficulty'>difficulty</span><span class='op'>...</span><span class='int'>10</span>
       <span class='id identifier rubyid_success'>success</span> <span class='op'>+=</span> <span class='int'>1</span>
     <span class='kw'>when</span> <span class='int'>1</span>
-      <span class='id identifier rubyid_botch'>botch</span> <span class='op'>+=</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id identifier rubyid_enabled_botch'>enabled_botch</span>
+      <span class='id identifier rubyid_botch'>botch</span> <span class='op'>+=</span> <span class='int'>1</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='comment'># 自動成功を成功に加算する
-</span>  <span class='id identifier rubyid_success'>success</span> <span class='op'>+=</span> <span class='id identifier rubyid_auto_success'>auto_success</span>
-
-  <span class='kw'>if</span> <span class='id identifier rubyid_enabled_botch'>enabled_botch</span>
-    <span class='comment'># 成功と大失敗を相殺する
-</span>    <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_botch'>botch</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span>
-    <span class='id identifier rubyid_success'>success</span> <span class='op'>-=</span> <span class='id identifier rubyid_c'>c</span>
-    <span class='id identifier rubyid_botch'>botch</span> <span class='op'>-=</span> <span class='id identifier rubyid_c'>c</span>
-  <span class='kw'>end</span>
-
-  <span class='kw'>return</span> <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_botch'>botch</span><span class='comma'>,</span> <span class='id identifier rubyid_auto_success'>auto_success</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_dice'>dice</span><span class='comma'>,</span> <span class='id identifier rubyid_ten_success'>ten_success</span><span class='comma'>,</span> <span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_botch'>botch</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -616,9 +553,9 @@
 </div>
 
       <div id="footer">
-  Generated on Wed May  4 13:01:19 2022 by
+  Generated on Sun Oct 23 12:32:48 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.1).
+  0.9.26 (ruby-2.7.2).
 </div>
 
     </div>
