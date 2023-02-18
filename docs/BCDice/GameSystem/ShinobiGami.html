@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::ShinobiGami
   
-    &mdash; Documentation by YARD 0.9.26
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -198,6 +198,7 @@
 </span><span class='tstring_content'>  　　／夏の終わりシーン表　NTST／培養プラントシーン表　　PLST
 </span><span class='tstring_content'>  　　・忍秘伝　　中忍試験シーン表　HC/滅びの塔シーン表　HT/影の街でシーン表　HK
 </span><span class='tstring_content'>  　　/夜行列車シーン表　HY/病院シーン表　HO/龍動シーン表　HR/密室シーン表　HM/催眠シーン表　HS
+</span><span class='tstring_content'>  　・ファンブル表（旧文庫版）　OFT
 </span><span class='tstring_content'>  ・D66ダイスあり
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
@@ -374,15 +375,15 @@
       <pre class="lines">
 
 
-47
 48
 49
 50
 51
-52</pre>
+52
+53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -417,16 +418,16 @@
       <pre class="lines">
 
 
-74
 75
 76
 77
 78
 79
-80</pre>
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_action_roll'>action_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>TABLES</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="#RTT-constant" title="BCDice::GameSystem::ShinobiGami::RTT (constant)">RTT</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll_command'>roll_command</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -455,7 +456,6 @@
       <pre class="lines">
 
 
-56
 57
 58
 59
@@ -469,10 +469,11 @@
 67
 68
 69
-70</pre>
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_2d6'>result_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_list'>_dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&gt;=</span>
@@ -499,9 +500,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 23 12:32:44 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  Generated on Sat Feb 18 20:23:59 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.2.0).
 </div>
 
     </div>

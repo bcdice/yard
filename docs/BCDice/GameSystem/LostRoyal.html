@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::LostRoyal
   
-    &mdash; Documentation by YARD 0.9.26
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -602,7 +602,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_check_lostroyal'>check_lostroyal</span><span class='lparen'>(</span><span class='id identifier rubyid_checking_table'>checking_table</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_keys'>keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 
-  <span class='lparen'>(</span><span class='int'>0</span><span class='op'>...</span><span class='int'>3</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__i'>_i</span><span class='op'>|</span>
+  <span class='int'>3</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__i'>_i</span><span class='op'>|</span>
     <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>6</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_keys'>keys</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_key'>key</span>
   <span class='kw'>end</span>
@@ -1179,9 +1179,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 23 12:32:40 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  Generated on Sat Feb 18 20:23:58 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.2.0).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::StrangerOfSwordCity
   
-    &mdash; Documentation by YARD 0.9.26
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -497,7 +497,7 @@
 
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span>
   <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>unless</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d+)SR([+\-]?\d+)?(&gt;=(\d+))?$</span><span class='regexp_end'>/i</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>unless</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d+)SR([+-]?\d+)?(&gt;=(\d+))?$</span><span class='regexp_end'>/i</span></span>
 
   <span class='id identifier rubyid_diceCount'>diceCount</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
   <span class='id identifier rubyid_modify'>modify</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -703,9 +703,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 23 12:32:51 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  Generated on Sat Feb 18 20:24:02 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.2.0).
 </div>
 
     </div>

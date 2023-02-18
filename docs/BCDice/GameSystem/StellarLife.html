@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::StellarLife
   
-    &mdash; Documentation by YARD 0.9.26
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -629,7 +629,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_getJudgeResult'>getJudgeResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)?DA([\d+*\-]*\d)?\[(\d+),(\d+)(,(\d+))?\]</span><span class='regexp_end'>/i</span></span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\d+)?DA([\d+*-]*\d)?\[(\d+),(\d+)(,(\d+))?\]</span><span class='regexp_end'>/i</span></span>
     <span class='id identifier rubyid_number'>number</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='id identifier rubyid_correction'>correction</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>0</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='id identifier rubyid_single'>single</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>4</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -684,9 +684,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 23 12:32:44 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  Generated on Sat Feb 18 20:23:59 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.2.0).
 </div>
 
     </div>

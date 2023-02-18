@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::Torg
   
-    &mdash; Documentation by YARD 0.9.26
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -685,7 +685,7 @@
   <span class='id identifier rubyid_ttype'>ttype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='int'>0</span>
 
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([RITMDB]T)(\d+([+\-]\d+)*)</span><span class='regexp_end'>/i</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_string'>string</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>([RITMDB]T)(\d+([+-]\d+)*)</span><span class='regexp_end'>/i</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_string'>string</span>
 
   <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_num'>num</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
@@ -1656,9 +1656,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 23 12:32:37 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  Generated on Sat Feb 18 20:23:57 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.2.0).
 </div>
 
     </div>

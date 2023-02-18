@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::Raisondetre
   
-    &mdash; Documentation by YARD 0.9.26
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -683,7 +683,7 @@
 
     <span class='kw'>return</span> <span class='id identifier rubyid_checkRoll'>checkRoll</span><span class='lparen'>(</span><span class='id identifier rubyid_diceCount'>diceCount</span><span class='comma'>,</span> <span class='id identifier rubyid_choiceCount'>choiceCount</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
 
-  <span class='kw'>elsif</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(-)?(\d+)?DD([1-9])?([+\-]\d+)?$</span><span class='regexp_end'>/i</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(-)?(\d+)?DD([1-9])?([+-]\d+)?$</span><span class='regexp_end'>/i</span></span>
     <span class='id identifier rubyid_diceCount'>diceCount</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
     <span class='id identifier rubyid_diceCount'>diceCount</span> <span class='op'>*=</span> <span class='op'>-</span><span class='int'>1</span> <span class='kw'>unless</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
     <span class='id identifier rubyid_armor'>armor</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>0</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -709,9 +709,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 23 12:32:44 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  Generated on Sat Feb 18 20:23:59 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.2.0).
 </div>
 
     </div>

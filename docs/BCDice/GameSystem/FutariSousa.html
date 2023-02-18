@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::FutariSousa
   
-    &mdash; Documentation by YARD 0.9.26
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -201,6 +201,7 @@
 </span><span class='tstring_content'>  　思わぬヒント EVH／実験をしてみよう EVX／ゲスト捜査 EVG
 </span><span class='tstring_content'>  　ケイジ聞き込み捜査　　　 EVQ／ケイジ大規模捜査　　　　　 EVM／こっそり情報の受け渡し EVP
 </span><span class='tstring_content'>  　同僚たちと一緒に捜査する EVO／頻染みの店シチュエーション EVF／ハードBデカアクション  EVB
+</span><span class='tstring_content'>  　探偵を大人しくさせる捜査 EVL／伝統的捜査 EVZ／原始的捜査 EVR
 </span><span class='tstring_content'>  感情表
 </span><span class='tstring_content'>  　感情表A／B　　 FLT66・FLT10
 </span><span class='tstring_content'>  　気に入っているところ　 FLTL66　／気に入らないところ　 FLTD66
@@ -350,14 +351,14 @@
       <pre class="lines">
 
 
-60
 61
 62
 63
-64</pre>
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FutariSousa.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FutariSousa.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -391,7 +392,6 @@
       <pre class="lines">
 
 
-68
 69
 70
 71
@@ -401,10 +401,11 @@
 75
 76
 77
-78</pre>
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FutariSousa.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FutariSousa.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d+)?DT$</span><span class='regexp_end'>/i</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -427,9 +428,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 23 12:32:43 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  Generated on Sat Feb 18 20:23:59 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.2.0).
 </div>
 
     </div>
