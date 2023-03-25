@@ -186,7 +186,7 @@
 </span><span class='tstring_content'>  　　ネイロに5(白)を取得した場合 3:失敗
 </span><span class='tstring_content'>  ・各種表
 </span><span class='tstring_content'>  　ファンブル表 FT／致命傷表 CWT／休憩表 BT／目標表 TT／関係表 RT
-</span><span class='tstring_content'>  　障害表 OT／リクエスト表 RQT／情景表 ST
+</span><span class='tstring_content'>  　障害表 OT／リクエスト表 RQT／クロウル表 CLT／報酬表 RWT／悪夢表 NMT／情景表 ST
 </span><span class='tstring_content'>  ・キーワード表
 </span><span class='tstring_content'>  　ダーク DKT／ホット HKT／ラブ LKT／エキセントリック EKT／メランコリー MKT
 </span><span class='tstring_content'>  ・名前表 NT
@@ -287,6 +287,47 @@
       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>あなたのオトダマの姿が、あなたの好きな人物の姿に変わる。「それがお前が焦がれる人物か。そいつをどうしたい？」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>そのエリアの風景にあなたの日常が浮かび上がる。「お前は何をしている？その暮らしをどう思っている？」</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>あなたの目の前に、あなたの死体が横たわっている。「お前を殺すものは何だ？お前は誰に殺される？」</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CLT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>クロウル表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パスワードが抜き取られていた！　所持金が無くなっている！　自分のコインを3枚失う。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>過去に同様のオトクイと出会ったことのある人物に出会う。【技術】で判定を行う。成功すると、「特殊アプリの開発」を行うことができる(この間奏アクションには【タイム】は必要ない)。必要なコインは1枚少なくなる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>近所にあるパワースポットを教えてもらう。【霊力】で判定を行う。成功すると、自分の【生命力】を【活力】の値だけ回復することができる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>あなたのことを知る人物に出会う。どんな思い出話をしたのだろうか？　この質問はリクエストとして扱う。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>プライベートの友人からメールが届いている。【愛】で判定を行う。成功すると、好きなNPCを協力者として設定することができる。判定に失敗すると苦情のメールだった。ストレスを1点受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ノイズメンバーから応援のメッセージをもらう。好きなネイロを1つ獲得する(この効果で。特定のネイロを7個以上にすることはできない)。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>美味しい食べ物屋さんに関する情報を教えてもらう。【日常】で判定を行う。成功すると、自分のストレスを1点回復できる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>オトクイに関する情報を求めているノイズメンバーに出会う。公開されている脅威1つにつき、その情報をコイン1枚で売却できる。このイベントが2度以上起きた場合、すでに売却した脅威の情報を再び売ることはできない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>試作アプリの試験者を募集している。好きなアプリ1つを獲得する。ただし、このアプリを使用するときサイコロを1個振ること。1か2が出ると、そのアプリは効果を発揮しない。セッション中に、試作アプリを使用しているとセッション終了時にレポートを提出できる。【頭脳】で判定を行う。成功すると、コインを1枚獲得できる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>自分に関する悪口を見つける。そこには、どんな悪口が書かれていたのだろうか。　この質問は、リクエストとして扱う。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>同じ種類のオトダマと契約しているオトダマ使いと意気投合。このセッションの間、自分のナンバー1つを、修得可能な別のナンバーに変更することができる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RWT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>報酬表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ノイズからオトクイ退治の報酬をもらうことができる。[倒したオトクイの本体のレベル]枚のコインを獲得する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ノイズにオトダマの情報を売ることができる。[自分の【頭脳】のダイスの数]枚のコインを獲得する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冒険を通じて因縁が芽生える。今回登場したキャラクターの中から一人を選ぶ。そのキャラクターを、自分の【想い人】にする。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冒険を通じて絆が結ばれる。今回登場したNPCの中から一人を選ぶ。そのキャラクターを、自分の【協力者】にする。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冒険の思い出が【ウタの欠片】になる。今回の冒険に登場した仲間、情景、出来事などなどから、キーワードを一つ選ぶ。そのキーワードを【ウタの欠片】のキーワード欄に追加する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>戦いの経験が【ウタの欠片】になる。今回の冒険に登場した敵、情景、出来事などなどから、キーワードを一つ選ぶ。そのキーワードを【ウタの欠片】のキーワード欄に追加する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NMT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>悪夢表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>絶望のウタに知覚を遮断される。背後にオトクイの気配を感じたと思ったときは遅かった。卑劣な攻撃があなたを襲う。好きな能力値で判定を行う。失敗するとあなたのキャラクターは、オトナシとなり、二度と冒険に参加できない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>絶望のウタに混じり、悲痛な叫びが聞こえてくる。ココロダンジョンの持ち主だろうか。あなたは、救えなかったのだ。【日常】で判定を行う。失敗すると、自分の能力値一つを選ぶ。次回のセッションは、その能力値にストレスを受けた状態で始まる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>絶望のウタに混じり、オトクイの笑いがこだまする。それは嘲りの笑いだった。オトクイや仲間たち……何より自分への怒りがわき上がる。【日常】で判定を行う。失敗すると、自分の想い人への【想い】を一つ失う。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>絶望のウタの中に一人取り残される。誰もあなたに気づかない。孤独に耐えながら、何とか日常へ帰還したが……そのときの恐怖がぬぐえない。【日常】で判定を行う。失敗すると、次回のセッションは、自分の【生命力】の現在値が通常の半分(端数切り上げ)の状態で始まる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ココロダンジョンから帰還したあなたを待っていたのは、代わり映えのない日常だった。あなたが任務に失敗しても、世界は変わらない。なら、もう、あんな怖い目をする必要はないんじゃないか？　【日常】で判定を行う。失敗すると、自分のナンバー一つを選ぶ。次回のセッションは、そのナンバーにストレスを受けた状態で始まる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>絶望のウタの中を必死で逃げ出した。背後から仲間の声が聞こえた気がする。しかし、あなたは振り返ることができなかった。【日常】で判定を行う。失敗すると、自分に対して【想い】を持っているPC一人を選び、その自分に対する【想い】が失われる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
     <span class='rbracket'>]</span>
   <span class='rparen'>)</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ST</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66Table.html" title="BCDice::DiceTable::D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66Table.html#initialize-instance_method" title="BCDice::DiceTable::D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
@@ -1266,7 +1307,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Feb 18 20:23:59 2023 by
+  Generated on Sun Mar 26 01:54:40 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.2.0).
 </div>

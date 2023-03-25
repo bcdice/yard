@@ -173,17 +173,23 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
-<span class='tstring_content'>  ・攻撃ロール　AT[x][&gt;=t][y]
+<span class='tstring_content'>  ・攻撃ロール　AT[x][@c][&gt;=t][y]
 </span><span class='tstring_content'>  　x：+-修正。省略可。
-</span><span class='tstring_content'>  　y:有利(A), 不利(D)。省略可。
+</span><span class='tstring_content'>  　c:クリティカル値。省略可。
 </span><span class='tstring_content'>  　t:敵のアーマークラス。&gt;=を含めて省略可。
+</span><span class='tstring_content'>  　y:有利(A), 不利(D)。省略可。
 </span><span class='tstring_content'>  　ファンブル／失敗／成功／クリティカル を自動判定。
 </span><span class='tstring_content'>  　例）AT AT&gt;=10 AT+5&gt;=18 AT-3&gt;=16 ATA AT&gt;=10A AT+3&gt;=18A AT-3&gt;=16 ATD AT&gt;=10D AT+5&gt;=18D AT-5&gt;=16D
-</span><span class='tstring_content'>
+</span><span class='tstring_content'>  　    AT@19 AT+5@18 AT-2@19&gt;=15
 </span><span class='tstring_content'>  ・能力値判定　AR[x][&gt;=t][y]
 </span><span class='tstring_content'>  　攻撃ロールと同様。失敗／成功を自動判定。
 </span><span class='tstring_content'>  　例）AR AR&gt;=10 AR+5&gt;=18 AR-3&gt;=16 ARA AR&gt;=10A AR+3&gt;=18A AR-3&gt;=16 ARD AR&gt;=10D AR+5&gt;=18D AR-5&gt;=16D
-</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・両手持ちのダメージ　2HnDx[m]
+</span><span class='tstring_content'>  　n:ダイスの個数
+</span><span class='tstring_content'>  　x:ダイスの面数
+</span><span class='tstring_content'>  　m:+-修正。省略可。
+</span><span class='tstring_content'>  　パラディンとファイターの武器の両手持ちによるダメージダイスの1,2の出目の振り直しを行います。
+</span><span class='tstring_content'>  　例)2H3D6 2H1D10+3 2H2D8-1
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
     </dl>
@@ -225,7 +231,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>能力値ロール.</p>
+</div></span>
   
 </li>
 
@@ -247,7 +255,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>攻撃ロール.</p>
+</div></span>
   
 </li>
 
@@ -322,6 +332,30 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#twohands_damage_roll-instance_method" title="#twohands_damage_roll (instance method)">#<strong>twohands_damage_roll</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>武器の両手持ちダメージ.</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -382,14 +416,14 @@
       <pre class="lines">
 
 
-32
-33
-34
-35
-36</pre>
+38
+39
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -417,26 +451,23 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>能力値ロール</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
 141
 142
 143
@@ -489,10 +520,24 @@
 190
 191
 192
-193</pre>
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ability_roll'>ability_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^AR([-+]\d+)?(&gt;=(\d+))?([AD]?)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -575,19 +620,23 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>攻撃ロール</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-52
-53
-54
-55
-56
-57
-58
 59
 60
 61
@@ -654,25 +703,44 @@
 122
 123
 124
-125</pre>
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attack_roll'>attack_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^AT([-+]\d+)?(&gt;=(\d+))?([AD]?)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^AT([-+]\d+)?(@(\d+))?(&gt;=(\d+))?([AD]?)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
     <span class='kw'>return</span> <span class='kw'>nil</span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_modify'>modify</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_advantage'>advantage</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>4</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_critical_no'>critical_no</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>5</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_advantage'>advantage</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>6</span><span class='rbracket'>]</span>
 
   <span class='id identifier rubyid_usedie'>usedie</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='id identifier rubyid_roll_die'>roll_die</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
 
   <span class='id identifier rubyid_dice_command'>dice_command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AT</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_number_with_sign_from_int'>number_with_sign_from_int</span><span class='lparen'>(</span><span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_critical_no'>critical_no</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_dice_command'>dice_command</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_critical_no'>critical_no</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_critical_no'>critical_no</span> <span class='op'>=</span> <span class='int'>20</span>
+  <span class='kw'>end</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_difficulty'>difficulty</span> <span class='op'>&gt;</span> <span class='int'>0</span>
     <span class='id identifier rubyid_dice_command'>dice_command</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_difficulty'>difficulty</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
@@ -706,7 +774,7 @@
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_usedie'>usedie</span> <span class='op'>==</span> <span class='int'>20</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_usedie'>usedie</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_critical_no'>critical_no</span>
     <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span> <span class='op'>=</span> <span class='kw'>true</span>
     <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='kw'>true</span>
     <span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>クリティカル</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -753,15 +821,15 @@
       <pre class="lines">
 
 
-38
-39
-40</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_attack_roll'>attack_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_ability_roll'>ability_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_attack_roll'>attack_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_ability_roll'>ability_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_twohands_damage_roll'>twohands_damage_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -783,18 +851,18 @@
       <pre class="lines">
 
 
-42
-43
-44
-45
-46
-47
 48
 49
-50</pre>
+50
+51
+52
+53
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_number_with_sign_from_int'>number_with_sign_from_int</span><span class='lparen'>(</span><span class='id identifier rubyid_number'>number</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_number'>number</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -810,12 +878,123 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="twohands_damage_roll-instance_method">
+  
+    #<strong>twohands_damage_roll</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>武器の両手持ちダメージ</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DungeonsAndDragons5.rb', line 210</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_twohands_damage_roll'>twohands_damage_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^2H(\d+)D(\d+)([+-]\d+)?</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_dice_count'>dice_count</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_dice_number'>dice_number</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_modify'>modify</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_mod_str'>mod_str</span> <span class='op'>=</span> <span class='id identifier rubyid_number_with_sign_from_int'>number_with_sign_from_int</span><span class='lparen'>(</span><span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(2H</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_count'>dice_count</span><span class='embexpr_end'>}</span><span class='tstring_content'>D</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_number'>dice_number</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mod_str'>mod_str</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_dice'>dice</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_count'>dice_count</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_number'>dice_number</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_roll_dice'>roll_dice</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_dice'>dice</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_roll_dice'>roll_dice</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mod_str'>mod_str</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_ex_dice'>ex_dice</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_new_dice'>new_dice</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_sum_dice'>sum_dice</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_dice'>dice</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_num'>num</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&gt;</span> <span class='int'>2</span>
+      <span class='id identifier rubyid_sum_dice'>sum_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+      <span class='id identifier rubyid_ex_dice'>ex_dice</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_one_die'>one_die</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_number'>dice_number</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_sum_dice'>sum_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_one_die'>one_die</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+      <span class='id identifier rubyid_new_dice'>new_dice</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_one_die'>one_die</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_new_dice'>new_dice</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_ex_dice'>ex_dice</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>][</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_new_dice'>new_dice</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mod_str'>mod_str</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_sum_dice'>sum_dice</span> <span class='op'>+</span> <span class='id identifier rubyid_modify'>modify</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+
+  <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Result.html#initialize-instance_method" title="BCDice::Result#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+    <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> ＞ </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Sat Feb 18 20:24:01 2023 by
+  Generated on Sun Mar 26 01:54:42 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.2.0).
 </div>

@@ -103,7 +103,7 @@
 
 <div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="Alshard.html" title="BCDice::GameSystem::Alshard (class)">Alshard</a></span>, <span class='object_link'><a href="EtrianOdysseySRS.html" title="BCDice::GameSystem::EtrianOdysseySRS (class)">EtrianOdysseySRS</a></span>, <span class='object_link'><a href="FullMetalPanic.html" title="BCDice::GameSystem::FullMetalPanic (class)">FullMetalPanic</a></span>, <span class='object_link'><a href="MetallicGuardian.html" title="BCDice::GameSystem::MetallicGuardian (class)">MetallicGuardian</a></span></p>
+  <p class="children"><span class='object_link'><a href="Alshard.html" title="BCDice::GameSystem::Alshard (class)">Alshard</a></span>, <span class='object_link'><a href="EtrianOdysseySRS.html" title="BCDice::GameSystem::EtrianOdysseySRS (class)">EtrianOdysseySRS</a></span>, <span class='object_link'><a href="FullMetalPanic.html" title="BCDice::GameSystem::FullMetalPanic (class)">FullMetalPanic</a></span>, <span class='object_link'><a href="MetallicGuardian.html" title="BCDice::GameSystem::MetallicGuardian (class)">MetallicGuardian</a></span>, <span class='object_link'><a href="TenkaRyouran.html" title="BCDice::GameSystem::TenkaRyouran (class)">TenkaRyouran</a></span></p>
 </div>
 <h2>Defined Under Namespace</h2>
 <p class="children">
@@ -179,30 +179,36 @@
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~HELP_MESSAGE</span>
 <span class='tstring_content'>  ・判定
-</span><span class='tstring_content'>  　・通常判定：2D6+m&gt;=t[c,f]
+</span><span class='tstring_content'>  　・通常判定：2D6+m@c#f&gt;=t または 2D6+m&gt;=t[c,f]
 </span><span class='tstring_content'>  　　修正値m、目標値t、クリティカル値c、ファンブル値fで判定ロールを行います。
-</span><span class='tstring_content'>  　　修正値、クリティカル値、ファンブル値は省略可能です（[]ごと省略可）。
+</span><span class='tstring_content'>  　　修正値、クリティカル値、ファンブル値は省略可能です（[]ごと省略可、@c・#fの指定は順不同）。
 </span><span class='tstring_content'>  　　クリティカル値、ファンブル値の既定値は、それぞれ12、2です。
 </span><span class='tstring_content'>  　　自動成功、自動失敗、成功、失敗を自動表示します。
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  　　例) 2d6&gt;=10　　　　　修正値0、目標値10で判定
 </span><span class='tstring_content'>  　　例) 2d6+2&gt;=10　　　　修正値+2、目標値10で判定
 </span><span class='tstring_content'>  　　例) 2d6+2&gt;=10[11]　　↑をクリティカル値11で判定
+</span><span class='tstring_content'>  　　例) 2d6+2@11&gt;=10 　　↑をクリティカル値11で判定
 </span><span class='tstring_content'>  　　例) 2d6+2&gt;=10[12,4]　↑をクリティカル値12、ファンブル値4で判定
+</span><span class='tstring_content'>  　　例) 2d6+2@12#4&gt;=10 　↑をクリティカル値12、ファンブル値4で判定
+</span><span class='tstring_content'>  　　例) 2d6+2&gt;=10[,4]　　↑をクリティカル値12、ファンブル値4で判定（クリティカル値の省略）
+</span><span class='tstring_content'>  　　例) 2d6+2#4&gt;=10　　　↑をクリティカル値12、ファンブル値4で判定（クリティカル値の省略）
 </span><span class='heredoc_end'>HELP_MESSAGE</span></pre></dd>
       
         <dt id="HELP_MESSAGE_2-constant" class="">HELP_MESSAGE_2 =
           
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~HELP_MESSAGE</span>
-<span class='tstring_content'>  　・クリティカルおよびファンブルのみの判定：2D6+m[c,f]
+<span class='tstring_content'>  　・クリティカルおよびファンブルのみの判定：2D6+m@c#f または 2D6+m[c,f]
 </span><span class='tstring_content'>  　　目標値を指定せず、修正値m、クリティカル値c、ファンブル値fで判定ロールを行います。
-</span><span class='tstring_content'>  　　修正値、クリティカル値、ファンブル値は省略可能です（[]は省略不可）。
+</span><span class='tstring_content'>  　　修正値、クリティカル値、ファンブル値は省略可能です（[]は省略不可、@c・#fの指定は順不同）。
 </span><span class='tstring_content'>  　　自動成功、自動失敗を自動表示します。
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  　　例) 2d6[]　　　　修正値0、クリティカル値12、ファンブル値2で判定
 </span><span class='tstring_content'>  　　例) 2d6+2[11]　　修正値+2、クリティカル値11、ファンブル値2で判定
+</span><span class='tstring_content'>  　　例) 2d6+2@11 　　修正値+2、クリティカル値11、ファンブル値2で判定
 </span><span class='tstring_content'>  　　例) 2d6+2[12,4]　修正値+2、クリティカル値12、ファンブル値4で判定
+</span><span class='tstring_content'>  　　例) 2d6+2@12#4 　修正値+2、クリティカル値12、ファンブル値4で判定
 </span><span class='heredoc_end'>HELP_MESSAGE</span></pre></dd>
       
         <dt id="HELP_MESSAGE_3-constant" class="">HELP_MESSAGE_3 =
@@ -265,54 +271,6 @@
         </dt>
         <dd><pre class="code"><span class='int'>2</span></pre></dd>
       
-        <dt id="SRS_ROLL_WITH_TARGET_VALUE_RE-constant" class="">SRS_ROLL_WITH_TARGET_VALUE_RE =
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>目標値あり成功判定の正規表現</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A2D6([-+][-+\d]+)?&gt;=(\d+)(?:\[(\d+)?(?:,(\d+))?\])?\z</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
-      
-        <dt id="SRS_ROLL_WITHOUT_TARGET_VALUE_RE-constant" class="">SRS_ROLL_WITHOUT_TARGET_VALUE_RE =
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>目標値なし成功判定の正規表現</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A2D6([-+][-+\d]+)?\[(\d+)?(?:,(\d+))?\]\z</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
-      
-        <dt id="SRS_ROLL_DEFAULT_THRESHOLDS-constant" class="">SRS_ROLL_DEFAULT_THRESHOLDS =
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>既定の閾値指定表記</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-        </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DEFAULT_CRITICAL_VALUE-constant" title="BCDice::GameSystem::SRS::DEFAULT_CRITICAL_VALUE (constant)">DEFAULT_CRITICAL_VALUE</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>,</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DEFAULT_FUMBLE_VALUE-constant" title="BCDice::GameSystem::SRS::DEFAULT_FUMBLE_VALUE (constant)">DEFAULT_FUMBLE_VALUE</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span></pre></dd>
-      
     </dl>
   
 
@@ -338,7 +296,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#aliases_re_for_srs_roll_with_target_value-class_method" title="aliases_re_for_srs_roll_with_target_value (class method)">.<strong>aliases_re_for_srs_roll_with_target_value</strong>  &#x21d2; nil </a>
+      <a href="#aliases-class_method" title="aliases (class method)">.<strong>aliases</strong>  &#x21d2; Array&lt;String&gt; </a>
     
 
     
@@ -353,31 +311,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>目標値あり成功判定のエイリアスコマンドの正規表現を返す.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#aliases_re_for_srs_roll_without_target_value-class_method" title="aliases_re_for_srs_roll_without_target_value (class method)">.<strong>aliases_re_for_srs_roll_without_target_value</strong>  &#x21d2; nil </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>目標値なし成功判定のエイリアスコマンドの正規表現を返す.</p>
+<p>成功判定のエイリアスコマンドの一覧.</p>
 </div></span>
   
 </li>
@@ -439,6 +373,30 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#aliases-instance_method" title="#aliases (instance method)">#<strong>aliases</strong>  &#x21d2; Array&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>成功判定のエイリアスコマンドの一覧.</p>
+</div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -574,19 +532,19 @@
       <pre class="lines">
 
 
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182</pre>
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 173</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -611,9 +569,9 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="aliases_re_for_srs_roll_with_target_value-class_method">
+  <h3 class="signature first" id="aliases-class_method">
   
-    .<strong>aliases_re_for_srs_roll_with_target_value</strong>  &#x21d2; <tt>nil</tt> 
+    .<strong>aliases</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt> 
   
 
   
@@ -622,7 +580,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>目標値あり成功判定のエイリアスコマンドの正規表現を返す</p>
+<p>成功判定のエイリアスコマンドの一覧</p>
 
 
   </div>
@@ -635,7 +593,7 @@
     <li>
       
       
-        <span class='type'>(<tt>nil</tt>)</span>
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
       
       
       
@@ -649,69 +607,15 @@
       <pre class="lines">
 
 
-158
-159
-160</pre>
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 158</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 137</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_aliases_re_for_srs_roll_with_target_value'>aliases_re_for_srs_roll_with_target_value</span>
-  <span class='kw'>nil</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="aliases_re_for_srs_roll_without_target_value-class_method">
-  
-    .<strong>aliases_re_for_srs_roll_without_target_value</strong>  &#x21d2; <tt>nil</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>目標値なし成功判定のエイリアスコマンドの正規表現を返す</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>nil</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-164
-165
-166</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 164</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_aliases_re_for_srs_roll_without_target_value'>aliases_re_for_srs_roll_without_target_value</span>
-  <span class='kw'>nil</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_aliases'>aliases</span>
+  <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -762,12 +666,12 @@
       <pre class="lines">
 
 
-152
-153
-154</pre>
+131
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_help_message'>help_message</span>
   <span class='const'><span class='object_link'><a href="#DEFAULT_HELP_MESSAGE-constant" title="BCDice::GameSystem::SRS::DEFAULT_HELP_MESSAGE (constant)">DEFAULT_HELP_MESSAGE</a></span></span>
@@ -803,14 +707,14 @@
       <pre class="lines">
 
 
-144
-145
-146
-147
-148</pre>
+123
+124
+125
+126
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inherited'>inherited</span><span class='lparen'>(</span><span class='id identifier rubyid_subclass'>subclass</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_subclass'>subclass</span>
@@ -829,7 +733,61 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="eval_game_system_specific_command-instance_method">
+  <h3 class="signature first" id="aliases-instance_method">
+  
+    #<strong>aliases</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>成功判定のエイリアスコマンドの一覧</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_aliases'>aliases</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_aliases'>aliases</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eval_game_system_specific_command-instance_method">
   
     #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></tt><sup>?</sup> 
   
@@ -892,23 +850,35 @@
       <pre class="lines">
 
 
-223
-224
-225
-226
-227
-228
-229
-230
-231</pre>
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 223</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_alias_replaced_with_2d6'>alias_replaced_with_2d6</span> <span class='op'>=</span> <span class='id identifier rubyid_replace_alias_for_srs_roll_with_2d6'>replace_alias_for_srs_roll_with_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_legacy_c_f_match'>legacy_c_f_match</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(.+)\[(.*)\]\z</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_node'>node</span> <span class='op'>=</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_legacy_c_f_match'>legacy_c_f_match</span>
+      <span class='id identifier rubyid_parse_legacy'>parse_legacy</span><span class='lparen'>(</span><span class='id identifier rubyid_legacy_c_f_match'>legacy_c_f_match</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_legacy_c_f_match'>legacy_c_f_match</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
 
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span> <span class='op'>=</span> <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_alias_replaced_with_2d6'>alias_replaced_with_2d6</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_node'>node</span>
     <span class='kw'>return</span> <span class='id identifier rubyid_execute_srs_roll'>execute_srs_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_node'>node</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
@@ -958,12 +928,12 @@
       <pre class="lines">
 
 
-186
-187
-188</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 186</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SRS.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_help_message'>help_message</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_help_message'>help_message</span>
@@ -978,7 +948,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Feb 18 20:23:57 2023 by
+  Generated on Sun Mar 26 01:54:38 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.2.0).
 </div>
