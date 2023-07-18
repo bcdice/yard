@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: BCDice::GameSystem::Revulture
+  Class: BCDice::GameSystem::HeroScale
   
     &mdash; Documentation by YARD 0.9.28
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "BCDice::GameSystem::Revulture";
+  pathId = "BCDice::GameSystem::HeroScale";
   relpath = '../../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../../_index.html">Index (R)</a> &raquo;
+    <a href="../../_index.html">Index (H)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
      &raquo; 
-    <span class="title">Revulture</span>
+    <span class="title">HeroScale</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: BCDice::GameSystem::Revulture
+      <div id="content"><h1>Class: BCDice::GameSystem::HeroScale
   
   
   
@@ -76,7 +76,7 @@
           
             <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
           
-            <li class="next">BCDice::GameSystem::Revulture</li>
+            <li class="next">BCDice::GameSystem::HeroScale</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/bcdice/game_system/Revulture.rb</dd>
+    <dd>lib/bcdice/game_system/HeroScale.rb</dd>
   </dl>
   
 </div>
@@ -124,7 +124,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Revulture</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HeroScale</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="NAME-constant" class="">NAME =
           <div class="docstring">
@@ -140,7 +140,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>光砕のリヴァルチャー</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>英雄の尺度</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="SORT_KEY-constant" class="">SORT_KEY =
           <div class="docstring">
@@ -156,51 +156,62 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>こうさいのりうあるちやあ</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>えいゆうのしやくと</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>ダイスボットの使い方</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-        </dt>
-        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~HELP</span>
-<span class='tstring_content'>  ■アタック判定（ xAT, xATK, xATTACK ）
-</span><span class='tstring_content'>  x: ダイス数（加算 + と除算 / を使用可能）
-</span><span class='tstring_content'>  例） 3AT, 4ATK, 5+6ATTACK, 15/2AT
-</span><span class='tstring_content'>
-</span><span class='tstring_content'>  □アタック判定　目標値つき（ xAT&lt;=y, xATK&lt;=y, xATTACK&lt;=y ）
-</span><span class='tstring_content'>  x: ダイス数（加算 + と除算 / を使用可能）
-</span><span class='tstring_content'>  y: 目標値（ 1 以上 6 以下。加算 + を使用可能）
-</span><span class='tstring_content'>  例） 3AT&lt;=4, 3AT&lt;=2+1
-</span><span class='tstring_content'>
-</span><span class='tstring_content'>  □アタック判定　目標値＆追加ダメージつき（ xAT&lt;=y[&gt;=a:+b], xATK&lt;=y[&gt;=a:+b], xATTACK&lt;=y[z] ）
-</span><span class='tstring_content'>  x: ダイス数（加算 + と除算 / を使用可能）
-</span><span class='tstring_content'>  y: 目標値（ 1 以上 6 以下。加算 + を使用可能）
-</span><span class='tstring_content'>  z: 追加ダメージの規則（詳細は後述）（※複数同時に指定可能）
-</span><span class='tstring_content'>
-</span><span class='tstring_content'>  ▽追加ダメージの規則 [a:+b]
-</span><span class='tstring_content'>  a: ヒット数が a なら
-</span><span class='tstring_content'>  　=a　（ヒット数が a に等しい）
-</span><span class='tstring_content'>  　&gt;=a　（ヒット数が a 以上）
-</span><span class='tstring_content'>  b: ダメージを b 点追加
-</span><span class='tstring_content'>
-</span><span class='tstring_content'>  例） 3AT&lt;=4[&gt;=2:+3] #ルールブックp056「グレングラントAR」
-</span><span class='tstring_content'>  例） 2AT&lt;=4[=1:+5][&gt;=2:+8] #ルールブックp067「ファーボル・ドラゴンブレス」
-</span><span class='heredoc_end'>HELP</span></pre></dd>
-      
-        <dt id="ATTACK_ROLL_REG-constant" class="">ATTACK_ROLL_REG =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>^(\d+([+/]\d+)*)?AT(TACK|K)?(&lt;=([1-6](\+\d)*))?((\[&gt;?=\d+:\+\d+\])+)?</span><span class='regexp_end'>}i</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~TEXT</span>
+<span class='tstring_content'>  同人TRPGシステム『英雄の尺度』用ダイスボット。
+</span><span class='tstring_content'>  基本ルールブック＋サプリメント対応。仮称は非対応。
+</span><span class='tstring_content'>  コマンド一覧は以下の通り。*添え字で内容は[]。†がついていたら添え字必須。
+</span><span class='tstring_content'>  5hs4 超越
+</span><span class='tstring_content'>  5hs4,b 肉体の超越
+</span><span class='tstring_content'>  5hs4,s,* 科学の超越[†達成値への加算値]
+</span><span class='tstring_content'>  5hs4,p 激情の超越
+</span><span class='tstring_content'>  4hs6 加護
+</span><span class='tstring_content'>  4hs6,s 選択の加護
+</span><span class='tstring_content'>  4hs6,p 安寧の加護
+</span><span class='tstring_content'>  4hs6,r 逆転の加護
+</span><span class='tstring_content'>  3hs8,*,* 契約[奉納の出目1,奉納の出目2]
+</span><span class='tstring_content'>  3hs8,a,*,* 享受の契約[†受諾出目1][†受諾出目2]
+</span><span class='tstring_content'>  3hs8,e,* 収奪の契約[†取得出目]
+</span><span class='tstring_content'>  3hs8,b 燃焼の契約
+</span><span class='tstring_content'>  3hs8,o,*,* 奉納の契約[奉納の出目1,奉納の出目2]
+</span><span class='tstring_content'>  2hs20 呪い
+</span><span class='tstring_content'>  2hs20,r 歪曲の呪い
+</span><span class='tstring_content'>  2hs20,c 崩壊の呪い
+</span><span class='tstring_content'>  2hs20,d 破滅の呪い
+</span><span class='tstring_content'>  3hs10 異物
+</span><span class='tstring_content'>  3hs10,i 模造の異物
+</span><span class='tstring_content'>  3hs10,m,* 混血の異物[追加振り基準出目（初期値10）]
+</span><span class='tstring_content'>  3hs10,b,* 彼方の異物[追加振り停止基準値（初期値666）]
+</span><span class='tstring_content'>  1hs60 報い
+</span><span class='tstring_content'>  1hs60,d 堕落の報い
+</span><span class='tstring_content'>  1hs60,o 忘却の報い
+</span><span class='tstring_content'>  1hs60,s,* 封印の報い[出目への係数]
+</span><span class='tstring_content'>  12hs2 同化
+</span><span class='tstring_content'>  12hs2,m,*,*,*,*,*,*,*,* 怪物の同化[*d2,*d4,*d6,*d8,*d10,*d12,*d20,*d60]
+</span><span class='tstring_content'>  12hs2,t,* [†2の枚数宣言]
+</span><span class='tstring_content'>  12hs2,c,* 法則の同化[†1の枚数宣言]
+</span><span class='tstring_content'>  1hs12 下位存在
+</span><span class='tstring_content'>  2hs12 中位存在
+</span><span class='tstring_content'>  2hs12,t 変遷の中位存在
+</span><span class='tstring_content'>  2hs12,c 偶然の中位存在
+</span><span class='tstring_content'>  2hs12,g,* 萌芽の上位存在[加算値]
+</span><span class='tstring_content'>  3hs12 上位存在
+</span><span class='tstring_content'>  3hs12,g 大神の上位存在
+</span><span class='tstring_content'>  3hs12,h 神性の上位存在
+</span><span class='tstring_content'>  3hs12,w 魔性の上位存在
+</span><span class='tstring_content'>  3hs12,m 悪意の上位存在
+</span><span class='tstring_content'>  3hs12,s,* 大罪の上位存在[†確定する目標値]
+</span><span class='tstring_content'>  3hs12,d 破壊の上位存在
+</span><span class='tstring_content'>  3hs12,a 懊悩の上位存在
+</span><span class='tstring_content'>  3hs12,o 試練の上位存在
+</span><span class='tstring_content'>  3hs12,c 創造の上位存在
+</span><span class='tstring_content'>  3hs12,e 元素の上位存在
+</span><span class='tstring_content'>  *hs* 乗算ロール
+</span><span class='heredoc_end'>TEXT</span></pre></dd>
       
     </dl>
   
@@ -304,19 +315,15 @@
       <pre class="lines">
 
 
-44
-45
-46
-47
-48</pre>
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Revulture.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/HeroScale.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#ATTACK_ROLL_REG-constant" title="BCDice::GameSystem::Revulture::ATTACK_ROLL_REG (constant)">ATTACK_ROLL_REG</a></span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_roll_attack'>roll_attack</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>5</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='int'>7</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_select_origin'>select_origin</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -328,7 +335,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Jul 18 12:29:03 2023 by
+  Generated on Tue Jul 18 12:29:02 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-3.2.2).
 </div>

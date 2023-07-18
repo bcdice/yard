@@ -181,7 +181,7 @@
 </span><span class='tstring_content'>       例2）KC6 → 目標値6の継続判定
 </span><span class='tstring_content'>  ・罠動作チェック+獲物表(P163): CTR
 </span><span class='tstring_content'>     罠ごとに1D12を振り、12が出た場合には生き物が罠を動作させ、その影響を受けている。
-</span><span class='tstring_content'>  ・各種表
+</span><span class='tstring_content'>  ・各種表（基本ルールブック）
 </span><span class='tstring_content'>    ・大失敗表(P120): FT
 </span><span class='tstring_content'>    ・能力値ランダム決定表(P121): RST
 </span><span class='tstring_content'>    ・ランダム所要時間表(P122): RTT
@@ -194,6 +194,16 @@
 </span><span class='tstring_content'>    ・食材採集表(P157): GFT
 </span><span class='tstring_content'>    ・水採集表(P157): GWT
 </span><span class='tstring_content'>    ・白の魔石効果表(P186): WST
+</span><span class='tstring_content'>  ・部位ダメージ関連の表（参照先ページはリプレイ&amp;データブック「嚙神ノ宴」のもの）
+</span><span class='tstring_content'>    ・人間部位表(P216): HPT
+</span><span class='tstring_content'>    ・部位ダメージ段階表(P217): PDT
+</span><span class='tstring_content'>    ・四足動物部位表(P225): QPT
+</span><span class='tstring_content'>    ・無足動物部位表(P225): APT
+</span><span class='tstring_content'>    ・二足動物部位表(P226): TPT
+</span><span class='tstring_content'>    ・鳥部位表(P226): BPT
+</span><span class='tstring_content'>    ・頭足動物部位表(P227): CPT
+</span><span class='tstring_content'>    ・昆虫部位表(P227): IPT
+</span><span class='tstring_content'>    ・蜘蛛部位表(P228): SPT
 </span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
       
         <dt id="TABLES-constant" class="">TABLES =
@@ -336,6 +346,128 @@
       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>役に立たないものを作り出す</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>小型動物を召喚する</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>大型動物を召喚する</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>人間部位表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>2</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='op'>..</span><span class='int'>4</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='op'>..</span><span class='int'>8</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='op'>..</span><span class='int'>11</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PDT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>部位ダメージ段階表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>軽傷</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>重傷</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>破壊</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>喪失</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>QPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>四足動物部位表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>2</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>異形</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右前脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左前脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右後脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左後脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>APT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>無足動物部位表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>3</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>異形</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='op'>..</span><span class='int'>12</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>二足動物部位表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>異形</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='op'>..</span><span class='int'>8</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='op'>..</span><span class='int'>11</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>BPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>鳥部位表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>異形</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='op'>..</span><span class='int'>4</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右翼(右腕部)</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='op'>..</span><span class='int'>6</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左翼(左腕部)</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='op'>..</span><span class='int'>11</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭足動物部位表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>異形</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右腕部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左腕部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='op'>..</span><span class='int'>7</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='op'>..</span><span class='int'>10</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>昆虫部位表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='int'>2</span><span class='comma'>,</span>    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>異形</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右前脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左前脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右中脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左中脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右後脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左後脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='op'>..</span><span class='int'>11</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>      <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SPT</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/RangeTable.html" title="BCDice::DiceTable::RangeTable (class)">RangeTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/RangeTable.html#initialize-instance_method" title="BCDice::DiceTable::RangeTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>蜘蛛部位表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1D12</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>異形</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右第一脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左第一脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右第二脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左第二脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>7</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右第三脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>8</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左第三脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9</span><span class='comma'>,</span>   <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>右第四脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>左第四脚部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>11</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胴部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span>  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>頭部</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
     <span class='rbracket'>]</span>
   <span class='rparen'>)</span><span class='comma'>,</span>
 <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
@@ -508,16 +640,6 @@
       <pre class="lines">
 
 
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
 63
 64
 65
@@ -533,10 +655,20 @@
 75
 76
 77
-78</pre>
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_1D12'>check_1D12</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_is_action_judge'>is_action_judge</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>獸ノ森の1d12判定</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -584,18 +716,18 @@
       <pre class="lines">
 
 
-43
-44
-45
-46
-47
-48
-49
-50
-51</pre>
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -626,14 +758,14 @@
       <pre class="lines">
 
 
-95
-96
-97
-98
-99</pre>
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_escape_experience_table_result'>get_escape_experience_table_result</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_escape_experience'>escape_experience</span> <span class='op'>=</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::KemonoNoMori::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
@@ -660,23 +792,23 @@
       <pre class="lines">
 
 
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
 90
 91
 92
-93</pre>
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KemonoNoMori.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_trap_result'>get_trap_result</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tra_check_num'>tra_check_num</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_once'>roll_once</span><span class='lparen'>(</span><span class='int'>12</span><span class='rparen'>)</span>
@@ -702,9 +834,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 26 01:54:40 2023 by
+  Generated on Tue Jul 18 12:29:04 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.0).
+  0.9.28 (ruby-3.2.2).
 </div>
 
     </div>

@@ -200,10 +200,13 @@
 </span><span class='tstring_content'>  　ファンブル表 FT、変調表 WT、戦国変調表 GWT、戦場表 BT、感情表 ET
 </span><span class='tstring_content'>  　妖魔化（異形表、妖魔忍法表一括） MT
 </span><span class='tstring_content'>  　異形表 MTR、妖魔忍法表(x:A,B,C) DSx
+</span><span class='tstring_content'>  　プライズ効果表 PT
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ＞流派ブック以降
-</span><span class='tstring_content'>  　新戦場表 BNT、【数奇】OTS、妖術変調対応表（現代／戦国）YWT
+</span><span class='tstring_content'>  　新戦場表 BNT、【数奇】OTS、妖術変調対応表（x:なし-現代／戦国、1-現代、2-戦国）YWTx
 </span><span class='tstring_content'>  　妖魔化（新異形表利用） NMT、新異形表 NMTR、妖魔忍法表（x:1-異霊 2-凶身 3-神化 4-攻激）DSNx
+</span><span class='tstring_content'>  　覚醒表 OTAT、忍法授業シーン表（x:1-攻撃系 2-防御系 3-戦略系）NCTx
+</span><span class='tstring_content'>  　パニック表 HRPT、出物表 ONDT
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  （基本ルールブック改訂版以前）
 </span><span class='tstring_content'>  ・(無印)旧ファンブル表 OFT 、旧変調表 OWT、旧戦場表 OBT、異形表 MT
@@ -218,7 +221,9 @@
 </span><span class='tstring_content'>  　(死)東京 TKST、(リプレイ戦1〜2巻)京都 KYST、神社仏閣 JBST
 </span><span class='tstring_content'>  　(その他シーン表)秋空に雪舞えば AKST、災厄 CLST、出島EX DXST、斜歯ラボ HLST、夏の終わり NTST、培養プラント PLST
 </span><span class='tstring_content'>  ＞正忍記
-</span><span class='tstring_content'>  カジノ TC、ロードムービ TR、マスカレイド・キャッスル TMC、月天に死の咲く TGS、恋人との日々 TKH、学校（黒星祭） TKG、魔都学園 TMG、魔都東京 TMT
+</span><span class='tstring_content'>  カジノ TC、ロードムービ TRM、マスカレイド・キャッスル TMC、月天に死の咲く TGS、恋人との日々 TKH、学校（黒星祭） TKG、魔都学園 TMG、魔都東京 TMT
+</span><span class='tstring_content'>  ＞流派ブック以降
+</span><span class='tstring_content'>  不良高校 OTFK
 </span><span class='tstring_content'>  ・D66ダイスあり
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
@@ -395,15 +400,15 @@
       <pre class="lines">
 
 
-69
-70
-71
-72
-73
-74</pre>
+74
+75
+76
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -438,13 +443,13 @@
       <pre class="lines">
 
 
-96
-97
-98
-99</pre>
+101
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_action_roll'>action_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>TABLES</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>SCENE_TABLES</span><span class='rparen'>)</span> <span class='op'>||</span>
@@ -470,11 +475,6 @@
       <pre class="lines">
 
 
-78
-79
-80
-81
-82
 83
 84
 85
@@ -484,10 +484,15 @@
 89
 90
 91
-92</pre>
+92
+93
+94
+95
+96
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_2d6'>result_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_list'>_dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&gt;=</span>
@@ -514,9 +519,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 26 01:54:40 2023 by
+  Generated on Tue Jul 18 12:29:04 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.0).
+  0.9.28 (ruby-3.2.2).
 </div>
 
     </div>

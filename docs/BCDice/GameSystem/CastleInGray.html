@@ -124,7 +124,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CastleInGray</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CastleInGray</span><span class='tstring_end'>&quot;</span></span></pre></dd>
       
         <dt id="NAME-constant" class="">NAME =
           <div class="docstring">
@@ -140,7 +140,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>灰色城綺譚</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>灰色城綺譚</span><span class='tstring_end'>&quot;</span></span></pre></dd>
       
         <dt id="SORT_KEY-constant" class="">SORT_KEY =
           <div class="docstring">
@@ -156,12 +156,12 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>はいいろしようきたん</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>はいいろしようきたん</span><span class='tstring_end'>&quot;</span></span></pre></dd>
       
         <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
           
         </dt>
-        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~TEXT</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~TEXT</span>
 <span class='tstring_content'>  ■ 色占い (BnWm)
 </span><span class='tstring_content'>  n: 黒
 </span><span class='tstring_content'>  m: 白
@@ -408,12 +408,12 @@
       <pre class="lines">
 
 
-116
-117
-118</pre>
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/CastleInGray.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/CastleInGray.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_color_text'>color_text</span><span class='lparen'>(</span><span class='id identifier rubyid_black'>black</span><span class='comma'>,</span> <span class='id identifier rubyid_white'>white</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>色占い(黒</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_black'>black</span><span class='embexpr_end'>}</span><span class='tstring_content'>白</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_white'>white</span><span class='embexpr_end'>}</span><span class='tstring_content'>) ＞ [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>] ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -438,12 +438,12 @@
       <pre class="lines">
 
 
-91
-92
-93</pre>
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/CastleInGray.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/CastleInGray.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_roll_color'>roll_color</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_mal'>roll_mal</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::CastleInGray::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
@@ -468,8 +468,6 @@
       <pre class="lines">
 
 
-95
-96
 97
 98
 99
@@ -487,10 +485,12 @@
 111
 112
 113
-114</pre>
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/CastleInGray.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/CastleInGray.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_roll_color'>roll_color</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^B(\d{1,2})W(\d{1,2})$</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -532,8 +532,6 @@
       <pre class="lines">
 
 
-120
-121
 122
 123
 124
@@ -542,10 +540,12 @@
 127
 128
 129
-130</pre>
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/CastleInGray.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/CastleInGray.rb', line 122</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_roll_mal'>roll_mal</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^MAL(\d{1,2})$</span><span class='regexp_end'>/i</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -568,9 +568,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Mar 26 01:54:40 2023 by
+  Generated on Tue Jul 18 12:29:04 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.0).
+  0.9.28 (ruby-3.2.2).
 </div>
 
     </div>
