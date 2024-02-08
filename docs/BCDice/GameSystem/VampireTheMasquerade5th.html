@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::VampireTheMasquerade5th
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -181,14 +181,14 @@
 </span><span class='tstring_content'>      2VMF6+3
 </span><span class='tstring_content'>      2VMI9H3
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>    難易度指定：成功数のカウント、判定成功と失敗、Critical処理、Critical Winのチェックを行う
+</span><span class='tstring_content'>    難易度指定：成功数のカウント、判定成功と失敗、Critical処理、Critical Win、Total Failureのチェックを行う
 </span><span class='tstring_content'>               （Hungerダイスがある場合）Messy CriticalとBestial Failureチェックを行う
 </span><span class='tstring_content'>    例) (難易度)VMF(通常ダイス)+(Hungerダイス)
 </span><span class='tstring_content'>        (難易度)VMF(通常ダイス)
 </span><span class='tstring_content'>        (難易度)VMI(通常ダイス)H(Hungerダイス)
 </span><span class='tstring_content'>        (難易度)VMI(通常ダイス)
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>    難易度省略：成功数のカウント、判定失敗、Critical処理、（Hungerダイスがある場合）Bestial Failureチェックを行う
+</span><span class='tstring_content'>    難易度省略：成功数のカウント、判定失敗、Critical処理、Total Failure、（Hungerダイスがある場合）Bestial Failureチェックを行う
 </span><span class='tstring_content'>                判定成功、Messy Criticalのチェックを行わない
 </span><span class='tstring_content'>                Critical Win、（Hungerダイスがある場合）Bestial Failure、Messy Criticalのヒントを出力
 </span><span class='tstring_content'>    例) VMF(通常ダイス)+(Hungerダイス)
@@ -384,26 +384,32 @@
 89
 90
 91
-92</pre>
+92
+93
+94
+95</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/VampireTheMasquerade5th.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A(\d+)?(((VMF)(\d)(\+(\d+))?)|((VMI)(\d)(H(\d+))?))$</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\A(\d+)?(((VMF)(\d+)(\+(\d+))?)|((VMI)(\d+)(H(\d+))?))$</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_m'>m</span>
     <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='comma'>,</span> <span class='id identifier rubyid_hunger_dice_pool'>hunger_dice_pool</span> <span class='op'>=</span> <span class='id identifier rubyid_get_dice_pools'>get_dice_pools</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_dice_pool'>dice_pool</span> <span class='op'>&lt;</span> <span class='int'>0</span>
-    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ダイスプールより多いHungerダイスは指定できません。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ダイスプール0のときにHungerダイスは指定できません。</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_hunger_dice_pool'>hunger_dice_pool</span> <span class='op'>&gt;</span> <span class='int'>5</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hungerダイス指定は5ダイスが最大です。</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_dice_text'>dice_text</span><span class='comma'>,</span> <span class='id identifier rubyid_success_dice'>success_dice</span><span class='comma'>,</span> <span class='id identifier rubyid_ten_dice'>ten_dice</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_make_dice_roll'>make_dice_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result_text'>result_text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_dice_pool'>dice_pool</span><span class='embexpr_end'>}</span><span class='tstring_content'>D10</span><span class='tstring_end'>&quot;</span></span>
 
-  <span class='kw'>if</span> <span class='id identifier rubyid_hunger_dice_pool'>hunger_dice_pool</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_hunger_dice_pool'>hunger_dice_pool</span> <span class='op'>&gt;=</span> <span class='int'>0</span>
     <span class='id identifier rubyid_hunger_dice_text'>hunger_dice_text</span><span class='comma'>,</span> <span class='id identifier rubyid_hunger_success_dice'>hunger_success_dice</span><span class='comma'>,</span> <span class='id identifier rubyid_hunger_ten_dice'>hunger_ten_dice</span><span class='comma'>,</span> <span class='id identifier rubyid_hunger_botch_dice'>hunger_botch_dice</span> <span class='op'>=</span> <span class='id identifier rubyid_make_dice_roll'>make_dice_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_hunger_dice_pool'>hunger_dice_pool</span><span class='rparen'>)</span>
 
     <span class='id identifier rubyid_ten_dice'>ten_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_hunger_ten_dice'>hunger_ten_dice</span>
@@ -432,9 +438,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:14 2023 by
+  Generated on Thu Feb  8 21:19:45 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

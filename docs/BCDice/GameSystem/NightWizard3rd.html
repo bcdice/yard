@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::NightWizard3rd
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -112,6 +112,22 @@
 
     <dl class="constants">
       
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NightWizard3rd</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+      
         <dt id="NAME-constant" class="">NAME =
           <div class="docstring">
   <div class="discussion">
@@ -144,11 +160,11 @@
         </dt>
         <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ないとういさあと3</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
-        <dt id="ID-constant" class="">ID =
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
           <div class="docstring">
   <div class="discussion">
     
-<p>ゲームシステムの識別子</p>
+<p>ダイスボットの使い方</p>
 
 
   </div>
@@ -158,18 +174,22 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NightWizard3rd</span><span class='tstring_end'>&#39;</span></span></pre></dd>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>  ・判定用コマンド　(aNW+b@x#y$z+c)
+</span><span class='tstring_content'>  　　a : 基本値
+</span><span class='tstring_content'>  　　b : 常時に準じる特技による補正
+</span><span class='tstring_content'>  　　c : 常時以外の特技、および支援効果による補正
+</span><span class='tstring_content'>  　　x : クリティカル値のカンマ区切り（省略時 10）
+</span><span class='tstring_content'>  　　y : ファンブル値のカンマ区切り（省略時 5）
+</span><span class='tstring_content'>  　　z : プラーナによる達成値補正のプラーナ消費数（ファンブル時には適用されない）
+</span><span class='tstring_content'>  　クリティカル値、ファンブル値が無い場合は1や13などのあり得ない数値を入れてください。
+</span><span class='tstring_content'>  　例）12NW-5@7#2$3 1NW 50nw+5@7,10#2,5 50nw-5+10@7,10#2,5+15+25
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
     </dl>
   
 
 
-
-  
-  
-  <h3 class="inherited">Constants inherited
-     from <span class='object_link'><a href="NightWizard.html" title="BCDice::GameSystem::NightWizard (class)">NightWizard</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="NightWizard.html#HELP_MESSAGE-constant" title="BCDice::GameSystem::NightWizard::HELP_MESSAGE (constant)">BCDice::GameSystem::NightWizard::HELP_MESSAGE</a></span></p>
 
 
 
@@ -279,12 +299,12 @@
       <pre class="lines">
 
 
-19
-20
-21</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/NightWizard3rd.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/NightWizard3rd.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fumble_base_number'>fumble_base_number</span><span class='lparen'>(</span><span class='id identifier rubyid_parsed'>parsed</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_passive_modify_number'>passive_modify_number</span> <span class='op'>+</span> <span class='id identifier rubyid_parsed'>parsed</span><span class='period'>.</span><span class='id identifier rubyid_active_modify_number'>active_modify_number</span>
@@ -299,9 +319,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:13 2023 by
+  Generated on Thu Feb  8 21:19:44 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

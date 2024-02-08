@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::CommonCommand::Choice
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -106,7 +106,7 @@
 
 <p>列挙された項目の中から一つを選んで出力する。</p>
 
-<p>フォーマットは以下の通り <a href="A,B,C,D">choice</a> choice(A,B,C,D) choice A B C D choice(新クトゥルフ神話TRPG, ソード・ワールド2.5, Dungeons &amp; Dragons)</p>
+<p><a href="A,B,C,D">フォーマットは以下の通りchoice</a> choice(A,B,C,D) choice A B C D choice(新クトゥルフ神話TRPG, ソード・ワールド2.5, Dungeons &amp; Dragons)</p>
 
 <p>“choice”の次の文字によって区切り文字が変化する</p>
 
@@ -137,7 +137,7 @@ choice[A(), B(), C()] -&gt; &quot;A()&quot;, &quot;B()&quot;, &quot;C()&quot; �
 <pre class="code ruby"><code class="ruby">choice2[A,B,C] -&gt; &quot;A&quot;, &quot;B&quot;, &quot;C&quot; から重複なしで2個選ぶ
 </code></pre>
 
-<p>指定したい要素が「AからD」のように連続する項目の場合に「A-D」と省略して記述できる 略記の展開はアルファベット1文字もしくは数字の範囲に限り、略記1つを指定したときのみ展開される</p>
+<p>指定したい要素が「AからD」のように連続する項目の場合に「A-D」と省略して記述できる略記の展開はアルファベット1文字もしくは数字の範囲に限り、略記1つを指定したときのみ展開される</p>
 
 <pre class="code ruby"><code class="ruby">choice[A-D] -&gt; choice[A,B,C,D] と等価
 choice[b-g] -&gt; choice[b,c,d,e,f,g] と等価
@@ -692,9 +692,9 @@ choice[D-A] -&gt; 展開されない。
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:10 2023 by
+  Generated on Thu Feb  8 21:19:42 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

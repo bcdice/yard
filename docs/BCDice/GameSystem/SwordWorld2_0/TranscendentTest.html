@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::SwordWorld2_0::TranscendentTest
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -440,7 +440,7 @@
   <span class='id identifier rubyid_fumble'>fumble</span> <span class='op'>=</span> <span class='id identifier rubyid_first_value_group'>first_value_group</span> <span class='op'>==</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_critical'>critical</span> <span class='op'>=</span> <span class='id identifier rubyid_first_value_group'>first_value_group</span> <span class='op'>==</span> <span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span> <span class='int'>6</span><span class='rbracket'>]</span>
 
-  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_fumble'>fumble</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_critical'>critical</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_fumble'>fumble</span>
     <span class='kw'>while</span> <span class='id identifier rubyid_sum_of_dice'>sum_of_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_value_groups'>value_groups</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rparen'>)</span> <span class='op'>&gt;=</span> <span class='ivar'>@critical_value</span>
       <span class='id identifier rubyid_value_groups'>value_groups</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_randomizer'>randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
@@ -483,9 +483,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:14 2023 by
+  Generated on Thu Feb  8 21:19:46 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

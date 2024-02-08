@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::PastFutureParadox
+  
+    &mdash; Documentation by YARD 0.9.34
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::PastFutureParadox";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">PastFutureParadox</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::PastFutureParadox
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::PastFutureParadox</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/PastFutureParadox.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PastFutureParadox</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>パストフューチャーパラドックス</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>はすとふゆうちやあはらとつくす</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~TEXT</span>
+<span class='tstring_content'>  ・行為判定 PP@s#f[+m/-m]&gt;=x 　2D6の行為判定を行う。
+</span><span class='tstring_content'>  　s: スペシャル値 (省略時 12)、 f: ファンブル値 (省略時 2)
+</span><span class='tstring_content'>  　[+m/-m]: 修正値（省略可）、 x: 目標値 (省略可)
+</span><span class='tstring_content'>  　例）PP, PP-1, PP@11, PP@11+2, PP@11#3, PP@11#3-1,
+</span><span class='tstring_content'>  　　　PP#3&gt;=7, PP#3+2&gt;=7, PP&gt;=7, PP-1&gt;=7
+</span><span class='tstring_content'>  ・特技表
+</span><span class='tstring_content'>  ランダム分野表 RCT
+</span><span class='tstring_content'>  ランダム特技表 RTTn（n：分野番号、省略時は全分野からランダム）
+</span><span class='tstring_content'>  　科学　（RTT1）、知識（RTT2）、身体（RTT3）、
+</span><span class='tstring_content'>  　センス（RTT4）、知恵（RTT5）、迷信（RTT6）
+</span><span class='tstring_content'>  ・各種表　※1D6および2D6を振る表は、末尾に=nと付けることで出目nの内容を指定可能。末尾に-n／+nと付けることで、出目に修正を付けることが可能。
+</span><span class='tstring_content'>  　例：SBET=2　MBET-1　TBET+2
+</span><span class='tstring_content'>  シーン表（2D6）
+</span><span class='tstring_content'>  　現代シーン表 ST4
+</span><span class='tstring_content'>  経歴表（D66）
+</span><span class='tstring_content'>  　原始時代経歴表 CT1 、古代経歴表 CT2 、中世時代経歴表 CT3
+</span><span class='tstring_content'>  　現代経歴表 CT4 、超情報化時代経歴表 CT5 、宇宙時代経歴表 CT6
+</span><span class='tstring_content'>  名前表（D66）
+</span><span class='tstring_content'>  　原始時代名前表（男性名） NMT1 、原始時代名前表（女性名） NFT1
+</span><span class='tstring_content'>  　古代名前表（男性名） NMT2 、古代名前表（女性名） NFT2 、古代名前表（姓） NLT2
+</span><span class='tstring_content'>  　中世時代（日本）名前表（男性名） NMT3 、中世時代（日本）名前表（女性名） NFT3 、中世時代（日本）名前表（姓） NLT3
+</span><span class='tstring_content'>  　中世時代（西洋）名前表（男性名） NMT3W 、中世時代（西洋）名前表（女性名） NFT3W 、中世時代（西洋）名前表（姓） NLT3W
+</span><span class='tstring_content'>  　現代（日本）名前表（男性名） NMT4 、現代（日本）名前表（女性名） NFT4 、現代（日本）名前表（姓） NLT4
+</span><span class='tstring_content'>  　現代（西洋）名前表（男性名） NMT4W 、現代（西洋）名前表（女性名） NFT4W 、現代（西洋）名前表（姓） NLT4W
+</span><span class='tstring_content'>  　超情報化時代名前表（男性名） NMT5 、超情報化時代名前表（女性名） NFT5 、超情報化時代名前表（姓） NLT5
+</span><span class='tstring_content'>  　宇宙時代名前表（男性名） NMT6 、宇宙時代名前表（女性名） NFT6 、宇宙時代名前表（姓） NLT6
+</span><span class='tstring_content'>  因縁種別表（D66） CTT 、ポジティブ因縁内容表（1D6） CPT 、ネガティブ因縁内容表（1D6） CNT
+</span><span class='tstring_content'>  バタフライエフェクト表(2D6)　※バタフライエフェクト表は-5～12までの結果を算出可能
+</span><span class='tstring_content'>  　重度バタフライエフェクト表 SBET 、軽度バタフライエフェクト表 MBET 、タイムトラベラー重度バタフライエフェクト表 TBET
+</span><span class='tstring_content'>  アクシデント表（2D6） ACT 、タイムトラベル演出表（2D6） TT 、帰還演出表（1D6） RT
+</span><span class='tstring_content'>  アイテム決定表（1D6） IT 、時代決定表（1D6） AGT
+</span><span class='tstring_content'>  ・D66ダイスあり
+</span><span class='heredoc_end'>TEXT</span></pre></dd>
+      
+        <dt id="RTT-constant" class="">RTT =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/SaiFicSkillTable.html" title="BCDice::DiceTable::SaiFicSkillTable (class)">SaiFicSkillTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/SaiFicSkillTable.html#initialize-instance_method" title="BCDice::DiceTable::SaiFicSkillTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='lbracket'>[</span>
+    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>科学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>人工知能</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>計算機</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>電子工学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>機械工学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>物理学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>数学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>天文学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>地学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>化学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>医療</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>バイオ技術</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>知識</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>帝王学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>経済</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>政治</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>社会</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>法律</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>情報</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>労働</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>教育</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>歴史</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>語学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>文学</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>身体</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>狙う</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>斬る</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>殴る</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>跳ぶ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>走る</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>避ける</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>柔軟</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>持ち上げる</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>食べる</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>飲む</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>叫ぶ</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>センス</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>魔法</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>超能力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>第六感</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>宗教</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>倫理</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>観察</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>我慢</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>操縦</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>哲学</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>心理</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>芸術</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>知恵</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>戦略</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>方便</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>機転</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>洞察力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>記憶力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>段取り</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>応急処置</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>漢方</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胆力</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>勘</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>人徳</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>迷信</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>思い込み</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>インチキ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>未確認物体</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>雨乞い</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>風水</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>占い</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>縁起</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>魔除け</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>心霊</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>運命</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>民間伝承</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='label'>s_format:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>分野「%&lt;category_name&gt;s」《%&lt;skill_name&gt;s》</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='label'>rtt_format:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ランダム指定特技表(%&lt;category_dice&gt;d,%&lt;row_dice&gt;d) ＞ %&lt;text&gt;s</span><span class='tstring_end'>&quot;</span></span>
+<span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; PastFutureParadox </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of PastFutureParadox.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::PastFutureParadox (class)">PastFutureParadox</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of PastFutureParadox.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/PastFutureParadox.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='ivar'>@sort_add_dice</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@sort_barabara_dice</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@d66_sort_type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#ASC-constant" title="BCDice::D66SortType::ASC (constant)">ASC</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="eval_game_system_specific_command-instance_method">
+  
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/PastFutureParadox.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_action_roll'>action_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="#RTT-constant" title="BCDice::GameSystem::PastFutureParadox::RTT (constant)">RTT</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll_command'>roll_command</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>TABLES</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_table_command'>roll_table_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb  8 21:19:45 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.34 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::SwordWorld2_5
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -203,6 +203,13 @@
 </span><span class='tstring_content'>  　この際、複数の項による修正にはカッコで囲うことが必要です（カッコがないとパースに失敗します）
 </span><span class='tstring_content'>  　クリティカル値を指定しない場合、クリティカルなしと扱われます。
 </span><span class='tstring_content'>  　例）HK20　　K20h　　HK10-5@9　　K10-5@9H　　K20gfH　　K20+8H+2　　K20+8H+(1+1)
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・レーティング表の1.5倍 (OHKx, KxOH+N)
+</span><span class='tstring_content'>  　レーティング表の先頭または末尾に&quot;OH&quot;をつけると、レーティング表を振って最終結果を1.5倍します。
+</span><span class='tstring_content'>  　末尾につけた場合、直後に修正ををつけることで、1.5倍後の加減算を行うことができます。
+</span><span class='tstring_content'>  　この際、複数の項による修正にはカッコで囲うことが必要です（カッコがないとパースに失敗します）
+</span><span class='tstring_content'>  　クリティカル値を指定しない場合、クリティカルなしと扱われます。
+</span><span class='tstring_content'>  　例）OHK20　　K20oh　　OHK10-5@9　　K20+8OH+2　　K20+8OH+(1+1)
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・ダイス目の修正（運命変転やクリティカルレイ用）
 </span><span class='tstring_content'>  　末尾に「$修正値」でダイス目に修正がかかります。
@@ -437,13 +444,6 @@
       <pre class="lines">
 
 
-110
-111
-112
-113
-114
-115
-116
 117
 118
 119
@@ -459,10 +459,17 @@
 129
 130
 131
-132</pre>
+132
+133
+134
+135
+136
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_druid_dice'>druid_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_power_list'>power_list</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice_list'>dice_list</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
@@ -507,13 +514,6 @@
       <pre class="lines">
 
 
-87
-88
-89
-90
-91
-92
-93
 94
 95
 96
@@ -524,10 +524,17 @@
 101
 102
 103
-104</pre>
+104
+105
+106
+107
+108
+109
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -567,13 +574,6 @@
       <pre class="lines">
 
 
-134
-135
-136
-137
-138
-139
-140
 141
 142
 143
@@ -582,10 +582,17 @@
 146
 147
 148
-149</pre>
+149
+150
+151
+152
+153
+154
+155
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 141</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_abyss_curse_table'>get_abyss_curse_table</span>
   <span class='id identifier rubyid_table_result'>table_result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66GridTable.html" title="BCDice::DiceTable::D66GridTable (class)">D66GridTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_i18n'><span class='object_link'><a href="../DiceTable/D66GridTable.html#from_i18n-class_method" title="BCDice::DiceTable::D66GridTable.from_i18n (method)">from_i18n</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SwordWorld2_5.AbyssCurseTable</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@locale</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_roll'><span class='object_link'><a href="../DiceTable/D66GridTable.html#roll-instance_method" title="BCDice::DiceTable::D66GridTable#roll (method)">roll</a></span></span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
@@ -623,12 +630,12 @@
       <pre class="lines">
 
 
-106
-107
-108</pre>
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rating_parser'>rating_parser</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="SwordWorld/RatingParser.html" title="BCDice::GameSystem::SwordWorld::RatingParser (class)">RatingParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SwordWorld/RatingParser.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld::RatingParser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>version:</span> <span class='symbol'>:v2_5</span><span class='rparen'>)</span>
@@ -643,9 +650,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:13 2023 by
+  Generated on Thu Feb  8 21:19:44 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

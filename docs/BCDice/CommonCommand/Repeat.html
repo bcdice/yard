@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::CommonCommand::Repeat
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -104,14 +104,14 @@
     
 <p>リピート</p>
 
-<p>繰り返し回数を指定して、特定のコマンドを複数回実行する 例）</p>
+<p>繰り返し回数を指定して、特定のコマンドを複数回実行する例）</p>
 
 <pre class="code ruby"><code class="ruby">x5 choice[A,B,C,D] #=&gt; `choice[A,B,C,D]`を5回実行する
 rep2 CC&lt;=75        #=&gt; `CC&lt;=75`を2回実行する
 repeat10 2D6+5     #=&gt; `2D6+6`を10回実行する
 </code></pre>
 
-<p>このコマンドを入れ子させることは許容しない。繰り返し回数の爆発に繋がるためである。 以下は実行時にエラーとなる。</p>
+<p>このコマンドを入れ子させることは許容しない。繰り返し回数の爆発に繋がるためである。以下は実行時にエラーとなる。</p>
 
 <pre class="code ruby"><code class="ruby">x10 repeat100 100D100
 </code></pre>
@@ -406,9 +406,9 @@ repeat10 2D6+5     #=&gt; `2D6+6`を10回実行する
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:10 2023 by
+  Generated on Thu Feb  8 21:19:42 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

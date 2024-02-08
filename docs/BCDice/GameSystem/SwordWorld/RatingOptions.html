@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::SwordWorld::RatingOptions
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -260,6 +260,31 @@
   <span class="summary_signature">
     
       <a href="#modifier_after_half-instance_method" title="#modifier_after_half (instance method)">#<strong>modifier_after_half</strong>  &#x21d2; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#modifier_after_one_and_a_half-instance_method" title="#modifier_after_one_and_a_half (instance method)">#<strong>modifier_after_one_and_a_half</strong>  &#x21d2; Integer<sup>?</sup> </a>
     
 
     
@@ -799,6 +824,60 @@
 </div>
     
       
+      <span id="modifier_after_one_and_a_half=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="modifier_after_one_and_a_half-instance_method">
+  
+    #<strong>modifier_after_one_and_a_half</strong>  &#x21d2; <tt>Integer</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/rating_options.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_modifier_after_one_and_a_half'>modifier_after_one_and_a_half</span>
+  <span class='ivar'>@modifier_after_one_and_a_half</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
       <span id="rateup=-instance_method"></span>
       <div class="method_details ">
   <h3 class="signature " id="rateup-instance_method">
@@ -1004,12 +1083,12 @@
       <pre class="lines">
 
 
-37
-38
-39</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/rating_options.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/rating_options.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_settable_first_roll_adjust_option?'>settable_first_roll_adjust_option?</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_first_modify'>first_modify</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_first_to'>first_to</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1056,12 +1135,12 @@
       <pre class="lines">
 
 
-41
-42
-43</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/rating_options.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/sword_world/rating_options.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_settable_non_2d_roll_option?'>settable_non_2d_roll_option?</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_greatest_fortune'>greatest_fortune</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_semi_fixed_val'>semi_fixed_val</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_tmp_fixed_val'>tmp_fixed_val</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1076,9 +1155,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:14 2023 by
+  Generated on Thu Feb  8 21:19:45 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

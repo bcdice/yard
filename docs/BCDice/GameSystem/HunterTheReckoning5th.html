@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::HunterTheReckoning5th
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -176,12 +176,12 @@
 <span class='tstring_content'>  ・判定コマンド(nHRFx+x)
 </span><span class='tstring_content'>    注意：難易度は必要成功数を表す
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>    難易度指定：成功数のカウント、判定成功と失敗、Critical処理、Critical Winのチェックを行う
+</span><span class='tstring_content'>    難易度指定：成功数のカウント、判定成功と失敗、Critical処理、Critical Win、Total Failureのチェックを行う
 </span><span class='tstring_content'>               （Desperationダイスがある場合）OverreachとDespairの発生チェックを行う
 </span><span class='tstring_content'>    例) (難易度)HRF(通常ダイス)+(Desperationダイス)
 </span><span class='tstring_content'>        (難易度)HRF(通常ダイス)
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>    難易度省略：成功数のカウント、判定失敗、Critical処理、（Desperationダイスがある場合）Despairチェックを行う
+</span><span class='tstring_content'>    難易度省略：成功数のカウント、判定失敗、Critical処理、Total Failure、（Desperationダイスがある場合）Despairチェックを行う
 </span><span class='tstring_content'>                判定成功、Overreachのチェックを行わない
 </span><span class='tstring_content'>                Critical Win、（Desperationダイスがある場合）Despair、Overreachのヒントを出力
 </span><span class='tstring_content'>    例) HRF(通常ダイス)+(Desperationダイス)
@@ -355,7 +355,11 @@
 73
 74
 75
-76</pre>
+76
+77
+78
+79
+80</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/HunterTheReckoning5th.rb', line 47</span>
@@ -372,6 +376,10 @@
 
   <span class='id identifier rubyid_desperaton_dice_pool'>desperaton_dice_pool</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#DESPERATION_DICE_INDEX-constant" title="BCDice::GameSystem::HunterTheReckoning5th::DESPERATION_DICE_INDEX (constant)">DESPERATION_DICE_INDEX</a></span></span><span class='rbracket'>]</span><span class='op'>&amp;.</span><span class='id identifier rubyid_to_i'>to_i</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_desperaton_dice_pool'>desperaton_dice_pool</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_desperaton_dice_pool'>desperaton_dice_pool</span> <span class='op'>&gt;</span> <span class='int'>5</span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Desperationダイス指定は5ダイスが最大です。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
     <span class='id identifier rubyid_desperaton_dice_text'>desperaton_dice_text</span><span class='comma'>,</span> <span class='id identifier rubyid_desperaton_success_dice'>desperaton_success_dice</span><span class='comma'>,</span> <span class='id identifier rubyid_desperaton_ten_dice'>desperaton_ten_dice</span><span class='comma'>,</span> <span class='id identifier rubyid_desperaton_botch_dice'>desperaton_botch_dice</span> <span class='op'>=</span> <span class='id identifier rubyid_make_dice_roll'>make_dice_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_desperaton_dice_pool'>desperaton_dice_pool</span><span class='rparen'>)</span>
 
     <span class='id identifier rubyid_ten_dice'>ten_dice</span> <span class='op'>+=</span> <span class='id identifier rubyid_desperaton_ten_dice'>desperaton_ten_dice</span>
@@ -400,9 +408,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:14 2023 by
+  Generated on Thu Feb  8 21:19:45 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

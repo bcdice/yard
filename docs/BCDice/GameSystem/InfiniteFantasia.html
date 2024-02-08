@@ -6,7 +6,7 @@
 <title>
   Class: BCDice::GameSystem::InfiniteFantasia
   
-    &mdash; Documentation by YARD 0.9.28
+    &mdash; Documentation by YARD 0.9.34
   
 </title>
 
@@ -172,7 +172,10 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>失敗、成功レベルの自動判定を行います。</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
+<span class='tstring_content'>  1D20に目標値を設定した場合に、成功レベルの自動判定を行います。
+</span><span class='tstring_content'>  例： 1D20&lt;=16
+</span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
     </dl>
   
@@ -289,9 +292,6 @@
       <pre class="lines">
 
 
-19
-20
-21
 22
 23
 24
@@ -320,10 +320,13 @@
 47
 48
 49
-50</pre>
+50
+51
+52
+53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/InfiniteFantasia.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/InfiniteFantasia.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_1d20'>result_1d20</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_total'>_dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../Result.html" title="BCDice::Result (class)">Result</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nothing'><span class='object_link'><a href="../Result.html#nothing-class_method" title="BCDice::Result.nothing (method)">nothing</a></span></span> <span class='kw'>if</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?</span><span class='tstring_end'>&#39;</span></span>
@@ -367,9 +370,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep 17 12:18:13 2023 by
+  Generated on Thu Feb  8 21:19:44 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.28 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>
