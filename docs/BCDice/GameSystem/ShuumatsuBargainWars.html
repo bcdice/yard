@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: BCDice::GameSystem::ShuumatsuBargainWars
+  
+    &mdash; Documentation by YARD 0.9.34
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "BCDice::GameSystem::ShuumatsuBargainWars";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../BCDice.html" title="BCDice (module)">BCDice</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../GameSystem.html" title="BCDice::GameSystem (module)">GameSystem</a></span></span>
+     &raquo; 
+    <span class="title">ShuumatsuBargainWars</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: BCDice::GameSystem::ShuumatsuBargainWars
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></li>
+          
+            <li class="next">BCDice::GameSystem::ShuumatsuBargainWars</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/bcdice/game_system/ShuumatsuBargainWars.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ID-constant" class="">ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステムの識別子</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ShuumatsuBargainWars</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="NAME-constant" class="">NAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>終末買い物戦争</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="SORT_KEY-constant" class="">SORT_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>ゲームシステム名の読みがな</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>しゆうまつはあけんうおおす</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="HELP_MESSAGE-constant" class="">HELP_MESSAGE =
+          
+        </dt>
+        <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~TEXT</span>
+<span class='tstring_content'>  ・行為判定 （nBGk+y&gt;=t）n:ダイス数、k:心根、y:修正値（省略可)、t:目標値
+</span><span class='tstring_content'>    例）3BG1&gt;=3 2BG3+1&gt;=4 4BG5-1&gt;=3
+</span><span class='tstring_content'>  ・アイテム表
+</span><span class='tstring_content'>    ・RT 回復系アイテム表
+</span><span class='tstring_content'>    ・CT 便利系アイテム表
+</span><span class='tstring_content'>    ・WT 武器系アイテム表
+</span><span class='tstring_content'>    ・WG ワゴン(全アイテムランダム)
+</span><span class='tstring_content'>  ・ET イベント表
+</span><span class='tstring_content'>  ・TT トラブル表
+</span><span class='heredoc_end'>TEXT</span></pre></dd>
+      
+        <dt id="RecoveryItemTable-constant" class="">RecoveryItemTable =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66Table.html" title="BCDice::DiceTable::D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66Table.html#initialize-instance_method" title="BCDice::DiceTable::D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>回復系アイテム表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#ASC-constant" title="BCDice::D66SortType::ASC (constant)">ASC</a></span></span><span class='comma'>,</span>
+  <span class='lbrace'>{</span>
+    <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>飴玉</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>エナジードリンク</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>せんべい</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>餅</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ロウソク</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>酒</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>寿司</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ばんそうこう</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>お布団</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>カレー</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>消毒液</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>缶詰</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>みたらし団子</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>骨付き肉</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ステーキ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>うちわ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ぬいぐるみ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>のり</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>美容液</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>黄色いハンカチ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>洗剤</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="ConvenienceItemTable-constant" class="">ConvenienceItemTable =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66Table.html" title="BCDice::DiceTable::D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66Table.html#initialize-instance_method" title="BCDice::DiceTable::D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>便利系アイテム表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#ASC-constant" title="BCDice::D66SortType::ASC (constant)">ASC</a></span></span><span class='comma'>,</span>
+  <span class='lbrace'>{</span>
+    <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ちくわ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>焼き芋</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>トイレットペーパー</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>熊手</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>胡椒</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>鏡</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>割りばし</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>輪ゴム</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>塩の結晶</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>プチプチマット</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>長靴</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>バケツ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アルミホイル</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>下敷き</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>長芋</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>鉛筆</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>まな板</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>フライパン</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ほうき</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>クラッカー</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>消臭スプレー</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="WeaponItemTable-constant" class="">WeaponItemTable =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66Table.html" title="BCDice::DiceTable::D66Table (class)">D66Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/D66Table.html#initialize-instance_method" title="BCDice::DiceTable::D66Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>武器系アイテム表</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#ASC-constant" title="BCDice::D66SortType::ASC (constant)">ASC</a></span></span><span class='comma'>,</span>
+  <span class='lbrace'>{</span>
+    <span class='int'>11</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>アズキアイス</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>12</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>スプーン</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>13</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>フォーク</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>14</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>カミソリ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>15</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>電池</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>16</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>デッキブラシ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>22</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>傘</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>23</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>物干し竿</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>24</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>鉄パイプ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>25</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>くぎ打ち機</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>26</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>モンキーレンチ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>33</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ハエタタキ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>34</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>鎌</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>35</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>蛍光灯</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>36</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>包丁</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>44</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ハサミ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>45</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ショベル</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>46</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>釣り竿</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>55</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>芝刈り機</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>56</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ステッキ</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='int'>66</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>小麦粉</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='rbrace'>}</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ET</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>イベント表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ドッキン！一目惚れ！好きなキャラクターを1人選ぶ。このセッション中その相手との関係の深度を互いに3以上にすることができた場合、シナリオの結末に関係なく貴方は完全無欠のハッピーエンドを迎え経験点を100点得る。達成できなかった場合、エンディングフェイズで目が覚める。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>おや？こんな所にアイテムが転がっている。ランダムに選んだアイテムを獲得する。そのアイテムの種別が支援・計画ならば[技術]/5の判定に成功すれば手番を消費せずそのアイテムを使用しても良い。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>チームメンバーと二人っきりになる。ちょっといい雰囲気かも。好きなキャラクターを目標に選び、『関係』のチェックを外す事ができる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>あぶな～い！チームメンバーに危機が襲い掛かる。PCの中からランダムに1人を選び[武力]/5の判定を行う。成功すると互いに『関係』を結ぶことができる。失敗すると2人とも体力に1d6点のダメージ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ちょっとお食事でも如何？自身の体力3点と活力1点を回復させる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>穏やかな時が流れる。このメンバーならこれからも上手くやっていけそうだ。ランダムにPCを選び『関係』を獲得する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>チームメンバーの意外な一面を覗く、まさかアイツあんな趣味があったなんて！PCの中からランダムで1人を選び[精神]/6で判定を行う。成功すると互いに『関係』を獲得する。失敗すると互いに活力が1点減少する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>仲間と意見が対立する。アイツにだけは負けられない！関係を持つPCの中からランダムで1人を選び、対象との関係の深度を1下げてもよい（0未満にならない）。下げた場合、以降のセッション中任意の能力値が1上昇したものとして判定を行う事ができる。この効果で実際に能力値は上がらない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>何かお手伝いをしよう。好きなキャラクターを1人選ぶ。この休憩中次に相手が判定を行う場合、その判定に修正値+1を加える。その後、目標は自分に対し『関係』を獲得する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>酒を発見、宴だぁああ！！！PCは全員回復アイテムの「酒」の効果を使用できる。その後、自分の持つ全ての『関係』をランダムな相手に同じ《深度》で取り直す。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>不味い！敵襲だ！バナナワニにキリミウオが戦闘を仕掛けに来る。戦闘に勝利した場合、好きなアイテムを1つ得る。この処理が面倒ならば戦闘を行う代わりにPC達全員の体力の値を半分にし戦闘に勝利したものとして扱っても良い。</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/Table.html" title="BCDice::DiceTable::Table (class)">Table</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/Table.html#initialize-instance_method" title="BCDice::DiceTable::Table#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>トラブル表</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>緊張感からか焦りが生じる。以降スポットフェイズに行くまでの間あらゆる判定の成功度が1減少する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>カートの操作が効かなくなった！このラウンドは操作表を全員ダイスを振りランダムで決定する事。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>派手な振動が起き頭をぶつける。全員1d6点のダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>集中力が切れて来た……全員の活力を1 点減少させる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>激しく揺さぶられ荷物が落下する。カート内にあるアイテムを1 つ選ぶ。そのアイテムを失う。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>不気味な超市場の雰囲気がパッセンジャー達の不安を煽る。特に何も起こらない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#RecoveryItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::RecoveryItemTable (constant)">RecoveryItemTable</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#ConvenienceItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::ConvenienceItemTable (constant)">ConvenienceItemTable</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WT</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#WeaponItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::WeaponItemTable (constant)">WeaponItemTable</a></span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WG</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/ChainTable.html" title="BCDice::DiceTable::ChainTable (class)">ChainTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../DiceTable/ChainTable.html#initialize-instance_method" title="BCDice::DiceTable::ChainTable#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ワゴン</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1D6</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='lbracket'>[</span>
+      <span class='const'><span class='object_link'><a href="#RecoveryItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::RecoveryItemTable (constant)">RecoveryItemTable</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#RecoveryItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::RecoveryItemTable (constant)">RecoveryItemTable</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#ConvenienceItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::ConvenienceItemTable (constant)">ConvenienceItemTable</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#ConvenienceItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::ConvenienceItemTable (constant)">ConvenienceItemTable</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#WeaponItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::WeaponItemTable (constant)">WeaponItemTable</a></span></span><span class='comma'>,</span>
+      <span class='const'><span class='object_link'><a href="#WeaponItemTable-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::WeaponItemTable (constant)">WeaponItemTable</a></span></span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rparen'>)</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#d66_sort_type-instance_method" title="BCDice::Base#d66_sort_type (method)">#d66_sort_type</a></span>, <span class='object_link'><a href="../Base.html#default_cmp_op-instance_method" title="BCDice::Base#default_cmp_op (method)">#default_cmp_op</a></span>, <span class='object_link'><a href="../Base.html#default_target_number-instance_method" title="BCDice::Base#default_target_number (method)">#default_target_number</a></span>, <span class='object_link'><a href="../Base.html#randomizer-instance_method" title="BCDice::Base#randomizer (method)">#randomizer</a></span>, <span class='object_link'><a href="../Base.html#reroll_dice_reroll_threshold-instance_method" title="BCDice::Base#reroll_dice_reroll_threshold (method)">#reroll_dice_reroll_threshold</a></span>, <span class='object_link'><a href="../Base.html#round_type-instance_method" title="BCDice::Base#round_type (method)">#round_type</a></span>, <span class='object_link'><a href="../Base.html#sides_implicit_d-instance_method" title="BCDice::Base#sides_implicit_d (method)">#sides_implicit_d</a></span>, <span class='object_link'><a href="../Base.html#upper_dice_reroll_threshold-instance_method" title="BCDice::Base#upper_dice_reroll_threshold (method)">#upper_dice_reroll_threshold</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eval_game_system_specific_command-instance_method" title="#eval_game_system_specific_command (instance method)">#<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; ShuumatsuBargainWars </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of ShuumatsuBargainWars.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Translate.html" title="BCDice::Translate (module)">Translate</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Translate.html#translate-instance_method" title="BCDice::Translate#translate (method)">#translate</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::ShuumatsuBargainWars (class)">ShuumatsuBargainWars</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of ShuumatsuBargainWars.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShuumatsuBargainWars.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='ivar'>@sort_barabara_dice</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@d66_sort_type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../D66SortType.html" title="BCDice::D66SortType (module)">D66SortType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../D66SortType.html#ASC-constant" title="BCDice::D66SortType::ASC (constant)">ASC</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="eval_game_system_specific_command-instance_method">
+  
+    #<strong>eval_game_system_specific_command</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShuumatsuBargainWars.rb', line 166</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_roll_bg'>roll_bg</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#TABLES-constant" title="BCDice::GameSystem::ShuumatsuBargainWars::TABLES (constant)">TABLES</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sun Jun 30 22:04:41 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.34 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

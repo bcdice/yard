@@ -184,15 +184,17 @@
 </span><span class='tstring_content'>  【セッション時】
 </span><span class='tstring_content'>  異常な癖決定表　　　　　 SHRD／新・異常な癖決定表　　 SHND
 </span><span class='tstring_content'>  普通の？・異常な癖決定表 SHAD／ケイジ異常な癖決定表　 SHKD
+</span><span class='tstring_content'>  超探偵向け異常な癖表　　 SHLD
 </span><span class='tstring_content'>  　口から出る表　　　 SHFM／強引な捜査表　　　　　 SHBT／すっとぼけ表　　　　　　 SHPI
-</span><span class='tstring_content'>  　事件に夢中表　　　 SHEG／パートナーと……表　　 SHWP／何かしている表　　　　　 SHDS
+</span><span class='tstring_content'>  　事件に夢中表　　　 SHEG／パートナーと……表　　　 SHWP／何かしている表　　　　　 SHDS
 </span><span class='tstring_content'>  　奇想天外表　　　　 SHFT／急なひらめき表　　　　 SHIN／喜怒哀楽表　　　　　　　 SHEM
 </span><span class='tstring_content'>  　人間エミュレート表 SHHE／人間エミュレート失敗表 SHHF／パートナーへのいたずら表 SHMP
 </span><span class='tstring_content'>  　思わせぶり表　　　 SHSB／もどかしい表　　　　　 SHFR／突然どうした表　　　　　 SHIS
 </span><span class='tstring_content'>  　わがままを言う表　 SHSE／普通に見える表　　　　 SHLM／嫉妬に狂う表　　　　　　 SHJS
 </span><span class='tstring_content'>  　傲慢な態度表　　　 SHAR／比較的軽度なもの表　　 SHRM／ノータイム表　　　　　　 SHNT
 </span><span class='tstring_content'>  　捜査のやり方表　　 SHIM／貴族表　　　　　　　　 SHNO／説明しない表　　　　　　 SHNE
-</span><span class='tstring_content'>  　刑事としての癖表　 SHHD
+</span><span class='tstring_content'>  　刑事としての癖表　 SHHD／名誉ある探偵表　　　　 SHGD／超すごい表　　　　　　　 SHSA
+</span><span class='tstring_content'>  　超事件に夢中表　　 SHEP／超パートナーと……表　　 SHXP
 </span><span class='tstring_content'>  イベント表
 </span><span class='tstring_content'>  　現場にて　 EVS／なぜ？　 EVW／協力者と共に EVN
 </span><span class='tstring_content'>  　向こうから EVC／VS容疑者 EVV
@@ -201,7 +203,8 @@
 </span><span class='tstring_content'>  　思わぬヒント EVH／実験をしてみよう EVX／ゲスト捜査 EVG
 </span><span class='tstring_content'>  　ケイジ聞き込み捜査　　　 EVQ／ケイジ大規模捜査　　　　　 EVM／こっそり情報の受け渡し EVP
 </span><span class='tstring_content'>  　同僚たちと一緒に捜査する EVO／頻染みの店シチュエーション EVF／ハードBデカアクション  EVB
-</span><span class='tstring_content'>  　探偵を大人しくさせる捜査 EVL／伝統的捜査 EVZ／原始的捜査 EVR
+</span><span class='tstring_content'>  　探偵を大人しくさせる捜査 EVL／伝統的捜査　　　　　　　　 EVZ／原始的捜査　　　　　　 EVR
+</span><span class='tstring_content'>  　超探偵調査　　　　　　　EV6S／神速捜査　　　　　　　　　EV6F
 </span><span class='tstring_content'>  感情表
 </span><span class='tstring_content'>  　感情表A／B　　 FLT66・FLT10
 </span><span class='tstring_content'>  　気に入っているところ　 FLTL66　／気に入らないところ　 FLTD66
@@ -351,14 +354,14 @@
       <pre class="lines">
 
 
-61
-62
-63
 64
-65</pre>
+65
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FutariSousa.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FutariSousa.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -392,9 +395,6 @@
       <pre class="lines">
 
 
-69
-70
-71
 72
 73
 74
@@ -402,10 +402,13 @@
 76
 77
 78
-79</pre>
+79
+80
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FutariSousa.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FutariSousa.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d+)?DT$</span><span class='regexp_end'>/i</span></span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -428,7 +431,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Feb  8 21:19:43 2024 by
+  Generated on Sun Jun 30 22:04:38 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

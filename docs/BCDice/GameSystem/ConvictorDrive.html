@@ -175,7 +175,7 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~MESSAGETEXT</span>
-<span class='tstring_content'>  xCD@z&gt;=y: x個の10面ダイスで目標値y、クリティカルラインzの判定を行う
+<span class='tstring_content'>  xCD@z&gt;=y: x個の10面ダイスで目標値y（省略時5）、クリティカルラインz（省略時10）の判定を行う。
 </span><span class='tstring_content'>  SLT: 技能レベル表を振る
 </span><span class='tstring_content'>  DCT: 遅延イベント表を振る
 </span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
@@ -482,7 +482,8 @@
 111
 112
 113
-114</pre>
+114
+115</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ConvictorDrive.rb', line 86</span>
@@ -491,7 +492,7 @@
   <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Command.html" title="BCDice::Command (module)">Command</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Command/Parser.html" title="BCDice::Command::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Command/Parser.html#initialize-instance_method" title="BCDice::Command::Parser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CD</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>round_type:</span> <span class='id identifier rubyid_round_type'>round_type</span><span class='rparen'>)</span>
                           <span class='period'>.</span><span class='id identifier rubyid_has_prefix_number'>has_prefix_number</span>
                           <span class='period'>.</span><span class='id identifier rubyid_enable_critical'>enable_critical</span>
-                          <span class='period'>.</span><span class='id identifier rubyid_restrict_cmp_op_to'>restrict_cmp_op_to</span><span class='lparen'>(</span><span class='symbol'>:&gt;=</span><span class='rparen'>)</span>
+                          <span class='period'>.</span><span class='id identifier rubyid_restrict_cmp_op_to'>restrict_cmp_op_to</span><span class='lparen'>(</span><span class='symbol'>:&gt;=</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
   <span class='kw'>unless</span> <span class='id identifier rubyid_cmd'>cmd</span>
@@ -499,8 +500,9 @@
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_dice_list'>dice_list</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_prefix_number'>prefix_number</span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_critical'>critical</span> <span class='op'>=</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span><span class='op'>&amp;.</span><span class='id identifier rubyid_clamp'>clamp</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_target_number'>target_number</span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>10</span>
-  <span class='id identifier rubyid_succeed_num'>succeed_num</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_target_number'>target_number</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_target_num'>target_num</span> <span class='op'>=</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_target_number'>target_number</span> <span class='op'>||</span> <span class='int'>5</span>
+  <span class='id identifier rubyid_critical'>critical</span> <span class='op'>=</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_critical'>critical</span><span class='op'>&amp;.</span><span class='id identifier rubyid_clamp'>clamp</span><span class='lparen'>(</span><span class='id identifier rubyid_target_num'>target_num</span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>10</span>
+  <span class='id identifier rubyid_succeed_num'>succeed_num</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_target_num'>target_num</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_critical_num'>critical_num</span> <span class='op'>=</span> <span class='id identifier rubyid_dice_list'>dice_list</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_critical'>critical</span> <span class='rbrace'>}</span>
 
   <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -526,7 +528,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Feb  8 21:19:44 2024 by
+  Generated on Sun Jun 30 22:04:40 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

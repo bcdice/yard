@@ -173,11 +173,14 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGETEXT</span>
-<span class='tstring_content'>  ■判定　x+bFF&lt;=t   x:ヒート(省略時は3) b:判定修正 t:能力値
+<span class='tstring_content'>  ■判定　x+bFF&lt;=a[,t][&amp;d]   x:ヒート(省略時は3) b:判定修正 a:能力値 t:難易度(省略可) d:基本ダメージ(省略可)
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  例)FF&lt;=2:   能力値2で判定し、その結果(成功数,1の目の数,バースト)を表示。
-</span><span class='tstring_content'>     6FF&lt;=3:  ヒート6,能力値3で戦闘判定し、その結果( 〃 )を表示。
-</span><span class='tstring_content'>     8+2FF&lt;=3:ヒート8,判定修正+2,能力値3で戦闘判定し、その結果( 〃 )を表示。
+</span><span class='tstring_content'>  例)FF&lt;=2:     能力値2で判定し、その結果(成功数,1の目の数,6の目の数,バースト)を表示。
+</span><span class='tstring_content'>     6FF&lt;=3:    ヒート6,能力値3で戦闘判定し、その結果( 〃 )を表示。
+</span><span class='tstring_content'>     8+2FF&lt;=3:  ヒート8,判定修正+2,能力値3で戦闘判定し、その結果( 〃 )を表示。
+</span><span class='tstring_content'>     FF&lt;=2,1:   能力値2,難易度1で判定し、その結果(成功数,1の目の数,6の目の数,成功・失敗,バースト)を表示。
+</span><span class='tstring_content'>     6FF&lt;=3,2&amp;1:ヒート6,能力値3,難易度2,基本ダメージ1で戦闘判定し、その結果(成功数,1の目の数,6の目の数,ダメージ,バースト)を表示。
+</span><span class='tstring_content'>
 </span><span class='heredoc_end'>INFO_MESSAGETEXT</span></pre></dd>
       
     </dl>
@@ -224,6 +227,32 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(command)  &#x21d2; FullFace </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of FullFace.</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -237,7 +266,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Base.html" title="BCDice::Base (class)">Base</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../Base.html#change_text-instance_method" title="BCDice::Base#change_text (method)">#change_text</a></span>, <span class='object_link'><a href="../Base.html#check_result-instance_method" title="BCDice::Base#check_result (method)">#check_result</a></span>, <span class='object_link'><a href="../Base.html#command_pattern-class_method" title="BCDice::Base.command_pattern (method)">command_pattern</a></span>, <span class='object_link'><a href="../Base.html#enable_debug-instance_method" title="BCDice::Base#enable_debug (method)">#enable_debug</a></span>, <span class='object_link'><a href="../Base.html#enabled_d9%3F-instance_method" title="BCDice::Base#enabled_d9? (method)">#enabled_d9?</a></span>, <span class='object_link'><a href="../Base.html#eval-class_method" title="BCDice::Base.eval (method)">eval</a></span>, <span class='object_link'><a href="../Base.html#eval-instance_method" title="BCDice::Base#eval (method)">#eval</a></span>, <span class='object_link'><a href="../Base.html#grich_text-instance_method" title="BCDice::Base#grich_text (method)">#grich_text</a></span>, <span class='object_link'><a href="../Base.html#prefixes_pattern-class_method" title="BCDice::Base.prefixes_pattern (method)">prefixes_pattern</a></span>, <span class='object_link'><a href="../Base.html#register_prefix-class_method" title="BCDice::Base.register_prefix (method)">register_prefix</a></span>, <span class='object_link'><a href="../Base.html#register_prefix_from_super_class-class_method" title="BCDice::Base.register_prefix_from_super_class (method)">register_prefix_from_super_class</a></span>, <span class='object_link'><a href="../Base.html#sort_add_dice%3F-instance_method" title="BCDice::Base#sort_add_dice? (method)">#sort_add_dice?</a></span>, <span class='object_link'><a href="../Base.html#sort_barabara_dice%3F-instance_method" title="BCDice::Base#sort_barabara_dice? (method)">#sort_barabara_dice?</a></span></p>
 
   
   
@@ -258,7 +287,50 @@
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
-    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Base.html#initialize-instance_method" title="BCDice::Base#initialize (method)">BCDice::Base</a></span></p>
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(command)  &#x21d2; <tt><span class='object_link'><a href="" title="BCDice::GameSystem::FullFace (class)">FullFace</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of FullFace.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FullFace.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@sort_barabara_dice</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='comment'># バラバラロール（Bコマンド）でソート有
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
   
 </div>
 
@@ -282,12 +354,12 @@
       <pre class="lines">
 
 
-26
-27
-28</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FullFace.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FullFace.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_resolute_action'>resolute_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -302,7 +374,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Feb  8 21:19:41 2024 by
+  Generated on Sun Jun 30 22:04:37 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

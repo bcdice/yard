@@ -173,19 +173,19 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGETEXT</span>
-<span class='tstring_content'>  ■ステータスのダイス判定　nAM&lt;=t,x        n:能力値 t:成功値 x:必要成功数
-</span><span class='tstring_content'>  例)3AM&lt;=2,1: ダイスを3個振って、成功値2,必要成功数1で判定。その結果(成功数,成功・失敗)を表示
+<span class='tstring_content'>  ■ステータスのダイス判定　n[+-b]AM&lt;=t,x        n:能力値 b:修正値(省略可能) t:成功値 x:必要成功数
+</span><span class='tstring_content'>  例)3AM&lt;=2,1: ダイスを3個振って、成功値2,必要成功数1で判定。その結果(成功数,成功・失敗,クリティカル,ファンブル)を表示
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ■探索技能のダイス判定　AI&lt;=t,x        t:探索技能レベル x:必要成功数
-</span><span class='tstring_content'>  例)AI&lt;=3,1: ダイスを3個振って、探索技能レベル3,必要成功数1で判定。その結果(成功数,成功・失敗)を表示
+</span><span class='tstring_content'>  ■探索技能のダイス判定　[+-b]AI&lt;=t,x        t:探索技能レベル b:修正値(省略可能) x:必要成功数
+</span><span class='tstring_content'>  例)AI&lt;=3,1: ダイスを3個振って、探索技能レベル3,必要成功数1で判定。その結果(成功数,成功・失敗,クリティカル,ファンブル)を表示
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ■攻撃判定　AA&lt;=t        t:戦闘技能レベル
+</span><span class='tstring_content'>  ■攻撃判定　[+-b]AA&lt;=t       t:戦闘技能レベル b:修正値(省略可能)
 </span><span class='tstring_content'>  例)AA&lt;=3: ダイスを3個振って、戦闘技能レベル3で判定。その結果(成功・失敗,ダメージ,クリティカル,ファンブル)を表示
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ■防御判定　AG=t        t:攻撃技能レベル
-</span><span class='tstring_content'>  例)AG=2: ダイスを3個振って、攻撃技能レベル2で判定。その結果(成功・失敗,ダメージ,クリティカル,ファンブル)を表示
+</span><span class='tstring_content'>  ■防御判定　[+-b]AG=t        t:攻撃技能レベル b:修正値(省略可能)
+</span><span class='tstring_content'>  例)AG=2: ダイスを3個振って、攻撃技能レベル2で判定。その結果(成功・失敗,ダメージ軽減,クリティカル,ファンブル)を表示
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ■回避判定　AD=t        t:攻撃技能レベル
+</span><span class='tstring_content'>  ■回避判定　[+-b]AD=t        t:攻撃技能レベル b:修正値(省略可能)
 </span><span class='tstring_content'>  例)AD=3: ダイスを1個振って、攻撃技能レベル3で判定。その結果(成功・失敗)を表示
 </span><span class='heredoc_end'>INFO_MESSAGETEXT</span></pre></dd>
       
@@ -388,7 +388,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Feb  8 21:19:41 2024 by
+  Generated on Sun Jun 30 22:04:37 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

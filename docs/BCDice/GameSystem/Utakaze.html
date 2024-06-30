@@ -185,6 +185,10 @@
 </span><span class='tstring_content'>    cに「龍のダイス目」を指定した行為判定ロール。
 </span><span class='tstring_content'>    ゾロ目ではなく、cと同じ値の出目数x2が成功レベルとなります。難易度の指定も可能です。
 </span><span class='tstring_content'>    例）3UK@5 ：龍のダイス「月」でクリティカルコール宣言したサイコロ3個の行為判定
+</span><span class='tstring_content'>   ・対抗判定ロール(nUR[@c], nUO[@c]) n:ダイス数 c:クリティカルコール
+</span><span class='tstring_content'>   　行為判定ロールと同様にロールするが、最期に成功レベルとセット数から求めたマジックナンバーが表示される。
+</span><span class='tstring_content'>   　マジックナンバーの大きいものが成功、同値は引き分け。
+</span><span class='tstring_content'>   　ダイスは18個まで対応。
 </span><span class='heredoc_end'>MESSAGETEXT</span></pre></dd>
       
     </dl>
@@ -289,19 +293,21 @@
       <pre class="lines">
 
 
-33
-34
-35
-36
-37</pre>
+37
+38
+39
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/Utakaze.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>eval_game_system_specific_command command</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 
-  <span class='id identifier rubyid_check_roll'>check_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_check_roll'>check_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
+    <span class='id identifier rubyid_opposed_roll'>opposed_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -313,7 +319,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Feb  8 21:19:41 2024 by
+  Generated on Sun Jun 30 22:04:37 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

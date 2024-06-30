@@ -174,12 +174,22 @@
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~MESSAGETEXT</span>
 <span class='tstring_content'>  ・判定
-</span><span class='tstring_content'>  　ダイスを指定数ダイスロールして、最も高い出目を出力します。難易度を指定すると成否を判定します。
+</span><span class='tstring_content'>  　ダイスを指定数ダイスロールして、最も高い出目を出力します。難易度を指定すると成否を判定します。オプションでA、Dをつけると、［有利］［不利］の条件で振れます（A=［有利］、D=［不利］）。
 </span><span class='tstring_content'>  KS(x,y)
 </span><span class='tstring_content'>  x：ダイスサイズ。1=D4（能力値1、2以上の出目が出ていたとしても最大1）／2=D4（能力値2、3以上の出目が出ていたとしても最大2）／3=D4（能力値3、出目4が出ていたとしても最大3）／4=D4／6=D6／8=D8／10=D10／12=D12／20=D20
 </span><span class='tstring_content'>  y：ダイス数（省略：1）
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  KS(x,y)&gt;=z
+</span><span class='tstring_content'>  x：ダイスサイズ。1=D4（能力値1、2以上の出目が出ていたとしても最大1）／2=D4（能力値2、3以上の出目が出ていたとしても最大2）／3=D4（能力値3、出目4が出ていたとしても最大3）／4=D4／6=D6／8=D8／10=D10／12=D12／20=D20
+</span><span class='tstring_content'>  y：ダイス数（省略：1）
+</span><span class='tstring_content'>  z：難易度
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  KS(x,y)A&gt;=z（［有利］：KS(x,y)の判定を２回行い、それぞれの結果のより大きい方が結果となります）
+</span><span class='tstring_content'>  x：ダイスサイズ。1=D4（能力値1、2以上の出目が出ていたとしても最大1）／2=D4（能力値2、3以上の出目が出ていたとしても最大2）／3=D4（能力値3、出目4が出ていたとしても最大3）／4=D4／6=D6／8=D8／10=D10／12=D12／20=D20
+</span><span class='tstring_content'>  y：ダイス数（省略：1）
+</span><span class='tstring_content'>  z：難易度
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  KS(x,y)D&gt;=z（［不利］：KS(x,y)の判定を２回行い、それぞれの結果のより小さい方が結果となります）
 </span><span class='tstring_content'>  x：ダイスサイズ。1=D4（能力値1、2以上の出目が出ていたとしても最大1）／2=D4（能力値2、3以上の出目が出ていたとしても最大2）／3=D4（能力値3、出目4が出ていたとしても最大3）／4=D4／6=D6／8=D8／10=D10／12=D12／20=D20
 </span><span class='tstring_content'>  y：ダイス数（省略：1）
 </span><span class='tstring_content'>  z：難易度
@@ -302,12 +312,12 @@
       <pre class="lines">
 
 
-46
-47
-48</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KyokoShinshoku.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KyokoShinshoku.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_roll_check'>roll_check</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_kansoku'>roll_kansoku</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_shusoku'>roll_shusoku</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -322,7 +332,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Feb  8 21:19:44 2024 by
+  Generated on Sun Jun 30 22:04:40 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>
