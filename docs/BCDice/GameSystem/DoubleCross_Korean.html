@@ -193,6 +193,9 @@
 </span><span class='tstring_content'>  　・감정표（ET）
 </span><span class='tstring_content'>  　　포지티브와 네거티브 양쪽을 굴려, 겉으로 나타는 쪽에 O를 붙여 표시합니다.
 </span><span class='tstring_content'>  　　물론 임의로 정하는 부분을 변경해도 괜찮습니다.
+</span><span class='tstring_content'>  ・해프닝차트（HC)
+</span><span class='tstring_content'>  ・RW프롤로그차트 포지티브（PCP）
+</span><span class='tstring_content'>  ・RW프롤로그차트 네거티브（PCN）
 </span><span class='tstring_content'>  ・D66다이스 있음
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
@@ -227,6 +230,11 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='id identifier rubyid_negative_emotion_table'>negative_emotion_table</span><span class='lparen'>(</span><span class='symbol'>:ko_kr</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="TABLES-constant" class="">TABLES =
+          
+        </dt>
+        <dd><pre class="code"><span class='id identifier rubyid_translate_tables'>translate_tables</span><span class='lparen'>(</span><span class='symbol'>:ko_kr</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
     </dl>
   
@@ -347,14 +355,14 @@
       <pre class="lines">
 
 
-32
-33
-34
 35
-36</pre>
+36
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DoubleCross_Korean.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DoubleCross_Korean.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -372,9 +380,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:41 2024 by
+  Generated on Thu Jun 19 10:05:50 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

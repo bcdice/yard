@@ -193,6 +193,11 @@
 </span><span class='tstring_content'>  　　mはポシビリティを使用する前のロール結果を入れて下さい。
 </span><span class='tstring_content'>  　　出目が10未満の場合は、10への読み替えが行われます。
 </span><span class='tstring_content'>  　　また、振り足しを自動で行い、20の出目が出たときには技能無し値も並記します。
+</span><span class='tstring_content'>  　・CPOS
+</span><span class='tstring_content'>  　　&quot;CPOSm&quot;で、コズムポシビリティ使用による1d20のロールを行います。
+</span><span class='tstring_content'>  　　mはポシビリティを使用する前のロール結果を入れて下さい。
+</span><span class='tstring_content'>  　　出目が10未満の場合でも、10への読み替えが行われません。
+</span><span class='tstring_content'>  　　振り足しは自動で行い、20の出目が出たときには技能無し値も並記します。
 </span><span class='tstring_content'>  ・ボーナスダメージロール
 </span><span class='tstring_content'>  　&quot;xBD[+y]&quot;でロールします。[]内は省略可能。
 </span><span class='tstring_content'>  　xはダメージダイス数。yはダメージ基本値 or 式を入れて下さい。
@@ -307,25 +312,27 @@
       <pre class="lines">
 
 
-47
-48
-49
-50
-51
 52
 53
 54
 55
-56</pre>
+56
+57
+58
+59
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/TorgEternity.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/TorgEternity.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_torg_check'>torg_check</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
     <span class='id identifier rubyid_getRolld20DiceCommandResult'>getRolld20DiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
     <span class='id identifier rubyid_getUpRollDiceCommandResult'>getUpRollDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
     <span class='id identifier rubyid_getPossibilityRollDiceCommandResult'>getPossibilityRollDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
+    <span class='id identifier rubyid_getCosmPossibilityRollDiceCommandResult'>getCosmPossibilityRollDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
     <span class='id identifier rubyid_getBonusDamageDiceCommandResult'>getBonusDamageDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
     <span class='id identifier rubyid_getSuccessLevelDiceCommandResult'>getSuccessLevelDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
     <span class='id identifier rubyid_getDamageResultDiceCommandResult'>getDamageResultDiceCommandResult</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
@@ -341,9 +348,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:39 2024 by
+  Generated on Thu Jun 19 10:05:48 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

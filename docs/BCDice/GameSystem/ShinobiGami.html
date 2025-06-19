@@ -172,7 +172,7 @@
           <div class="docstring">
   <div class="discussion">
     
-<p>ダイスボットの使い方</p>
+<p>ダイスボットの使い方25/01/17：書式成形（半角スペース×2に統一、同じ書籍のシーン表は改行なしで列挙）</p>
 
 
   </div>
@@ -184,46 +184,64 @@
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~INFO_MESSAGE_TEXT</span>
 <span class='tstring_content'>  ・行為判定 nSG@s#f&gt;=x
-</span><span class='tstring_content'>  　2D6の行為判定を行う。ダイス数が指定された場合、大きい出目2個を採用する。
-</span><span class='tstring_content'>  　n: ダイス数 (省略時 2)
-</span><span class='tstring_content'>  　s: スペシャル値 (省略時 12)
-</span><span class='tstring_content'>  　f: ファンブル値 (省略時 2)
-</span><span class='tstring_content'>  　x: 目標値 (省略可)
-</span><span class='tstring_content'>  　例）SG, SG@11, SG@11#3, SG#3&gt;=7, 3SG&gt;=7
+</span><span class='tstring_content'>    2D6の行為判定を行う。ダイス数が指定された場合、大きい出目2個を採用する。
+</span><span class='tstring_content'>    n: ダイス数 (省略時 2)
+</span><span class='tstring_content'>    s: スペシャル値 (省略時 12)
+</span><span class='tstring_content'>    f: ファンブル値 (省略時 2)
+</span><span class='tstring_content'>    x: 目標値 (省略可)
+</span><span class='tstring_content'>    例）SG, SG@11, SG@11#3, SG#3&gt;=7, 3SG&gt;=7
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・行為判定以外の表
+</span><span class='tstring_content'>    以下の表は「回数+コマンド」で複数回振れる
+</span><span class='tstring_content'>    例）3RCT, 2WT
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・ランダム特技決定表 RTTn (n:分野番号、省略可能)
-</span><span class='tstring_content'>  　1器術 2体術 3忍術 4謀術 5戦術 6妖術
+</span><span class='tstring_content'>    1器術 2体術 3忍術 4謀術 5戦術 6妖術
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・ランダム分野表 RCT
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ・各種表(基本ルールブック以降)
-</span><span class='tstring_content'>  　ファンブル表 FT、変調表 WT、戦国変調表 GWT、戦場表 BT、感情表 ET
-</span><span class='tstring_content'>  　妖魔化（異形表、妖魔忍法表一括） MT
-</span><span class='tstring_content'>  　異形表 MTR、妖魔忍法表(x:A,B,C) DSx
-</span><span class='tstring_content'>  　プライズ効果表 PT
+</span><span class='tstring_content'>  ・各種表：基本ルールブック以降
+</span><span class='tstring_content'>    ファンブル表 FT、戦場表 BT、感情表 ET、変調表 WT、戦国変調表 GWT、プライズ効果表 PT
+</span><span class='tstring_content'>    妖魔化（異形表、妖魔忍法表一括） MT、異形表 MTR、妖魔忍法表(x:A,B,C) DSx
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ＞流派ブック以降
-</span><span class='tstring_content'>  　新戦場表 BNT、【数奇】OTS、妖術変調対応表（x:なし-現代／戦国、1-現代、2-戦国）YWTx
-</span><span class='tstring_content'>  　妖魔化（新異形表利用） NMT、新異形表 NMTR、妖魔忍法表（x:1-異霊 2-凶身 3-神化 4-攻激）DSNx
-</span><span class='tstring_content'>  　覚醒表 OTAT、忍法授業シーン表（x:1-攻撃系 2-防御系 3-戦略系）NCTx
-</span><span class='tstring_content'>  　パニック表 HRPT、出物表 ONDT
+</span><span class='tstring_content'>  ・各種表：流派ブック以降
+</span><span class='tstring_content'>    比良坂流派ブック
+</span><span class='tstring_content'>      パニック表 HRPT
+</span><span class='tstring_content'>    鞍馬流派ブック
+</span><span class='tstring_content'>      新戦場表 BNT
+</span><span class='tstring_content'>    御斎流派ブック
+</span><span class='tstring_content'>      覚醒表 OTAT
+</span><span class='tstring_content'>      忍法授業シーン表（x:1-攻撃系 2-防御系 3-戦略系）NCTx
+</span><span class='tstring_content'>      【数奇】OTS
+</span><span class='tstring_content'>    隠忍流派ブック
+</span><span class='tstring_content'>      妖術変調対応表（x:なし-現代／戦国、1-現代、2-戦国）YWTx
+</span><span class='tstring_content'>      妖魔化（新異形表利用） NMT、新異形表 NMTR、妖魔忍法表（x:1-異霊 2-凶身 3-神化 4-攻激）DSNx
+</span><span class='tstring_content'>      出物表 ONDT
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  （基本ルールブック改訂版以前）
-</span><span class='tstring_content'>  ・(無印)旧ファンブル表 OFT 、旧変調表 OWT、旧戦場表 OBT、異形表 MT
-</span><span class='tstring_content'>  ・(怪)怪ファンブル表 KFT、怪変調表 KWT (基本ルールブックと同一）
+</span><span class='tstring_content'>  ・各種表：基本ルールブック改訂版以前
+</span><span class='tstring_content'>    無印
+</span><span class='tstring_content'>      旧ファンブル表 OFT 、旧変調表 OWT、旧戦場表 OBT、異形表 MT
+</span><span class='tstring_content'>    怪
+</span><span class='tstring_content'>      怪ファンブル表 KFT、怪変調表 KWT (基本ルールブックと同一）
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・シーン表
-</span><span class='tstring_content'>  ＞基本ルールブック
-</span><span class='tstring_content'>  　通常 ST、出島 DST、都市 CST、館 MST、トラブル TST、回想 KST、日常 NST、学校 GAST、戦国 GST
-</span><span class='tstring_content'>  ＞忍秘伝
-</span><span class='tstring_content'>  　中忍試験 HC、滅びの塔 HT、影の街 HK、夜行列車 HY、病院 HO、龍動 HR、密室 HM、催眠 HS
-</span><span class='tstring_content'>  ＞基本ルールブック改訂版以前
-</span><span class='tstring_content'>  　(死)東京 TKST、(リプレイ戦1〜2巻)京都 KYST、神社仏閣 JBST
-</span><span class='tstring_content'>  　(その他シーン表)秋空に雪舞えば AKST、災厄 CLST、出島EX DXST、斜歯ラボ HLST、夏の終わり NTST、培養プラント PLST
-</span><span class='tstring_content'>  ＞正忍記
-</span><span class='tstring_content'>  カジノ TC、ロードムービ TRM、マスカレイド・キャッスル TMC、月天に死の咲く TGS、恋人との日々 TKH、学校（黒星祭） TKG、魔都学園 TMG、魔都東京 TMT
-</span><span class='tstring_content'>  ＞流派ブック以降
-</span><span class='tstring_content'>  不良高校 OTFK
+</span><span class='tstring_content'>    基本ルールブック
+</span><span class='tstring_content'>      通常 ST、出島 DST、都市 CST、館 MST、トラブル TST、回想 KST、日常 NST、学校 GAST、戦国 GST
+</span><span class='tstring_content'>    忍秘伝
+</span><span class='tstring_content'>      中忍試験 HC、滅びの塔 HT、影の街 HK、夜行列車 HY、病院 HO、龍動 HR、密室 HM、催眠 HS
+</span><span class='tstring_content'>    正忍記
+</span><span class='tstring_content'>      カジノ TC、ロードムービー TRM、マスカレイド・キャッスル TMC、月天に死の咲く TGS、恋人との日々 TKH、学校（黒星祭） TKG、魔都学園 TMG、魔都東京 TMT
+</span><span class='tstring_content'>    流派ブック以降
+</span><span class='tstring_content'>      御斎流派ブック
+</span><span class='tstring_content'>        不良高校 OTFK
+</span><span class='tstring_content'>    基本ルールブック改訂版以前
+</span><span class='tstring_content'>      死
+</span><span class='tstring_content'>        東京 TKST
+</span><span class='tstring_content'>      リプレイ戦1〜2巻
+</span><span class='tstring_content'>        京都 KYST、神社仏閣 JBST
+</span><span class='tstring_content'>    その他
+</span><span class='tstring_content'>      秋空に雪舞えば AKST、夏の終わり NTST、出島EX DXST、災厄 CLST、斜歯ラボ HLST、培養プラント PLST
+</span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・D66ダイスあり
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
@@ -321,6 +339,28 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#repeat_table-instance_method" title="#repeat_table (instance method)">#<strong>repeat_table</strong>(command)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#result_2d6-instance_method" title="#result_2d6 (instance method)">#<strong>result_2d6</strong>(total, dice_total, _dice_list, cmp_op, target)  &#x21d2; Object </a>
     
 
@@ -400,15 +440,15 @@
       <pre class="lines">
 
 
-74
-75
-76
-77
-78
-79</pre>
+93
+94
+95
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -443,17 +483,61 @@
       <pre class="lines">
 
 
-101
-102
-103
-104</pre>
+120
+121
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_action_roll'>action_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>TABLES</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>SCENE_TABLES</span><span class='rparen'>)</span> <span class='op'>||</span>
-         <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>DEMON_SKILL_TABLES</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>DEMON_SKILL_TABLES_NEW</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="#RTT-constant" title="BCDice::GameSystem::ShinobiGami::RTT (constant)">RTT</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll_command'>roll_command</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_action_roll'>action_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_repeat_table'>repeat_table</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="repeat_table-instance_method">
+  
+    #<strong>repeat_table</strong>(command)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_repeat_table'>repeat_table</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_times'>times</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_start_with?'>start_with?</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\d</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>:</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_command'>command</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='op'>*</span><span class='int'>0</span><span class='op'>...</span><span class='id identifier rubyid_times'>times</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='op'>|</span>
+    <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'>TABLES</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'>SCENE_TABLES</span><span class='rparen'>)</span> <span class='op'>||</span>
+      <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'>DEMON_SKILL_TABLES</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'>DEMON_SKILL_TABLES_NEW</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="#RTT-constant" title="BCDice::GameSystem::ShinobiGami::RTT (constant)">RTT</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll_command'>roll_command</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -475,24 +559,24 @@
       <pre class="lines">
 
 
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97</pre>
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 83</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/ShinobiGami.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_2d6'>result_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid_total'>total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_list'>_dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&gt;=</span>
@@ -519,9 +603,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:39 2024 by
+  Generated on Thu Jun 19 10:05:48 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

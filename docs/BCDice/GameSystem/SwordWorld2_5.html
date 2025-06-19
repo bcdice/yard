@@ -211,11 +211,12 @@
 </span><span class='tstring_content'>  　クリティカル値を指定しない場合、クリティカルなしと扱われます。
 </span><span class='tstring_content'>  　例）OHK20　　K20oh　　OHK10-5@9　　K20+8OH+2　　K20+8OH+(1+1)
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ・ダイス目の修正（運命変転やクリティカルレイ用）
+</span><span class='tstring_content'>  ・ダイス目の修正（運命変転やクリティカルレイ、魔女の火用）
 </span><span class='tstring_content'>  　末尾に「$修正値」でダイス目に修正がかかります。
 </span><span class='tstring_content'>  　$＋１と修正表記ならダイス目に＋修正、＄９のように固定値ならダイス目をその出目に差し替え。
+</span><span class='tstring_content'>  　$~＋１とチルダを追加して記述することで、出目10以下の場合のみダイス目に＋修正（魔女の火用）
 </span><span class='tstring_content'>  　クリティカルした場合でも固定値や修正値の適用は最初の一回だけです。
-</span><span class='tstring_content'>  　例）K20$+1　　　K10+5$9　　　k10-5@9$+2　　　k10[9]+10$9
+</span><span class='tstring_content'>  　例）K20$+1　　　K10+5$9　　　k10-5@9$+2　　　k10[9]+10$9　　　k20+6$~+1
 </span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・ダイス目の修正（必殺攻撃用）
 </span><span class='tstring_content'>  　「＃修正値」でダイス目に修正がかかります。
@@ -444,7 +445,6 @@
       <pre class="lines">
 
 
-117
 118
 119
 120
@@ -466,10 +466,11 @@
 136
 137
 138
-139</pre>
+139
+140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_druid_dice'>druid_dice</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='id identifier rubyid_power_list'>power_list</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dice_list'>dice_list</span> <span class='op'>=</span> <span class='ivar'>@randomizer</span><span class='period'>.</span><span class='id identifier rubyid_roll_barabara'>roll_barabara</span><span class='lparen'>(</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span>
@@ -514,7 +515,6 @@
       <pre class="lines">
 
 
-94
 95
 96
 97
@@ -531,10 +531,11 @@
 108
 109
 110
-111</pre>
+111
+112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -574,7 +575,6 @@
       <pre class="lines">
 
 
-141
 142
 143
 144
@@ -589,10 +589,11 @@
 153
 154
 155
-156</pre>
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_abyss_curse_table'>get_abyss_curse_table</span>
   <span class='id identifier rubyid_table_result'>table_result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../DiceTable.html" title="BCDice::DiceTable (module)">DiceTable</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DiceTable/D66GridTable.html" title="BCDice::DiceTable::D66GridTable (class)">D66GridTable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from_i18n'><span class='object_link'><a href="../DiceTable/D66GridTable.html#from_i18n-class_method" title="BCDice::DiceTable::D66GridTable.from_i18n (method)">from_i18n</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SwordWorld2_5.AbyssCurseTable</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@locale</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_roll'><span class='object_link'><a href="../DiceTable/D66GridTable.html#roll-instance_method" title="BCDice::DiceTable::D66GridTable#roll (method)">roll</a></span></span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
@@ -630,12 +631,12 @@
       <pre class="lines">
 
 
-113
 114
-115</pre>
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 113</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/SwordWorld2_5.rb', line 114</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rating_parser'>rating_parser</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="SwordWorld/RatingParser.html" title="BCDice::GameSystem::SwordWorld::RatingParser (class)">RatingParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SwordWorld/RatingParser.html#initialize-instance_method" title="BCDice::GameSystem::SwordWorld::RatingParser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>version:</span> <span class='symbol'>:v2_5</span><span class='rparen'>)</span>
@@ -650,9 +651,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:40 2024 by
+  Generated on Thu Jun 19 10:05:49 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

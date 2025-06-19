@@ -201,6 +201,11 @@
 </span><span class='tstring_content'>  ・製作委員決定表　PCDT/実際どうだったのか表　OHT
 </span><span class='tstring_content'>  ・タスク表　ヘルライオン　PCT1/ヘルクロウ　PCT2/ヘルスネーク　PCT3/
 </span><span class='tstring_content'>  　ヘルドラゴン　PCT4/ヘルフライ　PCT5/ヘルゴート　PCT6/ヘルベア　PCT7
+</span><span class='tstring_content'>  ・大喜利スペシャル表 (-OT)
+</span><span class='tstring_content'>  　お題決定表(TOT)、〇〇を見て一言表(OOT)
+</span><span class='tstring_content'>  　単語表(WOT, WOTx) xに英字(A,B,C)で単語表A(人物)(AOT)、単語表B(物)(BOT)、単語表C(場所)を個別ロール
+</span><span class='tstring_content'>  　動詞表(VOT)、長め単語表(LOT)
+</span><span class='tstring_content'>  　ヘル司会者 リアクション表(好印象ver)(POT)、ヘル司会者 リアクション表(不満ver)(NOT)
 </span><span class='tstring_content'>  ・D66ダイスあり
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
@@ -358,15 +363,15 @@
       <pre class="lines">
 
 
-44
-45
-46
-47
-48
-49</pre>
+49
+50
+51
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KillDeathBusiness.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KillDeathBusiness.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -401,18 +406,18 @@
       <pre class="lines">
 
 
-62
-63
-64
-65
-66
 67
 68
 69
-70</pre>
+70
+71
+72
+73
+74
+75</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KillDeathBusiness.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KillDeathBusiness.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>eval_game_system_specific_command command</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -454,18 +459,18 @@
       <pre class="lines">
 
 
-52
-53
-54
-55
-56
 57
 58
 59
-60</pre>
+60
+61
+62
+63
+64
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KillDeathBusiness.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/KillDeathBusiness.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_result_2d6'>result_2d6</span><span class='lparen'>(</span><span class='id identifier rubyid__total'>_total</span><span class='comma'>,</span> <span class='id identifier rubyid_dice_total'>dice_total</span><span class='comma'>,</span> <span class='id identifier rubyid__dice_list'>_dice_list</span><span class='comma'>,</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span><span class='comma'>,</span> <span class='id identifier rubyid__target'>_target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cmp_op'>cmp_op</span> <span class='op'>==</span> <span class='symbol'>:&gt;=</span>
@@ -486,9 +491,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:40 2024 by
+  Generated on Thu Jun 19 10:05:50 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

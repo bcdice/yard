@@ -176,21 +176,34 @@
 <span class='tstring_content'>  ・行為判定
 </span><span class='tstring_content'>  TN6…「有利」を得ていない場合、6面ダイスを2つ振って判定します。
 </span><span class='tstring_content'>  TN10…「有利」を得ている場合、10面ダイスを2つ振って判定します。
-</span><span class='tstring_content'>  不調 気づかぬうちの不満【C】…判定のダイス目が「4」でも判定に成功しません。数字の後ろに【C】をつけます。
+</span><span class='tstring_content'>  不調 気づかぬうちの不満【C】…このセッションの間、「4」の出目を出しても判定は成功になりません。数字の後ろに【C】をつけます。
 </span><span class='tstring_content'>  　例）TN6C
 </span><span class='tstring_content'>  軍師スキル 〇〇サポート【S】…決戦フェイズの判定中「3」の出目を出しても判定に成功します。数字の後ろに【S】をつけます。
 </span><span class='tstring_content'>  　例）TN6S
 </span><span class='tstring_content'>  英傑スキル/武人 煌めく刃【B】…決戦フェイズの判定中「3」の出目を出しても判定に成功となり、スペシャルが発生します。数字の後ろに【B】をつけます。
 </span><span class='tstring_content'>  　例）TN6B
+</span><span class='tstring_content'>  英傑スキル/武人 力ずく…その判定のサイコロをすべて振った後、[使用者の【攻撃力】]個サイコロを振る。先頭に使用者の【攻撃力】をつけます。
+</span><span class='tstring_content'>  　例）4TN6
+</span><span class='tstring_content'>  英傑スキル/武人 必殺の剣【D】…《戦技》を使用している判定中「4」「5」の出目を出してもスペシャルが発生します。数字の後ろに【D】をつけます。
+</span><span class='tstring_content'>  　例）TN6K
+</span><span class='tstring_content'>  英傑スキル/武人 二刀流【T】…「攻撃」のスキルの判定中「2」の出目を出しても判定に成功となり、同じ出目のサイコロが2つ以上出ているとスペシャルが発生します。数字の後ろに【T】をつけます。
+</span><span class='tstring_content'>  　例）TN6T
 </span><span class='tstring_content'>  英傑スキル/カリスマ 御身のためならば【Y】…「交流」「スカウト」の判定中「3」の出目を出しても判定に成功となり、スペシャルが発生します。数字の後ろに【Y】をつけます。
 </span><span class='tstring_content'>  　例）TN6Y
+</span><span class='tstring_content'>  英傑スキル/弓取り 愛用の弓【A】…「攻撃」のスキルの判定中「3」の出目を出しても判定に成功となり、スペシャルが発生します。数字の後ろに【A】をつけます。
+</span><span class='tstring_content'>  　例）TN6A
+</span><span class='tstring_content'>  英傑スキル/ヤンキー&amp;マイルドヤンキー その辺の物を武器に【C】…「4」の出目を出しても判定は成功になりません。数字の後ろに【C】をつけます。
+</span><span class='tstring_content'>  　例）TN6C
+</span><span class='tstring_content'>  英傑スキル/ヤンキー&amp;マイルドヤンキー 熱血判定【C】…「4」の出目を出しても判定は成功になりません。数字の後ろに【C】をつけます。
+</span><span class='tstring_content'>  　例）TN6C
 </span><span class='tstring_content'>  英傑スキル/英傑汎用 凄腕エージェント【A】…活動フェイズの判定中「3」の出目を出しても判定に成功となり、スペシャルが発生します。数字の後ろに【A】をつけます。
 </span><span class='tstring_content'>  　例）TN6A
 </span><span class='tstring_content'>  数字の後ろに複数のコマンドを追加できます。
 </span><span class='tstring_content'>  　例）TN10CYA
-</span><span class='tstring_content'>  ・ダメージ計算 xDM&gt;=t
+</span><span class='tstring_content'>  ・ダメージ計算 xDM+y&gt;=t
 </span><span class='tstring_content'>  　[ダメージ計算]を行う。成否と【HP】の減少量を表示する。
 </span><span class='tstring_content'>  　x: 6面ダイス数
+</span><span class='tstring_content'>  　y: 補正値（省略可能）
 </span><span class='tstring_content'>  　t: 防御力
 </span><span class='tstring_content'>  ・各種表
 </span><span class='tstring_content'>  関係決定表 RELA
@@ -330,15 +343,15 @@
       <pre class="lines">
 
 
-44
-45
-46
-47
-48
-49</pre>
+57
+58
+59
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/TensaiGunshiNiNaro.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/TensaiGunshiNiNaro.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -373,12 +386,12 @@
       <pre class="lines">
 
 
-53
-54
-55</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/TensaiGunshiNiNaro.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/TensaiGunshiNiNaro.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_roll_judge'>roll_judge</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_damage'>roll_damage</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='op'>::</span><span class='const'>TABLES</span><span class='rparen'>)</span>
@@ -393,9 +406,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:41 2024 by
+  Generated on Thu Jun 19 10:05:50 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

@@ -197,6 +197,9 @@
 </span><span class='tstring_content'>  　　ポジティブとネガティブの両方を振って、表になっている側に○を付けて表示します。
 </span><span class='tstring_content'>  　　もちろん任意で選ぶ部分は変更して構いません。
 </span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・ハプニングチャート（HC）
+</span><span class='tstring_content'>  ・RWプロローグチャート ポジティブ (PCP)
+</span><span class='tstring_content'>  ・RWプロローグチャート ネガティブ (PCN)
 </span><span class='tstring_content'>  ・D66ダイスあり
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
@@ -332,13 +335,13 @@
       <pre class="lines">
 
 
-33
-34
-35
-36</pre>
+36
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DoubleCross.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DoubleCross.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
@@ -434,9 +437,6 @@
       <pre class="lines">
 
 
-211
-212
-213
 214
 215
 216
@@ -444,14 +444,25 @@
 218
 219
 220
-221</pre>
+221
+222
+223
+224
+225
+226
+227
+228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DoubleCross.rb', line 211</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/DoubleCross.rb', line 214</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_dx'>dx</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_dx'>parse_dx</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='id identifier rubyid_dx'>dx</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='ivar'>@randomizer</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='op'>::</span><span class='const'>TABLES</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='op'>::</span><span class='const'>TABLES</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='kw'>if</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ET</span><span class='tstring_end'>&#39;</span></span>
@@ -470,9 +481,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:38 2024 by
+  Generated on Thu Jun 19 10:05:47 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

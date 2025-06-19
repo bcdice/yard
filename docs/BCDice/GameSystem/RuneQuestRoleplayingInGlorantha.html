@@ -173,13 +173,16 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='heredoc_beg'>&lt;&lt;~MESSAGETEXT</span>
-<span class='tstring_content'>  ・判定コマンド クリティカル、スペシャル、ファンブルを含めた判定を行う。
-</span><span class='tstring_content'>  RQG&lt;=成功率
+<span class='tstring_content'>  ・判定コマンド 決定的成功、効果的成功、ファンブルを含めた判定を行う。
+</span><span class='tstring_content'>  RQG&lt;=成功率      (基本書式)
+</span><span class='tstring_content'>  RQG成功率        (省略記法)
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  例1：RQG&lt;=80 （技能値80で判定）
+</span><span class='tstring_content'>  例1：RQG&lt;=80    （技能値80で判定）
 </span><span class='tstring_content'>  例2：RQG&lt;=80+20 （技能値100で判定）
+</span><span class='tstring_content'>  例3：RQG80      （省略書式で技能値80の判定）
+</span><span class='tstring_content'>  例4：RQG80+20   （省略書式で技能値100の判定）
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ・抵抗判定コマンド（能動-受動） クリティカル、スペシャル、ファンブルを含めた判定を行う。
+</span><span class='tstring_content'>  ・抵抗判定コマンド（能動-受動） 決定的成功、効果的成功、ファンブルを含めた判定を行う。
 </span><span class='tstring_content'>  RES(能動能力-受動能力)m増強値
 </span><span class='tstring_content'>  増強値は省略可能。
 </span><span class='tstring_content'>
@@ -187,7 +190,7 @@
 </span><span class='tstring_content'>  例2：RES(9-11)m20 (能動能力9 vs 受動能力11、+20%の増強が能動側に入る判定)
 </span><span class='tstring_content'>  例3：RES(9)m50    (能動能力と受動能力の差が9で、+50%の増強が能動側に入る判定)
 </span><span class='tstring_content'>
-</span><span class='tstring_content'>  ・抵抗判定コマンド(能動側のみ) クリティカル、スペシャル、ファンブルは含めず判定を行う。
+</span><span class='tstring_content'>  ・抵抗判定コマンド(能動側のみ) 決定的成功、効果的成功、ファンブルは含めず判定を行う。
 </span><span class='tstring_content'>  RSA(能動能力)m増強値
 </span><span class='tstring_content'>  増強値は省略可能。
 </span><span class='tstring_content'>
@@ -298,9 +301,6 @@
       <pre class="lines">
 
 
-42
-43
-44
 45
 46
 47
@@ -308,10 +308,13 @@
 49
 50
 51
-52</pre>
+52
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/RuneQuestRoleplayingInGlorantha.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/RuneQuestRoleplayingInGlorantha.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -334,9 +337,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:41 2024 by
+  Generated on Thu Jun 19 10:05:51 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

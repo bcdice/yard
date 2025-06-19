@@ -181,6 +181,8 @@
 </span><span class='tstring_content'>     FF&lt;=2,1:   能力値2,難易度1で判定し、その結果(成功数,1の目の数,6の目の数,成功・失敗,バースト)を表示。
 </span><span class='tstring_content'>     6FF&lt;=3,2&amp;1:ヒート6,能力値3,難易度2,基本ダメージ1で戦闘判定し、その結果(成功数,1の目の数,6の目の数,ダメージ,バースト)を表示。
 </span><span class='tstring_content'>
+</span><span class='tstring_content'>  ■ジャンク表　JKT
+</span><span class='tstring_content'>
 </span><span class='heredoc_end'>INFO_MESSAGETEXT</span></pre></dd>
       
     </dl>
@@ -356,13 +358,15 @@
 
 35
 36
-37</pre>
+37
+38</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/FullFace.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_resolute_action'>resolute_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_resolute_action'>resolute_action</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span> <span class='op'>||</span>
+    <span class='id identifier rubyid_roll_tables'>roll_tables</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='comma'>,</span> <span class='const'>TABLES</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -374,9 +378,9 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:37 2024 by
+  Generated on Thu Jun 19 10:05:46 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>

@@ -181,11 +181,18 @@
 </span><span class='tstring_content'>  　GOx/y@z　x：成功率、y：連続攻撃回数（省略可）、z：クリティカル値（省略可）
 </span><span class='tstring_content'>  　（連続攻撃では1回の判定のみが実施されます）
 </span><span class='tstring_content'>  　例）GO55　GO100/2　GO70@10　GO155/3@44
+</span><span class='tstring_content'>
 </span><span class='tstring_content'>  ・負傷表
 </span><span class='tstring_content'>  　DCxxy
 </span><span class='tstring_content'>  　xx：属性（切断：SL，銃弾：BL，衝撃：IM，灼熱：BR，冷却：RF，電撃：EL）
 </span><span class='tstring_content'>  　y：ダメージ
 </span><span class='tstring_content'>  　例）DCSL7　DCEL22
+</span><span class='tstring_content'>
+</span><span class='tstring_content'>  ・負傷表(ソウルエンコーダー用)
+</span><span class='tstring_content'>  　SExxy
+</span><span class='tstring_content'>  　xx：属性（切断：SL，銃弾：BL，衝撃：IM，灼熱：BR，冷却：RF，電撃：EL）
+</span><span class='tstring_content'>  　y：ダメージ
+</span><span class='tstring_content'>  　例）SESL7　SEEL22
 </span><span class='heredoc_end'>INFO_MESSAGE_TEXT</span></pre></dd>
       
         <dt id="DAMAGE_TABLE-constant" class="">DAMAGE_TABLE =
@@ -438,7 +445,7 @@
       <span class='lbracket'>[</span><span class='int'>13</span><span class='comma'>,</span>
        <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>凍傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
         <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>凍傷により身体が傷つけられる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷２</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
       <span class='lbracket'>[</span><span class='int'>16</span><span class='comma'>,</span>
        <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>体温低下</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
         <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冷気によって体温を奪われる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
@@ -537,6 +544,359 @@
        <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>組織炭化</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
         <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>全身が電流で焼かれ、あちこちの組織が炭化する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
         <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷２／スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="DAMAGE_TABLE_SE-constant" class="">DAMAGE_TABLE_SE =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SL</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>切断</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>table:</span> <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽い衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>たいした傷ではないが、衝撃を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>小さな傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装に傷がつく。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>13</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大きな傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装に大きな傷がつく。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>16</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>とても大きな傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装にさらに大きな傷がつき、内部もダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3/DOT:軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>19</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外観破損</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装の一部が欠ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷4</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>22</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部破損</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装の一部が破損し、内部もダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1/DOT:軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>25</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部大破損</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部の一部が大きく破損する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>28</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>一時不全</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装の一部が壊れ、内部も大きなダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2/DOT:軽傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>31</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>裂傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>傷をつけられ、内部が顔をのぞかせる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>34</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>視界不良</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>取りつけられているカメラに不都合が生じる</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3/スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>37</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大裂傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大きく切り裂かれ、内部が露わになる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>39</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>機能不全</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重要な部品が壊れ、このままで機能に大きな障害が出る。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1/DOT:軽傷3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9999</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命的損傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>機能が停止しかねないほどの大きな損傷を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BL</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>table:</span> <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽い衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾ははじいたが、衝撃を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>小さな銃創</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾ははじいたが、外装に凹みができた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>13</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大きな銃創</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>かろうじて銃弾ははじいたが、外装に大きな凹みができた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>16</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>機能低下</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾の衝撃で、内部の機能に不都合が講じた。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷4/スロウ:-3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>19</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>とても大きな銃創</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾をはじけず、外装に食い込んだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>22</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾停止</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾が貫通した。かろうじて内部にダメージはないようだ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>25</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部損傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾が貫通した時、内部の機能に衝撃を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>28</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部破壊</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾が貫通した時、内部にも大きなダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>31</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部大破壊</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾が貫通した時、その衝撃で内部に一時的な損傷を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3/スロウ:-5</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>34</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>機能一部停止</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾によって内部の機能が一時的に役に立たなくなっている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1/スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>37</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>破損</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾によって外装が吹き飛び、内部の一部が破壊される。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1/DOT:軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>39</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大破損</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾によって外装ごと内部の一部が吹き飛ぶ。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9999</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命的な一撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>銃弾が重要な部位に命中。衝撃で機能の大部分が一時的に停止する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷2/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IM</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>table:</span> <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽い衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>傷も凹みもないが、衝撃を受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>衝撃を受けて外装が凹む。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>13</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大きな衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>衝撃を受けて外装が大きく凹む。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>16</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>とても大きな衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>衝撃を受けて外装が大きく凹み、機能が瞬間的に停止する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷2/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>19</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部圧迫</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装が凹み、内部を圧迫している。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3/DOT:疲労3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>22</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>痛打</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>当たり所が悪く、カメラ機能が一時的に停止する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷4/スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>25</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部衝撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>当たり所が悪く、内部に大きなダメージを与える。機能が一時的に停止する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷5/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>28</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>機能障害</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>衝撃によって機能の動作に障害が発生する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1/スロウ:-5</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>31</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外裝損傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装が損傷し、その破片が内部に突き刺さる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1/放心、スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>34</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装大損傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装が大きく損傷し、内部もいくつか破壊される。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>37</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装破壊</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装の一部が吹き飛び、内部も破壊される。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3/放心、スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>39</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装大破壊</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装の一部が吹き飛び、内部も一緒に吹き飛ばされる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1、疲労3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9999</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命的破壊</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装のほとんどが破壊され、内部もひしゃげ、潰される。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1/放心、スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BR</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>灼熱</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>table:</span> <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽い溶解</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装が少しだけ溶け、機能が低下する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>溶解</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装が溶ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>13</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>温度上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>熱によって、外装だけでなく内部も少しだけ溶解する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷2、疲労1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>16</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>温度大上昇</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>熱によって、外装だけでなく内部が溶解する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>19</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>発火</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装に火が燃え移る。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3/DOT:軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>22</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>爆発</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>爆発により外装の一部が吹き飛ばされる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1/スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>25</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>痕が残るほどの大きく外装が溶解する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大溶解</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>28</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>熱波</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>強力な熱により内部機能が低下する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2/スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>31</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大爆発</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>激しい爆発で外装が大きく吹き飛ばされ、内部にもダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>34</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大発火</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>広範囲に火が燃え移る。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3/DOT:軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>37</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>炭化</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>高熱のあまり、焼けた部分が炭化してしまう。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>39</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部溶解</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>内部に熱や炎が回り、大きく溶解する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1/DOT:軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9999</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命的溶解</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装や内部の大部分が溶解する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RF</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冷却</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>table:</span> <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽い冷却</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冷気で機能が低下する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冷気</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装が薄い氷で覆われる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>13</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>霜の衣</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装が薄い氷で覆われ、動作が鈍る。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷2/疲労1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>16</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽い凍結</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>凍結によって外装の一部が痛む。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>19</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>温度低下</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>冷気によって機能が低下する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3/DOT:疲労1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>22</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>氷の枷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>可動部などが氷で覆われ、動きが取りにくくなる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1/スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>25</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大凍結</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装の大部分が凍結する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1/DOT:疲労2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>28</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>氷の束縛</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>可動部などが完全に凍りつき、動くことができない。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>31</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>視界不良</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>カメラのレンズにも氷が張り、視界がふさがれる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2/スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>34</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>動作不良</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>凍結によって一部動作に不都合が生じている。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>37</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重度凍結</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>さらに温度が低下し、内部にも深刻なダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>39</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> 全身凍結</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>全体が凍りづけになる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷1/DOT:疲労2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9999</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命的凍結</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装だけでなく、内部も致命的なダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>EL</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>table:</span> <span class='lbracket'>[</span>
+      <span class='lbracket'>[</span><span class='int'>5</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽い電撃</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電撃で機能が低下する。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>帯電</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>帯電により軽いダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>疲労3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>13</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電熱傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電流によって外装が傷つく。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>疲労1、軽傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>16</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽い感電</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電流で傷つくと共に、内部に軽いダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>疲労2、軽傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>19</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>閃光</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>激しい閃光により、一時的にカメラ機能がマヒする。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷3/スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>22</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感電</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電流により内部がダメージを受け、一時的に動作がマヒする。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>25</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大電熱傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装の各所が電流によって傷つく。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>疲労2、重傷2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>28</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>感電による負傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>外装だけでなく、内部も大きなダメージを受け、機能がマヒする。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>軽傷1、重傷2/放心</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>31</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大感電</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>電流によって機能のほとんどがマヒして、動作しなくなる。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷2/放心、スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>34</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>大電流</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>強力な電撃のショックにより、内部にも多大なダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>疲労3、重傷3</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>37</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>一時停止</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>全身に電流が駆け巡り、機能の大部分が動作不良を起こす。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷3/放心、スタン</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>39</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>致命電熱傷</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>全体が電流によって傷つく。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>重傷1、致命傷</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='lbracket'>[</span><span class='int'>9999</span><span class='comma'>,</span>
+       <span class='lbrace'>{</span><span class='label'>name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>機能停止</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>text:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>強力な電撃のショックにより、故障寸前のダメージを受ける。</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        <span class='label'>damage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>疲労3、重傷1、致命傷1</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span>
     <span class='rbracket'>]</span>
   <span class='rbrace'>}</span>
 <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
@@ -676,7 +1036,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_damage_table_info_by_type-instance_method" title="#get_damage_table_info_by_type (instance method)">#<strong>get_damage_table_info_by_type</strong>(type)  &#x21d2; Object </a>
+      <a href="#get_damage_table_info_by_type-instance_method" title="#get_damage_table_info_by_type (instance method)">#<strong>get_damage_table_info_by_type</strong>(type, chart_type)  &#x21d2; Object </a>
     
 
     
@@ -699,6 +1059,28 @@
   <span class="summary_signature">
     
       <a href="#look_up_damage_chart-instance_method" title="#look_up_damage_chart (instance method)">#<strong>look_up_damage_chart</strong>(type, damage_value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#look_up_damage_se_chart-instance_method" title="#look_up_damage_se_chart (instance method)">#<strong>look_up_damage_se_chart</strong>(type, damage_value)  &#x21d2; Object </a>
     
 
     
@@ -775,19 +1157,19 @@
       <pre class="lines">
 
 
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78</pre>
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_roll'>check_roll</span><span class='lparen'>(</span><span class='id identifier rubyid_success_rate'>success_rate</span><span class='comma'>,</span> <span class='id identifier rubyid_critical_border'>critical_border</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_success_rate'>success_rate</span> <span class='op'>=</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_success_rate'>success_rate</span> <span class='op'>&lt;</span> <span class='int'>0</span>
@@ -819,18 +1201,18 @@
       <pre class="lines">
 
 
-59
-60
-61
-62
-63
-64
-65
-66
-67</pre>
+73
+74
+75
+76
+77
+78
+79
+80
+81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_roll_repeat_attack'>check_roll_repeat_attack</span><span class='lparen'>(</span><span class='id identifier rubyid_success_rate'>success_rate</span><span class='comma'>,</span> <span class='id identifier rubyid_repeat_count'>repeat_count</span><span class='comma'>,</span> <span class='id identifier rubyid_critical_border'>critical_border</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_success_rate_per_one'>success_rate_per_one</span> <span class='op'>=</span> <span class='id identifier rubyid_success_rate'>success_rate</span> <span class='op'>/</span> <span class='id identifier rubyid_repeat_count'>repeat_count</span>
@@ -861,14 +1243,6 @@
       <pre class="lines">
 
 
-33
-34
-35
-36
-37
-38
-39
-40
 41
 42
 43
@@ -878,10 +1252,24 @@
 47
 48
 49
-50</pre>
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eval_game_system_specific_command'>eval_game_system_specific_command</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_command'>command</span>
@@ -893,10 +1281,16 @@
 
     <span class='kw'>return</span> <span class='id identifier rubyid_check_roll_repeat_attack'>check_roll_repeat_attack</span><span class='lparen'>(</span><span class='id identifier rubyid_success_rate'>success_rate</span><span class='comma'>,</span> <span class='id identifier rubyid_repeat_count'>repeat_count</span><span class='comma'>,</span> <span class='id identifier rubyid_critical_border'>critical_border</span><span class='rparen'>)</span>
 
-  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^DC(SL|BL|IM|BR|RF|EL)(\d+)</span><span class='regexp_end'>/i</span></span>
-    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_damage_value'>damage_value</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_look_up_damage_chart'>look_up_damage_chart</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_damage_value'>damage_value</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(DC|SE)(SL|BL|IM|BR|RF|EL)(\d+)</span><span class='regexp_end'>/i</span></span>
+    <span class='id identifier rubyid_chart_type'>chart_type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_damage_value'>damage_value</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_chart_type'>chart_type</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DC</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_look_up_damage_chart'>look_up_damage_chart</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_damage_value'>damage_value</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SE</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_look_up_damage_se_chart'>look_up_damage_se_chart</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_damage_value'>damage_value</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
   <span class='kw'>end</span>
 
   <span class='kw'>return</span> <span class='kw'>nil</span>
@@ -921,17 +1315,17 @@
       <pre class="lines">
 
 
-80
-81
-82
-83
-84
-85
-86
-87</pre>
+94
+95
+96
+97
+98
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_check_result'>get_check_result</span><span class='lparen'>(</span><span class='id identifier rubyid_dice_value'>dice_value</span><span class='comma'>,</span> <span class='id identifier rubyid_success_rate'>success_rate</span><span class='comma'>,</span> <span class='id identifier rubyid_critical_border'>critical_border</span><span class='comma'>,</span> <span class='id identifier rubyid_fumble_border'>fumble_border</span><span class='rparen'>)</span>
   <span class='comment'># クリティカルとファンブルが重なった場合は、ファンブルとなる。 cf. p175
@@ -961,15 +1355,15 @@
       <pre class="lines">
 
 
-52
-53
-54
-55
-56
-57</pre>
+66
+67
+68
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_critical_border'>get_critical_border</span><span class='lparen'>(</span><span class='id identifier rubyid_critical_border_text'>critical_border_text</span><span class='comma'>,</span> <span class='id identifier rubyid_success_rate'>success_rate</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_critical_border_text'>critical_border_text</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>unless</span> <span class='id identifier rubyid_critical_border_text'>critical_border_text</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -985,7 +1379,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_damage_table_info_by_type-instance_method">
   
-    #<strong>get_damage_table_info_by_type</strong>(type)  &#x21d2; <tt>Object</tt> 
+    #<strong>get_damage_table_info_by_type</strong>(type, chart_type)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -997,18 +1391,30 @@
       <pre class="lines">
 
 
-98
-99
-100
-101
-102
-103</pre>
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 123</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_get_damage_table_info_by_type'>get_damage_table_info_by_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DAMAGE_TABLE-constant" title="BCDice::GameSystem::GardenOrder::DAMAGE_TABLE (constant)">DAMAGE_TABLE</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_get_damage_table_info_by_type'>get_damage_table_info_by_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_chart_type'>chart_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_chart_type'>chart_type</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DC</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DAMAGE_TABLE-constant" title="BCDice::GameSystem::GardenOrder::DAMAGE_TABLE (constant)">DAMAGE_TABLE</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SE</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DAMAGE_TABLE_SE-constant" title="BCDice::GameSystem::GardenOrder::DAMAGE_TABLE_SE (constant)">DAMAGE_TABLE_SE</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type'>type</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
 
   <span class='kw'>return</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='symbol'>:table</span><span class='rbracket'>]</span>
@@ -1033,20 +1439,22 @@
       <pre class="lines">
 
 
-89
-90
-91
-92
-93
-94
-95
-96</pre>
+103
+104
+105
+106
+107
+108
+109
+110
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 89</span>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_look_up_damage_chart'>look_up_damage_chart</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_damage_value'>damage_value</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_get_damage_table_info_by_type'>get_damage_table_info_by_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_chart_type'>chart_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DC</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_get_damage_table_info_by_type'>get_damage_table_info_by_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_chart_type'>chart_type</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_row'>row</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_number'>get_table_by_number</span><span class='lparen'>(</span><span class='id identifier rubyid_damage_value'>damage_value</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_row'>row</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1058,14 +1466,56 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="look_up_damage_se_chart-instance_method">
+  
+    #<strong>look_up_damage_se_chart</strong>(type, damage_value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115
+116
+117
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/bcdice/game_system/GardenOrder.rb', line 113</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_look_up_damage_se_chart'>look_up_damage_se_chart</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_damage_value'>damage_value</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_chart_type'>chart_type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SE</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span> <span class='op'>=</span> <span class='id identifier rubyid_get_damage_table_info_by_type'>get_damage_table_info_by_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_chart_type'>chart_type</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_row'>row</span> <span class='op'>=</span> <span class='id identifier rubyid_get_table_by_number'>get_table_by_number</span><span class='lparen'>(</span><span class='id identifier rubyid_damage_value'>damage_value</span><span class='comma'>,</span> <span class='id identifier rubyid_table'>table</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_row'>row</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>負傷表(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_chart_type'>chart_type</span><span class='embexpr_end'>}</span><span class='tstring_content'>)：</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_damage_value'>damage_value</span><span class='embexpr_end'>}</span><span class='tstring_content'>] ＞ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_row'>row</span><span class='lbracket'>[</span><span class='symbol'>:damage</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> ｜ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_row'>row</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> … </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_row'>row</span><span class='lbracket'>[</span><span class='symbol'>:text</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Sun Jun 30 22:04:38 2024 by
+  Generated on Thu Jun 19 10:05:47 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.34 (ruby-3.4.3).
 </div>
 
     </div>
